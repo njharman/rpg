@@ -1,6 +1,9 @@
 #!/usr/bin/python
-'''Armor class vs shield save experiments
-20?? njharman@gmail.com placed into the public domain
+'''Armor class vs shield save experiments.
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain.
+Website: http://trollandflame.blogspot.com/
 '''
 
 from dice import *

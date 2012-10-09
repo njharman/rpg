@@ -1,7 +1,11 @@
 #!/usr/bin/python
-'''No idea
-20?? njharman@gmail.com placed into the public domain
+'''No idea.
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain.
+Website: http://trollandflame.blogspot.com/
 '''
+
 from collections import defaultdict
 
 from dice import *

@@ -1,8 +1,12 @@
 #!/usr/bin/python
 from collections import defaultdict
-'''Hack Master Basic
-2012 njharman@gmail.com placed into the public domain
+'''Hack Master Basic combat tests.
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain 2012.
+Website: http://trollandflame.blogspot.com/
 '''
+
 from dice import *
 
 

@@ -1,6 +1,9 @@
 #!/usr/bin/python
-'''Berserk Probabilitiy Experiements
-2010 njharman@gmail.com placed into the public domain
+'''Berserk Probabilitiy Experiements.
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain 2010.
+Website: http://trollandflame.blogspot.com/
 '''
 
 from collections import defaultdict

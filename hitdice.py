@@ -1,14 +1,17 @@
 #!/usr/bin/env python
-'''Output ReStructured Text chart of hit die rolls.
+'''Generate ReStructuredText chart of hit die rolls.
 
 Redirect to file, rst2pdf, print and bunch of monster hitdice easily grouped and
 marked off during play.
 
 Rolls d6+2, prints 8 pages.
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Oct 2012.
+Website: http://trollandflame.blogspot.com/
 '''
 
 import random
-
 
 
 def line(columns, template):
