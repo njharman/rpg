@@ -75,11 +75,11 @@ styles:
     commands: []
            [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
            [BOX, [ 0, 0 ], [ -1, -1 ], 0.25, white ]
-           [INNERGRID, [ 1, 1 ], [ -1, -1 ], 0.25, #E0E0E0]
+           [INNERGRID, [ 1, 1 ], [ -1, -1 ], 0.5, #C0C0C0]
            [TOPPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
            [BOTTOMPADDING, [ 0, 0 ], [ -1, -1 ], 8.6 ]
            [LEFTPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
-#           [ROWBACKGROUNDS, [0, 0], [-1, -1], [white,#E0E0E0]]
+           #[ROWBACKGROUNDS, [0, 0], [-1, -1], [white,#F0F0F0]]
 
   table-title:
     parent : heading4

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 '''Generate ReStructuredText calendar.
 
-Use rst2pdf to create PDF.
+Quick hack for author's Gold and Glory campaign.
 
-Tuned for my personal home Gold and Glory campaign.
+Use rst2pdf to create PDF.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Oct 2012.
@@ -279,10 +279,12 @@ MONTHS = {
 weather = Weather(temperatures)
 calendar = Calendar(MONTHS, weather, 28)
 
-for month in calendar.a_year(1288):
+for month_number, month in enumerate(calendar.a_year(374)):
     table = '======================== ========================== ========================== ========================== =========================='
     print table
-    print '%24s %26s %26s %26s %26s' % ('%s, %s' % (calendar.month, calendar.year), 'Morning', 'Afternoon', 'Evening', 'Night')
+    print '%24s %26s %26s %26s %26s' % (
+            '[%i] %s, %s' % (month_number, calendar.month, calendar.year),
+            'Morning', 'Afternoon', 'Evening', 'Night')
     print table
     for d in month():
         if d.moon in ('lunar', 'solar'):
