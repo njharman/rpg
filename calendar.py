@@ -19,7 +19,7 @@ from collections import namedtuple, deque
 
 class Weather(object):
     def __init__(self, temps):
-        ''':param temps: sequence of temps from coldes to hottest'''
+        ''':param temps: sequence of temps from coldest to hottest'''
         self.temps = temps
         self._idx = None
         self._past_temp = deque([None] * 4)  # four position ring buffer
@@ -137,6 +137,7 @@ class Calendar(object):
         Real moon cycle is complicated, this is good enough for fantasy.
         '''
         # ('new', 'waxing crescent', 'first quarter', 'waxing gibbous', 'full ', 'waning gibbous', 'third quarter', 'waning crescent')
+        # 'new', 'first quarter', 'full ', 'third quarter'
         days = (self.year * self.length_of_year) + self.day_of_year
         day = (days % self.lunar_cycle) + 1
         if day == self.lunar_cycle / 4:
@@ -155,12 +156,12 @@ class Calendar(object):
 
     @property
     def moon_shower(self):
-        '''Moon is "broken", chance around new moon of moon meteor shower.
+        '''Moon is "broken", chance around full moon of moon meteor shower.
         '''
         days = (self.year * self.length_of_year) + self.day_of_year
-        day = (days % self.lunar_cycle) + 1
-        new = self.lunar_cycle / 4
-        near = range(new - 2, new + 3)  # 2 days before and after new moon.
+        day = (days % self.lunar_cycle) + 1  # + 1 cause?
+        full = ((self.lunar_cycle / 4) * 3) + 1
+        near = range(full - 2, full + 3)  # 2 days before and after full moon.
         try:
             chance = (3, 9, 27, 9, 3)[near.index(day)]
             if self._lunar_meteors:
@@ -213,7 +214,7 @@ spring = Season(
             'hot ': ('driz', 'rain', 'storm', 'storm'),
             'boil': ('driz', 'rain', 'storm', 'storm'),
         },
-        ('hailstorm',),
+        ('hail',),
         )
 summer = Season(
         3,
@@ -244,7 +245,7 @@ autumn = Season(
 winter = Season(
         5,
         {
-            'froz': ('flury', 'snow', 'snow', 'snowstorm'),
+            'froz': ('flury', 'snow', 'snow', 'bliz'),
             'cold': ('flury', 'snow', 'snow'),
             'cool': ('sleet', 'sleet', 'flury', 'flury', 'snow'),
             'mild': ('driz', 'driz', 'rain', 'rain', 'flury'),
@@ -252,7 +253,7 @@ winter = Season(
             'hot ': ('driz', 'driz', 'rain'),
             'boil': ('driz', 'driz', 'rain'),
         },
-        ('blizzard',),
+        ('whiteout',),
         )
 
 Day = namedtuple('Day', ['day', 'day_of_year', 'month', 'year', 'temp', 'rain', 'moon', 'meteor'])
@@ -291,6 +292,7 @@ weather = Weather(temperatures)
 calendar = Calendar(MONTHS, 28, weather)
 
 for month_number, month in enumerate(calendar.a_year(374)):
+    month_number += 1
     table = '======================== ========================== ========================== ========================== =========================='
     print table
     print '%24s %26s %26s %26s %26s' % (
@@ -311,7 +313,7 @@ for month_number, month in enumerate(calendar.a_year(374)):
             event_bits.append('*equx*')
         elif day.day_of_year == 363:
             event_bits.append('*sols*')
-        elif month_number == 10:
+        elif month_number == 11:
             event_bits.append('*fest*')     # Festivus!
         else:
             if day.moon == 'new':
@@ -321,9 +323,9 @@ for month_number, month in enumerate(calendar.a_year(374)):
         day_bits = ['%02i %-5s %-15s' % (day.day, day.temp, ' '.join(event_bits)), ]
         for i in range(4):
             if i == 3:
-                watch_bits = ['OOO', ]      # 3x 4hr
+                watch_bits = ['OOO OOO', ]      # 3x 4hr
             else:
-                watch_bits = ['oooo', ]     # 4x 1hr
+                watch_bits = ['oooo oooo', ]    # 4x 1hr
             if day.rain[i]:
                 watch_bits.append(day.rain[i])
             if i == 3 and day.meteor:  # lunar meteor storm always at night

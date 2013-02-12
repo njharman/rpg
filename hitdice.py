@@ -14,23 +14,36 @@ Website: http://trollandflame.blogspot.com/
 import random
 
 
-def line(columns, template):
+def hp_line(columns, template):
     bits = list()
-    for col in range(1, columns + 1):
+    bits.append(template % '\\')
+    for col in range(1, columns):
         hits = random.randint(3, 8)
         bits.append(template % ('O' * hits))
+    return ''.join(bits)
+
+def ac_line(columns, template):
+    bits = list()
+    bits.append(template % 'AC \___')
+    for col in range(1, columns):
+        bits.append(template % 'O O O O O X /')
+    bits.append('\n')
+    bits.append(template % '')
+    for col in range(1, columns):
+        bits.append(template % 'O O O O O X')
     return ''.join(bits)
 
 
 def page(columns, page_length, page_width):
     column = page_width / columns
     table = ' '.join(['=' * column] * columns)
-    template = '%%%is' % (page_width / columns)
-
+    template = '%%-%is' % (column+1)
     print 'Notes:\n'
     print table
-    for i in range(page_length):
-        print line(columns, template)
+    for i in range(6):
+        print ac_line(columns, template)
+    for i in range(page_length-6):
+        print hp_line(columns, template)
     print table
 
 for i in range(8):

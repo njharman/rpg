@@ -3,7 +3,7 @@
 
 Quick, dirty, incomplete.  Changes from Swords & Wizardy include; gem & jewerly
 values are rounded, reorded potions and Minor Magic roll so healing more common
-thad diminution and the clair*, cosmetic changes to text.
+than Diminution and the Clair*, cosmetic changes to text.
 
 Swords & Wizardry, S&W, and Mythmere Games are trademarks of Matthew J. Finch.
 Author is not affiliated with Matthew J. Finch, Mythmere Games(TM), or Frog God
@@ -11,7 +11,6 @@ Games(TM).
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Website: http://trollandflame.blogspot.com/
-Copyright:
 
 This entire work is designated as Open Game Content under the OGL
 
