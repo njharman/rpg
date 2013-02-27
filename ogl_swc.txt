@@ -34,9 +34,7 @@ OPEN GAME LICENSE Version 1.0a The following text is the property of Wizards of 
 
 15. COPYRIGHT NOTICE
 Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.
-System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors
-Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David
-Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James
-Wyatt, based on original material by E. Gary Gygax and Dave Arneson.
+System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson.
+
 Swords & Wizardry Core Rules, Copyright 2008, Matthew J. Finch
 Swords & Wizardry Complete Rules, Copyright 2010, Matthew J. Finch
