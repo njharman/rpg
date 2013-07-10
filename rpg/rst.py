@@ -26,6 +26,10 @@ def page(style):
     return '\n.. page:: %s\n' % style
 
 
+def paragraphs(seq):
+    return '\n\n'.join(seq)
+
+
 def print_paragraphs(seq):
     print
     print '\n\n'.join(seq)
