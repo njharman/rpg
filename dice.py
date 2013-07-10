@@ -1,10 +1,14 @@
-'''Various "dice" for use in simulating/analyzing Pen & Paper RPG systems/rules.
+'''Various "dice" for use in simulating/analyzing pen & paper RPG systems/rules.
 
-Contents:
-    d4   std RPG dice notation
-    d4p  pentration such as in Hackmaster Basic.  if max value rolled, subtract one, add reroll, recurse.
-    d4x  exploding. if max value rolled, add reroll, recurse.
-    d4fx see FighterExplodingDieFactory
+Classes:
+    DieFactory
+    ExplodingDieFactory
+    PenetrationDieFactory
+
+Dice; d2, d3, d4, d6, d8, d10, d12, d16, d20, d24, d30, d100:
+    d?   standard RPG dice notation.
+    d?x  exploding. If max value rolled, add re-roll, recurse.
+    d?p  penetration such as in Hackmaster Basic.  If max value rolled, subtract one, add re-roll, recurse.
 
 Other Stuff:
     do_roll  interpret simple textual RPG dice roll conventions
@@ -20,15 +24,17 @@ Where p=1/6 is the probability of success and q=1-p=5/6 is the probability of fa
 import random
 
 __all__ = (
-    'do_roll', 'DieFactory', 'PenetrationDieFactory', 'FighterExplodingDieFactory',
+    'do_roll',
+    'DieFactory', 'PenetrationDieFactory', 'ExplodingDieFactory',
     'd4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100',
-    'd4p', 'd6p', 'd8p', 'd10p', 'd12p', 'd20p', 'd100p',
-    'd4x', 'd6x', 'd8x', 'd10x', 'd12x', 'd20x', 'd100x',
+    'd2', 'd3', 'd4', 'd6', 'd8', 'd10', 'd12', 'd16', 'd20', 'd24', 'd30', 'd100',
+    'd2x', 'd3x', 'd4x', 'd6x', 'd8x', 'd10x', 'd12x', 'd16x', 'd20x', 'd24x', 'd30x', 'd100x',
+    'd2p', 'd3p', 'd4p', 'd6p', 'd8p', 'd10p', 'd12p', 'd16p', 'd20p', 'd24p', 'd30p', 'd100p',
     )
 
 
 def do_roll(roll):
-    '''Given simple roll forumula [40+]2d6 return integer.'''
+    '''Given simple roll formula [40+]2d6 return integer.'''
     if '+' in roll:
         result, roll = roll.split('+')
         result = int(result)
@@ -41,7 +47,7 @@ def do_roll(roll):
 
 
 class DieFactory(object):
-    '''Create 'lables' that make 1d(size) 'die rolls' when called, used as int
+    '''Create 'labels' that make 1d(size) 'die rolls' when called, used as int
     or converted to str.
     '''
 
@@ -86,7 +92,7 @@ class PenetrationDieFactory(DieFactory):
     '''Explode on highest roll, with proper maths. d20 -> d12, d100 -> d20.'''
 
     def __init__(self, size, explode_on=1):
-        assert size > 1  # infinte loops are overrated
+        assert size > 1  # Infinite loops are overrated.
         self.__name__ = 'd%ip' % size
         if size == 20:
             self._pdie = 6
@@ -109,7 +115,7 @@ class ExplodingDieFactory(DieFactory):
     '''Explode on highest roll. d20 -> d12.'''
 
     def __init__(self, size, explode_on=1):
-        assert size > 1  # infinte loops are overrated
+        assert size > 1  # Infinite loops are overrated.
         self.__name__ = 'd%ix' % size
         if size == 20:
             self._pdie = 12
@@ -127,12 +133,12 @@ class ExplodingDieFactory(DieFactory):
 
 
 class FighterExplodingDieFactory(DieFactory):
-    '''Fighters roll 2 damage dice, take highest inital roll, explode that as
+    '''Fighters roll 2 damage dice, take highest initial roll, explode that as
     appropriate.
     '''
 
     def __init__(self, size, explode_on=1):
-        assert size > 1  # infinte loops are overrated
+        assert size > 1  # Infinite loops are overrated.
         self.__name__ = 'd%ifx' % size
 
         def d(explode=False):
@@ -147,31 +153,41 @@ class FighterExplodingDieFactory(DieFactory):
         self.die = d
 
 
+d2 = DieFactory(2)
+d3 = DieFactory(3)
 d4 = DieFactory(4)
 d6 = DieFactory(6)
 d8 = DieFactory(8)
 d10 = DieFactory(10)
 d12 = DieFactory(12)
+d16 = DieFactory(16)
 d20 = DieFactory(20)
+d24 = DieFactory(24)
+d30 = DieFactory(30)
 d100 = DieFactory(100)
 
-d4p = PenetrationDieFactory(4)
-d6p = PenetrationDieFactory(6)
-d8p = PenetrationDieFactory(8)
-d10p = PenetrationDieFactory(10)
-d12p = PenetrationDieFactory(12)
-d20p = PenetrationDieFactory(20)
-d100p = PenetrationDieFactory(100)
-
+d2x = ExplodingDieFactory(2)
+d3x = ExplodingDieFactory(3)
 d4x = ExplodingDieFactory(4)
 d6x = ExplodingDieFactory(6)
 d8x = ExplodingDieFactory(8)
 d10x = ExplodingDieFactory(10)
 d12x = ExplodingDieFactory(12)
+d16x = ExplodingDieFactory(16)
 d20x = ExplodingDieFactory(20)
+d24x = ExplodingDieFactory(24)
+d30x = ExplodingDieFactory(30)
 d100x = ExplodingDieFactory(100)
 
-d6fx = FighterExplodingDieFactory(6)
-d8fx = FighterExplodingDieFactory(8)
-d10fx = FighterExplodingDieFactory(10)
-d12fx = FighterExplodingDieFactory(12)
+d2xp = PenetrationDieFactory(2)
+d3xp = PenetrationDieFactory(3)
+d4xp = PenetrationDieFactory(4)
+d6xp = PenetrationDieFactory(6)
+d8xp = PenetrationDieFactory(8)
+d10xp = PenetrationDieFactory(10)
+d12xp = PenetrationDieFactory(12)
+d16xp = PenetrationDieFactory(16)
+d20xp = PenetrationDieFactory(20)
+d24xp = PenetrationDieFactory(24)
+d30xp = PenetrationDieFactory(30)
+d100xp = PenetrationDieFactory(100)
