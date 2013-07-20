@@ -1,0 +1,30 @@
+#!/usr/bin/python
+# Pick, at random, one or more non duplicate lines from file
+# There's proly some unix filter that does this but this was faster than finding free WiFi and Googling.
+#
+# Copyright (c) 2005 Norman Harman njharman@knoggin.com
+# Licensed under GNU GPL see LICENSE for details
+
+import sys
+import os.path
+import random
+
+if len(sys.argv) == 3:
+    loop = int(sys.argv[1])
+    infile = sys.argv[2]
+elif len(sys.argv) == 2:
+    loop = 1
+    infile = sys.argv[1]
+else:
+    print "Usage: %s [count] input" % os.path.basename(sys.argv[0])
+    sys.exit(1)
+
+if infile == '-':
+   lines = sys.stdin.readlines()
+else:
+   lines = file(infile).readlines()
+
+for i in range(loop):
+    choice = random.choice(lines)
+    lines.remove(choice)
+    print choice,
