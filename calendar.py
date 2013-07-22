@@ -117,7 +117,7 @@ class Calendar(object):
         self.weather = weather
         self.length_of_year = sum(m.length for m in self.months.values())
         self.day = 1  # current day of the year
-        self._month = self.months[0] # current month structure
+        self._month = self.months[0]  # current month structure
         self._lunar_meteors = False
 
     @property

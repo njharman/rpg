@@ -6,6 +6,7 @@ Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain 2012.
 Website: http://trollandflame.blogspot.com/
 '''
+import sys
 
 from dice import *
 
@@ -27,7 +28,8 @@ def calc_dieroll_results(bucket, count):
     for i in range(1, max(rolls) + 1):
         if bucket[i]:
             percent = (bucket[i] / count) * 100
-            results.append('%-3i %5i %5.2f%% %6.2f%%' % (i, bucket[i], percent, ptotal))
+            results.append('%-3i %5i %5.2f%% %6.2f%%' %
+                           (i, bucket[i], percent, ptotal))
             ptotal -= percent
             total += i * bucket[i]
         else:
@@ -61,8 +63,8 @@ def roll_damage(bonus, *damage):
 
 def shield_use(def_bonus, atk_bonus, dr, *damage):
     output = list()
-    atk_roll = d20p() + atk_bonus
-    def_roll = d20p() + def_bonus
+    atk_roll = d20xp() + atk_bonus
+    def_roll = d20xp() + def_bonus
     full, half = roll_damage(0, *damage)
     if atk_roll > def_roll:
         if atk_roll == 20:
@@ -70,7 +72,7 @@ def shield_use(def_bonus, atk_bonus, dr, *damage):
         no = sm = lg = max(0, full - dr)
         output.append('Damage: %i' % full)
     else:
-        # no shield is d20p-4 defense
+        # no shield is d20xp-4 defense
         if atk_roll > (def_roll - 4):
             if atk_roll == 20:
                 no = max(0, (full + roll_damage(0, *damage)[0]) - dr)
@@ -115,6 +117,7 @@ def test_sheild_use(def_bonus, atk_bonus, dr, *damage):
 
 
 class Protection(object):
+
     def __init__(self, name, defence, damage_reduction, speed=0):
         self._name = name
         self.defence = defence
@@ -133,6 +136,7 @@ class Protection(object):
 
 
 class Shield(Protection):
+
     def __init__(self, *args, **kwargs):
         self._threshold = kwargs.get('threshhold', list())
         if 'threshhold' in kwargs:
@@ -171,6 +175,7 @@ class Armor(Protection):
 
 
 class Weapon(object):
+
     def __init__(self, name, speed, *damage_dice):
         self.name = name
         self.speed = speed
@@ -181,6 +186,7 @@ class Weapon(object):
 
 
 class Combatant(object):
+
     def __init__(self, name, hitpoints, top_save, atk_bonus, dmg_bonus, def_bonus, spd_bonus, weapon, shield, armor):
         '''
         def_bonus does not include armor or shield
@@ -262,7 +268,8 @@ class Combatant(object):
         for k, v in sums.items():
             stats[k + '_avg'] = v / count
         if stats['swings_avg']:
-            stats['percent_avg'] = stats['hits_avg'] / (stats['swings_avg'] / 100.0)
+            stats['percent_avg'] = stats['hits_avg'] / \
+                (stats['swings_avg'] / 100.0)
         else:
             stats['percent_avg'] = 0.0
         stats.update(sums)
@@ -283,7 +290,8 @@ class Combatant(object):
             stats['knockouts'] += stat['knockouts']
             stats['topsaves'] += stat['topsaves']
             stats['max_hit'] = max(stats['max_hit'], stat['max_hit'])
-            stats['longest_combat'] = max(stats['longest_combat'], stat['longest_combat'])
+            stats['longest_combat'] = max(
+                stats['longest_combat'], stat['longest_combat'])
             stats['longest_ko'] = max(stats['longest_ko'], stat['longest_ko'])
         self._calc_percent(stats)
         return stats
@@ -314,27 +322,29 @@ class Combatant(object):
     def attack(self, defender, free=False):
         texts = list()
         if defender.down:
-            def_roll = d8p()
+            def_roll = d8xp()
             def_natural = 0
             if not free:
                 self._count = self.count + (self.speed / 2)
         else:
-            def_roll = d20p()
-            def_natural = d20p.natural
+            def_roll = d20xp()
+            def_natural = d20xp.natural
             if not free:
                 self._count = self.count + self.speed
         def_tot = def_roll + defender.def_bonus
-        atk_roll = d20p()
-        atk_natural = d20p.natural
+        atk_roll = d20xp()
+        atk_natural = d20xp.natural
         atk_tot = atk_roll + self.atk_bonus
         texts.append(str(self))
         if atk_natural == 20 and atk_tot > def_tot:
             self.stat_dict['crits'] += 1
             texts.append('critical')
-            full, half = roll_damage(self.dmg_bonus, *(self.weapon.damage_dice * 2))
+            full, half = roll_damage(
+                self.dmg_bonus, *(self.weapon.damage_dice * 2))
         else:
             full, half = roll_damage(self.dmg_bonus, *self.weapon.damage_dice)
-        self.stat_dict['longest_combat'] = max(self.stat_dict['longest_combat'], self.count)
+        self.stat_dict['longest_combat'] = max(
+            self.stat_dict['longest_combat'], self.count)
         self.stat_dict['swings'] += 1
         self.stat_dict['max_hit'] = max(self.stat_dict['max_hit'], full)
         if atk_tot > def_tot:
@@ -352,7 +362,7 @@ class Combatant(object):
             texts.append(str(defender))
             texts.append(defender.miss(half))
         texts = [t.strip() for t in texts if t]
-        if  texts[-1].endswith(','):
+        if texts[-1].endswith(','):
             texts[-1] = texts[-1][:-1]
         if not texts[-1].endswith('!'):
             texts[-1] = '%s.' % texts[-1]
@@ -366,14 +376,17 @@ class Combatant(object):
                 defender.stat_dict['dfumble'] += 1
         elif def_tot > atk_tot and not (defender.down or defender.dead):
             if atk_natural == 1:
-                results.append('Attacker fumble %s' % defender.attack(self, True))
+                results.append('Attacker fumble %s' %
+                               defender.attack(self, True))
                 self.stat_dict['afumble'] += 1
             if def_natural == 19:
-                damage = (d4p - 2) + (d4p - 2) + defender.dmg_bonus
-                results.append('Near perfect defence %i %s' % (damage, 'not implemented.'))
+                damage = (d4xp - 2) + (d4xp - 2) + defender.dmg_bonus
+                results.append('Near perfect defence %i %s' %
+                               (damage, 'not implemented.'))
                 defender.stat_dict['npdefence'] += 1
             if def_natural == 20:
-                results.append('Perfect defence %s' % defender.attack(self, True))
+                results.append('Perfect defence %s' %
+                               defender.attack(self, True))
                 defender.stat_dict['pdefence'] += 1
         return '\n  '.join(results)
 
@@ -414,7 +427,8 @@ class Combatant(object):
         if damage > self.top:
             top = (d20() - self.top_save) * 5
             if top > 0:
-                self.stat_dict['longest_ko'] = max(top, self.stat_dict['longest_ko'])
+                self.stat_dict['longest_ko'] = max(
+                    top, self.stat_dict['longest_ko'])
                 if not self.down:
                     self.stat_dict['knockouts'] += 1
                 text = 'down for %i seconds!' % top
@@ -426,39 +440,29 @@ class Combatant(object):
         return text
 
 
-def deathmatch(a, b):
-    return fight(a, b, True)
+def death_match(a, b, silent=True):
+    return fight(a, b, True, silent)
 
 
-def deathmatch_silent(a, b):
-    return fight_silent(a, b, True)
-
-
-def fight(a, b, to_the_death=False):
-    print 'count action'
+def fight(a, b, to_the_death=False, silent=True):
+    if silent:
+        poop = lambda t: None
+    else:
+        poop = lambda t: sys.stdout.writeline(t)
+    poop('count action')
     for count in range(1, 10000):
         a.count = b.count = count
         for dude, wuss in ((a, b), (b, a)):
             if dude.can_act:
-                print '%-5i %s' % (count, dude.attack(wuss))
+                poop('%-5i %s' % (count, dude.attack(wuss)))
             if wuss.dead or (not to_the_death and wuss.down):
-                print '%s wins! %s %s.' % (dude, wuss, wuss.status)
-                print dude.name, dude.stats
+                poop('%s wins! %s %s.' % (dude, wuss, wuss.status))
+                poop('%s %s' % (dude.name, dude.stats))
                 if wuss.stat_dict['hits'] == 0:
-                    print 'Total shutout!'
+                    poop('Total shutout!')
                 else:
-                    print wuss.name, wuss.stats
-                print ''
-                return dude
-
-
-def fight_silent(a, b, to_the_death=False):
-    for count in range(1, 10000):
-        a.count = b.count = count
-        for dude, wuss in ((a, b), (b, a)):
-            if dude.can_act:
-                dude.attack(wuss)
-            if wuss.dead or (not to_the_death and wuss.down):
+                    poop('%s %s' % (wuss.name, wuss.stats))
+                poop('')
                 return dude
 
 
@@ -466,10 +470,9 @@ def fight_stats(a, b, func, count):
     wins = {a.name: 0, b.name: 0}
     deaths = {a.name: 0, b.name: 0}
     knockouts = {a.name: 0, b.name: 0}
-    fight_name = func.__name__.replace('_', ' ').title()
     foo = '%s in %s with %s and %s' % (a, a.armor, a.weapon, a.shield)
     bar = '%s in %s with %s and %s' % (b, b.armor, b.weapon, b.shield)
-    print '%s\n%s\n%svs\n%s' % (fight_name, foo, ' ' * ((len(foo) - 2) / 2), bar)
+    print '%s\n%svs\n%s' % (foo, ' ' * ((len(foo) - 2) / 2), bar)
     for i in range(count):
         wins[func(a, b).name] += 1
         for dude in a, b:
@@ -501,12 +504,12 @@ studded = Armor('studded', -3, 3)
 ringmail = Armor('ringmail', -4, 4, 1)
 scalemail = Armor('scalemail', -6, 5, 2)
 
-longsword = Weapon('longsword', 10, d8p, d8p)
-greatsword = Weapon('greatsword', 12, d8p, d10p)
-twohandsword = Weapon('two-handsword', 16, d12p, d12p)
-greataxe = Weapon('greataxe', 14, d8p, d12p)
-battleaxe = Weapon('battleaxe', 12, d4p, d4p, d4p, d4p)
-warhammer = Weapon('warhammer', 8, d6p, d6p)
+longsword = Weapon('longsword', 10, d8xp, d8xp)
+greatsword = Weapon('greatsword', 12, d8xp, d10xp)
+twohandsword = Weapon('two-handsword', 16, d12xp, d12xp)
+greataxe = Weapon('greataxe', 14, d8xp, d12xp)
+battleaxe = Weapon('battleaxe', 12, d4xp, d4xp, d4xp, d4xp)
+warhammer = Weapon('warhammer', 8, d6xp, d6xp)
 
 
 if __name__ == '__main__':
@@ -516,25 +519,24 @@ if __name__ == '__main__':
         bar = PenetrationDieFactory(12, 2)
         dieroll_detail(foo, count)
         dieroll_detail(bar, count)
-#        dieroll_average_n_max(dice.d4p, count)
-#        dieroll_average_n_max(dice.d6p, count)
-#        dieroll_average_n_max(dice.d8p, count)
-#        dieroll_average_n_max(dice.d12p, count)
-#        dieroll_average_n_max(dice.d20p, count)
-#        dieroll_average_n_max(dice.d100p, count)
+        dieroll_average_n_max(dice.d4xp, count)
+        dieroll_average_n_max(dice.d6xp, count)
+        dieroll_average_n_max(dice.d8xp, count)
+        dieroll_average_n_max(dice.d12xp, count)
+        dieroll_average_n_max(dice.d20xp, count)
+        dieroll_average_n_max(dice.d100p, count)
 
     if False:
         for i in range(5):
-            test_sheild_use(0, 0, i, d8p, d8p)
+            test_sheild_use(0, 0, i, d8xp, d8xp)
 
     if True:
         armor = scalemail
-        dude = Combatant('The Dude',     33, 8, 1, 2, 0, 0, longsword,  medium_shield, armor)
-        hamr = Combatant('Hammertime',   33, 8, 1, 2, 0, 0, warhammer,  medium_shield, armor)
-        baxe = Combatant('Axeman',       33, 8, 1, 2, 0, 0, battleaxe,  medium_shield, armor)
-        gaxe = Combatant('Death Dealer', 33, 8, 1, 2, 0, 0, greataxe,   no_shield, armor)
-        hope = Combatant('Great Hope',   33, 8, 1, 2, 0, 0, greatsword, no_shield, armor)
-        zwei = Combatant('Compensator',  33, 8, 1, 2, 0, 0, twohandsword, no_shield, armor)
+        dude = Combatant('The Dude', 33, 8, 1, 2, 0, 0, longsword, medium_shield, armor)
+        hamr = Combatant('Hammertime', 33, 8, 1, 2, 0, 0, warhammer, medium_shield, armor)
+        baxe = Combatant('Axeman', 33, 8, 1, 2, 0, 0, battleaxe, medium_shield, armor)
+        gaxe = Combatant('Death Dealer', 33, 8, 1, 2, 0, 0, greataxe, no_shield, armor)
+        hope = Combatant('Great Hope', 33, 8, 1, 2, 0, 0, greatsword, no_shield, armor)
+        zwei = Combatant('Compensator', 33, 8, 1, 2, 0, 0, twohandsword, no_shield, armor)
         for looser in (hamr, baxe, gaxe, hope, zwei):
-            fight_stats(dude, looser, fight_silent, 1000)
-        #fight_stats(dude, zwei2, deathmatch_silent, 1000)
+            fight_stats(dude, looser, fight, 1000)

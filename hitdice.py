@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 '''Generate ReStructuredText chart of hit die rolls.
 
-Redirect to file, rst2pdf, print and bunch of monster hitdice easily grouped and
-marked off during play.
+Redirect to file, rst2pdf, print. And Bam! Bunch of grouped monster hit points
+easily marked off during play.
 
 Rolls d6+2, prints 8 pages.
 
@@ -22,6 +22,7 @@ def hp_line(columns, template):
         bits.append(template % ('O' * hits))
     return ''.join(bits)
 
+
 def ac_line(columns, template):
     bits = list()
     bits.append(template % 'AC \___')
@@ -37,14 +38,15 @@ def ac_line(columns, template):
 def page(columns, page_length, page_width):
     column = page_width / columns
     table = ' '.join(['=' * column] * columns)
-    template = '%%-%is' % (column+1)
+    template = '%%-%is' % (column + 1)
     print 'Notes:\n'
     print table
     for i in range(6):
         print ac_line(columns, template)
-    for i in range(page_length-6):
+    for i in range(page_length - 6):
         print hp_line(columns, template)
     print table
+
 
 for i in range(8):
     page(4, 40, 80)
