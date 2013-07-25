@@ -42,7 +42,8 @@ class App(object):
             self.parse_args()
         # Determine action or main
         action = getattr(self.config, 'action', None)
-        return getattr(self, 'action_%s' % action, 'main')
+        main = getattr(self.config, 'main', None)
+        return getattr(self, 'action_%s' % action, main)
 
     def init_logger(self, logger=None, name=None, level=logging.WARN, file=None, handler=None, format='%(asctime)s %(levelname)-7s %(name)s %(message)s'):
         '''Set up logging for this app, should be called before init_parser.

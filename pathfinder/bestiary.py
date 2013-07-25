@@ -5,7 +5,9 @@
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Website: http://trollandflame.blogspot.com/
 
-CSV data available from http://d20pfsrd.com
+I prefer slightly modified and more compact statblock. And running this on
+command line is faster than searching SRD and cut and pasting.  CSV data
+available from http://d20pfsrd.com
 
 This software uses trademarks and/or copyrights owned by Paizo Publishing, LLC,
 which are used under Paizo's Community Use Policy. We are expressly prohibited
@@ -50,7 +52,7 @@ import re
 from collections import namedtuple, OrderedDict
 from itertools import islice
 
-from app import App, unicode_csv_reader
+import app
 import jinja2
 
 ENGINE = jinja2.Environment(trim_blocks=False, lstrip_blocks=True, autoescape=False)
@@ -181,7 +183,7 @@ class BestiaryParser(object):
             return text.strip(')').strip('(').strip()
         self.prd = list()
         self.all_sources = set()
-        for row in islice(unicode_csv_reader(csv), 1, None):
+        for row in islice(app.unicode_csv_reader(csv), 1, None):
             entry = Entry(*row)
             if entry.is_template == '1':
                 continue
@@ -206,8 +208,8 @@ class BestiaryParser(object):
                 self.prd.append(entry)
 
 
-class BestiaryApp(App):
-    '''Pathfinder Bestiary search / output App.'''
+class BestiaryApp(app.App):
+    '''Pathfinder RPG Bestiary search / output.'''
     VERSION = '1.0.0'
 
     def init_parser(self):
@@ -291,5 +293,4 @@ class BestiaryApp(App):
 
 
 if __name__ == '__main__':
-    app = BestiaryApp()
-    app.run()
+    BestiaryApp().run()
