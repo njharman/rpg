@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 '''Generate some random magic items for Pathfinder RPG.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
@@ -18,21 +19,21 @@ OPEN GAME LICENSE
 
 Version 1.0a The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000 Wizards of the Coast, Inc ("Wizards").  All Rights Reserved.
 
-1. Definitions: (a)"Contributors" means the copyright and/or trademark owners who have contributed Open Game Content; (b)"Derivative Material" means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted; (c) "Distribute" means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute; (d)"Open Game Content" means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity. (e) "Product Identity" means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content; (f) "Trademark" means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor (g) "Use", "Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content. (h) "You" or "Your" means the licensee in terms of this agreement.
-2. The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself.  No other terms or conditions may be applied to any Open Game Content distributed using this License.
-3. Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License.
-4. Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content.
-5. Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License.
-6. Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute.
-7. Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or co-adaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark.  The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity.
-8. Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content.
-9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.
-10. Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute.
-11. Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so.
-12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected.
-13. Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach.  All sublicenses shall survive the termination of this License.
-14. Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.
-15. COPYRIGHT NOTICE
+    (1. Definitions: (a)"Contributors" means the copyright and/or trademark owners who have contributed Open Game Content; (b)"Derivative Material" means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted; (c) "Distribute" means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute; (d)"Open Game Content" means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity. (e) "Product Identity" means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content; (f) "Trademark" means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor (g) "Use", "Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content. (h) "You" or "Your" means the licensee in terms of this agreement.
+    (2. The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself.  No other terms or conditions may be applied to any Open Game Content distributed using this License.
+    (3. Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License.
+    (4. Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content.
+    (5. Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License.
+    (6. Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute.
+    (7. Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or co-adaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark.  The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity.
+    (8. Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content.
+    (9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.
+    (10. Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute.
+    (11. Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so.
+    (12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected.
+    (13. Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach.  All sublicenses shall survive the termination of this License.
+    (14. Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.
+    (15. COPYRIGHT NOTICE
 Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.
 System Reference Document. Copyright 2000, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, based on material by E. Gary Gygax and Dave Arneson.
 Pathfinder Roleplaying Game Reference Document. © 2011, Paizo Publishing, LLC; Author: Paizo Publishing, LLC.
@@ -40,8 +41,11 @@ Pathfinder Roleplaying Game Core Rulebook. © 2009, Paizo Publishing, LLC; Autho
 Pathfinder Roleplaying Game Ultimate Equipment. © 2012 Paizo Publishing, LLC; Authors: Dennis Baker, Jesse Benner, Benjamin Bruck, Ross Byers, Brian J. Cortijo, Ryan Costello, Mike Ferguson, Matt Goetz, Jim Groves, Tracy Hurley, Matt James, Jonathan H. Keith, Michael Kenway, Hal MacLean, Jason Nelson, Tork Shaw, Owen KC Stephens, and Russ Taylor.
 '''
 
-import sys
+import re
 import random
+
+import app
+
 
 lmin_special_armor = [
     (50, 'Mithral Shirt (1,100gp)'),
@@ -178,10 +182,10 @@ armor_type = [
 
 
 def armornator(*pair):
-    def foo():
+    def inner():
         type = roll(armor_type)
         return recurse(zip((66, 100), pair)).replace('armor or shield', type)
-    return foo
+    return inner
 
 armor = (
         armornator(lmin_armor, gmin_armor),
@@ -395,10 +399,10 @@ weapon_type = [
 
 
 def weaponnator(*pair):
-    def foo():
+    def inner():
         type = roll(weapon_type)
         return recurse(zip((66, 100), pair)).replace('weapon', type)
-    return foo
+    return inner
 
 weapon = (
         weaponnator(lmin_weapon, gmin_weapon),
@@ -536,10 +540,10 @@ p3_uncommon = [
     (87, 'Fire Trap (775gp)'),
     (100, 'Nondetection (800gp)'),
     ]
-p0 = lambda: 'Potion "%s"' % roll(p0_common)
-p1 = lambda: 'Potion "%s"' % roll(random.choice((p1_common, p1_common, p1_common, p1_uncommon)))
-p2 = lambda: 'Potion "%s"' % roll(random.choice((p2_common, p2_common, p2_common, p2_uncommon)))
-p3 = lambda: 'Potion "%s"' % roll(random.choice((p3_common, p3_common, p3_common, p3_uncommon)))
+p0 = lambda: 'Potion "%s" (0th)' % roll(p0_common)
+p1 = lambda: 'Potion "%s" (1st)' % roll(random.choice((p1_common, p1_common, p1_common, p1_uncommon)))
+p2 = lambda: 'Potion "%s" (2nd)' % roll(random.choice((p2_common, p2_common, p2_common, p2_uncommon)))
+p3 = lambda: 'Potion "%s" (3rd)' % roll(random.choice((p3_common, p3_common, p3_common, p3_uncommon)))
 lmin_potion = [
         (40, p0),
         (100, p1),
@@ -1785,23 +1789,23 @@ sd9_uncommon = [
     ]
 
 
-def scrollinator(*quad):
-    def foo():
+def scrollinator(level, *quad):
+    def inner():
         combo = zip(('Arcane', 'Arcane', 'Divine', 'Divine'), quad)
         realm, chart = roll(zip((45, 60, 90, 100), combo))
-        return '%s Scroll "%s"' % (realm, recurse(chart))
-    return foo
+        return '%s Scroll "%s" (%s)' % (realm, recurse(chart), level)
+    return inner
 
-s0 = scrollinator(sa0_common, sa0_uncommon, sd0_common, sd0_uncommon)
-s1 = scrollinator(sa1_common, sa1_uncommon, sd1_common, sd1_uncommon)
-s2 = scrollinator(sa2_common, sa2_uncommon, sd2_common, sd2_uncommon)
-s3 = scrollinator(sa3_common, sa3_uncommon, sd3_common, sd3_uncommon)
-s4 = scrollinator(sa4_common, sa4_uncommon, sd4_common, sd4_uncommon)
-s5 = scrollinator(sa5_common, sa5_uncommon, sd5_common, sd5_uncommon)
-s6 = scrollinator(sa6_common, sa6_uncommon, sd6_common, sd6_uncommon)
-s7 = scrollinator(sa7_common, sa7_uncommon, sd7_common, sd7_uncommon)
-s8 = scrollinator(sa8_common, sa8_uncommon, sd8_common, sd8_uncommon)
-s9 = scrollinator(sa9_common, sa9_uncommon, sd9_common, sd9_uncommon)
+s0 = scrollinator('0th', sa0_common, sa0_uncommon, sd0_common, sd0_uncommon)
+s1 = scrollinator('1st', sa1_common, sa1_uncommon, sd1_common, sd1_uncommon)
+s2 = scrollinator('2nd', sa2_common, sa2_uncommon, sd2_common, sd2_uncommon)
+s3 = scrollinator('3rd', sa3_common, sa3_uncommon, sd3_common, sd3_uncommon)
+s4 = scrollinator('4th', sa4_common, sa4_uncommon, sd4_common, sd4_uncommon)
+s5 = scrollinator('5th', sa5_common, sa5_uncommon, sd5_common, sd5_uncommon)
+s6 = scrollinator('6th', sa6_common, sa6_uncommon, sd6_common, sd6_uncommon)
+s7 = scrollinator('7th', sa7_common, sa7_uncommon, sd7_common, sd7_uncommon)
+s8 = scrollinator('8th', sa8_common, sa8_uncommon, sd8_common, sd8_uncommon)
+s9 = scrollinator('9th', sa9_common, sa9_uncommon, sd9_common, sd9_uncommon)
 lmin_scroll = [
     (15, s0),
     (95, s1),
@@ -2356,11 +2360,12 @@ w4_uncommon = [
     (99, 'Zone of silence (30,000gp)'),
     (100, 'Legend lore (33,500gp)'),
     ]
-w0 = lambda: 'Wand of "%s"' % roll(random.choice((w0_common, w0_common, w0_common, w0_uncommon)))
-w1 = lambda: 'Wand of "%s"' % roll(random.choice((w1_common, w1_common, w1_common, w1_uncommon)))
-w2 = lambda: 'Wand of "%s"' % roll(random.choice((w2_common, w2_common, w2_common, w2_uncommon)))
-w3 = lambda: 'Wand of "%s"' % roll(random.choice((w3_common, w3_common, w3_common, w3_uncommon)))
-w4 = lambda: 'Wand of "%s"' % roll(random.choice((w3_common, w3_common, w3_common, w3_uncommon)))
+w0 = lambda: 'Wand of "%s" (0th)' % roll(random.choice((w0_common, w0_common, w0_common, w0_uncommon)))
+w1 = lambda: 'Wand of "%s" (1st)' % roll(random.choice((w1_common, w1_common, w1_common, w1_uncommon)))
+w2 = lambda: 'Wand of "%s" (2nd)' % roll(random.choice((w2_common, w2_common, w2_common, w2_uncommon)))
+w3 = lambda: 'Wand of "%s" (3rd)' % roll(random.choice((w3_common, w3_common, w3_common, w3_uncommon)))
+w4 = lambda: 'Wand of "%s" (4th)' % roll(random.choice((w3_common, w3_common, w3_common, w3_uncommon)))
+
 lmin_wand = [
         (40, w0),
         (100, w1),
@@ -2392,37 +2397,1031 @@ wand = (
     lambda: roll(zip((66, 100), (lmaj_wand, gmaj_wand))),
     )
 
+
+lmin_belt = [
+    (16, '''Belt of tumbling (800gp)'''),
+    (28, '''Beneficial bandolier (1,000gp)'''),
+    (40, '''Meridian belt (1,000gp)'''),
+    (54, '''Bladed belt (2,000gp)'''),
+    (70, '''Heavyload belt (2,000gp)'''),
+    (84, '''Aquatic cummerbund (2,600gp)'''),
+    (100, '''Equestrian belt (3,200gp)'''),
+    ]
+gmin_belt = [
+    (18, '''Belt of giant strength +2 (4,000gp)'''),
+    (36, '''Belt of incredible dexterity +2 (4,000gp)'''),
+    (54, '''Belt of mighty constitution +2 (4,000gp)'''),
+    (62, '''Belt of teeth (4,000gp)'''),
+    (74, '''Blinkback belt (5,000gp)'''),
+    (84, '''Plague rat belt (5,200gp)'''),
+    (100, '''Belt of foraging (6,000gp)'''),
+    ]
+lmed_belt = [
+    (4, '''Serpent belt (9,000gp)'''),
+    (8, '''Monkey belt (9,400gp)'''),
+    (16, '''Belt of physical might +2 (10,000gp)'''),
+    (22, '''Belt of the weasel (10,000gp)'''),
+    (27, '''Belt of thunderous charging (10,000gp)'''),
+    (32, '''Minotaur belt (11,000gp)'''),
+    (36, '''Plague rat belt, greater (11,200gp)'''),
+    (41, '''Belt of equilibrium (12,000gp)'''),
+    (46, '''Security belt (12,500gp)'''),
+    (51, '''Belt of mighty hurling, lesser (14,000gp)'''),
+    (57, '''Belt of dwarvenkind (14,900gp)'''),
+    (61, '''Cord of stubborn resolve (15,000gp)'''),
+    (71, '''Belt of giant strength +4 (16,000gp)'''),
+    (80, '''Belt of physical perfection +2 (16,000gp)'''),
+    (90, '''Belt of incredible dexterity +4 (16,000gp)'''),
+    (100, '''Belt of mighty constitution +4 (16,000gp)'''),
+    ]
+gmed_belt = [
+    (12, '''Monkey belt, greater (18,000gp)'''),
+    (26, '''Anaconda's coils (18,500gp)'''),
+    (38, '''Serpent belt, greater (20,000gp)'''),
+    (53, '''Belt of fallen heroes (21,000gp)'''),
+    (67, '''Gorgon belt (23,000gp)'''),
+    (84, '''Elemental earth belt (24,000gp)'''),
+    (100, '''Sash of flowing water (25,000gp)'''),
+    ]
+lmaj_belt = [
+    (12, '''Merform belt (32,000gp)'''),
+    (30, '''Belt of giant strength +6 (36,000gp)'''),
+    (48, '''Belt of incredible dexterity +6 (36,000gp)'''),
+    (66, '''Belt of mighty constitution +6 (36,000gp)'''),
+    (88, '''Belt of physical might +4 (40,000gp)'''),
+    (100, '''Belt of mighty hurling, greater (42,000gp)'''),
+    ]
+gmaj_belt = [
+    (25, '''Belt of stoneskin (60,000gp)'''),
+    (55, '''Belt of physical perfection +4 (64,000gp)'''),
+    (75, '''Belt of physical might +6 (90,000gp)'''),
+    (90, '''Shadowform belt (110,000gp)'''),
+    (100, '''Belt of physical perfection +6 (144,000gp)'''),
+    ]
+
+lmin_body = [
+    (20, '''Robe of infinite twine (1,000gp)'''),
+    (35, '''Robe of needles (1,000gp)'''),
+    (60, '''Robe of bones (2,400gp)'''),
+    (70, '''Bodywrap of mighty strikes +1 (3,000gp)'''),
+    (80, '''Corset of the vishkanya (3,000gp)'''),
+    (100, '''Druid's vestment (3,750gp)'''),
+    ]
+gmin_body = [
+    (15, '''Cassock of the clergy (4,600gp)'''),
+    (30, '''Mnemonic vestments (5,000gp)'''),
+    (45, '''Robe of components (5,000gp)'''),
+    (60, '''Sorcerer's robe (5,000gp)'''),
+    (75, '''Eidolon anchoring harness (6,000gp)'''),
+    (100, '''Robe of useful items (7,000gp)'''),
+    ]
+lmed_body = [
+    (15, '''Robe of blending (8,400gp)'''),
+    (26, '''Blazing robes (11,000gp)'''),
+    (37, '''Shocking robe (11,000gp)'''),
+    (48, '''Voidfrost robes (11,000gp)'''),
+    (59, '''Bodywrap of mighty strikes +2 (12,000gp)'''),
+    (75, '''Monk's robe (13,000gp)'''),
+    (100, '''Robe of arcane heritage (16,000gp)'''),
+    ]
+gmed_body = [
+    (25, '''Xorn robe (20,000gp)'''),
+    (52, '''Corset of dire witchcraft (22,000gp)'''),
+    (76, '''Bodywrap of mighty strikes +3 (27,000gp)'''),
+    (100, '''Robe of scintillating colors (27,000gp)'''),
+    ]
+lmaj_body = [
+    (40, '''Gunman's duster (36,000gp)'''),
+    (80, '''Bodywrap of mighty strikes +4 (48,000gp)'''),
+    (100, '''Smuggler's collapsible robe (48,000gp)'''),
+    ]
+gmaj_body = [
+    (10, '''Robe of stars (58,000gp)'''),
+    (15, '''Robe of gates (64,000gp)'''),
+    (20, '''Otherworldly kimono (67,000gp)'''),
+    (40, '''Bodywrap of mighty strikes +5 (75,000gp)'''),
+    (51, '''Resplendent robe of the thespian (75,000gp)'''),
+    (67, '''Robe of the archmagi (75,000gp)'''),
+    (77, '''Bodywrap of mighty strikes +6 (108,000gp)'''),
+    (97, '''Robe of eyes (120,000gp)'''),
+    (100, '''Bodywrap of mighty strikes +7 (147,000gp)'''),
+    ]
+
+lmin_chest = [
+    (15, '''Bandages of rapid recovery (200gp)'''),
+    (30, '''Quick runner's shirt (1,000gp)'''),
+    (50, '''Endless bandolier (1,500gp)'''),
+    (75, '''All tools vest (1,800gp)'''),
+    (100, '''Vest of surgery (3,000gp)'''),
+    ]
+gmin_chest = [
+    (10, '''Sash of the war champion (4,000gp)'''),
+    (20, '''Sipping jacket (5,000gp)'''),
+    (31, '''Tunic of careful casting (5,000gp)'''),
+    (42, '''Vest of escape (5,200gp)'''),
+    (52, '''Cackling hag's blouse (6,000gp)'''),
+    (62, '''Deadshot vest (6,000gp)'''),
+    (70, '''Prophet's pectoral (6,000gp)'''),
+    (79, '''Tunic of deadly might (6,000gp)'''),
+    (90, '''Vest of the vengeful tracker (6,000gp)'''),
+    (100, '''Resplendent uniform coat (7,000gp)'''),
+    ]
+lmed_chest = [
+    (13, '''Shirt of immolation (8,000gp)'''),
+    (28, '''Snakeskin tunic (8,000gp)'''),
+    (40, '''Bane baldric (10,000gp)'''),
+    (60, '''Unfettered shirt (10,000gp)'''),
+    (80, '''Poisoner's jacket, lesser (12,000gp)'''),
+    (100, '''Vest of the cockroach (16,000gp)'''),
+    ]
+gmed_chest = [
+    (50, '''Vest of stable mutation (20,000gp)'''),
+    (100, '''Spectral shroud (26,000gp)'''),
+    ]
+lmaj_chest = [
+    (60, '''Mantle of immortality (50,000gp)'''),
+    (100, '''Poisoner's jacket, greater (58,000gp)'''),
+    ]
+gmaj_chest = [
+    (35, '''Merciful baldric (60,000gp)'''),
+    (70, '''Mantle of faith (76,000gp)'''),
+    (100, '''Mantle of spell resistance (90,000gp)'''),
+    ]
+
+lmin_eye = [
+    (18, '''Deathwatch eyes (2,000gp)'''),
+    (38, '''Eyes of the eagle (2,500gp)'''),
+    (58, '''Goggles of minute seeing (2,500gp)'''),
+    (72, '''Pirate's eye patch (2,600gp)'''),
+    (87, '''Spectacles of understanding (3,000gp)'''),
+    (100, '''Lenses of detection (3,500gp)'''),
+    ]
+gmin_eye = [
+    (20, '''Eyes of the owl (4,000gp)'''),
+    (44, '''Eyes of keen sight (6,000gp)'''),
+    (66, '''Treasure hunter's goggles (6,400gp)'''),
+    (84, '''Inquisitor's monocle (6,800gp)'''),
+    (100, '''Kinsight goggles (7,500gp)'''),
+    ]
+lmed_eye = [
+    (16, '''Goggles of elvenkind (8,500gp)'''),
+    (31, '''Goggles of brilliant light (8,800gp)'''),
+    (48, '''Blind man's fold (12,000gp)'''),
+    (67, '''Goggles of night (12,000gp)'''),
+    (82, '''Lenses of figment piercing (12,000gp)'''),
+    (100, '''Arachnid goggles (15,000gp)'''),
+    ]
+gmed_eye = [
+    (21, '''Darklands goggles (20,000gp)'''),
+    (40, '''Sniper goggles (20,000gp)'''),
+    (58, '''Rainbow lenses (21,000gp)'''),
+    (77, '''Annihilation spectacles (25,000gp)'''),
+    (100, '''Eyes of doom (25,000gp)'''),
+    ]
+lmaj_eye = [
+    (60, '''Eyes of eyebite (30,000gp)'''),
+    (100, '''Sniper goggles, greater (50,000gp)'''),
+    ]
+gmaj_eye = [
+    (18, '''Eyes of charming (56,000gp)'''),
+    (34, '''Monocle of the investigator (66,000gp)'''),
+    (48, '''Sea tyrant's patch (70,000gp)'''),
+    (63, '''Swordmaster's blindfold (80,000gp)'''),
+    (77, '''Mindmaster's eyes (95,000gp)'''),
+    (90, '''Eyes of the dragon (110,000gp)'''),
+    (100, '''Truesight goggles (184,800gp)'''),
+    ]
+
+lmin_feet = [
+    (11, '''Boots of the cat (1,000gp)'''),
+    (22, '''Daredevil boots (1,400gp)'''),
+    (31, '''Boots of the enduring march (1,500gp)'''),
+    (41, '''Feather step slippers (2,000gp)'''),
+    (50, '''Boots of friendly terrain (2,400gp)'''),
+    (60, '''Boots of the winterlands (2,500gp)'''),
+    (76, '''Boots of elvenkind (2,500gp)'''),
+    (85, '''Acrobat slippers (3,000gp)'''),
+    (92, '''Horseshoes of speed (3,000gp)'''),
+    (100, '''Boots of the mire (3,500gp)'''),
+    ]
+gmin_feet = [
+    (7, '''Burglar boots, minor (4,000gp)'''),
+    (13, '''Horseshoes of crushing blows +1 (4,000gp)'''),
+    (19, '''Sandals of quick reaction (4,000gp)'''),
+    (26, '''Slippers of cloudwalking (4,400gp)'''),
+    (40, '''Slippers of spider climbing (4,800gp)'''),
+    (46, '''Sandals of the lightest step (5,000gp)'''),
+    (60, ''' (5,500gp)'''),
+    (68, '''Horseshoes of a zephyr (6,000gp)'''),
+    (75, '''Haunted shoes (6,480gp)'''),
+    (82, '''Jaunt boots (7,200gp)'''),
+    (100, '''Boots of levitation (7,500gp)'''),
+    ]
+lmed_feet = [
+    (8, '''Boots of escape (8,000gp)'''),
+    (14, '''Earth root boots (8,000gp)'''),
+    (21, '''Nightmare boots (8,500gp)'''),
+    (26, '''Nightmare horseshoes (9,000gp)'''),
+    (32, '''Caltrop boots (10,000gp)'''),
+    (39, '''Tremor boots (10,000gp)'''),
+    (47, '''Boots of the mastodon (10,500gp)'''),
+    (54, '''Shoes of the lightning leaper (10,500gp)'''),
+    (70, '''Boots of speed (12,000gp)'''),
+    (77, '''Verdant boots (12,000gp)'''),
+    (84, '''Horseshoes of crushing blows +2 (16,000gp)'''),
+    (100, '''Winged boots (16,000gp)'''),
+    ]
+gmed_feet = [
+    (38, '''Shoes of the firewalker (21,000gp)'''),
+    (72, '''Dryad sandals (24,000gp)'''),
+    (100, '''Horseshoes of the mist (27,000gp)'''),
+    ]
+lmaj_feet = [
+    (20, '''Getaway boots (30,000gp)'''),
+    (35, '''Horseshoes of crushing blows +3 (36,000gp)'''),
+    (55, '''Horseshoes of glory (39,600gp)'''),
+    (75, '''Burglar boots, major (46,000gp)'''),
+    (100, '''Boots of teleportation (49,000gp)'''),
+    ]
+gmaj_feet = [
+    (40, '''Slippers of the triton (56,000gp)'''),
+    (70, '''Horseshoes of crushing blows +4 (64,000gp)'''),
+    (100, '''Horseshoes of crushing blows +5 (100,000gp)'''),
+    ]
+
+lmin_hand = [
+    (13, '''Assisting gloves (180gp)'''),
+    (22, '''Claws of the ice bear (1,300gp)'''),
+    (34, '''Gloves of reconnaissance (2,000gp)'''),
+    (46, '''Glowing glove (2,000gp)'''),
+    (58, '''Apprentice's cheating gloves (2,200gp)'''),
+    (70, '''Challenger's gloves (2,200gp)'''),
+    (80, '''Gloves of larceny (2,500gp)'''),
+    (90, '''Healer's gloves (2,500gp)'''),
+    (100, '''Engineer's workgloves (3,000gp)'''),
+    ]
+gmin_hand = [
+    (12, '''Gauntlets of the skilled maneuver (4,000gp)'''),
+    (21, '''Ghostvision gloves (4,000gp)'''),
+    (33, '''Gloves of arrow snaring (4,000gp)'''),
+    (43, '''Trapspringer's gloves (4,000gp)'''),
+    (55, '''Gloves of arcane striking (5,000gp)'''),
+    (65, '''Poisoner's gloves (5,000gp)'''),
+    (75, '''Magnetist's gloves (6,000gp)'''),
+    (100, '''(6,250gp)'''),
+    ]
+lmed_hand = [
+    (2, '''Deliquescent gloves (8,000gp)'''),
+    (5, '''Form-fixing gauntlets (8,000gp)'''),
+    (8, '''Iron cobra gauntlet (8,000gp)'''),
+    (16, '''Shadow falconer's glove (8,000gp)'''),
+    (20, '''Spellstrike gloves (8,000gp)'''),
+    (28, '''Glyphbane gloves (9,000gp)'''),
+    (40, '''Glove of storing (10,000gp)'''),
+    (46, '''Gloves of shaping (10,000gp)'''),
+    (54, '''Pliant gloves (10,000gp)'''),
+    (76, '''Gauntlet of rust (11,500gp)'''),
+    (100, '''Gloves of dueling (15,000gp)'''),
+    ]
+gmed_hand = [
+    (30, '''Vampiric gloves (18,000gp)'''),
+    (65, '''Giant fist gauntlets (20,000gp)'''),
+    (100, '''Gloves of the shortened path (27,000gp)'''),
+    ]
+lmaj_hand = [
+    (40, '''Gloves of the commanding conjurer (30,000gp)'''),
+    (100, '''Gauntlet of rust, greater (34,500gp)'''),
+    ]
+gmaj_hand = [
+    (60, '''Talons of Leng (67,000gp)'''),
+    (100, '''Gauntlets of the weaponmaster (110,000gp)'''),
+    ]
+
+lmin_head = [
+    (10, '''Mask of stony demeanor (500gp)'''),
+    (22, '''Cap of human guise (800gp)'''),
+    (36, '''Cap of light (900gp)'''),
+    (56, '''Hat of disguise (1,800gp)'''),
+    (71, '''Buffering cap (2,000gp)'''),
+    (85, '''Miser's mask (3,000gp)'''),
+    (100, '''Stalker's mask (3,500gp)'''),
+    ]
+gmin_head = [
+    (12, '''Circlet of persuasion (4,500gp)'''),
+    (21, '''Grappler's mask (5,000gp)'''),
+    (31, '''Helm of fearsome mien (5,000gp)'''),
+    (40, '''Jingasa of the fortunate soldier (5,000gp)'''),
+    (54, '''Helm of comprehend languages and read magic (5,200gp)'''),
+    (67, '''Crown of swords (6,000gp)'''),
+    (87, '''Crown of blasting, minor (6,480gp)'''),
+    (100, '''Mask of the krenshar (7,200gp)'''),
+    ]
+lmed_head = [
+    (16, '''Helm of the mammoth lord (8,500gp)'''),
+    (30, '''Veil of fleeting glances (9,000gp)'''),
+    (46, '''Mask of a thousand tomes (10,000gp)'''),
+    (63, '''Medusa mask (10,000gp)'''),
+    (80, '''Cap of the free thinker (12,000gp)'''),
+    (100, '''Halo of inner calm (16,000gp)'''),
+    ]
+gmed_head = [
+    (6, '''Cat's eye crown (18,000gp)'''),
+    (12, '''Maw of the wyrm (18,000gp)'''),
+    (19, '''Mitre of the hierophant (18,000gp)'''),
+    (27, '''Magician's hat (20,000gp)'''),
+    (34, '''Circlet of mindsight (22,000gp)'''),
+    (42, '''Mask of the skull (22,000gp)'''),
+    (50, '''Howling helm (22,600gp)'''),
+    (62, '''Crown of blasting, major (23,760gp)'''),
+    (72, '''Helm of underwater action (24,000gp)'''),
+    (79, '''Crown of conquest (24,600gp)'''),
+    (85, '''Batrachian helm (26,000gp)'''),
+    (94, '''Helm of telepathy (27,000gp)'''),
+    (100, '''Plague mask (27,000gp)'''),
+    ]
+lmaj_head = [
+    (14, '''Iron circlet of guarded souls (30,000gp)'''),
+    (29, '''Laurel of command (30,000gp)'''),
+    (45, '''Mask of giants, lesser (30,000gp)'''),
+    (61, '''Steel-mind cap (33,600gp)'''),
+    (78, '''Stormlord's helm (35,000gp)'''),
+    (100, '''Helm of brilliance, lesser (36,000gp)'''),
+    ]
+gmaj_head = [
+    (14, '''Judge's wig (59,200gp)'''),
+    (39, '''Helm of teleportation (73,500gp)'''),
+    (55, '''Halo of menace (84,000gp)'''),
+    (68, '''Mask of giants, greater (90,000gp)'''),
+    (83, '''Helm of brilliance (125,000gp)'''),
+    (92, '''Helm of electric radiance (125,000gp)'''),
+    (100, '''Crown of heaven (150,000gp)'''),
+    ]
+
+lmin_headband = [
+    (60, '''Phylactery of faithfulness (1,000gp)'''),
+    (100, '''Dead man's headband (3,600gp)'''),
+    ]
+gmin_headband = [
+    (9, '''Headband of alluring charisma +2 (4,000gp)'''),
+    (18, '''Headband of inspired wisdom +2 (4,000gp)'''),
+    (27, '''Headband of vast intelligence +2 (4,000gp)'''),
+    (33, '''Headband of aerial agility +2 (4,500gp)'''),
+    (39, '''Shifter's headband +2 (4,500gp)'''),
+    (45, '''Headband of ponderous recollection (5,100gp)'''),
+    (51, '''Headband of ki focus (5,400gp)'''),
+    (58, '''Headband of unshakeable resolve (5,600gp)'''),
+    (66, '''Hollywreath band (5,700gp)'''),
+    (74, '''Headband of deathless devotion (6,400gp)'''),
+    (82, '''Phylactery of the shepherd (7,000gp)'''),
+    (91, '''Headband of intuition (7,000gp)'''),
+    (100, '''Headband of fortune's favor (7,700gp)'''),
+    ]
+lmed_headband = [
+    (6, '''Headband of havoc (8,000gp)'''),
+    (12, '''Serpent's band (9,000gp)'''),
+    (20, '''Headband of mental prowess +2 (10,000gp)'''),
+    (26, '''Hunter's band (11,000gp)'''),
+    (34, '''Phylactery of negative channeling (11,000gp)'''),
+    (42, '''Phylactery of positive channeling (11,000gp)'''),
+    (48, '''Veiled eye (12,000gp)'''),
+    (54, '''Band of the stalwart warrior (14,000gp)'''),
+    (60, '''Headband of ninjitsu (15,000gp)'''),
+    (68, '''Headband of alluring charisma +4 (16,000gp)'''),
+    (76, '''Headband of inspired wisdom +4 (16,000gp)'''),
+    (85, '''Headband of mental superiority +2 (16,000gp)'''),
+    (93, '''Headband of vast intelligence +4 (16,000gp)'''),
+    (100, '''Shifter's headband +4 (17,500gp)'''),
+    ]
+gmed_headband = [
+    (30, '''Headband of arcane energy (20,000gp)'''),
+    (70, '''Headband of counterspelling (20,000gp)'''),
+    (100, '''Headband of knucklebones (27,500gp)'''),
+    ]
+lmaj_headband = [
+    (9, '''Soulbound eye (30,000gp)'''),
+    (19, '''Winter wolf headband (32,000gp)'''),
+    (32, '''Headband of alluring charisma +6 (36,000gp)'''),
+    (45, '''Headband of inspired wisdom +6 (36,000gp)'''),
+    (58, '''Headband of vast intelligence +6 (36,000gp)'''),
+    (66, '''Shifter's headband +6 (39,000gp)'''),
+    (81, '''Headband of mental prowess +4 (40,000gp)'''),
+    (90, '''Headband of seduction (40,000gp)'''),
+    (100, '''Headband of aerial agility +4 (42,000gp)'''),
+    ]
+gmaj_headband = [
+    (20, '''Headband of mental resilience (64,000gp)'''),
+    (50, '''Headband of mental superiority +4 (64,000gp)'''),
+    (65, '''Headband of aerial agility +6 (81,000gp)'''),
+    (85, '''Headband of metal prowess +6 (90,000gp)'''),
+    (100, '''Headband of mental superiority +6 (144,000gp)'''),
+    ]
+
+lmin_neck = [
+    (10, '''Hand of the mage (900gp)'''),
+    (18, '''Aegis of recovery (1,500gp)'''),
+    (25, '''Amulet of bullet protection +1 (1,500gp)'''),
+    (37, '''Brooch of shielding (1,500gp)'''),
+    (49, '''Necklace of fireballs (type I) (1,650gp)'''),
+    (63, '''Amulet of natural armor +1 (2,000gp)'''),
+    (72, '''Golembane scarab (2,500gp)'''),
+    (82, '''Necklace of fireballs (type II) (2,700gp)'''),
+    (89, '''Swarmbane clasp (3,000gp)'''),
+    (95, '''Mind sentinel medallion (3,500gp)'''),
+    (100, '''Mummer's ruff (3,500gp)'''),
+    ]
+gmin_neck = [
+    (8, '''Amulet of elemental strife (4,000gp)'''),
+    (15, '''Righteous fist amulet (4,000gp)'''),
+    (26, '''Necklace of fireballs (type III) (4,350gp)'''),
+    (36, '''Amulet of mighty fists +1 (5,000gp)'''),
+    (47, '''Necklace of fireballs (type IV) (5,400gp)'''),
+    (55, '''Stormlure (5,400gp)'''),
+    (66, '''Necklace of fireballs (type V) (5,850gp)'''),
+    (73, '''Amulet of bullet protection +2 (6,000gp)'''),
+    (81, '''Feychild necklace (6,000gp)'''),
+    (89, '''Carcanet of detention (7,200gp)'''),
+    (100, '''Periapt of health (7,500gp)'''),
+    ]
+lmed_neck = [
+    (8, '''Amulet of natural armor +2 (8,000gp)'''),
+    (12, '''Amulet of proof against petrification (8,000gp)'''),
+    (15, '''Everwake amulet (8,000gp)'''),
+    (18, '''Gravewatch pendant (8,000gp)'''),
+    (23, '''Hand of glory (8,000gp)'''),
+    (26, '''Torc of lionheart fury (8,000gp)'''),
+    (33, '''Necklace of fireballs (type VI) (8,100gp)'''),
+    (40, '''Necklace of fireballs (type VII) (8,700gp)'''),
+    (43, '''Amulet of hidden strength (9,000gp)'''),
+    (47, '''Necklace of adaptation (9,000gp)'''),
+    (51, '''Amulet of spell cunning (10,000gp)'''),
+    (54, '''Collar of the true companion (10,000gp)'''),
+    (58, '''Frost fist amulet (10,000gp)'''),
+    (63, '''Crystal of healing hands (12,000gp)'''),
+    (66, '''Guardian gorget (12,000gp)'''),
+    (73, '''Medallion of thoughts (12,000gp)'''),
+    (77, '''Periapt of protection from curses (12,000gp)'''),
+    (81, '''Forge fist amulet (13,000gp)'''),
+    (85, '''Amulet of bullet protection +3 (13,500gp)'''),
+    (92, '''Periapt of wound closure (15,000gp)'''),
+    (95, '''Necklace of ki serenity (16,000gp)'''),
+    (98, '''Brooch of amber sparks (16,800gp)'''),
+    (100, '''Symbol of sanguine protection (17,500gp)'''),
+    ]
+gmed_neck = [
+    (15, '''Amulet of natural armor +3 (18,000gp)'''),
+    (24, '''Ampoule of false blood (20,000gp)'''),
+    (35, '''Amulet of magecraft (20,000gp)'''),
+    (50, '''Amulet of mighty fists +2 (20,000gp)'''),
+    (62, '''Dragonfoe amulet (20,000gp)'''),
+    (67, '''Amulet of spell mastery (22,000gp)'''),
+    (72, '''Amulet of bullet protection +4 (24,000gp)'''),
+    (85, '''Hand of stone (27,000gp)'''),
+    (100, '''Periapt of proof against poison (27,000gp)'''),
+    ]
+lmaj_neck = [
+    (18, '''Amulet of natural armor +4 (32,000gp)'''),
+    (35, '''Amulet of proof against detection and location (35,000gp)'''),
+    (49, '''Amulet of bullet protection +5 (37,500gp)'''),
+    (67, '''Scarab of protection (38,000gp)'''),
+    (82, '''Necklace of netted stars (42,000gp)'''),
+    (100, '''Amulet of mighty fists +3 (45,000gp)'''),
+    ]
+gmaj_neck = [
+    (35, '''Amulet of natural armor +5 (50,000gp)'''),
+    (60, '''Amulet of mighty fists +4 (80,000gp)'''),
+    (85, '''Amulet of the planes (120,000gp)'''),
+    (100, '''Amulet of mighty fists +5 (125,000gp)'''),
+    ]
+
+lmin_shoulder = [
+    (6, '''Catching cape (200gp)'''),
+    (10, '''Cloak of human guise (900gp)'''),
+    (30, '''Cloak of resistance +1 (1,000gp)'''),
+    (36, '''Muleback cords (1,000gp)'''),
+    (38, '''Shawl of life-keeping (1,000gp)'''),
+    (44, '''Shield cloak (1,000gp)'''),
+    (50, '''Quickchange cloak (1,500gp)'''),
+    (56, '''Cowardly crouching cloak (1,800gp)'''),
+    (74, '''Cloak of elvenkind (2,500gp)'''),
+    (80, '''Cloak of the hedge wizard (2,500gp)'''),
+    (85, '''Cloak of fiery vanishing (2,600gp)'''),
+    (94, '''Cloak of fangs (2,800gp)'''),
+    (97, '''Pauldrons of the serpent (3,000gp)'''),
+    (100, '''Stonemist cloak (3,500gp)'''),
+    ]
+gmin_shoulder = [
+    (26, '''Cloak of resistance +2 (4,000gp)'''),
+    (38, '''Cloak of the scuttling rat (6,000gp)'''),
+    (39, '''Seafoam shawl (6,000gp)'''),
+    (52, '''Treeform cloak (6,000gp)'''),
+    (74, '''Eagle cape (7,000gp)'''),
+    (94, '''Cloak of the manta ray (7,200gp)'''),
+    (100, '''Hunter's cloak (7,500gp)'''),
+    ]
+lmed_shoulder = [
+    (20, '''Cloak of resistance +3 (9,000gp)'''),
+    (22, '''Cloak of the duskwalker (10,000gp)'''),
+    (25, '''Cocoon cloak (10,000gp)'''),
+    (27, '''Pauldrons of the bull (10,000gp)'''),
+    (32, '''Stone cloak, minor (10,000gp)'''),
+    (40, '''Cape of the mountebank (10,800gp)'''),
+    (45, '''Pauldrons of the watchful lion (10,800gp)'''),
+    (52, '''Lion cloak (12,000gp)'''),
+    (54, '''Mantle of spores (13,400gp)'''),
+    (59, '''Cape of effulgent escape (14,000gp)'''),
+    (69, '''Cloak of arachnida (14,000gp)'''),
+    (72, '''Gunfighter's poncho (14,000gp)'''),
+    (74, '''Tentacle cloak (14,000gp)'''),
+    (76, '''Demonspike pauldrons (14,350gp)'''),
+    (78, '''Comfort's cloak (15,600gp)'''),
+    (88, '''Cloak of resistance +4 (16,000gp)'''),
+    (91, '''Shawl of the crone (16,000gp)'''),
+    (100, '''Prestidigitator's cloak (17,200gp)'''),
+    ]
+gmed_shoulder = [
+    (12, '''Stole of justice (18,000gp)'''),
+    (24, '''Jellyfish cape (19,200gp)'''),
+    (32, '''Cloak of the diplomat (20,000gp)'''),
+    (44, '''Slashing cloak (20,000gp)'''),
+    (56, '''Stone cloak, major (20,000gp)'''),
+    (68, '''Cloak of displacement, minor (24,000gp)'''),
+    (88, '''Cloak of resistance +5 (25,000gp)'''),
+    (100, '''Cloak of the bat (26,000gp)'''),
+    ]
+lmaj_shoulder = [
+    (40, '''Highwayman's cape (32,500gp)'''),
+    (60, '''Juggernaut's pauldrons (40,000gp)'''),
+    (100, '''Charlatan's cape (45,000gp)'''),
+    ]
+gmaj_shoulder = [
+    (15, '''Cloak of displacement, major (50,000gp)'''),
+    (35, '''Wings of flying (54,000gp)'''),
+    (55, '''Cloak of etherealness (55,000gp)'''),
+    (80, '''Wings of the gargoyle (72,000gp)'''),
+    (100, '''Wyvern cloak (78,600gp)'''),
+    ]
+
+lmin_wrist = [
+    (10, '''Sleeves of many garments (200gp)'''),
+    (20, '''Armbands of the brawler (500gp)'''),
+    (48, '''Bracers of armor +1 (1,000gp)'''),
+    (63, '''Burglar's bracers (1,000gp)'''),
+    (91, '''Bracers of steadiness (2,000gp)'''),
+    (96, '''Manacles of cooperation (2,000gp)'''),
+    (100, '''Shackles of compliance (3,280gp)'''),
+    ]
+gmin_wrist = [
+    (27, '''Bracers of armor +2 (4,000gp)'''),
+    (28, '''Bracers of falcon's aim (4,000gp)'''),
+    (38, '''Inquisitor's bastion vambraces (4,000gp)'''),
+    (65, '''Bracers of archery, lesser (5,000gp)'''),
+    (68, '''Spellguard bracers (5,000gp)'''),
+    (71, '''Bonebreaker gauntlets (6,000gp)'''),
+    (81, '''Vambraces of defense (6,000gp)'''),
+    (98, '''Verdant vine (6,000gp)'''),
+    (99, '''Longarm bracers (7,200gp)'''),
+    (100, '''Bracers of the glib entertainer (7,900gp)'''),
+    ]
+lmed_wrist = [
+    (4, '''Charm bracelet (8,000gp)'''),
+    (8, '''Duelist's vambraces (8,000gp)'''),
+    (13, '''Merciful vambraces (8,000gp)'''),
+    (18, '''Vambraces of the tactician (8,000gp)'''),
+    (43, '''Bracers of armor +3 (9,000gp)'''),
+    (53, '''Seducer's bane (9,900gp)'''),
+    (58, '''Bracers of the avenging knight (11,500gp)'''),
+    (63, '''Arrowmaster's bracers (13,900gp)'''),
+    (73, '''Vambraces of the genie (efreeti) (14,400gp)'''),
+    (78, '''Bracelet of bargaining (14,500gp)'''),
+    (82, '''Bracelet of mercy (15,000gp)'''),
+    (86, '''Bracers of the merciful knight (15,600gp)'''),
+    (90, '''Bracelet of second chances (15,750gp)'''),
+    (99, '''Bracers of armor +4 (16,000gp)'''),
+    (100, '''Shackles of durance vile (16,200gp)'''),
+    ]
+gmed_wrist = [
+    (10, '''Vambraces of the genie (djinni) (18,900gp)'''),
+    (20, '''Vambraces of the genie (marid) (18,900gp)'''),
+    (30, '''Vambraces of the genie (shaitan) (18,900gp)'''),
+    (50, '''Bracelet of friends (19,000gp)'''),
+    (70, '''Bracers of archery, greater (25,000gp)'''),
+    (90, '''Bracers of armor +5 (25,000gp)'''),
+    (100, '''Bracers of sworn vengeance (25,000gp)'''),
+    ]
+lmaj_wrist = [
+    (30, '''Dimensional shackles (28,000gp)'''),
+    (45, '''Gauntlets of skill at arms (30,000gp)'''),
+    (100, '''Bracers of armor +6 (36,000gp)'''),
+    ]
+gmaj_wrist = [
+    (60, '''Bracers of armor +7 (49,000gp)'''),
+    (100, '''Bracers of armor +8 (64,000gp)'''),
+    ]
+
+emin_slotless = [
+    (1, '''Feather token (anchor) (50gp)'''),
+    (2, '''Universal solvent (50gp)'''),
+    (4, '''Ioun torch (75gp)'''),
+    (5, '''Stubborn nail (100gp)'''),
+    (6, '''War paint of the terrible visage (100gp)'''),
+    (7, '''Elixir of love (150gp)'''),
+    (8, '''Unguent of timelessness (150gp)'''),
+    (9, '''Feather token (fan) (200gp)'''),
+    (10, '''Formula alembic (200gp)'''),
+    (11, '''Hybridization funnel (200gp)'''),
+    (12, '''Soul soap (200gp)'''),
+    (13, '''Dust of tracelessness (250gp)'''),
+    (16, '''Elixir of hiding (250gp)'''),
+    (19, '''Elixir of swimming (250gp)'''),
+    (22, '''Elixir of tumbling (250gp)'''),
+    (25, '''Elixir of vision (250gp)'''),
+    (27, '''Nightdrops (250gp)'''),
+    (28, '''Oil of silence (250gp)'''),
+    (31, '''Silversheen (250gp)'''),
+    (32, '''Traveler's any-tool (250gp)'''),
+    (34, '''Bottle of messages (300gp)'''),
+    (36, '''Feather token (bird) (300gp)'''),
+    (37, '''Origami swarm (300gp)'''),
+    (38, '''Alluring golden apple (400gp)'''),
+    (39, '''Feather token (tree) (400gp)'''),
+    (40, '''Key of lock jamming (400gp)'''),
+    (42, '''Feather token (swan boat) (450gp)'''),
+    (43, '''Animated portrait (500gp)'''),
+    (44, '''Bottled misfortune (500gp)'''),
+    (46, '''Elixir of truth (500gp)'''),
+    (48, '''Feather token (whip) (500gp)'''),
+    (51, '''Scabbard of honing (500gp)'''),
+    (53, '''Seer's tea (550gp)'''),
+    (57, '''Abjurant salt (600gp)'''),
+    (61, '''Arrow magnet (600gp)'''),
+    (63, '''Dust of darkness (600gp)'''),
+    (69, '''Campfire bead (720gp)'''),
+    (72, '''Archon's torch (750gp)'''),
+    (75, '''Book of extended summoning (lesser) (750gp)'''),
+    (79, '''Iron rope (750gp)'''),
+    (83, '''Snapleaf (750gp)'''),
+    (86, '''Bottled yeti fur (800gp)'''),
+    (89, '''Defoliant polish (800gp)'''),
+    (92, '''Dust of emulation (800gp)'''),
+    (97, '''Steadfast gut-stone (800gp)'''),
+    (100, '''Dust of dryness (850gp)'''),
+    ]
+lmin_slotless = [
+    (3, '''Roll on the Least Minor table'''),
+    (4, '''Anatomy doll (1,000gp)'''),
+    (5, '''Bead of newt prevention (1,000gp)'''),
+    (6, '''Beast-bond brand (1,000gp)'''),
+    (7, '''Bookplate of recall (1,000gp)'''),
+    (9, '''Boro bead (1st) (1,000gp)'''),
+    (10, '''Concealing pocket (1,000gp)'''),
+    (11, '''Dowsing syrup (1,000gp)'''),
+    (12, '''Incense of transcendence (1,000gp)'''),
+    (14, '''Page of spell knowledge (1st) (1,000gp)'''),
+    (17, '''Pearl of Power (1st) (1,000gp)'''),
+    (18, '''Preserving flask (1st) (1,000gp)'''),
+    (20, '''Pyxes of redirected focus (1,000gp)'''),
+    (22, '''Salve of slipperiness (1,000gp)'''),
+    (23, '''Wasp nest of swarming (1,000gp)'''),
+    (26, '''Elixir of fire breath (1,100gp)'''),
+    (27, '''Grave salt (1,100gp)'''),
+    (29, '''Pipes of the sewers (1,150gp)'''),
+    (31, '''Dust of illusion (1,200gp)'''),
+    (33, '''Goblin skull bomb (1,200gp)'''),
+    (35, '''Elixir of dragon breath (1,400gp)'''),
+    (36, '''Bookmark of deception (1,500gp)'''),
+    (37, '''Word bottle (1,500gp)'''),
+    (38, '''Dust of acid consumption (1,600gp)'''),
+    (40, '''Dust of appearance (1,800gp)'''),
+    (42, '''Efficient quiver (1,800gp)'''),
+    (43, '''Pipes of sounding (1,800gp)'''),
+    (44, '''Scabbard of vigor (1,800gp)'''),
+    (45, '''Agile alpenstock (2,000gp)'''),
+    (46, '''Blood reservoir of physical prowess (2,000gp)'''),
+    (47, '''Clamor box (2,000gp)'''),
+    (48, '''Dry load powder horn (2,000gp)'''),
+    (49, '''Goblin fire drum (normal) (2,000gp)'''),
+    (51, '''Handy haversack (2,000gp)'''),
+    (53, '''Horn of fog (2,000gp)'''),
+    (54, '''Iron spike of safe passage (2,000gp)'''),
+    (55, '''Knight's pennon (honor) (2,200gp)'''),
+    (59, '''Volatile vaporizer (1st) (2,200gp)'''),
+    (62, '''Elemental gem (2,250gp)'''),
+    (64, '''Flying ointment (2,250gp)'''),
+    (65, '''Sovereign glue (2,400gp)'''),
+    (66, '''Apple of eternal sleep (2,500gp)'''),
+    (68, '''Bag of holding (type I) (2,500gp)'''),
+    (69, '''Candle of truth (2,500gp)'''),
+    (70, '''Hexing doll (2,500gp)'''),
+    (72, '''Stone of alarm (2,700gp)'''),
+    (73, '''Book of extended summoning (standard) (2,750gp)'''),
+    (77, '''Bead of force (3,000gp)'''),
+    (78, '''Cauldron of brewing (3,000gp)'''),
+    (80, '''Chime of opening (3,000gp)'''),
+    (81, '''Philter of love (3,000gp)'''),
+    (86, '''Rope of climbing (3,000gp)'''),
+    (88, '''Volatile vaporizer (2nd) (3,000gp)'''),
+    (89, '''Shroud of disintegration (3,300gp)'''),
+    (92, '''Bag of tricks (gray) (3,400gp)'''),
+    (95, '''Dust of disappearance (3,500gp)'''),
+    (96, '''Dust of weighty burdens (3,600gp)'''),
+    (97, '''Noble's vigilant pillbox (3,600gp)'''),
+    (99, '''Figurine of wondrous power (silver raven) (3,800gp)'''),
+    (100, '''Volatile vaporizer (3rd) (3,800gp)'''),
+    ]
+gmin_slotless = [
+    (1, '''Boro bead (2nd) (4,000gp)'''),
+    (2, '''Cautionary creance (4,000gp)'''),
+    (3, '''Escape ladder (4,000gp)'''),
+    (4, '''Far-reaching sight (4,000gp)'''),
+    (6, '''Ioun stone (clear spindle) (4,000gp)'''),
+    (7, '''Marvelous pigments (4,000gp)'''),
+    (15, '''Page of spell knowledge (2nd) (4,000gp)'''),
+    (25, '''Pearl of Power (2nd) (4,000gp)'''),
+    (26, '''Preserving flask (2nd) (4,000gp)'''),
+    (27, '''Restorative ointment (4,000gp)'''),
+    (30, '''Stone salve (4,000gp)'''),
+    (31, '''Wind-caller compass (4,400gp)'''),
+    (32, '''Goblin fire drum (greater) (4,500gp)'''),
+    (33, '''Knight's pennon (battle) (4,500gp)'''),
+    (34, '''Knight's pennon (parley) (4,500gp)'''),
+    (35, '''Void dust (4,500gp)'''),
+    (36, '''Incense of meditation (4,900gp)'''),
+    (37, '''Admixture vial (5,000gp)'''),
+    (51, '''Bag of holding (type II) (5,000gp)'''),
+    (52, '''Bone razor (5,000gp)'''),
+    (53, '''Horn of the huntmaster (5,000gp)'''),
+    (54, '''Insistent doorknocker (5,000gp)'''),
+    (56, '''Ioun stone (dusty rose prism) (5,000gp)'''),
+    (57, '''Mallet of building (5,000gp)'''),
+    (58, '''Polymorphic pouch (5,000gp)'''),
+    (59, '''Scabbard of stanching (5,000gp)'''),
+    (60, '''School of eyes (5,000gp)'''),
+    (61, '''Sheath of bladestealth (5,000gp)'''),
+    (62, '''Stone of alliance (5,000gp)'''),
+    (63, '''Summoning shackle (5,000gp)'''),
+    (64, '''Eversmoking bottle (5,400gp)'''),
+    (65, '''Sustaining spoon (5,400gp)'''),
+    (66, '''Wind fan (5,500gp)'''),
+    (67, '''Grim lantern (5,800gp)'''),
+    (68, '''Coin of the untrodden road (6,000gp)'''),
+    (69, '''Horn of battle clarity (6,000gp)'''),
+    (70, '''Life link badge (6,000gp)'''),
+    (71, '''Martyr's tear (6,000gp)'''),
+    (72, '''Pipes of haunting (6,000gp)'''),
+    (73, '''Rope of knots (6,000gp)'''),
+    (74, '''Singing bell of striking (6,000gp)'''),
+    (75, '''Stone familiar (6,000gp)'''),
+    (76, '''Book of extended summoning (greater) (6,126gp)'''),
+    (77, '''Dragonbone divination sticks (6,400gp)'''),
+    (79, '''Horn of goodness/evil (6,500gp)'''),
+    (79, '''Naga-scale bindi (6,600gp)'''),
+    (80, '''Bottle of shadows (7,000gp)'''),
+    (81, '''Cape of bravado (7,000gp)'''),
+    (83, '''Instant bridge (7,000gp)'''),
+    (84, '''Mirror of guarding reflections (7,000gp)'''),
+    (85, '''Folding boat (7,200gp)'''),
+    (87, '''Bottle of air (7,250gp)'''),
+    (94, '''Bag of holding (type III) (7,400gp)'''),
+    (95, '''Balm of impish grace (7,500gp)'''),
+    (96, '''Candle of clean air (7,500gp)'''),
+    (97, '''Harp of charming (7,500gp)'''),
+    (100, '''Manual of war (7,500gp)'''),
+    ]
+lmed_slotless = [
+    (1, '''Chalice of poison weeping (8,000gp)'''),
+    (2, '''Exorcist's aspergillum (8,000gp)'''),
+    (3, '''Golem manual (flesh) (8,000gp)'''),
+    (4, '''Harp of shattering (8,000gp)'''),
+    (5, '''Insignia of valor (8,000gp)'''),
+    (6, '''Ioun stone (deep red sphere) (8,000gp)'''),
+    (7, '''Ioun stone (incandescent blue sphere) (8,000gp)'''),
+    (8, '''Ioun stone (pale blue rhomboid) (8,000gp)'''),
+    (9, '''Ioun stone (pink and green sphere) (8,000gp)'''),
+    (10, '''Ioun stone (pink rhomboid) (8,000gp)'''),
+    (11, '''Ioun stone (scarlet and blue sphere) (8,000gp)'''),
+    (12, '''Needles of fleshgraving (8,000gp)'''),
+    (13, '''Restless lockpicks (8,000gp)'''),
+    (14, '''Werewhistle (8,000gp)'''),
+    (16, '''Deck of illusions (8,100gp)'''),
+    (17, '''Candle of invocation (8,400gp)'''),
+    (19, '''Bag of tricks (rust) (8,500gp)'''),
+    (20, '''Boro bead (3rd) (9,000gp)'''),
+    (21, '''Decanter of endless water (9,000gp)'''),
+    (22, '''Loathsome mirror (9,000gp)'''),
+    (25, '''Page of spell knowledge (3rd) (9,000gp)'''),
+    (31, '''Pearl of Power (3rd) (9,000gp)'''),
+    (32, '''Preserving flask (3rd) (9,000gp)'''),
+    (33, '''Figurine of wondrous power (serpentine owl) (9,100gp)'''),
+    (34, '''Strand of prayer beads (lesser) (9,600gp)'''),
+    (38, '''Bag of holding (type IV) (10,000gp)'''),
+    (39, '''Boundary chalk (10,000gp)'''),
+    (40, '''Chime of resounding silence (10,000gp)'''),
+    (41, '''Construct channel brick (10,000gp)'''),
+    (42, '''Doomharp (10,000gp)'''),
+    (43, '''Drum of advance and retreat (10,000gp)'''),
+    (44, '''Embalming thread (10,000gp)'''),
+    (45, '''Eye of the void (10,000gp)'''),
+    (46, '''Figurine of wondrous power (bronze griffon) (10,000gp)'''),
+    (47, '''Figurine of wondrous power (ebony fly) (10,000gp)'''),
+    (48, '''Figurine of wondrous power (slate spider) (10,000gp)'''),
+    (49, '''Hourglass of last chances (10,000gp)'''),
+    (51, '''Ioun stone (dark blue rhomboid) (10,000gp)'''),
+    (52, '''Ki mat (10,000gp)'''),
+    (53, '''Lord's banner (swiftness) (10,000gp)'''),
+    (54, '''Malleable symbol (10,000gp)'''),
+    (55, '''Migrus locker (10,000gp)'''),
+    (56, '''Ornament of healing light (10,000gp)'''),
+    (57, '''Prayer wheel of ethical strength (10,000gp)'''),
+    (58, '''Stone horse (courser) (10,000gp)'''),
+    (59, '''Summon-slave crystal (10,000gp)'''),
+    (60, '''Treasurer's seal (10,000gp)'''),
+    (61, '''Black soul shard (12,000gp)'''),
+    (62, '''Golem manual (clay) (12,000gp)'''),
+    (63, '''Horsemaster's saddle (12,000gp)'''),
+    (64, '''Pipes of dissolution (12,000gp)'''),
+    (65, '''Pipes of pain (12,000gp)'''),
+    (66, '''Seeker's sight (12,000gp)'''),
+    (67, '''Blessed book (12,500gp)'''),
+    (68, '''Waters of transfiguration (12,500gp)'''),
+    (69, '''Gem of brightness (13,000gp)'''),
+    (70, '''Harp of contagion (13,000gp)'''),
+    (71, '''Lyre of building (13,000gp)'''),
+    (72, '''Void pennant (14,000gp)'''),
+    (73, '''Stone horse (destrier) (14,800gp)'''),
+    (74, '''Book of the loremaster (15,000gp)'''),
+    (75, '''Cauldron of plenty (15,000gp)'''),
+    (76, '''Horn of judgment (15,000gp)'''),
+    (77, '''Horn of the tritons (15,000gp)'''),
+    (78, '''Pearl of the sirines (15,300gp)'''),
+    (79, '''Figurine of wondrous power (onyx dog) (15,500gp)'''),
+    (81, '''Bag of tricks (tan) (16,000gp)'''),
+    (82, '''Boro bead (4th) (16,000gp)'''),
+    (83, '''Page of spell knowledge (4th) (16,000gp)'''),
+    (87, '''Pearl of Power (4th) (16,000gp)'''),
+    (88, '''Preserving flask (4th) (16,000gp)'''),
+    (91, '''Scabbard of keen edges (16,000gp)'''),
+    (93, '''Figurine of wondrous power (golden lions) (16,500gp)'''),
+    (95, '''Chime of interruption (16,800gp)'''),
+    (99, '''Broom of flying (17,000gp)'''),
+    (100, '''Figurine of wondrous power (marble elephant) (17,000gp)'''),
+    ]
+gmed_slotless = [
+    (3, '''Ioun stone (iridescent spindle) (18,000gp)'''),
+    (4, '''Orb of foul Abaddon (18,000gp)'''),
+    (8, '''Carpet of flying (5 ft. by 5 ft.) (20,000gp)'''),
+    (9, '''Horn of antagonism (20,000gp)'''),
+    (13, '''Horn of blasting (20,000gp)'''),
+    (17, '''Ioun stone (pale lavender ellipsoid) (20,000gp)'''),
+    (21, '''Ioun stone (pearly white spindle) (20,000gp)'''),
+    (24, '''Master's perfect golden bell (20,000gp)'''),
+    (27, '''Necromancer's athame (20,000gp)'''),
+    (31, '''Portable hole (20,000gp)'''),
+    (35, '''Stone of good luck (20,000gp)'''),
+    (37, '''Figurine of wondrous power (ivory goats) (21,000gp)'''),
+    (40, '''Rope of entanglement (21,000gp)'''),
+    (42, '''Golem manual (stone) (22,000gp)'''),
+    (43, '''Orb of golden heaven (22,000gp)'''),
+    (45, '''Mattock of the titans (23,348gp)'''),
+    (48, '''Drinking horn of bottomless valor (24,000gp)'''),
+    (51, '''Boro bead (5th) (25,000gp)'''),
+    (53, '''Chaos emerald (25,000gp)'''),
+    (57, '''Page of spell knowledge (5th) (25,000gp)'''),
+    (64, '''Pearl of Power (5th) (25,000gp)'''),
+    (67, '''Preserving flask (5th) (25,000gp)'''),
+    (69, '''Maul of the titans (25,305gp)'''),
+    (73, '''Iron bands of binding (26,000gp)'''),
+    (76, '''Cube of frost resistance (27,000gp)'''),
+    (80, '''Manual of bodily health +1 (27,500gp)'''),
+    (84, '''Manual of gainful exercise +1 (27,500gp)'''),
+    (88, '''Manual of quickness of action +1 (27,500gp)'''),
+    (92, '''Tome of clear thought +1 (27,500gp)'''),
+    (96, '''Tome of leadership and influence +1 (27,500gp)'''),
+    (100, '''Tome of understanding +1 (27,500gp)'''),
+    ]
+lmaj_slotless = [
+    (4, '''Figurine of wondrous power (obsidian steed) (28,500gp)'''),
+    (7, '''Cauldron of the dead (30,000gp)'''),
+    (11, '''Drums of panic (30,000gp)'''),
+    (15, '''Ioun stone (orange prism) (30,000gp)'''),
+    (19, '''Ioun stone (pale green prism) (30,000gp)'''),
+    (23, '''Lantern of revealing (30,000gp)'''),
+    (27, '''Racing broom of flying (30,000gp)'''),
+    (31, '''Cauldron of resurrection (33,000gp)'''),
+    (36, '''Carpet of flying (5 ft. by 10 ft.) (35,000gp)'''),
+    (38, '''Golem manual (iron) (35,000gp)'''),
+    (40, '''Boro bead (6th) (36,000gp)'''),
+    (44, '''Ioun stone (vibrant purple prism) (36,000gp)'''),
+    (48, '''Orb of utter chaos (36,000gp)'''),
+    (50, '''Page of spell knowledge (6th) (36,000gp)'''),
+    (58, '''Pearl of Power (6th) (36,000gp)'''),
+    (60, '''Preserving flask (6th) (36,000gp)'''),
+    (64, '''Cauldron of flying (40,000gp)'''),
+    (66, '''Enmity fetish (40,000gp)'''),
+    (69, '''Ioun stone (lavender and green ellipsoid) (40,000gp)'''),
+    (73, '''Ring gates (40,000gp)'''),
+    (77, '''Cauldron of seeing (42,000gp)'''),
+    (81, '''Crystal ball (42,000gp)'''),
+    (83, '''Golem manual (stone guardian) (44,000gp)'''),
+    (87, '''Drums of haste (45,000gp)'''),
+    (91, '''Strand of prayer beads (standard) (45,800gp)'''),
+    (94, '''Orb of storms (48,000gp)'''),
+    (96, '''Page of spell knowledge (7th) (49,000gp)'''),
+    (100, '''Pearl of Power (7th) (49,000gp)'''),
+    ]
+gmaj_slotless = [
+    (3, '''Crystal ball with see invisibility (50,000gp)'''),
+    (5, '''Horn of Valhalla (50,000gp)'''),
+    (8, '''Crystal ball with detect thoughts (51,000gp)'''),
+    (9, '''Last leaves of the autumn dryad (52,000gp)'''),
+    (11, '''Instant fortress (55,000gp)'''),
+    (15, '''Manual of bodily health +2 (55,000gp)'''),
+    (19, '''Manual of gainful exercise +2 (55,000gp)'''),
+    (23, '''Manual of quickness of action +2 (55,000gp)'''),
+    (27, '''Tome of clear thought +2 (55,000gp)'''),
+    (31, '''Tome of leadership and influence +2 (55,000gp)'''),
+    (35, '''Tome of understanding +2 (55,000gp)'''),
+    (36, '''Lord's banner (terror) (56,000gp)'''),
+    (37, '''Carpet of flying (10 ft. by 10 ft.) (60,000gp)'''),
+    (39, '''Darkskull (60,000gp)'''),
+    (40, '''Orb of pure law (60,000gp)'''),
+    (41, '''Cube of force (62,000gp)'''),
+    (43, '''Page of spell knowledge (8th) (64,000gp)'''),
+    (49, '''Pearl of Power (8th) (64,000gp)'''),
+    (50, '''Crystal ball with telepathy (70,000gp)'''),
+    (51, '''Horn of blasting (greater) (70,000gp)'''),
+    (54, '''Pearl of Power (two spells) (70,000gp)'''),
+    (55, '''Gem of seeing (75,000gp)'''),
+    (56, '''Lord's banner (victory) (75,000gp)'''),
+    (57, '''Crystal ball with true seeing (80,000gp)'''),
+    (59, '''Page of spell knowledge (9th) (81,000gp)'''),
+    (62, '''Pearl of Power (9th) (81,000gp)'''),
+    (63, '''Well of many worlds (82,000gp)'''),
+    (65, '''Manual of bodily health +3 (82,500gp)'''),
+    (67, '''Manual of gainful exercise +3 (82,500gp)'''),
+    (69, '''Manual of quickness of action +3 (82,500gp)'''),
+    (71, '''Tome of clear thought +3 (82,500gp)'''),
+    (73, '''Tome of leadership and influence +3 (82,500gp)'''),
+    (75, '''Tome of understanding +3 (82,500gp)'''),
+    (76, '''Apparatus of the crab (90,000gp)'''),
+    (77, '''Bowl of conjuring water elementals (90,000gp)'''),
+    (78, '''Brazier of conjuring fire elementals (90,000gp)'''),
+    (79, '''Censer of conjuring air elementals (90,000gp)'''),
+    (80, '''Stone of conjuring earth elementals (90,000gp)'''),
+    (81, '''Mirror of opposition (92,000gp)'''),
+    (82, '''Strand of prayer beads (greater) (95,800gp)'''),
+    (83, '''Lord's banner (crusades) (100,000gp)'''),
+    (84, '''Manual of bodily health +4 (110,000gp)'''),
+    (85, '''Manual of gainful exercise +4 (110,000gp)'''),
+    (86, '''Manual of quickness of action +4 (110,000gp)'''),
+    (87, '''Tome of clear thought +4 (110,000gp)'''),
+    (88, '''Tome of leadership and influence +4 (110,000gp)'''),
+    (89, '''Tome of understanding +4 (110,000gp)'''),
+    (90, '''Manual of bodily health +5 (137,500gp)'''),
+    (91, '''Manual of gainful exercise +5 (137,500gp)'''),
+    (92, '''Manual of quickness of action +5 (137,500gp)'''),
+    (93, '''Tome of clear thought +5 (137,500gp)'''),
+    (94, '''Tome of leadership and influence +5 (137,500gp)'''),
+    (95, '''Tome of understanding +5 (137,500gp)'''),
+    (96, '''Efreeti bottle (145,000gp)'''),
+    (97, '''Cubic gate (164,000gp)'''),
+    (98, '''Iron flask (170,000gp)'''),
+    (99, '''Mirror of mental prowess (175,000gp)'''),
+    (100, '''Mirror of life trapping (200,000gp)'''),
+    ]
+
 slots = [
-    (6, 'Belts'),
+    (6, 'Belt'),
     (12, 'Body'),
     (17, 'Chest'),
-    (22, 'Eyes'),
+    (22, 'Eye'),
     (28, 'Feet'),
-    (34, 'Hands'),
+    (34, 'Hand'),
     (41, 'Head'),
     (47, 'Headband'),
     (54, 'Neck'),
-    (61, 'Shoulders'),
-    (67, 'Wrists'),
+    (61, 'Shoulder'),
+    (67, 'Wrist'),
     (100, 'Slotless'),
     ]
 
-lmin_wondrous = lambda: 'Minor %s slot wondrous item %s' % (roll(slots), random.randint(1, 100))
-gmin_wondrous = lambda: 'Minor %s slot wondrous item %s' % (roll(slots), random.randint(1, 100))
-lmed_wondrous = lambda: 'Medium %s slot wondrous item %s' % (roll(slots), random.randint(1, 100))
-gmed_wondrous = lambda: 'Medium %s slot wondrous item %s' % (roll(slots), random.randint(1, 100))
-lmaj_wondrous = lambda: 'Major %s slot wondrous item %s' % (roll(slots), random.randint(1, 100))
-gmaj_wondrous = lambda: 'Major %s slot wondrous item %s' % (roll(slots), random.randint(1, 100))
+
+def wondernator(type):
+    def inner():
+        slot = roll(slots)
+        lchart = globals()['l%s_%s' % (type, slot.lower())]
+        gchart = globals()['g%s_%s' % (type, slot.lower())]
+        return recurse(zip((66, 100), (lchart, gchart)))
+    return inner
 
 wondrous = (
-    lambda: roll(zip((66, 100), (lmin_wondrous, gmin_wondrous))),
-    lambda: roll(zip((66, 100), (lmed_wondrous, gmed_wondrous))),
-    lambda: roll(zip((66, 100), (lmaj_wondrous, gmaj_wondrous))),
-    )
+        wondernator('min'),
+        wondernator('med'),
+        wondernator('maj'),
+        )
 
 
 def roll(chart):
-    '''Given (d100, value) chart'''
+    '''Given (d100, v1, v2, vN) chart return v1, v2, vN matching roll.'''
     d100 = random.randint(1, 100)
     for r, v in chart:
         if d100 <= r:
@@ -2443,19 +3442,176 @@ def corerule(index, chart):
     return recurse(roll(chart)[index])
 
 
-if __name__ == '__main__':
-    if len(sys.argv) == 1:
-        print 'Usage:'
-        print '%s minor medium major' % sys.argv[0]
-        sys.exit()
-    counts = [int(x) for x in sys.argv[1:]]
+RE_GP = re.compile(r'^(.+)\s*\(([,0-9]+)\s*(gp)\)\s*("?)(.*)')
+
+
+def gp_extract(text):
+    match = RE_GP.match(text)
+    gp = ''
+    if match:
+        gp = '%s %s' % (match.group(2), match.group(3))
+        text = match.group(1).strip() + match.group(4) + match.group(5)
+    return gp, custom_capitalize(text)
+
+
+def custom_capitalize(text):
+    words = list()
+    for word in text.strip().split():
+        if not word.startswith('"') and word.lower() not in ('a', 'and', 'any', 'in', 'of', 'the', 'with', 'one', 'two', 'three', 'four', 'ii"', 'iii"', 'iv"', 'vi"', 'vii"', 'viii"', 'ix"'):
+            word = word.capitalize()
+        words.append(word)
+    return ' '.join(words)
+
+
+def get_func(type, args):
+    '''returns: list of funcs (use random.choice) and count.'''
+    def parse(args, sublevels, mainlevels):
+        def get(arg, options):
+            for option in options:
+                if option.startswith(arg):
+                    return option
+        sub = None
+        main = None
+        count = 1
+        for arg in args:
+            if sub is None:
+                sub = get(arg, sublevels)
+            if main is None:
+                main = get(arg, mainlevels)
+            try:
+                count = int(arg)
+            except ValueError:
+                pass
+        return sub, main, count
+    sublevels = ['lessor', 'lesser', 'greater']
+    mainlevels = ['minor', 'medium', 'major']
+    sub, main, count = parse(args, sublevels, mainlevels)
+    plural = ['', 's'][count > 1]
+    if sub and main:
+        print '%i %s %s %s%s' % (count, sub, main, type, plural)
+        funcs = [globals()['%s%s_%s' % (sub[0], main[:3], type)], ]
+    elif main:
+        print '%i %s %s%s' % (count, main, type, plural)
+        funcs = [globals()[type][mainlevels.index(main)], ]
+    else:
+        print '%i %s%s' % (count, type, plural)
+        funcs = globals()[type]
+    return funcs, count
+
+
+def action_maker(type, spell_levels=[]):
+    def inner(self):
+        funcs, count = get_func(type, self.config.args)
+        if spell_levels and self.config.spelllevel is not None:
+            level = spell_levels[int(self.config.spelllevel)]
+            treasures = [('', recurse(level)) for x in range(count)]
+        else:
+            treasures = [('', recurse(random.choice(funcs))) for x in range(count)]
+        self._print(treasures)
+    inner.doc = '''Random %s''' % type
+    return inner
+
+
+class TreasureApp(app.App):
+    '''Pathfinder RPG treasure generation.'''
+    VERSION = '1.0.0'
+
     master = (armor, weapon, potion, ring, rod, scroll, staff, wand, wondrous)
-    lables = ('Minor', 'Medium', 'Major')
     charts = (
             zip((4, 9, 44, 46, 0, 81, 0, 91, 100), master),
             zip((10, 20, 30, 40, 50, 65, 68, 83, 100), master),
             zip((10, 20, 25, 35, 45, 55, 75, 80, 100), master),
             )
-    for name, index, chart, count in zip(lables, range(3), charts, counts):
-        for i in range(count):
-            print '%-7s - %s' % (name, corerule(index, chart))
+    lables = ('Minor', 'Medium', 'Major')
+
+    def init_parser(self):
+        def gpsort(x):
+            try:
+                bits = x.split()
+                return int(bits[0].replace(',', '')), bits[1:]
+            except Exception as e:
+                return x
+        self.formaters = dict()
+        self.formaters['base'] = (lambda l, t: '%-12s %s' % gp_extract(t), gpsort)
+        self.formaters['bore'] = (lambda l, t: custom_capitalize(t), lambda x: x)
+        self.formaters['type'] = (lambda l, t: '%-7s - %s' % (l, custom_capitalize(t)), lambda x: x)
+        self.formaters['rst'] = self.formaters['base']
+
+        super(TreasureApp, self).init_parser(description=__doc__)
+        self.actions.choices['market'].add_argument('minor', metavar='<minor>', type=int)
+        self.actions.choices['market'].add_argument('medium', metavar='<medium>', type=int)
+        self.actions.choices['market'].add_argument('major', metavar='<major>', type=int)
+        self.actions.choices['minor'].add_argument('count', metavar='<count>', nargs='?', default=1, type=int)
+        self.actions.choices['medium'].add_argument('count', metavar='<count>', nargs='?', default=1, type=int)
+        self.actions.choices['major'].add_argument('count', metavar='<count>', nargs='?', default=1, type=int)
+        self.actions.choices['armor'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['weapon'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['potion'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['ring'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['rod'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['scroll'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['staff'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['wand'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['wondrous'].add_argument('args', metavar='<arg>', nargs='*')
+        self.actions.choices['misc'].add_argument('args', metavar='<arg>', nargs='*')
+        self.cmdline.add_argument('-f', '--format', default='base', choices=self.formaters.keys())
+        self.cmdline.add_argument('-s', '--sort', action='store_true', default=False)
+        self.cmdline.add_argument('-l', '--spelllevel', default=None)
+
+    def _print(self, treasures):
+        '''Output list of treasures according to formating and sorting style selected.'''
+        styler, sorter = self.formaters[self.config.format]
+        if self.config.format == 'rst':  # ReSTructured text
+            table = '%s %s' % ('=' * 12, '=' * 60)
+            print table
+            print 'Cost         Item'
+            print table
+        output = list()
+        for treasure in treasures:
+            output.append(styler(*treasure))
+        if self.config.sort:
+            output.sort(key=sorter)
+        print '\n'.join(output)
+        if self.config.format == 'rst':
+            print table
+
+    def _core(self, minor, medium, major):
+        '''Produce a number of minor, medium and major magic items.'''
+        counts = (minor, medium, major)
+        treasures = list()
+        for name, index, chart, count in zip(self.lables, range(3), self.charts, counts):
+            for i in range(count):
+                treasures.append((name, corerule(index, chart)))
+        return treasures
+
+    def action_market(self):
+        '''ReSTructured Text formated block of items found in market.'''
+        self.config.format = 'rst'
+        self._print(self._core(self.config.minor, self.config.medium, self.config.major))
+
+    def action_minor(self):
+        '''Random minor item.'''
+        self._print(self._core(self.config.count, 0, 0))
+
+    def action_medium(self):
+        '''Random medium item.'''
+        self._print(self._core(0, self.config.count, 0))
+
+    def action_major(self):
+        '''Random major item.'''
+        self._print(self._core(0, 0, self.config.count))
+
+    action_armor = action_maker('armor')
+    action_weapon = action_maker('weapon')
+    action_potion = action_maker('potion', [p0, p1, p2, p3])
+    action_ring = action_maker('ring')
+    action_rod = action_maker('rod')
+    action_scroll = action_maker('scroll', [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9])
+    action_staff = action_maker('staff')
+    action_wand = action_maker('wand', [w0, w1, w2, w3, w4])
+    action_wondrous = action_maker('wondrous')
+    action_misc = action_wondrous
+
+
+if __name__ == '__main__':
+    TreasureApp().run()
