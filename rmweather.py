@@ -229,9 +229,9 @@ windchill_table = [
 # Austin
 months_table = [
         # name         sunrise  sunset    high,var low,var  percep %   cloudcover_table
-        ('2nd winter', (7, 00), (18, 00), (32, 3), (32, 4), 46, (25, 54, 999)),
-        ('3rd winter', (6, 45), (18, 30), (38, 1), (30, 3), 41, (20, 53, 999)),
-        ('1st spring', (6, 15), (18, 15), (46, 2), (38, 3), 45, (26, 45, 999)),
+        ('2nd winter', (7, 00), (18, 00), (37, 3), (37, 4), 46, (25, 54, 999)),
+        ('3rd winter', (6, 45), (18, 30), (43, 1), (35, 3), 41, (20, 53, 999)),
+        ('1st spring', (6, 15), (18, 15), (50, 2), (40, 3), 45, (26, 45, 999)),
         ('2nd spring', (5, 30), (18, 45), (58, 3), (48, 2), 43, (25, 52, 999)),
         ('3rd spring', (5, 15), (19, 15), (69, 3), (57, 3), 42, (24, 52, 999)),
         ('1st summer', (5, 00), (19, 45), (79, 2), (65, 1), 36, (22, 67, 999)),
@@ -239,8 +239,8 @@ months_table = [
         ('3rd summer', (5, 30), (19, 15), (81, 0), (69, 1), 33, (31, 63, 999)),
         ('1st autumn', (5, 45), (18, 45), (74, 1), (62, 2), 33, (31, 60, 999)),
         ('2nd autumn', (6, 15), (18, 15), (72, 3), (52, 3), 36, (29, 54, 999)),
-        ('3rd autumn', (6, 45), (17, 45), (52, 3), (42, 3), 40, (19, 42, 999)),
-        ('1st winter', (7, 00), (17, 45), (38, 2), (33, 4), 43, (25, 55, 999)),
+        ('3rd autumn', (6, 45), (17, 45), (57, 3), (47, 3), 40, (19, 42, 999)),
+        ('1st winter', (7, 00), (17, 45), (43, 2), (38, 4), 43, (25, 55, 999)),
         ]
 
 
@@ -606,7 +606,7 @@ def print_chart(days):
                 sun = ''
             rain = h.precipitation or ''
             if rain and h.precipitation_move_mod:
-                notes.append('Manuevers(%s)' % h.precipitation_move_mod)
+                notes.append('Maneuvers(%s)' % h.precipitation_move_mod)
             if rain and h.precipitation_awareness_mod:
                 notes.append('Awareness(%s)' % h.precipitation_awareness_mod)
             if rain and h.precipitation_tracking_mod:
@@ -635,5 +635,5 @@ if __name__ == '__main__':
         month = int(sys.argv[1])
     elevation = 2100
     c = Month(month, climate, latitude, elevation)
-    c.calc_days(1, 10)
+    c.calc_days(11, 31)
     print_chart(c.days)

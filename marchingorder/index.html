@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ODD Pad</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    body {
+      min-width: 520px;
+      }
+    .index {
+      float: left;
+      margin: 0.3em 0.6em 0 0.6em;}
+    #characters {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; w
+      idth: 220px;
+      }
+    #characters li {
+      float: left;
+      margin: 3px;
+      padding: 1px;
+      width: 200px;
+      height: 50px;
+      text-align: left;
+      }
+    #charsheet {
+      margin: 0.2em;
+      padding: 1.0em;
+      }
+    .charsheet-del {
+      float: right;
+      top: 50%;
+      right: 0;
+    }
+  </style>
+
+  <script>
+  $(function() {
+    //$(".characters").selectable();
+
+    $("#columns" ).buttonset();
+    $("#column1").click(function() { $("#characters").width("220px"); });
+    $("#column2").click(function() { $("#characters").width("440px"); });
+    $("#column3").click(function() { $("#characters").width("660px"); });
+    $("#column4").click(function() { $("#characters").width("880px"); });
+
+    $(".charsheet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-widget-header");
+
+    $("#characters").sortable();
+
+    $("#addcharsheet").click(function() {
+      if ($("#charsheet-name").val() == "" || $("#charsheet-ac").val() == "") {
+        return;
+      };
+      var block = $('<li class="ui-state-default"></li>');
+      var charsheet = $('<div class="charsheet">AC' + $("#charsheet-ac").val() + ' ' + $("#charsheet-name").val() + '<span class="ui-icon ui-icon-minusthick charsheet-del"></span></div>');
+      block.append('<div class="index">' + ($("#characters li").length + 1) + '.</div>');
+      charsheet.addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-widget-header");
+      block.append(charsheet);
+      $("#characters").append(block);
+      charsheet.prepend("");
+      $(".charsheet-del" ).click(function() {
+        console.log('high');
+        var sheet = $(this).parent().parent().remove();
+      });
+      $("#charsheet-name").val("");
+      });
+    console.log('wtf')
+    $(".charsheet").prepend("<span class='charsheet-del ui-icon ui-icon-minusthick'></span>");
+    });
+  </script>
+
+</head>
+<body>
+
+<div>
+<form>
+  <div id="columns">
+    <input type="radio" id="column1" name="columns" checked="checked"><label for="column1">I</label>
+    <input type="radio" id="column2" name="columns"><label for="column2">II</label>
+    <input type="radio" id="column3" name="columns"><label for="column3">III</label>
+    <input type="radio" id="column4" name="columns"><label for="column4">IV</label>
+  </div>
+</form>
+</div>
+
+<ul id="characters">
+  <!--
+  <li class="ui-state-default">
+    <div class="index">1.</div>
+    <div class="charsheet">Aorn <span class='charsheet-del ui-icon ui-icon-minusthick'></span></div>
+  </li>
+  <li class="ui-state-default">
+    <div class="index">2.</div>
+    <div class="charsheet">Borg <span class='charsheet-del ui-icon ui-icon-minusthick'></span></div>
+  </li>
+  -->
+</ul>
+
+<div class="ui-helper-clearfix "></div>
+<p></p><p></p>
+<hr />
+
+<div>
+  Name: <input id="charsheet-name" type="text" name="name" /> <br />
+  AC: <input id="charsheet-ac" type="text" name="ac" value="9" /> <br />
+  <button id="addcharsheet">Add</button>
+</div>
+
+</body>
+</html>

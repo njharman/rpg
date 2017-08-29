@@ -535,58 +535,68 @@ halb = Combatant('Halberder',  53, 8, 4, 3, 4, -2, halberd, lambda: None, armor)
 zwei = Combatant('Compensatr', 53, 8, 4, 3, 4, -2, twohandsword, lambda: None, armor)
 
 
+def test_dieroll(die_func, count=100000):
+    bucket = defaultdict(int)
+    for i in range(count + 1):
+        bucket[die_func()] += 1
+    return bucket, count
+
+def calc_dieroll_results(bucket, count):
+    count = float(count)
+    rolls = bucket.keys()
+    rolls.sort()
+    total = 0
+    ptotal = 100
+    results = list()
+    for i in range(1, max(rolls) + 1):
+        if bucket[i]:
+            percent = (bucket[i] / count) * 100
+            results.append('%-3i %5i %5.2f%% %6.2f%%' %
+                        (i, bucket[i], percent, ptotal))
+            ptotal -= percent
+            total += i * bucket[i]
+        else:
+            results.append('%-3i         not rolled' % (i, ))
+    return results, (total / count), rolls[-1]
+
+
+def dieroll_average_n_max(roll, count=100000):
+    rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
+    print roll.name, '%.2f' % avg, max
+
+
+def dieroll_detail(roll, count=100000):
+    rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
+    print roll.name
+    for roll in rolls:
+        print roll
+    print
+
+
+
 if __name__ == '__main__':
-
-    def test_dieroll(die_func, count=100000):
-        bucket = defaultdict(int)
-        for i in range(count + 1):
-            bucket[die_func()] += 1
-        return bucket, count
-
-    def calc_dieroll_results(bucket, count):
-        count = float(count)
-        rolls = bucket.keys()
-        rolls.sort()
-        total = 0
-        ptotal = 100
-        results = list()
-        for i in range(1, max(rolls) + 1):
-            if bucket[i]:
-                percent = (bucket[i] / count) * 100
-                results.append('%-3i %5i %5.2f%% %6.2f%%' %
-                            (i, bucket[i], percent, ptotal))
-                ptotal -= percent
-                total += i * bucket[i]
-            else:
-                results.append('%-3i         not rolled' % (i, ))
-        return results, (total / count), rolls[-1]
-
-    def dieroll_average_n_max(roll, count=100000):
-        rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
-        print roll.__name__, '%.2f' % avg, max
-
-    def dieroll_detail(roll, count=100000):
-        rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
-        print roll.__name__
-        for roll in rolls:
-            print roll
-        print
-
-    if False:
+    if True:
         count = 12000
-        foo = PenetrationDieFactory(6, 2)
-        bar = PenetrationDieFactory(12, 2)
-        dieroll_detail(foo, count)
-        dieroll_detail(bar, count)
-        dieroll_average_n_max(dice.d4p, count)
-        dieroll_average_n_max(dice.d6p, count)
-        dieroll_average_n_max(dice.d8p, count)
-        dieroll_average_n_max(dice.d12p, count)
-        dieroll_average_n_max(dice.d20p, count)
-        dieroll_average_n_max(dice.d100p, count)
+        #dieroll_detail(d4p, count)
+        #dieroll_detail(d6p, count)
+        dieroll_average_n_max(d4p, count)
+        dieroll_average_n_max(d6p, count)
+        dieroll_average_n_max(d8p, count)
+        dieroll_average_n_max(d12p, count)
+        dieroll_average_n_max(d20p, count)
+        dieroll_average_n_max(d100p, count)
+        print
+        dieroll_average_n_max(d4x, count)
+        dieroll_average_n_max(d6x, count)
+        dieroll_average_n_max(d8x, count)
+        dieroll_average_n_max(d12x, count)
+        dieroll_average_n_max(d20x, count)
+        dieroll_average_n_max(d100x, count)
+
 
     if False:
         fight_stats(dude, zwei, fight, 10, True)
-    else:
+
+    if False:
         for looser in (hamr, baxe, halb, zwei):
             fight_stats(dude, looser, fight, 1000)

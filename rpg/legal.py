@@ -2,6 +2,7 @@
 Various legal bits for Open Game License, TradeMarks.
 '''
 
+
 def merge_ogl(*args):
     '''Combine, removing dupes and alpha sort one or more OGL section 15 copyrights.'''
     merged = set()
@@ -12,8 +13,11 @@ def merge_ogl(*args):
 
 
 aecTM = (
-    '''Labyrinth Lord(TM), Advanced Labyrinth Lord(TM) and Goblinoid Games(TM) are trademarks of Daniel Proctor.''',
+    '''Labyrinth Lord(tm), Advanced Labyrinth Lord(tm) and Goblinoid Games(tm) are trademarks of Daniel Proctor.''',
     )
+
+
+## Open Game License
 
 ogl = (
     '''OPEN GAME LICENSE Version 1.0a''',
@@ -26,78 +30,66 @@ ogl = (
     '''6. Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute.''',
     '''7. Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or co-adaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark.  The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity.''',
     '''8. Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content.''',
-    '''9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any Authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.''',
+    '''9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.''',
     '''10. Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute.''',
     '''11. Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so.''',
     '''12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected.''',
     '''13. Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach.  All sublicenses shall survive the termination of this License.''',
     '''14. Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.''',
     '''15. COPYRIGHT NOTICE''',
-    '''Open Game License v 1.0 Copyright 2000, Wizards of the Coast, Inc.''',
     '''Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.''',
-    '''System Reference Document Copyright 2000, Wizards of the Coast, Inc.; Authors Jonathon Tweet, Monte Cook, Skip Williams, based on original material by E. Gary Gygax and Dave Arneson.''',
     '''System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson.''',
     )
 
-# ogl section 15
-swc15 = (
-    '''Swords & Wizardry Core Rules, Copyright 2008, Matthew J. Finch.''',
-    '''Swords & Wizardry Complete Rules, Copyright 2010, Matthew J. Finch.''',
-    )
 
 # ogl section 15
 aec15 = (
     '''Modern System Reference Document Copyright 2002-2004, Wizards of the Coast, Inc.; Authors Bill Slavicsek, Jeff Grubb, Rich Redman, Charles Ryan, Eric Cagle, David Noonan, Stan!, Christopher Perkins, Rodney Thompson, and JD Wiker, based on material by Jonathan Tweet, Monte Cook, Skip Williams, Richard Baker, Peter Adkison, Bruce R. Cordell, John Tynes, Andy Collins, and JD Wiker.''',
-    '''Aerial Servant from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
-    '''Axe Beak from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Beetle, Giant Boring from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Beetle, Giant Rhinoceros from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Brownie from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
+    '''Aerial Servant from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
+    '''Axe Beak from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Beetle, Giant Boring from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Beetle, Giant Rhinoceros from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Brownie from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
     '''Castles & Crusades: Players Handbook, Copyright 2004, Troll Lord Games; Authors Davis Chenault and Mac Golden.''',
     '''Cave Cricket from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
     '''Crab, Monstrous from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Crayfish, Monstrous from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
+    '''Crayfish, Monstrous from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
     '''Darwin's World Copyright 2002, RPGObjects; Authors Dominic Covey and Chris Davis.''',
-    '''Demon: Juiblex "The Faceless Lord" (Demon Lord) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Demon: Orcus (Demon Prince of Undead) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
-    '''Devil: Amon (Duke of Hell) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Devil: Bael (Duke of Hell) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Devil: Geryon (Arch-Devil) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Ear Seeker from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Erica Balsley, based on original material by Gary Gygax.''',
-    '''Eel, Electric from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene.''',
-    '''Eye of the Deep from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Floating Eye from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
+    '''Demon: Juiblex "The Faceless Lord" (Demon Lord) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Demon: Orcus (Demon Prince of Undead) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
+    '''Devil: Amon (Duke of Hell) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Devil: Bael (Duke of Hell) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Devil: Geryon (Arch-Devil) from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Ear Seeker from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Erica Balsley, based on original material by Gary Gygax.''',
+    '''Eel, Electric from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene.''',
+    '''Eye of the Deep from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Floating Eye from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
     '''Fly, Giant from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Frog, Monstrous from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
-    '''Frog, Monstrous Killer from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
-    '''Frog, Monstrous Poisonous from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
-    '''Gas Spore from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
+    '''Frog, Monstrous from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
+    '''Frog, Monstrous Killer from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
+    '''Frog, Monstrous Poisonous from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
+    '''Gas Spore from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
     '''Golem, Wood from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Patrick Lawinger.''',
-    '''Gorbel from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Andrew Key.''',
-    '''Groaning Spirit from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
-    '''Hippocampus from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Erica Balsey, based on original material by Gary Gygax.''',
-    '''Jackalwere from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene based, on original material by Gary Gygax.''',
+    '''Gorbel from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Andrew Key.''',
+    '''Groaning Spirit from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
+    '''Hippocampus from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Erica Balsey, based on original material by Gary Gygax.''',
+    '''Jackalwere from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene based, on original material by Gary Gygax.''',
     '''Kamadan from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Nick Louth.''',
-    '''Leprechaun from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene based on original material by Gary Gygax.''',
-    '''Lurker Above from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Mutant Future(TM) Copyright 2008, Daniel Proctor and Ryan Denison. Authors Daniel Proctor and Ryan Denison.''',
-    '''Piercer from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
-    '''Rot Grub from the Tome of Horrors, Copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
-    '''Slithering Tracker from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Slug, Giant from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Strangle Weed from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Tick, Giant from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Trapper from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Turtle, Giant Snapping from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Green, based on original material by Gary Gygax.''',
-    '''Wind Walker from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Greene, based on original material by Gary Gygax.''',
-    '''Yeti from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; Author Scott Green, based on original material by Gary Gygax.''',
-    '''Labyrinth Lord(TM) Copyright 2007-2009, Daniel Proctor. Author Daniel Proctor.''',
+    '''Leprechaun from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene based on original material by Gary Gygax.''',
+    '''Lurker Above from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Mutant Future(tm) Copyright 2008, Daniel Proctor and Ryan Denison. Authors Daniel Proctor and Ryan Denison.''',
+    '''Piercer from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; authors Scott Greene and Clark Peterson, based on original material by Gary Gygax.''',
+    '''Rot Grub from the Tome of Horrors, Copyright 2002, Necromancer Games, Inc.; Authors Scott Greene and Clark Peterson, based on original material by Gary Gygax''',
+    '''Slithering Tracker from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax,''',
+    '''Slug, Giant from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Strangle Weed from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Tick, Giant from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax.''',
+    '''Trapper from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax,''',
+    '''Turtle, Giant Snapping from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Green, based on original material by Gary Gygax.''',
+    '''Wind Walker from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Greene, based on original material by Gary Gygax,''',
+    '''Yeti from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Green, based on original material by Gary Gygax.''',
+    '''Labyrinth Lord(tm) Copyright 2007-2009, Daniel Proctor. Author Daniel Proctor.''',
     '''Advanced Edition Companion, Copyright 2009-2010, Daniel Proctor. Author Daniel Proctor.''',
-    )
-
-# ogl section 15
-tt15 = (
-    '''Theorems & Thaumaturgy Copyright 2012 Gavin Norman. Author Gavin Norman.''',
     )
 
 # ogl section 15 from BMII
@@ -208,4 +200,17 @@ bm15 = (
     '''Zombie, Juju from the Tome of Horrors, Copyright 2002, Necromancer Games, Inc.; Author Scott Green, based on original material by Gary Gygax.''',
     '''Barrowmaze, Copyright 2012, Greg Gillespie; Author Greg Gillespie.''',
     '''Barrowmaze II, Copyright 2012, Greg Gillespie; Author Greg Gillespie.''',
+    )
+
+
+# ogl section 15
+swc15 = (
+    '''Swords & Wizardry Core Rules, Copyright 2008, Matthew J. Finch.''',
+    '''Swords & Wizardry Complete Rules, Copyright 2010, Matthew J. Finch.''',
+    )
+
+
+# ogl section 15
+tt15 = (
+    'Theorems & Thaumaturgy Copyright 2012 Gavin Norman. Author Gavin Norman.',
     )

@@ -12,5 +12,5 @@ setup(
     author='Norman J. Harman Jr.',
     author_email='njharman@gmail.com',
     license='MIT',
-    packages=['rpg', ],
+    packages=['rpg', 'rpg.munge'],
     )

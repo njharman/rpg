@@ -79,7 +79,6 @@ if __name__ == '__main__':
     count = 10000
     armor = 4
     tohit = 5
-    lucky = d20
     for bonus in range(1, 8):
         ac_range(count, tohit, bonus)
         print
