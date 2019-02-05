@@ -45,7 +45,7 @@ if __name__ == '__main__':
     vowels, consts = fuxate(text)
 
     for x in range(5):
-        print simple(text)
+        print(simple(text))
 
     for x in range(10):
-        print progmulagate(vowels, consts)
+        print(progmulagate(vowels, consts))

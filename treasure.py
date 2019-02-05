@@ -4,17 +4,7 @@ import re
 
 import click
 
-
-def d6():
-    return random.randint(1, 6)
-
-
-def d12():
-    return random.randint(1, 12)
-
-
-def d100():
-    return random.randint(1, 100)
+from dice import d6, d12, d100
 
 
 def reduce_groups(things):
@@ -127,15 +117,15 @@ def _scroll(rules, roll=None):
     '''
     result = table(rules.scroll, roll)
     if 'trap' == result.lower():
-        result = f'Trapped Scroll  {table(rules.scroll_trap)}'
+        return f'Trapped Scroll  {table(rules.scroll_trap)}'
     if 'spell' in result.lower():
         caster = random.choice(['Cleric', 'Magic-user', 'Magic-user', 'Magic-user'])
         spells = ', '.join(f'{c}x{x}' for c, _, x in reduce_groups(map(
             lambda x: (1, 0, table(rules.scroll_levels)),
             range(int(re.match(r'(\d+)', result).group(1)))
             )))
-        result = f'{caster} scroll {spells}'
-    return result
+        return f'{caster} scroll {spells}'
+    return f'Scroll of {result}'
 
 
 def _weapon(rules, roll=None):
@@ -144,7 +134,7 @@ def _weapon(rules, roll=None):
 
 def _wsr(rules, roll=None):
     result = table(rules.wsr, roll)
-    # BX made charge dice d12
+    # BX, changed charge dice d12 instead d10.
     if 'wand' in result.lower():
         charges = f' ({d12() + d12()} charges)'
     elif 'staff' in result.lower():
@@ -155,7 +145,7 @@ def _wsr(rules, roll=None):
     elif 'rod' in result.lower():
         charges = f' ({d12()} charges)'
     return f'{result}{charges}'
-    # grey hawk
+    # Greyhawk
     div = 1
     if '*' in result:
         return result
@@ -311,7 +301,7 @@ class Rules:
             return
         if what == 'magic':
             for item_func in treasure:
-                yield item_func(self.rules)
+                yield item_func(self)
         else:
             count, text = replace_quantity(treasure)
             yield f'{text} {what}'
@@ -778,7 +768,7 @@ class BxRules(Rules):
         (43, '2-24 +1 Bolts'),
         (45, '3-30 +1 Bolts'),
         (51, '1-6 +2 Bolts'),
-        (52, 'Bolts of Slaying'), # Replace 1 +2 bolt
+        (52, 'Bolts of Slaying'),  # Replace 1 +2 bolt
         (55, 'Dagger +1'),
         (56, 'Dagger +2, +3 vs bad things'),
         (64, 'Mace +1'),

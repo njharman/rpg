@@ -12,9 +12,12 @@ Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Oct 2012.
 Website: http://trollandflame.blogspot.com/
 '''
-
 import random
-from collections import namedtuple, deque
+from collections import deque, namedtuple
+
+
+def cmp(a, b):
+    return (a > b) - (a < b)
 
 
 class Weather(object):
@@ -160,7 +163,7 @@ class Calendar(object):
         '''
         days = (self.year * self.length_of_year) + self.day_of_year
         day = (days % self.lunar_cycle) + 1  # + 1 cause?
-        full = ((self.lunar_cycle / 4) * 3) + 1
+        full = int((self.lunar_cycle / 4) * 3) + 1
         near = range(full - 2, full + 3)  # 2 days before and after full moon.
         try:
             chance = (3, 9, 27, 9, 3)[near.index(day)]
@@ -213,7 +216,7 @@ spring = Season(
             'warm': ('driz', 'rain', 'storm'),
             'hot ': ('driz', 'rain', 'storm', 'storm'),
             'boil': ('driz', 'rain', 'storm', 'storm'),
-        },
+            },
         ('hail',),
         )
 summer = Season(
@@ -226,7 +229,7 @@ summer = Season(
             'warm': ('driz', 'rain', 'rain', 'storm'),
             'hot ': ('driz', 'rain', 'storm'),
             'boil': ('driz', 'rain', 'storm'),
-        },
+            },
         ('tornado',),
         )
 autumn = Season(
@@ -239,7 +242,7 @@ autumn = Season(
             'warm': ('driz', 'rain'),
             'hot ': ('driz', 'rain'),
             'boil': ('driz', 'rain'),
-        },
+            },
         ('icestorm',),
         )
 winter = Season(
@@ -252,7 +255,7 @@ winter = Season(
             'warm': ('driz', 'driz', 'rain'),
             'hot ': ('driz', 'driz', 'rain'),
             'boil': ('driz', 'driz', 'rain'),
-        },
+            },
         ('whiteout',),
         )
 
@@ -261,29 +264,29 @@ Day = namedtuple('Day', ['day', 'day_of_year', 'month', 'year', 'temp', 'rain', 
 Month = namedtuple('Month', ['name', 'length', 'season', 'temp'])
 MONTHS = {
     #  idx        name,  days season   temp
-        0: Month('Janus', 36, winter, 'cold'),
-        1: Month('Marus', 36, spring, 'mild'),
-        2: Month('Apris', 36, spring, 'warm'),
-        3: Month('Maius', 36, summer, 'hot '),
-        4: Month('Iunis', 36, summer, 'hot '),
-        5: Month('Sexti', 36, summer, 'hot '),
-        6: Month('Septi', 36, summer, 'warm'),
-        7: Month('Octus', 36, autumn, 'mild'),
-        8: Month('Novus', 36, autumn, 'cool'),
-        9: Month('Decus', 36, winter, 'cold'),
-        10: Month('Festivus', 5, winter, 'cold'),
-        }
+    0: Month('Janus', 36, winter, 'cold'),
+    1: Month('Marus', 36, spring, 'mild'),
+    2: Month('Apris', 36, spring, 'warm'),
+    3: Month('Maius', 36, summer, 'hot '),
+    4: Month('Iunis', 36, summer, 'hot '),
+    5: Month('Sexti', 36, summer, 'hot '),
+    6: Month('Septi', 36, summer, 'warm'),
+    7: Month('Octus', 36, autumn, 'mild'),
+    8: Month('Novus', 36, autumn, 'cool'),
+    9: Month('Decus', 36, winter, 'cold'),
+    10: Month('Festivus', 5, winter, 'cold'),
+    }
 
 
 temperatures = (
-        'froz',
-        'cold',
-        'cool',
-        'mild',
-        'warm',
-        'hot ',
-        'boil',
-        )
+    'froz',
+    'cold',
+    'cool',
+    'mild',
+    'warm',
+    'hot ',
+    'boil',
+    )
 
 weather = Weather(temperatures)
 # twelve 36 day months, followed by one 5 day winter festival
@@ -294,11 +297,11 @@ calendar = Calendar(MONTHS, 28, weather)
 for month_number, month in enumerate(calendar.a_year(374)):
     month_number += 1
     table = '======================== ========================== ========================== ========================== =========================='
-    print table
-    print '%24s %26s %26s %26s %26s' % (
+    print(table)
+    print('%24s %26s %26s %26s %26s' % (
             '[%i] %s, %s' % (month_number, calendar.month, calendar.year),
-            'Morning', 'Afternoon', 'Evening', 'Night')
-    print table
+            'Morning', 'Afternoon', 'Evening', 'Night'))
+    print(table)
     for day in month():
         event_bits = list()
         if day.moon:
@@ -329,10 +332,10 @@ for month_number, month in enumerate(calendar.a_year(374)):
             if day.rain[i]:
                 watch_bits.append(day.rain[i])
             if i == 3 and day.meteor:  # lunar meteor storm always at night
-                watch_bits.append('**\***')
+                watch_bits.append(r'**\***')
             if random.randint(1, 400) == 1:  # 1 in 100 chance (per day) of special event
                 watch_bits.append('**!** ')
             day_bits.append('%-26s' % ' '.join(watch_bits))
-        print ' '.join(day_bits)
-    print table
-    print
+        print(' '.join(day_bits))
+    print(table)
+    print()

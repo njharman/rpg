@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 '''Generating a Random Treasure Hoard according to Sword & Wizardry Complete Rules.
 
 Quick, dirty, incomplete.  Changes from Swords & Wizardy include; gem & jewerly

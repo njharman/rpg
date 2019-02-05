@@ -1,5 +1,4 @@
-#!/usr/bin/env python2
-from __future__ import print_function
+#!/usr/bin/env python3
 '''Given level of dungeon roll monster/treasure stocking for 9 rooms.
 
 According to OD&D
@@ -76,28 +75,30 @@ MONSTER = {
     }
 
 
-rooms = 9
-level = int(sys.argv[1])
+rooms = 5
+if len(sys.argv) == 1:
+    level = 1
+else:
+    level = min(9, max(1, int(sys.argv[1])))
 
 
 print('Level', level)
-print()
 for i in range(rooms):
-    things = list()
+    contents = list()
     treasure = False
     if d6() <= 2:
-        things.append('%dHD monster' % MONSTER[level]())
+        contents.append('%dHD monster' % MONSTER[level]())
         treasure = d6() <= 3
     else:
         treasure = d6() == 1
     if treasure:
-        things.append('%dsp' % SILVER[level]())
+        contents.append(f'{SILVER[level]():,}sp')
         if d6() <= 3:
-            things.append('%dgp' % GOLD[level]())
+            contents.append(f'{GOLD[level]():,}gp')
         if d100() <= GEMS[level]:
-            things.append('gems')
+            contents.append('gems')
         if d100() <= JEWLERY[level]:
-            things.append('jewlery')
+            contents.append('jewlery')
         if d100() <= MAGIC[level]:
-            things.append('magic')
-    print('Room %i: %s' % (i + 1, ', '.join(things)))
+            contents.append('magic')
+    print(f'  Room {i + 1}: {", ".join(contents)}')
