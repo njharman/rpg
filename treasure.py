@@ -172,34 +172,110 @@ class Treasures:
 
 
 class Jewelries(Treasures):
+    def __init__(self, ruleset):
+        if ruleset == 'bx':
+            pass
+        elif ruleset == 'odd':
+            pass
+        else:
+            raise ValueError(f'Unknown ruleset [{ruleset}]')
+
     def _roll(self, count, group):
+        '''Roll up count pieces of jewlery, group ignored.'''
         for x in range(count):
-            yield 1, (d6() + d6() + d6()) * 100, 'Jewelry'
+            value = (d6() + d6() + d6()) * 100
+            if value >= 1800:
+                type = 'jewelry platinum and gems'
+            elif value >= 1600:
+                type = 'jewelry gold with gems'
+            elif value >= 1200:
+                type = 'jewelry sivler with gems'
+            elif value >= 1000:
+                type = 'jewelry wrought platinum'
+            elif value >= 700:
+                type = 'jewelry wrought gold'
+            else:
+                type = 'jewelry wrought silver'
+            yield 1, value, type
 
 
 class Gems(Treasures):
-    def __init__(self, bx=False):
-        if bx:
+    def __init__(self, ruleset):
+        if ruleset == 'bx':
             self.gem_value_chance = [20, 45, 75, 95, 100]
-        self.gem_value_chance = [10, 25, 75, 90, 99, 100]
+            self.gem_value_chance = [20, 45, 75, 95, 99, 100]  # modified to give 1% chance of diamond
+        elif ruleset == 'odd':
+            self.gem_value_chance = [10, 25, 75, 90, 99, 100]
+        else:
+            raise ValueError(f'Unknown ruleset [{ruleset}]')
+        self.values = [10, 50, 100, 500, 1000, 5000, 10000, 25000, 50000]
+        self.gems = [
+            [  # 10 GP Gems (multicolored)
+            'Agate: Multi-colored circles',  # safe sleep
+            'Tiger Eye: Brown with golden center under-hue',
+            ],
+            [  # 50 GP Gems (stone)
+            'Bloodstone: Dark gray with red flecks',  # Weather Control
+            'Moonstone: Lustrous white with pale blue glow',  # Lycanthropy
+            ],
+            [  # 100 GP Gems (solid color)
+            'Carnelian: Orange to reddish brown',  # Protection from Evil
+            'Jade: Light green, deep green, green and white',  # Protection from poison
+            ],
+            [  # 500 GP Gems (translucent)
+            'Pearl: Lustrous white, pinkish, to pure black',  # Wisdom
+            'Topaz: Translucent golden yellow',  # Earth Wards of evil
+            ],
+            [  # 1000 GP Gems (transparent)
+            'Emerald: Transparent deep green',  # Water Undead protection / control
+            'Ruby: Transparent crimson',  # Fire Good luck
+            'Sapphire: Transparent vivid blue',  # Air inteligence, boosts magic
+            ],
+            [  # 5000 GP Gems
+            'Diamond: Transparent clear blue-white',
+            ],
+            ]  # noqa
+        self.unusual = [
+            'Crystal Ball',
+            'of Controlling Earth Elementals',
+            'Amulet of Non-detection',
+            'Scarab of Protection from Level Drain',
+            'Scarab of Enraging Enemies',
+            'Glowstone as light spell',
+            'Warstone +1 if built into weapon',
+            'Ioun Stone absorbs d20 spell levels',
+            'Ioun Stone geas',
+            'Ioun Stone 16 Int',
+            'Ioun Stone regen 1hp turn',
+            'Ioun Stone +1 spell slot',
+            'of Prayer',
+            'of Poison Detection',
+            'Demonstone',
+            ]
 
     def _roll(self, count, group):
+        '''Roll up count gems, in groups of size group.'''
         size = value = 0
         only_one = False  # Only one magical gem.
         for x in range(count):
             # Roll in groups; but reset when larger, magical or valueable.
             if x % group == 0 or size or value == 0 or value > 500:
-                gem, value = self.tindex(d100())
+                roll = d100()
+                for i, v in enumerate(self.gem_value_chance):
+                    if roll <= v:
+                        gem = random.choice(self.gems[i])
+                        value = self.values[i]
+                        break
             size = ''
             if x % 10 == 1:  # 1 in 10 gems have chance of being special.
-                # 30% of magical, only if 100gp or greator and only one.
+                # 30% chance to be magical, only if 100gp or greator and only one.
                 if d100() <= 30 and value >= 100 and not only_one:
                     value = 0
                     if 'Diamond' in gem:  # All magical Diamonds are True Seeing Gems.
                         gem = 'Diamond of True Seeing'
                     else:
                         gem = f'{gem[0:gem.index(":")]} {random.choice(self.unusual)}'
-                    only_one = True
+                    only_one = True  # Only one magic gem per hoard.
                 # 20% of non-magical gems are larger than usual.
                 elif d100() <= 20:
                     mult = random.choice([2, 2, 2, 4, 4, 8])
@@ -210,57 +286,6 @@ class Gems(Treasures):
                         8: 'enormous',
                         }[mult] + ' '
             yield 1, value, f'{size}{gem}'
-
-    unusual = [
-        'Crystal Ball',
-        'of Controlling Earth Elementals',
-        'Amulet of Non-detection',
-        'Scarab of Protection from Level Drain',
-        'Scarab of Enraging Enemies',
-        'Glowstone as light spell',
-        'Warstone +1 if built into weapon',
-        'Ioun Stone absorbs d20 spell levels',
-        'Ioun Stone geas',
-        'Ioun Stone 16 Int',
-        'Ioun Stone regen 1hp turn',
-        'Ioun Stone +1 spell slot',
-        'of Prayer',
-        'of Poison Detection',
-        'Demonstone',
-        ]
-
-    def tindex(self, roll):
-        '''Given d100 return gem value and index.'''
-        gems = [
-            [  # 10 GP Gems
-            'Agate: Multi-colored circles',
-            'Tiger Eye: Brown with golden center under-hue',
-            ],
-            [  # 50 GP Gems
-            'Bloodstone: Dark gray with red flecks',
-            'Moonstone: Translucent white with pale blue glow',
-            ],
-            [  # 100 GP Gems
-            'Carnelian: Orange to reddish brown',
-            'Jade: Light green, deep green, green and white',
-            ],
-            [  # 500 GP Gems
-            'Pearl: Lustrous white, pinkish, to pure black',
-            'Topaz: Translucent golden yellow',
-            ],
-            [  # 1000 GP Gems
-            'Emerald: Transparent deep green',
-            'Ruby: Transparent crimson',
-            'Sapphire: Transparent vivid blue',
-            ],
-            [  # 5000 GP Gems
-            'Diamond: Transparent clear blue-white',
-            ],
-            ]  # noqa
-        values = [10, 50, 100, 500, 1000, 5000, 10000, 25000, 50000]
-        for i, v in enumerate(self.gem_value_chance):
-            if roll <= v:
-                return random.choice(gems[i]), values[i]
 
 
 '''
@@ -306,12 +331,15 @@ class Rules:
             count, text = replace_quantity(treasure)
             yield f'{text} {what}'
             if what == 'gems':
-                yield from Gems().lines(count, 10)
+                yield from self.gems.lines(count, 10)
             if what == 'jewelry':
-                yield from Jewelries().lines(count, 1)
+                yield from self.jewelries.lines(count, 1)
 
 
 class OddRules(Rules):
+    name = 'odd'
+    jewelries = Jewelries('odd')
+    gems = Gems('odd')
     TREASURE_TYPES = {
         'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('gp', 35, '2000-12000'),  ('gems', 50, '6-36'),  ('jewelry', 50, '3-18'),  ('magic', 40, (_item, _item, _item))),
         'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('gp', 25, '1000-3000'),   ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (_martial, ))),
@@ -466,6 +494,9 @@ class OddRules(Rules):
 
 
 class BxRules(Rules):
+    name = 'bx'
+    jewelries = Jewelries('bx')
+    gems = Gems('bx')
     TREASURE_TYPES = {
         'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('ep', 20, '1000-4000'),   ('gp', 35, '2000-12000'),  ('pp', 25, '1000-2000'),   ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 30, (_item, _item, _item))),
         'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('ep', 25, '1000-4000'),   ('gp', 25, '1000-3000'),   None,                      ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (_martial, ))),
@@ -785,6 +816,9 @@ class BxRules(Rules):
 
 
 class BasicRules(BxRules):
+    name = 'basic'
+    jewelries = Jewelries('bx')
+    gems = Gems('bx')
     item = [  # Expert
         (10, 'Armor', _armor),
         (15, 'Misc', _misc),
@@ -873,19 +907,29 @@ class BasicRules(BxRules):
         ]
 
 
-@click.group()
-@click.option('-l', '--low-level', default=False, is_flag=True, help='Use level 1-3 bx tables.')
+class AliasedGroup(click.Group):
+    def get_command(self, ctx, cmd_name):
+        rv = click.Group.get_command(self, ctx, cmd_name)
+        if rv is not None:
+            return rv
+        if cmd_name == 'gems':
+            return click.Group.get_command(self, ctx, 'gem')
+
+
+@click.command(cls=AliasedGroup)
+@click.option('-l', '--low-level', default=False, is_flag=True, help='Use level 1-3 B/X tables.')
 @click.option('-o', '--odd', default=False, is_flag=True, help='Use ODD/Greyhawk tables.')
 @click.option('-r', '--roll', default=None, type=int, help='Use this d100 roll.')
 @click.pass_context
 def cli(ctx, low_level, odd, roll):
-    '''Roll up BX treasure hoards and items.'''
+    '''Roll up treasure hoards and items.'''
     if low_level:
         treasure = BasicRules()
     elif odd:
         treasure = OddRules()
     else:
         treasure = BxRules()
+    click.echo(f'Using {treasure.name} rules.')
     ctx.obj['treasure'] = treasure
     ctx.obj['roll'] = roll
 
@@ -913,20 +957,38 @@ for name in ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'ws
 @cli.command()
 @click.argument('count', default=1)
 @click.argument('group', default=1)
-def gem(count, group):
-    '''Roll up gems.'''
+@click.pass_context
+def jewelry(ctx, count, group):
+    '''Roll up Jewelries.'''
     if count > 1:
-        click.echo(f'{count} gems in groups of {group}:')
-    click.echo('\n'.join(Gems().lines(count, group)))
+        click.echo(f'{count} jewelries in groups of {group}:')
+    t = ctx.obj['treasure']
+    click.echo('\n'.join(t.jewelries.lines(count, group)))
 
 
 @cli.command()
+@click.argument('count', default=1)
+@click.argument('group', default=1)
+@click.pass_context
+def gem(ctx, count, group):
+    '''Roll up gems.'''
+    if count > 1:
+        click.echo(f'{count} gems in groups of {group}:')
+    t = ctx.obj['treasure']
+    click.echo('\n'.join(t.gems.lines(count, group)))
+
+
+@cli.command()
+@click.option('-s', '--something', default=False, is_flag=True, help='Re-reoll until something.')
 @click.argument('code')
 @click.pass_context
-def type(ctx, code):
+def type(ctx, code, something):
     '''Roll up treasure type.'''
     t = ctx.obj['treasure']
-    click.echo('\n'.join(list(t.type(code.lower()))) or 'Nothing')
+    stuff = list(t.type(code.lower()))
+    while something and not stuff:
+        stuff = list(t.type(code.lower()))
+    click.echo('\n'.join(stuff) or 'Nothing')
 
 
 if __name__ == '__main__':

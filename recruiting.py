@@ -87,7 +87,7 @@ class Dog(SortThings):
         hp = max(2, d6() - 1)
         gp = [20, 25, 25, 30, 30][hp - 1]
         dex = ability()
-        return f'Dog: {hp}hp F0, AC7, 11/d6-1 dmg, {dex} Dex. {gp}gp.'
+        return f'Dog: {hp}hp F1, AC7, d6-1 dmg, {dex} Dex. {gp}gp.'
 
     def day(self):
         return 0
@@ -99,7 +99,7 @@ class NonCombatant(SortThings):
         hp = random.randint(1, 3)
         weapon = random.choice(['Dagger', 'Club'])
         name = human_name()
-        return f'{what} {name}: {hp}hp, F0, AC9, 11/{weapon}, 8 Dex. 5gp per job + room/board.'
+        return f'{what} {name}: {hp}hp, F0, AC9, {weapon}, 8 Dex. 5gp per job + room & board.'
 
     def day(self):
         return random.choice([0, 0, 0, 1, 1, 1, 2, 2, 3])
@@ -144,7 +144,7 @@ class ZeroLevel(SortThings):
         if 'Bow' in weapon:
             hire += 10
         name = human_name()
-        return f'0-lvl {what} {name}: {hp}hp, F0, {armor}, 11/{weapon}, {dex} Dex. {hire}gp to hire + 2gp/day.'
+        return f'0-lvl {what} {name}: {hp}hp, F0, {armor}, {weapon}, {dex} Dex. {hire}gp to hire + 2gp/day.'
 
     def day(self):
         return random.choice([0, 0, 1, 1, 1, 2, 2, 2, 3, 4, 5])

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''Given level of dungeon roll monster/treasure stocking for 9 rooms.
+'''Given level of dungeon roll monster/treasure stocking for 5 rooms.
 
 According to OD&D
 '''
