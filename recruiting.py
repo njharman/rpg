@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
+"""Wilderlands campaign town hireling recruiting.
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Jan 2021.
+Website: http://trollandflame.blogspot.com/
+"""
 import random
 from collections import defaultdict
 
 import click
 
+from dice import d6
+
 
 def d(pips):
     return random.randint(1, pips)
-
-
-def d4():
-    return random.randint(1, 4)
-
-
-def d6():
-    return random.randint(1, 6)
 
 
 def ability():
@@ -29,6 +29,7 @@ def positive_ability():
 
 
 def modifier(score):
+    """Return modifier for ability score."""
     if score <= 3:
         return -3
     if score <= 5:
@@ -56,11 +57,12 @@ suffix = [
 
 
 def human_name():
+    """Generate a hooman name."""
     return f'{random.choice(prefix)}{random.choice(suffix)}'
 
 
 def pick(table):
-    """Table is list [weight, thing]jjj"""
+    """Table is list [weight, thing]."""
     choices, weights = table
     return random.choices(choices, weights)[0]
 
@@ -312,6 +314,7 @@ class Thief(Leveled):
 
 class Exotic(Leveled):
     level = 0
+
     def __str__(self):
         return 'Exotic Animal'
 
@@ -350,7 +353,7 @@ class HumanSettlement(Settlement):
 
 class DwarvenSettlement(Settlement):
     def dogs(self, modifier):
-        'MineMutt'
+        """MineMutt."""
         return [Dog() for i in range(max(0, d(4) - 3))]
 
     def what(self):
@@ -370,6 +373,7 @@ class DwarvenSettlement(Settlement):
 @click.argument('attempts', default=1)
 @click.pass_context
 def cli(ctx, attempts, modifier, dwarven):
+    """Wilderlands Campaign recruiting."""
     if dwarven:
         settlement = DwarvenSettlement()
     else:

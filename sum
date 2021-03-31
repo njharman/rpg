@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-# meant to be piped to from vim
+# Sum integers. Meant to be piped to/from vim.
 
 import re
 import sys

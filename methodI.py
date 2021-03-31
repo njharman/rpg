@@ -1,5 +1,10 @@
-#!/usr/bin/env python
-'''Quick hack to roll D&D character abilities.'''
+#!/usr/bin/env python3
+"""Quick hack to roll D&D character abilities.
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Jan 2021.
+Website: http://trollandflame.blogspot.com/
+"""
 
 import sys
 
@@ -7,36 +12,39 @@ import die
 
 
 d6 = die.Standard(6)
-d6m = lambda: max(1, d6()-1)
-d6p = lambda: d6()+1
+d6m = lambda: max(1, d6() - 1)
+d6p = lambda: d6() + 1
 three = die.Roll([d6, d6, d6], '3d6')
 four = die.Roll([d6, d6, d6, d6], '4d6')
 
 
 def fourdsix():
+    """Sum, 4d6 drop lowest."""
     roll = four(func=lambda x: x)
     return sum(roll) - min(roll), roll
 
 
 def threedsix():
+    """Sum 3d6."""
     roll = three(func=lambda x: x)
     return sum(roll), roll
 
 
 if len(sys.argv) == 3:
     level = int(sys.argv[1])
-    hitdie = {'mu':d6m}[(sys.argv)[2]]
+    hitdie = {'mu': d6m}[(sys.argv)[2]]
     roll = [hitdie() for x in range(level)]
-    print sum(roll), roll
+    print(sum(roll), roll)
     sys.exit()
 elif len(sys.argv) > 1:
     roll = fourdsix
 else:
     roll = threedsix
 
-for ability in ('STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'):
+for ability in ('Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'):
     total, dice = roll()
-    print ability, '%2s (%s)' % (total, ''.join(str(x) for x in dice))
+    rolls = ''.join(str(x) for x in dice)
+    print(f'{ability}: {total:2} ({rolls})')
 
 # scores = list()
 # for i in range(33):

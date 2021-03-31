@@ -1,11 +1,11 @@
-#!/usr/bin/env python
-'''Simple word scrambler.'''
+#!/usr/bin/env python3
+"""Simple word scrambler."""
 
 import random
 
 
 def fuxate(text):
-    '''Split text into two lists, vowels and consonants.'''
+    """Split text into two lists, vowels and consonants."""
     vowels = list()
     consts = list()
     for letter in text:
@@ -17,7 +17,7 @@ def fuxate(text):
 
 
 def progmulagate(v, c):
-    '''Alternate consonants and vowels.'''
+    """Alternate consonants and vowels."""
     vowels = list(v)
     consts = list(c)
     random.shuffle(vowels)
@@ -33,7 +33,7 @@ def progmulagate(v, c):
 
 
 def simple(text):
-    '''Pure jumble.'''
+    """Pure jumble."""
     word = list(text)
     random.shuffle(word)
     return ''.join(word)

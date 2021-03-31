@@ -2,7 +2,7 @@
 '''No idea.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
-Copyright: Released into Public Domain.
+Copyright: Released into Public Domain Jan 2021.
 Website: http://trollandflame.blogspot.com/
 '''
 

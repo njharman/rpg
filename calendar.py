@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-'''Generate ReStructuredText calendar.
+#!/usr/bin/env python3
+"""Generate ReStructuredText calendar.
 
 Quick hack for author's Gold and Glory campaign.
 
@@ -11,18 +11,23 @@ Use rst2pdf to create PDF.
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Oct 2012.
 Website: http://trollandflame.blogspot.com/
-'''
+"""
 import random
 from collections import deque, namedtuple
 
 
 def cmp(a, b):
+    """Compare."""
     return (a > b) - (a < b)
 
 
 class Weather(object):
+    """Generate weather.
+
+    :param temps: sequence of temps from coldest to hottest.
+    """
+
     def __init__(self, temps):
-        ''':param temps: sequence of temps from coldest to hottest'''
         self.temps = temps
         self._idx = None
         self._past_temp = deque([None] * 4)  # four position ring buffer
@@ -47,20 +52,20 @@ class Weather(object):
             return temp
 
         def front(past, direction):
-            'Cold or Hot front.'
+            """Cold or Hot front."""
             # Chance of jumping > 1 temp.
             delta = direction * random.choice((1, 1, 1, 1, 1, 2, 2, 3))
             value = past + delta
             return value
 
         def to_avg(avg):
-            'Move temp to average.'
+            """Move temp to average."""
             past = self._past_temp[0]
             direction = cmp(avg, past)
             return front(past, direction)
 
         def to_trend(avg):
-            'Continue temp trend from past.'
+            """Continue temp trend from past."""
             past = self._past_temp[0]
             directions = list()
             for temp in self._past_temp:
@@ -85,8 +90,7 @@ class Weather(object):
         return self.temps[self._idx]
 
     def _calc_rain(self, season, temp):
-        '''Percipitation per "watch".
-        '''
+        """Percipitation per "watch"."""
         rainy = list()
         self._rain_chance += season.chance
         if self._raining:  # double chance if already raining
@@ -108,12 +112,14 @@ class Weather(object):
         return rainy
 
     def forecast(self, season, avg):
-        '''set self.temp and self.rain'''
+        """Set self.temp and self.rain."""
         self.temp = self._calc_temp(self.temps.index(avg))
         self.rain = self._calc_rain(season, self.temp)
 
 
 class Calendar(object):
+    """Generate calendar."""
+
     def __init__(self, month_data, lunar_cycle, weather):
         self.months = month_data
         self.lunar_cycle = lunar_cycle
@@ -135,10 +141,11 @@ class Calendar(object):
 
     @property
     def moon_phase(self):
-        '''Moon phase.
+        """Moon phase.
+
         Starts with new moon on the (cycle/4)th day of year 1.
         Real moon cycle is complicated, this is good enough for fantasy.
-        '''
+        """
         # ('new', 'waxing crescent', 'first quarter', 'waxing gibbous', 'full ', 'waning gibbous', 'third quarter', 'waning crescent')
         # 'new', 'first quarter', 'full ', 'third quarter'
         days = (self.year * self.length_of_year) + self.day_of_year
@@ -159,8 +166,7 @@ class Calendar(object):
 
     @property
     def moon_shower(self):
-        '''Moon is "broken", chance around full moon of moon meteor shower.
-        '''
+        """Moon is "broken", chance around full moon of moon meteor shower."""
         days = (self.year * self.length_of_year) + self.day_of_year
         day = (days % self.lunar_cycle) + 1  # + 1 cause?
         full = int((self.lunar_cycle / 4) * 3) + 1
@@ -177,7 +183,7 @@ class Calendar(object):
         return ''
 
     def a_day(self):
-        '''Return dictionary of values for day.'''
+        """Return dictionary of values for day."""
         self.weather.forecast(self._month.season, self._month.temp)
         return Day(
                 self.day,
@@ -191,13 +197,13 @@ class Calendar(object):
                 )
 
     def a_month(self):
-        '''Generates each day for current month.'''
+        """Generates each day for current month."""
         for i in range(1, self._month.length + 1):
             self.day = i
             yield self.a_day()
 
     def a_year(self, year):
-        '''Generates one year's worth of month generators.'''
+        """Generates one year's worth of month generators."""
         self.year = year
         for i in range(len(self.months)):
             self._month = self.months[i]

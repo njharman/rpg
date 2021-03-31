@@ -1,4 +1,4 @@
-'''Various Roleplaying game systems/rules "dice".
+"""Various Roleplaying game systems/rules "dice".
 
 Classes::
     Die()
@@ -30,7 +30,11 @@ History::
       - changed do_roll to expect +x after. 2d6+10 vs 10+2d6.
       - changed ExplodingDie math_correct parameter to correct_math.
       - added __repr__ to classes.
-'''
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Jan 2021.
+Website: http://trollandflame.blogspot.com/
+"""
 
 import random
 
@@ -48,7 +52,7 @@ __all__ = (
 
 
 def do_roll(notation):
-    '''Given simple roll formula 2d6[+2] return integer result of making that roll.'''
+    """Given simple roll formula 2d6[+2] return integer result of making that roll."""
     if '+' in notation:
         notation, roll = notation.split('+')
         roll = int(roll)
@@ -61,13 +65,16 @@ def do_roll(notation):
 
 
 class BaseDie(object):
-    '''Create 'labels' that make 1d(size) 'die rolls' when called, used as int
+    """Base Die functionality.
+
+    Creates 'labels' that make 1d(size) 'die rolls' when called, used as int
     or converted to str.
 
     :param size: Number of faces on die.
     :param name_fmt: Used with size to set self.name.
     :param die_func: Callable, returns a roll of die.
-    '''
+    """
+
     def __init__(self, size, name_fmt, die_func):
         assert size > 1  # Infinite loops are overrated.
         self.name = name_fmt % size
@@ -77,46 +84,49 @@ class BaseDie(object):
         return '%s()' % (self.__class__.__name__, )
 
     def __call__(self):
-        '''Return roll as integer when called.'''
+        """Return roll as integer when called."""
         self._roll = self.die()
         return self._roll
 
     def __str__(self):
-        '''Return roll when evaluated in string context.'''
+        """Return roll when evaluated in string context."""
         return str(self())
 
     def __int__(self):
-        '''Return roll when evaluated in string context.'''
+        """Return roll when evaluated in string context."""
         return int(self())
 
     def __add__(self, other):
-        '''Return roll + other.'''
+        """Return roll + other."""
         return int(self) + other
 
     def __sub__(self, other):
-        '''Return roll - other.'''
+        """Return roll - other."""
         return int(self) - other
 
     def __radd__(self, other):
-        '''Return roll + other.'''
+        """Return roll + other."""
         return int(self) + other
 
     def __rsub__(self, other):
-        '''Return roll - other.'''
+        """Return roll - other."""
         return int(self) - other
 
     @property
     def natural(self):
-        '''Return natural die roll, i.e. before any modifications.'''
+        """Return natural die roll, i.e. before any modifications."""
         return self._roll
 
 
 class Die(BaseDie):
-    '''Create callables that make 1d(size) 'die rolls' when called, used in
+    """Normal Die.
+
+    Create callables that make 1d(size) 'die rolls' when called, used in
     math or converted to str.
 
     :param size: Number of faces on die.
-    '''
+    """
+
     def __init__(self, size):
         def d(size=size):
             return random.randint(1, size)
@@ -124,7 +134,9 @@ class Die(BaseDie):
 
 
 class ExplodingDie(BaseDie):
-    '''Create callables that make 1d(size) 'die rolls' when called, used in
+    """Boom goes the dynamite.
+
+    Create callables that make 1d(size) 'die rolls' when called, used in
     math or converted to str.
 
     On highest possible result, roll exploding die and add to total roll, recurse.
@@ -133,10 +145,11 @@ class ExplodingDie(BaseDie):
     :param xsize: [size]  Number of faces on exploding die.
     :param explode_range: [1] Explode on any roll > (max-n).
     :param correct_math: [False] Subtract 1 from roll for every exploding roll.
-    '''
+    """
+
     def __init__(self, size, xsize=None, explode_range=1, correct_math=False):
-        '''
-        '''
+        """
+        """
         if xsize is None:
             xsize = size
 
@@ -163,7 +176,9 @@ class ExplodingDie(BaseDie):
 
 
 class FighterExplodingDie(BaseDie):
-    '''Create callables that make 1d(size) 'die rolls' when called, used in
+    """Funtimes.
+
+    Create callables that make 1d(size) 'die rolls' when called, used in
     math or converted to str.
 
     Keep highest of two rolls. On highest possible result, roll exploding die
@@ -173,7 +188,8 @@ class FighterExplodingDie(BaseDie):
 
     :param size: Number of faces on die.
     :param explode_range: [1] Explode on any roll > (max-n).
-    '''
+    """
+
     def __init__(self, size, explode_range=1):
         super(FighterExplodingDie, self).__init__(size, 'd%ifx')
 

@@ -1,8 +1,8 @@
 #!/usr/bin/python
-'''English sounding citynames.
+"""English sounding citynames.
 
-from http://inkwellideas.com/?page_id=631
-'''
+From http://inkwellideas.com/?page_id=631
+"""
 
 import random
 
@@ -13,4 +13,4 @@ tre = ['Borough', 'Bridge', 'Burgh', 'Bury', 'Dee', 'Deen', 'Derry', 'Dom', 'Er'
 
 for i in range(20):
     c = lambda w: random.choice(w)
-    print ''.join([c(one), c(two), c(tre)]).title()
+    print(''.join([c(one), c(two), c(tre)]).title())

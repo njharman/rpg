@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-'''Simple command line dice roller.
+"""Simple command line dice roller.
 
 One or more rolls seperated by whitespace.
 
 Understands "RPG" dice notation 3d6 d20+4 2d4+2-2d6.
 Also single number '20' will be assumed to mean "roll die with that number sides", d20.
-'''
+
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Jan 2021
+Website: http://trollandflame.blogspot.com/
+"""
 
 import re
 import sys
@@ -16,6 +20,7 @@ random.seed(time.time())
 
 
 def parse(text, verbose):
+    """Parse dice string."""
     op = int
     rolls = list()
     for bit in re.split(r'([+-])', text):

@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-# vim: set fileencoding=utf-8 name> :
+#!/usr/bin/env python3
+# vim: set fileencoding=utf-8 :
 
 import re
 import sys
@@ -18,8 +18,21 @@ for mob in MOBS.values():
         mob['special'] = ''
 
 names = (
-        'Arnd Cobblestone', 'Fecal Nul', 'Garmeth the Wicked', 'Gurn Hammerhand', 'Kallic the Unmerciful', 'Minos the Minotaur', 'Minos the Minotaur-Ghast', 'Nathalas the Despicable', 'Nileed Enad', 'Ossithrax Pejorative', 'Randar Serouc', 'Red Fangs', 'Rendar Serouc', 'Rorteb Meerab', 'Sir Guy de O\'Veargne', 'Sir Huxley Tallbow', 'The Keeper of the Tablet', 'Uthuk Amon Thar', 'Zur the Black', 'Zvin Lorktho', 'Leggatos', 'Nulbar',
-        'Applewood', 'Arcos', 'Arnaxelda', 'Arnson', 'Baalbek', 'Bannock', 'Barsnowik', 'Brymgn', 'Crab-Claw', 'Dhekeon', 'Dingo-Baby', 'Dirtin', 'Diveen', 'Emnuron', 'Gak', 'Gallock', 'Gargar', 'Gblug', 'Gerg', 'Gethron', 'Grizelda', 'Gulwag', 'Gurn', 'Hephecates', 'Ibex-ibydl' 'Jabbard', 'Jurkgal', 'Kakta', 'Kelingard', 'O\'Veargne', 'Kelmok', 'Kohl', 'Leggat', 'Lesieg', 'Li\'On-Ess', 'Lorktho', 'Manon-itziq', 'Meerab', 'Meray', 'Minos', 'Moniphine', 'Mortimer', 'Nathalas', 'Nul', 'Octus', 'Ogbog', 'Oggle', 'Orthos', 'Ossithrax', 'Panther-man', 'Parnel', 'Rosilk', 'Sarla', 'Sayer of the Truth', 'Serella', 'Serouc' 'Shagrot', 'Sinnis', 'Sir Pelinore', 'Spider-Pig', 'Tallbow', 'Thala-Kul', 'Thar', 'The Keeper', 'Tumbledown', 'Uzgot', 'Valtor', 'Ventis', 'Vizix\'Vol', 'Vultrix', 'Willock', 'Wortbad', 'Xxaxik', 'Yark-Bree', 'Yasuq-Jac', 'Zur', 'Zygstral', 'Grr\'Woof-nub', 'Arnd',
+        'Arnd Cobblestone', 'Fecal Nul', 'Garmeth the Wicked', 'Gurn Hammerhand', 'Kallic the Unmerciful',
+        'Minos the Minotaur', 'Minos the Minotaur-Ghast', 'Nathalas the Despicable', 'Nileed Enad',
+        'Ossithrax Pejorative', 'Randar Serouc', 'Red Fangs', 'Rendar Serouc', 'Rorteb Meerab',
+        'Sir Guy de O\'Veargne', 'Sir Huxley Tallbow', 'The Keeper of the Tablet', 'Uthuk Amon Thar',
+        'Zur the Black', 'Zvin Lorktho', 'Leggatos', 'Nulbar',
+        'Applewood', 'Arcos', 'Arnaxelda', 'Arnson', 'Baalbek', 'Bannock', 'Barsnowik', 'Brymgn',
+        'Crab-Claw', 'Dhekeon', 'Dingo-Baby', 'Dirtin', 'Diveen', 'Emnuron', 'Gak', 'Gallock',
+        'Gargar', 'Gblug', 'Gerg', 'Gethron', 'Grizelda', 'Gulwag', 'Gurn', 'Hephecates',
+        'Ibex-ibydl' 'Jabbard', 'Jurkgal', 'Kakta', 'Kelingard', 'O\'Veargne', 'Kelmok', 'Kohl',
+        'Leggat', 'Lesieg', 'Li\'On-Ess', 'Lorktho', 'Manon-itziq', 'Meerab', 'Meray', 'Minos',
+        'Moniphine', 'Mortimer', 'Nathalas', 'Nul', 'Octus', 'Ogbog', 'Oggle', 'Orthos', 'Ossithrax',
+        'Panther-man', 'Parnel', 'Rosilk', 'Sarla', 'Sayer of the Truth', 'Serella', 'Serouc' 'Shagrot',
+        'Sinnis', 'Sir Pelinore', 'Spider-Pig', 'Tallbow', 'Thala-Kul', 'Thar', 'The Keeper', 'Tumbledown',
+        'Uzgot', 'Valtor', 'Ventis', 'Vizix\'Vol', 'Vultrix', 'Willock', 'Wortbad', 'Xxaxik', 'Yark-Bree',
+        'Yasuq-Jac', 'Zur', 'Zygstral', 'Grr\'Woof-nub', 'Arnd',
         )
 
 RE_ROOMS = re.compile(r'^(\d+)\. ')
@@ -28,10 +41,13 @@ RE_ALPHA = re.compile(r'^([A-Z]\.)')
 RE_QUOTE = re.compile(r'("[^"]+")')
 RE_ILLUS = re.compile(r'Show the players illustration #\d+ from the Barrowmaze I*\s*Illustration Booklet\.?\s*', flags=re.I)
 RE_NAMES = re.compile(r'(%s)' % '|'.join('(?:%s\'?s?)' % n for n in names))
-RE_LLMOB = re.compile(r'''(?P<name>(?:Greater )?(?:Giant )?[A-Z][-'\w]+(?: of)?(?: [A-Z][-'\w]+)?)(?:\s+\((?P<count>\d+)\))?\s+AL: [CLN], AC: [^,]+, HD: (?P<hd>[^,]+), HP: [^#]+, #AT: [^,]+, DMG: [^,]+, [A-Z]+\s*\(\d+\)(?:,\s+Spell[^\.]+\.)?''''')
+RE_LLMOB = re.compile(
+    r"""(?P<name>(?:Greater )?(?:Giant )?[A-Z][-'\w]+(?: of)?(?: [A-Z][-'\w]+)?)(?:\s+\((?P<count>\d+)\))?"""
+    r"""\s+AL: [CLN], AC: [^,]+, HD: (?P<hd>[^,]+), HP: [^#]+, #AT: [^,]+, DMG: [^,]+, [A-Z]+\s*\(\d+\)(?:,\s+Spell[^\.]+\.)?''""")
 
 
 def parse(lines):
+    """Parse."""
     collecting = False
     redo = False
     while True:
@@ -60,7 +76,7 @@ def parse(lines):
 
 
 def translate(bits):
-    '''MOB name.'''
+    """MOB name."""
     name = bits['name'].lower()
     name = name.replace('mummies', 'mummy')
     name = name.replace('zombies', 'zombie')
@@ -85,7 +101,11 @@ def translate(bits):
     if name.endswith('ies'):
         name = name[:-3] + 'y'
         yield name
-    for type in ('golem', 'pudding', 'scorpion', 'demon', 'wight', 'elemental', 'zombie', 'clockwork', 'naga', 'giant', 'mold', 'eagle', 'vulture', 'clockwork', 'spider', 'harpy', 'crab', 'fly', 'swarm', 'rat', 'ooze', 'fungi', 'snake', 'barrow', 'crypt'):
+    for type in (
+            'golem', 'pudding', 'scorpion', 'demon', 'wight', 'elemental', 'zombie', 'clockwork', 'naga',
+            'giant', 'mold', 'eagle', 'vulture', 'clockwork', 'spider', 'harpy', 'crab', 'fly', 'swarm',
+            'rat', 'ooze', 'fungi', 'snake', 'barrow', 'crypt',
+            ):
         if ' %s' % type in name:
             head, tail = name.rsplit(' %s' % type, 1)
             funtime = '%s%s, %s' % (type, tail.rstrip('s'), head)
@@ -96,6 +116,7 @@ def translate(bits):
 
 
 def monsterate(match):
+    """Thing with monster."""
     if not match:
         return ''
     bits = match.groupdict('')
@@ -103,57 +124,59 @@ def monsterate(match):
     if bits['count'] == '1':
         bits['count'] = ''
     if bits['name'] in names:
-        print >> sys.stderr, 'found', bits['name']
+        sys.stderr.write(f'found {bits["name"]}\n')
         return body
     fail = list()
     for name in translate(bits):
         if name in MOBS:
-            body = "MV%(mv)s, %(hd)sHD, %(atk)s%(special)s; %(ac)sAC, %(sv)s+, ML%(ml)s, %(cl)s/%(xp)s" % MOBS[name]
+            body = 'MV%(mv)s, %(hd)sHD, %(atk)s%(special)s; %(ac)sAC, %(sv)s+, ML%(ml)s, %(cl)s/%(xp)s' % MOBS[name]
             break
         else:
             fail.append(name)
     else:
-        print >> sys.stderr, 'missing', bits['name'], '\n ', '\n  '.join(fail)
+        foo = '\n  '.join(fail)
+        sys.stderr.write(f'missing {bits["name"]}\n{foo}')
     return '*%s*: %s' % (('%(count)s %(name)s' % bits).strip(), body)
 
 
 def output(paragraphs):
+    """Print all the things."""
     for para in paragraphs:
         if para.startswith('<title>'):
-            print
-            print para[7:].strip()
-            print
+            print()
+            print(para[7:].strip())
+            print()
             continue
         para = escape_asterisk(para)
         if para.startswith('<order>'):
-            print para[7:].strip()
+            print(para[7:].strip())
         elif para.startswith('<table>'):
-            print para[7:].strip()
+            print(para[7:].strip())
         elif para.startswith('Burial Alcoves:'):
             alcoves, contents = para.split('Contents: ')
-            #print indenter('Alcoves:\n%s' % alcoves[len('Burial Alcoves: '):])
-            #print indenter('Contents:\n%s' % contents)
-            print '*Alcoves:*', alcoves[len('Burial Alcoves: '):]
-            print
-            print '*Contents:*', contents
+            # print(indenter('Alcoves:\n%s' % alcoves[len('Burial Alcoves: '):]))
+            # print(indenter('Contents:\n%s' % contents))
+            print('*Alcoves:*', alcoves[len('Burial Alcoves: '):])
+            print()
+            print('*Contents:*', contents)
         elif para.endswith(':') and len(para) < 50 and rpg.parse.is_cap(para[0]):
-            print rpg.rst.title(3, para)
+            print(rpg.rst.title(3, para))
         else:
             if RE_ROOMS.search(para):
                 number, para = para.split('. ', 1)
-                print rpg.rst.title(2, number)
+                print(rpg.rst.title(2, number))
             para = RE_CRYPT.sub(r'**\1**', para)
             para = RE_ALPHA.sub(r'**\1**', para)
             para = RE_ILLUS.sub(r'', para)
             para = RE_NAMES.sub(r'**\1**', para)
             monsters = (monsterate(m) for m in RE_LLMOB.finditer(para))
-            para = RE_LLMOB.sub('**\g<name>**', para)
+            para = RE_LLMOB.sub(r'**\g<name>**', para)
             para = RE_QUOTE.sub(r'*\1*', para)
-            print parapper(para)
+            print(parapper(para))
             for monster in monsters:
-                print
-                print monster
-        print
+                print()
+                print(monster)
+        print()
 
 
 if __name__ == '__main__':
