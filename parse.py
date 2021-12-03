@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
+"""Parse / reformat text from RPG PDFs."""
 # vim: set fileencoding=utf-8 :
 
 import re
 import sys
 
-import rpg.rst
-from rpg.rst import parapper, escape_asterisk
-from rpg.parse import replace, by_para, strip_newlines, strip_empty
+import munge
+from munge.out import parapper
+from munge.rst import escape_asterisk
+from munge import replace_typography, by_para, strip_newlines, strip_emptylines
 from rpg.mobs import MOBS
 
 # munge MOBS
@@ -46,13 +48,40 @@ RE_LLMOB = re.compile(
     r"""\s+AL: [CLN], AC: [^,]+, HD: (?P<hd>[^,]+), HP: [^#]+, #AT: [^,]+, DMG: [^,]+, [A-Z]+\s*\(\d+\)(?:,\s+Spell[^\.]+\.)?''""")
 
 
+def strip_tt_pagebreaks(lines):
+    """TT has pagenumber preceding pagebreak."""
+    previous = None
+    for line in lines:
+        if munge.PAGE_BREAK in line:
+            line = line.replace(munge.PAGE_BREAK, '')
+            previous = None
+        if previous is not None:
+            yield previous
+        previous = line
+    if previous:
+        yield previous
+
+
+def strip_aec_pagebreaks(lines):
+    """AEC has pagenumber after pagebreak and page break line is garbage."""
+    skip = False
+    for line in lines:
+        if munge.PAGE_BREAK in line:
+            skip = True
+            continue
+        if skip:
+            skip = False
+            continue
+        yield line
+
+
 def parse(lines):
     """Parse."""
     collecting = False
     redo = False
     while True:
         if not redo:
-            line = lines.next()
+            line = next(lines)
         redo = False
         if collecting:
             for stuff in collecting(line):
@@ -68,7 +97,7 @@ def parse(lines):
                 redo = True
             else:
                 accum.append(line)
-            collecting = rpg.parse.lookfor(lambda l: l.endswith('.'), accum, rpg.parse.space_reduce)
+            collecting = munge.parse.lookfor(lambda l: l.endswith('.'), accum, munge.space_reduce)
             continue
         yield line
     if collecting:
@@ -159,12 +188,12 @@ def output(paragraphs):
             print('*Alcoves:*', alcoves[len('Burial Alcoves: '):])
             print()
             print('*Contents:*', contents)
-        elif para.endswith(':') and len(para) < 50 and rpg.parse.is_cap(para[0]):
-            print(rpg.rst.title(3, para))
+        elif para.endswith(':') and len(para) < 50 and munge.is_cap(para[0]):
+            print(munge.rst.title(3, para))
         else:
             if RE_ROOMS.search(para):
                 number, para = para.split('. ', 1)
-                print(rpg.rst.title(2, number))
+                print(munge.rst.title(2, number))
             para = RE_CRYPT.sub(r'**\1**', para)
             para = RE_ALPHA.sub(r'**\1**', para)
             para = RE_ILLUS.sub(r'', para)
@@ -180,5 +209,5 @@ def output(paragraphs):
 
 
 if __name__ == '__main__':
-    lines = parse(strip_empty(by_para(replace(strip_newlines(open(sys.argv[1]))))))
+    lines = parse(strip_emptylines(by_para(replace_typography(strip_newlines(open(sys.argv[1]))))))
     output(lines)
