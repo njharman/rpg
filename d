@@ -3,8 +3,10 @@
 
 One or more rolls seperated by whitespace.
 
-Understands "RPG" dice notation 3d6 d20+4 2d4+2-2d6.
-Also single number '20' will be assumed to mean "roll die with that number sides", d20.
+Understands RPG dice notation: 3d6 d20+4 2d4-2 d6*3.
+Drop lowest: 3d6d1.
+Repeat rolls: 6x 3d6.
+Single number '20' will be assumed to mean "roll die with that number sides", d20.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021
@@ -18,43 +20,53 @@ import random
 
 random.seed(time.time())
 
+DICE = re.compile(r'(\d+d)?(\d+)([-+*]\d+)?(d\d)?')
 
 def parse(text, verbose):
     """Parse dice string."""
-    op = int
-    rolls = list()
-    for bit in re.split(r'([+-])', text):
-        if bit == '+':
-            op = int
-        elif bit == '-':
-            op = lambda x: -(int(x))
-        elif 'd' in bit:
-            count, die = bit.split('d')
-            if not count:
-                count = 1
-            rolls.extend(op(random.randint(1, int(die))) for x in range(int(count)))
-        else:
-            rolls.append(op(bit))
-            op = int
-    total = sum(rolls)
+    match = DICE.match(text)
+    count, die, mod, drop = match.groups()
+    if count:
+        count = int(count[:-1])
+    else:
+        count = 1
+    die = int(die)
+    rolls = [random.randint(1, die) for x in range(count)]
+    if drop:
+        drop = int(drop[1:])
+        total = sum(sorted(rolls)[drop:])
+    else:
+        total = sum(rolls)
+    match list(mod or ''):
+        case ['+', *numbers]:
+            op, mod = ' +', int(''.join(numbers))
+            total += mod
+        case ['-', *numbers]:
+            op, mod = ' -', int(''.join(numbers))
+            total -= mod
+        case ['*', *numbers]:
+            op, mod = ' *', int(''.join(numbers))
+            total *= mod
+        case _:
+            op = mod = ''
     if verbose:
-        foo = [f'{rolls[0]:_}', ]
-        foo.extend(f'{x:+}' for x in rolls[1:])
-        return f'{total} [{"".join(foo)}]'
+        text = ','.join(str(x) for x in rolls)
+        if len(rolls) > 1 or mod:
+            return f'{text}{op}{mod} = {total}'
+        else:
+            return f'{text}'
     else:
         return total
 
 
 if __name__ == '__main__':
-    count = 1
+    rolls = 1
     verbose = True
     for arg in sys.argv[1:]:
         if '-q' == arg:
             verbose = False
             continue
         if 'x' in arg:
-            count = int(arg[:-1])
+            rolls = int(arg[:-1])
             continue
-        if 'd' not in arg:
-            arg = '1d' + arg
-        print('\n'.join(str(parse(arg, verbose)) for x in range(count)))
+        print('\n'.join(str(parse(arg, verbose)) for x in range(rolls)))

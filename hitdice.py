@@ -39,7 +39,7 @@ def ac_line(columns, template):
 
 def page(columns, page_length, page_width):
     """One page."""
-    column = page_width / columns
+    column = page_width // columns
     table = ' '.join(['=' * column] * columns)
     template = '%%-%is' % (column + 1)
     print('Notes:\n')
