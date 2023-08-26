@@ -1,0 +1,99 @@
+s15: Labyrinth Lord
+
+## Converted from LL or AEC
+
+Golem, Amber
+Hit Dice: 10
+Armor Class: 6 [14]
+Attacks: 2 claws (2d6), 1 bite (2d10)
+Saving Throw: 7
+Special: Track, see invis, Magic to-hit, immune elec/mental/poison/gas
+Move: 18
+Alignment: Neutrality
+Morale: 12
+Hoard Class: None
+Challenge Level/XP: 0/0
+
+These golems are made of petrified tree sap, and this golden stone is commonly
+formed into the shape of dire wolves or large cats. They have the ability to
+detect invisibility to a range of 60Ê, and are able to track any being.
+
+All golems are unaffected by ordinary weapons. In addition, golems have no
+true intelligence, and are thus unaffected by hold, charm, or sleep spells.
+Since they are not truly alive, they are unaffected by poison or gases.
+
+Golem, Bone
+Hit Dice: 8
+Armor Class: 2 [18]
+Attacks: 4 weapons
+Saving Throw: 8
+Special: Magic to-hit, Immune fire/cold/elec/mental/poison/gas
+Move: 12
+Alignment: Neutrality
+Morale: 12
+Hoard Class: None
+Challenge Level/XP: 0/0
+
+Attack 2 opponents at once, 2 times each.
+
+All golems are unaffected by ordinary weapons. In addition, golems have no
+true intelligence, and are thus unaffected by hold, charm, or sleep spells.
+Since they are not truly alive, they are unaffected by poison or gases.
+
+Ghost
+Hit Dice: 10
+Armor Class: 20
+Attacks: age 1d4x10 years
+Saving Throw: 4
+Special: Fear, Magic Jar, magic/special to hit
+Move: 18
+Alignment: Chaotic
+Morale: 10
+Hoard Class: IX, XIX
+Challenge Level/XP: 0/3,100
+
+Ghosts are so terrifying that any being seeing one ages 10 years and flees as
+with a fear spell for 2d6 turns. A save versus spells negates the effect. The
+divine confidence belonging to clerics of 6th level or higher makes them
+immune.  Beings of 8 HD or levels receive a +2 bonus to save. Ghosts usually
+attack via magic jar within a range of 60'.
+
+Ghosts may be attacked directly, whether physically or by spell, only by
+beings that are on spirit plane. 12AC in this case.
+
+A ghost may partially materialize and attack a victim physically. A successful
+attack ages a victim by. Beings killed in this manner may not be
+reincarnated, raised or resurrected.
+
+
+Demon, Babau
+Hit Dice: 7+10
+Armor Class: -3
+Attacks:
+Attacks: 2 claws (1d4+1), 1 horn (2d4) or weapon+4
+Saving Throw: 7
+Special: 1/2 damage cut/pierce, vuln cold-iron, 9lvl thief
+Move: 16
+Alignment: Chaotic
+Morale: 10
+Hoard Class: XXI
+XP: 1,700
+
+These 7' tall demons have ebony flesh that clings closely to their
+skeleton, appearing almost like a leathery corpse. They have a
+single curving horn that emerges from the back of their heads.
+Babau demons prefer to attack with weapons from a distance
+when possible, and have STR 19 which grants bonuses to
+attacks and damage with some weapons. A slimy red jelly coats
+the babau's skin when in combat, reducing damage by 50%
+from cutting and stabbing weapons. Babau suffer damage from
+ordinary weapons, and +2 damage from weapons of iron.
+
+These demons have the abilities of a thief of 9th level.
+Additionally, any creature within 20' that looks into a babau's
+glowing red eyes must succeed in a saving throw versus spells or
+be affected as if from a Ray of Enfeeblement. They have the
+following spell-like abilities, usable at will: darkness 10' radius,
+dispel magic, fear (as the wand of fear, by touch), fly, levitate,
+polymorph self, and heat metal. In addition, a babau may gate
+(25% probability of success) another babau demon.

@@ -1,0 +1,265 @@
+##Fey Elf
+##The elf class in the core Referee rules functions essentially as a
+##multi-classed fighter/magic-user. They can use any weapons and armour
+##exactly as a fighter, and can learn and cast spells exactly as a magic-user.
+##This type of elf is now a classic trope of fantasy role-playing.
+##Some Referees may, however, desire something a bit different.
+##Presented in this chapter are some ideas for adding a bit of fairy tale
+##magic to elves, to give them a different flavour and different spell-casting
+##abilities than that of the standard magic-user.
+##The Fey Dimension
+##The primary concept in this re-imagining of the elf is that they are
+##beings from another world – a place known as the fey dimension. This
+##“other world" is a common feature of folk tales, where it is often seen as
+##the dwelling place of many supernatural beings, including elves, pixies,
+##sprites, goblins, brownies, and so on.
+##The fey dimension, sometimes also known as “faerie", exists in parallel
+##to the world of men. The two worlds have a separate and independent
+##existence, but magical portals allow transit between the two. Such
+##portals are generally common knowledge for the natives of the fey
+##dimension, who may enter the world of mortals for their own mysterious
+##purposes, and sometimes simply to cause mischief. Humans, on the
+##other hand, are usually not party to the knowledge of where doorways to
+##the fey world lie, and how they can be used. Mortals are usually only
+##able to enter the fey realm by accident or when kidnapped or lured inside
+##by fey creatures.
+##Inside the fey dimension time flows in a manner which has little in
+##common with its behaviour in the everyday world, having more in
+##common with the nature of dreams. After what seems like a short
+##sojourn into the other world, people may return to find that in fact years
+##have passed. The opposite is also possible. This is the classic stuff of
+##fairy tales.
+##The nature of the fey dimension, and what role it plays in a campaign, is
+##left for each Referee to determine. It could exist simply as a
+##conceptual background for fey elf characters, or it could take a larger
+##role, with adventures and intrigues spanning the two worlds.
+##Fey Elves
+##As natives of this other world, fey elves differ somewhat from the typical
+##Referee elf. Physically they are tall, thin and ephemeral, and
+##always have one or more unusual features that mark them as obviously
+##non-human, such as: pointed ears, silver or violet hair, cat-like eyes,
+##sharp pointed teeth, extra fingers, etc. They are of very diverse
+##appearance.
+##In common with all creatures of the fey dimension, fey elves have a
+##fickle, whimsical and somewhat mischievous nature. They enjoy music
+##and song, as well as fine food and drink – but all their pleasures have a
+##strange otherworldly quality, which other races can find both intoxicating
+##and eerie.
+##Fey elves are typically Neutral in alignment, having goals and morals
+##which are somewhat unfathomable to mortal races, and which often
+##transcend human concepts of good and evil.
+##Fey Elves as Adventurers
+##Fey elf adventurers may use as a basis either the elf class as presented in
+##Referee or the elf race from the Advanced Edition Companion.
+##The following modifications apply:
+##• Fey elves can speak their alignment language, common, elvish,
+##pixie and goblin.
+##• Fey elves can unfailingly identify doorways between the world
+##of men and the fey dimension. This ability does not allow
+##them to detect such doorways automatically – it must be used
+##actively when examining a portal.
+##Further differences are discussed in the following sections.
+##Fey Elf Class (Basic Referee)
+##A fey elf adventurer compatible with basic Referee has a different
+##method of spell-casting to the standard elf, and use a different list of
+##spells. These differences are explained below.
+##Additionally, while they are innately magical, fey elves lack the wizardly
+##training required to use scrolls.
+##Fey Elf Race (Advanced Referee)
+##Players who are using the additional rules in the Advanced Edition
+##Companion may use the elf race.
+##Apart from the differences in known languages, and their ability to
+##identify portals to the fey dimension (as described above), fey elves
+##function in the same way as the standard elf race. They are able to
+##choose any of the standard classes available to elves, with the normal
+##restrictions on level advancement. They may however additionally
+##choose the sorcerer class – a new class, described below, which is only
+##available to members of the fey race.
+##Sorcerer
+##Requirements: None
+##Prime Requisite: INT
+##Hit Dice: 1d4
+##Maximum Level: 10
+##This class is for use with the fey elf race, as described above.
+##The sorcerer class is a distinct type of spell-caster, whose spells focus on
+##magic of nature and trickery. Their magic is innate, rather than learned
+##by arduous study or granted by a deity, and thus usually only fey races
+##are allowed to take this class.
+##Sorcerers cast spells in a unique manner, as described in the following
+##section on fey spell-casting. They have a special spell progression table
+##and spell list, also detailed below.
+##Although they do not study magic, sorcerers have an intuitive mastery of
+##arcane forces and are able to use all magic items available to magic-
+##users, with the exception of scrolls.
+##Due to the innate nature of a sorcerer's magic, his spells are not
+##hampered by armour, and do not require any gestures or words, being
+##manifested with a mere twinkling of the eye. Members of this class are
+##able to wear studded leather armour or lesser, and can use the following
+##weapons: club, light crossbow, dagger, dart, quarterstaff, shortbow, sling,
+##short sword.
+##They have the same saving throw, to hit and experience advancement as
+##magic-users.
+
+##Fey Spell-Casting
+##Characters of the fey elf or sorcerer classes cast spells according to the
+##spell progression chart shown below, and gain spells from their own
+##special spell list which focuses on magic of nature and trickery. This list
+##contains spells in common with druids, illusionists and magic-users, with
+##the addition of a few new spells, unique to fey, which are described in
+##this chapter.
+##Their manner of spell casting also differs from that of other spell-using
+##classes. The spell progression chart represents both the number of spells
+##a fey elf can cast per day, and also the number of spells he or she
+##knows. For example, a 1st level fey spell-caster knows two 1st level
+##spells, which can be cast once per day each.
+##As fey elves are naturally magical they do not need to pray or study
+##books to be able to use their spells. Fey spell-casters regain their spells
+##automatically after a night's rest. Upon gaining an experience level, fey
+##automatically learn any new spells allowed to them, without requiring
+##any additional study or training of any kind.
+##Fey spell-casters' known spells are determined randomly from their spell
+##list. This determination can be made in two ways, as the Referee
+##wishes.
+##• Firstly, the character's known spells may be rolled for initially
+##at character creation, and whenever a new experience level is
+##gained. Once the character's spell selection has been
+##determined it remains fixed, until the character again increases
+##in level and gains new spells.
+##• Alternatively, for an added touch of chaos, the character's
+##spells may be re-rolled every day or every game session.
+##Fey elf / sorcerer spell progression
+##Class
+##Level Spell Level
+##1 2 3 4 5
+##1 2 0 0 0 0
+##2 3 0 0 0 0
+##3 3 1 0 0 0
+##4 3 2 0 0 0
+##5 3 2 1 0 0
+##6 4 3 2 0 0
+##7 4 3 2 1 0
+##8 4 3 2 2 0
+##9 4 3 2 2 1
+##10 4 3 2 2 2
+##Fey Spells
+
+##Dimension Leap
+##Level: 1
+##Duration: Instantaneous
+##Range: 20', +5' per two levels
+##Upon completion of this spell, the caster vanishes from existence, only
+##to reappear in another location at the start of the following round. The
+##destination of the dimension leap must be somewhere within range and
+##within the caster's line of sight from his location when casting the spell.
+##When leaping to a location adjacent to an enemy, the caster can choose
+##to make an additional melee attack, due to surprise. This extra attack is
+##made out of the normal initiative sequence, and the caster may also take
+##his normal action in the same round.
+
+##Invisibility, Limited
+##Level: 1
+##Duration: 1d6 rounds, +1 round per level
+##Range: 0
+##Aside from its brief duration, this spell has an identical effect to the 2nd
+##level invisibility spell.
+
+##Summon Fey Kin
+##Level: 1
+##Duration: 6 turns
+##Range: 30'
+##This spell enables the caster to summon a variety of creatures from fey
+##dimensions. The creatures which may be summoned depend on the
+##caster's level, and the type of environment in which the spell is cast.
+##A single creature is summoned by this spell, and it is not in any way
+##bound to obey the caster – the Referee should make a normal
+##reaction roll to determine its demeanour toward the summoner.
+##Summoned creatures carry any weapons which are noted in their
+##monster description.
+##Summon fey kin, creatures by environment
+##Creature Environment Level
+##Brownie Sylvan forest or plains 1
+##Fey goblin* Underground 1
+##Leprechaun Sylvan forest or plains 1
+##Nixie Large body of water 1
+##Pixie Any 1
+##Sprite Sylvan forest 1
+##Dryad Sylvan forest 3
+##Nymph Sylvan forest 5
+##Satyr Sylvan forest 7
+##Treant Sylvan forest 9
+##* Described in Appendix II.
+
+##Teleport (Fey)
+##Level: 5
+##Duration: Instantaneous
+##Range: 10'
+##This spell functions in the same way as the magic-user teleport spell,
+##with the one difference that the caster can teleport himself into any very
+##familiar location in the fey dimension without any risk of error. It can
+##thus be used as a fail-safe means of escape for a fey spell-caster.
+
+##Fey Spell List
+##Spells from the standard spell lists in the AEC are marked: C (divine), D (druid), I (illusionist) or MU (magic-user).
+##1st level
+##1. Auditory illusion (I)
+##2. Charm person (MU)
+##3. Color spray (I)
+##4. Dancing lights (I)
+##5. Detect illusion (I)
+##6. Detect invisible (I)
+##7. Detect magic (MU)
+##8. Detect snares and pits (D)
+##9. Dimension leap
+##10. Doppelganger (I)
+##11. Entangle (D)
+##12. Faerie fire (D)
+##13. Invisibility, limited
+##14. Produce flame (D)
+##15. Protection from evil (C)
+##16. Ray of fire / cold (Elementalist, q.v.)
+##17. Resist cold (C)
+##18. Speak with animals (D)
+##19. Summon fey kin
+##20. Wall of vapor (I)
+##2nd level
+##1. Augury (C)
+##2. Blur (I)
+##3. Fire trap (D)
+##4. Heat metal (reversible) (D)
+##5. Hypnotic pattern (I)
+##6. Invisibility (MU)
+##7. Mirror image (I)
+##8. Obscuring mist (D)
+##9. Resist fire (C)
+##10. Stumble (D)
+##11. Ventriloquism (MU)
+##12. Warp wood (D)
+##3rd level
+##1. Blink (MU)
+##2. Dispel magic (MU)
+##3. Haste (MU)
+##4. Plant growth (D)
+##5. Protection from fire (D)
+##6. Pyrotechnics (D)
+##7. Rope trick (MU)
+##8. Snare (D)
+##4th level
+##1. Confusion (I)
+##2. Create food & water (C)
+##3. Detect lie (C)
+##4. Dimension door (MU)
+##5. Implant emotion (I)
+##6. Protection from electricity (D)
+##7. Solid fog (I)
+##8. Speak with plants (D)
+##9. Sticks to snakes (C)
+##10. Temperature control (D)
+##5th level
+##1. Confusion, greater (I)
+##2. Phantasmal door (I)
+##3. Telekinesis (MU)
+##4. Teleport
+##5. Time flow (Expanded illusionist, q.v.)
+##6. Transmute rock to mud (reversible) (D)
+##7. True seeing (C)
+##8. Wall of fire (D)

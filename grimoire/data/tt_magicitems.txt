@@ -1,0 +1,259 @@
+III. New Magic Items
+
+Black Hands of Perranagg
+------------------------
+These shrivelled human hands have undergone a necromantic ritual of
+burning, transforming them into potent magical charms. Each hand
+comes wrapped in cloth, and can be activated by revealing it. The first
+character to lay eyes on the hand must save versus paralysis or be
+affected by hold person or feign death (selected at random, though a
+necromancer may choose).
+After it is revealed, the power of the hand expires once its magic has
+affected a target. Naturally, one making use of such an item must take
+care to not cast his own glance upon it.
+
+Chalice of Geryon
+-----------------
+Used in various rituals dedicated to the arch-fiend, these chalices are
+constructed from the horn of a magical being. The evil magic of the
+chalice can be activated once per week by filling it with human blood
+and the speaking the correct phrase. The blood in the chalice then
+becomes enchanted for 24 hours, and can have one of a number of
+effects on a being who drinks it.
+Any character of good alignment drinking the blood from the chalice will
+be affected by a poison, causing 4d6 points of damage if they fail a
+saving throw, and 1d6 damage if the save succeeds. Any character of
+chaotic alignment drinking the blood will be affected by sleep. These two
+effects are combined for chaotic good creatures who drink the blood
+from the chalice.
+When the blood is drunk by a character of any other alignment, they are
+affected by a powerful charm, causing them to implicitly trust all
+followers of the arch-fiend, including devils and imps. The charm effect
+lasts for 24 hours. Victims are typically coerced into making a pact with
+a summoned devil while under the influence of the charm, and will
+thenceforth have great difficulty breaking free of the control of their
+diabolic masters, even after the charm wears off.
+
+Codex Prism
+-----------
+This minor magical item, much used by illusionists in the employ of
+guilds and noble houses, is created expressly for use with the codex
+series of spells (see the Prism Codex, in section 3). Codex prisms are
+relatively easy to create – a suitable prism must be purchased (the usual
+cost is 500gp), and can be enchanted for magical use, over a period of
+one week, by any illusionist who knows one of the codex spells (the
+usual minimum of 9th experience level does not apply).
+Once enchanted, the prism can be used to receive and store any
+transmuted light pattern which it is exposed to, and can release the light
+pattern on demand upon the casting of the reversed form of the spell
+which originally produced the pattern. Each codex prism can store but a
+single light pattern, with any subsequent patterns replacing the first.
+However, once stored, a pattern can be released any number of times,
+when the appropriate spell is cast to decode it.
+Codex prisms which are found as treasure may contain records of
+important events or documents.
+
+Cloak of Protection from Energy Drain
+-------------------------------------
+
+This midnight hued cloak protects the wearer from the level draining
+attacks possessed by certain undead creatures, and from the effects of
+the divineal / necromancer spell drain energy. Each cloak can protect
+against a total of 1d6 levels of energy drain, before losing its magic.
+
+Death Ward Ring
+---------------
+
+This ring grants the wearer the ability to cheat death. It has a limited
+number of charges (typically 1d4 when found), which are automatically
+activated when the wearer reaches 0 or less hit points. Each time a
+charge is activated, the Referee should roll on the following table
+to determine the effect.
+Death ward ring, effects of usage
+d10 Effect
+1–5 Wearer revived to 1hp.
+6 Wearer revived to 1hp but permanently loses 1 point of CON or
+WIS.
+7 Wearer revived to 1hp but becomes resistant to raise dead,
+which has a 50% chance of failure the next time it is cast.
+8 Wearer revived to 1hp but unconscious for 2d4 days.
+9 Damage reflected to its source.
+10 Wearer becomes undead (perhaps a ghoul, wight or zombie).
+
+Dreadcube
+---------
+
+The origin of these rare and greatly feared magical items is unknown –
+no magic-user in his or her right mind would willingly create such a
+thing.
+A dreadcube is a small rotating 6" iron cube engraved with a complex
+series of arcane runes and diagrams. Each cube has a command word,
+typically written on its surface. When the command word is spoken by a
+magic-user, the cube's power is activated. It will then hover above the
+magic-user's palm, and remains there for a duration of one hour.
+Each of the cube's six faces contains a dweomer, which can be activated
+only once. The powers of the faces are activated under several
+conditions, not all of which are under the possessor's control. Firstly, the
+magic-user may deliberately activate a face simply by touching it.
+Secondly, the power of a random face of the cube will activate as a
+reaction upon the casting of any magic-user spell within 60'. Lastly, the
+powers of all remaining faces of the cube will activate simultaneously if
+the cube itself is targeted with any form of magic (including dispel
+magic), or when the one hour duration expires.
+The powers of the faces are randomly determined when activated, by
+rolling 1d6 – it is not possible to predict which effect a face contains.
+Dreadcube, face effects
+d6 Effect
+1 Lightning bolt affecting a random target within range.
+2 Prismatic spray emanating from the cube and oriented in a randomly
+determined direction.
+3 Dispel magic affecting all magic within range.
+4 Polymorph others affecting a random target within range.
+5 Summon monster V.
+6 Spell resistance affecting a random target within range.
+Note that all powers which are randomly targeted are quite able to target
+the cube's possessor.
+
+Gem of Orcus
+------------
+
+This ruby, engraved in intricate script with an appeal to the demon lord
+of the undead, grants a variety of powers to its possessor. Firstly, the
+owner gains infravision to 60'. Secondly, for 6 turns once per day the
+owner may pass among undead creatures completely unnoticed, as per
+the necromancer spell pass undead. Lastly, the gem may be sacrificed in
+order to summon aid from the demon lord directly, according to the
+following table. Summoned creatures remain for 2d6 turns.
+Gem of Orcus, summoning results
+d00 Summoned Aid
+01–20 2d8 skeletons
+21–40 2d6 zombies
+41–45 1 vampire
+46–55 2d4 mummies
+55–70 2d4 ghasts
+71–80 1 spectre
+81–90 1 marilith demon
+91–99 1 glabrezu demon
+00 Orcus, Prince of the Undead
+
+Hat of Conjuration
+------------------
+
+In the hands of a magic-user, this normal looking hat has the ability to
+conjure an endless variety of objects, creatures and spell effects from
+thin air. The hat can be used 1d6 times per day. Conjured creatures and
+items exist for one turn, before disappearing, and spell effects have their
+normal duration. Note that creatures produced by the hat are not in any
+way under the magic-user's control.
+Spells conjured by the hat will affect any applicable target nearby. In
+cases where multiple suitable targets are within range, the actual target
+should be determined randomly. Use the following tables to see what
+comes out of the hat.
+Hat of conjuration, results
+d20 Result
+1–6 Mundane item (see following table)
+7–10 1HD monster (use wandering monster tables)
+11–13 1d6 + 1HD monster (use wandering monster tables)
+14 1d6 + 5HD monster (use wandering monster tables)
+15–16 1st
+level spell (from magic-user spell lists)
+17–18 Spell of level 1d4 + 1 (from magic-user spell lists)
+19 Spell of level 1d6 + 3 (from magic-user spell lists)
+20 Magic item (roll on the normal tables)
+Hat of conjuration, mundane items
+d% Item d% Item d% Item d% Item d% Item
+1 Backpack 21 Flint and steel 41 Leather armour 61 Pole arm 81 Spear
+2 Banded mail 22 Fur cloak 42 Leather belt 62 Quarterstaff 82 Spell book (blank)
+3 Battle axe 23 Garlic (3 cloves) 43 Leather boots 63 Quill pen 83 Splint mail
+4 Bedroll 24 Glass vial (empty) 44 Light quarrels (10) 64 Quiver & 20 arrows 84 Spyglass
+5 Block and tackle 25 Grappling hook 45 Lock 65 Rope, hemp (50 ft.) 85 Studded leather armour
+6 Bottle of wine 26 Hammer 46 Longbow 66 Rope, silk (50 ft.) 86 Sword, bastard
+7 Candles (10) 27 Hand axe 47 Mace 67 Sack, large (empty) 87 Sword, long
+8 Chain (10 ft.) 28 Hat 48 Manacles 68 Sack, small (empty) 88 Sword, short
+9 Chain mail 29 Heavy quarrels (10) 49 Map / scroll case 69 Saddle 89 Sword, 2-handed
+10 Club 30 Helmet 50 Mirror, small steel 70 Saddle bag 90 Thieves’ tools
+11 Crossbow, heavy 31 Holy symbol, silver 51 Morningstar 71 Scale mail 91 Torches (8)
+12 Crossbow, light 32 Holy symbol, wooden 52 Musical instrument 72 Scimitar 92 Rations (1 day)
+13 Crowbar 33 Horse barding 53 Oil (1-pint flask) 73 Shield 93 Trident
+14 Dagger 34 Hourglass 54 Padded armour 74 Shortbow 94 Warhammer
+15 Dagger, silver 35 Ink (1 oz. Vial) 55 Paper (sheet) 75 Silk robe 95 Waterskin
+16 Dart 36 Iron spikes (12) 56 Parchment (sheet) 76 Simple meal 96 Winter blanket
+17 Flail 37 Javelin 57 Pick, heavy 77 Sling 97 Wolfsbane (fist full)
+18 Flail, heavy 38 Ladder, 10-foot 58 Pick, light 78 Sling bullets (10) 98 Wooden chest (empty)
+19 Flask (empty) 39 Lance 59 Pick, miner’s 79 Small bell 99 Wooden pole, 10'
+20 Holy water (flask) 40 Lantern 60 Plate mail 80 Spade or shovel 00 Wooden stakes (3)
+
+Ring of Appearance Warping
+--------------------------
+This ring causes the owner's physical appearance, including clothing, to
+change both radically and randomly at the beginning of each turn of the
+duration. Magical items remain unchanged, as do non-clothing items on
+the character's person, but all mundane items of clothing take on a
+completely new appearance each turn.
+The wearer of the ring has no control over the form his appearance
+takes, but may remove the ring at any time to return to normal.
+The Referee may use any method to determine the wearer's
+random appearances, but the following table may be helpful. One die of
+each type listed should be rolled.
+Ring of appearance warping, resulting appearance
+Die d4 d6 d8 d10
+Result Sex Age Dress Features
+1 Female Child Messy Missing limb
+2 Female Youth Scant Obese
+3 Male Adult Immaculate Scrawny
+4 Male Mature Formal Muscular
+5 Old Threadbare Bald
+6 Decrepit Elaborate Hairy
+7 Drab Tall
+8 Uniform Short
+9 Ugly
+10 Beautiful
+
+Severed Hand
+------------
+Also known as a “hand of glory", this item holds great power when used
+by a necromancer. The preserved hand of a murderer has been treated
+so that it can be ignited and will slowly burn, like a candle.
+A hand of glory, when placed by the side of a sleeping person and lit,
+causes the victim to be overcome with a permanent paralysis. Persons so
+affected typically die of thirst. A save versus paralysis is allowed to resist
+the hand's sinister effect.
+
+Shrunken Head
+-------------
+These gruesome, fist-sized heads have been shrunken by a process of
+mummification, and steeped in blood and rare inks. They are often
+found in sets of 1d6 heads. In the hands of a necromancer they have
+several uses. Each head may only be used once.
+Ward: When three or more heads are placed in formation around an
+area to be warded, and their magic activated, they will project a powerful
+aura of fear. Any living creature coming within 60' of the ward must
+make a save versus spells or be overcome with terror and flee as fast as
+possible for 1 turn. The ward is effective for 24 hours.
+Guardian: A single head may be placed to act as a guardian, its stitched-
+shut eyes tearing open. Anyone except the necromancer coming into the
+head's field of view will cause it to begin to emit a loud groaning sound.
+The guardian head is effective for 24 hours.
+Messenger: A head may be instructed to relay a message, either upon
+repetition of the correct command word, or when anyone comes into its
+presence. The message may be up to 100 words, and is repeated but
+once.
+
+Skeleton Key
+------------
+These magical keys, carved from thin bones, grant access to crypt
+doors, bypassing any form of mundane or magical locks, traps or wards.
+The keys are only effective in the hands of a necromancer, and each key
+can only be used once.
+
+Skeleton Teeth
+--------------
+These enchanted teeth are usually found as a set of 2d6, either laced
+onto a necklace or kept in a pouch. The teeth are typically human, but
+may be of any species. When a tooth is taken and thrown onto the
+ground, an animated skeleton bearing a sword springs up immediately. If
+the person throwing the tooth is a necromancer, he can command the
+skeleton to do his bidding. Characters of other classes have a 75%
+chance of being able to command the conjured skeleton, otherwise the
+creature will turn and attack the one who summoned it. The skeletons
+crumble to dust after 6 turns.

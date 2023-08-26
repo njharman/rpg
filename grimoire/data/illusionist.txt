@@ -1,0 +1,625 @@
+## Note: edited from original
+##Illusionist Spells
+
+Auditory Illusion
+Level: 1
+Duration: 3 rounds per level
+Range: 60', +10' per level
+Except for the duration, this spell is identical to the magic-user
+spell of the same name.
+
+Blindness / Deafness
+Level: 2
+Duration: Permanent until dispelled
+Range: 60'
+One target per level is blinded or deafened, save negates. Although, targets
+with less HD than caster get no save. The caster may remove the effect at any
+time.  Affected by |Dispel Magic|_, |Dispel Phantasm|_ and various cures.
+
+Blur
+Level: 1
+Duration: 3 rounds per level
+Range: Self
+Caster's outline appears blurred, shifting and wavering.  Attacks against
+caster suffer -2 to hit, ranged are at -4.  The caster also gains +4 to saves
+versus targeted spell-like devices or spells.
+
+Control Illumination
+Level: 3
+Duration: 1 turn per level
+Range: 120'
+For duration the caster may vary illumination in 30' radius around target to
+be as bright as as |Continual Light|_ or as dark as |Continual Darkness|_.
+
+Color Spray
+Level: 1
+Duration: Instantaneous
+Range: 0
+A 20' long cone of clashing colors springs from the caster's jazz hands
+covering an arc up to a 180 degrees.  Only beings with more than 6 HD, or with
+more HD than the caster, get a save. Sightless and mindless creatures are
+immune.
+=============== ========================
+HD              Effect
+=============== ========================
+<= caster       unconscious for 2d4 rnds
+1-2 > caster    stunned for 1d4 rnds
+3+ > caster     blinded for 1 round
+=============== ========================
+
+Confusion
+Level: 3
+Duration: 12 rounds
+Range: 120'
+This spell functions identically to the magic-user spell of the
+same name.
+
+Confusion, Greater
+Level: 4
+Duration: 12 rounds
+Range: 120'
+A more powerful version of confusion. The function is identical, except every
+being in a 30' radius are affected.
+
+Dancing Lights
+Level: 1
+Duration: 1 turn per level
+Range: 20' per level
+This spell functions identically to the magic-user spell of the
+same name.
+
+Detect Illusion
+Level: 1
+Duration: 1 turn per level
+Range: 10' per level
+Illusions witin range are revealed to the caster.  Caster may touch one other
+creature, granting it the ability to see through illusion as well.
+
+Detect Invisible
+Level: 1
+Duration: 1 turn per level
+Range: 10' per level
+This spell functions identically to the magic-user spell of the
+same name.
+
+Dispel Phantasm
+Level: 3
+Duration: Instantaneous
+Range: Sight
+Illusions, phantasms etc. created by illusionists are dispelled with the same
+probabilities as |Dispel Magic|_; others are dispelled automatically.
+
+Fear
+Level: 3
+Duration: Special
+Range: 0
+This spell functions the same as the magic-user spell of the
+same name.
+
+Fog Cloud
+Level: 2
+Duration: Until dispersed, ~6 turns
+Range: 0
+Identical to |Cloudkill|_ however, its only effect is to block vision.  Should
+scare the bejesus out of folks though.
+
+Hallucinatory Terrain
+Level: 3
+Duration: until disbelieved/dispelled
+Range: 240'
+The caster makes some terrain look, sound, and smell like some other sort of
+terrain, but the entire terrain to be hidden must be encompassed by the range
+this spell may affect.  The caster may affect 20' square area per caster
+level.
+
+Hypnotism
+Level: 1
+Duration: 1 round per level
+Range: 30'
+The caster's gestures and droning incantation fascinate nearby
+creatures, causing 1d6 creatures in range to be mentally
+vulnerable to |Suggestion|_, save negates.
+
+Hypnotic Pattern
+Level: 2
+Duration: Concentration
+Range: 0
+A twisting pattern of subtle, shifting colors weaves through the air,
+fascinating creatures within sight, max of 8 HD per caster level, save
+negates.  Fascinated creatures remain motionless, dazed, for as long as the
+caster concentrates on the spell and makes no other action.
+
+Illusory Stamina
+Level: 3
+Duration: 3 turns per level
+Range: Touch
+Up to 4 human-sized beings are made to feel as if they are healthier than they
+truly are. The net effect is that they seem to have been healed of any damage
+they have sustained and they have restored endurance.  However, at the end of
+the spell's duration, affected beings lose all illusory healing.
+
+Implant Emotion
+Level: 2
+Duration: Variable
+Range: 60'
+Invokes a specific emotion in a target, save to negate.
+
+Invisibility, Greater
+Level: 4
+Duration: Special
+Range: Touch
+As |Invisibility|_, except after offensive action invisibility persists for
+1 round per caster level and it is effective regardless of creatures' hit
+dice.  Creatues that normally see invisible must make save to do so. |Detect
+Invisible|_, |True Seeing|_ and the like must overcome as |Dispel Magic|_.
+
+Lucid Discovery
+Level: 2
+Duration: sleep
+Range: Self
+Cast just before the caster goes to sleep.  While
+dreaming, one of three things may be discovered: 1) The qualities of an item in
+his possession; 2) The abilities of a known creature within 10 miles;
+3) The location of a named person within 50 miles.
+
+Creation, Minor
+Level: 3
+Duration: 6 turns per level
+Range: Touch
+Conjures a simple object of nonliving matter out of thin air.  The volume of the
+item created cannot exceed 1' cube per caster level.
+
+Creation, Major
+Level: 4
+Duration: 6 turns per level
+Range: Touch
+Conjures a complex object of nonliving matter out of thin air.  The volume of the
+item created cannot exceed 1' cube per caster level.
+
+Misdirection
+Level: 2
+Duration: 1 round per level
+Range: 30'
+By means of this spell, the caster misdirects targets, save to negate.
+
+Nondetection
+Level: 3
+Duration: 1 hour per level
+Range: 0
+The caster and all within a 10' radius become impossible to
+detect by divination spells such as |Clairaudience|_, |Clairvoyance|_,
+|Locate Object|_, and the like. Nondetection also prevents
+location by such magic items as crystal balls.
+
+Paralyze
+Level: 3
+Duration: Until dispelled
+Range: 10' per level
+Up to twice caster's level of HD of targets feel as if they cannot move, saves
+negate.  The effect may be dismissed by the caster at any time.
+
+Phantasmal Door
+Level: 2
+Duration: 1 round per level
+Range: 10'
+Fabricates an illusory door. The caster may then appear to enter it, and any
+beings who pursue the caster believe themselves to enter a featureless 10'
+square room.  In reality, the caster becomes invisible, as the spell, next to
+the door.
+
+Phantasmal Force
+Level: 1
+Duration: Concentration
+Range: 240'
+The spell is identical to the magic-user spell of the same name.
+
+Phantasmal Force, Greater
+Level: 2
+Duration: Concentration plus
+Range: 240'
+An improved version of |Phantasmal Force|_. The area of effect is a 10' cube
+per level. Subtle auditory effects accompany the illusion so that a creature
+makes sound as it moves, or similar effects are heard.  Coherent speech is not
+possible. The caster can move while concentrating on the illusion and it
+persists a few rounds after the caster ceases concentrating.
+
+Spectral Force
+Level: 3
+Duration: Concentration plus
+Range: 240'
+
+Similar to |Phantasmal Force|_, except a complete illusion with all senses is
+possible and the illusion persists for several rounds after caster ceases
+concentration.
+
+Spectral Force, Programmed
+Level: 4
+Duration: Special
+Range: 240'
+As |Spectral Force|_, except it is triggered when a set of circumstances
+specified by the caster occurs, and/or when a specific command is uttered.
+Once triggered, the it lasts for 1 round per caster level.
+
+Spectral Force, Permanent
+Level: 6
+Duration: Forevar!
+Range: 240'
+This more powerful version of |Spectral Force|_ persists indefinitely
+when the caster ceases to concentrate on it.
+
+Phantasmal Killer
+Level: 3
+Duration: 1 round per level
+Range: 240'
+Creates a phantasmal image of the most fearsome creature imaginable to the
+target.  Only the spell's target and the caster can see the Phantasmal
+Killer. If the phantasm successfully hits (as caster) the target
+will die of fear, INT check to disbelieve.
+
+Summon Shadow
+Level: 5
+Duration: 1 turn per level
+Range: 10'
+Brings forth 1 shadow per 3 caster levels. These creatures serve the caster
+and will fight to the death if ordered.
+
+Phantasmal Monsters I
+Level: 4
+Duration: 1 round per level
+Range: 240'
+Creates phantasmal pseudo-real monsters. The monsters cannot exceed the
+caster's level in HD total and must all be the same type. They have 2 hp per
+HD. The phantasmal monsters are able to attack and deal damage.  INT check to
+realize the creatures are only partly real and then the phantasmal monsters
+have only AC 10 and all their damage is -75%.
+
+Phantasmal Monsters II
+Level: 5
+Duration: 1 round per level
+Range: 240'
+Similar to |Phantasmal Monsters I|_, but the monsters created are stronger. These
+monsters have 3 hp per HD. Each creature has AC 12 and -50% to damage if the
+INT attribute check succeeds.
+
+Phantasmal Monsters III
+Level: 6
+Duration: 1 round per level
+Range: 240'
+Similar to |Phantasmal Monsters I|_, but the monsters created are stronger. These
+monsters have 4 hp per HD. Each creature has AC 14 and -25% to damage if the
+INT attribute check fails.
+
+Prismatic Beam
+Level: 6
+Duration: Special
+Range: 100' per level
+Conjures an intensely focussed beam of strobing light with one of following
+effects. **Disrupt** one target as |Disintegrate|_. **Dazzle** as |Color Spray|_
+to all in range.
+Or one of the following one target per round for one round per caster level;
+**Deny** as |Dispel Magic|_. **Burninate** 6d6 points of heat damage.  **Push**
+exert a powerful force. Beings of titanic strength may save to resist, others
+will be pushed away at incredible rate. The beam has the force to push
+inanimate objects as large as a sailing ship.
+
+Prismatic Spray
+Level: 7
+Duration: Instantaneous
+Range: 0
+Causes seven shimmering, intertwined, multicolored beams of light to spray
+from the caster's hand. The beams are intertwined in "fan" of light that is
+70' long, 5' wide at the origin and 15' wide at the terminal end.  Creatures
+in the area of the spell with 8 HD or less are automatically blinded for 2d4
+turns. Every creature in the area is randomly struck by one or more beams,
+which have additional effects as |Prismatic Sphere|_.
+========== =================================================
+d10         Color of Beam
+========== =================================================
+**1**      Red
+**2**      Orange
+**3**      Yellow
+**4**      Green
+**5**      Blue
+**6**      Indigo
+**7**      Violet
+**8**      Struck by two rays; ignore further "8+" results
+**9**      Struck by three rays; ignore further "8+" results
+**10**     Struck by four rays; ignore further "8+" results
+========== =================================================
+
+Prismatic Wall
+Level: 7
+Duration: 1 turn per level
+Range: 10'
+As |Prismatic Sphere|_, except a shimmering wall is produced rather than an
+opaque globe.
+
+Project Image
+Level: 4
+Duration: 6 turns
+Range: 240'
+The function of this spell is identical to the magic-user spell of
+the same name.
+
+Refraction
+Level: 1
+Duration: 1 round
+Range: Self
+The space in front of caster becomes reflective, like a mirror. Any gaze
+attack is turned back at the attacker. This spell will autocast as needed.
+
+Rope Trick
+Level: 2
+Duration: 1 hour per level
+Range: As far as the caster can throw a rope
+This spell functions identically to the magic-user spell of the
+same name.
+
+Shadow Evocation
+Level: 5
+Duration: Variable
+Range: Variable
+Taps energy from the plane of shadow to cast quasi-real, illusory evocations.
+The possible spells include |Fireball|_, |Lightning Bolt|_, |Cone of Cold|_, and
+|Magic Missile|_. These spells have normal effects unless an targets succeeds
+in an INT check. Disbelieving creatures take only one hp per damage die
+
+Shadow Evocation, Greater
+Level: 6
+Duration: Variable
+Range: Variable
+A more powerful version of |Shadow Evocation|_. Allowing shadow versions of
+|Cloudkill|_, a |Wall of Fire|_, or a |Wall of Ice|_, in addition the spells
+allowed by Shadow Invocation. Should a victim succeed in the INT check, damage
+from spells is 2 hp per damage die.
+
+Suggestion, Mass
+Level: 5
+Duration: 6 turns per level
+Range: 60'
+As |Suggestion|_, except that it can affect 1
+creature per caster level and saves are at -4.
+
+True Seeing
+Level: 4
+Duration: 1 round per level
+Range: Self
+This spell functions identically to the divine spell of the same
+name.
+
+Veil
+Level: 4
+Duration: 1 turn per level
+Range: 240'
+Instantly changes the appearance of a 20' square area, including creatures in
+it if desired.  The caster can make the area appear to be anything desired.
+Objects and creatures look, feel, and smell just like what the spell makes
+them resemble This spell may also be used to mimic the effects of
+|Hallucinatory Terrain|_, but the illusion does hold up even under physical
+inspection.
+
+Vision
+Level: 6
+Duration: Special
+Range: Self
+Caster sacrifices an object of no less than 300sp value in order to entice an
+answer to a question from a powerful entity. If the vision is imparted, the
+caster sees an illusory depiction as his answer, which can take a form that
+interacts with all senses. However, an answer is not guaranteed.
+========= ==================================================
+d20       Result
+========= ==================================================
+**1-5**   Failure, caster is geased
+**6-10**  Ambiguous, partial information imparted
+**11-20** Success, the vision is accurate and detailed
+========= ==================================================
+
+Wall of Vapor
+Level: 1
+Duration: 2d4 rounds, +1 round per level
+Range: 60'
+Conjures one 10' cube per caster level of opaque, fog-like vapor. All beings
+caught within the vapor cannot see beyond 5'.
+
+
+## Note: edited from original
+## TT Illusionist
+
+Memorium
+Level: 5
+Duration: Special
+Range: Special
+Cast in a location where a specific event is known to have occurred, the
+caster and up to one companion per two levels are drawn into a vision,
+re-experiencing the event in question.  In the vision the caster and his
+companions take on the perspectives of individuals who were present at the
+historic event, perceiving what happened directly from the point of view of
+those involved.
+
+Dream Travel
+Level: 7
+Duration: Special
+Range: Special
+Conjures a semi-real large vehicle of some kind, typically a mighty sailing
+ship, which the illusionist and up to 100 others are taken onto. The caster
+must be conscious in order to cast the spell, but all others must be asleep.
+The spell lasts as long as the caster remains awake and the passengers remain
+asleep.
+The passengers enter a shared dream of travelling aboard the conjured vessel
+through an imaginary landscape, and may act as if awake, typically aiding in
+the operations of the ship.  The journey usually appears to span several days,
+and may sometimes even feel like weeks of travel.  The vessel is actually
+moving through real space at an incredible rate -- up to 100 miles per hour
+can be covered, completely unhindered by any real terrain.
+In a manner similar to |Illusory Abode|_, the dream vessel
+may take on a recurring appearance if the caster wishes it, and the
+enhancements to |Spectral Force|_ and |Creation, Major|_ apply inside the
+vessel.
+
+Illusory Abode
+Level: 8
+Duration: 1 hour per level
+Range: 30'
+Conjures the image of a door or trapdoor in a nearby surface.  Inside the door
+is an illusionary house or castle of some kind, providing the opportunity of
+rest and respite for all who enter.
+The exact appearance, dimensions and characteristics of the illusory
+abode are under the caster's complete control. The illusory abode exists
+in a strange half-dimension, and is thus unaffected by environmental
+conditions in the area where the door is located.
+The caster can create illusory inhabitants and stuff by use of further spells.
+Within the confines of the illusory abode, all illusions created by the caster
+become partially real, and gain the ability to manipulate and affect physical
+objects. Furthermore, any illusions of permanent duration created inside the
+illusory abode will appear each time the caster returns.
+Guests can enter and leave at will, but creatures that are not invited inside
+by the caster cannot enter by any means.  When the spell's duration comes to
+an end, the caster and all guests appear back at the location where the door
+was created.
+
+Figment
+Level: 8
+Duration: Permanent
+Range: 10'
+Causes a single target to be stricken with powerful shadow magic which causes
+them to gradually fade out of existence, no save. The first day after the
+spell is cast, the target feels weak of body and feeble of mind.  The second
+day, the target becomes semi-corporeal.  The third day, the victim is a mere
+shade, unable to interact with the real world, and barely able to make
+a sound. After four days, the victim disappears entirely, being taken into an
+obscure shadowy plane where they will wander endlessly.  The caster is able to
+cancel the spell at any time.
+
+Pathless Land
+Level: 8
+Duration: Special
+Range: Special
+This powerful illusion takes two forms, one a permanent protection for
+the caster's home or other secret location, and one a short-lived
+impediment to pursuit.
+The permanent version affects up to a mile radius which takes on a shifting,
+maze-like appearance.  The exact effects are dependant on the terrain in the
+enchanted area, for example: trees and bushes may seem to grow into
+bewildering twisting pathways, rock ridges may form a maze, or boggy ground
+may form an unnavigable series of paths. The maze created is purely
+illusionary, but its effects are so powerful that it becomes virtually
+impossible to navigate for anyone except the caster and those whom he chooses
+to grant access to.
+The short-lived version of this spell creates a similar maze, in an
+area of up to 20' radius per level of the caster, and having a duration of one
+hour. During this time, any creatures entering the area become lost as per
+|Maze|_.
+This spell is not susceptible to dispelling by anything less than |Wish|_ or
+|Alter Reality|_.
+
+Solid Fog
+Level: 4
+Duration: 1 turn per level
+Range: 120'
+Conjures a large bank of fog filling a 20' cube per caster level. Which can
+only be dissipated by extremely strong wind or powerful fire magic. In
+addition to blocking vision beyond 2', the cloying vapours limit wind,
+movement, and missile/spell ranges to 1/10th normal.
+
+Time Flow (reversible)
+Level: 5
+Duration: 6 turns per level
+Range: 10'
+This powerful illusion warps the flow of time at the location where it is
+cast, causing each turn that passes to have the subjective effect of a
+whole hour.
+The reversed version of the spell causes the perception of time to be
+reduced by six times within the affected area – one hour of real time
+passes in what appears to be merely one turn.
+
+Upper Hand
+Level: 6
+Duration: 6 turns per level
+Range: 0
+This spell creates the convincing illusion that the caster is accompanied
+by a band of followers, taking whatever general form the caster desires.
+The group of companions is dynamic and will adapt its number and
+volume so as to always appear to be a slightly larger or more formidable
+force than any observing opposition. Thus, an illusionist ambushed by a
+group of brigands may appear to be protected by a slightly larger band of
+knights, while an illusionist encountering an army poised for war may
+appear to be in command of a slightly larger or better equipped force.
+If any of the illusionary companions is touched, it will dissipate
+immediately, giving the game away. Otherwise the companions are
+perfectly convincing, moving as a force of the appropriate size, making
+appropriate (if generic) sounds, and giving off an appropriate smell.
+
+Phantasm of Forgetting
+Level: 7
+Duration: Instantaneous
+Range: 60'
+This insidious spell causes a single target to forget everything about their
+life and to completely lose their sense of identity, save negates. The
+target's memories are still present, but only powerful mind-reading magic is
+able to access the veiled memories.
+
+Dreaming
+Level: 6
+Duration: Sleep
+Range: Unlimited
+Caster falls into a sleep-like trance and is able to enter into the target's
+dream world.  If the target is awake when the spell is cast, then the caster
+simply remains in a vaguely unconscious state until the spell's duration has
+expired.
+Once inside the target's dream world, the caster can observe the dreams
+which are occurring, and is also able to interact with the dream world
+and the mind of the sleeping individual.
+Various ends can be achieved by intruding in someone's dreams, for
+example: conversation, relaying messages, gaining information, or even
+psychological torment. The spell is of sufficient potency that the caster is
+able to completely dominate the content of the target's dreams, if he so
+desires.
+
+Viral Meme
+Level: 9
+Duration: Special
+Range: 60'
+Cast initially upon one or more targets within 60', this spell implants,
+modifies or removes a single concept, belief or memory from the minds of those
+affected, save at -4 negates.  Anyone who comes into contact with one infected
+with meme must save at -4, or also become affected. Thus the phantasm can
+spread very rapidly and soon overrun whole populations.
+
+Weird
+Level: 9
+Duration: 1 round per level
+Range: 5' per level
+Similar to |Phantasmal Killer|_, except that it affects all creatures in range
+(with the exception of the caster, who may simply observe the effects). The
+phantasmal nemeses created attack as monsters of half the caster's level.
+
+Alter Reality
+Level: 9
+Duration: Special
+Range: Unlimited
+The pinnacle of the illusionist's art, enables the caster to bring forth into
+reality whatever he can imagine. It works in the same way as |Wish|_. The one
+difference is that an illusionist must first create an image of what he wishes
+to become reality, using other spells of illusion. He must then cast Alter
+Reality, which causes the created illusion to become absolutely and
+irrevocably real.
+
+Mists of Madness
+Level: 9
+Duration: 1 turn per level
+Range: Special
+Conjures a vast roiling bank of impenetrable fog, expanding at a rate of 30'
+per round up to a maximum radius of 600'. This fog blocks **all** forms of vision
+beyond 10'.
+Apart from the caster, who is immune, all creatures within the fog are subject
+to the effects of |Maze|_ and must save once per turn or suffer |Confusion|_,
+|Feeblemind|_, insanity, or the like due to the nightmarish visions and
+phantasms they perceive.
+
+##Doppelganger
+##Level: 1
+##Duration: 2d6 rounds, + 2 rounds per level
+##Range: 0
+##The illusion must take the appearance of a humanoid, not taller or shorter
+##than the caster by more than 1', but apparent weight and clothing or items may
+##be altered in any way.

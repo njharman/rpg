@@ -1,0 +1,63 @@
+## Note: edited from original
+##Druid Spells
+
+##Animal Companion
+##Level: 1
+##Duration: Permanent
+##Range: 10'
+##Attracts 2 HD of normal animals (and of ordinary animal intelligence) per
+##caster level, which become close friends of caster. The animals must have
+##a neutral alignment.
+
+##Insect Swarm
+##Level: 3
+##Duration: 1 round per level
+##Range: 30'
+##Summons a swarm of biting, pinching, and stinging insects. There is a 50%
+##chance for flying or crawling insects. They inflict 2 hp damage per round, and
+##a victim may commit no other action than try to get rid of the insect swarm.
+##The caster may direct the swarm to attack different opponents, but it takes
+##one round for the insects to disengage one opponent and move to another.
+
+##Tree
+##Level: 3
+##Duration: 6 turns, +1 turn per level
+##Range: 0
+##Caster assumes form of a small living tree or shrub or a large dead tree trunk
+##with a small number of limbs. All clothing and gear carried or worn also
+##changes.  To all normal tests the caster is, in fact, a tree or shrub. While
+##in tree form,
+##he were in his normal form. The caster may end the spell at any time, and may
+##attack or undertake other normal actions the same round the spell is
+##dismissed.
+
+##Conjure Earth Elemental (reversible)
+##Level: 7
+##Duration: 1 turn per level
+##Range: 40'
+##Creates a portal to the plane of earth, and beckons forth a 16 HD earth
+##elemental. It is of friendly disposition to the caster, and will perform
+##tasks, including fight, for the caster for the duration of the spell. The
+##reverse of this spell, banish earth elemental, or dispel magic, will send it
+##back to the plane of earth
+##
+##Conjure Fire Elemental (reversible)
+##Level: 6
+##Duration: 1 turn per level
+##Range: 80'
+##Creates a portal to the plane of fire, and beckons forth a creature native to
+##that plane. Elementals summoned are of friendly disposition to the caster, and
+##will perform tasks, including fight, for the caster for the duration of the
+##spell.  Efreeti require concentration to control and will attack caster if
+##concentration is interupted, much like magic-user Conjure Elemental spell.
+##The reverse of this spell, banish fire elemental, or dispel magic, will send
+##fire elementals back to the plane of fire, but only banish fire elemental can
+##be used to send efreeti, or other powerful creatures back to the planes.
+##========= ==============================
+##d100      Creature Conjured
+##========= ==============================
+##**01-60** Fire Elemental (12 HD)
+##**61-85** Fire Elemental (16 HD)
+##**86-95** Fire Elemental (20 HD)
+##**96-00** Efreeti
+##========= ==============================

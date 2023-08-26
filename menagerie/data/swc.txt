@@ -1,0 +1,2329 @@
+s15: Swords & Wizardry Core Rules, Copyright 2008, Matthew J. Finch Swords & Wizardry Complete Rules, Copyright 2010, Matthew J. Finch
+
+##Not a lot of detail is given about the monsters, because the
+##more detail given, the more your own mental image of the
+##fantasy world is going to be locked into a single track. We are
+##not going to say that giant ants are red, nocturnal, three feet long,
+##and fond of eating Elves, because in your mind, they might be
+##blue, diurnal, five feet long, and eat only plants unless they are
+##attacked. Details about monsters toss roadblocks in front of your
+##imagination. Yes, details can also inspire the imagination, but we
+##are making the assumption that if you are interested in fantasy
+##gaming in the first place, you have a good imagination that does
+##not need details about the size of a giant ant.
+
+##About Magic Resistance:
+##One of the “Special” items that may be listed for some
+##creatures is “Magic Resistance,” followed by a percentage. The
+##given percentage chance is the likelihood that any magic used
+##against the creature (other than bonuses from weapons) will fail
+##to take effect. Roll d100 and if the result is less than the given
+##percentage, the magic will fail.
+
+Ant, Giant (Worker)
+Hit Dice: 2
+Armor Class: 3 [16]
+Attacks: Bite (1d6 + poison)
+Saving Throw: 16
+Special: None
+Move: 18
+Alignment: Neutrality
+Challenge Level/XP: 2/30
+Giant ants live in vast subterranean hives tunneled through soil and
+even stone. A hive can hold as many as 100 ants, in a worker-to-warrior
+ratio of 1:5. A hive also contains one giant queen ant.
+Ant, Giant (Warrior)
+Hit Dice: 3
+Armor Class: 3 [16]
+Attacks: Bite (1d6 + poison)
+Saving Throw: 14
+Special: None
+Move: 18
+Alignment: Neutrality
+Challenge Level/XP: 2/30
+Giant ants live in vast subterranean hives tunneled through soil and even
+stone. A hive can hold as many as 100 ants, in a worker-to-warrior ratio
+of 1:5. The poison of a warrior ant does 2d6 points of damage if a saving
+throw is failed, 1d4 points of damage if the saving throw succeeds.
+Ant, Giant (Queen)
+Hit Dice: 10
+Armor Class: 3 [16]
+Attacks: Bite (1d6)
+Saving Throw: 5
+Special: None
+Move: 3
+Alignment: Neutrality
+Challenge Level/XP: 8/800
+Giant ants live in vast subterranean hives tunneled through soil and
+even stone. The queen of a giant ant colony is larger, tougher, and
+slower than the average giant ant.
+Badger, Giant
+Hit Dice: 3
+Armor Class: 4 [15]
+Attacks: 2 claws (1d3), bite (1d6)
+Saving Throw: 14
+Special: None
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 3/120
+These subterranean predators are the size of a full-grown human, and
+quite aggressive when defending their territory.
+Banshee
+Hit Dice: 7
+Armor Class: 0 [19]
+Attacks: Claw (1d8)
+Saving Throw: 9
+Special: See below
+Move: 6
+Alignment: Chaos
+Challenge Level/XP: 11/1700
+Banshees are horrid undead creatures that live in swamps and other
+desolate places. Banshees are only damaged by magic or silver weapons,
+they have a magic resistance of 49%, and they are immune to enchantments.
+Their shriek (once per day) necessitates a saving throw versus death or
+the hearer will die in 2d6 rounds. One particularly unusual thing about
+banshees is that they often associate with living faerie creatures of the
+less savory variety; they might even be an undead form of faerie.
+A Banshee can travel over water and other terrain as if it were land,
+but crossing running water causes it to lose its magic resistance for 3d6
+hours. Banshees look like gaunt humans (male or female) with long,
+stringy hair and glowing yellow eyes. They often wear hooded cloaks.
+They are considered Type 9 undead for turning purposes.
+Basilisk
+Hit Dice: 6
+Armor Class: 4 [15]
+Attacks: Bite (2d6)
+Saving Throw: 11
+Special: Petrifying gaze
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 8/800
+Basilisks are great lizards whose gaze turns to stone anyone meeting
+its eye. (One way of resolving this: fighting without looking incurs a -4
+penalty to hit.) If the basilisk’s own gaze is reflected back at it, it has
+a 10% chance to force the basilisk into a saving throw against being
+turned to stone itself.
+Bat, Giant Vampire
+Hit Dice: 1
+Armor Class: 8 [11]
+Attacks: Bite (1d6)
+Saving Throw: 17
+Special: Sucks blood
+Move: 4/18 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 3/60
+These bats suck blood for automatic damage of
+1d6 after a successful bite. They are the size of a
+falcon.
+Bat, Giant
+Hit Dice: 4
+Armor Class: 7 [12]
+Attacks: Bite (1d10)
+Saving Throw: 13
+Special: None
+Move: 4/18 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 5/240
+These massive, man-sized cousins of the bat do not
+suck blood, but nonetheless their bite can be deadly.
+Bat, Giant Monster
+Hit Dice: 8
+Armor Class: 6 [13]
+Attacks: Bite (2d8), claws (1d6)
+Saving Throw: 8
+Special: None
+Move: 4/18 (flying)
+Alignment: Neutrality unless intelligent (Chaos)
+Challenge Level/XP: 9/1,100
+These creatures attack with claws as well as a bite. They are twice
+the size of a man, with a tremendous wingspan. Fearful peasants might
+even mistake them for small dragons when the bats fly by at night.
+
+Bear, Black
+Hit Dice: 4+1
+Armor Class: 7 [12]
+Attacks: 2 Claws (1d3) and bite (1d6)
+Saving Throw: 13
+Special: Hug
+Move: 9
+Alignment: Neutrality
+Challenge Level/XP: 4/120
+If a bear hits with both claws, it hugs for an additional 1d8 hit points
+of damage. Larger bears are to be found in mountains, caves, and arctic
+regions, with more hit dice and inflicting more damage with the hug.
+
+Beetle, Giant Fire
+Hit Dice: 1+3
+Armor Class: 4 [15]
+Attacks: Bite (1d4+2)
+Saving Throw: 18
+Special: None
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 1/15
+A giant fire beetle’s oily light-glands glow a reddish color. If they are removed,
+they continue to give off light for 1d6 days, shedding light in a 10-foot radius.
+93
+monsters
+Pudding, Black
+Hit Dice: 10
+Armor Class: 6 [13]
+Attacks: Attack (3d8)
+Saving Throw: 5
+Special: Acidic surface, immune to cold, divides when hit with
+lightning
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 11/1,700
+Black puddings are amorphous globs with an acidic surface. They are
+subterranean predators and scavengers.Any weapon or armor contacting
+a black pudding will be eaten away by the acid as follows: weapon (1
+hit by weapon), chain mail or lesser armor (1 hit by pudding), plate
+mail (2 hits by pudding). If a weapon or armor is magical, it can take an
+additional hit per magical +1 before being dissolved.
+Blink Dog
+Hit Dice: 4
+Armor Class: 5 [15]
+Attacks: Bite (1d6)
+Saving Throw: 13
+Special: Teleports without error
+Move: 12
+Alignment: Law
+Challenge Level/XP: 4/240
+Blink dogs are pack hunters, intelligent and usually friendly to those
+who are not of evil intent. They can teleport short distances (without
+error) and attack in the same turn—in most cases (75%) a blink dog will
+be able to teleport behind an opponent and attack from the rear, with
+appropriate bonuses.
+Boar, Wild
+Hit Dice: 3+3
+Armor Class: 7 [12]
+Attacks: Gore (3d4)
+Saving Throw: 14
+Special: Continues attacking 2 rounds after being “killed”
+Move: 15
+Alignment: Neutrality
+Challenge Level/XP: 4/120
+Wild boars continue to attack for two rounds after they reach
+zero hit points before they finally drop
+dead. These stats might also be used for
+any similar creature that is unique to a
+campaign, such as “the blue tusken-hogs
+of the Ymar Plains.”
+Bugbear
+Hit Dice: 3+1
+Armor Class: 5 [14]
+Attacks: Bite (2d4) or by weapon
+Saving Throw: 14
+Special: Surprise opponents on a 1–3
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 3/120
+These large, hairy, goblin-like humanoids
+are stealthier than their size would suggest,
+almost always getting the chance to surprise
+even alert opponents with a roll of 1–3 on
+a d6 (50%).
+Bulette
+Hit Dice: 7 to 10
+Armor Class: -2 [21]
+Attacks: Bite (4d12) and 2 Claws (3d6)
+Saving Throw: 9, 8, 6, 5
+Special: Leaping, surprise
+Move: 15
+Alignment: Neutrality
+Challenge Level/XP: 7 HD (9/1100), 8 HD (10/1400), 9 HD (11/1700), 10 HD (12/2000)
+Roughly ten feet in height, a bulette (boo-LAY) is covered in natural
+armor plating like that of an armadillo, and has a beak-like head that
+opens to show wicked, serrated teeth. These creatures can leap to the
+attack; in which case they cannot bite, but may attack with all four
+claws. Bulettes dig underground to surprise their prey, leaving a furrow
+in the ground as they go, caused by a dorsal crest in the creature’s armor.
+These voracious hunters eat horses and halflings with gusto, although
+they will devour anything from badgers to plowshares if their preferred
+foods are not readily available. Although bulettes burrow, they do not
+venture further underground, for they are surface predators. When the
+dorsal crest of the bulette is raised (during combat this is usually only
+after the thing has been wounded), the area underneath is AC 6 [13],
+and this vulnerable point can be attacked if the monster is well enough
+surrounded for its opponents to attack from behind as well as in front.
+Carrion Creeper
+Hit Dice: 2+4
+Armor Class: 7 [12]
+Attacks: Bite (1 hp) and 6 tentacles
+Saving Throw: 14
+Special: Tentacles cause paralysis
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 4/120
+This caterpillar-like creature has 6 waving tentacles which, when they
+score a hit, require the target to make a saving throw or be paralyzed
+for 2d6 turns. These underground scavengers can be aggressive when
+they are hungry, and will pursue prey unless distracted. They are good
+climbers, but when crossing water they are unable to do much more
+than float with the current.
+Centaur
+Hit Dice: 4
+Armor Class: 5 [15] or 4 [16] with shield
+Attacks: 2 kicks (1d6) and weapon
+Saving Throw: 13
+Special: None
+Move: 18
+Alignment: Any (usually Neutrality)
+Challenge Level/XP: 5/240
+Half man, half horse, centaurs are fierce warriors and well-known
+creatures of mythology. The Referee may choose any “version” of the
+centaur from myth or folklore for the campaign: some are evil, some
+aloof, and some are soothsayers.
+Centipede, Giant (Small, Lethal)
+Hit Dice: 1d2
+Armor Class: 9 [10]
+Attacks: Bite (deals 0 damage)
+Saving Throw: 18
+Special: Lethal poison, +4 save
+Move: 13
+Alignment: Neutrality
+Challenge Level/XP: 2/30
+Lethal giant centipedes of the small size inflict a deadly bite (+4
+bonus to saving throw), but cause no damage if the saving throw is
+successful.
+Centipede, Giant (Small, Non-lethal)
+Hit Dice: 1d2
+Armor Class: 9 [10]
+Attacks: Bite (1 hp damage)
+Saving Throw: 18
+Special: Non-lethal poison, +4 save
+Move: 13
+Alignment: Neutrality
+Challenge Level/XP: 1/15
+The non-lethal variety of giant centipede has a painful bits but its
+poison is only crippling, not lethal. Failing a saving throw (at a +4
+bonus) against the poison of this centipede causes 1d4 rounds of
+crippling pain (the victim is helpless, as when asleep). Additionally, the
+limb (roll 1d4) is temporarily crippled (treat as a disease) for 2d4 days.
+A crippled leg reduces movement by 50%; a crippled shield arm cannot
+wield weapon or shield; a crippled sword arm attacks at -4. A second
+bite on a leg reduces movement to one quarter normal, and a third bite
+to the legs reduces movement to 1 foot per minute (prone, dragging
+oneself by the arms).
+Centipede, Giant (Man-sized)
+Hit Dice: 2
+Armor Class: 5 [14]
+Attacks: Bite (1d8)
+Saving Throw: 16
+Special: Lethal poison, +6 save
+Move: 15
+Alignment: Neutrality
+Challenge Level/XP: 4/240
+7ft long. The man-sized giant centipede is a deadly predator with armored
+segments, a strong bite, and a lethal (though relatively weak) poison.
+Centipede, Giant (Greater)
+Hit Dice: 4
+Armor Class: 0 [20]
+Attacks: Bite (3d8)
+Saving Throw: 13
+Special: Lethal poison, +4 save
+Move: 18
+Alignment: Neutrality
+Challenge Level/XP: 6/400
+A 20' long horror of chitin, multiple legs, and clashing pincers
+dripping with venom.
+Chimera
+Hit Dice: 9
+Armor Class: Goat 6 [13], Lion 5 [14], Dragon 2 [17]
+Attacks: 2 claws (1d3), 2 goat horns (1d4), 1 lion bite (2d4), and 1
+dragon bite (3d4)
+Saving Throw: 6
+Special: Breathes fire
+Move: 9/18 (flying)
+Alignment: Chaos (sometimes Neutrality)
+Challenge Level/XP: 11/1,700
+The chimera has three heads: one is the head of a goat, one the head of
+a lion, and one the head of a dragon. Great wings rise from its lion-like
+body. The dragon head can breathe fire (3 times per day) with a range
+of 50 ft, causing 3d8 damage to anyone caught within the fiery blast
+(saving throw for half damage).
+Cockatrice
+Hit Dice: 5
+Armor Class: 6 [13]
+Attacks: Bite (1d3+ turn to stone)
+Saving Throw: 12
+Special: Bite turns to stone
+Move: 6/18 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 7/600
+This nasty creature resembles a bat-winged rooster with a long,
+serpentine tail. Its bite turns enemies to stone unless the victim makes a
+successful saving throw.
+Crocodile
+Hit Dice: 3
+Armor Class: 4 [15]
+Attacks: Bite (1d6)
+Saving Throw: 14
+Special: None
+Move: 9 (12 swimming)
+Alignment: Neutrality
+Challenge Level/XP: 3/60
+Some normal crocodiles are man-eaters; all are dangerous and can
+conceal themselves well.
+Crocodile, Giant
+Hit Dice: 6
+Armor Class: 3 [16]
+Attacks: Bite (3d6)
+Saving Throw: 11
+Special: None
+Move: 9 (12 swimming)
+Alignment: Neutrality
+Challenge Level/XP: 6/400
+The smallest of giant crocodiles are about 20ft long (normal crocodiles
+can grow to be as long as 15ft).
+Demon, Baalroch
+Hit Dice: 9
+Armor Class: 2 [17]
+Attacks: Sword (1d12+2) and whip (see below)
+Saving Throw: 6
+Special: Magic resistance (75%), surrounded by fire
+Move: 6/15 (flying)
+Alignment: Chaos
+Challenge Level/XP: 10/1,400
+The Baalroch’s name means, roughly, the Bull of Baal: the Baal-
+aurochs. (The aurochs was a bull that stood twelve feet tall at the
+shoulder, and Baal is an ancient and evil pagan deity.) These powerful
+demons somewhat resemble vast minotaurs with great, spreading bat-
+wings; they burn with the fires of hell and are wreathed in flame. The
+spells of casters below 6th level do not affect them, and against higher-
+level spell casters they are still 75% immune to all spells.
+In combat, a baalroch uses whip and sword. The whip can be used
+to reach great distances; on a successful hit the victim is pulled close
+to the baalroch and burned by the fires of the demon’s body (3d6 hit
+points). Baalrochs are sometimes referred to in ancient texts as Balor or
+Baalor, which may be the name of a single demon rather than a term for
+all of them. A baalroch could be forced or tricked into the service of a
+powerful wizard, but the risk would be immense.
+Demon, Dretch
+Hit Dice: 4
+Armor Class: 2 [17]
+Attacks: 2 claws (1d4), 1 bite (1d6)
+Special: Magical abilities.
+Move: 9
+Saving Throw: 13
+Alignment: Chaos
+Challenge Level/XP: 6/400
+These creatures are fat, with long, spindly arms and legs. They have
+rudimentary human heads, with slobbering jaws and folds of fat. Dretch
+demons have some weak demonic powers. Although they are not par-
+ticularly intelligent, they can cause a horrible stinking cloud once per
+day, can teleport once per day, can cause darkness (10-foot diameter)
+once per day, and can summon 1d4 giant rats once per day.
+Demon, Erinyes
+Hit Dice: 6
+Armor Class: 2[17]
+Attacks: 1 bronze sword (1d6 + paralysis)
+Special: Magic resistance (25%),magical abilities, immune to fire and
+cold, entangle
+Move: 12/24 (flying)
+Save: 11
+Alignment: Chaos
+Challenge Level/XP: 9/1100
+The erinyes, the “Furies” of Ancient Greek mythology, are female
+demons who pursue those guilty of crimes against the order of the
+gods. Their appearance is so terrible as to cause fear (saving throw).
+They are able to see invisible things and locate objects at will, so it is
+impossible to hide from them. Each fury carries a whip which, if it hits,
+entangles the victim (saving throw) until the Fury releases it. The Furies
+are immune to fire and cold, and have a magic resistance of 25%. The
+blade of a Fury’s sword causes paralysis (saving throw).
+Demon, Glabrezu
+Hit Dice: 10
+Armor Class: –3[22]
+Attacks: 2 pincers (2d6), 2 claws (1d3), 1 bite (1d4+1)
+Special: Magic resistance (60%), immune to fire, magical abilities
+Move: 9
+Saving Throw: 5
+Alignment: Chaos
+Challenge Level/XP: 11/1700
+(Third-Category Demon)
+The third-category demons, Glabrezu, are massive and horrible,
+standing ten feet high or more. They have goat horns and a humanoid
+shape, but no wings. Four arms sprout from the torso: two huge arms
+with great crab-pincers, and two much shorter arms with claws.
+Glabrezu can cause darkness in a 10-foot radius, are immune to fire,
+can cause fear at will, can levitate at will, can polymorph themselves,
+and are 60% resistant to magic.
+Demon, Hezrou
+Hit Dice: 9
+Armor Class: 0[19]
+Attacks: 2 claws (1d3), 1 bite (2d8)
+Special: Magic resistance 50%, magical abilities
+Move: 9/14 (flying)
+Saving Throw: 6
+Alignment: Chaos
+Challenge Level/XP: 11/1700
+(Second-Category Demon)
+Toad-like demons with bat wings, the Hezrou have magic resistance of
+50%. At will, they can cause fear (per the spell), detect invisibility (per the
+spell), and cause darkness n a 15-foot radius. They are immune to fire.
+Demon, Lemures
+Hit Dice: 3
+Armor Class: 7 [12]
+Attacks: Claw (1d3)
+Saving Throw: 14
+Special: Regenerate (1 hp/round)
+Move: 3
+Alignment: Chaos
+Challenge Level/XP: 4/120
+Lemures are vaguely humanoid, but their flesh is mud-like, shifting
+and soft upon their horrible bodies. (This amorphous form allows them
+to regenerate 1 hp per round.) Lemures are lower forms of demons,
+the fleshly manifestations of damned souls. These demons can be
+permanently destroyed only by sprinkling their disgusting bodies with
+holy water.
+Demon, Manes
+Hit Dice: 1
+Armor Class: 5[14]
+Attacks: 2 claws (1d2), 1 bite (1d4)
+Special: Half damage from non-magic weapons
+Move: 5
+Saving Throw: 18
+Alignment: Chaos
+Challenge Level/XP: 2/30
+Pathetic, damned souls, manes are demons no larger than humans,
+with gray skin and empty eyes. Non-magical weapons inflict only half
+normal damage on them.
+Demon, Marilith
+Hit Dice: 8
+Armor Class: –3[22]
+Attacks: 6 weapons (1d8), tail (1d8)
+Special: Magic resistance (80%), +1 or better magic weapon required to
+hit, immune to fire, magical abilities
+Move: 12
+Saving Throw: 8
+Alignment: Chaos
+Challenge Level/XP: 13/2300
+(Fifth-Category Demon)
+Mariliths appear as a cruel-eyed beautiful woman with a six-armed
+torso, but the lower body of a huge constrictor snake. They can wield
+weapons in all six arms at once, and the tail, if it hits, constricts for
+automatic damage after the initial hit. Mariliths are among the most
+feared of demons – as much, even, as the mighty Baalrochs. They can,
+at will, cast Charm Person, Levitate, and Polymorph Self, and are 80%
+resistant to magic. Fire does not affect them.
+Demon, Nalfeshnee
+Hit Dice: 11
+Armor Class: –1[20]
+Attacks: 2 claws (1d4), 1 bite (1d6+2)
+Special: Magic resistance (65%), +1 or better magic weapon needed to
+hit, immune to fire, +2 on to-hit rolls, magical abilities
+Move: 9/14 (flying)
+Saving Throw: 4
+Alignment: Chaos
+Challenge Level/XP: 13/2300
+(Fourth-Category Demon)
+Nalfeshnee demons have the body of an enormous gorilla, the head
+of a boar, and cloven hooves. These massive, brutish demons are
+actually quite intelligent, despite their appearance, an incongruity
+that has deceived and doomed many who would attempt to control or
+enslave them. The very size of a nalfeshnee prevents them from being
+particularly agile flyers, though they do have wings. Nalfeshnee are
+incredibly powerful (+2 to hit), and have various demonic powers in
+addition to being immune to fire: at will, they can cause fear (as per the
+spell), polymorph self, and dispel magic (at will). They can also create
+a symbol of discord once per day.
+Demon, Quasit
+Hit Dice: 3
+Armor Class: 2[17]
+Attack: 2 claws (1d2 + non-lethal poison), 1 bite (1d3)
+Special: Magic resistance (25%), regenerate (1 hp/round), non-lethal
+poison, magical abilities
+Move: 14
+Saving Throw: 14
+Alignment: Chaos
+Challenge Level/XP: 7/600
+Quasits are demon familiars, much like imps but without wings and
+with a less human-like shape. A quasit can polymorph into two other
+forms (commonly a giant centipede and a bat). These demons are 25%
+resistant to magic, regenerate at 1 hp per round, can become invisible
+at will, and once per day can cast a Fear spell. The quasit’s claws are
+laden with a poison that reduces an opponent’s Dexterity score by 1
+point (saving throw applies, lasts for 2d6 rounds).
+Demon, Succubus
+Hit Dice: 6
+Armor Class: 9 [10]
+Attacks: 2 scratches (1d3)
+Saving Throw: 11
+Special: Magic resistance (70%), immune to non-magic weapons, cause
+darkness in a 10-foot diameter, level drain (1 level) with kiss, summon
+other demons, spells,change shape.
+Move: 12 (18 fly)
+Alignment: Chaotic
+Challenge Level/XP: 9/1,100
+A succubus is a creature of demonic lust, a drinker of souls who offers
+fatal temptation to mortals that fall into the trap of her deadly embraces:
+each kiss drains one level of experience. (The male form of this demon
+is called an incubus. A succubus is always female, just as an incubus
+is always male.) The demon’s form is that of a supernaturally beautiful
+woman, curvaceous and alluring, but whose furled bat wings and deli-
+cate horns betray her true nature. Small white fangs gleam from behind
+the demoness’s full lips, and when she is enraged the pupils of her eyes
+will contract and shift into those of a vicious serpent.
+
+A succubus can “cast” Charm Person whenever desired, as well as ESP,
+Clairaudience, and Suggestion. They can change shape at will, but only into
+human or human-like forms. Succubi also have the ability to call forth (by
+gate) other demons. A succubus can summon a demon
+prince(40%chancetosucceed),but will seldom do so, for the price to be paid
+afterwards is generally significant and unpleasant.  However, a succubus can
+summon a Baalroch demon or a Nalfeshnee (fourth- category demon), again, with
+a 40% chance of success regardless of the type of demon being summoned.  If
+a succubus does not specify the sort of demon she is summoning, there is a 5%
+chance that the respondent will be a demon prince, and if not, there is a 75%
+chance that the demon will be of the fourth cate- gory, a Nalfeshnee.
+Succubi almost never rely upon physical attacks; theyusetheircharm and suggestion abilities to allow them to bestow their deadly kisses upon opponents.
+Demon, Vrock
+Hit Dice: 8
+Armor Class: 1 [18]
+Attacks: 1 beak (1d6), 2 foreclaws (1d4), 2 rear claws (1d6)
+Special: Magic resistance (50%), immune to fire, darkness
+Move: 12/18 (flying)
+Saving Throw: 8
+Alignment: Chaos
+Challenge Level/XP: 9/1100
+(First-Category Demon)
+These demons are vulture-headed, with feathered humanoid bodies,
+and huge dark-feathered wings. All can create darkness in a radius of
+5 feet and are immune to fire. They use their wings to bring both their
+arms and legs into combat, along with their beaked bite. Vrock demons
+are quite stupid, though like most demons they consider themselves to
+be tremendously intelligent.
+Demon Prince, Orcus
+Hit Dice: 30 (125hp)
+Armor Class: –6 [25]
+Attacks: 1 staff (death – no save), tail (2d8), 1 claw (2d8)
+Special: Magic resistance (75%), +3 magic weapon required to hit,
+immune to fire and charm, death staff, spells, magical abilities, control
+undead, summon demon minions
+Move: 9 (Fly 20)
+Saving Throw: 3
+Alignment: Chaos
+Challenge Level/XP: 35/6800
+Orcus is a demon-prince of death and the dead (specifically, the undead),
+and can also call upon his lesser demon-minions as well. His staff causes
+death at its touch, and he uses magic-user spells at the following levels.
+Level 1: 6; level 2: 5; level 3: 4; level 4: 3; level 5: 2; level 6: 1. He has
+a magic resistance of 75%, and is completely immune to fire and charm
+spells. At will Orcus can animate dead, create darkness (15 foot radius),
+cause fear, dispel magic, make a suggestion per the spell, polymorph
+himself, or use ESP. Such powers can be used at the same time as normal
+attacks. His skull-tipped staff might have independent powers of its own,
+even possibly being an entity in its own right, merely cooperating with
+the demon prince and using him for its own purposes.
+Djinni
+Hit Dice: 7+3
+Armor Class: 4 [15]
+Attacks: Fist or weapon (1d10+1)
+Saving Throw: 9
+Special: magical powers, whirlwind
+Move: 9/24 (flying)
+Alignment: Any
+Challenge Level/XP: 9/1,100
+Djinn are one of the genies of folklore, creatures of the air (and
+possibly of the elemental planes). They can carry 700 lbs of weight, and
+have a number of magical powers. A djinni can create food and water as
+well as wooden and cloth objects. They can also create objects of metal
+(including coins), but all such magically created metals disappear in
+time. Djinn can call up illusions, and although these are quite excellent
+they disappear when touched. A djinni can give itself a gaseous form
+(cannot attack or be attacked, can enter any area that is not airtight),
+and can become invisible at will. Finally, a djinni can turn itself into a
+whirlwind, sweeping away any creature with one or fewer hit dice. (The
+diameter of the whirlwind is 10 feet.) More powerful types of djinn
+might be capable of granting limited wishes or even true wishes.
+Doppelganger
+Hit Dice: 4
+Armor Class: 5 [14]
+Attacks: Claw (1d12)
+Saving Throw: 13 (5 against any magic)
+Special: Mimics shape, immune to sleep and charm spells
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 5/240
+A doppelganger can change its form to resemble the physical
+appearance (including clothing and gear) of any person. These creatures
+are immune to sleep and charm, and are considered magic resistant for
+purposes such as breaking through Wizard Lock and similar spells. They
+have a very good saving throw (5) against magic of all kinds.
+Dragon, Black
+Hit Dice: 6–8
+Armor Class: 2 [17]
+Attacks: 2 claws (1d4), bite (3d6)
+Saving Throw: 11, 9, or 8
+Special: Spits acid
+Move: 9/24 (flying)
+Alignment: Chaos
+Challenge Level/XP: 6 HD (8/800), 7 HD (9/1,100), 8 HD (10/1,400)
+Black dragons spit a deadly, corrosive acid which covers everything
+in a line 5 feet wide and 60 feet long. Black dragons have a 45% chance
+of being able to talk; talking black dragons have a 5% chance of being
+able to cast 1d4 first-level Magic-User spells.
+Dragon, Blue
+Hit Dice: 8–10
+Armor Class: 2 [17]
+Attacks: 2 claws (1d6), bite (3d6)
+Saving Throw: 8, 6, or 5
+Special: Spits lightning
+Move: 9/24 (flying)
+Alignment: Chaos
+Challenge Level/XP: 8 HD (10/1,400), 9 HD (11/1,700), 10 HD (12/2,000)
+Blue dragons spit a blast of lightning in a line 5 ft wide and 100 ft
+long, affecting everything in its path. A saving throw indicates half
+damage. Blue dragons have a 65% chance of being able to talk; talking
+blue dragons have a 15% chance of being able to cast 1d4 first-level
+Magic-User spells and 1d3 second-level Magic-User spells.
+Dragon, Gold
+Hit Dice: 10–12
+Armor Class: 2 [17]
+Attacks: 2 claws (1d8), bite (2d10)
+Saving Throw: 5, 4, or 3
+Special: Breathes poisonous gas or fire
+Move: 9/24 (flying)
+Alignment: Law
+Challenge Level/XP: 10 HD (12/2,000), 11 HD (13/2,300), 12 HD (14/2,600)
+Gold dragons are the noble wyrms of story and song. They can breathe
+either a cloud of poisonous gas, 50 feet in diameter (a successful saving
+throw indicates half damage) or they can breathe fire in a cone-shape
+90 feet long and roughly 30 feet wide at the base. Gold dragons have
+a 100% chance of being able to talk and a 25% chance of being able
+to cast Magic-User spells: 1d4 first-level, 1d3 second-level, 1d2 third-
+level, and 1 fourth-level spell.
+Dragon, Green
+Hit Dice: 7–9
+Armor Class: 2 [17]
+Attacks: 2 claws (1d6), bite (2d10)
+Saving Throw: 9, 8, or 6
+Special: Breathes poisonous gas
+Move: 9/24 (flying)
+Alignment: Chaos
+Challenge Level/XP: 7 HD (10/1,100), 8 HD (11/1,400), 9 HD (12/1,700)
+Green dragons breathe a cloud of poisonous gas, 50 ft in diameter.
+(A successful saving throw indicates half
+damage.) Green dragons have a 55% chance
+of being able to talk; talking green dragons
+have a 10% chance of being able to cast 1d4
+first level Magic-User spells and 1d2 second
+level Magic-User spells.
+Dragon, Red
+Hit Dice: 9–11
+Armor Class: 2 [17]
+Attacks: 2 claws (1d8), bite (3d10)
+Saving Throw: 6, 5, or 4
+Special: Breathes fire
+Move: 9/24 (flying)
+Alignment: Chaos
+Challenge Level/XP: 9 HD (11/1,700), 10 HD (12/2,000), 11 HD (13/2,300)
+Red dragons are the fire-breathing wyrms of legend. They breathe fire in
+a cone-shape 90 feet long and roughly 30 ft wide at the base. Red dragons
+have a 75% chance of being able to talk; talking red dragons have a 20%
+chance of being able to cast 1d4 first level Magic-User spells, 1d3 second
+level Magic-User spells, and 1d2 third level Magic-User spells.
+Dragon, White
+Hit Dice: 5–7
+Armor Class: 2 [17]
+Attacks: 2 claws (1d4), bite (2d8)
+Saving Throw: 12, 11, or 9
+Special: Breathes cold
+Move: 9/24 (flying)
+Alignment: Chaos
+Challenge Level/XP: 5 HD (7/600), 6 HD (8/800), 7 HD (9/1,100)
+White dragons are usually found in cold regions, where they
+camouflage themselves in ice and snow, lying in wait for prey. They
+breathe a cone of intensely cold air and frost, with a length of 70 ft and
+a base of 30 ft. White dragons are not able to talk or cast spells.
+Dragon Turtle
+Hit Dice: 11 to 14
+Armor Class: 2 [17]
+Attacks: 2 claws (1d8), bite (3d10)
+Saving Throw: 4 (11HD) or 3
+Special: Break ships, breathe steam
+Move: 3 (9 swimming)
+Alignment: Neutrality or Chaos
+Challenge Level/XP: 11 HD (13/); 12 HD (14/); 13 HD (15/); 14 HD (16/)
+They breathe scalding steam in a cone-shape 90 feet long and roughly
+30 ft wide at the base, inflicting as many hit points of damage as the
+monster has (when at full hp). Dragon turtles have a 75% chance of being
+able to talk, and these have a 20% chance of being able to cast 1d4 first
+level Magic-User spells, 1d3 second level Magic-User spells, and 1d2
+third level Magic-User spells.Adragon turtle that rises beneath all but the
+largest ship can lift it, possibly making it capsize (roughly 50%).
+Dryad
+Hit Dice: 2
+Armor Class: 9 [10]
+Attacks: Wooden dagger (1d4)
+Saving Throw: 16
+Special: Charm person (-2 save)
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 3/60
+Dryads are beautiful female tree spirits who do not venture far from
+their home trees. They can cast (as a native magical power) a strong
+charm that operates as a Charm Person spell with a -2 penalty to the
+saving throw. Those who are charmed seldom return, or might be kept
+for a hundred years and a day within the dryad’s tree.
+Dwarf
+Hit Dice: 1
+Armor Class: 4 [15]
+Attacks: War hammer (1d4+1)
+Saving Throw: 17
+Special: Detects attributes of stonework
+Move: 6
+Alignment: Law
+Challenge Level/XP: 1/15
+Statistics above are for the common Dwarf with no particular unusual
+characteristics. A dwarf-at-arms would usually have a full 8 hit points,
+reflecting skill and general toughness. Stronger Dwarfs (sergeants-at-
+arms, for example) might have more hit dice or unusual bonuses to hit,
+or even magical abilities if such is possible (Norse myths are a good
+example of this.) Do not bother to treat more-powerful NPC dwarfs as
+Fighters or other character types; just assign the right number of hit dice
+and abilities (if any) and keep moving along with the fantasy.
+Efreeti
+Hit Dice: 10
+Armor Class: 2 [17]
+Attacks: Fist or sword (1d8+5)
+Saving Throw: 5
+Special: Wall of fire
+Move: 9/24 (flying)
+Alignment: Chaos
+Challenge Level/XP: 12/2,000
+Efreet are a type of genie, associated with fire (in contrast to the djinn,
+who have powers over the air). Efreet can carry up to 1000 pounds of
+weight, and under the right circumstances they can be forced to serve
+as a slave until they figure out how to free themselves. An efreeti can
+create a wall of fire (per the spell). They appear as giant humans with
+cruel features, their skin flickering with flames.
+Elementals
+Elementals are living manifestations of the basic forms of matter: air,
+earth, fire, and water. They are usually summoned from their native
+planes of existence to do the bidding of a powerful wizard. These
+beings can also be “chained” within objects or structures to give the
+objects magical properties. Elementals are barely intelligent at all, but
+they are as powerful as the forces of nature that they actually are.
+Elemental, Air
+Hit Dice: 8, 12, or 16
+Armor Class: 2 [17]
+Attacks: Strike (2d8)
+Saving Throw: 8, 3, or 3
+Special: Whirlwind
+Move: 36 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 8 HD (9/1,100), 12 HD (13/2,300), 16 HD (17/3,400)
+Air elementals can turn into a whirlwind of air with a diameter of 30
+ft, hurling any creature of 1 HD or less for great distances (and almost
+certainly killing them). These elemental whirlwinds are approximately
+100 ft in height.
+Elemental, Earth
+Hit Dice: 8, 12, or 16
+Armor Class: 2 [17]
+Attacks: Fist (3d6)
+Saving Throw: 8, 3, or 3
+Special: Tear down stone
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 8 HD (9/1,100), 12 HD (13/2,300), 16 HD (17/3,400)
+Earth elementals are hulking man-shapes of rock and earth. They
+batter opponents with their great fists, although damage is reduced by
+1d6 if the opponent is not standing upon earth or rock. Earth elementals
+can tear apart stone structures, able to rip down even a castle wall in a
+matter of 1d4+4 rounds (minutes).
+Elemental, Fire
+Hit Dice: 8, 12, or 16
+Armor Class: 2 [17]
+Attacks: Strike (2d6)
+Saving Throw: 8, 3, or 3
+Special: Ignite materials
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 8 HD (9/1,100), 12 HD (13/2,300), 16 HD (17/3,400)
+Fire elementals are formless masses of flame, perhaps with a vaguely
+human shape. Their attacks cause flammable materials (including
+wood) to ignite if the material fails a saving throw (as determined by
+the Referee).
+Elemental, Water
+Hit Dice: 8, 12, or 16
+Armor Class: 2 [17]
+Attacks: Strike (3d6)
+Saving Throw: 8, 3, or 3
+Special: Can overturn boats
+Move: 6/18 (swimming)
+Alignment: Neutrality
+Challenge Level/XP: 8 HD (9/1,100), 12 HD (13/2,300), 16 HD (17/3,400)
+Water elementals cannot move more than 60 ft from a large body of
+water, and their damage is reduced by 1d6 if the opponent is not standing
+in water (or swimming, etc.). These powerful beings can overturn small
+boats, and can overturn a ship if given 1d4+4 rounds to work at it. On
+water, they can attack ships, battering them to pieces within 1 hour if
+not prevented or distracted.
+Elf
+Hit Dice: 1+1
+Armor Class: 5 [14]
+Attacks: Sword (1d8) or 2 arrows (1d6)
+Saving Throw: 17
+Special: None
+Move: 12
+Alignment: Law (sometimes Neutrality)
+Challenge Level/XP: 1/15
+The example above is for a typical Elf; trained warriors would likely
+have the maximum 9 hit points. Obviously, Elves encountered in the
+course of a party’s adventuring will have a variety of powers and
+different attributes. The Referee will assign such powers as he sees
+fit, in accordance with the way he envisions elves. They might be the
+woodland dwellers of Tolkien’s The Hobbit, or the high Elves of the
+Lord of the Rings, or might be the faerie folk of Irish legend. In any case,
+the Referee should not bother trying to fit an idea of “advanced” Elves
+into the constraints of character classes—just assign their attributes to
+fit the concept. Non-player characters are not subject to the rules that
+govern building a player character; they are tools for good fantasy.
+Fish, Giant
+Hit Dice: varies (see below)
+Armor Class: 7 [12]
+Attacks: 1 bite (1d6 per 5 feet in length)
+Saving Throw: varies (see below)
+Special: None (or swallow whole: see below)
+Move: varies (roll 1d4+1 x10)
+Alignment: Neutrality (usually)
+Challenge Level/XP: varies
+Giant fish can range from something barely larger than a shark to
+something as large as a whale. In general, these creatures will be at least 11
+feet long, and will have 1HD per 2 feet of length. Thus, if rolling randomly
+for a giant fish, roll 1d10+10 feet to determine the length, and the hit dice
+will be half that number. If the roll is a “10,” (i.e., the fish would be 20 feet
+long) then it is a REALLY giant fish: roll 1d20 for additional feet in length.
+Thus, the maximum size for a giant fish is 40 feet, and for some unknown
+reason giant fish never seem to be exactly 20 feet in length; a matter for
+philosophers to puzzle upon. The truly giant fish can most likely swallow
+people whole on a natural roll of 18-20. Use the rules for creating monsters
+to determine the saving throws and experience point values of the varying
+sizes of giant fish. Giant fish might be intelligent (5% chance), in which
+case they might have an alignment other than Neutrality.
+Gargoyle
+Hit Dice: 4+4
+Armor Class: 5 [14]
+Attacks: 2 claws (1d3), 1 bite (1d4), 1 horn (1d6)
+Saving Throw: 13
+Special: None
+Move: 9/15 (flying)
+Alignment: Chaos
+Challenge Level/XP: 6/400
+Gargoyles are winged beings resembling the carven monstrosities that
+bedeck the walls of cathedrals and many subterranean dungeons. They
+are terribly vicious predators.
+Gelatinous Cube
+Hit Dice: 4
+Armor Class: 8 [11]
+Attacks: Attack (2d4)
+Saving Throw: 13
+Special: Paralysis, immune to lightning and cold
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 5/240
+Gelatinous cubes are semi-transparent cubes that slosh through
+subterranean passages, engulfing debris and carrion to digest. Their
+entire substance is acidic; if the cube hits successfully, the victim must
+make a saving throw or become paralyzed (6 turns) for the cube to
+devour. Most gelatinous cubes contain various metallic treasures or
+gems that they have engulfed but not yet digested.
+Ghoul
+Hit Dice: 2
+Armor Class: 6 [13]
+Attacks: 2 claws (1d3), 1 bite (1d4)
+Saving Throw: 16
+Special: Immunities, paralysis
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 3/60
+Ghouls are pack-hunting undead corpse eaters. They are immune, like
+most undead, to charms and sleep spells. The most dangerous feature of
+these horrid, cunning creatures is their paralyzing touch: any hit from a ghoul
+requires a saving throw or the victim becomes paralyzed for 3d6 turns.
+Giants
+Giants are a staple of fantasy gaming, huge and dangerous creatures
+that often have a taste for human flesh. Most are not particularly
+intelligent.
+Giant, Cloud
+Hit Dice: 12+1d6 points
+Armor Class: 2 [17]
+Attacks: Weapon (6d6)
+Saving Throw: 3
+Special: Hurl boulders
+Move: 15
+Alignment: Chaos (sometimes Neutrality)
+Challenge Level/XP: 13/2,300
+Cloud giants are cunning beasts, often living in cloud-castles in the
+sky (hence their name). They throw rocks for 6d6 hit points of damage.
+Cloud giants are famous for their ability to smell out food, enemies,
+and Englishmen.
+Giant, Fire
+Hit Dice: 11 +1d6 points
+Armor Class: 3 [16]
+Attacks: Weapon (5d6)
+Saving Throw: 4
+Special: Hurl boulders, immune to fire
+Move: 12
+Alignment: Chaos (sometimes Neutrality)
+Challenge Level/XP: 12/2,000
+Fire giants are usually found near volcanic mountains, in great castles
+of basalt or even iron. They throw boulders for 5d6 hit points.
+Giant, Frost
+Hit Dice: 10+1d6 hit points
+Armor Class: 4 [15]
+Attacks: Weapon (4d6)
+Saving Throw: 5
+Special: Hurl boulders, immune to cold
+Move: 12
+Alignment: Chaos (sometimes Neutrality)
+Challenge Level/XP: 11/1,700
+Frost giants dwell in cold regions, where they build (or conquer)
+castles in remote places of ice and snow. They throw boulders or great
+chunks of ice for 4d6 points of damage.
+Giant, Hill
+Hit Dice: 8+2
+Armor Class: 4 [15]
+Attacks: Weapon (2d8)
+Saving Throw: 8
+Special: Hurl boulders
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 9/1,100
+Hill giants are the least of the giant races; most are brutish cave-
+dwellers who dress in pelts and uncured hides. They throw rocks for
+2d8 points of damage.
+Giant, Stone
+Hit Dice: 9+3 hit points
+Armor Class: 0 [20]
+Attacks: Club (3d6)
+Saving Throw: 6
+Special: Hurl boulders
+Move: 12
+Alignment: Chaos (sometimes Neutrality)
+Challenge Level/XP: 10/1,400
+Stone giants dwell in caves, isolated in the mountain fastnesses. They
+throw rocks for 3d6 points of damage, and can be quite crafty in setting
+up ambushes in their native mountains. Travelers who wander into the
+territory of stone giants seldom return.
+Giant, Storm
+Hit Dice: 15+5
+Armor Class: 1 [18]
+Attacks: Weapon (7d6)
+Saving Throw: 3
+Special: Throw boulders, control weather
+Move: 15
+Alignment: Neutral (sometimes Law or Chaos)
+Challenge Level/XP: 16/ 3,200
+Storm giants are the largest of giants, the most intelligent, the most
+magical, and the most likely to talk with humans rather than simply
+devour them. Storm giants can live in underwater sea-castles as well
+as on the heights of mountains. They throw boulders for 7d6 points of
+damage, and have the power to control weather (as per the spell).
+Gnoll
+Hit Dice: 2
+Armor Class: 5 [14]
+Attacks: Bite (2d4) or weapon (1d10)
+Saving Throw: 16
+Special: None
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 2/30
+Gnolls are tall humanoids with hyena-like heads. They may be found
+both above ground and in subterranean caverns. They form into loosely
+organized clans, often ranging far from home in order to steal and kill
+with rapacious ferocity.
+Goblin
+Hit Dice: 1d6 hit points
+Armor Class: 7 [12]
+Attacks: Weapon (1d6)
+Saving Throw: 18
+Special: -1 to hit in sunlight
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: B/10
+Goblins are small creatures (4 ft tall or so) that inhabit dark woods,
+underground caverns, and (possibly) the otherworldly realms of the fey.
+They attack at -1 in the full sunlight.
+Golem, Clay
+Hit Dice: 12 (45 hp)
+Armor Class: 7 [12]
+Attacks: 1 fist (3d10)
+Saving Throw: 5
+Special: Immune to slashing and piercing weapons, immune to most
+spells.
+Move: 8
+Alignment: Neutrality
+Challenge Level/XP: 14/2,600
+The “original” golem of folklore, clay golems may be created by Cler-
+ics or powerful priests. They are massive clay statues of human beings,
+imbued with a rudimentary intelligence and the ability to move and fol-
+low their masters’ commands. For each round of combat, a clay golem
+has a 1% chance (cumulative) to go berserk, leaving its master’s control
+and attacking enemies and allies alike. Clay golems are not damaged by
+slashing or piercing weapons. They are immune to all spells other than
+those affecting earth, and these have very diminished effects – with one
+exception. An earthquake spell may be used to utterly destroy a clay
+golem.
+Golem, Flesh
+Hit Dice: 45 hit points
+Armor Class: 9 [10]
+Attacks: 2 fists (2d8)
+Saving Throw: 4
+Special: Hit only by magic weapons, slowed by fire and cold, immune
+to most spells, healed by lightning
+Move: 8
+Alignment: Neutrality
+Challenge Level/XP: 12/2,000
+A creation stitched together from human limbs and other parts, a
+flesh golem is similar to Frankenstein’s monster. Only +1 or better
+magic weapons can harm a flesh golem, and it is slowed by fire and
+cold spells. Lightning heals the golem for the number of points of
+damage that it would normally inflict. No other type of spell affects
+a flesh golem.
+Golem, Iron
+Hit Dice: 80 hit points
+Armor Class: 3 [16]
+Attacks: Weapon or fist (4d10)
+Saving Throw: 3
+Special: Poison gas, immune to all weapons +2 or less, slowed by
+lightning, healed by fire, immune to most spells
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 17/3,500
+Iron golems are huge moving statues of iron. They can breathe a 10-
+foot-radius cloud of poison gas as well as attacking with great power.
+Weapons of +2 or less do not affect iron golems. These hulking statues
+are slowed by lightning spells, but fire-based spells actually restore hit
+points to them. No other type of spell affects them.
+Golem, Stone
+Hit Dice: 60 hit points
+Armor Class: 5 [14]
+Attacks: Fist (3d8)
+Saving Throw: 3
+Special: Unaffected by +1 or lesser weapons, immune to most spells
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 16/3,200
+Stone golems are massive stone statues animated by very powerful
+magics (much more than just animate object, in other words). They are
+slowed by fire spells, damaged by rock-to-mud spells, and healed by
+the reverse. Spells that affect rock, and fire spells, are the only ones that
+affect stone golems. They can only be hit by +2 or better weapons.
+Gorgon
+Hit Dice: 8
+Armor Class: 2 [17]
+Attacks: Gore (2d6)
+Saving Throw: 8
+Special: Breath turns creatures to stone
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 10/1,400
+Gorgons are bull-like creatures with scales like dragons. Their breath
+turns creatures to stone (60-foot range, saving throw applies).
+
+Ooze, Grey
+Hit Dice: 3+3
+Armor Class: 7 [12]
+Attacks: Strike (2d6)
+Saving Throw: 14
+Special: Acid, immunities
+Move: 1
+Alignment: Neutrality
+Challenge Level/XP: 5/ 240
+Grey ooze is almost identical in appearance to wet rock, but it is a
+slimy, formless substance that devours prey and carrion with its acidic
+secretions, lashing out to strike enemies. Grey ooze is immune to spells,
+heat, and cold damage. Metal (but not stone or wood) must make a
+saving throw vs. acid when exposed to grey ooze (even if the contact
+is as brief as the strike of a sword) or be rotted through. When the
+grey ooze hits a character in metal armor, the armor must make an item
+saving throw. Only cutting and piercing damages a grey ooze—it is
+impervious to blunt or crushing attacks.
+
+Green Slime
+Hit Dice: 0
+Green slime isn’t technically a monster, just an extremely dangerous
+hazard in underground tombs and other such places. Any metal or
+organic substance it touches begins to turn to green slime (saving
+throw). It can be killed with fire or extreme cold, and the transformation
+process can be arrested by the use of a Cure Disease spell.
+
+Griffon
+Hit Dice: 7
+Armor Class: 3 [16]
+Attacks: 2 claws (1d4), 1 bite (2d8)
+Saving Throw: 9
+Special: None
+Move: 12/27 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 8/800
+Griffons have the body of a lion, with the head, fore-claws, and wings
+of an eagle. These creatures can be tamed and ridden as mounts. They
+usually nest in high mountain aeries, where they lay their eggs and hunt
+their prey. Because the fledglings can be tamed, young griffons and
+griffon eggs command a very high price in the marketplaces of the great
+cities, or to noble lords and wizards.
+Harpy
+Hit Dice: 3
+Armor Class: 7 [12]
+Attacks: 2 talons (1d3) and weapon (1d6)
+Saving Throw: 14
+Special: Siren-song
+Move: 6/18 (flying)
+Alignment: Chaos
+Challenge Level/XP: 4/120
+Harpies have the upper body of a human female and the lower
+body and wings of a vulture. Their song is a charm that draws its
+victims to the harpy (saving throw applies), and the harpy’s touch
+casts the equivalent of a charm person spell (again, saving throw
+applies).
+Hell Hound
+Hit Dice: 4–7
+Armor Class: 4 [15]
+Attacks: Bite (1d6)
+Saving Throw: 13, 12, 11, or 9
+Special: Breathe fire
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 4 HD (5/240), 5 HD (6/400), 6 HD (7/600), 7 HD (8/800)
+Hell hounds are fire-breathing dogs of the underworlds or lower
+planes. In addition to biting, they can breathe fire each round, inflicting
+2 hp damage per hit die (10 ft range, saving throw for half damage).
+Hippogriff
+Hit Dice: 3+3
+Armor Class: 5 [14]
+Attacks: 2 claws (1d6), 1 bite (1d10)
+Saving Throw: 14
+Special: None
+Move: 18/24 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 4/120
+The hippogriff is similar to a griffon, having the head, foreclaws, and
+wings of an eagle, but instead of the body of a lion, it has the body of a
+horse. The poem Orlando Furioso (written by the poet Dante in 1516)
+suggests that the hippogriff is the offspring of a griffon and a horse—
+but they are apparently an independent breed, for folkloric tradition
+holds that griffons frequently attack hippogriffs. Hippogriffs are not
+as hard to train as griffons—again, from Orlando Furioso: “Drawn by
+enchantment from his distant lair, The wizard thought but how to tame
+the foal; And, in a month, instructed him to bear Saddle and bit, and
+gallop to the goal; And execute on earth or in mid air, All shifts of
+manege, course and caracole…”
+Hobgoblin
+Hit Dice: 1+1
+Armor Class: 5 [14]
+Attacks: Weapon (1d8)
+Saving Throw: 17
+Special: None
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 1/15
+Hobgoblins are simply large goblins, possibly a separate breed living
+apart from their smaller cousins, or perhaps not, as the Referee decides.
+As a matter of the campaign’s flavoring, the Referee might choose
+to make hobgoblins the “fey” goblins of Irish legend, while regular
+goblins are the more Tolkien-style underground-dwellers.
+Horse
+Horses are AC 7 [12], with riding horses having 2 HD and warhorses
+having 3 HD. Horses have a movement speed of 18.
+Humans
+Humans are such a versatile race that any number of “monsters” and
+NPCs can be made from them. Berserker warriors, tribesmen, cavemen,
+princesses, evil high priests, captains of the guard, foot-soldiers, and
+tavern-keepers are all different human “monsters.” Don’t try to build
+your non-player characters according to the rules for player characters.
+Just make up their stats and abilities as you see fit.
+Human, Bandit
+Hit Dice: 1
+Armor Class: 7 [12]
+Attacks: Weapon (1d8)
+Saving Throw: 17
+Special: None
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 1/15
+Bandits are roving groups of thieves, sometimes organized into small
+armies led by more powerful bandit chiefs and captains with higher hit
+dice.
+Human, Berserker
+Hit Dice: 1
+Armor Class: 7 [12]
+Attacks: Weapon (1d8)
+Saving Throw: 17
+Special: Berserking
+Move: 12
+Alignment: Neutrality or Chaos
+Challenge Level/XP: 2/30
+Berserkers are normal humans, but they fight with astounding ferocity.
+A bonus of +2 is added to their attack rolls. They do not wear armor
+heavier than leather armor.
+Human, Normal
+Hit Dice: 1d6
+Armor Class: 9 [10]
+Attacks: Weapon (1d6)
+Saving Throw: 18
+Special: None
+Move: 12
+Alignment: Any
+Challenge Level/XP: 3/60
+Normal humans are untrained peasants or townsfolk.
+Human, Sergeant-at-Arms
+Hit Dice: 3
+Armor Class: 5 [14]
+Attacks: Weapon (1d8)
+Saving Throw: 17
+Special: None
+Move: 12
+Alignment: Any
+Challenge Level/XP: 1/15
+Human sergeants are normally found in command of 1d6+5 human
+soldiers. These are the leaders of city guard units and other small
+military groups.
+Human, Soldier
+Hit Dice: 1
+Armor Class: 7 [12]
+Attacks: Weapon (1d8)
+Saving Throw: 17
+Special: None
+Move: 12
+Alignment: Any
+Challenge Level/XP: 3/60
+Human soldiers serve as city guardsmen, mercenaries, and men-at-
+arms. They are generally armed with leather armor and a mace, sword,
+or spear.
+Hydra
+Hit Dice: 5-12 (equal to the number of heads)
+Armor Class: 5 [14]
+Attacks: 5-12 bites (1d6)
+Saving Throw: 12, 11, 9, 8, 6, 5, 4, or 3
+Special: None
+Move: 9
+Alignment: Neutrality
+Challenge Level/XP: 5 HD (7/600), 6 HD (8/800), 7 HD (9/1,100), 8 HD (10/1,400), 9 HD (11/1,700), 10 HD (12/2,000), 11 HD (13/2,300), 12 HD (14/2,600)
+Hydrae are great lizard-like or snake-like creatures with multiple
+heads. Each head has one hit die of its own, and when an individual
+head takes that much damage, that head dies. The body has as many
+hit dice as the total of the heads, so it is a matter of good strategy for
+adventurers to focus either on killing heads (when all the heads are dead
+the body dies) or killing the creature by attacking the body (in which
+case the heads die, too). Hydrae that breathe fire or regenerate their
+heads are also known to exist.
+Invisible Stalker
+Hit Dice: 8
+Armor Class: 3 [16]
+Attacks: “Bite” (4d4)
+Saving Throw: 8
+Special: Invisible, flies
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 9/1,100
+Invisible stalkers are generally found only as a result of the spell
+Invisible Stalker. They are invisible flying beings created to follow a
+single command made by the caster.
+Kobold
+Hit Dice: 1d4 hp
+Armor Class: 6 [13]
+Attacks: Weapon (1d6)
+Saving Throw: 18
+Special: None
+Move: 6
+Alignment: Chaos
+Challenge Level/XP: A/5
+Kobolds are subterranean, vaguely goblin-like humanoids. They have
+a -1 penalty when fighting above ground. Many use slings or short bows,
+and they fight with short swords or spiked clubs in melee combat.
+Leech, Giant
+Hit Dice: 2
+Armor Class: 8 [11]
+Attacks: 1 bite (d4CON)
+Saving Throw: 16
+Special: Suck blood
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 5/240
+If a giant leech hits with its attack, it drains a level of experience on
+the following round. Anyone reduced below a level of 0 will die. Lost
+levels of experience most likely return at a rate of 1 per day, if the
+character rests. Freshwater leeches might simply drain hit points.
+Lich
+Hit Dice: 12+
+Armor Class: 0 [20]
+Attacks: Hand (1d10 + automatic paralysis)
+Saving Throw: 3
+Special: Appearance causes paralytic fear, touch causes automatic
+paralysis, spells
+Move: 6
+Alignment: Chaos
+Challenge Level/XP: 12 HD (15/2,900), 13 HD (16/3,200), 14 HD (17/3,500), 15 HD (18,3800), 16 HD (19/4,100), 17 HD (20/4,400), 18 HD (21/4,700)
+Liches are the undead remnants of wizards, either made undead by
+their own deliberate acts during life, or as the result of other magical
+forces (possibly including their own magics gone awry). A liche has the
+same number of hit dice as the original Magic-User and the same spell-
+casting powers. A liche’s touch causes paralysis with no saving throw,
+and the very sight of one of these dread creatures causes any being of
+4 HD or below to be paralyzed with fear. Liches are highly intelligent
+and totally malign.
+Lion
+Hit Dice: 5+2
+Armor Class: 6 [13]
+Attacks: 2 claws (1d4), 1 bite (1d8)
+Saving Throw: 12
+Special: None
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 5/240
+Male lions are noticeably
+larger than their female
+counterparts, and
+easily identified
+by their manes.
+They are usually
+solitary beasts,
+found leading
+a pride only
+in their prime.
+The lioness,
+while smaller
+and having an
+AC of 7 [12], is
+an indisputably
+skillful hunter—
+far faster and
+more agile than
+the male lion.
+Lionesses often
+coordinate with
+others in their
+pride to bring down prey.
+Lizardman
+Hit Dice: 2+1
+Armor Class: 5 [14]
+Attacks: 2 claws (1d3), 1 bite (1d8)
+Saving Throw: 16
+Special: Underwater
+Move: 6/12 (swimming)
+Alignment: Usually Chaos
+Challenge Level/XP: 2/30
+Lizardmen are reptilian humanoids, both male and female, usually
+living in tribal villages in the depths of fetid swamps. Some can hold
+their breath for long durations (an hour or more), while other can
+actually breathe underwater.
+Lurker, Ceiling
+Hit Dice: 10
+Armor Class: 6 [13]
+Attacks: 1 crush (1d6)
+Saving Throw: 5
+Special: Smother
+Move: 1/7 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 10/1400
+Lurkers resemble floating manta rays, with a rough, stone-like under-
+surface. They levitate to ceiling-tops and wait for prey to walk under-
+neath, whereupon they drop and enfold the victim in their thick “wings”
+(to-hit roll). Anyone trapped inside a lurker’s clutches takes 1d6 points
+of damage per round from crushing, and will suffocate within 1d4+1
+rounds unless the lurker is killed. There is normally only a 10% chance
+to detect a lurker’s presence visually before it attacks, and it has a 65%
+chance to gain initiative automatically (unless a “surprise roll” system
+is being used, in which case the lurker has a 4 in 6 chance to gain sur-
+prise).
+Lycanthropes
+Lycanthropes are were-creatures, particularly those in whom the
+disease permits assumption of a hybrid form of the human and animal.
+They cannot be hit by normal weapons: only silver and magical weapons
+affect them. If anyone is attacked and brought below 50% hit points by
+a lycanthrope, the person will become a lycanthrope himself.
+Lycanthrope, Werebear
+Hit Dice: 7+3
+Armor Class: 2 [17]
+Attacks: 2 claws (1d3), 1 bite (2d4)
+Saving Throw: 9
+Special: Lycanthropy, hit only by magic or silver weapons
+Move: 9
+Alignment: Neutrality or Chaos
+Challenge Level/XP: 8/800
+Werebears are often found in temperate forests.
+Lycanthrope, Wereboar
+Hit Dice: 5+2
+Armor Class: 4 [15]
+Attacks: Bite (2d6)
+Saving Throw: 12
+Special: Lycanthropy, hit only by magic or silver weapons
+Move: 12
+Alignment: Neutrality or Chaos
+Challenge Level/XP: 6/400
+Wereboars are often found in the remote wilderness.
+Lycanthrope, Wererat
+Hit Dice: 3
+Armor Class: 6 [13]
+Attacks: Bite (1d3), Weapon (1d6)
+Saving Throw: 14
+Special: Control rats, lycanthropy, hit only by magic or silver weapons
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 4/120
+Wererats are often found in cities, lurking in shadowy alleyways.
+Wererats can control rats, and are extremely stealthy, surprising
+opponents on 1–4 on a d6.
+Lycanthrope, Weretiger
+Hit Dice: 6
+Armor Class: 3 [16]
+Attacks: 2 claws (1d4), 1 bite (1d10)
+Saving Throw: 11
+Special: Lycanthropy, hit only by magic or silver weapons
+Move: 12
+Alignment: Neutrality or Chaos
+Challenge Level/XP: 7/600
+Weretigers are often found in tropical cities and ancient jungle ruins,
+but will appear in more temperate climates as well, if tigers live in the
+surrounding wilderness.
+Lycanthrope, Werewolf
+Hit Dice: 4+4
+Armor Class: 5 [14]
+Attacks: Bite (2d4)
+Saving Throw: 13
+Special: Lycanthropy, hit only by magic or silver weapons
+Move: 12
+Alignment: Usually Chaos
+Challenge Level/XP: 5/240
+Werewolves are the traditional Lycanthropes seen in horror movies.
+They can turn into a wolf or into a wolf-man. Wolvesbane keeps them
+at bay.
+Manticore
+Hit Dice: 6+4
+Armor Class: 4 [15]
+Attacks: 2 claws (1d3), 1 bite (1d8), 6 tail spikes (1d6)
+Saving Throw: 11
+Special: Tail spikes
+Move: 12/18 (flying)
+Alignment: Chaos
+Challenge Level/XP: 8/800
+This horrid monster has bat wings, the face of a feral human, the body
+of a lion, and a tail tipped with 24 iron spikes. The manticore can hurl
+up to 6 of the iron spikes from its tail per round, at a maximum range
+of 180 ft.
+Medusa
+Hit Dice: 6
+Armor Class: 5 [14]
+Attacks: Weapon (1d4)
+Saving Throw: 11
+Special: Gaze turns to stone
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 8/800
+The terrifying medusa has a female face but hair of writhing snakes;
+it has no legs, but the body of a serpent. The gaze of a medusa turns
+anyone looking upon it into stone. In addition to the medusa’s relatively
+weak melee-weapon attack, the snake-hair makes one attack per round,
+causing no damage but inflicting a lethal poison with a successful hit
+(saving throw applies).
+Merman
+Hit Dice: 1+3
+Armor Class: 7 [12]
+Attacks: Weapon (1d6)
+Saving Throw: 17
+Special: Breathe water
+Move: 1/18 (swimming)
+Alignment: Any
+Challenge Level/XP: 1/15
+Mermen have the torso of a human and the lower body of a fish.
+Although the race is called “mermen,” there are female members as
+well.
+Minotaur
+Hit Dice: 6+4
+Armor Class: 6 [13]
+Attacks: Head butt (2d4), bite (1d3) and weapon (1d8)
+Saving Throw: 11
+Special: Never get lost in labyrinths
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 6/400
+The minotaur is a man-eating predator, with the head of a bull and
+the body of a massive human, covered in shaggy hair. Most are not
+particularly intelligent.
+Mummy
+Hit Dice: 6+4
+Armor Class: 3 [16]
+Attacks: Fist (1d12)
+Saving Throw: 11
+Special: Rot, hit only by magic weapons
+Move: 6
+Alignment: Chaos
+Challenge Level/XP: 7/600
+Mummies cannot be hit by normal weapons, and even magical
+weapons cause only half damage. In addition to normal damage, their
+touch also inflicts a rotting disease which prevents magical healing and
+causes wounds to heal at one-tenth of the normal rate. A Cure Disease
+spell can increase healing rate to one-half normal, but a Remove Curse
+spell is required to completely lift the mummy’s curse.
+Naga, Guardian
+Hit Dice: 11
+Armor Class: 3 [16]
+Attacks: Bite (1d6 + poison)
+Saving Throw: 4
+Special: Spit poison, constriction, spells.
+Move: 18
+Alignment: Law
+Challenge Level/XP: 13/2300
+The largest and noblest of the naga, guardian nagas are from 20 to 25 feet
+in length. They do not necessarily have a humanlike head, but some char-
+acteristic (a flowing mane of hair, for instance) will immediately set their
+appearance apart from normal serpents. They can bite or spit with lethal
+poison, and if they hit with their coils they automatically cause 1d8 points
+of constriction damage per round thereafter. Guardian nagas cast clerical
+spells (2/2/1/1). A sample selection of spells for a guardian naga might in-
+clude: level 1: Cure Light Wounds x2; level 2: Hold Person, Silence 15-foot
+Radius; level 3: Cure Disease; level 4: Cure Serious Wounds.
+Naga, Spirit
+Hit Dice: 9
+Armor Class: 4 [15]
+Attacks: Bite (1d3 + poison)
+Saving Throw: 6
+Special: Poison, charm gaze, spells.
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 13/2300
+Spirit nagas are malicious, evil creatures. Their gaze has the effect of
+a Charm Person spell, their bite is poison, and they cast both Magic-
+User spells (4/2/1) and Cleric spells (2/1). A sample spell selection for
+a spirit naga might be: Magic-User spells level 1: Charm Person x2,
+Magic Missile, Sleep; level 2: Mirror Image, Web; level 3: Protection
+from Normal Missiles. Cleric spells level 1: Cure Light Wounds x2;
+level 2: Silence 15-foot Radius. Such nagas are from 10 to 20 feet in
+length, and have a human head.
+ 
+Naga, Water
+Hit Dice: 7
+Armor Class: 5 [14]
+Attacks: Bite (1d4 + poison)
+Saving Throw: 9
+Special: Poison, spells.
+Move: 12/20 (swimming)
+Alignment: Any
+Challenge Level/XP: 10/1400
+Water nagas might be of any alignment. They do not ordinarily have
+human heads, but like the guardian nagas they will have some physi-
+cal attributes separating them clearly from normal serpents. In the case
+of water nagas, this might be the color of the scales or the presence of
+flowing beard-like fins, perhaps. Water nagas are from 10 to 15 feet
+long. Water nagas cast Magic-User spells (4/2/1). A sample spell se-
+lection for a water naga might be: level 1: Charm Person x2, Magic
+Missile, Sleep; level 2: Mirror Image, Web; level 3: Protection from
+Normal Missiles. 
+Nixie
+Hit Dice: 1d4 hit points
+Armor Class: 7 [12]
+Attacks: Weapon (1d6)
+Saving Throw: 18
+Special: Charm
+Move: 6/12 (swimming)
+Alignment: Neutrality
+Challenge Level/XP: B/10
+Nixies are weak water fey creatures.  One in ten of them has the power to cast
+a powerful Charm Person (-2 penalty to saving throw) that causes the victim to
+walk into the water and join the nixies as their slave for a year. Casting
+Dispel Magic against the curse has only a 75% chance of success, and once the
+victim is actually in the water the chance drops to 25%. Nixies are ordinarily
+friendly , but they are capricious.
+Ochre Jelly
+Hit Dice: 6
+Armor Class: 8 [11]
+Attacks: Acid-laden strike (3d4)
+Saving Throw: 11
+Special: Lightning divides creature
+Move: 3
+Alignment: Neutrality
+Challenge Level/XP: 6/400
+Ochre jellies are amorphous oozes that damage opponents with their
+acidic surface. They dissolve any adventurers they kill, making a Raise
+Dead spell impossible.
+Octopus, Giant
+Hit Dice: 4
+Armor Class: 7 [12]
+Attacks: 8
+Saving Throw: 13
+Special: Jet, Ink
+Move: 9 (swimming)
+Alignment: Neutrality
+Challenge Level/XP: 6/400
+After a giant octopus hits with a tentacle, it does 1d6 points of damage
+per round, automatically, instead of the initial 1d3. Also, there is a 25%
+chance that the tentacle “hit” pinions one of the victim’s limbs (roll
+randomly for left/right arms and legs to see which is immobilized). A
+giant octopus can jet water out to achieve a movement rate of up to 27,
+and can also release a huge cloud of ink to obscure its location. Some
+giant octopi might be able to move onto land for short periods of time.
+Ogre
+Hit Dice: 4+1
+Armor Class: 5 [14]
+Attacks: Weapon (1d10+1)
+Saving Throw: 13
+Special: None
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 4/120
+Ogres are normally quite stupid, but more intelligent versions might
+be encountered here and there.
+Ogre Mage
+Hit Dice: 5+4
+Armor Class: 4 [15]
+Attacks: Weapon (1d12)
+Saving Throw: 12
+Special: Magic use (See below)
+Move: 12/18 (flying)
+Alignment: Chaos
+Challenge Level/XP: 7/600
+The ogre mage is an ogre with magic powers, based on Japanese
+legend. An ogre mage can fly, turn invisible (per the spell), create a 10-
+foot-radius circle of magical darkness, change into human form, cast
+Sleep and Charm Person once per day, and cast a Cone of Frost with a
+range of 60 feet to a base of 30 feet, causing 8d6 damage to any caught
+within (saving throw applies). Western folklore also contains many
+examples of shape-shifting, magical ogres (the most famous example
+being the one in Puss-in-Boots), so there might be many different
+interpretations of magical ogres whether or not they are called “ogre
+mage.”
+Orc
+Hit Dice: 1
+Armor Class: 6 [14]
+Attacks: Weapon, usually spear (1d6) or scimitar (1d8)
+Saving Throw: 17
+Special: None
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 1/15
+Orcs are stupid, brutish humanoids that gather in tribes of hundreds.
+Most are subterranean dwellers, and fight with a penalty of -1 in
+sunlight. Occasionally, war-bands or even entire tribes of orcs issue
+forth from their caverns to raid and pillage by night. Orcish leaders are
+great brutes with additional hit dice, and magic-using shamans may
+also be found in the larger tribes. Orcish tribes hate each other, and will
+fight savagely unless restrained by a powerful and feared commander,
+such as a Chaotic high priest or an evil sorcerer.
+Owlbear
+Hit Dice: 5+1
+Armor Class: 5 [14]
+Attacks: 2 claws (1d6), 1 bite (2d6)
+Saving Throw: 12
+Special: Hug for additional 2d8 if to-hit roll is 18+
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 5/240
+Owlbears have the body of a bear but the beak of an owl, with some
+feathers on the head and places on the body as well. On an attack roll of
+18+ (natural roll) with its claws, the owlbear grabs its victim and hugs
+it for an additional 2d8 points of damage.
+Pegasus
+Hit Dice: 4
+Armor Class: 6 [13]
+Attacks: 2 hooves (1d8)
+Saving Throw: 13
+Special: None
+Move: 24/48 (flying)
+Alignment: Law
+Challenge Level/XP: 4/120
+Pegasi are winged horses. Most have feathered wings, but some might
+have bat wings and some might be evil—at the Referee’s discretion.
+Piercer
+Hit Dice: 1 to 4
+Armor Class: 3 [16]
+Attacks: 1 drop/pierce (1d6 per HD)
+Saving Throw: 17, 16, 14, or 13
+Special: Drop from ceiling
+Move: 1
+Alignment: Neutrality
+Challenge Level/XP: 1 HD (1/15), 2 HD (2/30), 3 HD (3/60), 4 HD (4/120)
+Piercers resemble stalactites, and drop from cavern ceilings to pierce
+their victims. After falling (and feeding), they crawl slowly back to the
+ceiling in order to attack again. Note that the damage inflicted by a
+piercer is 1d6 per hit die of the creature.
+Purple Worm
+Hit Dice: 15
+Armor Class: 6 [13]
+Attacks: Bite (2d12), sting (1d8)
+Saving Throw: 3
+Special: Poison sting, swallows whole
+Move: 9
+Alignment: Neutrality
+Challenge Level/XP: 17/3,500
+Purple worms are massive annelids that grow 40 ft and more in length,
+and sometimes exceed ten feet in width. They are subterranean, chew-
+ing tunnels in rock (or through sand, in deserts, where they are a tan
+color). These beasts swallow their prey whole on a roll 4 higher than the
+needed number, or if the worm rolls double the number required to hit.
+They can swallow anything the size of a horse or smaller. In addition to
+the worm’s dreaded bite, it has a poison stinger on its tail, the length of
+a sword and just as deadly even from the piercing wound it inflicts. In
+addition, the poison injected by the stinger is lethal if the victim fails a
+saving throw. What prey the purple worms once hunted with such natu-
+ral weaponry (or perhaps still do, in deep places), must have been ter-
+rifying indeed. Aquatic versions of the purple worm might also exist.
+Rakshasa
+Hit Dice: 7
+Armor Class: -4 [23]
+Attacks: 2 claws (1d3) 1 bite (1d6)
+Saving Throw: 9
+Special: Illusory appearance, special magic resistance, spells
+Move: 15
+Alignment: Chaos
+Challenge Level/XP: 12/2,000
+Rakshasas are evil spirits from Indian mythology. Their true form is
+that of a demon with the head of a tiger or other predatory animal, but
+by magical illusion they always appear to others in a friendly or non-
+threatening form. Rakshasas can only be affected by the most powerful
+of spells (level 8 or 9), and they can only be hit with magical weapons.
+Crossbow bolts that have been blessed by a Cleric are the bane of the
+rakshasa – such bolts are treated as +3 weapons against them.  Raksha-
+sas are minor spell casters, able to cast Magic-User spells (3/2/1) and
+Cleric spells (1 Level-1 spell). Typical spells for a rakshasa might be:
+Magic-User level 1: Magic Missile x3; level 2: Mirror Image, Web;
+level 3: Fly
+Cleric level 1: Cure Light Wounds
+Rat, Giant
+Hit Dice: 1d4 hit points
+Armor Class: 7 [12]
+Attacks: Bite (1d3)
+Saving Throw: 18
+Special: 5% are diseased
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: A/5
+Giant rats are often found in dungeons, and are about the size of a cat,
+or perhaps a lynx. The bite of some (1 in 20) giant rats causes disease.
+A saving throw is allowed (versus poison). The effects of the disease
+are decided by the Referee.
+Rat, Giant
+Hit Dice: 3
+Armor Class: 6 [13]
+Attacks: 2 claws (1d3), 1 bite (1d6)
+Saving Throw: 14
+Special: 5% are diseased
+Move: 12
+Alignment: Neutrality unless intelligent (Chaos)
+Challenge Level/XP: 4/240
+Giant rats (monstrously huge) are often found in dungeons, and are
+vicious predators the size of a wolf. The bite of some (1 in 20) giant rats
+causes disease. A saving throw is allowed (versus poison). The effects
+of the disease are decided by the Referee.
+Roc
+Hit Dice: 12
+Armor Class: 4 [15]
+Attacks: Bite (3d12), 2 claws (3d6)
+Saving Throw: 3
+Special: None
+Move: 3/30 flying)
+Alignment: Neutrality or Law
+Challenge Level/XP: 12/2,000
+Rocs are the mythological great birds of legend, large enough to prey
+upon elephants. They can be trained as fledglings to serve as steeds,
+so roc eggs or fledglings would be a prize indeed, worth great sums
+of gold. Rocs might grow as large as 18 HD, with commensurately
+increased statistics.
+Salamander
+Hit Dice: 7
+Armor Class: 5 [14] (torso); 3 [16] (serpent body)
+Attacks: Touch and constrict (2d8 + 1d6 heat), 1 weapon (1d6)
+Saving Throw: 9
+Special: Heat, constrict
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 8/800
+Salamanders are intelligent creatures of the elemental planes of fire. They
+have the upper body of a human and the lower body of a snake, and give
+off tremendous, intense heat. The very touch of a salamander deals 1d6
+hit points of fire damage, and they wrap their tails around foes to cause an
+additional 2d8 points of crushing damage per round as the victim writhes
+in the deadly heat of the serpentine coils. The salamander’s human torso is
+AC 5 [14], and the armored serpent-tail is AC 3 [16]. Salamanders cannot
+be enslaved in the same manner djinn and efreet might be.
+Sea Monster
+Hit Dice: 30
+Armor Class: 2 [17]
+Attacks: Bite (4d10)
+Saving Throw: 3
+Special: Swallow whole
+Move: 0/18 (swimming)
+Alignment: Neutrality
+Challenge Level/XP: 30/8,400
+Sea monsters generally resemble bizarre fish, long-necked monsters
+with seal-like bodies, or massive eels, although virtually all have a hide
+of incredibly tough scales. In general, their appearance is quite varied,
+for there does not appear to be a particular “species” of sea monster. Sea
+monsters swallow their prey whole, like sea serpents: if the attack roll is
+4 over the required number (or a natural 20), the victim is swallowed,
+will die in an hour, and will be fully digested within a day. Sea monsters
+are not generally venomous. They are generally encountered underwater;
+unlike sea serpents, they seldom venture to the surface.
+Sea Serpent
+Hit Dice: 15
+Armor Class: 6 [13]
+Attacks: Bite (2d12)
+Saving Throw: 3
+Special: Swallow whole
+Move: 0/20 (swimming)
+Alignment: Neutrality
+Challenge Level/XP: 17/3,500
+A fully-grown sea serpent is approximately 50 feet in length, and will
+swallow a person whole on any attack roll in which the die rolled is
+4 or more over the required number, and always if the die roll is a
+20. Swallowed victims will be dead within an hour, and fully digested
+within one day. Some sea serpents are also venomous, in which case the
+CL/XP is 19/4,100.
+Shadow
+Hit Dice: 3+3
+Armor Class: 7 [12]
+Attacks: 1 touch (1d4 + Str drain)
+Saving Throw: 14
+Special: Drains 1 Str with hit, can only be hit by magical weapons
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 4/120
+Shadowsmayormaynotbeundeadcreatures:theyareimmunetoSleepand
+Charm,buttheRefereemaydecidewhethertheyareundeadcreaturessubject
+to turning or whether they are some horrible “other” thing: a manifestation,
+perhaps, or a creature from another dimension (or gaps in the dimensions).
+Shadows are dark and resemble actual shadows, though they may be even
+darker in coloration. They are not corporeal, and can only be harmed with
+magical weapons or by spells. Their chill touch drains one point of Strength
+with a successful hit, and if a victim is brought to a Strength attribute of 0, he
+or she is transformed into a new shadow. If the person does not come to such
+a dark ending, then Strength points return after 90 minutes (9 turns).
+Shambling Mound
+Hit Dice: 7 to 12
+Armor Class: 1 [18]
+Attacks: 2 fists (2d8)
+Saving Throw: 9, 8, 6, 5, 4, or 3
+Special: Immunities, enfold and suffocate victims.
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: HD 7 (10/1400); HD 8 (11/1700); HD 9 (12/2000); HD 10 (13/2300); HD 11 (14/2600); HD 12 (15/2900)
+Shambling mounds are moving plants, huge masses of slimy vegeta-
+tion that shamble through swamps and marshes looking for prey. They
+have a roughly bipedal shape, with two ‘legs’ and two ‘arms.’
+Shambling mounds are immune to fire because of their slimy, wet bod-
+ies. They take only half damage from cold, and half damage from weap-
+ons of any kind. Electricity causes a shambling mound to gain one hit die.
+If a shambling mound hits with both arms, the victim is enfolded into the
+slimy body and will suffocate in 2d4 melee rounds unless freed.
+Shrieker
+Hit Dice: 3
+Armor Class: 7 [12]
+Attacks: None
+Saving Throw: 14
+Special: Shriek
+Move: 1
+Alignment: Neutrality
+Challenge Level/XP: 3/60
+Shriekers are huge mushrooms with tough, fibrous bodies. They do not
+physically attack, but if light shines on them (or within about 30 feet) or if
+anything moves near them (within about 10 feet), they emit a high-pitched
+shriekingnoise.Thisnoisecauses1hpdamageperround(savingthrowapplies)
+to anyone nearby (within 30 feet).The true danger of shriekers is that they tend
+to summon wandering monsters. If they are attacked with missile weapons,
+they will attempt to shuffle away, although they do not move very fast.
+Skeleton
+Hit Dice: 1
+Armor Class: 8 [11], with shield 7 [12]
+Attacks: Weapon or strike (1d6)
+Saving Throw: 17
+Special: None
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 1/15
+Skeletons are animated bones of the dead, usually under the control
+of some evil master.
+Slithering Tracker
+Hit Dice: 4
+Armor Class: 5 [14]
+Attacks: No normal attack
+Saving Throw: 13
+Special: Transparent, paralysis
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 6/400
+Perhaps the most dangerous of wandering monsters, slithering
+trackers are a form of transparent slug and may be related to gelati-
+nous cubes. They are difficult to see (10% chance for a person to
+spot it, and he may lose sight of it again in the next round). Unless
+they are starving, they do not attack moving prey (5% chance to be
+starving). Instead, they follow the potential prey until it sleeps or
+camps. They can ooze under doors and through fairly small cracks,
+so even a barricaded room with a closed door is probably not safe.
+When it attacks, the victim must make a saving throw or be para-
+lyzed by the slitherer’s secretions. A paralyzed victim will be sucked
+dry of all body fluids in 5 turns (50 minutes), losing 20% of hit
+points each 10 minutes.
+Slug, Giant
+Hit Dice: 12
+Armor Class: 8 [11]
+Attacks: Bite (1d12) or acid
+Saving Throw: 3
+Special: Spit acid (6d6)
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 13/2,300
+These tremendously large masses of slimy, rubbery flesh are completely
+immune to blunt weapons. In addition to their powerful bite, giant slugs
+can spit their acidic saliva at one target at a time. The base range for
+spitting is 60 feet, and within this range the slug’s spittle will be 50%
+likely to hit (no other to-hit roll required). For every additional 10 feet
+of range, the chance to hit decreases by 10%. On its first spitting attack,
+the slug only has a 10% chance to hit within 60 feet, and no chance of
+hitting beyond that range. Some giant slugs might have more or less
+virulent acidity, thus changing the damage inflicted.
+Spectre
+Hit Dice: 7
+Armor Class: 2 [17]
+Attacks: Spectral weapon or touch (1d8 + level drain)
+Saving Throw: 9
+Special: Level drain (2 levels) with hit
+Move: 15/30 (flying)
+Alignment: Chaos
+Challenge Level/XP: 9/1,100
+Spectres are wraith-like undead creatures without corporeal bodies.
+When a specter hits an opponent, with either hand or weapon, the touch
+drains two levels from the victim. Only magical weapons can damage
+a specter. In some cases, these terrifying creatures may be mounted
+upon living beasts, if the beasts have been trained to tolerate proximity
+to the undead. Any being killed (or drained below level 0) by a specter
+becomes a specter as well, a pitiful thrall to its creator.
+Spider, Giant (1HD)
+Hit Dice: 1+1
+Armor Class: 8 [11]
+Attacks: Bite (1 hp) + poison
+Saving Throw: 17
+Special: Poison (+2 save or die)
+Move: 9
+Alignment: Neutrality
+Challenge Level/XP: 3/60
+1ft diameter. Giant spiders are aggressive hunters.
+Spider, Giant (2HD)
+Hit Dice: 2+2
+Armor Class: 6 [13]
+Attacks: Bite (1d6) + poison
+Saving Throw: 16
+Special: Poison (+1 save or die), surprise
+Move: 18
+Alignment: Neutrality unless intelligent (Chaos)
+Challenge Level/XP: 5/240
+4ft diameter. Giant spiders are aggressive hunters. Man-sized giant spiders surprise
+on a roll of 1–5 on a d6, being able to hide well in shadows.
+Spider, Giant (4HD)
+Hit Dice: 4+2
+Armor Class: 4 [15]
+Attacks: Bite (1d6+2) + poison
+Saving Throw: 13
+Special: Poison (save or die), webs
+Move: 4
+Alignment: Chaos
+Challenge Level/XP: 7/600
+6ft diameter. Giant spiders are aggressive hunters. Greater giant spiders
+are web builders. Webs spun by giant spiders require a saving throw to
+avoid becoming stuck. Those who make a saving throw can fight in and
+move (5 ft per round) through the webs.
+Spider, Giant Phase
+Hit Dice: 2+2
+Armor Class: 3 [16]
+Attacks: Bite (1d6) + poison
+Saving Throw: 16
+Special: Poison (+1 save or die), phase shifting
+Move: 18
+Alignment: Neutrality
+Challenge Level/XP: 6/400
+4ft diameter. Giant spiders are aggressive hunters. Phase spiders can shift out of
+phase with their surroundings (so they can be attacked only be ethereal
+creatures), only to come back into phase later for an attack.
+Squid, Giant
+Hit Dice: 6
+Armor Class: 3 [16] (body shell), 7 [12] tentacles and front
+Attacks: 10 (1d3)
+Saving Throw: 11
+Special: Jet, Ink, Constrict
+Move: 9 (swimming)
+Alignment: Neutrality
+Challenge Level/XP: 9/1100
+After a giant squid hits with a tentacle, it does 1d6 points of damage
+per round, automatically, instead of the initial 1d3. Also, there is
+a 25% chance that the tentacle “hit” pinions one of the victim’s
+limbs (roll randomly for left/right arms and legs to see which is
+immobilized). A giant squid can jet water out to achieve a movement
+rate of up to 27, and can also release a huge cloud of ink to obscure
+its location. If a giant squid wraps its tentacles around a ship, the
+ship will be crushed in 10 rounds, taking damage throughout that
+time.
+Stirge
+Hit Dice: 1+1
+Armor Class: 7 [12]
+Attacks: “Sting” (1d3 + blood drain)
+Saving Throw: 17
+Special: Drain blood 1d4/round
+Move: 3/18 (when flying)
+Alignment: Neutrality
+Challenge Level/XP: 1/15
+Resembling small, feathered, winged anteaters, stirges have a
+proboscis which they jab into their prey to drain blood. After a stirge’s
+first hit, it drains blood automatically at a rate of 1d4 hp per round.
+Tick, Giant
+Hit Dice: 3
+Armor Class: 4 [15]
+Attacks: Bite (1d4)
+Saving Throw: 14
+Special: Drains blood
+Move: 3
+Alignment: Neutrality
+Challenge Level/XP: 3/60
+Giant ticks drain blood at a rate of 4 hit points per round after a
+successful hit. Their bite causes disease, which will kill the victim in
+2d4 days. (Cure Disease spells will remove the infection.) A giant tick
+can be forced off a victim by fire or by simply killing it.
+Titan
+Hit Dice: 16 HD+1d6 HD
+Armor Class: 2 [17] to –3 [22]
+Attacks: Weapon (2d8)
+Saving Throw: 3
+Special: Spells
+Move: 21
+Alignment: Any
+Challenge Level/XP: 17 HD (19/4,100), 18+ HD (Add 1 challenge level and 300 XP per additional HD over 17)
+Titans are mythological creatures, almost as powerful as gods. A
+titan has 2 Magic-User spells of each spell level from 1st-level spells
+to 7th-level spells, and 2 Cleric spells of each spell level from 1st to
+7th. The Referee might choose to substitute other magical abilities for
+spells—these creatures vary considerably in powers and personalities
+from one to the next.
+One possible spell list for a titan might include the following Magic-
+User and Cleric spells:
+Magic-User: Charm Person (1), Sleep (1), Invisibility (2), Mirror
+Image (2), Fireball (3), Fly (3), Polymorph Other (4), Confusion
+(4), Conjure Elemental (5), Feeblemind (5), Anti-magic Shell (6),
+Stone to Flesh (6), Limited Wish (7), Power Word Stun (7).
+Cleric: Light (1), Protection From Evil (1), Hold Person (2),
+Speak with Animals (2), Cure Disease (3), Dispel Magic (3), Cure
+Serious Wounds (4), Neutralize Poison (4), Finger of Death (5),
+Quest (5), Blade Barrier (6), Word of Recall (6), Earthquake (7),
+Resurrection (Raise Dead Fully) (7).
+Trapper Beast
+Hit Dice: 10 to 12
+Armor Class: 3 [16]
+Attacks: 1 enfold
+Saving Throw: 5, 4, or 3
+Special: Immunities; enfold and smother
+Move: 1
+Alignment: Neutrality
+Challenge Level/XP: 10 HD (11/1,700), 11 HD (12/2,000), 12 HD (13/2,300)
+Trapper-beasts are large manta-like creatures resembling the stone
+floors of the subterranean areas where they live. When prey steps onto
+the trapper’s body, it whips up its wings to enfold and smother its vic-
+tims (to a maximum of four). Death occurs in 7 melee rounds. Cold
+does not damage them, and fire inflicts only half damage.
+Treant
+Hit Dice: 6 HD + 1d6 HD
+Armor Class: 2 [17]
+Attacks: 2 strikes (2d6, 3d6, or 4d6)
+Saving Throw: 9, 8, 6, 5, 4, or 3
+Special: Control trees
+Move: 12
+Alignment: Neutrality
+Challenge Level/XP: 7 HD (7/600), 8 HD (8/800), 9 HD (9/1,100), 10 HD (10/1,400), 11 HD (11/1,700) 12 HD (12/2,000)
+Treants are tree-like protectors and “shepherds” of forest trees.
+Depending upon their size, they have different hit dice and do different
+amounts of damage: treants of 7 to 8 hit dice inflict 2d6 points of
+damage with each strike of their branch-like hands, treants of 9–10 hit
+dice inflict 3d6 points, and treants of 11–12 hit dice inflict 4d6 points.
+All treants can “wake” trees within 60 ft, allowing them to walk at a
+rate of 3, and possibly to attack. (No more than two trees at a time can
+be awake at the behest of a single treant.)
+Troll
+Hit Dice: 6+3
+Armor Class: 4 [15]
+Attacks: 2 claws (1d4), 1 bite (1d8)
+Saving Throw: 11
+Special: Regenerates
+Move: 12
+Alignment: Chaos
+Challenge Level/XP: 8/800
+Trolls are as tall as ogres, and just as strong. Unlike ogres, however,
+they attack with claws and teeth instead of weapons. Trolls regenerate,
+which is to say that any damage inflicted upon them heals within
+minutes (3 hit points per round). The only way to utterly kill a troll is
+to submerse it in acid or burn it. Trolls can even re-grow lopped-off
+heads and limbs.
+Unicorn
+Hit Dice: 4+5
+Armor Class: 2 [17]
+Attacks: 2 hoofs (1d8), 1 horn (1d8)
+Saving Throw: 13
+Special: Magic resistance (25%), double damage for charge, teleport
+Move: 24
+Alignment: Law
+Challenge Level/XP: 5/240
+Unicorns are generally shy and benevolent creatures, who will allow
+only a chaste maiden to approach them. They can teleport once per
+day to a distance of 360 ft, with a rider. The unicorn’s horn has healing
+properties, according to legend. (The details of this, if any, are left to the
+Referee). There is considerable room to create variant sorts of unicorns:
+evil ones, flying ones, etc.
+Vampire
+Hit Dice: 7–9
+Armor Class: 2 [17]
+Attacks: Bite (1d10 + level drain)
+Saving Throw: 9, 8, or 6
+Special: See below
+Move: 12/18 (flying)
+Alignment: Chaos
+Challenge Level/XP: 7 HD (9/1,100), 8 HD (10/1,400), 9 HD (11/1,700)
+Vampires are some of the most powerful of undead creatures. They
+can only be hit with magic weapons, and when “killed” in this way they
+turn into a gaseous form, returning to their coffins.
+They regenerate at a rate of 3 hit points per round, can turn into a
+gaseous form or into a giant bat at will, and can summon a horde of
+bats or 3d6 wolves out from the night. Looking into a vampire’s eyes
+necessitates a saving throw at -2, or the character is charmed (per the
+Charm Person spell). Most terrifyingly, a vampire’s bite drains two
+levels from the victim.
+Fortunately, vampires have some weaknesses. They can be killed
+(though these are the only known methods) by immersing them in
+running water, exposing them to sunlight, or driving a wooden stake
+through the heart. They retreat from the smell of garlic, the sight of
+a mirror, or the sight of “good” holy symbols. Any human killed by a
+vampire becomes a vampire under the control of its creator.
+This description will be recognized easily as the “Dracula” type
+of vampire. Many other possibilities for vampires exist in folklore:
+Chinese vampires, for instance, and blood-drinkers more feral than
+intelligent. Plus, other cultural templates with different attributes could
+be created—how about an ancient Egyptian mummified vampire, or an
+Aztec vampire?
+Wight
+Hit Dice: 3
+Armor Class: 5 [14]
+Attacks: Claw (1 hp + level drain)
+Saving Throw: 14
+Special: Level drain (1 level) with hit, can only be hit by magical or
+silver weapons
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 5/240
+Wights live in tombs, graveyards, and burial mounds (barrows). They
+are undead, and thus not affected by sleep or charm spells. Wights
+are immune to all non-magical weapons, with the exception of silver
+weapons. Any human killed or completely drained of levels by a wight
+becomes a wight.
+Will-o-the-Wisp
+Hit Dice: 9
+Armor Class: -8 [27]
+Attacks: Shock (2d6)
+Saving Throw: 6
+Special: Change appearance, lightning
+Move: 18
+Alignment: Chaos
+Challenge Level/XP: 10/1400
+Will o’ the wisps are phantom-like shapes of eerie light, creatures that
+live in dangerous places and try to lure travelers into quicksand, off the
+edges of cliffs, etc. They usually inhabit swamps or high moors. They
+can brighten or dim their own luminescence, and change their shapes
+as well, to appear as a group of lights, a wisp of light, or in the glowing
+wraithlike shape of a human (often female). They will generally depart
+if the attempt to lead victims into danger fails, but if they are attacked
+they can defend themselves with violent shocks of lightning-like power.
+These creatures are intelligent, and can be forced to reveal the location
+of their treasure hoards.
+Wolf
+Hit Dice: 2+2
+Armor Class: 7 [12]
+Attacks: Bite (1d4+1)
+Saving Throw: 16
+Special: None
+Move: 18
+Alignment: Neutrality
+Challenge Level/XP: 2/30
+Wolves are pack hunters, and may be found in large numbers. Male
+wolves weigh from 80 to 100 pounds.
+Wolf, Worg
+Hit Dice: 4
+Armor Class: 6 [13]
+Attacks: Bite (1d6+1)
+Saving Throw: 13
+Special: None
+Move: 18
+Alignment: Chaos
+Challenge Level/XP: 4/120
+Worgs are large, intelligent, and evil wolves. They may have
+supernatural origins.
+Wraith
+Hit Dice: 4
+Armor Class: 3 [16]
+Attacks: Touch (1d6 + level drain)
+Saving Throw: 13
+Special: Level drain (1 level) with hit
+Move: 9
+Alignment: Chaos
+Challenge Level/XP: 6/400
+Wraiths are powerful wights, immune to all non-magical weapons
+other than silver ones (which inflict only half damage). Arrows are
+particularly ineffective against them, for even magical and silver arrows
+inflict only one hit point of damage per hit. Wraiths can be found riding
+well-trained battle steeds or more unusual mounts that will tolerate their
+presence.
+Wyvern
+Hit Dice: 8
+Armor Class: 3 [16]
+Attacks: Bite (2d8) or sting (1d6)
+Saving Throw: 8
+Special: Poison sting
+Move: 6/24 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 9/1,100
+A wyvern is a two-legged form of dragon. These creatures are smaller
+and less intelligent than true four-legged dragons, not to mention that
+they do not have a breath weapon. Each wyvern has a poisonous sting at
+the end of its tails. However, they are not coordinated enough to attack
+with both bite and sting in a single round. In any given round, a wyvern
+is 60% likely to use its tail, which can lash out to the creature’s front
+even farther than its head can reach.
+Mold, Yellow
+Attacks: 1d6 damage if touched
+Special: Poisonous spores
+Challenge Level/XP: 3/60
+Yellow mold is a subterranean fungus; it neither moves nor attacks.
+However, if it is poked or struck, it may (50% chance) release a cloud
+(roughly 10 feet in diameter) of poisonous spores,. Failing a saving
+throw against the spores means that the character dies a rather horrible
+death. Even just touching yellow mold inflicts 1d6 points of acid
+damage on the creature doing the touching. These growths can be
+destroyed with fire.
+Yeti
+Hit Dice: 5
+Armor Class: 6[13]
+Attacks: 2 fists (1d6)
+Saving Throw: 12
+Special: Immune to cold, hug, fear.
+Move: 14
+Alignment: Chaos
+Challenge Level/XP: 7/600
+Yetis are the “Bigfoot” creatures of the arctic and the high mountains.
+If a yeti strikes the same opponent with both fists, it bear-hugs for an
+additional 2d6 points of damage. Anyone caught in the yeti’s arms like
+this must make a saving throw or be paralyzed with fear for 1d3 rounds,
+during which time the yeti hits automatically. Yetis are very intelligent,
+and can be quite malevolent. They are immune to normal and magical
+cold.
+Zombie
+Hit Dice: 2
+Armor Class: 8 [11], or 7 [12] with shield
+Attacks: Weapon or strike (1d8)
+Saving Throw: 16
+Special: Immune to sleep and charm spells
+Move: 6
+Alignment: Neutrality
+Challenge Level/XP: 2/30
+Zombies are mindless creatures, the walking dead. (These are merely
+animated corpses, not carriers of any sort of undead contagion as are
+ghouls.) If their Undeath is contagious, they should be worth a few
+more experience points than described here, and if a single hit from a
+zombie causes contagion or any other sort of disease, they should be
+worth considerably more experience. However, the standard zombie is
+simply a corpse animated to do its creator’s bidding.

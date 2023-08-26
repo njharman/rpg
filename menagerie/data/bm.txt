@@ -1,0 +1,2176 @@
+s15: Barrow Maze, Copyright 2012,
+## Barrow Maze New Monsters
+
+##Acolyte of Orcus
+##No. Enc: 1d6
+##Alignment: Chaotic
+##Movement: 120’ (40’)
+##Armor Class: 6
+##Hit Dice: Varies
+##Attacks: 1
+##Damage: Varies
+##Save: Varies
+##Morale: 10
+##Hoard Class: XXI
+##XP: 21 per Hit Die
+##The acolytes are clerics in the service of Orcus.
+##They typically wear black chain mail, dark grey
+##robes, and simple sandals. They often decorate
+##their shields with the unholy symbol of He-Who-
+##Must-Not-Be-Named.
+##
+##For every 3 acolytes encountered, there will be a
+##mid-level cleric of second, third, or fourth level
+##(d6: 1-2 second, 3-4 third, 5-6 fourth level).
+##First level acolytes can cast one spell from the fol-
+##lowing list: Cause Light Wounds, Darkness, or Pro-
+##tection from Good. They are armed with a mace
+##and wear studded leather and carry a wooden
+##shield (AC 6). They have 2-20sp each.
+##
+##Spells for clerics beyond first level are subject to
+##level and Referee’s discretion. These priests carry
+##a mace and wear chainmail and a metal shield
+##(AC 4). There is a 10% chance that one of these
+##three items is magical (+1). They carry 5-50gp.
+##
+##In addition, if a mid-level cleric is present roll a d6 and consult the
+##following table to determine the undead the cleric controls.  If a fourth
+##level acolyte is present, there is a 25% chance that s/he possesses
+##a Gehennian Goat.
+##
+##===== ==================================
+##d6    Type No. Enc.
+##===== ==================================
+##1-2   2d6 Skeletons
+##3-4   1d8 Zombies
+##5     1d8 Funeral Pyre Zombies
+##6     1d3 Ghouls
+##===== ==================================
+
+
+Amber Jelly
+No. Enc: 3d6
+Alignment: Neutral
+Movement: 90’ (30’)
+Armor Class: 5
+Hit Dice: 4
+Attacks: 1
+Damage: pseudopod (d6+slow) or 15' mucus (d6+slow)
+Special: immune cold, fire divides
+Save: F4
+Morale: 12
+Hoard Class: None
+XP: 75
+Amber jellies are glistening, transparent amoebae
+of a densely gelatinous and vaguely ovoid nature.
+
+They are most notable for their deep sickly yellow
+color. Often found in small groups, amber jellies
+work together to trap their prey.
+
+In combat, an amber jelly can strike with a pseu-
+dopod, but it prefers a ranged attack by spewing
+a sticky yellow mucilage (both attacks do 1d6) up
+to 15 feet. Regardless of its means of attack, tar-
+gets must save (Paralyze) when struck. If the victim
+fails, it is Slowed (as per the spell) by the sticky
+ichor for three turns (the effects of multiple hits are
+cumulative). By working in groups, amber jellies
+can be quite deadly. They prefer to stick to ceil-
+ings, high walls, or alcoves where they can shoot
+their mucilage repeatedly from safety.
+
+Amber jelly mucilage may be dissolved by alco-
+hol. It is immune to cold and fire damage prompts
+an immediate subdivision into two jellies (each
+with half hit points and 2 HD).
+
+Mold, Amber
+No. Enc: 1
+Alignment: Neutral
+Movement: 0
+Armor Class: Always hit
+Hit Dice: 1hp
+Attacks: 1
+Damage: Stinking Cloud
+Special: monster check, fire destroys
+Save: F2
+Morale: Nil
+Hoard Class: None
+XP: 45
+Amber mold appears much like yellow mold. A
+colony normally covers a patch of floor, wall, or
+ceiling. The spores of amber mold contain small
+gas pockets. When released they have the effect
+similar to a temporary (1 turn) Stinking Cloud, except that the nausea induced lasts for
+2d4+1 rounds after leaving the affected area and
+the intensity of the choking and vomiting may
+provoke a random monster check (Referee’s discretion). Amber mold can be destroyed by fire.
+
+##Black Tentacles
+##No. Enc: 1
+##Alignment: Chaotic
+##Movement: 60’ (20’)
+##Armor Class: 3
+##Hit Dice: 10
+##Attacks: 6
+##Damage: 6x tentacles(d8)
+##Special: constrict, maw(4d6)
+##Save: F10
+##Morale: 12
+##Hoard Class: XXII
+##XP: 2225
+##A fearsome opponent, black tentacles are a mass
+##of ten wiggling, black, octopus-like limbs attached
+##to a main body. The body is comprised of a large
+##maw that possesses rows of sharp teeth. Six of the
+##tentacles are used to move and/or attack while
+##the remaining four possess bulging eyestalks at
+##their terminal end.
+##
+##With each of its six attacks, black tentacles can
+##either smack (1d8) or constrict (1d8) an opponent.
+##If a black tentacles manages to constrict, its vic-
+##tim is allowed a saving throw (Paralyze) at the end
+##of the round to break free. If unsuccessful, the
+##black tentacles will draw its victim into its maw
+##causing an automatic 4d6 points of damage the
+##next round.
+##
+##The remaining four tentacles possess eyestalks at
+##their tip and allow the black tentacles to see and
+##guide its attacks. If specifically targeted, the ten-
+##tacles, including eyestalk-tentacles, each possess
+##an armor class of 0 and 8 hit points. Black tenta-
+##cles will normally retreat before their final eyestalk
+##is cut off. It will regenerate its limbs in 1d4+2 weeks.
+##Black tentacles must stay submerged in water the
+##majority of the time. They abhor light and will typi-
+##cally target those with light sources, followed by
+##good-aligned clerics and warriors.
+
+Ghast, Barrow
+No. Enc: 1d2
+Alignment: Chaotic
+Movement: 150’ (50’)
+Armor Class: 2
+Hit Dice: 7
+Attacks: 3
+Damage: 1d6/1d6/1d8 (paralyze)
+Special: +2 magic to-hit, infection, control undead, stench, immune mental
+Save: F6
+Morale: 10
+Hoard Class: XVII
+XP: 1200
+The barrow, or greater, ghast can only be hit by +2 magical weapons.  Their
+charnel stench is so powerful that anyone nearby (about 10ft) must make
+a saving throw or suffer a -2 penalty on attack rolls. Their attacks cause paralysis
+if the victim fails a saving throw.
+
+Moreover, wounds inflicted by the claws or bite of a barrow ghast are
+immediately infected. They resist magical healing and require 10 times the
+normal amount of time to heal naturally. A Cure Disease spell will allow for
+normal and magical healing of wounds caused by a barrow ghast. Bar- row ghasts
+can control undead of 4 or fewer HD and always have a pack of standard
+ghasts (1d4+1) and ghouls (2d4+2) serving them. These undead servants cannot
+be turned in the pres- ence of their barrow ghast leader.
+
+Finally, some barrow ghasts, who were magic- users, clerics, or fighters in
+life, retain some of their abilities in death, subject to the discretion of
+the Referee. Like all undead, they are unaffected by mind-influencing spells.
+
+Barrow Guardian
+No. Enc: 1d4
+Alignment: Neutral
+Movement: 20’
+Armor Class: 3
+Hit Dice: 3
+Attacks: 1
+Damage: 1d6
+Special: stick weapons, half dmg weapons, immune mental
+Save: F3
+Morale: 12
+Hoard Class: None
+XP: 350
+The barrow guardian is similar to a caryatid col-
+umn, but they are specific to Barrowmaze. They
+appear as stone statues, pillars, or columns in the
+form of stately male warriors. Barrow guardians are
+often used to guard crypts and tombs of import.
+They are inanimate until someone disturbs the
+tomb they have been assigned to protect.
+
+With each hit on a barrow guardian, the weapon
+must make a saving throw (Paralyze, using the
+character’s unmodified save) or become stuck in
+the statue. Bonuses for magical weapons apply to
+the save and weapons may be retrieved after
+combat.
+
+Barrow Guardian, Greater
+No. Enc: 1d4
+Alignment: Neutral
+Movement: 20’
+Armor Class: 1
+Hit Dice: 6
+Attacks: 1
+Damage: 1d8+2
+Special: 7+MR, stick weapons, shield, half dmg weapons, immune mental
+Save: F6
+Morale: 12
+Hoard Class: None
+XP: 650
+The greater barrow guardian is similar to the 3 hit
+die barrow guardian insofar as they appear as
+statues or columns of helmed male warriors.
+However, greater barrow guardians are con-
+structed with stronger enchantments and possess
+greater HD. They have a 35% resistance to
+magic and carry a large stone shield that provides
+an improved armor class.
+
+Similar to the 3 HD version, weapons can also
+become stuck in the greater barrow guardian.
+
+Harpy, Barrow
+No. Enc: 1d6 (2d4)
+Alignment: Chaotic
+Movement: 60’(20’)
+Armor Class: 5
+Hit Dice: 3
+Attacks: 3
+Damage: 2 claw (d6), 1 weapon
+Special: +2 vs magic, paralyzing shriek, persistent
+Save: F3
+Morale: 7
+Hoard Class: XX
+XP: 100
+These despicable creatures resemble harpies but
+are skinnier and more wretched. Unlike common
+harpies, their appearance and feathers suggest a
+lineage to vultures. Instead of fresh meat, they
+prefer to feed on carrion and thus frequent grave
+sites and battlefields.
+
+Barrow harpies attack three times per round, in-
+cluding 2 claw attacks (1d6/1d6) and by weapon
+type. They prefer basic weapons and care little for
+their upkeep. Barrow harpies are often seen at-
+tacking with gnarled clubs, or rusty daggers, or
+chipped swords.
+
+Instead of charming their foes, their shriek is so
+frightening all those who hear it must save (Para-
+lyze) or become immobilized with fear for 9 turns
+(as per the spell Hold Person). A successful save
+will not require additional saves during an encoun-
+ter. Barrow harpies have an innate magical re-
+sistance and receive +2 on all saves versus magic.
+
+Although they have relatively low morale and are
+quick to flee combat, barrow harpies are persis-
+tent and may return to battle if they can gather
+greater numbers. They often keep giant vultures
+as pets and guardians.
+
+Mummy, Barrow
+No. Enc: 1d2
+Alignment: Chaotic
+Movement: 60’ (20’)
+Armor Class: 3
+Hit Dice: 7
+Attacks: 2
+Damage: 2 fists (1d8+d4 freeze)
+Special: magic or fire to-hit, touch freezes limb, immune mental, half dmg bludge/pierce
+Save: F7
+Morale: 12
+Hoard Class: XIX
+XP: 960
+
+A barrow mummy is stronger and more powerful
+than a standard mummy.
+
+These mummies can attack twice per round with
+their fists for 1d8 each. Instead of mummy rot, bar-
+row mummies possess a freezing touch that does
+an additional 1d4 on each successful hit.
+Moreover, their freezing touch will paralyze a limb
+for 1d4+1 hours unless a successful save is made
+(Paralyze). To determine which limb is struck roll
+1d4 (1: right arm, 2: left arm, 3: right leg, 4: left leg).
+Like all undead, they are unaffected by mind-
+influencing spells, Barrow mummies can only be
+harmed by magical weapons, spells, and fire-
+based attacks.
+
+Wight, Barrow
+No. Enc: 1d3
+Alignment: Chaotic
+Movement: 90’ (30’)
+Armor Class: 4
+Hit Dice: 6
+Attacks: 1
+Damage: 1d8+drain
+Special: magic or silver to-hit, sight causes insanity, touch drains, immune mental
+Save: F6
+Morale: 12
+Hoard Class: XVIII
+XP: 650
+Barrow wights are fearsome opponents. They are
+similar to normal wights but stronger and more
+powerful. They are found near barrows, crypts,
+and gravesites. Barrow wights have thin white skin
+pulled tight over their bones, and often wear fu-
+nerary shrouds that hang in tatters. The eyes of a
+barrow wight burn with malevolence for the living.
+Any character that meets the gaze of a barrow
+wight is struck with insanity unless a save (Spells) is
+made. Moreover, the physical touch of a barrow
+wight drains one level of experience from its vic-
+tim. A humanoid slain by a barrow wight will rise as
+a normal wight in 1d6 rounds. Like all undead, bar-
+row wights are immune to mind-influencing spells.
+Some say barrow wights, similar to mummies, are
+interred with canopic jars and that destroying their
+vessels can cause them injury.
+
+Brass Jackal
+No. Enc: Varies
+Alignment: Neutral
+Movement: 150’ (50’)
+Armor Class: 3
+Hit Dice: 2
+Attacks: 1
+Damage: bite (d8)
+Special: +4 vs magic, magic to-hit, immune slash, half damage pierce
+Save: F2
+Morale: 12
+Hoard Class: None
+XP: 30
+Brass jackals are constructed by high level necro-
+mancers of Set, who use them as sentinels and
+personal protectors. Constructed of bronze and
+black iron, they possess a smooth shell of brassy
+armor, and their eyes glow like orbs of red.
+
+In combat, brass jackals bite with sharp metal
+teeth for 1d8 hit points of damage. Due to their
+magically reinforced metal bodies, these con-
+structs can only be struck by magical weapons.
+Moreover, they take no damage from slashing
+weapons, half damage from piercing weapons,
+and full damage from blunt weapons.
+They have a +3 bonus to saves against spells cast
+directly against them
+
+Mold, Brown
+No. Enc: 1
+Alignment: Neutral
+Movement: 0
+Armor Class: Always hit
+Hit Dice: 2
+Attacks: 1
+Damage: drain heat (2d8) all 10'
+Special:
+Save: F2
+Morale: Nil
+Hoard Class: None
+XP: 45
+Brown mold drains the body heat of living crea-
+tures that approach within 10 feet. Cold-based
+creatures are unaffected. The damage from the
+heat drain is 2d8 hit points per round with no sav-
+ing throw. If fire is used on brown mold, it will bub-
+ble and double its size in 1 round. Brown mold can
+only be destroyed through the use of magical
+cold.
+
+Pudding, Brown
+No. Enc: 1
+Alignment: Neutral
+Movement: 60’ (20’)
+Armor Class: 9
+Hit Dice: 9
+Attacks: 1
+Damage: acid (2d6)
+Special: dissolve non-metal, immune slash, slash divides
+Save: F9
+Morale: 12
+Hoard Class: None
+XP: 2500
+The brown pudding is a subspecies of black pud-
+ding. Brown puddings are found most often in
+moors and swamps, although they can be en-
+countered elsewhere. Brown puddings secrete a
+digestive acid that dissolves organic material but
+does not affect metal. Any melee hit deals acid
+damage to its target. In addition the opponent’s
+clothing and non-metal armor dissolve and be-
+come useless immediately. Magical non-metal
+armor has a 60% chance of survival plus 10% for
+each plus of the armor. A wooden weapon that
+strikes a brown pudding dissolves immediately with
+no saving throw.
+
+Slashing weapons deal no damage to this crea-
+ture. Instead, slashing weapons will split the crea-
+ture into two identical puddings, each with half of
+the original’s current hit points (round down). A
+pudding with 10 hit points or less cannot be split
+further and dies if reduced to 0 hit points.
+
+Cave Moray
+No. Enc: 1d4+2
+Alignment: Neutral
+Movement: 5’
+Armor Class: 4
+Hit Dice: 1-6HD
+Attacks: 1
+Damage: bite (d8)
+Special: 3+ surprise, cover
+Save: As HD
+Morale: 7
+Hoard Class: None
+XP: 120
+Cave morays are a land-based version of their
+watery brethren. The males grow about 7 feet
+long. They make their lairs underground in the
+walls of caves and dungeons. They create their
+burrows in high traffic areas, or near water-holes,
+where they can surprise their prey.
+
+Although they live individually, groups of cave
+morays in the same area will work together to
+cross-sect their immediate killing ground. They at-
+tack by striking, recoiling, and then striking again.
+They surprise opponents on a 1-3. Cave morays
+can come in sizes ranging from 1 to 6 HD.
+
+
+Clockwork, Cobra
+No. Enc: 1d4
+Alignment: Neutral
+Movement: 5’
+Armor Class: 2
+Hit Dice: 1
+Attacks: 1
+Damage: bite (d3+poison)
+Special: half dmg non-magic
+Save: F1
+Morale: 12
+Hoard Class: Nil
+XP: 100
+Clockwork cobras are metal constructs used in
+crypts to guard precious treasures. They are ani-
+mated by magic.
+
+A clockwork cobra is silent when motionless, but
+when moving, it emits a repeated Bzzzzzzzzt, click,
+click, click series of noises.
+
+Non-magical weapons inflict only half damage on
+a clockwork cobra. The cobra’s bite inflicts 1-3 hit
+points of damage. In addition, the first two bites
+will inject poison. Victims must save (Poison) or die.
+
+
+Corpse Candle
+No. Enc: 1
+Alignment: Chaotic
+Movement: 20’
+Armor Class: 2
+Hit Dice: 6
+Attacks: 1
+Damage: 1d8
+Special: incorporeal, invisible, hypnotic, immune mental
+Save: F4
+Morale: 12
+Hoard Class: None
+XP: 275
+Corpse candles are a vengeful, incorporeal form
+of undead. They remain close to the location of
+their death and are completely invisible to the na-
+ked eye.
+
+They create dim twisting patterns of light similar to candles in darkness.
+Those who view the luminescence must save (Spells) or be hypnotized by, and
+drawn to, the light. Corpse candles are devious and will attempt to draw
+victims into the traps, or toward the den of the monsters, that killed them.
+If a victim does indeed die in the trap, their final sight will be the ghastly
+visage of the corpse candle reaching towards them. Anyone killed by a corpse
+candle has a 10% chance of rising as one in 1d4 rounds.  Like all undead, they
+are unaffected by mind- influencing spells.
+
+Coffer Corpse
+No. Enc: 1
+Alignment: Chaotic
+Movement: 60’ (20’)
+Armor Class: 7
+Hit Dice: 2
+Attacks: 1
+Damage: choke (1d6)
+Special: choke, magic to-hit, turns as 7HD, immune mental, rise/delayed fear
+Save: F2
+Morale: 12
+Hoard Class: XXI
+XP: 48
+The coffer corpse resembles a zombie but is
+turned as a 7 HD creature on the clerical turn
+undead table. Like all undead, the coffer corpse
+in unaffected by mind influencing spells.
+After sustaining 4 hit points of damage or more
+the coffer corpse collapses, and appears defeat-
+ed. However, normal weapons do no damage to
+a coffer corpse and one round after collapsing
+the undead creature will rise and continue to at-
+tack. All those who watch the coffer corpse rise
+must save or flee in panic.  There is a
+50% chance fleeing PCs will drop whatever they
+are carrying.
+
+If the coffer corpse makes a successful attack it
+has wrapped its hands around the neck of its vic-
+tim. Each successive round it automatically stran-
+gles for an additional 1d6 damage. The grasp of a
+coffer corpse cannot be broken.
+
+
+Crypt Knight
+No. Enc: 1d8
+Alignment: Chaotic
+Movement: 60’ (30’)
+Armor Class: 2
+Hit Dice: 7
+Attacks: 1
+Damage: weapon (1d10)
+Special: Fear aura, immune mental
+Save: F7
+Morale: 12
+Hoard Class: None
+XP: 475
+Crypt Knights are all that remain of a secret mar-
+tial order – the Black Legion - devoted to Nurgal,
+God of the Underworld. When The Tablet of Chaos
+was hidden, the order gathered together and will-
+ingly allowed their life energy to be drained by
+Nurgal’s undead. They rose in death as crypt
+knights devoted to the protection of the Dark
+God’s great temples and The Tablet of Chaos.
+
+Due to the excruciating nature of their death and
+their skeletal appearance, crypt knights radiate
+an aura of fear.  Regardless of what weapon they use, crypt
+knights strike for 1d10 points of damage.
+
+The symbol of the order is a white skull on a black
+rose. This device often decorates their armor
+and/or shields. They attack all intruders except
+followers of Nurgal. Like all undead, crypt knights
+are unaffected by mind-influencing spells.
+
+Crypt Shade
+No. Enc: 1d2
+Alignment: Chaotic
+Movement: 90’ (30’)
+Armor Class: 9
+Hit Dice: 2
+Attacks: 1
+Damage: engulf (1d8)
+Special: turn as 4HD, immune mental, 1/2 damage other than fire/silver/magic/holy
+Save: F2
+Morale: 12
+Hoard Class: None
+XP: 100
+This undead creature is a roughly human-shaped
+collection of shadows, dust, rotted burial linens,
+bone fragments, and other sepulcher debris.
+
+Spawned from chaos and lingering hate, crypt
+shades feed on the fear and pain of their victims.
+They attack by engulfing victims within the shifting
+cloud of grave detritus that gives them shape,
+battering victims for 1d8 points of damage.
+
+Crypt shades are turned as 4HD creatures and
+possess the undead immunity to sleep and charm.
+Physical attacks on a crypt shade inflict only half
+damage. They suffer normal damage from fire,
+silver, magic, and holy water (Reprinted with per-
+mission of Michael Curtis).
+
+Crypt Shade, Greater
+No. Enc: 1d2
+Alignment: Chaotic
+Movement: 90’ (30’)
+Armor Class: 4
+Hit Dice: 6
+Attacks: 1
+Damage: engulf(d10)
+Special: Fear, turn as 8HD, immune mental, 1/2 damage other than fire/silver/magic/holy
+Save: F6
+Morale: 12
+Hoard Class: XIV
+XP: 450
+This undead creature is a swirling, roughly human-
+shaped assortment of shadows, dust, rotted burial
+linens, bones, and other debris. Spawned from
+chaos and lingering hate, these monsters feed on
+the fear and pain of their victims.
+
+On a successful attack, these undead creatures
+engulf a victim within their shifting cloud of grave
+detritus. While in this whirling mass victims cannot
+escape and are suffocated and battered for 1d10
+points of damage per round until the shade is de-
+stroyed or turned. In addition, their ghastly semi-
+human visage invokes Fear (as per the magic-user
+spell) in those who fail their saving throw (Spells).
+Greater crypt shades are turned as 8HD crea-
+tures. Non-magical attacks on a crypt shade inflict
+only half damage. They suffer full damage from
+magical weapons, spells, silver, and holy water.
+There is a 50% chance that a greater crypt shade
+that has been destroyed or turned will reform with-
+in 1d4 days. Like all undead, they are unaffected
+by mind-influencing spells.
+
+
+Crypt Thing
+No. Enc: 1
+Alignment: Neutral
+Movement: 60’(20’)
+Armor Class: 5
+Hit Dice: 6
+Attacks: 2
+Damage: 2 claws (d6)
+Special: teleport
+Save: F6
+Morale: 12
+Hoard Class: None
+XP: 500
+Not undead.
+
+Crypt things look much like skeletons shrouded in
+a black robe. Powerful magic-users create crypt
+things to serve as guardians to their tombs or to
+protect special treasures. They never leave their
+designated tomb and never initiate combat.
+
+If the tomb it guards is disturbed in any way, the
+crypt thing will teleport interlopers in a random
+direction (d8) away from the tomb they guard
+(5d20 feet). Those teleported may attempt to re-
+sist. If sufficiently annoyed a crypt thing will teleport tomb-robbers to
+a destination in mid-air (or sometimes over a
+pool).
+
+
+Death Knight
+No. Enc: 1
+Alignment: Chaos
+Movement: 60’ (20’)
+Armor Class: 0
+Hit Dice: 10
+Attacks: 2
+Damage: 2 weapon (d10+6)
+Special: Fear, +1 magic to-hit, 18STR, 3+MR/spell turn, immune mental/turning, command undead, Dispel Magic(18th), Fireball(12d6), Symbol(12th)
+Save: F10
+Morale: 12
+Hoard Class: None
+XP: 4000
+The death knight is a terrible undead creature. It is
+unknown if they achieved their state through a fall
+from grace or if they were created by the dark
+gods. Death knights carry the equipment they
+possessed in life. They often wear ancient magical
+platemail and shield, and carry a magical
+longsword, mace, or flail.
+
+Death knights have an effective strength of 18,
+They possess a magic resistance of 85% and
+can only be hit by +1 or better magic weapons.
+Any spell that fails to break the knight’s magic re-
+sistance is turned on the caster.
+
+The death knight cannot be turned and can
+command undead below its HD at will. Death
+knights can cast Dispel Magic (1/day), Fire Ball
+(1/day), and use a Symbol (1/day). These are cast
+at 18th level of magic use.
+
+The voice of a death knight is so hollow and
+chilling that all those who hear its voice must save
+or flee in Fear.
+Like all undead, they are unaffect-
+ed by mind-influencing spells.
+
+
+Elemental, Fountain
+No. Enc: 1
+Alignment: Chaotic
+Movement: Special
+Armor Class: 5
+Hit Dice: 4
+Attacks: Special
+Damage: drag/drown
+Special: +6 to-hit, immune weapons, 1/2 fire, cold slows
+Save: F4
+Morale: 12
+Hoard Class: XIV, XIII, XII
+XP: 400
+A water fountain elemental is an elemental crea-
+ture that has been bound by a magic-user to a
+deep fountain, pool, or cistern for the purpose of
+protection or defense.
+
+When provoked, these elementals form a watery
+snake-like appendage (in 1d3 rounds) and at-
+tempt to drown passersby by striking out at their
+opponents as a monster with 6 HD. PCs must
+save (Paralyze) or be dragged into the fountain in
+one round and face drowning.
+
+As a water-based creature, this elemental takes
+only half damage from fire and is Slowed by cold
+spells.
+
+
+##Fire Crab
+##No. Enc: 1d4+1
+##Alignment: Neutral
+##Movement: 60’ (20’)
+##Armor Class: 2
+##Hit Dice: 3
+##Attacks: 2
+##Damage: 1d8/1d8
+##Save: F3
+##Morale: 8
+##Hoard Class: None
+##XP: 55
+##A fire crab appears as a giant crab in most re-
+##spects. However, its reddish color and jagged ap-
+##pearance distinguish it.
+##
+##In combat, fire crabs generate intense heat and
+##flames rise from their back. A fire crab attacks with
+##its two claws, each dealing 1d8 hit points of dam-
+##age. In addition, opponents will suffer 1d4 points
+##of fire damage on each successful hit.
+##
+##Fire crabs are immune to fire-based attacks and
+##take double damage from cold attacks. They are
+##native to the plane of fire.
+
+##Gargoyle, Four-Armed
+##No. Enc: 1d4
+##Alignment: Chaotic
+##Movement: 9, 15(flying)
+##Armor Class: 3
+##Hit Dice: 4+2
+##Attacks: 6
+##Damage: See below
+##Save: F8
+##Morale: 11
+##Hoard Class: XX
+##XP: 500
+##Four-armed gargoyles are ferocious creatures and
+##have a fondness for inflicting pain on their foes.
+##Not particularly intelligent, they are vicious in
+##combat, possessing four claw attacks (1d4 each),
+##a bite (1d6), and a tail attack (1d8). They can only
+##be harmed by a +1 magical weapon or by spells.
+##
+##Gargoyle, Maggog
+##No. Enc: 1d2
+##Alignment: Chaotic
+##Movement: 9, 15(flying)
+##Armor Class: 5
+##Hit Dice: 4
+##Attacks: 3
+##Damage: 1d6x2/1d8
+##Save: F8
+##Morale: 11
+##Hoard Class: XX
+##XP: 500
+##Maggogs are gargoyles that possess the innate
+##spell-casting ability of a 5th level magic-user
+##(2/2/1). They are devious and highly intelligent
+##creatures (Int 16).
+##
+##Their exact spell selection is subject to the Referee,
+##but an example of their spell list might include:
+##Magic Missile, Shield; Darkness Globe, Invisibility;
+##Lightning Bolt.
+##
+##Maggogs will normally cast spells before resorting
+##to melee combat. They attack twice with their
+##claws for 1d6 points of damage and once with
+##their tail for 1d8 points of damage. They can only
+##be hit by +1 magical weapons and possess a 20%
+##magic resistance.
+##
+##Gargoyle, Margoyle
+##No. Enc: 1d6
+##Alignment: Chaotic
+##Movement: 9, 15(flying)
+##Armor Class: 1
+##Hit Dice: 6+1
+##Attacks: 4
+##Damage: See below
+##Save: F6
+##Morale: 12
+##Hoard Class: XXI
+##XP: 550
+##A margoyle is a bigger, stronger, more intelligent
+##version of a standard gargoyle. In addition to
+##great size, it possesses a wicked, cunning intelli-
+##gence. For these reasons, margoyles are often
+##leaders when among their brethren.
+##They attack twice with their claws (1d6 each),
+##once with their horns (1d6), and once with a tail
+##attack (1d6) each round. They can only be
+##harmed by spells or +2 or better weapons.
+
+Gehennian Goat
+No. Enc: 1d4
+Alignment: Chaotic
+Movement: 120’ (40’)
+Armor Class: 4
+Hit Dice: 4
+Attacks: 1
+Damage: bite (d6)
+Special: See invisible, 2+ detect, 4d6 hellfire breath
+Save: F5
+Morale: 10
+Hoard Class: None
+XP: 375
+Gehennian goats are demonic creatures created
+by Orcus. They are matted and shaggy in ap-
+pearance. They have twisted horns and dull black
+eyes.
+
+Gehennian goats are summoned by Orcus’ fol-
+lowers through an unknown ritual.
+
+Gehennian goats follow the commands of their
+summoners until they are slain or 666 days pass, at
+which time they return to their lair in the under-
+world.
+
+They are often used as sentries or in melee sup-
+port. Gehennian goats can Detect Invisibility to a
+range of 60’ with a 75% chance of success.
+In combat, they will either bite for 1d6 points of
+damage or they may breath hellfire for 4d6 points
+of damage once per day.
+
+##Giant Ant
+##No. Enc: Varies
+##Alignment: Neutral
+##Movement: 60’
+##Armor Class: Varies
+##Hit Dice: Varies
+##Attacks: 1
+##Damage: Varies
+##Save: Varies
+##Morale: 9
+##Hoard Class: None
+##XP: 20 per HD
+##Giant ants are often found in two varieties: work-
+##ers and soldiers.
+##
+##Workers are normally three feet long and typically
+##have an armor class of 4 and 2 HD. They at-
+##tack once per round for 1d6 points of damage.
+##Soldiers are normally four feet long and are
+##stronger and more resilient. They have an armor
+##class of 2 and 3 HD. They attack once per
+##round for 2d6 points of damage. On each suc-
+##cessful hit they may also sting for 2d4 points of
+##damage.
+##
+##For every 20 ants there will be a queen with an
+##armor class of 3 and 10 HD. The queen is nor-
+##mally a non-combatant. For each queen there will
+##be 10-40 larvae which are normally overseen by
+##the worker ants. Giant ants will never retreat if de-
+##fending the queen.
+##
+##Giant ants tend to have little treasure but in some
+##rare instances they inexplicably mine precious
+##metals. This occurs in about 30% of nests, and
+##there will be as much as 1d10x1000 gold pieces’
+##worth of raw gold nuggets.
+##
+##
+##Exoskeleton, Giant Ant
+##No. Enc: 2d4
+##Alignment: Chaotic
+##Movement: 20’
+##Armor Class: 3
+##Hit Dice: 3
+##Attacks: 1
+##Damage: 1d8
+##Save: F2
+##Morale: 12
+##Hoard Class: None
+##XP: 30
+##These undead creatures are the dry animated
+##husks of giant ants. They are turned as 3 HD
+##creatures on the undead turning table. Like all
+##undead, they are unaffected by mind-influencing
+##spells.
+
+Giant Vulture
+No. Enc: 2d6
+Alignment: Neutral
+Movement: 18/3
+Armor Class: 6
+Hit Dice: 2
+Attacks: 1
+Damage: beak (d6)
+Special: immune disease, swarm
+Save: F2
+Morale: 7
+Hoard Class: None
+XP: 40
+Giant vultures are scavengers. They search for car-
+rion and prefer to avoid direct combat. They have
+pink bald heads and greasy black feathers. As a
+result of their diet, giant vultures are immune to
+disease. They have a flying speed of 180’ (60’).
+Giant vultures are often found with barrow harpies
+who train them as pets or for protection. They at-
+tack with sharp powerful beaks for 1d6+1 points of
+damage.
+
+Giant vultures draw strength from numbers. For
+each giant vulture present after the third, their
+morale increases by one (a morale of 8 with four
+vultures, 9 with five vultures, etc) to a maximum
+morale of 11. Barrow harpies also count toward
+their numbers for improved morale. Giant vulture
+hatchlings, or intact eggs, are worth 20-50gp
+each.
+
+Golem, Flagstone
+No. Enc: 1
+Alignment: Neutral
+Movement: 60’ (20’)
+Armor Class: 6
+Hit Dice: Varies
+Attacks: 2
+Damage: 2 fists (d6-d10)
+Special: magic to-hit, 4+ surprise, 1/2 dmg other than bludgeon/acid/fire/cold/elec, immune mental/poison/gas
+Save: Varies
+Morale: 12
+Hoard Class: None
+XP: 150 per Hit Die
+A flagstone golem is constructed from the stones
+and mortar used to construct dungeon walls and
+floors. These monsters often serve as special cam-
+ouflaged guardians to protect crypts and other
+important locations.
+
+Flagstone golems are relatively flat and peel
+themselves away from the wall or floor to surprise
+tomb-robbers.
+
+Bludgeoning weapons do full damage (all others
+do half). Only spells that affect stone will cause
+these golems full damage (acid, fire, cold, and
+electricity cause half damage).
+
+The size and damage inflicted by a flagstone go-
+lem’s fists varies subject to HD. Examples in-
+clude HD: 1-3 (1d6 each) and HD 4-6 (1d10 each),
+etc.
+
+
+Golem, Gemstone
+No. Enc: 1
+Alignment: Neutral
+Movement: 90’ (30’)
+Armor Class: 0
+Hit Dice: 8
+Attacks: 1 or 2
+Damage: 2 fists (d10)
+Special: surprise 5+, magic to-hit, gemstone hail(8d4), immune mental/poison/gas
+Save: F8
+Morale: 12
+Hoard Class: None
+XP: 700
+Gemstone golems are constructed by powerful
+clerics and magic-users and are bound as tomb
+guardians. They activate when certain conditions
+or stipulations are met or broken (such as a living
+creature entering the crypt they have been as-
+signed to protect).
+
+Gemstone golems appear as a huge hoard of
+gemstones of all shapes, sizes, varieties, and cuts.
+However, when disturbed, the gemstone golem
+draws itself up quickly into a large, roughly hu-
+manoid shape with great fists.
+
+These golems attack twice per round with their
+fists for 1d10 points of damage each; or, once
+every three rounds, they can issue forth a hail of
+gemstones from their body. This attack functions
+similar to a breath weapon and does 8d4 points of
+damage (save versus Breath Weapon for half) to
+anyone caught in a cone 30’ long and 30’ wide
+at its terminal end.
+
+When defeated, PCs can collect 4d4+8 gem-
+stones. Consult the random gem table (LL.107) to
+determine their value.
+
+Golem, Runic
+No. Enc: 1
+Alignment: Neutral
+Movement: 60’ (20’)
+Armor Class: 5
+Hit Dice: 7
+Attacks: 1
+Damage: fist 1d10
+Special: magic to-hit, hits activate tablets, immune mental/poison/gas
+Save: F7
+Morale: 12
+Hoard Class: None
+XP: 1100
+A runic golem is roughly humanoid in shape and is
+comprised of magical runic tablets found in
+Barrowmaze. These golems are used to guard
+tombs and crypts of import.
+
+When a runic golem is first activated - normally by an intrusion into the
+crypt it guards - its magical energy flickers on and off momentarily as if
+powering up after a long period of dormancy.
+
+The golem attacks by bashing opponents with its fists. When this golem is
+struck opponents must save (Spells) or activate a random runic tablet (roll
+1d6) with the following effect cast at 7th level (if applicable):
+1. Burning Hands
+2. Silence 15’ Radius
+3. Cause Light Wounds
+4. Hold Person
+5. Glyph of Warding
+6. Magic Missile
+
+These golems are unaffected by non-magical weapons. Like all golems they have
+no true intelligence, and hold, charm, or sleep spells are useless against
+them. They are unaffected by poison or gases.
+
+When a runic golem is destroyed, 1d4 runic tablets will remain intact.
+
+Huecuva
+No. Enc: 1d10
+Alignment: Chaotic
+Movement: 60’ (20’)
+Armor Class: 3
+Hit Dice: 2
+Attacks: 1
+Damage: 1-6
+Save: F2
+Morale: 12
+Hoard Class: XX
+XP: 150
+Huecuva are a terrible form of undead and ap-
+pear as skeletons in tattered robes. They are
+drawn to attack lawful-aligned clerics and pala-
+dins over others.
+
+The touch of a huecuva inflicts 1d6 hit points of
+damage plus the victim must save (Poison) or con-
+tract a flesh eating disease that will kill the victim
+in 1d4 days unless a cure disease spell is cast.
+The huecuva is turned as a 3 HD monster on
+the undead turning table.
+
+Fungi, Icterine
+No. Enc: 1d4
+Alignment: Neutral
+Movement: 10’ (5’)
+Armor Class: 5
+Hit Dice: 5
+Attacks: 1-4
+Damage: d4 tentacles (1d8+poison+spores)
+Special: jaundice, spores
+Save: F5
+Morale: 8
+Hoard Class: None
+XP: 120
+Sages believe that the icterine fungi is a distant
+cousin of the violet fungi. Icterine fungi range from
+3’ to 8’ tall and are often found growing among
+shriekers and large mushrooms. The fungi’s strange
+yellow color gives it a sickly appearance.
+
+Similar to a violet fungi, the icterine fungi attacks
+by flailing 1d4 tentacles at those within 5 feet. The
+tentacles possess sharp, serrated edges that
+cause 1d8 point of damage each.
+
+With each successful hit, the victim must save (Poi-
+son) or contract jaundice (incapacitated until
+Cure Disease is cast).
+
+Finally, on each successful hit, the fungi will inject
+spores into its victim. This causes 1d10 small yellow
+mushrooms to sprout aggressively from the wound.
+Unless a Neutralize Poison spell is cast on the victim
+immediately, each individual mushroom will ex-
+plode in the next round causing 1d2 points of
+damage each.
+
+
+Lava Weird
+No. Enc: 1
+Alignment: Chaotic
+Movement: Special
+Armor Class: 4
+Hit Dice: 8
+Attacks: 1
+Damage: pseudopod (d8)
+Special: grab&pull, constrict(d8+d6fire), immune fire, 2x cold
+Save: F8
+Morale: 12
+Hoard Class: XIV, XIII, XII
+XP: 700
+A lava weird appears as a large pseudopod that
+emerges from a pool of lava. This appendage
+looks like a snake at first glance but does not pos-
+sess eyes or a mouth.
+
+A lava weird attacks by bashing opponents with
+its appendage for 1d8 points of damage. On a
+successful hit, the lava weird has grabbed a PC
+and will attempt to pull the victim back into its la-
+va pool. A successful save (Paralyze) will break the
+hold. Each round thereafter the held victim auto-
+matically takes 1d8 points of damage of python-
+like constricting damage plus 1d6 points of fire
+damage. A lava weird will normally take 2 rounds
+to pull an opponent into its lava pool.
+Once immersed in the lava pool, victim is dead .
+
+A lava weird is
+immune to fire damage and takes double dam-
+age from cold-based attacks.
+
+##Leech, Giant
+##No. Enc: 1d4
+##Alignment: Neutral
+##Movement: 120’ (40’)
+##Armor Class: 7
+##Hit Dice: Varies
+##Attacks: 1
+##Damage: 1d6
+##Save: Varies
+##Morale: 10
+##Hoard Class: None
+##XP: 75 per Hit Die
+##Giant leeches are 4’ long, brown or green, and
+##slimy. They live in marshy terrain and other bodies
+##of stagnant water.
+##
+##When a giant leech hits in combat, it latches onto
+##a victim with its round barbed mouth, and drinks
+##1d6 hit points of blood from the victim each
+##round.
+##
+##Once attached, a giant leech will only release a
+##victim if it dies or the leech itself is killed. The hit
+##dice and damage of a giant leech varies (for ex-
+##ample, HD: 1-2/1d6, HD: 3-4/2-8, etc).
+
+
+##Lich-Dragon
+##No. Enc: 1
+##Alignment: Chaotic
+##Movement: 9, 24(flying)
+##Armor Class: -4
+##Hit Dice: 10 (80hp)
+##Attacks: 3
+##Damage: 1d8x2/2d10
+##Save: F10
+##Morale: 11
+##Hoard Class: XXI, XV, IV, V
+##XP: 6,666
+##A lich-dragon is the combination of a Lich and a Dragon.70-71).  It appears as
+##a giant skeletal dragon with small red orbs glowing dully in its eye sockets.
+##Small vestiges of membrane may remain on its wings but most of its skin and
+##tissue decayed long ago.
+##
+##A lich-dragon is a powerful monster and can at-
+##tack opponents in several ways. Its breath attack
+##is the same that it held in life. This attack can be
+##used up to three times per day. The damage in-
+##flicted is the same as its current hit points. Victims
+##can save (Breath) for half damage.
+##
+##A lich-dragon can attack with a claw/claw/bite
+##routine that does 1d8/1d8/2d10 points of dam-
+##age. In addition, each successful attack does an
+##additional 1d6 of cold damage.
+##
+##These undead monsters also possesses a gaze at-
+##tack. If a character meets its glowing red orbs
+##s/he must save (Paralyze) or be immobilized for 10
+##rounds. A successful save will not require an addi-
+##tional save during that encounter.
+##
+##Lich-dragons can also cast spells. The exact spells
+##a lich-dragon possesses are subject to its dragon
+##type and the discretion of the Referee. They cast
+##at 10th level of magic use.
+##
+##They can Detect Invisibility, Clairaudience, and
+##Animate Dead at will. A lich-dragon can only be
+##harmed by +2 or better weapons and possesses a
+##30% magic resistance.
+##
+##A lich-dragon is also immune to cold-based, elec-
+##tricity, or death-related spells/attacks. Lich-
+##dragons cannot be turned by a cleric and they
+##radiate an aura of Fear (as per the magic-user
+##spell of the same name).
+##
+##All creatures of 4 HD or under will immediately
+##flee the sight of a lich-dragon with no saving
+##throw, All others must save at -2 or suffer the same
+##effect.
+##
+##A lich-dragon possesses the intelligence and the
+##memories it had in life. They often speak Com-
+##mon, Ancient Common, Dragon, and Black Tongue.
+##
+##They never sleep and thus, unlike living dragons,
+##cannot be caught unaware. Like all undead, they
+##are unaffected by mind-influencing spells.
+##Like all dragons, a lich-dragon is susceptible to
+##flattery.
+
+##Medusa, Greater
+##No. Enc: 1
+##Alignment: Chaotic
+##Movement: 90’(30’)
+##Armor Class: 3
+##Hit Dice: 8
+##Attacks: 2
+##Damage: Special
+##Save: F8
+##Morale: 12
+##Hoard Class: XVIII
+##XP: 550
+##A greater medusa appears like a standard medu-
+##sa but has the lower body of a giant rattlesnake.
+##Greater medusae prefer a solitary existence away
+##from civilization, and often lair in remote locations.
+##Their tail sounds like a rattlesnake and they possess
+##the innate spell ability of Sticks to Snakes.
+##In combat, the greater medusa prefers distance
+##attacks such as its gaze (save versus Petrify or be
+##turned to stone) or its shortbow (can shoot twice
+##per round). Her arrows are normally poisoned
+##(save or die). If forced into close melee, she will
+##attack twice per round with any two of the follow-
+##ing four options:
+##
+##1) Fangs (1d8 plus poison, save or die).
+##2) Shortsword (1d6).
+##3) The snakes of a medusa’s hair can also attack
+##(1d4 snakes) for 1d2 points of damage each (save
+##versus poison or die).
+##4) Tail Slam: 2d6 points of damage.
+##The blood of a medusa is poisonous and, if har-
+##vested and used within one week, will force a
+##struck opponent to save (Poison) or die. The fol-
+##lowing week, the blood will weaken considerably
+##and only provide an additional 1d6 damage be-
+##yond normal weapon damage before decom-
+##posing beyond use.
+##
+##The head of a greater medusa can also be har-
+##vested and used as a gaze attack for one week.
+##However, each time the head is used in this fash-
+##ion, there is a 15% chance that one of the snakes
+##will bite the user (save versus Poison or die). There
+##is also a 5% chance that PCs will accidentally meet
+##the gaze of the head (saving throw allowed) and
+##turn themselves into stone. The head can be used
+##in this fashion for one week.
+
+##Mongrelman
+##No. Enc: 2d6
+##Alignment: Neutral
+##Movement: 60’ (30’)
+##Armor Class: 6
+##Hit Dice: Varies
+##Attacks: Varies
+##Damage: Varies
+##Save: Varies
+##Morale: 8
+##Hoard Class: XX
+##XP: 10 per Hit Die
+##Mongrelmen are abominable creatures that pos-
+##sess the blood and body parts of many different
+##creatures.
+##
+##Mongrelmen are shunned by society and often
+##retreat to subterranean caves or dungeons to eke
+##out their existence. They are shy by nature (and
+##experience) and often find themselves enslaved
+##to a greater power.
+##
+##Mongrelmen live together in small groups where
+##the largest and strongest serves as a chieftain.
+##They are adept at mimicry and can imitate any
+##sound they have heard at will. They are also skilled
+##at camouflage and prefer to hide, or lure oppo-
+##nents into traps, instead of engaging in direct con-
+##flict.
+##
+##Their language consists of a mixture of human,
+##goblin, and orc words along with a mixture of an-
+##imal sounds. Mongrelmen also include ambient
+##environmental sounds in their language to allow
+##them to communicate without giving away their
+##position to others.
+##
+##The HD of mongrelmen varies and the dam-
+##age they inflict is subject to either weapon type
+##and HD (Examples: HD1-3: 1-6, HD4-6: 1-8, and
+##HD7-8: 1-10).
+
+
+Mummy of Zuul
+No. Enc: 1d4
+Alignment: Chaotic
+Movement: 60’ (20’)
+Armor Class: 3
+Hit Dice: 5+1
+Attacks: 1
+Damage: bash (d12+rot)
+Special: rot, magic to-hit, immune mental/elements
+Save: F5
+Morale: 12
+Hoard Class: XIX
+XP: 950
+A mummy of Zuul is a former priest of the chaos
+deity of the elements.
+
+They are similar to a standard mummy in all re-
+spects except they are immune to spells,
+spell effects, and weapon effects based on the
+four elements (fire, earth, water, air) and their de-
+rivatives (cold, frost, etc).
+
+Mummies of Zuul cal fire and can only be harmed by magical weapons. Like all
+undead, they are unaffected by mind-influencing spells.
+
+Mummy Lord
+No. Enc: 1
+Alignment: Chaotic
+Movement: 60’(20’)
+Armor Class: 3
+Hit Dice: 9 (Base)
+Attacks: 2
+Damage: 2 fists (d6+rot+blindness)
+Special: 1+ SoF, fear aura, spells, rot, immune mental, command undead, animate dead
+Save: F10
+Morale: 12
+Hoard Class: XXII
+XP: 4000
+A mummy lord is a unique form of undead. Mum-
+my lords were powerful clerics in life and have sur-
+vived for centuries in a state of undeath.
+Mummy lords can command undead below their
+HD at will and can Animate Dead 2/day
+Mummy lords are able to speak, although they
+rarely choose to do so, and are highly intelligent.
+
+A mummy lord appears in burial wraps like most
+mummies. However, they often choose to wear
+the symbols of their god in the form of religious
+necklaces or headdresses that distinguished them
+as high priests in life.
+
+Mummy lords prefer to use their fists to club oppo-
+nents for 2d6 points of damage. They radiate an
+aura of Fear and possess the cursed rotting touch of normal mum-
+mies.89).
+
+In addition, those that are touched by a mummy
+lord are immediately struck with blindness unless a
+save (Spells) is made. Like all undead, they are
+unaffected by mind-influencing spells.
+
+They will always have a group of normal mummy
+attendants and servants subject to their power
+and level. Mummy lords retain their clerical spell-
+casting abilities they held in life and possess a minimum wisdom of 19.
+
+======= ===== ========= =========== ========================
+Age     HD    AC        Fear Save   Attendants
+======= ===== ========= =========== ========================
+201-300 9     3         0           1d4+1
+301-400 10    2         -1          2d4+2
+401-500 11    1         -2          3d4+3
+501+    12    0         -3          4d4+4
+======= ===== ========= =========== ========================
+
+Necrolyte of Nurgal
+No. Enc: 1d2
+Alignment: Chaotic
+Movement: 120’ (40’)
+Armor Class: 3
+Hit Dice: 7
+Attacks: 1
+Damage: cold touch (d8)
+Special: 1+SoM, immune mental, spells
+Save: MU7
+Morale: 10
+Hoard Class: XVII
+XP: 570
+Necrolytes are magic-users devoted the cult of Nurgal who, by means of secret
+rituals and enchantments, have become undying.
+
+Despite their skin being pulled tightly over their
+skeletons, necrolytes are not technically a type of
+undead, at least not as the term is usually under-
+stood. Clerics have no power over necrolytes and
+thus cannot turn them.
+
+Like true undead, though, necrolytes are immune
+to mind-influencing spells. The cold touch of a
+necrolyte deals 1d8 points of damage, and all of
+these creatures can cast spells as if they were 7th-
+level magic-users (3/2/2/1). Many are also
+equipped with offensive magic items, such as
+wands.
+
+In return for the gift of immortality, necrolytes typi-
+cally guard locations of particular importance to
+the cult of Nurgal. They are often encountered
+(75%) with 1d4+2 crypt knights to serve as their
+personal escort.
+
+While acting as crypt guardians, they are free to
+continue their research into magic and occult
+lore, unfettered by the weaknesses to which all
+flesh is prone. Those who serve Nurgal faithfully
+might one day gain access to more powerful ritu-
+als that send them further down the path to
+apotheosis.
+
+##Necromancer of Set
+##No. Enc: 1d6
+##Alignment: Chaotic
+##Movement: 120’ (40’)
+##Armor Class: 7
+##Hit Dice: Varies
+##Attacks: 1
+##Damage: Varies
+##Save: Varies
+##Morale: 10
+##Hoard Class: XXI
+##XP: 21 per Hit Die
+##Necromancers are a faction of magic-users who
+##have occupied a portion of Barrowmaze in the
+##service of Set. They wear black hooded robes with
+##skull or half-skull masks over their face. Senior nec-
+##romancers stitch bones onto their robes and wear
+##jackal headdresses.
+##
+##For every 3 first level necromancers encountered,
+##there will be a mid-level mage of second, third, or
+##fourth level (d6: 1-2 second, 3-4 third, 5-6 fourth
+##level).
+##
+##First level necromancers can cast one spell from
+##the following list: Magic Missile, Shield, Protection
+##from Good. They are armed with a dagger and
+##wear no armor (AC 9). They carry 2-20gp and a
+##spellbook.
+##
+##Spells for necromancers beyond first level are sub-
+##ject to HD and the Referee. These magic-
+##users carry a staff and wear normal bracers with a
+##Dexterity bonus (AC 7). There is a 10% chance that
+##one of these two items is magical (+1). They carry
+##5-20pp and a spellbook.
+##
+##If a fourth level necromancer is present, there is a
+##25% chance that s/he controls a runic golem and
+##a charmed mongrelman scout.
+##
+##In addition, if a mid-level necromancer is present
+##roll a d6 and consult the following table to deter-
+##mine his/her undead entourage:
+##
+##===== ==================================
+##d6    Type
+##===== ==================================
+##1-2   2d6 Skeletons
+##3-4   1d8 Zombies
+##5     1d8 Sapphire Skeletons
+##6     1d3 Ghasts
+##===== ==================================
+
+Neb’Enakhet
+No. Enc: 1d6+2
+Alignment: Chaotic
+Movement: 20’ (10’)
+Armor Class: 7
+Hit Dice: 1+1
+Attacks: 3
+Damage: bites and claws (d4)
+Special: INT, teamwork, wail(Fear), turn as 3HD
+Save: F1
+Morale: 12
+Hoard Class: None
+XP: 5
+Neb’Enakhet are sacred, mummified cats placed
+in the tombs of the social elite.
+
+Neb’Enakhet are highly intelligent, and will often
+work together using complex tactics to drive off
+would-be tomb-robbers. In addition to direct at-
+tacks, a group of four or more Neb’Enakhet may
+howl and keen together, creating a hellish, ca-
+cophonous wail of Fear.
+
+These mummified cats are turned as 3 HD creatures.
+Despite their undead state, Neb’Enakhet retain a
+fondness for Nepeta cataria. The exact nature of
+the effect is subject to the Referee’s discretion.
+
+Phantom
+No. Enc: 1
+Alignment: Neutral
+Movement: Nil
+Armor Class: N/A
+Hit Dice: N/A
+Attacks: N/A
+Damage: sight causes Fear -2
+Special: incorporeal
+Save: Special
+Morale: N/A
+Hoard Class: None
+XP: Nil
+A phantom is a ghostly, residual, reoccurring im-
+age. A phantom is merely an image, an echo of
+life, and possesses no intelligence.
+
+Often mistaken for other forms of undead, a
+phantom remains close to the area of its death or
+remains. The phantom often details something of
+importance about its life or death.
+
+They cannot harm or be harmed. However, due to their ghostly visage those who
+gaze upon a phantom must make a saving throw (Spells) at a -2 penalty or run
+away There is a 50% chance fleeing PCs will drop whatever they are carrying.
+
+Poltergeist
+No. Enc: 1d2
+Alignment: Chaotic
+Movement: 10’
+Armor Class: 9
+Hit Dice: 4HD
+Attacks: Nil
+Damage: causes Fear
+Special: invisible, +1 magic/silver to-hit,
+Save: F1
+Morale: 12
+Hoard Class: None
+XP: 25
+The poltergeist is a vengeful incorporeal spirit that
+haunts the place of their death. They cannot be
+seen and may only be harmed by +1 or silver
+weapons.
+
+The poltergeist lashes out at those that disturb their
+rest by throwing physical objects equal to a mon-
+ster of 4 HD. A struck victim takes no damage
+but instead must save or panic and run hysterically in
+a random direction for 2d4 melee rounds. There is
+a 50% chance the victim will drop whatever they
+are holding while fleeing the poltergeist.
+
+Once a successful save is made a player need
+not save again during that encounter. Only the
+use of holy water or the authoritative pronounce-
+ment of faith by a cleric or paladin will force a
+poltergeist to retreat.
+
+
+Purple Moss
+No. Enc: 1
+Alignment: Neutral
+Movement: 0
+Armor Class: N/A
+Hit Dice: 2
+Attacks: 1
+Damage: suffocation
+Special: Sleep
+Save: F2
+Morale: Not Applicable
+Hoard Class: None
+XP: 45
+Purple moss is related to yellow mold.
+Purple moss can be destroyed by fire.
+
+This dark mold emits a sweet smell to a range of 10
+feet that has the same effect as the first level
+magic-user spell Sleep.
+
+Victims who fall asleep are quickly covered by the
+moss. Purple moss will cover a small creature in 1
+round and cover a human-sized creature in 2
+rounds. Creatures covered by purple moss will suf-
+focate in 1d4 rounds and are digested in 1d2
+hours by its acidic secretions.
+
+Pudding, Rot
+No. Enc: 1
+Alignment: Neutral
+Movement: 60’ (20’)
+Armor Class: 6
+Hit Dice: 8
+Attacks: 1
+Damage: pseudopod (2d8+disease)
+Special: disease pus squirt, fire causes noxious cloud, immune cold/elec
+Save: F8
+Morale: 11
+Hoard Class: None
+XP: 2000
+
+Rot puddings are dungeon scavengers. They sub-
+sist on carrion and thus are incubators for all forms
+of disease. They are a sickly yellow-brownish color
+and ooze pus from small orifices.
+Rot puddings are immune to cold and electricity.
+
+These puddings transmit their diseases in three
+ways – and each requires a save (Poison). First, if a
+pudding scores a hit its victim must save or be-
+come infected. Second, if the pudding is hit by a
+slashing weapon (sword, axe, etc), the wound will
+squirt pus at the attacker, requiring a save. If a rot
+pudding is burned by fire, the diseases it bears
+become airborne in a noxious cloud (10x10 foot).
+All those subject to the cloud must save or con-
+tract disease.
+
+Those who fail their save become infected and
+are wracked by shooting pain and Slowed.
+The victim’s body becomes
+warm and perspires profusely. During the victims
+next rest s/he will fall into a comatose state. The
+victim must make a final save (Poison) or die with-
+in 24 hours. If successful the s/he is reduced to 1 hit
+point and incapacitated. A Cure Disease spell will
+cure the infected character. Neutralize Poison
+merely allows reroll of victim’s save.
+
+
+Sandling
+No. Enc: 1d2
+Alignment: Neutral
+Movement: 60’ (20’)
+Armor Class: 3
+Hit Dice: 4
+Attacks: 1
+Damage: tendral (2d6)
+Special: water slows
+Save: F4
+Morale: 8
+Hoard Class: None
+XP: 100
+A sandling appears as a simple pile of sand. How-
+ever, they are semi-intelligent, territorial, and high-
+ly solitary creatures.
+
+They are easily provoked and attack by lashing
+out with tendril-like appendages of sand.
+If sandlings are exposed to a large quantity of wa-
+ter, they will be Slowed.
+
+##Sandman
+##No. Enc: 1
+##Alignment: Neutral
+##Movement: 10’
+##Armor Class: 3
+##Hit Dice: 4
+##Attacks: Sleep
+##Damage: none
+##Special: +1 magic to-hit, 20' sleep aura
+##Save: F4
+##Morale: 10
+##Hoard Class: X
+##XP: 400
+##A sandman looks like a slender humanoid made of sand. A sandman can radiate
+##a sleep aura within 20 feet as it chooses.  ic use. However, the number of HD
+##affected is unlimited. A +1 or better weapon is required to hit a sandman.
+
+Scorpion, Clockwork
+No. Enc: 1d4
+Alignment: Neutral
+Movement: 5’
+Armor Class: 2
+Hit Dice: 1
+Attacks: 3
+Damage: claws (d4) or stinger (poison)
+Special: silent/auto-surprise, 1 dose poison
+Save: F1
+Morale: 12
+Hoard Class: Nil
+XP: 100
+Relics of an age long past, clockwork scorpions
+are deadly magical constructs used to guard im-
+portant tombs or precious treasures.
+
+Clockwork scorpions strike quickly and are resilient
+to damage due to their bronze carapace. Often
+the first sign of their presence is the death cry of a
+foolish tomb-robber. Unlike the clockwork cobra,
+the clockwork scorpion is completely silent and
+emits no noise when moving. The clockwork scor-
+pion's stinger, located at the tip of its flexible tail,
+contains a single dose of lethal venom. Anyone hit
+by the stinger must save (Poison) or die. They
+range from six inches to one foot in length.
+Reproduced with kind permission of Sean Robson.
+
+Scorpion, Giant
+No. Enc: 1d6
+Alignment: Neutral
+Movement: 60’ (20’)
+Armor Class: 5
+Hit Dice: 2+2
+Attacks: 3
+Damage: 2 claws (d6) or stinger(poison)
+Special:
+Save: F2
+Morale: 12
+Hoard Class: XIX
+XP: 100
+Giant scorpions are approximately three feet long.
+They attack with their two pincers, each doing
+1d6 points of damage. They also use their poison
+stinger that requires a save (Poison) or be
+killed instantly.
+
+Scorpion, Huge
+No. Enc: 1d3
+Alignment: Neutral
+Movement: 90’(30’)
+Armor Class: 4
+Hit Dice: 4+4
+Attacks: 3
+Damage: 2 claws (d8), stinger (d4+posion)
+Special:
+Save: F4
+Morale: 12
+Hoard Class: XIX
+XP: 600
+Man sized, huge scorpions attack with their two pincers, each doing 1-8
+points of damage They also use their poison stinger that does 1d4 points of
+damage and requires a save (Poison) or be killed instantly. Huge scorpions are
+normally five to seven feet long.
+
+Skeleton, Black
+No. Enc: 1d4
+Alignment: Chaotic
+Movement: 60’ (20’)
+Armor Class: 4
+Hit Dice: 6
+Attacks: 1
+Damage: weapon (d10)
+Special: Fear scream, shield, immune mental/pierce, half slash
+Save: F6
+Morale: 12
+Hoard Class: VI
+XP: 400
+Black skeletons, or black bones, are the skeletal
+remains of mighty warriors infused with dark magic
+to make them stronger than a standard skeleton.
+Their bones glisten like black steel, and they bear
+the armor (chainmail and shield), weapons
+(longsword, hand axe, or mace), and equipment
+they carried in life.
+
+Small orbs of reddish light burn from their hollowed
+eye sockets. When they attack, they emit a hellish
+scream that causes Fear (as per the spell).
+Necromancers of Set often use black skeletons as
+their personal bodyguards. Like all undead, they
+are unaffected by mind-influencing spells.
+Skeleton,
+
+
+Skeleton, Exploding Bone
+No. Enc: 2d6
+Alignment: Chaotic
+Movement: 9
+Armor Class: 7
+Hit Dice: 1
+Attacks: 1
+Damage: 1d6
+special: immune mental/pierce, half slash, explode on death
+Save: F2
+Morale: 12
+Hoard Class: None
+XP: 30
+Exploding bone skeletons are an undead necro-
+mantic construct.
+
+Exploding bones look like regular skeletons, except
+for a black inverted triangle painted on their fore-
+head. They do not use weapons and have a
+slower movement rate.
+
+Upon reaching zero hit points, these skeletons ex-
+plode showering anyone within 5 feet with bone
+shards and causing 1d4 points of damage. Like all
+undead, they are unaffected by mind-influencing
+spells.
+
+
+Skeleton, Fossil
+No. Enc: 2d4
+Alignment: Chaotic
+Movement: 9
+Armor Class: 4
+Hit Dice: 2
+Attacks: 1
+Damage: 1d8
+Special: immune mental/pierce, half slash
+Save: F2
+Morale: 12
+Hoard Class: None
+XP: 26
+Fossil skeletons are often found in deep subterra-
+nean passages where limestone or mineralized
+water was in constant contact with bones.
+
+Fossilized skeletons are effectively made of rock
+and are harder to destroy than regular skeletons.
+In some instances, the fossilization process has
+been induced deliberately. Like all undead, they
+are unaffected by mind-influencing spells.
+
+
+Skeleton, Steel
+No. Enc: 1d2
+Alignment: Neutral
+Movement: 60’ (20’)
+Armor Class: -1
+Hit Dice: 8
+Attacks: 2
+Damage: 2 fists (d8)
+Special: 6+MR, magic to-hit, immune mental
+Save: F8
+Morale: 12
+Hoard Class: None
+XP: 2300
+At first glance, steel skeletons appears like a regu-
+lar skeletons and are often mistaken as such.
+Despite their outward appearance, they are not
+undead but rather golem-like constructs made of
+steel. Steel skeletons, therefore, cannot be turned.
+They attack twice per round with their fists each
+causing 1d8 points of damage. They can only be
+damaged by magical weapons and are 50% im-
+mune to magic.
+
+
+Skeleton Warrior
+No. Enc: 1
+Alignment: Neutral
+Movement: 60’ (20’)
+Armor Class: -1
+Hit Dice: 8-12
+Attacks: 1
+Damage: weapon (d10-d16)
+Special: Fear Aura, immune mental/pierce, half slash
+Save: as HD
+Morale: 12
+Hoard Class: XXII
+XP: 1600
+Once a proud fighter of great ability, a skeleton
+warrior appears as a skeleton draped in the tat-
+tered clothes they possessed in life. They are fight-
+ers of not less than 8th level of ability.
+
+A skeletal warrior exists in an undead state be-
+cause its soul was trapped in a golden circlet. The
+circlet exerts power over the skeleton warrior, and
+it is bound to obey the commands of its possessor.
+A skeleton warrior will unerringly quest to regain its
+circlet. Sages only speculate as to what happens
+when a skeleton warrior obtains the circlet. Some
+suggest the skeleton warrior simply crumbles and
+dies; others suggest it will bring the warrior back to
+life.
+
+Their skeletal visage radiates an aura of fear. All
+those with less than 4 HD must save (Spells) or
+be affected by the magic-user spell Fear. A skele-
+ton warrior cannot be turned. They are unaffect-
+ed by mind-influencing spells.
+
+Skeleton warriors cannot be destroyed. If reduced
+to zero hit points they merely collapse into a bone
+pile and will reconstitute themselves in 1d3 days.
+A skeleton warrior retains the weapon it used in
+life. These are often magical two-handed blades
+of repute (with at least a +2 bonus). Their exact
+detail is subject to the discretion of the Referee.
+
+
+Spider, Blood-Thirsty
+No. Enc: 1d4+1
+Alignment: Chaotic
+Movement: 30’
+Armor Class: 6
+Hit Dice: 2
+Attacks: 1
+Damage: bite (d6)
+Special: swarm, blood drain
+Save: F2
+Morale: 9
+Hoard Class: None
+XP: 50
+These spiders look similar to a giant black widow
+spider, with one exception. Instead of a red hour-
+glass design, a white patch - some say resembles
+a skull - is located on the ventral abdomen.
+These spiders do not have a poisonous bite, how-
+ever they possess an insatiable hunger for hu-
+manoid blood. When one blood-thirsty spider bites
+into humanoid blood, all others immediately con-
+verge on the wounded and will attempt to bite
+(1d6) and then gorge themselves until the victim
+has been drained (1d6 points of draining per
+round). Their webs are inflammable.
+
+
+Daughter of Gaxx
+No. Enc: 1d3
+Alignment: Chaotic
+Movement: 60’ (20’)
+Armor Class: 8
+Hit Dice: 3
+Attacks: 1
+Damage: fist (2d4 + disease + rotgrubs)
+Special: 40' Fear, 2hp regen on death, turn as 5HD, immune mental
+Save: F4
+Morale: 12
+Hoard Class: None
+XP: 500
+
+These hideous, rotting undead creatures look like grisly cadavers infested
+with wiggling Rot Grubs that squirm in and out of their decaying bodies.  They
+attack with their fists for 2d4 points of damage. With each hit there is
+a 10% chance that the victim will contract a flesh eating disease (every
+2 months permanently lose 2 Constitution points until death at zero). This
+disease can only be reversed magically via Cure Disease. The disease counter-
+acts all other magical healing such as cure spells.  Moreover, with each hit
+Rot Grubs may (50%) burrow into a struck character. If so, consult the entry
+for Rot Grubs. If the Rot Grubs kill the character they will rise in 1d3 days
+as a Son or Daughter of Gaxx.
+
+These undead radiate a constant aura of fear 40’.  There is a 50% chance
+fleeing PCs will drop whatever they are carrying.
+
+Sons and Daughters of Gaxx regenerate 2 hit points per round even after being
+reduced to zero hit points. They can only be destroyed by holy water, acid, or
+fire. Sons and Daughters are treated as 5 HD monsters on the turning undead
+table.
+
+
+Son of Gaxx
+No. Enc: 1d3
+Alignment: Chaotic
+Movement: 60’ (20’)
+Armor Class: 8
+Hit Dice: 3
+Attacks: 1
+Damage: 2d4 + disease + rotgrubs
+Special: 40' Fear, 2hp regen on death, turn as 5HD
+Save: F4
+Morale: 12
+Hoard Class: None
+XP: 500
+
+These hideous, rotting undead creatures look like grisly cadavers infested
+with wiggling Rot Grubs that squirm in and out of their decaying bodies.  They
+attack with their fists for 2d4 points of damage. With each hit there is a 10%
+chance that the victim will contract a flesh eating disease (every
+2 months permanently lose 2 Constitution points until death at zero). This
+disease can only be reversed magically via Cure Disease. The disease
+counteracts all other magical healing such as cure spells.  Moreover, with
+each hit Rot Grubs may (50%) burrow into a struck character. If so, consult
+the entry for Rot Grubs. If the Rot Grubs kill the character they will rise in
+1d3 days as a Son or Daughter of Gaxx.
+
+These undead radiate a constant aura of fear 40’.  There is a 50% chance
+fleeing PCs will drop whatever they are carrying.
+
+Sons and Daughters of Gaxx regenerate 2 hit points per round even after being
+reduced to zero hit points. They can only be destroyed by holy water, acid, or
+fire. Sons and Daughters are treated as 5 HD monsters on the turning undead
+table.
+
+
+Spectral Dead
+No. Enc: 1d12
+Alignment: Chaotic
+Movement: 30’
+Armor Class: 2
+Hit Dice: 4
+Attacks: 1
+Damage: weapon (d8+d4cold)
+Special: 8+MR, magic to-hit, incorporeal, immune mental
+Save: F4
+Morale: 12
+Hoard Class: None
+XP: 150
+The spectral dead are the incorporeal spirits of
+warriors interred in Barrowmaze long ago. They
+have heard the call to rise that emanates from
+The Tablet of Chaos, but their physical remains
+have disintegrated to dust. With no bones to oc-
+cupy, these vengeful spirits wander Barrowmaze
+aimlessly, particularly in the areas close to The
+Tablet. Their sole purpose is to destroy the living.
+They possess 30% resistance to magic and can
+only be hit by magical weapons. The appearance
+of their weapons varies, but all do 1d8 point of
+damage plus an additional 1d4 cold damage.
+Like all undead, they are unaffected by mind-
+influencing spells.
+
+
+Human, Tomb-Robbers
+No. Enc: 2d4+4
+Alignment: Chaotic
+Movement: 120’ (40’)
+Armor Class: 8
+Hit Dice: 1
+Attacks: 1
+Damage: Weapon type.
+Save: F1
+Morale: 8
+Hoard Class: XX
+XP: 10
+The tomb-robbers found in Barrowmaze are usual-
+ly seedy criminals or desperate men looking to
+make a few quick gold pieces by recovering
+grave goods from the dungeon.
+
+Half of these men are armed with clubs and slings.
+They wear leather armor and carry shields. The
+other half are armed with shortswords and light
+crossbows. They wear chainmail and carry a
+shield.
+
+For every 10 tomb-robbers there will be a 2nd level
+fighter who serves as their leader. The leader
+bears a longsword, wears platemail, and carries a
+shield. It is possible (10%) that one of these items is
+magical (+1). Tomb-robbers possess hoard class
+XXII in camp.
+
+
+Zombie, Funeral Pyre
+No. Enc: 1d6
+Alignment: Chaotic
+Movement: 6 or 12
+Armor Class: 7
+Hit Dice: 2
+Attacks: 1
+Damage: fist (d8)
+Special: flames, immune mental/fire, zomb/skel
+Save: F2
+Morale: 12
+Hoard Class: None
+XP: 35
+Funeral pyre zombies, sometimes referred to as
+“Bombies” by veteran adventurers, are a strange
+necromantic construct. They appear as normal
+zombies except for black runes written on their
+decaying flesh.
+
+When hit for the first time, funeral pyre zombies will
+burst into flames. However, they take no damage
+from the fire. The intense heat burns off all flesh,
+and the zombies will continue to attack as 2 hit
+dice skeletons. These skeletons are immune to fire.
+Anything located within 5 feet of a zombie when
+lit will take 1d6 points of damage from the fire.
+Note there is a 20% chance that this fire damage
+will set off other funeral pyre zombies.
+Like other undead, they are unaffected by mind-
+influencing spells.
+
+
+Zombie, Juju
+No. Enc: 1d4
+Alignment: Chaotic
+Movement: 14
+Armor Class: 6
+Hit Dice: 4+4
+Attacks: 1
+Damage: fist (d8)
+Save: F4
+Morale: 12
+Hoard Class: None
+XP: 100
+Juju zombies are fearsome undead opponents.
+They are distinguished from other zombies by their
+dark amber-colored skin.
+
+Juju zombies are stronger, faster, and possess
+greater capacity for action than standard zom-
+bies. They can use missile weapons and climb like
+thieves of similar HD.
+
+Like all undead, they are immune to mind influ-
+encing spells. They are also immune to damage
+from electricity, Magic Missile, and cold. They take
+half damage from fire-based attacks.
+
+A Juju zombie can only be struck with a +1 or bet-
+ter weapon. Juju zombies both attack and are
+turned as 6HD monsters.
+
+
+Ravenous Dead
+No. Enc: 2d8
+Alignment: Chaotic
+Movement: 120’ (40’)
+Armor Class: 8
+Hit Dice: 3
+Attacks: 1
+Damage: bite (d6)
+Special: swarm, ravenous, immune mental, half dmg bludge/pierce
+Save: F2
+Morale: 12
+Hoard Class: Nil
+XP: 50
+Ravenous dead appear as regular zombies but
+have an insatiable desire to feed on the living.
+These undead abominations possess such an ap-
+petite that, upon wounding a humanoid oppo-
+nent, the remaining zombies will converge in a
+pack to feed immediately on the victim.
+
+If PCs engage in combat with previous wounds,
+the ravenous dead will seek to target injured
+characters first. Like all undead, they are unaf-
+fected by mind-influencing spells.

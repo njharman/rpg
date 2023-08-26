@@ -1,0 +1,889 @@
+## Note: edited from original
+## Vivimancer
+
+Hyper Healing
+Level: 2
+Duration: 1 turn per level
+Range: Touch
+Enhances recipient's natural healing, granting ability to heal physical
+damage at a greatly accelerated rate.
+The target burns energy at such a heightened rate that it is ravenously hungry
+when the spell's duration ends.
+
+Hyper Immune System
+Level: 2
+Duration: 1 turn per level
+Range: Touch
+Enhances recipient's immune response, granting two saving throws vs diseases.
+If the recipient is already suffering from a disease he gains a new saving
+throw immediately.
+The target burns energy at such a heightened rate that it is ravenously hungry
+when the spell's duration ends.
+
+Hyper Metabolism
+Level: 2
+Duration: 1 turn per level
+Range: Touch
+Enhances recipient' metabolic rate, quickly flushing toxins from the system,
+granting two saving throws vs poison, and a new saving throw against any
+existing poisons.
+The target burns energy at such a heightened rate that it is ravenously hungry
+when the spell's duration ends.
+
+Artificial Intelligence
+Level: 9
+Duration: Permanent cannot be dispelled
+Range: Touch
+This strange and powerful spell brings about the creation of a disembodied
+intelligence, which the caster can choose to imbue into an object or
+location. The Referee should roll 3d6 to determine the INT, WIS and CHA
+scores of the magically created mind, and on the following table.
+========= ================================================
+d20       Mind Characteristics
+========= ================================================
+**1–2**   Insane (harmless)
+**3**     Insane (psychotic)
+**4–5**   Unfathomable and alien
+**6**     Obsessed with a certain goal
+**7**     Impressionable – picks up personality
+          traits of those whom it first encounters
+**8**     Capable of learning to cast spells
+**9**     Claims to be a reincarnation
+**10–11** Has an innate detection power
+**12–13** Has an innate spell-like power
+**14**    Completely empty – can learn, but has no
+          pre-formed knowledge or personality
+**15**    Expert in an obscure field
+**16**    Driven and manipulative
+**17**    Hateful
+**18**    Replica of the caster's mind
+**19**    Roll twice ignoring 19+
+**20**    Roll three ignoring 20+
+========= ================================================
+
+Cannibalize
+Level: 3
+Duration: Instantaneous
+Range: Touch
+This gruesome spell enables caster to absorb the living tissue of other
+creatures to regenerate damage to their own body.  The caster's touch inflicts
+2d6 points of CON damage which manifests as a visible reduction in the volume
+of the victim's body; chunks of flesh or limbs may be ripped off, the target
+may become emaciated, etc. The caster instantly regenerates an equal number
+CON. The caster can't inflict nor heal more damage than they have sustained.
+The damage inflicted by this spell can generally only be healed by magical
+means.
+
+Chimera I
+Level: 3
+Duration: 2 rounds, +1 turn per level
+Range: 30'
+Over the course of two rounds a throbbing blob of flesh grows and mutates,
+rapidly forming into a bizarre hybrid creature which will do the caster's
+bidding.  It is genetically unstable, and will dissolve into a pool of
+protoplasm when the spell's duration expires.
+The mutant creature has 2d4 HD and a movement rate of 30'. Its form, armor
+class and abilities are determined by consulting the following tables. The
+Referee and player are free to add any further descriptive details desired.
+====== ============ ====================
+d12    Body Type    AC
+====== ============ ====================
+**1**  Fungoid      AC 12
+**2**  Mossy        AC 12
+**3**  Transparent  AC 12
+**4**  Worm-like    AC 12
+**5**  Blubbery     AC 14
+**6**  Furry        AC 14
+**7**  Ooze-like    AC 14
+**8**  Segmented    AC 14
+**9**  Ribbed       AC 16
+**10** Serpentine   AC 16
+**11** Insectoid    AC 18
+**12** Scaly        AC 18
+====== ============ ====================
+====== ============ ====================
+d10    Form         Attack
+====== ============ ====================
+**1**  Frog         bite, 1d4
+**2**  Rat          bite, 1d4
+**3**  Bull         gore, 1d6
+**4**  Insect       pincer, 1d6
+**5**  Lizard       bite, 1d6
+**6**  Snake        bite, 1d6
+**7**  Spider       bite, 1d6
+**8**  Wolf         bite, 1d6
+**9**  Lion         claw, 1d8
+**10** Bear         rend, 1d8
+====== ============ ====================
+====== =====================================================
+d8     Head Special Attacks
+====== =====================================================
+**1**  None
+**2**  Blood sucking - attaches after a successful hit
+       and drinking 1d6hp automatically in following
+       rounds.
+**3**  Gaping maw - swallow whole on a natural 20.
+**4**  Giant tongue - A successful hit grapples, the
+       target is dragged to the mouth on the next round and
+       suffers automatic bite damage, 5' per 2HD
+**5**  Breath weapon causing 1d6 per 2HD, once per turn.
+**6**  Poisonous.
+**7**  Two heads, each able to attack once per round.
+**8**  Three heads, each able to attack once per round.
+====== =====================================================
+====== =====================================================
+d6     Appendages
+====== =====================================================
+**1**  Claws - two attacks.
+**2**  Many legs - very fast movement rate.
+**3**  Wings - can fly.
+**4**  Tentacles - 1d6 tentacles which can each grapple.
+**5**  Suckers or grippers - can climb walls.
+**6**  Springing - can jump 30' to attack as charge.
+====== =====================================================
+
+Chimera II
+Level: 4
+Duration: 2 rounds, +1 turn per level
+Range: 30'
+As |Chimera I|_ but may be used to create either a single monster with 2d4 + 2 HD,
+or two identical 2d4 HD creatures.
+
+Chimera III
+Level: 5
+Duration: 2 rounds, +1 turn per level
+Range: 30'
+As |Chimera I|_ but may be used to create either a single monster with 2d4 + 4 HD,
+or three identical 2d4 HD creatures.
+
+Detect Poison
+Level: 1
+Duration: Instantaneous
+Range: 30'
+Enables caster to detect poisons in/on a single object or creature, with a 5%
+chance per level of detecting the exact type of poison present.
+
+Devolution (reversible)
+Level: 5
+Duration: Permanent
+Range: 60'
+Causes a single target to undergo evolutionary regression, reverting to
+a primitive ancestral form and behaviour, save negates.  Generally the
+target's INT is greatly reduced, while its STR and CON are increased.  The
+reversed version of the spell, evolutionary leap, grants human-level
+intelligence to a target animal or plant.
+
+Divide Body
+Level: 3
+Duration: 1 turn per level
+Range: Self
+During the first turn of the spell's effect, the caster undergoes a horrific
+process of transformation, his body swells and mutates until a second body
+splits away. Leaving the caster with two separate and identical forms each
+with 1/2 caster's current hit points.  Each body can be controlled completely
+independently of the other, and both may engage in speech and spell-casting.
+As the two bodies share one mind, they effectively have a continuous
+telepathic link, sharing all knowledge, and experiencing everything which the
+other does.
+If either body is killed while the spell is in effect, the remaining body must
+make a save or fall unconscious for 2d6 turns.  When the spell comes to an end
+one of the two bodies (chosen at random) weakens and dies. If the bodies are
+close any remaining hit points may be reabsorbed, otherwise they are lost.
+
+Divide Mind
+Level: 5
+Duration: 1 turn per level
+Range: Touch
+Allows caster to imbue a fragment of his living consciousness into another
+being, save negates.  The caster experiences everything the target does, in
+addition to the perceptions of his own body, and is able to communicate
+telepathically with the target.
+The caster may also attempt to assert control over target's body.  Chance is
+based on HD and duration (or time until another check must be made) on INT.
+Only control over its body not access to the target's mind is provided.
+If the target dies, the caster must save or fall unconscious for 1d6 turns.
+If the caster dies, a successful save indicates that the caster's mind has
+taken refuge in the target and continues to exist beyond the normal duration
+of this spell.
+
+Drone
+Level: 2
+Duration: Special
+Range: 120'
+Causes a single humanoid creature to become a bound drone of the caster,
+mimicking the organisational structure of hive insects. The effects are
+similar to |Charm Person|_, except the drone generally defers its own opinions and
+goals to that of the caster, and takes on an odd, mindless manner when not in
+the presence of its master or carrying out his instructions.  The victim gains
+same saves as |Charm Person|_.
+
+Hive Mind
+Level: 4
+Duration: 1 turn per level
+Range: Unlimited
+Caster may communicate telepathically with, see through the eyes of, hear
+through the ears of any creatures (one at a time) who are currently bound
+under the effects of their |Drone|_.
+
+Hive Control
+Level: 6
+Duration: 1 turn per level
+Range: Unlimited
+Enables caster to take control over the body of any creatures (one at a time)
+who are currently bound under the effects of their |Drone|_.
+
+Edibility (reversible)
+Level: 1
+Duration: Permanent
+Range: Touch
+Transforms a quantity of inedible plant or animal matter into edible and
+nourishing food.  Enough to feed one human for a day is transformed per caster
+level.
+
+Egg of Life
+Level: 6
+Duration: Permanent cannot be dispelled
+Range: 10' per level
+A single egg (from any bird or reptile) cracked open and spilled onto the
+ground, causes a chain reaction of magical growth to occur. Over the course of
+the following turns a panoply of life springs into existence within the area
+of effect, creating a full habitat complete with plants, insects and small
+animals as chosen by the caster.
+
+Explosive Growth
+Level: 6
+Duration: Special
+Range: 120'
+A single target grows at an alarming rate, save negates.  The maximum size is
+maintained after the 7th round for one round per caster level above 12.
+Subsequently the target will shrink one step per round.  Clothes or armor worn
+by the affected creature are destroyed in the first round.
+======== ======== ========
+Round    Height   Damage
+======== ======== ========
+1st      10'      1d6
+2nd      12'      2d6
+3rd      14'      3d6
+4th      16'      4d6
+5th      18'      5d6
+6th      20'      6d6
+7th      22'      7d6
+======== ======== ========
+
+Extinction
+Level: 9
+Duration: Instantaneous
+Range: 240'
+Brings about the instantaneous death of all creatures from a single named
+species within range, no save.  Magical creatures and those with greater
+HD than caster are not affected.
+
+Flesh Blast
+Level: 6
+Duration: Up to 6 rounds
+Range: 60'
+The living tissue of a single target swells, bulges and pulsates causing 2d6
+points damage per round, accompanied by agonising pain, preventing the target
+from performing any actions, including movement.
+After 6 rounds, or immediately if the target dies, the target's swollen flesh
+fatally explodes outwards in a radius of 20' dealing 6d6 damage, save for 1/2.
+If target saves, they avoid the fatal explosion and are able to resist the
+pain and act.  However the target still suffers damage from the process.
+Creatures with more HD than caster, or those of a magical nature, are immune
+to this spell.
+
+Fungal Growth
+Level: 2
+Duration: Permanent
+Range: 60'
+A patch of livid mutant fungus erupts in a 10' area as indicated by the
+caster. The growth is formed of a wide variety of species of mushrooms and
+molds, of diverse form and color.  Contained within the patch are 1d4
+monstrous fungi, selected by the Referee; e.g. Shriekers, Violet Fungi, Giant
+Death Caps or Monstrous Fly Agarics.
+
+Genesis
+Level: 7
+Duration: Permanent cannot be dispelled
+Range: 30'
+Instantly conjures 2HD of creatures per level of the caster in any combination
+of species. The creatures are typical examples of their race, and will follow
+their natural behaviour not being controlled by caster.
+Alternatively, may be used to create a single individual of a completely new
+species. Anything the caster can imagine is possible, up to 1HD per level of
+the caster.
+
+Hibernate
+Level: 3
+Duration: Up to 6 months
+Range: Touch
+Puts one mammalian creature into a deep sleep wherein its metabolism is
+reduced to the barest minimum, save negates. The target can survive in this
+way without food or water for up to 6 months.  During its hibernation the
+creature can be awakened by force.
+
+Immunity to Disease
+Level: 3
+Duration: 1 turn per level
+Range: Touch
+Provides complete immunity to all forms of disease to 1 creature per
+caster level.
+
+Immunity to Poison
+Level: 4
+Duration: 1 turn per level
+Range: Touch
+Provides complete immunity to all forms of poison to 1 creature per
+caster level.
+
+Impregnate
+Level: 7
+Duration: Permanent cannot be dispelled
+Range: Touch
+Provides an arcane means of bypassing the norms of
+sexual reproduction.
+The spell must be cast twice; firstly on the male, and again (within 24 hours)
+on the female. In both cases the spell takes the form of an hour long ritual,
+during which the target must be within touch range of the caster. The ritual
+requires the use of rare herbs and ointments costing 500sp per casting.  The
+parents may be of any species, and in this manner it is possible to create
+unusual hybrids.
+
+Life Cycle
+Level: 4
+Duration: Permanent
+Range: Touch
+Causes the advancement of a single target's life cycle, save to negate.  The
+target rapidly ages to next "age bracket".  Alternatively, for creatures which
+have a series of one or more distinct life phases, the creature may be
+advanced immediately to the next phase.  So, for example, an egg may be caused
+to hatch, a caterpillar to pupate, or fetus to be born.
+
+Devolution, Mass (reversible)
+Level: 8
+Duration: Permanent
+Range: 60'
+Causes all creatures of a single named species in range to be affected by
+|Devolution|_, including possibly the caster.
+
+Mutation, Mass
+Level: 9
+Duration: Permanent cannot be dispelled
+Range: 60'
+As |Mutate|_, to all creatures within range, including the caster.
+
+Mutate
+Level: 6
+Duration: Permanent cannot be dispelled
+Range: Touch
+Causes a random alteration to the target's genetic structure, save negates.
+Use of this spell risks a fatal modification of the target's genetic
+structure, and entails a roll against transformative shock.
+
+Natural Attack
+Level: 1
+Duration: 6 turns
+Range: Touch
+Target develops some form of natural weapon, such as clawed hands or a fanged
+bite, doing d8 base damage.
+
+Natural Attack, Improved
+Level: 3
+Duration: 6 turns
+Range: Touch
+Target develops natural weapons as |Natural Attack|_ except the spell grants
+two attacks per round with d10 base damage die.
+
+Parasitic Implantation
+Level: 6
+Duration: Permanent
+Range: Touch
+With a subtle touch the caster infects the target with a magical parasite,
+which will grow inside its host, save negates.  For the first 1d6 days after
+infection, no noticeable effects occur. After this period, the
+parasite begins to cause one of the following effects, chosen by the caster at
+the time of casting.
+
+**Spying**: The parasite sends its target's sensory experiences to the caster
+telepathically.
+
+**Geas**: As |Geas|_, except that the target is not consciously aware of with
+what it is tasked. Instead it receives a series of sub-conscious urges pushing
+it in the desired direction. If the task is completed the parasite dies.
+
+**Death**: Target must save once every 24 hours or meet his doom.
+
+**Suggestion**: The parasite provides the caster great influence over the
+target, allowing him to make a suggestion (as per spell) to the target once
+per day.
+
+##Polyvorousness
+##Level: 2
+##Duration: Permanent
+##Range: 30'
+##Alters the dietary preferences of a single living creature, save negates
+##A carnivorous creature targeted by this spell will lose any natural weapons
+##such as teeth and claws, and become docile in nature, only using violence to
+##defend itself. Males may grow horns which can be used to inflict 1d6 damage.
+##A herbivore, on the other hand, will develop the ripping teeth and claws of
+##a meat eater, capable of inflicting 1d6 damage, and take on an aggressive
+##predatory nature.  Creatures such as humans which are naturally omnivorous can
+##be pushed to one extreme or the other.
+
+Regeneration
+Level: 3
+Duration: 1 round per level
+Range: Self
+The caster regenerates 1 CON per round.  Even if "dead", caster will continue
+to regenerate damage, and may return to life (track negative CON). But won't
+reattach or regrow limbs.  At end of spell's duration caster rerolls HD.
+
+Regeneration, Greater
+Level: 4
+Duration: 1 round per level
+Range: Self
+As |Regeneration|_, except that the caster regenerates at the faster rate of
+3 CON per round.  Additionally, limbs can be reattached or regrown.
+
+Regeneration, Extraordinary
+Level: 5
+Duration: 1 round per level
+Range: Self
+Caster is immune to all physical damage, poison and disease for the
+duration.  All damage is regenerated at a startling rate; wounds heal over
+instantly, severed limbs regrow, and so on.
+
+Regenerative Pupation
+Level: 4
+Duration: Permanent cannot be dispelled
+Range: Self
+Similar to the |Transformative Pupation|_. After d6 week long pupation all
+physical damage, disease, stat loss and the like are healed.  In addition, the
+caster becomes 2d6x years younger.
+
+Transformative Pupation
+Level: 6
+Duration: Permanent cannot be dispelled
+Range: Self
+The caster can permanently alter his physical form to that of any humanoid
+race of approximately equal size.  Requires the possession of a large quantity
+of magical silk. During a 3 hour ritual the caster becomes entwined within the
+silken threads and enters a pupa-like state. After 1d6 weeks, caster emerges.
+The exact appearance of new form can be chosen, including sex, height, weight;
+eye, skin and hair color and facial appearance.  Even mimicking the appearance
+of another.  It is also possible redistribute the sum of his physical
+attributes (STR, DEX, CON) amongst themselves.
+
+Replicate Lifeform
+Level: 3
+Duration: Permanent
+Range: Touch
+Cast upon a small piece of matter taken from a living creature causes a new
+creature of the same species to grow instantly from the genetic seed.  The
+newly grown creature is a typical example of the species from which the piece
+of source material was taken, it is not an exact recreation of the original.
+The replicated creature behaves as a typical adult of its species, but has no
+knowledge of complex behaviors which are typically learned over many years,
+such as language.
+
+Reptilian Metabolism
+Level: 1
+Duration: 1 day per level
+Range: Touch
+
+Modifies the metabolism of one creature per level to survive with one tenth of
+its normal food requirements.  However the target becomes far more susceptible
+to temperature, suffering a -4 penalty to saves against cold.
+
+Plant Metabolism
+Level: 2
+Duration: 1 day per level
+Range: Touch
+Modifies the metabolism of one creature per level to survive on sunlight and
+water.
+
+Dispel Shapechange
+Level: 2
+Duration: Instantaneous
+Range: 60'
+Cancels a transmorphic or shape-changing effect, this spell causes the
+transformation to end and the target to return to its natural form.  Magic
+must be overcome as |Dispel Magic|_.
+
+Shape Animal
+Level: 5
+Duration: Permanent
+Range: Touch
+Forms an existing piece of living animal matter into any shape that suits the
+caster's purpose, save negates. Fine detail isn't possible. A total volume of
+3' cubed, +1' cubed per level may be shaped.
+
+Skin Transformation
+Level: 1
+Duration: 6 turns
+Range: Touch
+Target's skin undergoes a rapid mutation and gains one feature chosen as the
+spell is cast: **Camouflage**: gains ability to change color to match its
+surroundings. The camouflage takes several rounds to adapt to a new situation,
+and is only effective for areas of the target's skin which are exposed.
+**Scales**: becomes hard and scaly, granting natural AC 16.  **Spines**: grows
+a mass of sharp spines which may be flung.  **Fur**: protection from freezing,
++2 vs cold saves.
+
+Spore Blast
+Level: 4
+Duration: 1 round per level
+Range: 240'
+Conjures a cluster of fungal spores which can be triggered to explode at any
+time in the spell's duration causing 1d6 damage to all creatures within 10'.
+They must also save or die from choking in d6 rounds.
+
+Spore Cloud
+Level: 1
+Duration: 2d6 rounds
+Range: 60'
+Conjures a 10' cloud of sickly yellow mold spores.  Creatures within the
+cloud are overcome with coughing and choking, unable to attack, speak or
+perform any action more complex than staggering or crawling at half movement,
+save negates.
+
+Staunch Blood Flow (reversible)
+Level: 2
+Duration: Permanent cannot be dispelled
+Range: Touch
+Stops death from blood loss, maybe heals some damage.
+
+Survival of the Fittest
+Level: 8
+Duration: Instantaneous
+Range: 60'
+This dangerous spell causes **all** living creatures in range with less HD
+than caster, but including the caster, to save or die.
+
+Transfer Pregnancy
+Level: 6
+Duration: Permanent cannot be dispelled
+Range: Touch
+This sinister spell effects the transference of an unborn child from its
+mother to the womb of another female. Females of any species can be
+affected, and both the original and the receiving mother must be present.
+The casting requires an hour-long ritual, and the expenditure of 500sp
+of incense and oils, including a glowing blue balm which must be applied
+to the body of the original mother.
+
+Vats of Creation
+Level: 8
+Duration: Permanent cannot be dispelled
+Range: Touch
+With the use of a special laboratory, the caster is able to create any
+lifeform which he can dream up.  In general the caster can choose the
+appearance of the lifeform, though attempts to exactly replicate an existing
+individual are 90% likely to fail.  The process takes 2d4 weeks, during which
+the new lifeform grows in a vat of liquid. Creatures of animal or plant
+intelligence of up to one HD per caster level can be grown with ease. The
+creation of creatures of greater intelligence may be attempted, but is
+somewhat elusive.
+If the caster succeeds at creating an intelligent lifeform, he is also able to
+pre-determine its personality and disposition, although there is a 10% chance
+of this going awry.
+
+Venom
+Level: 2
+Duration: Instantaneous
+Range: Special
+Envenoms a single cutting or piercing weapon. Any creature damaged by the
+poisoned weapon must save or suffer 2d6 damage for the next two rounds.
+Alternatively the caster can use this spell to emit a poisonous spray within
+a 45 degree arc, and to a maximum range of 10'. Affected creatures must save
+or suffer d6 points of poison damage for two rounds.
+
+Venomous Blood
+Level: 5
+Duration: 1 turn per level
+Range: Self
+The caster's blood mutates and becomes venomous. Any creature
+attacking the caster with a bite attack must save vs poison or die. The
+caster's blood can also be used to envenom weapons – one weapon per
+CON worth of blood extracted.
+
+Virus
+Level: 6
+Duration: 4 rounds, +1 round per level
+Range: Touch
+
+A single target which the caster touches is infected with a magical virus,
+save to negate.  The target also becomes a carrier of the magical virus and
+can spread it to any other beings which it comes into physical contact with
+(including engaging in combat).  The effects of the virus are one of the
+following.
+**Rage**: wild frenzy of aggression,
+relentlessly attacking the nearest creature.
+**Confusion**: as the spell.
+**Transformation**: victims are affected by a short-lived polymorph,
+transforming into a creature of up to 4 HD chosen by the caster.
+
+Vitality Surge
+Level: 1
+Duration: Permanent
+Range: Touch
+The target may loose one CON to re-roll Hit Dice.
+
+Wall of Thorns
+Level: 3
+Duration: 1 turn per level
+Range: 60'
+Conjures a barrier of very tough, pliable, tangled brush bearing needle-sharp
+thorns as long as a human finger.  The caster may create a number 10' cubes
+equal to caster level.
+
+Xenogamy
+Level: 7
+Duration: Permanent
+Range: Touch
+Two living creatures must be selected and contained within a laboratory for
+a period of 2d4 weeks. During this period the two creatures gradually begin to
+merge into a single being. Each week there is a 10% chance that the hybrid
+creature will die.
+If creatures of greater than animal intelligence are melded with the spell,
+the resulting monstrosity has a 90% chance of being utterly insane.
+
+Animal Growth
+Level: 3
+Duration: 1 hour per level
+Range: 60'
+Same as Magic-user spell of same name.
+
+Anti-Plant Ward
+Level: 5
+Duration: 1 turn per level
+Range: 0
+Conjures an immobile 10' radius invisible barrier that protects against
+attacks by plant creatures, animated plants, magical plants, or missiles of
+plant material, e.g. wood.  Offensive action by those warded causes barrier to
+instantly dissipate.
+
+Anti-Animal Ward
+Level: 6
+Duration: 1 turn per level
+Range: 0
+Conjures an immobile 10' radius invisible barrier that protects against mêlée
+and ranged attacks by ordinary animals. Including giant animals, humans, ogres,
+etc. But not any form of magical creature, undead, demons, or most creatures
+from other planes of existence. Offensive action by those warded causes
+barrier to instantly dissipate.
+
+Barkskin
+Level: 2
+Duration: 1 turn per level
+Range: Touch
+Barkskin toughens a creature's skin.  Providing +2 to AC and +2 to saves vs
+physical effects.
+
+Charm Animal
+Level: 2
+Duration: Special
+Range: 30'
+As |Charm Person|_ but may be used to charm normal and giant animals, including
+intelligent animals, but not "people".
+
+Commune with Nature
+Level: 5
+Duration: Special
+Range: ½ mile radius per level
+The caster becomes one with nature, attaining knowledge of the surrounding
+territory. The caster may gain knowledge of a fact per caster level from among
+the following subjects: the ground or terrain, plants, minerals, bodies of
+water, people, general animal population, presence of woodland creatures,
+presence of powerful unnatural creatures, or even the general state of the
+natural setting. It takes 1 turn to cast this spell.
+
+Detect Snares and Pits
+Level: 1
+Duration: 1 hour per level
+Range: 30'
+In the wilderness, detects simple pits, deadfalls, and snares as well as
+simple mechanical traps.  In a dungeon or other below ground environment, the
+caster may only detect simple pits.
+
+Entangle
+Level: 1
+Duration: 1 turn
+Range: 80'
+Grasses, weeds, bushes, and even trees wrap, twist, and entwine about
+creatures in a 20' radius, holding them fast.
+
+Hold Animal
+Level: 2
+Duration: 1 turn per level
+Range: 120'
+Holds 1 animal (including giant versions) per caster level, save negates.
+If less than 4 creatures are targeted, each saves at -1 per creature fewer.
+
+Hold Plant and Fungus
+Level: 3
+Duration: 1 turn per level
+Range: 120'
+Holds all forms of plant and fungus life, both intelligent and unintelligent.
+Held plant or fungus material is unmovable by magical animation or any other
+movement. Intelligent targets may save to negate.  The caster may affect up to
+70 square feet of terrain, or up to 4 intelligent/sentient/mobile creatures.
+If less than 4 creatures are targeted, each saves at -1 per creature fewer.
+
+Invisibility to Animals
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+Renders one target per level completely undetectable to normal and giant
+animals (also intelligent plants). If the target attacks any animals, his
+presence is revealed, but even then only to the individuals which were
+attacked.  Creatures with 5HD or more are allowed a save to "see past
+invisibility" and those with 9HD or more are never deceived.
+
+Locate Animals
+Level: 1
+Duration: 1 round/level, 1 turn/level outdoors
+Range: 60'/level, 1 mi/level outdoors
+Caster senses the direction (as the crow flies) towards the nearest specimen of
+a type of animal named when casting the spell.
+
+Locate Plants
+Level: 2
+Duration: 1 round/level, 1 turn/level outdoors
+Range: 60'/level, 1 mi/level outdoors
+Caster senses the direction (as the crow flies) towards the nearest specimen
+of a type of plant named when casting the spell.
+
+Pass without Trace
+Level: 1
+Duration: 1 hour per level
+Range: Touch
+One group may move through any type of terrain and leave neither footprints
+nor scent. Non-magical tracking of the targets is impossible.
+
+Passplant
+Level: 3
+Duration: 1 turn
+Range: 30'
+Creates a passage through vegetation, whether natural or magical. The passage
+is 10' deep per caster level, 5' wide and 7' high.
+
+##Repel Vermin
+##Level: 2
+##Duration: 1 turn per level
+##Range: 0
+##Prevents all ordinary insects, rats, spiders, etc. from coming with a 10'
+##radius.  Were-rats and intelligent vermin-like creatures may save to enter
+##area.  But, this causes 1d6 hp damage to them.
+
+Repel Wood
+Level: 3
+Duration: 4 rounds per level
+Range: 0
+Pulsating 120' wide waves of energy roll away from the caster causing all
+wooden objects to be pushed 20' per caster level away. Very large, 30' dia,
+firmly fixed objects are not affected.  Other fixed objects will splinter and
+break, the pieces moving with the waves. Objects repelled at 40' per round.
+
+Snare
+Level: 2
+Duration: Special
+Range: Touch
+The snare can be made from any supple vine, a rope, or the like
+which blends into its surroundings (only 10% chance to detect).
+If a strong and supple tree is nearby, the snare can be fastened to it. The
+spell causes the tree to bend and then straighten when the loop is triggered,
+dealing 1d6 points of damage to the creature trapped and lifting it off the
+ground by the trapped limb or limbs. If no such tree is available, the snare
+simply tightens around the creature, causing it to be entangled.  The snare is
+magical and will restrain a victim for 12 hours. To escape, a trapped creature
+must be as strong as a giant to break the bonds.
+
+Creeping Doom
+Level: 6
+Duration: Until destroyed
+Range: 240'
+When the Creeping Doom is uttered, a 20' mass of centipedes, insects, and
+arachnids boils from the ground.  The swarm consists of (1d6+4)x100 individual
+bugs, each of which deals 1 point of damage and then dies. It moves at walking
+speed.
+
+Summon Animal I
+Level: 5
+Duration: Special
+Range: 1 mile per level
+The caster of the spell summons 1d8 ordinary animals (including giant types)
+of up to 4 HD per animal, if they are within range of the spell.  The caster
+may attempt up to three different animals before the spell is a failure.
+Summoned animals will serve the caster for a specific task, including
+fighting, aiding on a quest, or other goals that may be short term or
+relatively longer term. The caster may dismiss animals at any time.
+
+Summon Animal II
+Level: 6
+Duration: Special
+Range: 2 miles per level
+This spell is a more powerful version of Summon Animal I. A
+total of 2d8 animals of up to 4 HD may be summoned, or 1d6
+animals of up to 8 HD.
+
+Summon Animal III
+Level: 7
+Duration: Special
+Range: 4 miles per level
+This spell is a more powerful version of Summon Animal I. A
+total of 4d8 animals of up to 4 HD may be summoned, or 2d6
+animals of up to 8 HD, or 1d4 animals of up to 16 HD.
+
+Tree Stride
+Level: 2
+Duration: 1 turn per level
+Range: Self
+Caster may enter trees and move from inside one tree to inside another tree.
+While in a tree the caster can observe all that transpires around them. The
+trees entered must be of the same kind, must be living, and must have girth at
+least equal to the caster. For example, by moving into an oak tree the caster
+may choose to move into the furthest oak tree to the east, wherever that may
+be in range.
+=================== ====================
+Type of Tree        Transport Range
+=================== ====================
+Oak, ash, yew       600'
+Other deciduous     300'
+Other coniferous    200'
+All other trees     100'
+=================== ====================
+
+Plant Symbiosis
+Level: 4
+Duration: 1 day per level
+Range: Touch
+The caster is able to meld his physical body completely or partially with
+plants. While in this symbiotic state, the caster is nourished purely by the
+root systems of the host plants, heals faster. Caster may end the symbiosis
+at any time. But once ended it may not be resumed. May also |Transport via
+Plants|_ which ends this spell.
+
+Warp Wood
+Level: 2
+Duration: Permanent cannot be dispelled
+Range: 60'
+Causes wood to bend and warp, permanently destroying its straightness, form,
+and strength. A warped door springs open (or becomes stuck). A boat or ship
+springs a leak.  Warped ranged weapons are useless. The caster may warp
+a volume of approximately 15 square inches per caster level. For example, at
+first level the caster could warp four arrows or a short wooden handle.
+
+##Yeast Growth
+##Level: 1
+##Duration: Instantaneous
+##Range: 30'
+##This spell causes the radically accelerated and greatly augmented growth
+##of all naturally occurring yeast organisms within range. As yeast exists
+##virtually everywhere, the result is that all creatures, objects and surfaces
+##in range are rapidly engulfed in a slimy mass of frothing yeast. The yeast
+##itself is normal and harmless, and can be wiped off with some effort.
+##However all affected creatures suffer a 2 in 6 chance per round of
+##slipping over, and a -1 penalty to attacks until they are free of the yeast.
+##This spell can also be used to accelerate a process of yeast fermentation,
+##such as that used in beer brewing or bread making. Such processes can
+##be completed instantaneously with an application of this spell.

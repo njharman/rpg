@@ -1,0 +1,430 @@
+# List any fonts you would like to embed in the PDF here
+embeddedFonts: [
+        [FreeSans.ttf, FreeSansBold.ttf, FreeSansOblique.ttf, FreeSansBoldOblique.ttf],
+        [FreeSerif.ttf, FreeSerifBold.ttf, FreeSerifItalic.ttf, FreeSerifBoldItalic.ttf]
+        ]
+
+# Default page setup.  Can be overridden by including other
+# stylesheets with -s
+
+pageSetup:
+  size: null
+  width:  6in
+  height: 9in
+  margin-top: 0.5cm
+  margin-bottom: 0.5cm
+  margin-left:  0.5cm
+  margin-right:  0.5cm
+  margin-gutter: 0.25cm
+  spacing-header: 0
+  spacing-footer: 0
+  firstTemplate: coverPage
+
+# pageTemplates can be accessed with the .. raw:: pdf PageBreak command
+# frame [ left, bottom, width, height ]
+
+pageTemplates:
+  coverPage:
+    frames: []
+          [5%, 80%, 90%, 25%]
+          [0cm, 0cm, 49%, 80%]
+          [51%, 0cm, 49%, 80%]
+    showHeader: false
+    showFooter: false
+
+  spellList:
+    frames: []
+          [0cm, 97%, 100%, 5%]
+          [0cm, 0cm, 49%, 98%]
+          [51%, 0cm, 49%, 98%]
+    showHeader: false
+    showFooter: false
+
+  twoColumn:
+    frames: []
+        [0cm, 0cm, 49%, 100%]
+        [51%, 0cm, 49%, 100%]
+    showHeader: false
+    showFooter: false
+
+fontsAlias:
+  stdFont: FreeSans
+  stdBold: FreeSansBold
+  stdItalic: FreeSansOblique
+  stdBoldItalic: FreeSansBoldOblique
+  stdSans: FreeSans
+  stdSansBold: FreeSansBold
+  stdSansItalic: FreeSansOblique
+  stdSansBoldItalic: FreeSansBoldOblique
+  stdSerif: FreeSerif
+  stdSerifBold: FreeSerifBold
+  stdSerifItalic: FreeSerifItalic
+  stdSerifBoldItalic: FreeSerifBoldItalic
+  stdMono: Courier
+  stdMonoItalic: Courier-Oblique
+  stdMonoBold: Courier-Bold
+  stdMonoBoldItalic: Courier-BoldOblique
+
+linkColor: black
+
+styles:
+  base:
+    parent: null
+    fontName: stdSerif
+    fontSize: 10
+    leading: 10
+    leftIndent: 0
+    rightIndent: 0
+    firstLineIndent: 0
+    alignment: TA_LEFT
+    spaceBefore: 0
+    spaceAfter: 0
+    bulletFontName: stdFont
+    bulletFontSize: 6
+    bulletIndent: 0
+    textColor: black
+    backColor: null
+    wordWrap: null
+    borderWidth: 0
+    borderPadding: 0
+    borderColor: null
+    borderRadius: null
+    allowWidows: false
+    allowOrphans: false
+    hyphenation: false
+    kerning: true
+    underline: false
+    strike: false
+    commands: []
+
+  normal:
+    parent: base
+
+  bodytext:
+    parent: normal
+    spaceBefore: 4
+    spaceAfter: 6
+    alignment: TA_JUSTIFY
+    hyphenation: true
+    kerning: true
+
+  license:
+    parent: base
+    fontSize: 8
+    spaceBefore: 2
+    spaceAfter: 2
+
+  blockquote:
+    parent: bodytext
+    leftIndent: 20
+    rightIndent: 20
+    alignment: TA_LEFT
+    fontName: stdSerifItalic
+
+  lineblock:
+    parent: bodytext
+
+  line:
+    parent: lineblock
+    spaceBefore: 0
+
+  footer:
+    parent: normal
+    alignment: TA_CENTER
+
+  italic:
+    parent: bodytext
+    fontName: stdItalic
+
+  header:
+    parent: normal
+    alignment: TA_CENTER
+
+  bullet-list:
+    parent: bodytext
+    spaceBefore: 0
+    spaceAfter: 0
+    colWidths: [-5pt, null]
+    commands: []
+        [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+        [RIGHTPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+
+  bullet-list-item:
+    parent: bodytext
+    alignment: TA_LEFT
+    spaceBefore: 0
+    spaceAfter: 0
+
+  item-list:
+    parent: bodytext
+    spaceBefore: 0
+    spaceAfter: 0
+    colWidths: [10pt, null]
+    commands: []
+        [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+        [RIGHTPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+        [LEFTPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+
+  item-list-item:
+    parent: bodytext
+    spaceBefore: 0
+    spaceAfter: 0
+
+  fieldname:
+    parent: bodytext
+    alignment: TA_LEFT
+    fontName: stdSerifBold
+    keepWithNext: true
+    spaceBefore: 0
+    spaceAfter: 0
+    leading: 7
+
+  fieldvalue:
+    parent: bodytext
+    keepWithNext: true
+    spaceBefore: 0
+    spaceAfter: 0
+    leading: 7
+
+  field-list:
+    parent: bodytext
+    spaceBefore: 2
+    keepWithNext: true
+    colWidths: [16mm, null]
+    commands: []
+        [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+        [TOPPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+        [LEFTPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+
+  definition-list-term:
+    parent: normal
+    fontName: stdBold
+    spaceBefore: 2
+    keepWithNext: true
+
+  definition-list-classifier:
+    parent: normal
+    fontName: stdItalic
+    keepWithNext: true
+
+  definition:
+    parent: bodytext
+    firstLineIndent: 0
+    keepWithNext: true
+    spaceBefore: 0
+    colWidths: [10pt, null]
+    commands: []
+        [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+        [LEFTPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+        [BOTTOMPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+        [RIGHTPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+
+  heading:
+    parent: normal
+    fontName: FreeSansBold
+    keepWithNext: true
+    spaceBefore: 8
+    spaceAfter: 0
+
+  title:
+    parent: heading
+    fontSize: 200%
+    alignment: TA_CENTER
+    spaceBefore: 24
+    spaceAfter: 12
+
+  heading1:
+    parent: heading
+    fontSize: 150%
+    alignment: TA_CENTER
+
+  heading2:
+    parent: heading
+    fontSize: 110%
+    spaceAfter: 0
+
+  heading3:
+    parent: heading
+    fontSize: 100%
+    spaceBefore: 12
+    spaceAfter: 0
+
+  heading4:
+    parent: heading
+    fontSize: 100%
+
+  heading5:
+    parent: heading
+    fontName: stdSansBoldItalic
+
+  heading6:
+    parent: heading
+    fontName: stdSansBoldItalic
+
+  subtitle:
+    parent: title
+    spaceAfter: 0
+    fontSize: 70%
+
+  topic-title:
+    parent: heading3
+
+  admonition:
+    parent: normal
+    spaceBefore: 12
+    spaceAfter: 6
+    borderPadding: [16,16,16,16]
+    backColor: beige
+    borderColor: darkgray
+    borderWidth: 0.5
+    commands:[]
+           [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+
+  attention:
+    parent: admonition
+
+  caution:
+    parent: admonition
+
+  danger:
+    parent: admonition
+
+  error:
+    parent: admonition
+
+  hint:
+    parent: admonition
+
+  important:
+    parent: admonition
+
+  note:
+    parent: admonition
+
+  tip:
+    parent: admonition
+
+  warning:
+    parent: admonition
+
+  admonition-title:
+    parent: heading3
+
+  admonition-heading:
+    parent: heading3
+
+  attention-heading:
+    parent: admonition-heading
+
+  caution-heading:
+    parent: admonition-heading
+
+  danger-heading:
+    parent: admonition-heading
+
+  error-heading:
+    parent: admonition-heading
+
+  hint-heading:
+    parent: admonition-heading
+
+  important-heading:
+    parent: admonition-heading
+
+  note-heading:
+    parent: admonition-heading
+
+  tip-heading:
+    parent: admonition-heading
+
+  warning-heading:
+    parent: admonition-heading
+
+  literal:
+    parent: normal
+    spaceBefore: 4
+    fontName: stdMono
+    firstLineIndent: 0
+    hyphenation: false
+    wordWrap: null
+
+  aafigure:
+    parent: literal
+
+  table:
+    spaceBefore:4
+    spaceAfter:4
+    alignment: TA_CENTER
+    commands: []
+           [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+           [BOX, [ 0, 0 ], [ -1, -1 ], 0.25, black ]
+           [INNERGRID, [ 0, 0 ], [ -1, -1 ], 0.25, black ]
+           [ROWBACKGROUNDS, [0, 0], [-1, -1], [white,#E0E0E0]]
+           [TOPPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+           [BOTTOMPADDING, [ 0, 0 ], [ -1, -1 ], 1 ]
+
+  table-title:
+    parent : heading4
+    keepWithNext: false
+    alignment : TA_CENTER
+    fontSize: 100%
+
+  table-heading:
+    parent : heading
+    backColor : beige
+    alignment : TA_CENTER
+    valign : BOTTOM
+    borderPadding : 0
+    fontSize: 100%
+
+  table-body:
+    parent : normal
+    fontSize: 100%
+
+  linenumber:
+    parent: code
+
+  right:
+    parent: bodytext
+    alignment: right
+
+  center:
+    parent: bodytext
+    alignment: center
+
+  endnote:
+    parent: bodytext
+    alignment: TA_LEFT
+    commands: []
+          [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+          [TOPPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+          [BOTTOMPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+          [RIGHTPADDING, [ 0, 0 ], [ 1, -1 ], 0 ]
+    colWidths: [2cm, null]
+
+  option-list:
+      commands: []
+          [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+          [TOPPADDING, [ 0, 0 ], [ -1, -1 ], 0 ]
+      colWidths: [null,null]
+
+  footertable:
+      parent: table
+      commands: []
+      colWidths: [30%, 40%, 30%]
+
+  figure:
+    parent: bodytext
+    alignment: TA_CENTER
+    commands: []
+           [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+           [ALIGN, [ 0, 0 ], [ -1, -1 ], CENTER ]
+    colWidths: [100%]
+
+  figure-caption:
+    parent: bodytext
+    fontName: stdItalic
+    alignment: TA_CENTER
+
+  figure-legend:
+    parent: bodytext

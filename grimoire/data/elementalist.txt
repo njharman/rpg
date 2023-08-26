@@ -1,0 +1,396 @@
+## Note: edited from original
+## Elementalist
+
+Elemental Darts
+Level: 1
+Duration: Instantaneous
+Range: 20' per level
+Missiles of elemental energy dart from the caster's fingertip, automatically
+hitting and dealing d4+1 points of damage. One such missile per level of
+caster.
+
+Embue Element
+Level: 2
+Duration: Combat
+Range: Touch
+Enchants one object with elemental energy (Cold, Fire, Electricity, Acid,
+etc.) A weapon so enchanted deals elemental damage and can hurt creatures only
+affected by magical weapons.
+
+Flash Fire
+Level: 2
+Duration: 1 round
+Range: 40'
+Causes a 10' square area to suddenly erupt in flames inflicting 1d4 hp damage
+per caster level, and igniting combustibles.
+
+Create Water
+Level: 1
+Duration: Permanent cannot be dispelled
+Range: 10'
+Conjures 1 gallon per level of wholesome, tasty water. Just like clean rain water.
+
+Ice Bolt
+Level: 3
+Duration: Instantaneous
+Range: 180'
+This spell is similar to |Lightning Bolt|_, but with ice!
+
+Crystal Bolt
+Level: 3
+Duration: Instantaneous
+Range: 180'
+This spell is similar to |Lightning Bolt|_, but with shards of crystal.
+
+Fire Storm
+Level: 4
+Duration: 1 round
+Range: 10' per level
+This spell is similar to |Ice Storm|_ but with fire!
+
+Amalgam of Earth and Air
+Level: 6
+Duration: 1 turn
+Range: Special
+Conjures a large quantity of a supernatural substance possessing the qualities
+of both earth and air. This amalgam can be formed into any shape the caster
+desires, of a volume up to 10 cubic feet per caster level. The caster is able
+to determine the amalgam's properties from any of the following: solid or
+substanceless, heavy or weightless, breathable or suffocating.  The amalgam's
+form and properties can be altered incredibly quickly, with a mere thought
+from the caster, and he is able to move it up to 60' per round. Creatures
+inside the volume of the amalgam may, at the caster's option, suffer 3d6 hit
+points damage per round due to crushing or suffocation.  At the end of the
+spell's duration the amalgam disappears instantly.
+
+Amalgam of Fire and Water
+Level: 6
+Duration: 1 turn
+Range: Special
+Similar to |Amalgam of Earth and Air|_, this spell creates a substance which
+possesses the qualities of both fire and water. The properties which the
+amalgam can exhibit include any of the following: cold or hot, smothering or
+burning, falling or rising. The amalgam can cause up to 3d6 hit points damage
+per round to creatures inside its volume, due to extreme cold, heat or
+burning.
+
+Brimstone Monolith
+Level: 9
+Duration: 4d6 rounds
+Range: 30'
+This powerful and dangerous spell creates a short-lived dimensional rift,
+summoning forth the destructive powers of the elemental planes of fire and
+earth.  In addition to the dangers inherent in casting this spell, there is
+a 20% chance that the gaze of Imix is cast upon the caster. The
+attention of this being is seldom sympathetic.
+The incantations required to cast this spell are more complex than usual,
+taking several rounds to complete.  The casting of the spell cannot be
+disrupted by damage caused as a direct result of the spell's effects (from the
+earthquake or flames). However if the casting of the spell is interrupted in
+any other way, the effects described for any subsequent rounds do not occur.
+**1st round:** An earthquake occurs, as the 7th level spell, centred on the
+caster.
+**2nd round:** A monolith of brimstone rips through the fractured surface of
+the earth. The monolith is approximately 20' high and 10' in diameter. All
+creatures within 60' of the monolith, including the caster, suffer 2d6 hit
+points fire damage per round due to the searing heat and flames which surround
+it.
+**3rd round:** Upon the final round of the incantation, the dimensional gateway
+is opened, summoning forth violent elemental creatures (see table below). The
+summoned creatures are not under the caster's control, and are bent on causing
+as much destruction as possible.  The gateway allows travel both ways between
+the connected planes, thus it can be used as a means of gaining entry into the
+elemental planes of fire or earth.
+**4th and subsequent rounds:** monolith begins to shudder, emitting a deafening
+roar, and shooting out jets of magma and sheets of flame. Each round there is
+25% chance of a random target within 100' being hit by one of the monolith's
+emissions, causing 5d6 damage, save for 1/2.
+When the spell's duration comes to an end, the monolith recedes into
+the earth, all summoned creatures disappear, and the dimensional rift
+closes.
+======== ===================================================
+2d6      Summoning Results
+======== ===================================================
+**2**    Imix, *Prince of Evil Fire Creatures*\*.
+**3-5**  An efreeti and 1d4 8HD Lava\*\* or Fire Elementals.
+**6-8**  1d4 Flame Terrors\*\*.
+**9-11** 1d4 Flame Salamanders.
+**12**   A Flame Salamander, an Efreeti and 1d4 8HD Lava\*\*
+         or Fire Elementals.
+======== ===================================================
+\* see Fiend Folio.
+\*\* see TT
+
+Contact Elemental Spirit
+Level: 4
+Duration: 1 turn
+Range: 120'
+Awakens the latent elemental spirits which inhabit natural features such as
+lakes, rivers, great vistas, mountains and volcanoes.  The elemental is
+friendly to the caster but cannot serve in any way except to divulge
+information which is within its feasible sphere of knowledge.
+
+Elemental Cancellation
+Level: 2
+Duration: Instantaneous
+Range: 120'
+Similar to |Dispel Magic|_, this spell enables caster to dispel ongoing
+elemental-based magical effects.
+It may instead be used to banish a single creature native to the elemental
+planes back to their plane of origin.  Mindless or controlled elementals are
+automatically banished, but free-willed beings get save.
+
+Elemental Gate
+Level: 6
+Duration: Special
+Range: 30'
+Working in the same manner as |Gate|_, but can only be used to contact beings
+on the elemental planes.
+
+Elemental Portal
+Level: 8
+Duration: 6 turns per level
+Range: 30'
+Opens a 10' portal to one of the elemental planes as chosen by the caster.
+Allowing creatures to travel both ways.  The portal is permanent if created in
+a location where there is an abundance of the appropriate element – a volcano,
+an ocean, a deep cave, etc.
+
+Elemental Plane Protection
+Level: 5
+Duration: 1 day
+Range: Touch
+Grants 1 target per caster level the ability to survive the natural
+environmental hazards of one elemental plane. Gaining the ability to breathe
+and to move freely through the matter of the chosen plane.
+
+Firelight
+Level: 1
+Duration: 6 turns per level
+Range: Self
+Conjures forth a ball of flickering flame, which sheds light, but no heat as
+a torch 20' radius.  The caster may cause the flame to flare suddenly,
+dazzling any creatures within 30', save negates. Dazzled creatures suffer -2
+to attack rolls for 2 rounds. The caster is not affected by the flare, but his
+allies may be, unless warned to shut their eyes. After the firelight flares it
+disappears and the spell ends. Alternatively, it may be thrown 30' causing no
+damage but setting alight combustibles.
+
+Incinerate / Uncinerate
+Level: 2
+Duration: Special
+Range: 20'
+Cast as part of a ritual resulting in the transformation of an
+object into a pile of enchanted ashes which can later be reinstated with
+the reversed form of the spell.
+The affected non-living object need not be normally combustible.  The spell
+must be cast as the object is placed into a fire large enough to contain it,
+and the caster must continue the ritual until the fire has died down and the
+burned object has crumbled to ash. At this point the ashes should be collected
+and stored in a suitable container.
+At a later date, using the reversed form of the spell, the enchanted ashes can
+be transformed back into the original object as it existed before it was
+burned.  The reinstatement takes 1d6 rounds, during which time an eerie black
+fire surrounds the ashes, which causes 1d4 hit points damage to any creature
+in contact.
+
+Lasting Breath
+Level: 1
+Duration: 1 turn
+Range: 10'
+One creature per caster level need not respirate for the duration.
+
+Manipulate Fire
+Level: 1
+Duration: 1 turn per level
+Range: 10' per level
+The caster can manipulate the size of a non-magical fire.  The size of the
+fire may be altered only in terms of light output. The actual thermal energy
+and size is not altered, so no matter how bright or dim a fire is made, it is
+as hot as and covers as much space as its true size.
+
+Meld Elementals
+Level: 7
+Duration: Permanent
+Range: 240'
+Melds two elementals of differing elements into a single being with combined
+hit points, immunities, and special abilities.
+
+Ray of Fire / Cold
+Level: 1
+Duration: 1 round per level
+Range: 20' per level
+Once per round a jet of searing heat or icy cold shoots from the caster's
+fingertip, causing 1d8+1 points of damage to a single target if successful
+attack roll is made.
+
+Seasong / Windsong / Firesong
+Level: 1
+Duration: 1 turn per level
+Range: Hearing
+Weaves a subtle hypnotic enchantment into the natural sounds of the
+wind, sea, rivers, waterfalls or fire. A source of such sound must already
+be present – the spell cannot artificially create or increase it.
+Which lulls targets into a state of drowsiness and non-alertness, save negates.
+Alternatively, it can be used to provide a -2 to saves vs *Charms*,
+|Suggestion|_ and the like. Cast on willing subjects it provides sound,
+refreshing sleep, uninterrupted by nightmares or similar intrusions.
+
+Summon Elementine, Lesser
+Level: 1
+Duration: 1 turn per level
+Range: 120'
+Summons a Lesser Elementine of a type chosen by the caster.  The caster has
+complete control of the Elementine without need for concentration, and can
+command it to attack nearby foes or perform other tasks within its capabilities.
+
+Summon Elementine, Greater
+Level: 2
+Duration: 1 turn per level
+Range: 120'
+As |Summon Elementine, Lesser|_, but conjures a Greater Elementine of a type chosen by
+the caster.
+
+Summon Elemental Horror
+Level: 4
+Duration: 1 turn per level
+Range: 120'
+Conjures forth a Fluid Beast, or a Soil Fiend, or a Flame Terror, or a Wind
+Horror.  The caster has complete control of the Creature without need for
+concentration, and can command it to attack nearby foes or perform other tasks
+within its capabilities.
+
+Summon Elemental Kin
+Level: 6
+Duration: 1 turn per level
+Range: 120'
+Conjures forth a variety of creatures from the elemental planes. At 11th level
+the caster can choose to summon a Djinni, Sea Serpent, Wind Walker or Xorn. At
+13th level he may alternatively summon a Flame Salamander. At 15th level he
+may summon a Frost Salamander, and at 17th level an Efreeti.  The summoned
+creature is bound to serve the caster unerringly for the duration.
+
+Summon Elemental I
+Level: 3
+Duration: Permanent
+Range: 120'
+Summons and binds a 8HD elemental which must follow the caster's commands,
+including the command to return to its home plane. But, the elemental obeys
+only as long as the caster maintains concentration; and if the caster ceases
+to concentrate, even for a moment, the elemental is released and will seek to
+kill the caster and drag their soul back to the planes of elemental evil.
+
+Summon Elemental II
+Level: 4
+Duration: Permanent
+Range: 120'
+As |Summon Elemental I|_ but a 12HD elemental is summoned.
+
+Summon Elemental III
+Level: 5
+Duration: Permanent
+Range: 120'
+As |Summon Elemental I|_ but a 16HD elemental is summoned.
+
+Command Elemental I
+Level: 5
+Duration: 1 turn per level
+Range: 120'
+May be used to take control of an elemental of up to 8HD. A free-willed
+elemental can save to negate. A controlled elemental's controlling magic must
+be overcome in same manner as |Dispel Magic|_
+Alternatively, may be used to augment a subsequent casting of |Summon
+Elemental I|_.  The duration of the summoning is reduced to the remaining
+duration of this spell, but the elemental can be controlled without
+concentration, and without any risk of it turning on the caster.
+
+Command Elemental II
+Level: 6
+Duration: 1 turn per level
+Range: 120'
+As |Command Elemental I|_, but to gain control of an elemental of up to 12HD, or to
+augment a |Summon Elemental II|_.
+
+Command Elemental III
+Level: 7
+Duration: 1 turn per level
+Range: 120'
+As |Command Elemental I|_, but to gain control of an elemental of up to 16HD, or to
+augment a |Summon Elemental III|_.
+
+Elemental Wrath
+Level: 9
+Duration: 1 turn per level
+Range: 240'
+Unleashes a powerful and violent elemental being with sole aim of causing as
+much destruction as possible.  The summoned being is 100' tall,
+non-intelligent and incredibly violent with the qualities of a normal
+elemental, except: 32HD, -4 AC, four 6d8 attacks, double movement rate, and can only
+be damaged by +3 or greater magic weapons.  Additionally the destruction
+wrought is so great that any creature within 30' suffers 1d8 damage per round.
+It cannot be controlled or banished by normal spells or items.
+
+Pact of Brass
+Level: 9
+Duration: 101 days
+Range: 0
+Binds an Efreeti summoned by other means into service for 101 days.  Requires
+the preparation of two 4000sp brass amulets – one for caster to wear and one
+to be worn by the Efreeti.  The power of the spell is such that the Efreeti
+cannot deny the pact and must accept the amulet. Once made, the pact can only
+be broken if either of the amulets leaves its owner's possession.  The bound
+Efreeti cannot discard its amulet of its own accord; however, chaotic and wily
+creatures, and often contrive ways of tricking the caster to command them to
+do so. If the pact is broken before its proper end, the Efreeti is 90% likely
+to attack the fool who bound it.
+
+Tidal Force
+Level: 2
+Duration: 1 round per level
+Range: 60'
+Amplifies tidal influence affecting liquids and creatures whose physical
+structure is liquid-based, including most humanoids, plants and animals. Each
+round the caster chooses a direction and all affected creatures and liquids
+are pushed 20' in chosen direction, save negates.
+
+Vacuum
+Level: 3
+Duration: 1 round per level
+Range: 240'
+Causes the instantaneous removal of all forms of gas, from a spherical volume
+of 5' radius per level of the caster.  Extinguishing fires, preventing sound
+propagation, and inflicting d8 damage per round due to de-pressurization.
+Air-breathing creatures will also begin to suffocate.  When the spell's
+duration comes to an end, the surrounding air rushes back in, filling the
+vacuum.
+
+Transmute Rock to Mud (reversible)
+Level: 3
+Duration: Permanent
+Range: 120'
+Turns 3,000 square feet of rock 10' deep into mud.  Any beings passing through
+the mud have movement reduced by 90%.
+
+##Shapes
+##Level: 1
+##Duration: Special
+##Range: 20'
+##Grants caster the ability to form patterns and shapes in a chosen elemental
+##substance within range.
+##Typically this spell is used to create forms in the motion of flames, the
+##flow of water or the spiralling of smoke, but it can also be used to
+##inscribe patterns in soft earth or dust. The forms created have no
+##magical effect, but may be used to entertain or frighten on-lookers, or
+##perhaps to pass messages.
+##The spell's effect lasts as long as the caster maintains concentration and
+##performs no other actions.
+
+##Demand
+##Level: 9
+##Duration: Instantaneous
+##Range: 60'
+##Forces a summoned Djinni or Efreeti, to grant the caster a single wish.  The
+##creature cannot deny the caster's demand, but will always attempt to twist the
+##intent of the wish by fulfilling it to the letter. Once the wish has been
+##granted, the summoned creature is released and has a 50% chance of returning
+##to its home plane and a 50% chance of immediately attacking the caster.

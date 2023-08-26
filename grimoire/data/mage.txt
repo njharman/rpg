@@ -1,0 +1,1617 @@
+## Note: edited from original
+##Magic-User Spells
+
+Allure
+Level: 1
+Duration: 1 "conversation"
+Range: Self
+Caster gains 2d4 CHA with all intelligent creatures, save negates.  In
+addition, creatures that fail the saving throw feel good will towards the
+caster. Those who save recognize the caster for the jerk they are.
+
+Amnesia
+Level: 2
+Duration: Until dispelled
+Range: 30'
+Obliterates the memory of up to four beings in range. Those that fail save
+will forget the events of the last (caster level) rounds.  This spell only
+affects memory, it does not alter any actual events that have taken place or
+nullify any other spell effects.  The saving throw is at -1 for two targets
+and -2 if only one being is targeted.
+
+Animate Mineral
+Level: 4
+Duration: 6 turns
+Range: 60'
+As |Animate Objects|_ but caster may animate 2' cubed of rock or other
+minerals per level. The object(s) must not be part of a larger portion of
+mineral (not a piece of a stone wall, for instance).
+
+Animal Growth
+Level: 3
+Duration: 1 round per level
+Range: 60'
+Causes d6 normal animals to immediately grow to giant size.
+When cast by Vivimancer d6 + 1 per level are so transformed
+
+Anti-Magic Ward
+Level: 3
+Duration: 1 turn per level
+Range: 10' radius
+Conjures a 10' radius mobile, invisible anti-magic barrier. No spells or
+magic effects may pass through this barrier, whether from inside or outside.
+The caster may end this spell at any time.
+
+Antipathy/Sympathy
+Level: 5
+Duration: 12 turns per level
+Range: 30'
+Causes an object or location to emanate magical vibrations that repel or
+attract a specific kind of intelligent creature, as defined by the caster.
+
+**Antipathy** Creatures feel an overpowering urge to leave the area or to avoid
+the affected item. A compulsion forces them to abandon the area or item,
+shunning it and never willingly returning to it while the spell is in effect.
+A creature that makes a successful saving throw can stay in the area or touch
+the item but feels extremely uncomfortable doing so.
+
+**Sympathy** Creatures feel elated and pleased to be in the area or desire to
+touch or to possess the object. The compulsion to stay in the area or touch
+the object is overpowering. If a saving throw is successful, the creature is
+released from the enchantment, but a subsequent save must be made 1d6 turns
+later. If this save fails, the affected creature attempts to return to the
+area or object.
+
+Auditory Illusion
+Level: 2
+Duration: 2 rounds per level
+Range: 120'
+The caster of this spell is able to create false sound. The sound may be
+centered anywhere within range, and within that range the sound can fluctuate
+and move, imitating approaching or receding footsteps, laughter, voices, and
+other possibilities. The sound produced is the approximate equivalent of noise
+produced by 4 human sized beings / per level above the minimum required to
+cast this spell.
+
+Blink
+Level: 2
+Duration: d4 + 1 round per level
+Range: Self
+The caster rapidly (every round) "winks" out of existence and reappears
+a short random direction away. It is extremely hard to target caster and most
+attacks will fail 50-100% of time as determined by referee.
+Caster may blink and attack with mêlée weapons. Any other activities,
+including spell casting, thrown / missile attacks, use of magic items, etc.
+have 75% chance of failure due being fired in the wrong direction, etc.
+
+Burning Hands
+Level: 1
+Duration: Instantaneous
+Range: 10'
+Ten foot flames shoot from caster's fingertips. Caster may direct the flames
+onto a single target or spread them out up to a 180 degree arc. Dealing d4
+points per caster level of fire damage, save for 1/2.
+
+Charm Monster
+Level: 4
+Duration: Varies
+Range: 30'
+Charm monster is similar to |Charm Person|_ except that it is not limited to
+creatures smaller than Ogres. Only one monster of 4+ HD is charmed; d6 of 3HD,
+2d6 of 2HD, 3d6 of 1HD or less.  Monsters get saves based on HD or INT
+(whichever is better).
+======== ===============================
+Hit Dice New save every
+======== ===============================
+0-3      month
+4-7      week
+8-11     day
+12+      hour
+======== ===============================
+
+Charm Person
+Level: 1
+Duration: Varies
+Range: 30'
+Ensorcells a living humanoid creature smaller than an ogre to regard the
+caster as its trusted friend and ally, save negates.  The caster does not
+control the victim at an automaton, but it perceives the caster's words and
+actions in the **most favorable way**.
+An affected creature never obeys suicidal or obviously harmful orders, but it
+might be convinced that something very dangerous is worth doing. Any act by
+the caster or his apparent allies that threatens the charmed person breaks the
+spell. Victims periodically get new saves, if they fail consistently they will
+eventually become permanently charmed.
+======== ===============================
+INT      New save every
+======== ===============================
+3-8      month
+9-12     week
+13-16    day
+17-18    hour
+======== ===============================
+
+Charm Plants
+Level: 5
+Duration: Until dispelled
+Range: 30'
+Targets one large tree, six man-sized plants, twelve plants three feet tall,
+twenty-four flower-sized plants, or 30' radius of grass or the like.  If the
+plant(s) fail to save (and it need not be intelligent), they will obey the
+caster to the extent of its ability. Note the spell imbues the plant with some
+ability to move in place.
+
+Clairaudience
+Level: 2
+Duration: 1 turn per level
+Range: 60'
+Allows caster to hear from any point in range, through solid stone and other obstacles.
+
+Clairvoyance
+Level: 2
+Duration: 1 turn per level
+Range: 60'
+Allows caster to see from any point in range, through solid stone and other obstacles.
+
+ESP
+Level: 2
+Duration: 1 turn per level
+Range: 60'
+Caster can read the thoughts of other beings in any direction concentrated
+on, save negates. Caster must spend time and concentrate to sort out a single
+creature's thoughts, else all thoughts mingle into a confusing jumble.  No
+indication of the distance or exact location of creatures is provided. The
+spell cannot penetrate more than a few feet of stone, or inches of metal, and
+is blocked by even a thin sheet of lead.
+
+Clone
+Level: 6
+Duration: Permanent
+Range: Touch
+A piece of flesh is grown into an exact duplicate of the being at the time the
+flesh was removed.  If the original being is alive the two beings will share
+a psychic link for 1 week and seek to destroy each other. If this proves to be
+impossible, one or both go insane.
+
+Cloudkill
+Level: 5
+Duration: Until dispersed, ~6 turns
+Range: 0
+Foul and poisonous vapors boil from thin air, forming a cloud 15' in radius.
+The cloud moves forward at a rate of 20' per round sinking down into any pits
+or stairs in its path.  Creatures with 4HD or less, touching the cloud must
+save or die each round. Those that save or have more than 5HD take d6 hp per
+round.
+
+Read Languages (reversible)
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+Caster may read otherwise incomprehensible written text.  The writing must
+be touched. The ability to read does not necessarily impart insight into the
+material, merely its literal meaning.
+
+Cone of Cold
+Level: 5
+Duration: Instantaneous
+Range: 0
+Conjures a cone of extreme cold, originating at the caster's hand and
+extending outward in a 45deg cone 5' long per level. It freezes for 1d6+2
+points of cold damage per caster level.
+
+Cone of Heat
+Level: 5
+Duration: Instantaneous
+Range: 0
+Conjures a cone of extreme heat, originating at the caster's hand and
+extending outward in a 45deg cone 5' long per level. It burns for 1d6+2
+points of fire damage per caster level.
+
+Confusion
+Level: 4
+Duration: 12 rounds
+Range: 120'
+Causes 2d6 random targets in 30' area to become confused.  Targets with 3HD or
+less automatically fail, others must save each round.
+======== ===================================================
+2d6      Roll each round
+======== ===================================================
+**2-5**  Attack opponents
+**6-8**  Babble incoherently
+**9-12** Attack allies
+======== ===================================================
+
+Light
+Level: 2
+Duration: 1 turn per level
+Range: 10' per level
+This spell is in most respects identical to the 1st level divine spell
+of the same name.
+
+Darkness
+Level: 2
+Duration: 1 turn per level
+Range: 10' per level
+This spell is in most respects identical to the 1st level divine spell
+of the same name.
+
+Continual Light
+Level: 3
+Duration: 1 turn per level
+Range: 10' per level
+This spell is identical to the divine spell of same name.
+
+Continual Darkness
+Level: 3
+Duration: 1 turn per level
+Range: 10' per level
+This spell is identical to the divine spell of same name.
+
+Control Weather
+Level: 6
+Duration: Concentration
+Range: 240'
+This spell differs from the divine spell of the same name. The radius is
+limited to a localized 240 yards in an outdoor setting only. And lasts only as
+long as caster is concentrating.
+
+Faerie Fire
+Level: 1
+Duration: 1 turn
+Range: 80'
+A pale glow outlines targets (12' per caster level) making them visible in
+darkness at a distance of 80', or half this if the creatures are near a light
+source.  Their greater visibility grants attackers +2 to hit while the spell
+is in effect.
+
+Dancing Lights
+Level: 1
+Duration: 1 turn per level
+Range: 20' per level
+Conjures up to four lights that resemble either lanterns or torches (and cast
+that amount of light), or which look like will-o'-wisps, or one faintly
+glowing, vaguely humanoid shape. The dancing lights must stay within a 10' to
+each other but otherwise move as the caster desires (no concentration
+required).
+
+Death
+Level: 6
+Duration: Instantaneous
+Range: 240'
+Kills creatures with less HD than caster, save negates.  A total of 1d6 HD per
+caster level of creatures are killed within a 60' cube.
+
+Detect Invisible
+Level: 2
+Duration: 1 turn per level
+Range: 10' per level
+The caster can see invisible, hidden, ethereal, or astral creatures
+or items.
+
+Dimension Door
+Level: 4
+Duration: Instantaneous
+Range: 30'
+The caster instantly transfers himself, another, or an object from its current
+location to any other spot within 360'.  An unknown or unseen place may be
+specified. For example, 100' south and 20' high, but if the destination is
+already occupied, the spell fails.
+
+Disintegrate
+Level: 6
+Duration: Permanent cannot be dispelled
+Range: 60'
+Any creature of nearly any size struck by the ray is instantly disintegrated.
+As much as one 10' cube of nonliving matter may be turned to dust. Thus, the
+spell disintegrates only part of any very large object or structure targeted.
+Creatures and magical objects get saving throw.
+
+Dispel Magic
+Level: 3
+Duration: Instantaneous
+Range: 120'
+Completely dispels most spells, enchantments, potions, and the like in 10'
+radius. Although not powerful enough to disenchant permanent items,
+they are nullified for some rounds.  All possible targets in area may be
+affected. Magic of same level or lower as caster is automatically dispelled.
+Higher level magic must be rolled for. Alternatively, Dispel Magic can be used
+to automatically counter various specific effects, e.g. |Feeblemind|_.
+
+Duo-Dimension
+Level: 5
+Duration: 1 turn per level
+Range: Self
+One dimension of caster (depth) ceases to exist. The caster can take all
+normal actions, and has the ability to appear invisible and immune to attacks
+by turning sideways. The caster may also slide sideways through small cracks
+or other tight spaces.
+
+Enlarge (reversible)
+Level: 1
+Duration: 1 turn per level
+Range: 30'
+Causes instant growth of a single object or creature, save negates.  Creature
+grow by 20% per caster level, max 3x original size.  Objects by 10% per level,
+max 2x original size.
+
+Erase
+Level: 1
+Duration: Instantaneous
+Range: 30'
+Removes magical and mundane writings (ink, paint, engraving, etc.). Magical
+ones must be overcome as |Dispel Magic|_.
+
+Fear
+Level: 4
+Duration: Varies
+Range: 60' cone
+An invisible cone (60' long, 45deg arc) of terror causes living creatures
+in the area to become panicked and flee, save negates.  Victims drop
+whatever they may be holding before bravely running away unless the roll d20
++ their level >= 15.
+
+Feather Fall
+Level: 1
+Duration: 1 round per level
+Range: 10' per level
+The targets instantly reduce speed of falling to about 5' per round.  The
+caster can generally affect one creature or object per level with max total
+weight of 200 pounds per level.  If memorized and caster is
+conscious Feather Fall will automatically cast as needed.
+
+Feeblemind
+Level: 5
+Duration: Until dispelled
+Range: 240'
+If target fails a save at -4, it becomes a mental invalid, unable to speak,
+cast spells, understand language, or communicate coherently. The target
+remains in this state until a |Dispel Magic|_ spell is used to cancel the effect.
+
+Feign Death
+Level: 3
+Duration: 1 turn per level
+Range: Touch
+Causes a state of death-like paralytic arrest in target which completely
+mimics death to any observer, even if the creature is physically examined. No
+save but unwilling targets must less HD than caster.  Any being under the
+effect of this spell is conscious and can hear and smell, but cannot move and
+is completely numb. The caster may negate the spell before the duration ends,
+but it takes d4 rounds for body to resume normal life functions.
+
+Finger of Death
+Level: 4
+Duration: Permanent
+Range: 60'
+Slays any one living creature within range, save negates.
+
+Fireball
+Level: 3
+Duration: Instantaneous
+Range: 240'
+A bead-like missile shoots from the caster's finger exploding in a
+furnace-like blast of fire at targeted location. Dealing 1d6 per caster
+level (9d6 max) fire damage, save for 1/2. The blast fills 20' radius or
+33,000 cubic feet (33 ten-foot x ten-foot x ten-foot cubical areas) but shapes
+itself to the available volume.
+
+Fireball, Greater
+Level: 5
+Duration: Special
+Range: 240'
+As |Fireball|_, except, damage dice explode and are +1 per die, and there is no
+max number of damage dice. The caster may choose for the spell to "go off" up
+to 10 rounds after the spell is cast.
+
+Meteor Swarm
+Level: 8
+Duration: Instantaneous
+Range: Sight
+Tiny meteors swarm from the caster's hands and explode into balls of fire
+where desired. The caster may hurl four normal fireballs for 10d6 damage.  Or,
+eight 10' radius fireballs that deal 5d6 points of damage. Victims may save for
+1/2 damage.
+
+Fire Chariot
+Level: 5
+Duration: 1 turn per level
+Range: 0
+Conjures a flying chariot of fire pulled by two flaming horses.  Up to
+7 human-sized creatures may ride on the chariot.  Any creature not welcomed by
+caster that touches the chariot or horses suffers 5d6 hp fire damage.  The
+horses may only be damaged by water or magical weapons; they have AC 18 and 30
+hp.
+
+Fire Shield
+Level: 4
+Duration: 1 turn per level
+Range: Self
+Wreathes the caster in thin and wispy flames providing dim illumination to 10'
+radius. Any creature striking the caster with its body or a hand held weapon
+takes double the amount of damage inflicted. May be "sacrificed" as shield,
+which still inflicts 2x damage to striking creature. Type of shield must be chosen
+when the spell is cast:
+**Hot Shield:** Does fire damage. The caster saves vs cold at +2, and takes
+1/2 damage (or none on save) from cold damage. But takes double damage vs
+fire.  **Cold Shield:** as Hot Shield but swap cold and fire.
+
+Flame Arrow
+Level: 2
+Duration: 1 round
+Range: Touch
+Transforms 1 missile per caster level into fiery projectiles doing extra d6
+points of fire damage and probably igniting struck creatures or objects.
+An Elementalist may substitute other elemental damage (cold, electricity,
+etc.) at time of casting.
+
+Floating Disc
+Level: 1
+Duration: 6 turns
+Range: 6'
+Conjures a slightly concave, 3' circular, 1" deep plane of force that follows
+caster. It can hold 200 pounds per caster level, 2 gallons of liquid.  The
+disk floats approximately 3 feet above the ground and remains level at all
+times. If not otherwise directed, it maintains a constant interval of 6 feet
+between itself and the caster.
+
+Fly
+Level: 3
+Duration: d6 turns +1 turn per level
+Range: Self
+The caster can fly at 10' per caster level and hover.
+
+Freezing Sphere
+Level: 6
+Duration: Special
+Range: Special
+Forms a frigid globe of cold and tossed up to 120' exploding on impact or
+placed to explode some number of rounds in the future.  10' radius, 6d10
+points of cold damage, save for 1/2.
+Alternatively, if it strikes water or other freezable liquid it freezes that
+liquid to a depth of 6" over 100 square feet per caster level.
+
+Fumble
+Level: 3
+Duration: 1 round per level
+Range: 60'
+The victim of this spell become horribly clumsy.  Items held fall to the
+ground; attempts to grab, catch, or otherwise manipulate other objects are
+doomed to bumbling ineptitude.  Moving victims fall down.  Save to have effect
+reduced to that of |Slow|_.
+
+Gate
+Level: 6
+Duration: Special
+Range: 30'
+Creates an interdimensional connection between the caster's plane of existence
+and a specified plane, allowing travel between those two planes in either
+direction. The caster may then call (by true name) one particular individual
+through the gate.  Which can be any demonic or otherworldly being, or even
+a god. Although, gods will most likely send representatives.  Other than
+compelling their presence (for however briefly) the Gate spell provides no
+other control or binding over called beings.  The gate remains open for as
+long as caster desires and is in range.  There is 5% chance per round of
+random beings coming through the gate.
+
+Geas (reversible)
+Level: 6
+Duration: Special
+Range: 60'
+This spell functions in an identical manner to the 5th level divine
+spell of same name.
+
+Gust of Wind
+Level: 3
+Duration: 1 round per level
+Range: 60'
+Conjures a severe blast of air affecting all creatures in a path 10' long per
+caster level and 10' wide.  Small creatures are blown back d6x10' and knocked
+down. Human-sized creatures are unable to move against the wind and may be
+knocked down. Larger creatures have half movement. The force of the gust
+automatically extinguishes candles, torches, and similar unprotected flames.
+It causes protected flames, such as those of lanterns, to dance wildly and has
+a 5% chance per caster level to extinguish those lights.
+Alternatively, may be used to propel sailing ship for 1 hour per level.
+
+Haste
+Level: 3
+Duration: 2 turns
+Range: 240'
+A maximum of 24 creatures within a 30' radius move and attack at double rate,
+save negates.  Hasted targets always act first. Affected creatures age
+d6x percent of their lifespan. At end of haste targets are exhausted and must
+rest and replenish electrolytes for one turn.
+
+Slow
+Level: 3
+Duration: 2 turns
+Range: 240'
+A maximum of 24 creatures within a 30' radius move and attack at half rate,
+save negates. Slowed creatures always act last.
+
+Heat Metal
+Level: 2
+Duration: 7 rounds
+Range: 40'
+Makes metal extremely warm (or cold). Affects 20lbs of metal (1 creature) per
+level.  If searing metal makes contact with flammable material (leather,
+cloth, etc.) it catches fire dealing additional damage in subsequent rounds.
+======= ================== ================
+Rnd     Temperature        Heat / Chill
+======= ================== ================
+1       Warm (Cool)        None
+2       Hot (Cold)         1d4 / 1d2 hp
+3–5     Searing (Freezing) 2d4 / 1d4 hp\*
+6       Hot (Cold)         1d4 / 1d2 hp
+7       Warm (Cool)        None
+======= ================== ================
+\* Additional effects of Searing/Freezing are as follows: **extremities** (hands,
+feet), unusable for 2d4 days; **body** bedridden from extreme burns for 1d4
+days; **head** severely burned, victim is unconscious for 1d4 turns.
+
+Hold Monster
+Level: 3
+Duration: 1 turn per level
+Range: 120'
+Similar to the |Hold Person|_, but can affect non-humanoid monsters (but still
+not undead or mindless) and larger than ogre sized targets.
+
+Hold Person
+Level: 2
+Duration: 1 turn per level
+Range: 120'
+In all respects this spell is identical the divine spell of the same
+name.
+
+Hold Portal
+Level: 1
+Duration: d6 turns per level
+Range: 10'
+Magically holds shut a door, gate, window, shutter or the like.  A |Knock|_ spell
+or a successful |Dispel Magic|_ spell can negate a Hold Portal spell.
+
+Ice Storm
+Level: 4
+Duration: 1 round + thaw
+Range: 120'
+Conjures a great whirling vortex of sleet, ice, and hail in a 20' radius area,
+extinguishing all fires and dealing 4d10 points damage to all creatures in the
+area, no save.  Movement within the area is at half speed, with a 50% chance
+of slipping and falling per round for d4 rounds (until ice melts).
+
+Imprisonment (reversible)
+Level: 9
+Duration: Permanent
+Range: Touch
+Entombs creature touched in a state of suspended animation in a small sphere
+far beneath the surface of the earth, no save. Normal divination will not
+reveal location or fate of target.
+
+Conflagration
+Level: 7
+Duration: 2d6 rounds
+Range: 240'
+Conjures sheets of roaring flames in one 20' cube per caster level.  Any
+creature within the area or within 10' of it takes 2d8 + caster's level points
+of fire damage per round or per 10' traveled through it, no save.  It blocks
+all vision.
+
+Incendiary Cloud
+Level: 8
+Duration: 2d6 rounds
+Range: 240'
+Causes the very air to burn, creating a 10' per caster level radius cloud of
+roiling white hot flames and smoke. The smoke obscures all vision and rises
+a 100' or more. The flames deal 12d6 fire damage per round to all within, save
+for 1/2.  Incinerates and/or melts anything within.
+
+Infravision
+Level: 3
+Duration: 1 day
+Range: Touch
+One target per caster level is able to see 60' in complete darkness.
+
+Invisibility
+Level: 2
+Duration: Until dispelled
+Range: Touch
+The target of this spell, whether a person or a thing, becomes invisible to
+both normal sight and darkvision.  Although the target is not magically
+silenced, still smells, and certain other conditions can render the recipient
+detectable (such as stepping in a puddle).  Light, never becomes invisible,
+although a source of light can become so.
+If the invisible creature takes an offensive action, the invisibility is
+dispelled.  Creatures with 5HD or more are allowed a save to "see past
+invisibility" and those with 9HD or more are never deceived.
+
+Invisibility 10' Radius
+Level: 3
+Duration: Until dispelled
+Range: Touch
+As |Invisibility|_ but all creatures within 10' of target at moment of
+casting become invisible. Any creatures that moves beyond the 10' radius of
+effect or that take offensive action become visible. Offensive action by caster
+negates spell entirely.
+
+Invisible Stalker
+Level: 6
+Duration: Special
+Range: 0
+Summons an Invisible Stalker which will perform one task as commanded by the
+caster, regardless of how long the task may take or how far the stalker may
+have to travel. |Dispel Magic|_ has no effect but |Dispel Evil|_ and other
+specialized spells will send an Invisible Stalker back to the plane of air.
+
+Irresistible Dance
+Level: 6
+Duration: 1d4+1 rounds
+Range: 30'
+The target feels an undeniable urge to dance and begins doing so, complete
+with foot shuffling and tapping, no save. The spell effect makes it impossible
+for the target to do anything other than caper and prance in place. The effect
+imposes a penalty of 4 to Armor Class and negates the ability of the creature
+to attempt saving throws.
+
+Jump
+Level: 1
+Duration: 1 turn
+Range: Touch
+Target may, once per round as movement, leap forwards (and land safely) 10'
+per caster's level (clearing 5' per caster level) or half those amounts
+backwards.
+
+Knock
+Level: 2
+Duration: Instantaneous
+Range: 60' radius
+Unlocks and unbars **all** doors, gates, portals, chests, boxes, etc. within
+range. Including secret doors.  Knock does not raise barred gates or
+similar impediments (such as a portcullis), nor does it affect ropes, vines,
+and the like. To overcome magic seals it must be focused on one portal.
+
+Levitate
+Level: 2
+Duration: 6 turns + 1 turn per level
+Range: 20' per level
+The caster can move up and down a up or down as much as 20 feet per round.
+Can't levitate more than 20' per level from the elevation where the spell
+was cast. (Such range is applied both to movement into the air and to
+downward movement into a pit or chasm.)
+
+Lightning Bolt
+Level: 3
+Duration: Instantaneous
+Range: 180'
+Conjures a powerful stroke of electrical energy starting at any point in range
+that is 60' long and 10' wide, dealing 1d6 per caster level points of
+electrical damage, save for 1/2.  The lightning bolt sets fire to
+combustibles, melts metals, and shatters wood and thin stone.  The bolt is
+always 60' long and will "bounce" back from a impenetrable obstacle.
+
+Limited Wish
+Level: 7
+Duration: Special
+Range: Special
+Allows the caster to duplicate any spell of 7th level or lower, undo the
+harmful effects of many spells, such as |Geas|_, and produce any other single
+effect whose power level is in line with the above effects.  Note that the
+desired effects do not have to exactly match any existing spell, but can be
+unique effects allowed at the Referee's discretion.
+
+Locate Object
+Level: 2
+Duration: 3 turns
+Range: 10' per level
+Other than duration and range this spell is identical to Divine spell of same name.
+
+Magic Jar
+Level: 6
+Duration: Special
+Range: 30'
+This spell relocates the caster's life essence, intelligence, and soul into an
+object of virtually any kind. Once within the magic jar, the caster can
+possess the bodies of other creatures forcing their soul into the magic jar,
+provided that they are within 120 feet of the jar and fail a saving throw. The
+caster can return his or her soul to the magic jar at any time; if a body the
+caster controls is slain, the soul returns to the jar immediately. The caster
+can return from the jar to his or her original body whenever desired, thus
+ending the spell. If the caster's body is destroyed while his or her soul is
+in the magic jar, the soul no longer has a home other than within the magic
+jar, although the disembodied caster can still possess other bodies as before.
+If the jar itself is destroyed while a soul is within, the soul is lost. The
+caster can be forced out of a possessed body if a |Dispel Evil|_ spell is cast.
+
+Magic Missile
+Level: 1
+Duration: Instantaneous
+Range: 120' + 10' per level
+Missiles of magical energy shoot from the caster's fingertips, automatically
+hitting and dealing d6+1 points of damage.  Specific parts of a creature can't
+be singled out. For every two caster levels past 1st, an additional missile is
+gained.
+
+Magic Sword
+Level: 4
+Duration: Combat
+Range: 30'
+Conjures into existence a glowing energy blade that deals 4d6 points of
+damage. The wielder attacks as a fighter of caster's level. The energy sword
+can strike creatures normally only damaged by magical weapons, as well as
+creatures that are either out of phase, or in the ethereal or astral planes.
+
+Charm Monster, Mass
+Level: 8
+Duration: Varies
+Range: 120'
+Functions like |Charm Monster|_ except 1d6 HD per caster level is affected.
+And all affected creatures make their saves at -2.
+
+Maze
+Level: 5
+Duration: Varies
+Range: 60'
+Transports a single target into an extra-dimensional labyrinth, no
+save.  Minotaurs are not affected by this spell.
+============ ==============
+INT          Wandering Time
+============ ==============
+**<=2**      2d4 turns
+**3-5**      1d4 turns
+**6-8**      5d4 rounds
+**9-11**     4d4 rounds
+**12-14**    3d4 rounds
+**15-17**    2d4 rounds
+**18+**      1d4 rounds
+============ ==============
+
+Mending
+Level: 1
+Duration: Permanent, can't be dispelled
+Range: 30'
+Instantly repairs damage to one object. The spell cannot repair magic items,
+nor does it affect creatures.
+
+Message
+Level: 1
+Duration: 1 round per level
+Range: Plane
+The caster and one known and named target may whisper messages to each other.
+The messages are audible only to the caster and target.
+
+Mind Blank
+Level: 6
+Duration: 1 day
+Range: 30'
+Target is warded against all mind-affecting, scrying, and information
+gathering spells and effects.  In the case of scrying that scans an area the
+target is in, the spell works but the target simply isn't detected.
+
+Mirror Image
+Level: 2
+Duration: 6 turns
+Range: Self
+d4 illusory duplicates of the caster pop into being.  Attackers cannot
+distinguish the images from the caster, and may attack one of the images
+instead of the caster. When a hit is scored upon one of the images, it
+disappears. An additional d4 images is gained at 6th, 9th, and 12th levels.
+
+Move Earth
+Level: 4
+Duration: 1 turn per level
+Range: 240'
+Allows caster to dig or excavate 10' cubes per round of soil, mud, or sand in
+Neither solid stone nor large boulders may be moved.
+
+Part Water
+Level: 4
+Duration: 1 turn per level
+Range: 120'
+Creates a path 10' wide and a maximum of 120' long through water, such as
+a river or pond. The caster can dismiss the spell effects before
+the duration ends, thus allowing water to crash upon unwanted pursuers.
+
+Phantasmal Force
+Level: 2
+Duration: Concentration
+Range: 240'
+Creates an illusion (up to 20' cube) that seems realistic to all who view it.
+Observers are allowed a save to see through the illusion.  In addition the
+illusion disappears if it is touched.  Illusionary monsters have an effective
+AC of 10.  Special effects and damage will not be real.  However, if a foe
+appears to lose all hit points, he falls unconscious.
+
+Passwall
+Level: 4
+Duration: 1 turn
+Range: 30'
+Creates a passage through any non-magical material.  The passage is
+10' deep with a 7' diameter.
+
+Phase Door
+Level: 7
+Duration: 3 turns
+Range: 30'
+Creates an ethereal passage through any non-magical material. This passage is
+10' deep per caster level and 7' diameter. The phase door is invisible and
+inaccessible to all creatures except the caster, and only the caster can use
+the passage. If the caster desires, he can take other creatures through the
+door. The caster disappears when entering the phase door and reappears when
+exiting. The door does not allow light, sound, or spell effects through it,
+nor can it be seen through. If anyone is within the passage when it is
+dispelled, he is harmlessly ejected.
+
+Plant Growth
+Level: 4
+Duration: Permanent, can't be dispelled
+Range: 120'
+Causes normal vegetation (grasses, bushes, creepers, thistles, briar, trees,
+vines) within 1000' square area per caster level to become thick and
+overgrown, blocking movement and sight beyond 15'.
+
+Polymorph Others
+Level: 4
+Duration: Until dispelled
+Range: 120'
+Transforms one living being into another kind of being, save negates. The
+polymorphed creature gains all the abilities of the new form and it will
+slowly adopt the mind and attitudes of its current form, losing its own.  This
+spell may not be used to reproduce the appearance of a specific identity.
+
+Polymorph Self
+Level: 6
+Duration: 1 turn per level
+Range: Self
+Caster assumes the form of any object or creature. The caster retains his
+intelligence, hit points, saving throws, and attack bonus, but does gain
+physical abilities of the new form, including AC, strength or strength-based
+attack forms and damage. Magical abilities or other special abilities are not
+gained.  This spell may not be used to reproduce the appearance of a specific
+individual.
+
+Polymorph Any Object
+Level: 8
+Duration: Variable
+Range: 240'
+Functions like other polymorph spells, except that it changes one object or
+creature into another, save at -4 negates.  The degree of change will affect
+the spell's duration.  Animal to animal changes, vegetable to vegetable
+changes, and mineral to mineral changes are all likely to remain permanent
+until dispelled.  On the other hand, turning a shrub into a thinking human
+being would last only a small number of turns.
+Can also be used to duplicate the effects of any other (known) lower level
+transmorphic spell.
+
+Pyrotechnics
+Level: 1
+Duration: Varies
+Range: 120'
+Produces one of two effects when targeted on an existing fire.
+**Fireworks:** A flashing, fiery, burst of glowing, colored aerial
+lights blinding creatures for one round.
+**Choking Cloud:** A writhing stream of smoke forms a choking cloud which
+obscures all vision past 10' and lasts for 1 round per caster level.
+
+Shape Change
+Level: 9
+Duration: Until dispelled
+Range: Self
+Enables the caster to assume the form of almost any non-unique creature.
+The caster's hit points remain the same. The caster gains all the extraordinary
+and supernatural abilities (both attacks and qualities) of the assumed form,
+except for any abilities relying on knowledge or intelligence of the monster,
+because the caster's mind remains his own.
+
+Power Word Stun
+Level: 4
+Duration: Instantaneous
+Range: 120'
+Uttering this single word of power causes one or more creatures of caster's
+choice to become stunned for 2d4 rounds, no save. Creatures equal to caster's
+level in HD may be affected.
+
+Power Word Blind
+Level: 6
+Duration: Instantaneous
+Range: 120'
+
+Uttering this single word of power causes one or more creatures of caster's
+choice to become permanently blinded and deafened, no save. Creatures equal to
+caster's level in HD may be affected.
+
+Power Word Kill
+Level: 8
+Duration: Instantaneous
+Range: 120'
+Uttering this single word of power instantly slays one or more creatures of
+caster's choice, no save.  Creatures equal to caster's level in HD may be
+affected.
+
+Prismatic Sphere
+Level: 9
+Duration: 1 turn per level
+Range: 0
+Conjures an immobile, opaque 10' radius globe of shimmering, multicolored
+light that blinds all creatures with less than 8 HD for d6 turns.  The caster
+can pass into and out of the prismatic sphere and remain near it without harm.
+Each of the 7 layers blocks different sorts of energy and matter. Referee has
+details.
+##====== ===== =================================== ================
+##Color  Order Effect of Color                     Negated By
+##====== ===== =================================== ================
+##Red    1st   Stops non-magical ranged weapons    Ice Storm / Cold
+##             Deals 12 points of fire damage
+##Orange 2nd   Stops magical ranged weapons        Lighting Bolt
+##             Deals 24 points damage
+##Yellow 3rd   Stops poisons, gases, and           Disintegrate
+##             petrification
+##             Deals 48 points of damage
+##Green  4th   Stops breath weapons                Passwall
+##             Poison (save or die)
+##Blue   5th   Stops divination and mental attacks Magic Missile
+##             Turned to stone (save)
+##Indigo 6th   Stops all spells                    Continual Light
+##             Insanity (save)
+##Violet 7th   Energy field that sends             Dispel Magic
+##             creatures to another plane (save)
+##====== ===== =================================== ================
+
+Project Image
+Level: 5
+Duration: 1 turn per level
+Range: 240'
+Creates a quasi-real, illusory version of caster which image looks, sounds,
+and smells like the caster but is intangible. The projected image mimics the
+caster's actions (including speech) and any sound or spell effects will seem
+to come from the image. If the image is physically contacted, it disappears.
+However, all missile weapons and spells will appear to miss or otherwise do
+nothing to the caster.
+
+Protection
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+The function of this spell is identical to the divine spell of the
+same name.
+
+Protection 10' Radius
+Level: 3
+Duration: 1 turn per level
+Range: Touch
+Functions like the spell |Protection|_, except the ward extends 10'
+around one target.
+
+Protection from Missiles
+Level: 3
+Duration: 1 turn per level
+Range: Touch
+Target becomes invulnerable to normal and magical missiles, including |Magic
+Missile|_. Although, larger missiles such as boulders will overcome the spell's
+magic.
+
+Ray of Enfeeblement
+Level: 2
+Duration: 1 turn per level
+Range: 20' per level
+Effects a coruscating ray from the caster's hand. Reduces target's STR to 3,
+save negates
+
+Reincarnate
+Level: 6
+Duration: Permanent, can't be dispelled
+Range: Touch
+Brings a being dead less than a week back from the afterlife in a new random
+body. The magic of the spell creates an entirely new young adult body, all
+physical ills and afflictions are repaired. But, any mental aliments, curses,
+geas and the like remain
+
+Repulsion
+Level: 6
+Duration: 1 turn per level
+Range: 10' per level
+Any hostile creature trying to move toward the caster finds itself moving
+away, instead. This spell can be set to auto-trigger on any hostile attack.
+
+Reverse Gravity
+Level: 4
+Duration: 1 turn per level
+Range: 60'
+Reverses gravity in a cubical area approximately 30 feet x 30 feet x 30 feet
+in size. Everything in the area falls upward, and then when the spell ends it
+all falls back down again.
+
+Rope Trick
+Level: 2
+Duration: 1 hour per level
+Range: distance caster can throw a rope
+The caster tosses a rope into the air and it hangs there, waiting to be
+climbed. The caster and friends can climb up and disappear into a small
+extra-dimensional space. Anything inside the extra-dimensional space drops
+out when the spell ends.
+
+Scare
+Level: 2
+Duration: Varies
+Range: 30'
+Creates an illusion that deforms the face of the caster (or accentuates
+a pre-existing deformity) and inspires terror in one target, save negates.
+Creatures with 6 HD or more, zealots, undead, demons, and mindless creatures
+are immune.
+
+Shatter
+Level: 2
+Duration: Instantaneous
+Range: 60'
+Shatter creates a loud, ringing noise that destroys objects of crystal, glass,
+ceramic, or porcelain and damages stone or wood within 20' radius.
+
+Shield
+Level: 1
+Duration: 1 turn per level
+Range: Self
+Shield creates an invisible field of force that protects the caster.  90%
+cover against missile attacks and effective AC 16 for all other attacks.
+May be "sacrificed" as a shield.  Absorbs |Magic Missile|_\s.
+
+Shocking Grasp
+Level: 1
+Duration: Instantaneous
+Range: Touch
+The caster's touch deals 1d6 points per caster level of electricity damage.
+Save for half.
+
+Shape Vegetable
+Level: 2
+Duration: Until dispelled
+Range: Touch
+Forms an existing piece of plant, wood, etc. into any shape that suits the
+caster's purpose, fine detail isn't possible. A total volume of 3' cubed, +1'
+cubed per level may be shaped. Sentient creatures may save to negate.
+
+Shape Mineral
+Level: 3
+Duration: Until dispelled
+Range: Touch
+Forms an existing piece of stone into any shape that suits the caster's
+purpose, fine detail isn't possible. A total volume of 3' cubed, +1' cubed per
+level may be shaped.  At 7th level metal minerals may be shaped. Sentient
+creatures may save to negate.
+
+Sleep
+Level: 1
+Duration: 4d4 rounds
+Range: 240'
+Causes a magical slumber to overcome creatures with 4 HD or less, no save.
+Affects up to 2d8 HD of creatures. Creatures with the fewest HD are affected
+first. Only magic or damage prematurely awakens affected creatures.
+
+Spider Climb
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+The target can climb and travel on vertical surfaces or even traverse ceilings
+as well as a spider does. The affected creature must have at least three hands
+and feet free and bare to climb in this manner.
+
+Statue
+Level: 5
+Duration: 6 turns per level
+Range: Touch
+Turns target to solid stone, along with any garments and equipment worn or
+carried. The target can see, hear, and smell normally, but it does not need to
+eat or breathe. Feeling is limited to those sensations that can affect the
+granite-hard substance of the individual's body. Chipping is equal to a mere
+scratch, but breaking off one of the statue's arms constitutes serious damage.
+The target can return to its normal state, act, and then return instantly to
+the statue state if it so desires, as long as the spell duration is in effect.
+
+Stinking Cloud
+Level: 2
+Duration: Until dispersed, ~6 turns
+Range: 60'
+Creates a 20' cube of noxious vapors. Creatures within are overcome with
+nausea and vomiting, unable to attack, speak or perform any action more
+complex than staggering or crawling at half movement. This condition lasts as
+long as the creature is in the cloud and for 1d4+1 rounds after it leaves,
+save negates additional rounds.
+
+Stone to Flesh
+Level: 3
+Duration: Permanent, can't be dispelled
+Range: Touch
+Restores a petrified creature to its normal state, restoring life and goods.
+
+Stone Tell
+Level: 5
+Duration: 1 turn per level
+Range: Touch
+The caster gains the ability to speak with natural or worked stones.
+
+Strength
+Level: 2
+Duration: 6 turns per level
+Range: Touch
+Target gains 2d4 points of temporary STR. STR may not normally go above 18.
+
+Stumble
+Level: 1
+Duration: 1 turn per level
+Range: 60'
+Enchants a 10' length object, such as a hemp rope, staff, stick, etc. When
+a creature walks over the object, it very suddenly rises to trip them (even
+the caster is not immune!), save to negate.  Any creatures aware of its
+magical behavior may save with a +4 bonus.
+
+Suggestion
+Level: 3
+Duration: 6 turns per level
+Range: 30'
+The caster may influence the actions of the target by suggesting a course of
+activity (limited to a sentence or two). A very reasonable suggestion provides
+no save. Asking the creature to do some obviously harmful act automatically
+fails the spell. In between, save negates. The creature will carry out the
+activity for duration of spell.
+
+Summon Monster I
+Level: 2
+Duration: 1 turn per level
+Range: 10'
+Conjures (1d8) 1 HD monsters that arrive in 1d6 rounds to the location
+specified by the caster. They may then be commanded to fight. Or, perform
+other tasks within their abilities. The exact monsters conjured are chosen by
+the referee.
+
+Summon Monster II
+Level: 3
+Duration: 1 turn per level
+Range: 20'
+As |Summon Monster I|_, but brings forth (1d6) 2 HD creatures.
+
+Summon Monster III
+Level: 4
+Duration: 1 turn per level
+Range: 30'
+As |Summon Monster I|_, but brings forth (1d4) 3 HD creatures.
+
+Summon Monster IV
+Level: 5
+Duration: 1 turn per level
+Range: 40'
+As |Summon Monster I|_, but brings forth (1d3) 4 HD creatures.
+
+Summon Monster V
+Level: 6
+Duration: 1 turn per level
+Range: 50'
+As |Summon Monster I|_, but brings forth (1d2) 5 HD creatures.
+
+Summon Monster VI
+Level: 7
+Duration: 1 turn per level
+Range: 60'
+As |Summon Monster I|_, but brings forth (1d2) 6 HD creatures.
+
+Summon Monster VII
+Level: 8
+Duration: 1 turn per level
+Range: 70'
+As |Summon Monster I|_, but brings forth (1d2) 7 HD creatures, or (1) 8 HD creature.
+
+Symbol
+Level: 7
+Duration: 1 turn per level
+Range: Touch
+Caster scribes a potent, glowing rune of power upon a surface or in the air.
+Symbols are triggered by being read, touched, or passing through a portal with
+a symbol inscribed on it. The only way a symbol may be identified is by
+reading it, which automatically triggers the effects.
+Divine symbols cannot be crafted in such a way that would cause a permanent
+effect (such as insanity, or death) upon those affected.
+
+**Symbol of Despair:** creatures leave the area in hopelessness. This feeling
+lasts for 3d4 turns, during which time affected creatures will cower,
+surrender, and otherwise lack enthusiasm, no save.
+**Symbol of Discord:** creatures in area will argue for 5d4 rounds. Any beings
+of differing alignment may (50% chance) start fighting.
+**Symbol of Fear:** creatures in area suffer from the effects of |Fear|_,
+no save.
+**Symbol of Pain:** creatures in area suffer wracking pains that impose a -4
+penalty for 2d10 turns.
+**Symbol of Persuasion**: Creatures that see a symbol of persuasion become
+charmed by the caster and behave as if they are of the caster's alignment.
+This effect lasts 1d20 turns.
+**Symbol of Sleep:** creatures of 8 HD or less fall into a catatonic slumber for
+1d12+4 turns.
+**Symbol of Stunning:** creatures of 12HD or less become stunned and unable to act for
+3d4 rounds. Any held items will be dropped.
+**Symbol of Insanity:** creatures in area who fail save become permanently
+insane.
+**Symbol of Death:** slays as |Death|_ spell.
+
+Telekinesis
+Level: 5
+Duration: 6 turns
+Range: 120'
+By concentrating on nothing else and taking no other actions, the caster can
+move objects or creatures.  A total of 20 pounds per caster level may be
+moved.  Living beings get save.
+
+Teleport
+Level: 5
+Duration: Instantaneous
+Range: 10'
+Instantly transports target to a designated destination, interplanar travel is
+not possible. Unwilling targets get save to negate.  Up to 1 willing target
+per caster level may tag along.  Cannot intentionally teleport target into
+solid matter.  d10x10' high/low.
+================= ========= ========= =========
+Familiarity       Booyah    High      Low
+================= ========= ========= =========
+Very familiar     01–95     96–99     00
+Studied           01–80     81–90     91-00
+Seen casually     01–50     51–75     76-00
+Viewed once       01–30     31–65     66-00
+================= ========= ========= =========
+
+Temporal Stasis
+Level: 9
+Duration: Until dispelled
+Range: Touch
+Target is placed into a state of suspended animation, no save. For the target,
+time ceases to flow.
+
+Time Stop
+Level: 9
+Duration: d4+1 rounds
+Range: 15' radius
+Stops the passage of time in a 15' radius.  The time-stopped area does not
+thereafter move with the caster. Any creatures within this area are suspended
+in time, unable to act. The caster is not stopped in time while in the area or
+beyond.  Beings or objects entering the sphere from outside become suspended
+in time.
+
+Tiny Hut
+Level: 3
+Duration: 6 turns per level
+Range: 5' radius
+Creates an immobile, opaque 10' diameter sphere of force. Half the sphere
+projects above the ground. 6 human-sized creatures can fit in with the
+caster; they can freely pass into and out of the hut without harming it.
+However, if the caster removes himself from the hut, the spell ends. The
+temperature inside the hut is nominally 70F.  However, an exterior temperature
+below 0° or above 100° lowers or raises the interior temperature on
+a 1-degree-for-1 basis. The hut also provides protection against the elements,
+such as rain, dust, and sandstorms. The hut withstands any wind up to 50 mph,
+but greater force destroys it.  Missiles, weapons, and most spell effects can
+pass through the hut without affecting it.  The caster can illuminate the
+interior dimly upon command as desired. Although the force field is opaque
+from the outside, it is transparent from within.
+
+Tongues (reversible)
+Level: 3
+Duration: 1 turn
+Range: Self
+The function of this spell is identical to the divine spell of the
+same name, except for the duration.
+
+Transport via Plants
+Level: 5
+Duration: Special
+Range: Touch
+Allows caster to enter any large normal plant and pass any distance to a plant
+of the same kind in a single round. The destination plant need not be familiar
+to the caster. Both plants must be alive. If the caster is uncertain of the
+location of destination plant, he need merely designate direction and distance
+and the spell moves him as close as possible to the desired location.  There
+is a 5% chance that the spell goes awry, sending the caster to a similar plant
+1d100 miles away in a random direction.
+
+Unseen Servant
+Level: 1
+Duration: 6 turns per level
+Range: 0
+An unseen servant is an invisible, mindless, shapeless force that performs
+simple tasks at the caster's verbal command. It can fetch things, open unstuck
+doors, etc., as well as clean and mend. It can open only normal doors,
+drawers, lids, and the like. It can lift 20 pounds or drag 40 pounds. The
+servant cannot attack in any way.
+
+Ventriloquism
+Level: 1
+Duration: 1 turn per level
+Range: 60'
+For the duration of this spell the caster may make his voice appear to come
+from any location or source within the spell range.
+
+Wall of Fire
+Level: 4
+Duration: Concentration + d4 rounds
+Range: 60'
+Evokes an immobile, translucent, blazing curtain of shimmering violet fire.  Caster
+may choose to create a straight wall 2' thick, 60' long and 20' high, or a circular
+wall with a 15' radius, also 20' high.  This wall of flames is impenetrable to
+monsters with less than 4 HD.  Others suffer 4d6 hit points of fire damage if
+they pass through the wall. Cold spells and magical effects are negated in the
+vicinity of the wall.
+
+Wall of Ice
+Level: 4
+Duration: Concentration + d4 rounds
+Range: 60'
+Evokes an immobile, translucent, supernaturally cold wall of blue-white ice.  The
+caster may choose to create a straight wall 60' long and 20' high, or
+a circular wall with a 15' radius, also 20' high.  Creatures with less than
+4 HD cannot affect the wall.  Others are able to smash through it taking 2d6
+hit points of cold damage.  Fire spells and magical effects are negated in
+the vicinity of the wall.
+
+Wall of Force
+Level: 5
+Duration: 1 turn per level
+Range: 60'
+Evokes an immobile, invisible wall of force. The wall is immune to
+damage of all kinds, and it is unaffected by most spells, including |Dispel
+Magic|_. However, |Disintegrate|_ immediately destroys it.  Breath weapons, spells,
+missile weapons, elemental attacks, and gases cannot pass through the wall in
+either direction. The caster can form one 10'x10' section per level into any
+shape, such as a straight wall or box.
+
+Wall of Stone
+Level: 5
+Duration: Until dispelled
+Range: 120'
+Conjures a stone wall into being that can be any form the caster desires, to
+a maximum of 10,000 cubic feet. Minimum 5' thick per 10' of height. This wall
+is permanent unless otherwise destroyed or a dispel magic spell is cast upon
+it.  The wall may not be evoked so that it appears where objects are, and it
+must rest on a solid surface.
+
+Wall of Iron
+Level: 6
+Duration: Until dispelled
+Range: 120'
+Conjures a vertical, flat iron wall out of thin air. The wall is 3' thick, and
+any rectangular shape up to 50'x40', 100'x20', 200'x10'.  The wall must be
+evoked so that it rests on a solid surface.
+
+Water Breathing
+Level: 3
+Duration: 1 day
+Range: Touch
+One target per caster level can breathe water freely by means of this spell.
+The spell does not make creatures unable to breathe air.
+
+Atmosphere Bubble
+Level: 4
+Duration: 6 turns per level
+Range: Self
+Conjures a 20' radius bubble of breathable atmosphere centered on caster.
+
+Web
+Level: 2
+Duration: 6 turns
+Range: 30'
+Fibrous, sticky webs fill an area up to 10 x 10 x 20 feet.  Creatures caught
+within a web become entangled among the gluey fibers and generally can't move,
+attack, cast spells, etc.  Any creature with strength in a human range can
+break free of the webs in 2d4 turns.  Creatures with 17-18 strength take
+1 turn to break free or move 10'.  Stronger creatures can break through 10'
+per round. Using a torch or other flame one can burn through in a turn.
+
+Wish
+Level: 9
+Duration: Special
+Range: Special
+Wish may mimic any spell of 9th level or less or create comparable effects.
+Ultimately, the Referee will have to decide the limits of a wish spell. Events
+can be reversed; the dead can be brought back to life or an entire army might
+be healed of damage. An entire group could be teleported to any location with
+no chance of error.
+
+Wizard Eye
+Level: 3
+Duration: 6 turns
+Range: 240'
+Conjures an 1" invisible magical sensor that transmits visual information, and
+can see with 60' darkvision.  The eye can travel, by flight, in any direction
+at the mental direction of caster.
+
+Wizard Lock
+Level: 2
+Duration: Until dispelled
+Range: 30'
+Magically locks door, chest, portal or any similar closable object.  The
+caster may freely open his own lock without dispelling it.  Likewise, any
+spell caster who is at least 3 levels higher than the caster of the spell may
+pass through unimpeded.  |Dispel Magic|_ removes a Wizard Lock, while |Knock|_
+merely allows one time passage.
+
+##Detect Magic
+##Level: 1
+##Duration: 2 turns
+##Range: 60'
+##All enchanted items, creatures, places, or other things within
+##60' of the caster will glow for the duration of the spell. The
+##caster may move around to bring objects within the radius
+##during the duration of the spell.
+##
+
+##Guards and Wards
+##Level: 6
+##Duration: 6 turns per level
+##Range: 0
+##This powerful spell is primarily used to defend a stronghold. The
+##ward protects a 10' radius per caster level. The spell creates the following magical
+##effects within the warded area.
+##Fog: Fog fills all corridors, obscuring all sight, including
+##infravision, beyond 10'.
+##wizard Locks: All doors in the warded area are arcane locked.
+##Webs: Webs fill all stairs from top to bottom. These strands are
+##identical with those created by the web spell, except that they
+##regrow in 10 minutes if they are burned or torn away while the
+##guards and wards spell lasts.
+##Confusion: Where there are choices in direction·such as a
+##corridor intersection or side passage·a minor confusion-type
+##effect functions so as to make it 50% probable that intruders
+##believe they are going in the opposite direction from the one
+##they actually chose.
+##Lost Doors: One door per caster level is covered by an illusion
+##to appear as if it were a plain wall.
+##In addition, the caster can place one of the following five
+##magical effects.
+##1. Dancing lights in four corridors.
+##2. A magic mouth in two places.
+##3. A stinking cloud in two places. The vapors appear in
+##the places designated; they return within 10 minutes if
+##dispersed by wind while the guards and wards spell
+##lasts.
+##4. A gust of wind in one corridor or room.
+##5. A suggestion in one place. The caster selects an area
+##of up to 5' square, and any creature who enters or
+##passes through the area receives the suggestion
+##mentally.
+##The whole warded area radiates strong magic. |Dispel Magic|_ cast
+##on a specific effect, if successful, removes only that effect.
+
+##Identify
+##Level: 1
+##Duration: 1 round per level
+##Range: Touch
+##This spell may be used to determine the magical properties of a
+##single magic item. However, the caster must be holding or
+##wearing the item according to its function and the spell must be
+##cast no later than 1 hour after it comes into the caster's
+##possession. Weapons must be held, boots worn, etc. If such an
+##item happens to be cursed or otherwise requires a saving throw,
+##the spell caster receives all normal defenses.
+##For each round the spell is in effect, there is a probability of
+##15%, +5% for each caster level that one power of the item is
+##discovered. If the item is powerless this information will be
+##gained as well. However, when using this spell, the caster must
+##succeed in a saving throw versus spells each round. Only if this
+##succeeds is the information gained correct. If the save is failed
+##by 5% (1 lower than the target number) the information gained
+##is false, to be determined by the referee. If the roll is failed by
+##more than that, no information is gained. Note that while
+##specific abilities or powers are revealed, the specific "+" of a
+##weapon is not, only the fact that it is enchanted is revealed and
+##a general sense of whether it is strong or weak. The specific
+##number of charges, if relevant, contained in a magic item is not
+##revealed. Knowledge of an approximation is granted, which will
+##be in the form of a range above and below approximately 25%
+##of the actual number.
+##This spell is very draining on the caster. The caster suffers
+##temporary loss of 8 points to CON when the spell duration
+##ends. If this should bring the caster to fewer than 3, he falls
+##unconscious for 24 hours but awakens with full CON restored.
+##Points of CON may only be restored at the rate of 1 per 6 turns
+##of rest.
+
+##Massmorph
+##Level: 4
+##Duration: Until dispelled
+##Range: 240'
+##Up to 100 human-sized or equivalent creatures are given the illusory
+##appearance of a forest. Any creatures that enter such an enchanted area become
+##part of the illusion. Likewise, any creatures that leave the affected area
+##become visible for what they are. This spell can be dismissed by the caster at
+##any time.
+
+##Extend Duration I
+##Level: 4
+##Duration: Special
+##Range: 0
+##This spell may be used to extend the duration of a spell the
+##caster has already cast and is still in effect. Only spells of levels
+##1, 2, and 3 are extended in this way, and their duration is
+##extended by 50%.
+##Extend Duration II
+##Level: 5
+##Duration: Special
+##Range: 0
+##Extend duration II is identical to extend duration I, except that
+##the duration of spells from levels 1-4 may be extended by 50%.
+##Extend Duration III
+##Level: 6
+##Duration: Special
+##Range: 0
+##Extend duration III is identical to extend duration I, except that
+##the duration of spells of levels 1-3 may be extended by 100%,
+##and spells of levels 4 and 5 may be extended by 50%.
+##
+##False Gold
+##Level: 2
+##Duration: 6 turns per level
+##Range: 10'
+##The caster may transform copper or brass within 1 cubic foot
+##per level into pure gold. This is the equivalent of 400 pounds
+##per cubic foot, and the metal could be in the form of coins, art,
+##etc. Beings that encounter false gold can check to see if the ruse
+##is detected, by rolling 1d20 against INT. A penalty of +1 is
+##added to the roll per level of the caster. So if a shopkeeper has
+##an INT of 12 and the caster is 5th level, a roll of 7 or less is
+##required to detect the false nature of the gold. Alternatively, if
+##the gold makes contact with pure iron there is a 20% chance it
+##reverts back to its true nature.
+##
+##False Trap
+##Level: 2
+##Duration: 6 turns per level
+##Range: 10'
+##This clever enchantment may be used by the caster to
+##permanently create the false perception that an item, such as a
+##small box, lock, dagger, etc., is trapped. If the thief skill detect
+##traps is employed on the item, there is an 80% chance, -4% per
+##level of the observer, that a trap is perceived. If an attempt is
+##made to remove the trap, there is a slim 20% chance, +4% per
+##level of the observer, that the trap is perceived to be removed.
+
+##Vanish
+##Level: 7
+##Duration: Special
+##Range: Touch
+##The caster may teleport an object as per the spell teleport, or may banish an
+##object to the ethereal plane, in which case the object is replaced in the
+##material plane with stone that matches the objects shape.  If the spell dispel
+##magic is cast upon a stone item replaced by this spell, it may bring back the
+##original item.
+
+##Distort Distance
+##Level: 5
+##Duration: 1 turn per level
+##Range: 10' per level
+##This spell is cast after an earth elemental has been summoned.
+##The elemental will then obey, and spread itself over an area
+##specified by the caster, up to 1,000 square feet per caster level.
+##The area can be distorted to be twice long or equally short.
+##Thus a 500' long x 200' wide cavern could be shrunk to 250'
+##long x 100' wide, or expanded to 1000' long x 400' wide.
+##Creatures traveling over such a distorted area do not realize it is
+##distorted, and there is no way to detect any outside influence.
+##The area will faintly radiate magic.
+
+##Scribe
+##Level: 1
+##Duration: 1 hour per level
+##Range: 0
+##Allows caster to copy a spell into his spell book, even if it is of a level
+##the caster cannot use, and even if the spell is unusable due to intelligence.
+##The scribing takes 1 hour per spell level of the spell transferred. For the
+##time the spell is written, the caster is in a deep state of concentration, and
+##will always be surprised. The caster must succeed in a saving throw versus
+##spells. A penalty of -1 is applied if the spell to be copied is 3 levels
+##greater than the caster may use, and a bonus of +2 is granted if the spell is
+##up to 1 level greater than the caster may use, or below. If this saving throw
+##is unsuccessful, the caster suffers 1d4 damage per spell level of the
+##spell to be scribed, and the strain forces the caster unconscious for an equal
+##number of turns. The caster may only heal up to 4 hp per day of this damage.
+
+##Magic Aura
+##Level: 1
+##Duration: 1 day per level
+##Range: Touch
+##The caster may alter an item's aura so that it registers to detect
+##spells (and spells with similar capabilities) as though it were
+##magical. If the object bearing magic aura is physically examined
+##(touched), the examiner recognizes that the aura is false if he
+##succeeds in a saving throw versus spells. Otherwise, he believes
+##the aura and no amount of testing reveals what the true magic
+##is.

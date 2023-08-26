@@ -20,13 +20,13 @@ import random
 
 random.seed(time.time())
 
-DICE = re.compile(r'(\d+d)?(\d+)([-+*]\d+)?(d\d)?')
+DICE = re.compile(r'(\d*d)?(\d+)([-+*]\d+)?(d\d)?')
 
 def parse(text, verbose):
     """Parse dice string."""
     match = DICE.match(text)
     count, die, mod, drop = match.groups()
-    if count:
+    if count and count != 'd':
         count = int(count[:-1])
     else:
         count = 1

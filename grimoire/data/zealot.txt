@@ -1,0 +1,793 @@
+## Note: edited from original
+## Cleric Spells
+
+#Unhallow (reversible)
+#Level: 2
+#Duration: Permanent
+#Range: 60'
+#This spell disrupts any magical wards in the affected area which protect
+#against the entry or creation of undead. Affected warding spells are
+#permanently dispelled.
+
+Spiritual Armor
+Level: 1
+Duration: Combat
+Range: Caster
+The caster is surrounded with a divine glow which repulses blows.
+Providing +2 AC bonus and may be "sacrificed" as a shield.
+[From Barrowmaze by Greg Gillespie]
+
+Cure Blindness
+Level: 2
+Duration: Permanent
+Range: Touch
+Cures magical or physical damage to any one sense; sight, hearing, taste, touch,
+or smell.
+
+Cure Disease
+Level: 3
+Duration: Permanent
+Range: 30'
+Instantly cures all diseases in range. Also, destroys all green slime, moulds
+and similar yucky things.
+
+Cause Disease
+Level: 3
+Duration: Permanent
+Range: 30'
+Inflicts a nasty disease on one creature, no save. Victim is -2 to all
+actions, can't regain hit points or be cured of damage magically or naturally
+until disease is removed.
+
+Remove Curse
+Level: 4
+Duration: Permanent
+Range: Touch
+Instantaneously removes one curse on a creature including allowing it to
+remove cursed item.
+
+Curse
+Level: 4
+Duration: Permanent
+Range: Touch
+Curse can bring about any number of unfortunate effects, determined by the
+caster and Referee. There is typically no save. Can be used to curse objects
+which then affect anyone who touches the object.
+
+Heal
+Level: 4
+Duration: Permanent
+Range: Touch
+Channels divine energy into a creature healing all CON damage and immediately
+ends any and all health related adverse conditions such as: blindness,
+disease, fatigue, feeblemind, insanity, and poison.  It also allows Hit Dice
+re-roll.
+
+Harm
+Level: 4
+Duration: Permanent
+Range: Touch
+Channels profane energy into creature taking away all hit points, all but d4
+points of CON, inflicting blindness, deafness, and the same disease as |Cause
+Disease|_. If also forces D&D roll at -2. Save vs each affliction to
+individually negate.
+
+Delay Poison
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+The effect of any poison to which target is exposed is delayed until spell's
+duration has expired.  If used soon after death, will restore to life until
+the spell duration ends a victim of poison.
+
+Neutralize Poison
+Level: 3
+Duration: Permanent
+Range: Touch
+Detoxifies any sort of venom or poison in the creature or object touched.
+If used soon after death will bring back to life a victim of poison.
+
+Poison
+Level: 3
+Duration: Permanent
+Range: Touch
+Save or die.  Alternatively, may be used to poison food, drink, or a weapon.
+
+Aerial Servant
+Level: 4
+Duration: 1 day per level
+Range: Special
+Summons an Aerial Servant which is forced to perform a service other than
+combat.
+
+Animate Dead
+Level: 3
+Duration: Permanent until dispelled
+Range: 60'
+Caster may animate a number of HD equal to twice their level.
+
+Animate Objects
+Level: 3
+Duration: 1 hour per level
+Range: 60'
+Imbues inanimate objects with mobility and a semblance of life which attacks
+whomever or whatever the caster designates.  This spell cannot animate objects
+carried or worn by a creature.
+
+Spiritual Weapon
+Level: 1
+Duration: Combat
+Range: 30'
+Conjures an animated weapon of pure force which independently attacks
+opponents dealing d6 damage (+1 damage die size per three caster levels).
+
+Striking
+Level: 2
+Duration: Combat
+Range: Touch
+Enchants one weapon to deal an extra d6 of damage and be able to damage
+creatures only affected by magical weapons.
+
+Enchant Arms
+Level: 3
+Duration: Combat
+Range: 30'
+Enchants all allied weapons to deal and extra d6 of damage and be able to
+damage creatures only affected by magical weapons.
+
+Call Lightning
+Level: 1
+Duration: 10 rounds per level
+Range: Sight
+The caster must be outdoors and in a stormy area; a rain shower, clouds and
+wind, hot and cloudy conditions, or even a tornado.  A vertical bolt of
+lightning may be called once every 10 rounds. Dealing 2d8, +1d8 per level
+points of electricity damage, save for 1/2, to all within a 10' radius or in
+the path of the bolt.
+
+Blade Barrier
+Level: 3
+Duration: 3 rounds per level
+Range: 60'
+Conjures an immobile, vertical curtain of whirling blades. Either in a circle
+10' radius or a wall up to 200 square feet. Any creature passing
+through the wall takes 6d10 points of damage.
+
+Flame Strike
+Level: 4
+Duration: Instantaneous
+Range: 240'
+Evokes a vertical column of divine retribution 30' high and 10' in diameter that
+roars downward dealing 6d8 hit points of holy fire damage, no save for target,
+others save for 1/2.
+
+Bless
+Level: 1
+Duration: 6 turns
+Range: Touch
+Bless fills one ally with courage and divine purpose. They are bestowed a +2
+morale bonus and +2 to hit.  Casting on a weapon will increase its damage
+die by 1 size (by 2 vs "evil" creatures).  Cannot be cast during combat.
+
+Chant
+Level: 1
+Duration: Concentration
+Range: Sound
+Intoned continuously, brings about supernatural intervention on behalf of the
+caster and allies within range. All attacks, and saving throws are made
+with a +2 bonus. Likewise, all of these rolls attempted by enemies suffer a -2
+penalty. This effect continues so long as the caster does not move and focuses
+only on chanting. However, if they are dealt damage, or otherwise physically
+distracted, the spell ends.
+
+Prayer
+Level: 2
+Duration: Combat
+Range: 30'
+Similar to |Chant|_ bestows divine aide to the caster and allies. All attacks,
+and saving throws are made with a +2 bonus. Likewise, all of these rolls
+attempted by enemies suffer a -2 penalty.
+
+Command
+Level: 1
+Duration: 1 round
+Range: Sound
+Caster gives one target a single word command, which it obeys to the best of
+its ability.  Targets with 5+ HD, or have 12+ INT may save to negate.  The
+single word must make sense as a command, such as approach, drop, fall, flee,
+halt, surrender, sleep, etc. Although a target could be instructed to "die,"
+this will only make the target take on a comatose state for a single round.
+The target must be able to understand the language of the caster.
+
+Divine Weather
+Level: 1
+Duration: Instantaneous
+Range: 0
+Divines weather conditions 2 hours per caster level into the future.
+
+Augury
+Level: 1
+Duration: Instantaneous
+Range: 0
+Portends whether a particular action will bring good or bad results to caster
+and allies in the immediate future.
+
+Divination
+Level: 3
+Duration: Instantaneous
+Range: 0
+Provides caster with useful information regarding an area, building, section of
+a dungeon, and other similar places.
+
+Commune
+Level: 4
+Duration: 3 turns
+Range: 0
+Calls upon higher powers to answer up to three "yes" or "no" questions.
+Higher powers do not look kindly upon those who call upon them for trivial
+matters, or who call upon them too often.
+
+Conjure Animals
+Level: 1
+Duration: 1 combat
+Range: 60'
+Conjures 1 HD per caster level of normal animals out of thin air to attack
+enemies designated by the caster. Animals will fight to the death or until
+the end of combat and then disappear.
+
+Light (reversible)
+Level: 1
+Duration: 6 turns
+Range: 120'
+Creates light as bright as a torch in 20' radius. Can be cast on eyes,
+blinding target, save negates.
+
+Darkness
+Level: 1
+Duration: 6 turns
+Range: 120'
+Creates a 15' radius sphere of darkness. This darkness is complete, blocking
+normal and supernatural vision.  Can be cast on eyes, blinding target, save
+negates.
+
+Continual Light
+Level: 2
+Duration: 1 hour per level
+Range: 120'
+Produces light as bright as sunlight in a 30' radius around target which may
+be an object or point in space. "Darkness" spells of less than 3rd level
+cannot diminish this light. Any creatures that suffer penalties (not including
+damage) for being in sunlight are affected by this spell. Can also be cast on
+a creature's eyes, causing blindness, save negates.
+
+Continual Darkness
+Level: 2
+Duration: 1 hour per level
+Range: 120'
+Produces profound darkness in a 30' radius around target which may be an
+object or point in space. Normal eyesight, including infravision, cannot
+penetrate this darkness, nor can lamps, torches, or spells of less than 3rd
+level.  Can be cast on a creature's eyes, causing blindness, save negates.
+
+Control Temperature
+Level: 2
+Duration: 1 turn per level
+Range: 0
+Within 30' radius caster may raise or lower the ambient temperature by 10
+degrees (Fahrenheit) per caster level.
+
+Control Winds
+Level: 3
+Duration: 1 turn per level
+Range: 0
+Alter wind force within a 30' radius per caster level. For every caster level,
+wind can increase or decrease speed by 10 miles per hour, in increments of 10
+miles per hour per round.  A 10' radius "eye" of calm air optionally surrounds
+the caster.
+**Strong winds (30+ mph):** make sailing difficult, missile
+weapons difficult, and forces smaller airborne creatures
+out of the air.
+**Severe wind (45+ mph):** causes minor ship and
+building damage, and forces human-sized airborne
+creatures from the air.
+**Windstorm (60+ mph):** drives most flying creatures
+from the skies, uproots small trees, knocks down light
+wooden structures, tears off roofs, and endangers
+ships.
+**Hurricane force winds (75+ mph):** destroy wooden
+buildings, sometimes uproot even large trees, and
+cause most ships to sink.
+
+Control Weather
+Level: 4
+Duration: 4d12 hours
+Range: several miles
+The caster may call forth weather appropriate to the climate and season of the
+area.  Control weather can do away with atmospheric phenomena (naturally
+occurring or otherwise) as well as create them.  The caster controls the
+general tendencies of the weather, such as the direction and intensity of the
+wind, but cannot control specific applications of the weather; where lightning
+strikes, or the exact path of a tornado.
+It takes 1 turn to cast the spell and an additional 1d4 turns for the
+effects to manifest.
+
+Control Weather, Greater
+Level: 5
+Duration: 4d12 hours
+Range: many miles
+As |Control Weather|_ but may change weather to be consistent
+with an adjacent season.
+
+Create Food and Water
+Level: 3
+Duration: Permanent
+Range: 10'
+Conjures enough food and water to sustain 3 hungry people per level for a day.
+
+Detect Evil
+Level: 1
+Duration: 1 turn per level
+Range: 10' per level
+The caster percieves "Evil" creatures and objects within range to glow evilly.
+
+Find Traps
+Level: 1
+Duration: 1 turn per level
+Range: Sight
+The caster can perceive both magical and non-magical traps.  This spell grants
+no knowledge about the nature of the trap or how to deactivate it.
+
+Earthquake
+Level: 7
+Duration: d6 rounds
+Range: 240'
+Causes an intense but highly localized tremor 10'r per caster level, during
+which creatures on the ground cannot move, cast spells or attack.
+**Cave, Cavern, or Tunnel**: collapses, dealing 7d6 points of damage.  **Cliffs,
+Mountains**: landslides, dealing 7d6 points of damage.  **Open
+Ground**: fissures open, creatures must save or fall into one and die.  **Structure**:
+collapses typical wooden or masonry buildings, but not those of
+stone or reinforced, dealing 7d6 points of damage.  **River, Lake, or Marsh**:
+fissures open underneath the water, draining it away and forming muddy ground,
+creatures may be sucked under and killed.
+
+Exorcise
+Level: 3
+Duration: Permanent
+Range: Touch
+Removes foreign influences from target, whether those influences are from
+|Magic Jar|_, charms, possession, and similar effects.
+
+Find the Path (reversible)
+Level: 3
+Duration: 1 turn per level, 1 day outdoors
+Range: Touch
+Target can find the shortest, most direct route to a specified destination,
+whether into or out of a locale. The locale can be outdoors, underground, or
+even inside a maze spell. Find the path works with respect to locations, not
+objects or creatures, indicating, at appropriate times, the exact path to
+follow or physical actions to take.  Find the Path can be used to remove the
+caster and companions from the effect of a |Maze|_ spell in a single round.
+
+Gate
+Level: 7
+Duration: see below
+Range: 30'
+The spell functions exactly as the magic-user spell of the same
+name.
+
+Glyph of Warding
+Level: 3
+Duration: Until triggered
+Range: Touch
+This powerful inscription harms those who enter, pass, or open the warded area
+or object. A glyph can ward a bridge or passage, portal, chest, box, room, and
+so on. The area of effect is up to 5' squared per caster level.  A glyph can
+be placed to conform to any shape up to the limitations of the total square
+footage. When the spell is completed, the glyph and tracery become nearly
+invisible.  Any creature entering or touching the warded area or opening the
+warded object without speaking a password triggers the glyph.
+
+**Blast Glyph**: Deals 2 points of elemental damage per caster level, save for 1/2.
+
+**Spell Glyph**: Casts one spell such as |Amnesia|_ or |Hold Person|_.
+
+Hold Person
+Level: 2
+Duration: 9 turns
+Range: 120'
+Paralyzes 1-4 humanoids of caster's choosing, save negates.  If less than
+4 creatures are targeted, each saves at -1 per creature fewer.  Undead,
+mindless and ogre sized or larger targets are unaffected. Targets are aware
+and breathe normally but cannot take any actions, even speech.
+
+Dispel Evil
+Level: 4
+Duration: Concentration
+Range: 30'
+Caster can take no other action but concentrate on the spell for the entire
+duration. All "evil" and conjured creatures that come within 30' of the caster
+must save or be destroyed.  Any creature that succeeds will flee.  It also
+functions as a |Dispel Magic|_ vs all "evil" spells and items within range.
+Alternatively, the caster can direct the spell at one target only which must
+save at -4.
+
+Holy Word
+Level: 4
+Duration: Special
+Range: 60'
+Upon speaking the holy word, any oppositely aligned creature within a 60' area
+of the caster suffers the following ill effects, no save.
+======= ==================================
+HD      Effect
+======= ==================================
+12+     Deafened, -2 to hit for 1d6 rounds
+8-11    Stunned for 2d6 rounds
+4-7     Paralyzed for 1d6 turns
+<=3     Killed
+======= ==================================
+
+Insect Plague
+Level: 5
+Duration: 1 day
+Range: 480'
+Summons a 60' swarm of flying, biting insects under the caster's control.  It
+moves at running speed. Any creatures engulfed by the swarm suffer d4 points
+of damage per round due to the numerous bites and stings.  Creatures of 2 HD or
+fewer will flee in terror from the insect plague, no save.
+
+Locate Object
+Level: 2
+Duration: 1 turn per level
+Range: 20' per level
+Caster senses the direction (as the crow flies) towards a well-known or
+clearly visualized object named when casting the spell. Will locate nearest
+example of generic objects, e.g. "stairs".  Attempting to find a specific item
+requires a detailed and accurate mental image; if the image is not close
+enough to the actual object.
+
+Lower Water
+Level: 2
+Duration: 1 turn per level
+Range: 10' per level
+Lowers water or other fluid by 10% per caster level.
+
+Part Water
+Level: 3
+Duration: 1 turn per level
+Range: 120'
+Same as Magic-user spell of same name.
+
+Plane Shift
+Level: 5
+Duration: Instantaneous
+Range: Touch
+Moves target to another plane of existence or alternate dimension chosen by
+caster, save negates. Up to seven willing targets linked by hands.  Transports
+creatures instantaneously and then ends, no return ticket is provided.
+
+Protection
+Level: 1
+Duration: 12 turns
+Range: Touch
+Wards one target per level against "evil". Providing +2 bonus to saves from
+evil sources. Prevents bodily contact by evil, summoned or conjured creatures.
+The protection against contact ends if target takes offensive action
+against the warded creature.  Mage version is self only.
+
+Protection from Fear
+Level: 1
+Duration: 12 turns
+Range: Touch
+Instills courage in one target per level, granting a +4 save bonus vs fear.
+And potentially removing the effects of existing fear by allowing targets
+a (new) save.  When warding caster it also grants complete immunity against
+the first exposure to fear.  Mage version is self only.
+
+Protection from Enchantment
+Level: 2
+Duration: 12 turns
+Range: Touch
+Grants one target per level +4 save bonus vs mind affecting spells that charm,
+command, delude, confuse, etc.  Targets currently under such an effect
+get a new save with bonus to break free.  When warding caster it also
+grants complete immunity against the first exposure to enchantment.  Mage
+version is self only.
+
+Resist Element
+Level: 1
+Duration: 6 turns
+Range: Touch
+One target per level is unharmed by intense (non-magical) heat. Grants +4 bonus to
+all saves vs heat-based attacks.
+At time of casting caster may choose another type of elemental damage in place
+of fire, such as cold, electricity, or acid.  Mage version is self only.
+
+Protection from Element
+Level: 2
+Duration: 12 turns
+Range: Touch
+Grants one target per level complete immunity to normal fire, +4 to saves vs and
+cuts damage from magical fire in half. When warding caster it also grants
+complete immunity against the first exposure to magical fire.
+At time of casting caster may choose another type of elemental damage in place
+of fire, such as cold, electricity, or acid.  Mage version is self only.
+
+Life Energy Protection
+Level: 1
+Duration: 12 turns
+Range: Touch
+Wards one target per level against life/level draining attacks of undead
+creatures and various spells.
+
+Purify Food and Drink (reversible)
+Level: 1
+Duration: Permanent
+Range: 10'
+Makes spoiled, rotten, poisonous, or otherwise contaminated food and water
+pure and wholesome.
+
+Geas
+Level: 4
+Duration: Special
+Range: 60'
+Compels target to undergo a quest of caster's choosing, save negates.  The
+quest must be achievable. It can be dangerous, although the target cannot be
+instructed to purposefully harm itself. Should the target resist undertaking
+the quest, they will suffer increasing harm and eventually die.
+
+Regenerate
+Level: 4
+Duration: Permanent
+Range: Touch
+Target's severed appendages, broken bones, and ruined organs grow back in
+2d4 turns or 1 round if the severed parts are present and held "in place".
+
+
+Raise Dead (reversible)
+Level: 5
+Duration: Permanent
+Range: Touch
+Restores life to a body that has been dead for no longer than two days per
+level of dead guy. Dying is an ordeal, those returning have no hit points and
+1 CON. Recovering a max of 1 CON per day. Until fully restored, target is weak
+and may not engage in spell casting, combat, or any other strenuous activity.
+
+Resurrection (reversible)
+Level: 7
+Duration: Permanent
+Range: Touch
+Restores a dead creature to full health and vigor. The condition or existence of
+the remains is not a factor but the target can have been dead no longer than
+10 years per caster level.
+
+Sanctuary
+Level: 1
+Duration: 1 round per level
+Range: Touch
+Any opponent must make save to strike or otherwise directly attack the target.
+Offensive actions by target cancels spell.
+
+Silence 15' Radius
+Level: 2
+Duration: 12 turns
+Range: 120'
+No noise whatsoever issues from the area of effect, but noise originating from
+outside the silenced area can be heard by those within it.
+
+Tongues
+Level: 2
+Duration: 6 turns
+Range: Self
+Grants the caster the ability to read, speak and understand any normal language.
+
+Speak with Animals
+Level: 2
+Duration: 6 turns
+Range: Self
+Caster can comprehend and communicate with ordinary and giant animals.  There
+is a good chance that the animals will be friendly and eager to provide
+reasonable assistance, they don't get to talk with non-animals very often.
+
+Speak with Plants
+Level: 2
+Duration: 6 turns
+Range: Self
+Caster can communicate with plants, including normal plants, plant
+creatures, funguses and the like.
+
+Speak with Creatures
+Level: 3
+Duration: 6 turns
+Range: Self
+As |Speak with Animals|_, but caster may converse with any creature.
+
+Speak with Dead
+Level: 3
+Duration: Special
+Range: 1'
+Corpse must answer truthfully but its knowledge is limited to what the
+creature knew during life, including the languages it spoke.
+=============== ================ =========
+Caster Level    Time Deceased    Questions
+=============== ================ =========
+3rd or less     7 days           2
+4th to 5th      7 weeks          3
+6th to 7th      7 months         4
+7th to 9th      7 years          5
+10th to 11th    7 centuries      6
+12th plus       7 millenniums    7
+=============== ================ =========
+
+Snake Charm
+Level: 1
+Duration: 1d4+2 turns
+Range: 60'
+Charms 1 HD of snakes per caster level which obey the caster's spoken commands.
+
+Sticks to Snakes
+Level: 2
+Duration: 6 turns
+Range: 60'
+Transform 2d6 sticks into snakes which obey the caster's spoken commands.
+
+Symbol
+Level: 6
+Duration: 1 turn per level
+Range: Touch
+Same as Magic-user spell of same name.
+
+True Seeing
+Level: 3
+Duration: 1 round per level
+Range: Self
+Caster gains ability to see all things as they actually are. The target sees
+through normal and magical darkness, notices secret doors, sees invisible
+creatures or objects normally, sees through illusions, and sees the true form
+of polymorphed, changed, or transmuted things.
+
+Wind Walk
+Level: 4
+Duration: 6 turns per level
+Range: Touch
+Alters the substance of one target per level to a cloudlike vapor.  A wind
+walker can fly with a maximum movement of 100' per caster level.
+
+Word of Recall
+Level: 3
+Duration: Instantaneous
+Range: Touch
+Transports up to seven willing targets linked by hands instantly back to
+the caster's previously sanctified sanctuary.
+
+##Cure Light Wounds (reversible)
+##Level: 1
+##Duration: Permanent
+##Range: Touch
+##Heals 1d6+1 hit points of damage.  Alternatively, this spell also cures
+##paralysis.
+##
+##Cause Light Wounds
+##Level: 1
+##Duration: Permanent
+##Range: Touch
+##Cause light wounds causes 1d6+1 hit points of damage to a being if the caster
+##can touch the opponent.
+##
+##Cure Serious Wounds (reversible)
+##Level: 3
+##Duration: Permanent
+##Range: Touch
+##Heals of 2d6+2 hit points of damage.  Also heals any conditions listed in Cure
+##Light Wounds.
+##
+##Cause Serious Wounds
+##Level: 3
+##Duration: Permanent
+##Range: Touch
+##Cause serious wounds causes 2d6+2 hit points of damage to a being if the caster can touch
+##the opponent.
+##
+##Cure Critical Wounds (reversible)
+##Level: 5
+##Duration: Permanent
+##Range: Touch
+##Heals 3d8+3 hit points of damage.  Also heals any conditions listed in Cure
+##Light Wounds.
+##
+##Cause Critical Wounds
+##Level: 5
+##Duration: Permanent
+##Range: Touch
+##Cause critical wounds causes 3d8+3 hit points of damage to a being if the
+##caster can touch the opponent.
+##
+##Know Alignment
+##Level: 2
+##Duration: 1 round
+##Range: 10'
+##The caster of this spell will immediately know the alignment of a being within
+##range. In addition, magic items with an alignment or the nature of a holy (or
+##unholy) place will be revealed.
+
+##Detect Magic
+##Level: 1
+##Duration: 2 turns
+##Range: 60'
+##For the duration of this spell, the caster can see a magical glow
+##on any enchanted object or creature within 60'. This includes
+##objects that are permanently magical, such as weapons or other
+##items, and objects or creatures that are currently under the
+##influence of a spell or some other enchantment.
+
+##Restoration
+##Level: 7
+##Duration: Permanent
+##Range: Touch
+##This spell restores one experience level to a creature who has
+##had a level drained. The drained level is restored only if the time
+##since the creature lost the level is equal to or less than one day
+##per caster level. A character that has a level restored by
+##restoration has exactly the minimum number of experience
+##points necessary to restore him or her to his or her previous
+##level. This spell also negates the effects of the spell feeblemind.
+
+##Reveal Charm (reversible)
+##Level: 2
+##Duration: 1 turn
+##Range: 30'
+##Reveals creatures that are under the influence of a charm spell.
+
+##Atonement
+##Level: 5
+##Duration: Permanent
+##Range: Touch
+##Removes the burden of unwilling evil acts or misdeeds from the target. The
+##creature seeking atonement must be truly repentant and desirous of setting
+##right its misdeeds. Atonement may be cast to reverse magical alignment change.
+##This ritual takes 1 turn to cast.
+
+##Detect Lie (reversible)
+##Level: 4
+##Duration: 1 round per level
+##Range: 30'
+##Target knows whether words heard are truth or lies.  Undetectable lie (reverse
+##of detect lie) can nullify the effect of detect lie, or can be used to tell
+##lies in a convincing manner.
+
+##Obscuring Mist
+##Level: 2
+##Duration: 1 turn/level
+##Range: 0
+##A misty vapor seethes outward from the caster, billowing forth to fill
+##a radius of 20 feet + 10 feet per level of the caster.  A strong wind
+##disperses the fog, reducing its duration to 25% of normal.
+
+##Summon Sylvan Beings
+##Level: 4
+##Duration: Special
+##Range: 120', +10' per level
+##The caster of this spell must be outdoors, and must both chant
+##and make magical hand gestures. The casting ends when sylvan
+##beings appear, or if 2 turns have passed with no results. The
+##referee decides the probability of a particular type of woodland
+##creature being available within range, based on the
+##circumstances and terrain type. Refer to the table below for the
+##type of creatures this spell may beckon forth, and how many of
+##each will appear.
+##======== ====== ======== ===============
+##Creature Number Creature Number
+##======== ====== ======== ===============
+##Centaur  1d4    Sprite   1d6
+##Dryad    1d4    Treant   1
+##Nixie    1d4    Unicorn  1
+##Pixie    1d8
+##======== ====== ======== ===============
+##Creatures are allowed a saving throw versus spells, with a +4
+##bonus. When creatures arrive they receive an additional identical
+##saving throw if any companion of the caster is chaotic.
+##Summoned sylvan beings who fail their save are friendly to the
+##caster, and will aid him in any way that is within their abilities.
+##However, if they are asked to fight for the caster, the referee
+##rolls on the monster reaction table in Referee, taking into
+##account how the druid has treated the creature previously.

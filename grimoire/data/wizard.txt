@@ -1,0 +1,128 @@
+Blue Ward
+Level: 1
+Duration: 1 turn per level
+Range: Self
+Cast as 1st Circle provids immunity to non-magical cold and +4 bonus to saves
+vs cold or electricity. It also, acts as |Protection|_ against planer,
+conjured, created beings associated with air, water, or electricity.
+If cast as 3rd Circle, in addition to above, it provides complete immunity
+from the first exposure to magical cold or electricity.  After that it cuts
+damage from such attacks in half before save.
+If caster is conscious this spell will auto cast when needed.
+
+Red Ward
+Level: 1
+Duration: 1 turn per level
+Range: Self
+Cast as 1st Circle provides immunity to non-magical fire and +4 bonus to saves
+vs fire. It also, acts as |Protection|_ against planer, conjured, created
+beings associated with fire or earth.
+If cast as 3rd Circle, in addition to above, it provides complete immunity
+from the first exposure to magical fire.  After that it cuts damage from such
+attacks in half before save.
+If caster is conscious this spell will auto cast when needed.
+
+Elemental Darts
+Level: 1
+Duration: Instantaneous
+Range: 20' per level
+Missiles of elemental energy dart from the caster's fingertip, automatically
+hitting and dealing d4+1 points of damage. The number of darts fired equals
+the Circle at which this spell is cast.
+
+Nature I
+Level: 1
+Duration: Variable
+Range: Variable
+May be cast as **one** of the following spells; |Divine Weather|_,
+|Invisibility to Animals|_, |Locate Animals|_, |Speak with Animals|_, |Pass
+without Trace|_, |Detect Snares and Pits|_.
+
+Nature II
+Level: 2
+Duration: Variable
+Range: Variable
+May be cast as **one** of the following spells; |Animal Growth|_,
+|Locate Plants|_, |Speak with Plants|_, |Passplant|_, |Warp Wood|_.
+
+Nature III
+Level: 3
+Duration: Variable
+Range: Variable
+May be cast as **one** of the following spells; |Plant Metabolism|_,
+|Hibernate|_, |Shape Vegetable|_, |Tree Stride|_, |Venom|_.
+
+Detect
+Level: 2
+Duration: Variable
+Range: Variable
+May be cast as **one** of the following spells; |Detect Evil|_,
+|Detect Disease|_, |Detect Poison|_, |Detect Invisible|_, |Find Traps|_.
+
+Boon
+Level: 2
+Duration: Variable
+Range: Variable
+May be cast as **one** of the following spells; |Bless|_,
+|Protection from Fear|_, |Resist Cold|_, |Resist Fire|_, |Purify Food and
+Drink|_, |Life Energy Protection|_.
+
+Bane
+Level: 2
+Duration: Variable
+Range: Variable
+May be cast as **one** of the following spells; |Amnesia|_,
+|Blindness / Deafness|_, |Ray of Enfeeblement|_, |Erase|_, |Scare|_.
+
+Meta Magic
+Level: 1
+Duration: Variable
+Range: Variable
+May be cast as **one** of the following spells; as 1st Circle |Charm Spell|_,
+as 2nd Circle |Dispel Magic|_, as 3rd Circle |Command Spell|_, as 4th Circle
+|Steal Spell|_, as 5th Circle |Undo|_.
+
+Mind's Eye
+Level: 2
+Duration: 1 turn per level
+Range: 60'
+May be cast as **one** of the following spells; |ESP|_, |Clairvoyance|_,
+|Clairaudience|_, |Lucid Discovery|_.
+
+Air & Water
+Level: 2
+Duration: d6 turns +1 turn per level
+Range: Self
+Cast as 2nd Circle provides the simultaneous abilities of |Fly|_ and |Water
+Breathing|_.  May be cast as 3rd Circle for 10' radius and as 4th Circle for
+1 target per caster level.
+
+Duplicate
+Level: 3
+Duration: 1 round per level
+Range: 60'
+Creates an obedient duplicate of any being in range, no save. The duplicate
+will have mundane versions of any equipment that original was wearing.  It
+will not possess the knowledge, spells, thoughts of original. Nor, any
+supernatural abilities.
+
+Cure, Minor
+Level: 1
+Duration: Permanent
+Range: Touch
+Cast as 1st Circle has **one** of the following effects.
+
+ - Instantly heals 1 CON damage.
+ - Re-roll Hit Dice.
+ - |Delay Poison|_ as spell.
+
+Cure, Major
+Level: 3
+Duration: Permanent
+Range: Touch
+Cast as 3rd Circle has **one** of the following effects.
+
+ - Instantly heals all CON damage and/or re-roll Hit Dice.
+ - |Cure Disease|_ as spell.
+ - |Cure Blindness|_ as spell.
+ - |Neutralize Poison|_ as spell.

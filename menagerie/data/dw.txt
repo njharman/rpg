@@ -1,0 +1,1272 @@
+s15: Dwimmermount
+## Dwimmermount New Monsters
+Algoid
+No. Enc.: 1d4 (1d4+2)
+Alignment: Neutral
+Movement: 20' (6')
+Armor Class: 4
+Hit Dice: 5
+Attacks: 2 (Fists) or 1
+Damage: 1d8/1d8 or See below
+Save: F5
+Morale: 12
+Hoard Class: VI
+XP: 1100
+The algoid is a living colony of algae that has developed some semblance of intelligence and mobility. It is roughly humanoid in shape and is green in color. The algoid often lies in wait, partially submerged in water or a bog, until its prey passes nearby. It springs to attack with its powerful fists when opponents come within range. Once per day, an algoid can use a mind blast in a 60-foot cone. Anyone caught within that cone must save versus spells or be stunned for 3d4 rounds. In addition, an algoid can animate two trees (within a range of 90') in the same fashion as a treant. As a plant, an ascomoid is immune to mind-influencing effects, poison, sleep, paralysis, stunning, and polymorph. It is immune to fire and electricity and takes half-damage from slashing and piercing weapons.
+
+Arcanoplasm
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 30' (10')
+Armor Class: 4
+Hit Dice: 6
+Attacks: 1
+Damage: 2d8
+Save: F5
+Morale: 12
+Hoard Class: Nil
+XP: 1070
+Thought to be the result of a failed magical experiment, an arcanoplasm resembles a giant, pale amoeba shot through with stripes of dark gray. Arcanoplams are found in areas where magical energies are present. Here they feed and remain until disturbed, targeting magic-users above all other potential prey, whom they can sense at a range of 100 feet. Arcanoplasms slam opponents for 2d8 damage per blow. They are completely immune to all magic-user spells, which they absorb without suffering any ill effects. Indeed, magic-user spells heal them at a rate of 1 hit point per 3 points of damage the spell would have dealt. If no damage would be dealt, the rate is 1 hit point per level of the spell. Finally, aracanoplasms can mimic any magic-user spell of 4th level or below cast within 30 feet of it, as if it were a 7th-level magic-user.
+
+Archer Bush
+No. Enc.: 1d4+4 (1d10+10)
+Alignment: Neutral
+Movement: 10' (3')
+Armor Class: 6
+Hit Dice: 2
+Attacks: 1 (thorns)
+Damage: 1d4
+Save: F1
+Morale: 12
+Hoard Class: Nil
+XP: 29
+
+The arches bush is a mobile plant that gains sustenance from the blood of
+living creatures. The archer bush consists of a thick trunk that resembles
+a 3-foot mound of brownish-green leaves. From the trunk sprout several thick
+branches with sparse leaves. The leaves have small pale buds of gold or
+purple. Many rows of 1-inch long needle-like thorns are spaced evenly along
+the length of each branch. Hidden beneath its trunk is the archer bush's
+mouth, which appears to be nothing more than a dark recess or cavity.
+
+Ascomoid
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 30' (10')
+Armor Class: 3
+Hit Dice: 6
+Attacks: 1
+Damage: 1d6 + spores
+Save: F6
+Morale: 12
+Hoard Class: VI
+XP: 1320
+Ascomoids are semi-intelligent fungi that devour living things when encountered. It appears as a 10-foot wide puffball-like fungus with a brownish-green surface. The ascomoid is covered with small pocks that serve as sensory organs. The ascomoid attacks by rolling over its opponents or by firing spores from the pocks on its leathery skin. The spores have a range of 30 feet and form a 20-foot diameter cloud. Anyone caught within that cloud must save versus poison or die in 1d4 rounds. Even if the save succeeds, affected creatures are blinded for 1d4 rounds. Cure disease prevents death from spore infection, but does not cure blindness. Ascomoids take no damage from blunt weapons and half-damage from slashing weapons. As plants, they are immune to mind-influencing effects, poison, sleep, paralysis, stunning, and polymorph. They take half-damage from fire and electricity.
+
+Astral Reaver
+No. Enc.: 1d6 (1d6)
+Alignment: Chaotic
+Movement: Varies
+Armor Class: Varies
+Hit Dice: 6-12
+Attacks: 1
+Damage: Varies
+Save: F6-11 or M6-11
+Morale: 10
+Hoard Class: XI, XVI
+XP: 570+
+Astral Reavers are a race of Men who dwell in the Astral Plane (see page XX), where they relocated some time in the ancient past. As a result of their prolonged exposure to the weird energies of that plane, Astral Reavers possess gray, leathery skin that is drawn tightly across their bones and their eyes glow with a dim, white light. In addition, Astral Reavers are thoroughly Chaotic and feel no kinship with earthbound Men. Indeed, Reavers treat ordinary Men as inferiors, whom they kill or enslave without any remorse. Astral Reavers dwell on planetoids floating within the Astral Plane, though some have been known to construct artificial citadels. Each Reaver settlement is independent of one another, but warfare between settlements is rare.
+Astral Reavers may be fighters or magic-users, ranging in level from 6 to 12. Whenever they are encountered, there will be an equal number of each class, with a preference for fighters in the case of odd numbers. If more than four are encountered, one of their number will be a leader with the abilities of a fighter and a magic-user of levels equal to his hit dice. Astral Reavers are typically armed with magic items and armor. Fighters favor plate mail and two-handed swords, while magic-user wear various protective items and carry wands.
+
+Babau
+No. Enc.: 1d3 (1d6)
+Alignment: Chaotic
+Movement: 150' (50')
+Armor Class: -3
+Hit Dice: 7 + 10
+Attacks: 3 (2 claws, horn) or 1 weapon
+Damage: 1d4+1/1d4+1/2d4 or as weapon +4
+Save: F7
+Morale: 10
+Hoard Class: XXI
+XP: 1700
+These 7-foot tall demons have ebony flesh that clings closely to their skeleton, appearing almost like a leathery corpse. They have a single curving horn that emerges from the back of their heads. Babau demons prefer to attack with weapons from a distance when possible, and have STR 19 which grants bonuses to attacks and damage with some weapons. A slimy red jelly coats the babau's skin when in combat, reducing damage by 50% from cutting and stabbing weapons. Babau suffer damage from ordinary weapons, and +2 damage from weapons of iron. These demons have the abilities of a thief of 9th level. Additionally, any creature within 20' that looks into a babau's glowing red eyes must succeed in a saving throw versus spells or be affected as if from a ray of enfeeblement. They have the following spell-like abilities, usable at will: darkness 10' radius, dispel magic, fear (as the wand of fear, by touch), fly, levitate, polymorph self, and heat metal. In addition, a babau may gate (25% probability of success) another babau demon.
+
+Balor (Demon of the Sixth Circle)
+No. Enc.: 1d3 (1d6)
+Alignment: Chaotic
+Movement: 60' (20')
+    Fly: 150' (50')
+Armor Class: -2
+Hit Dice: 8 + 7
+Attacks: 1 (sword or whip)
+Damage: 1d8+1 or 1d6 and 3d6 fire damage
+Save: F8
+Morale: 10
+Hoard Class: XXII
+XP: 1820
+A balor stands about 12' tall. It has bat-like wings, horns, and its skin is usually dark red. Balors love to join battle armed with their +1 swords and whips. A balor's whip is a long, flexible weapon with many tails tipped with hooks, spikes, and balls. Victims are sometimes dragged toward the demon's body using the whip, to expose them to the flames emanating from a balor's hide. This deals an additional 3d6 hp damage. Balors are only affected by +1 weapons or better. They have the following spell-like abilities usable at will: detect invisibility, detect magic, dispel magic, fear (as the wand), pyrotechnics, read languages, read magic, suggestion, telekinesis (600 lbs.), and symbol (despair, fear, sleep, and stunning). In addition, a balor may gate (70% probability of success) a glabrezu (75%) or nalfeshnee demon (25%).
+
+Barrow Wight
+No. Enc.: 1d4 (1d6+6)
+Alignment: Chaotic
+Movement: 90' (30')
+Armor Class: 4
+Hit Dice: 6
+Attacks: 1
+Damage: 1d8 + energy drain
+Save: F4
+Morale: 12
+Hoard Class: XX
+XP: 820
+Barrow wights are undead creatures akin to normal wights, but they are always found guarding treasure. They hate living creatures and attempt to destroy anyone who invades their lairs. A barrow wight is a twisted, insane creature about 6 feet tall. Its skin is drawn tight over its frame and its clothes hang in tatters about it. A barrow wight's skin is cold and leathery and gray in color. Its eyes burn with a crimson fire that reveals the malevolence and insanity of its nature.
+Living creatures struck by a barrow wight lose one level or hit die. Should a character lose all levels, he dies and will become a barrow wight himself in 1d4 rounds, under the control of the barrow wight that created him. Any creature that looks at a barrow wight must make a saving throw versus spells or be affected by feeblemind, as per the magic-user spell of the same name. Like all undead, barrow wights are unaffected by sleep, hold, or charm spells. They are also unharmed by non-magical weapons.
+
+Basidirond
+No. Enc.: 1-2 (1-2)
+Alignment: Neutral
+Movement: 20' (6')
+Armor Class: 4
+Hit Dice: 5
+Attacks: 1
+Damage: 1d8 or spores
+Save: F5
+Morale: 12
+Hoard Class: VI
+XP: 800
+The basidirond is a large, 7-foot tall fungal monster. Its body is dark green or brown and leathery to the touch, resembling an inverted umbrella with 4-6 stems (each about 5 feet long) hanging beneath it. The basidirond attacks by striking with its cap or by firing a line of spores at its opponent. There are two types of spores. One type, with a range of 10 feet, is deadly and requires a save versus poison to avoid death in 1d4+1 rounds. The other, centered in a 20-foot radius on its body, requires a save versus poison to avoid hallucinations for 1d4 rounds afterwards. Roll randomly on the following table for each creature affected by hallucinations:
+1    Individual believes he is in a swamp and strips off all gear and armor to avoid sinking.
+2    Individual believes he is being attacked by a swarm of spiders. He attacks the floor and surrounding area.
+3    Individual believes item held is a viper; drops item and retreats from it.
+4    Suffocation -- Individual believes he is suffocating and gasps for air while clutching throat.
+5    Individual believes he has shrunk to one-tenth normal size. He begins yelling for help.
+6    Individual believes his associated are diseased. He will not come closer than 10 feet.
+7    Individual believes he is melting; grasps self in an attempt to hold together.
+8    Individual believes his back is covered with leeches. He tears armor, clothing, etc. from his back to get at them.
+A basidirond takes no damage from cold-based attacks. As a plant, it is immune to mind-influencing effects, poison, sleep, paralysis, stunning, and polymorph.
+
+Beetle, Boring
+No. Enc.: 3d6 (3d6)
+Alignment: Neutral
+Movement: 60' (20')
+Armor Class: 3
+Hit Dice: 5
+Attacks: 1 (bite)
+Damage: 5d4
+Save: F5
+Morale: 7
+Hoard Class: VIII, IX, XXII
+XP: 200
+
+These 9' long beetles live beneath the earth, where they cultivate and harvest
+molds and fungi on rotting wood or vegetable matter they hoard underground.
+They have social behavior not unlike ants, where each beetle seems to
+intuitively understand its job.
+
+Caryatid Column
+No. Enc.: 1d4 (1d4)
+Alignment: Neutral
+Movement: 60' (20')
+Armor Class: 5
+Hit Dice: 5
+Attacks: 1 (weapon)
+Damage: 1d8
+Save: F5 (see below)
+Morale: 12
+Hoard Class: Nil
+XP: 500
+The caryatid column is akin to the stone golem in that it is a magical construct created by a spellcaster. Caryatid columns are always created for a specific defensive function. The caryatid column stands 7 feet tall and weighs around 1,500 pounds. Its smooth chiseled body is shaped as a beautiful woman. The column always wields a weapon (usually a longsword) in one of its hands. The weapon itself is constructed of steel, but is melded with the column and made of stone until the column animates.
+
+Caryatid columns are programmed as guardians and activate when certain conditions or stipulations are met or broken (such as a living creature entering a chamber guarded by a caryatid column). A caryatid column attacks its opponents with its longsword. It does not move more than 50 feet from an area it is guarding or protecting.
+
+Any weapon that strikes a caryatid column has a 40% chance to shatter into pieces. Magic weapons have a 5% less chance to shatter for each point of its combat bonus. Thus, a +2 sword has only a 30% chance to shatter. Due to their sturdy construction and magical nature, caryatid columns gain a +4 bonus to all their saving throws.
+
+Cave Kraken
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement:
+    Swim: 90' (30')
+Armor Class: 2
+Hit Dice: 8
+Attacks: 8 tentacles or 1 bite
+Damage: 1d8 x 8 or 1d10
+Save: F8
+Morale: 10
+Hoard Class: XXII
+XP: 1560
+A cave kraken is a frightening, octopus-like creature summoned by evil wizards to guard treasures in subterranean lakes and other bodies of water. They possess eight 12-foot long tentacles, which are covered in wicked barbs. Tentacles that successfully strike a target constrict for 1d8 points of damage initially and then 1d8 per round thereafter until either the target is dead or the tentacle cut off. Each tentacle should be treated as if it has 6 hit points. For every tentacle constricting a single target, the target suffers a -1 penalty to attack rolls. If a cave kraken loses half or more of its tentacles, it will flee beneath the water, attacking again only if it is pursued or to defend any treasure it might be guarding.
+
+Clay Golem
+No. Enc.: 1 (0)
+Alignment: Neutral
+Movement: 60' (20')
+Armor Class: 7
+Hit Dice: 11
+Attacks: 1 (fist)
+Damage: 3d10
+Save: F11
+Morale: 12
+Hoard Class: None
+XP: 3000
+These golems are constructed from clay, and are usually humanoids approximately 8' tall. Their powerful fists deal 3d10 damage, which can only be magically healed by a cleric of at least 17th level. Sharp weapons are ineffective against clay golems. Only blunt magical weapons cause damage. Further, only one spell can affect clay golems: disintegrate, which acts as a slow spell, and deals only 1d12 hp damage.
+
+Crypt Thing
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 60' (20')
+Armor Class: 5
+Hit Dice: 6
+Attacks: 2
+Damage: 1d6/1d6
+Save: F6
+Morale: 12
+Hoard Class: XX
+XP: 570
+Crypt things are undead creatures found guarding tombs, graves, crypts, and other such structures. They never leave the area they guard. A crypt thing appears as a humanoid skeleton wearing a brown or black hooded robe. Two small pinpoints of red light form its pupils. A crypt thing avoids combat if possible by using its teleport other ability to remove potential opponents from the area. All creatures within 50 feet that fail a saving throw versus spells are teleported in a random direction (1d4: 1-north, 2-south, 3-east, 4-west) and a random distance (1d10 x 100 feet) away from the crypt thing. Roll randomly for each creature that fails its saving throw. A teleported creature never arrives in a solid object, instead arriving in the closest open space available. Teleported creatures can, however, arrive in mid-air at the specified location rather than on a solid surface. Creatures that fall as a result take the usual falling damage. A creature that succeeds at its saving throw is unaffected by the crypt things teleport other ability for one day. Crypt things are undead and thus immune to charm, sleep, and hold spells.
+
+Derrim
+No. Enc.: 1d4 (2d12)
+Alignment: Chaotic
+Movement: 60' (20')
+Armor Class: 3
+Hit Dice: 8
+Attacks: 1 (weapon)
+Damage: 1d8 or weapon
+Save: D8
+Morale: 9
+Hoard Class: XVI
+XP: 570
+Derrim are a degenerate off-shoot of the Terrim, looking like squat, malicious Men with elephantine noses and cruel, evil eyes. Wholly devoted to Chaos, the Derrim live in subterranean settlements across the world, where they practice alchemical experiments intended to restore the magical abilities that their ancestors, the Steam Kingdoms, once possessed and that their enemies, the Terrim, still do. The Derrim also delight in torturing other intelligent beings, an activity they treat as an art form. Woe to anyone who falls into their clutches.
+When encountered in a group of 20 or more, there will be a leader present, with 9 Hit Dice. This leader has a 50% chance to possess a magic item in each category, except rods, wands, staves, or scrolls. In the presence of such a leader, Derrim have morale of 10 rather than 9. Derrim hate Terrim above all other creatures and will attack them on sight.
+
+Dretch
+No. Enc.: 2d4 (5d4)
+Alignment: Chaotic
+Movement: 90' (30')
+Armor Class: 2
+Hit Dice: 4
+Attacks: 3 (2 claws, 1 bite)
+Damage: 1d4/1d4/1d6
+Save: F4
+Morale: 10
+Hoard Class: I
+XP: 135
+
+These demons are fat, with long, spindly arms and legs. They have rudimentary
+human heads, with slobbering jaws and folds of fat. Dretches have some weak
+demonic, despite their lack of intelligence. Once per day, they can use the
+following abilities: create a stinking cloud, create darkness (10-foot
+radius), teleport, and can summon 1d4 giant rats.
+
+Dwimmerdragon
+No. Enc.: 1d4 (1d4)
+Alignment: Chaotic
+Movement: 90' (30')
+Armor Class: 0
+Hit Dice: 9
+Attacks: 3 (2 claws, 1 bite) or 1 (breath)
+Damage: 1d6/1d6/3d10
+Save: F9
+Morale: 9
+Hoard Class: XV
+XP: 3100
+
+Dwimmerdragons are wingless, silvery-black scaled dragons found only in the
+caverns beneath Dwimmermount. Their precise origins are unknown, but it is
+surmised that they are the result of either another dragon breed's being
+mutated by exposure to azoth or deliberate magical experimentation by the
+Steam Kingdoms. Whatever the truth, dwimmerdragons, though Chaotic, are not
+wholly evil or hostile to Man if placated. Indeed, dwimmerdragons often ally
+themselves with other creatures for mutual benefit. Dwimmerdragons breathe
+a sulfur mustard gas, which gives their lairs a smell resembling garlic.
+Members of the species that speak can also cast spells. Unlike other dragons,
+dwimmerdragons do not cast magic-user spells but rather those from the
+illusionist list.
+
+                                            Spells and Spell Levels Available
+Habitat    Probability Asleep    Probability of Speech    Breath Range, Shape, and Type    1    2    3
+Subterranean    20%    50%    50' long, 50' wide, cloud, sulfur mustard gas    4    3    3
+
+Dworg
+No. Enc.: 2d4 (2d10)
+Alignment: Chaotic
+Movement: 60' (20')
+Armor Class: 3
+Hit Dice: 5
+Attacks: 1 (weapon)
+Damage: As weapon
+Save: D5
+Morale: 8
+Hoard Class: VI, XX
+XP: 350
+
+Dworgs are an evil variant of Stonemen, created through the use of arcane
+machines that pervert the normal process by which Stonemen reproduce.
+Consequently, they are rarely seen nowadays and those that do appear make
+their homes deep underground. Dworgs look very similar to normal Stonemen,
+except that their skin has a gray, “stony” cast to it. Dworgs have 120-foot
+infravision and suffer a -2 penalty to hit in bright light or sunlight. In
+a group of dworgs, 25% of their number will be 6th-level fighters. In a group
+of 10 or more, there will be a 7th or 8th-level fighter. Dworgs generally wear
+plate armor and favor two-handed weapons, like battle axes and two-handed
+swords. They have the same saving throws as Stonemen of their level, but are
+completely immune to poison and paralysis.
+
+Eld
+No. Enc.: 2d4 (2d10)
+Alignment: Chaotic
+Movement: 120' (40')
+Armor Class: 4
+Hit Dice: 2
+Attacks: 1 (weapon)
+Damage: 1d8 or weapon
+Save: E2
+Morale: 10
+Hoard Class: V (x5), XI (x2)
+XP: 38
+
+The Eld are both the nigh-immortal progenitors of the elven race and, through
+their command of black magic, the creators of innumerable monstrous species.
+The Eld nevertheless retain the delicate features and slight builds typically
+associated with elves, but their skin has a distinct reddish cast to it and
+their hair is universally dark brown or black. Occasionally, an Eld will be
+born whose appearance more closely matches that of “normal” elves. This is
+deemed a great curse and only the most remarkable of these Eld ever survives
+childhood; those who do are often among the most powerful and dangerous
+examples of this species.
+
+The Eld are an inherently magical people and all members of the race can cast
+arcane spells as if they were magic-users of the same level as their hit dice.
+Most Eld also carry with them a number of magical weapons and other devices
+that testify to their supreme command of vile sorcery. When encountered in
+a group of 10 or more, a leader will be present, whose hit dice can be
+determined by rolling 1d6+1.
+
+Cruel and callous, the Eld look on all other species as barbarous and fit only
+to serve as slaves or as test subjects for their dark experiments.
+Fortunately, the Eld are slowly dying and are rarely seen away from the Red
+Planet of Zaoth, but rumors persist of hidden terrestrial enclaves, where they
+hatch plots designed to return them to mastery over many worlds they enjoyed
+millennia ago.
+
+Eldritch Bones
+No. Enc.: 3d4 (3d10)
+Alignment: Neutral
+Movement: 120' (40')
+Armor Class: 5
+Hit Dice: 1+1
+Attacks: 1
+Damage: 1d6 or weapon +1
+Save: F1
+Morale: 12
+Hoard Class: Nil
+XP: 20
+Eldritch bones are the reanimated skeletons of slain soldiers. Unlike most other types of skeletons, eldritch bones are not undead. Rather, they are magical constructs brought back to a semblance of life through the use of minute quantities of azoth, which not only gives them the ability to move and attack but also strengthens their bones. Consequently, eldritch bones have a metallic appearance, thanks to the silvery-black azoth that suffuses them.
+The process of creating them was originally an invention of the Eld, but was perfected by the cult of Turms Termax. Eldritch bones suffer only one-half damage from sharp/edged weapons, while blunt weapons do full damage. They are immune sleep, charm, and hold spells and are unaffected by holy water.
+
+Empyreal
+No. Enc.: 1 (1)
+Alignment: Lawful
+Movement: 90' (30')
+    Fly: 180' (60')
+Armor Class: -7
+Hit Dice: 13
+Attacks: 1
+Damage: By weapon or spells
+Save: F13
+Morale: 11
+Hoard Class: None
+XP: 5100
+An empyreal is a powerful extraplanar entity serving Law, resembling a winged, humanoid-shaped creature dressed in shining armor. They are fiery, quick-tempered, and forceful, but always fair in their dealings with all beings. Empyreals attack their opponents with a mixture of magic and direct physical attacks. Their preferred weapons are longswords, usually of +3 bonus but often with additional effects. Against powerful foes, an empyreal uses its radiant blast, a cone-shaped attack that deals 15d6 damage in a 60-foot range and blinds any creature in the area for 3d6 minutes. Affected creatures can attempt a saving throw versus spells to halve the damage and avoid being blinded.
+Because empyreals can fly, they often stay aloft in battle, using its spells and spell-like abilities while staying out of melee range. Empyreals can cast spells as 13th-level clerics. This is in addition to the following spell-like abilities: continual light, cure disease, detect evil, dispel magic, invisibility, remove curse, and remove fear (all at will); cure serious wounds and flame strike (twice per day); raise dead (once per day). An empyreal radiates an aura of goodness in a 30-foot radius around itself. Any non-Chaotic creature in this area must succeed at a save versus spells or be overcome with awe and unable to take any action. Chaotic creatures within the area who fail their saving throw are unable even to look at the empyreal for one day. An affected creature functions as if blinded when attacking. On a successful save, a creature is immune to the aura of goodness of that empyreal for one day.
+
+Ghast
+No. Enc.: 1d6 (1d6)
+Alignment: Chaotic
+Movement: 150' (50')
+Armor Class: 4
+Hit Dice: 4
+Attacks: 3 (2 claws, bite)
+Damage: 1d4/1d4/1d8
+Save: F4
+Morale: 9
+Hoard Class: VIII, IX, XI, XXI
+XP: 190
+These despicable undead creatures resemble ghouls, and are often found with them. However, ghasts are much more powerful. Their bite induces paralysis for 2d4 turns unless a successful saving throw versus paralyze is made; this paralysis is potent even to elves. In addition, ghasts have a horrible rotting stench, and any beings within 10' must save versus poison or become horribly sick and vomiting, suffering -2 to hit in combat. Ghasts represent such a powerful evil that protection from evil is ineffective against them unless combined with powdered iron. Cold iron weapons deal twice normal damage against ghasts.
+
+Glabrezu (Demon of the Third Circle)
+No. Enc.: 1d3 (1d6)
+Alignment: Chaotic
+Movement: 90' (30')
+Armor Class: -4
+Hit Dice: 10
+Attacks: 5 (2 pinchers, 2 claws, bite)
+Damage: 2d6/2d6/1d3/1d3/1d4+1
+Save: F10
+Morale: 9
+Hoard Class: XXII
+XP: 3100
+Glabrezu have penetrating violet eyes, and their skin color ranges from deep russet to pitch black. They have four arms. Their two primary arms have crab-like pinchers instead of hands, and they have two smaller human-like arms on their chests; the hands have wicked claws. Glabrezu have wolf-like heads with two goat-like horns. A glabrezu stands about 10' tall. They are susceptible to attacks from ordinary weapons. Glabrezu have the following spell-like abilities usable at will: darkness 10' radius, fear (as wand of fear), levitate, polymorph self, pyrotechnics, and telekinesis (400 lbs.). In addition, a glabrezu may gate (35% probability of success) a vrock, hezrou, or another glabrezu (determine randomly).
+
+Gloom Crawler
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 20' (8')
+Armor Class: 2
+Hit Dice: 10
+Attacks: 11 (10 Tentacles, 1 bite)
+Damage: 1d12 (x10)/2d8
+Save: F10
+Morale: 10
+Hoard Class: XIX
+XP: 1700
+The gloom crawler is a solitary creature resembling a giant squid with blackened skin and a large mass of writhing tentacles. It makes its lair in underground caves, dungeons, and other subterranean complexes far awa from the daylight of the surface world and spends most of its time dormant, waking every so often to eat. The doom crawler moves along its underground world using suction cups on its tentacles to pull itself along. The tentacles end in eyes that allow it to see in any direction. These creatures are omnivorous and sustain themselves on plants, mosses, rodents, and other subterranean fauna, but never turn down a larger meal, if it is available.
+A gloom crawler's tentacles constrict victims when they successfully attack and deal 1d12 points of damage each per successive round. A tentacle may be cut off if a total of 10 hit points of damage is dealt with a single blow. This creature is averse to sunlight and suffers a -4 penalty to all attacks and saving throws if exposed to it (or its equivalent).
+
+Grave Risen
+No. Enc.: 1d4 (1d4)
+Alignment: Chaotic
+Movement: 30' (10')
+Armor Class: 5
+Hit Dice: 5
+Attacks: 2
+Damage: 1d4/1d4 + blood poisoning
+Save: F5
+Morale: 12
+Hoard Class: None
+XP: 350
+Grave risen are rotting undead creatures that upon first glance resemble zombies. They are created from a normal corpse in an area where the blood of a spellcaster is spilled and permeates the ground. The blood fuses with a corpse which animates as a grave risen. Grave risen have no love for the living and attack living creatures on sight. A creature hit by the claws of a grave risen must make a saving throw versus poison or contract blood poisoning. This drains 1 point of Constitution for 8 turns. The spells neutralize poison and remove disease rid the victim of the poisoning immediately. Grave risen have all the usual undead immunities (sleep, charm, hold) but can be struck by normal weapons.
+
+Green Guardian
+No. Enc.: 1d6 (1d10)
+Alignment: Chaotic
+Movement: 90' (30')
+    Fly: 150' (50')
+Armor Class: 4
+Hit Dice: 5
+Attacks: 4 (2 claws, 1 bite, 1 gore)
+Damage: 1d6+1/1d6+1/1d6/1d6
+Save: F8
+Morale: 12
+Hoard Class: None (see below)
+XP: 200
+Green guardians are statues carved out of a strange green stone in the shape of a gargoyle. They possess eyes made of jet (worth 500 gp each) and radiate both magic and evil.
+
+Guardian Plasm
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 120' (40')
+Armor Class: 5
+Hit Dice: 5
+Attacks: 1
+Damage: Devour
+Save: F5
+Morale: 10
+Hoard Class: XX
+XP: 500
+A guardian plasm is an amorphous creature that looks like a mass of transparent protoplasm. It is not a naturally occurring creature but the product of an ancient arcane ritual. The creature blends so well with its environment that it can only be seen 5% of the time. A guardian plasm usually lies in wait to attack any who disturb the area to which it has been assigned as a guardian by its creator. If it successfully strikes, its target must make a successful saving throw versus paralyzation or become engulfed. An engulfed target is wholly devoured in 2d6 rounds.
+
+Intellect Devourer
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 120' (40')
+Armor Class: 4
+Hit Dice: 6
+Attacks: 4 (claws)
+Damage: 1d4/1d4/1d4/1d4
+Save: M6
+Morale: 10
+Hoard Class: XIX
+XP: 2030
+Devoid of a head or any features save for four short, clawed legs, the intellect devourer looks like a large, glistening brain. The creature is about three feet long and weighs 60 pounds. Thought by some to be invaders from another dimension or planet, the sinister intellect devourers are certainly one of the world's cruelest races. Incapable of experiencing emotions or wallowing in the sins of physical pleasure on their own, intellect devourers are forced to steal bodies in order to indulge their gluttony, lust, and cruelty. Stories tell of entire cities of these creatures deep underground, where host bodies are worn like clothes to hideous orgies and vile feasts. Lone intellect devourers often dwell in ruins or caves on the edge of a civilized region so they can make periodic forays into town to “shop” for an attractive new body. The creature possesses several spell-like mental powers, including detect magic (which is constantly at work), cause serious wounds, confusion, invisibility, reduce (at  will), and cure serious wounds and globe of invulnerability (3 times per day). All of these abilities have effects as if cast by an 8th-level caster.
+In addition, an intellect devourer can reduce its size, crawl into the mouth of a helpless or dead creature, and burrow into the victim's skull to devour its brain. This inflicts 8d4 points of damage. If the victim is slain (or already dead), the intellect devourer usurps control of the body and may use it as its own, as if it conKomodo-Dragonmaned the target via a charm person or charm monster spell. The intellect devourer has full access to all of the host's defensive and offensive abilities save for spellcasting and spell-like abilities (although the intellect devourer can still use its own spell-like abilities). A host body may not have been dead for longer than 1 day for this ability to function, and even successfully inhabited bodies decay to uselessness in 7 days. As long as the intellect devourer occupies the body, it knows (and can speak) the languages known by the victim and basic information about the victim's identity and personality, yet has none of the victim's specific memories or knowledge. Damage done to a host body does not harm the intellect devourer, and if the host body is slain, the intellect devourer emerges and is dazed for 1 round. Raise dead cannot restore a victim of body theft, but more powerful magic might (at the referee's discretion). Protection from evil guards a creature against attempts at body theft.
+
+Morzaadian
+No. Enc.: 2d6 (2d12)
+Alignment: Neutral
+Movement: 180' (60')
+Armor Class: 5
+Hit Dice: 6
+Attacks: 5
+Damage: 1d4 (x4)/1d6 or by weapon
+Save: F6
+Morale: 10
+Hoard Class: XIV
+XP:  820
+
+An Morzaadian is one of the insectoid natives of Telluria's only moon. Looking
+like a humanoid cross between an ant and a praying mantis, an Morzaadian has
+six limbs, four of which can be used for manipulation (the other two are used
+for locomotion), two large compound eyes, two antennae, and mandibles. They
+live in lightless warrens beneath the surface of the Moon, where they
+congregate in hives that can contain dozens or even hundreds of individuals.
+Once more numerous than they are today, Morzaadians are suspicious of
+outsiders and generally attack anyone they encounter unless given good reason
+not to do so. Nevertheless, they are highly intelligent and open to
+negotiation. Morzaadians possess infravision to 90' feet and ESP as per the
+spell of the same name.  Morzaadians are extremely fast and agile. Their legs
+are also quite powerful, allowing them to leap 20 feet upwards and 40 feet
+forwards. When leaping forward, they gain a +1 bonus to any attacks made
+immediately afterwards. They can attack either with their claws and a bite or
+by four weapons and a bite.
+
+Iron Maiden Golem
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 60' (20')
+Armor Class: 3
+Hit Dice: 7
+Attacks: 2
+Damage: 1d12/1d12
+Save: F8
+Morale: 12
+Hoard Class: Nil
+XP: 2050
+
+An iron maiden golem is a variation of the iron golem, shaped like the torture device that is its namesake but with articulated arms and legs. The golem has the ability to usurp the essence of any humanoid being enclosed within. Any creature struck by both of its fist attacks in the same round must make a saving throw versus breath attacks or be shoved inside its body. A living creature inside the maiden when the lid is closed is pierced by 20 dagger-like blades, dealing a total of 25 points of damage each round. The lid automatically seals with an arcane lock spell. The lid can be forced open by those with high Strength (same odds as forcing a door) or by casting knock or dispel magic. If a living creature dies within the iron maiden golem, the golem gains 10 hit points and all the capabilities of the dead creature within, including magic-user (but not cleric) spells. The iron maiden golem is immune to all magic but can be struck by non-magical weapons. Electrical attacks slow the golem for 3 rounds.
+
+Jellyfish Plant
+No. Enc.: 2d6 (3d6)
+Alignment: Neutral
+Movement: 20' (6')
+    Fly: 50' (16')
+Armor Class: 9
+Hit Dice: 3
+Attacks: 1 (sting)
+Damage: 1d6
+Save: F2
+Morale: 8
+Hoard Class: Nil
+XP: 80
+Jellyfish plants are bizarre plants with long, thin tentacles extending out from a bulbous, shrub-like body that houses a large gas-producing sac. They can move across the ground by dragging themselves with their small vines, but usually choose to fly, their small vines wriggling below them. Jellyfish plants hunt in concert, landing near one another in a pattern that allows them to form a woven net of tentacles across the ground. When a creature steps this net, the jellyfish expel a blast of air from their gasbags and fly straight up, pulling the creature into the air, trapped in their net. Once trapped, the plants sting the prey, causing 1d6 points of damage per round and requiring a save versus paralysis. When prey is dead or stunned, the bulbous bodies of the jellyfish plants descend on the body and drain it of fluids through a root system at the base of their bodies, leaving a dried out corpse. A stunned target suffers 1d6 points of damage per round, per jellyfish plant that is sucking its fluids.
+
+Jubilex (Demon Lord)
+No. Enc.: 1 (Unique)
+Alignment: Chaotic
+Movement: 30' (10')
+Armor Class: -7
+Hit Dice: 100 hp (21 HD)
+Attacks: 1
+Damage: 4d10
+Save: F21
+Morale: 10
+Hoard Class: X x2, XII x 2
+XP: 7000
+
+Jubilex is the ruler over all slimes, oozes, jellies, and other disgusting and foul ooze-like creatures. Known by some as the Faceless Lord, his home is a demon world in the planes of chaos. It is a steaming, bubbling lair of putrid ooze and slime pits that are constantly shifting and changing at his whim. Even the other demonic rulers loathe to journey here. He is constantly attended by and surrounded with all sorts of slimes and oozes (1d4 of at least 4 types). When confronted, he usually takes the form of a 10-foot tall column of bubbling and squirting ooze. This being resembles a red-eyed large bubbling mass of greenish black and foul-smelling liquid. Ooze, slime, and pus constantly squirt and seep from its form. In combat he lashes out with a slimy pseudopod, dealing 4d10 acid damage. Once per 10 rounds he may employ a slime spittle up to 150' away with a 30' diameter area of effect that has both the effects of contact with green slime and ochre jelly. Jubilex regenerates 2 hp each round. He may only be affected by +2 weapons or better.
+Jubilex has the following spell-like abilities, usable at will: cause disease, charm monster, circle of cold (10' radius, 5d6 cold damage), darkness 15' radius, detect invisibility, dispel magic, ESP, fear (as the wand of fear), fly, hold monster, invisibility 10' radius, locate object, phase door, project image, putrefy food and water, and telekinesis (1,500 lbs.). He may gate (75% probability of success) 1d4 hezrou demons. In addition, Jubilex can utter unholy word one time per day.
+
+Thoonarn
+No. Enc.: 2d4 (5d10)
+Alignment: Neutral
+Movement: 120' (40')
+Armor Class: 4
+Hit Dice: 2+
+Attacks: 1
+Damage: By weapon
+Save: F2
+Morale: 10
+Hoard Class: V x 5, XI x 2
+XP: 38
+Thoonarns are a race of green-skinned women native to the world after which they are named. Believed to be descendants of the Steam Kingdoms who adapted to life on the Green Planet, the Thoonarns retain many of the advanced magical techniques of their forebears. They are, however, unwelcoming to outsiders, especially males, who do not exist among their kind. Instead, Thoonarns reproduce by means of arcane rituals that produce a copies of themselves. As a result, there is much less variety of appearance among the Thoonarns than among other races of Men, a fact compounded by their much smaller numbers relative to the other species of the Green Planet.
+Thoonarns favor short swords for close combat and use javelins (coated with poison) at range. All Thoonarns are capable of using the following spells once per day: charm person and invisibility. All Thoonarns save versus magic at +2. Furthermore, Thoonarns of 4th level and above, can use the following spells once per day: detect magic and ESP. In a grup of 10 or more, a 3rd level fighter or magic-user will always be present. In a group of 20 or more, a 6th level fighter or magic-user will be present. If more than 30 are encountered, a 7th or 8th level fighter or magic-user will be present. There is a 5% chance per level of the Thoonarn that she will posssess a magic item.
+
+Lich
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 60' (20')
+Armor Class: 0
+Hit Dice: 12+
+Attacks: 1 (cold touch)
+Damage: 1d10 cold damage
+Save: M12+
+Morale: 9
+Hoard Class: XXII
+XP: 4400
+A lich is an undead magic-user of at least 12th level who is so fearful of death that he has used its magical powers and a phylactery to unnaturally extend its life. It is a gaunt and skeletal humanoid with withered flesh stretched tight across horribly visible bones. Its eyes have long ago been lost to decay, but bright pinpoints of crimson light burn on in the empty sockets. A lich usually lives in a secluded keep or deep in a labyrinth, where it conducts magical research. Its powerful undead nature grants it a better natural AC and HD than a typical magic-user. Liches are only vulnerable to attack by creatures of 6 HD or more (or creatures of a magical nature), magical attack forms, and they are unaffected by non-magical weapons. In addition to having undead immunity to charm and sleep, liches are immune to the following spells or forms of damage: cold-based and electrical-based attacks, death spells, enfeeblement, polymorph, and any effects that cause insanity. A lich may attack by spell, or with a cold touch attack that deals 1d10 hp damage. Victims must also save versus paralyze or become paralyzed permanently, unless magically cured. Finally, all beings with 4 or fewer HD that see a lich will be affected with fear, and no saving throw is permitted.
+
+Manes
+No. Enc.: 4d4 (5d20)
+Alignment: Chaotic
+Movement: 30' (10')
+Armor Class: 5
+Hit Dice: 1
+Attacks: 2 (claws)
+Damage: 1d3/1d3
+Save: F1
+Morale: 8
+Hoard Class: None
+XP: 13
+Manes are pathetic demons who grovel and serve both others of their kind as well as Chaotic magic-user. No larger than humans, they have gray skin and empty eyes. Non-magical weapons inflict only half-damage on them.
+
+Marilith (Demon of the Fifth Circle)
+No. Enc.: 1d3 (1d6)
+Alignment: Chaotic
+Movement: 120' (40')
+Armor Class: -6
+Hit Dice: 7 + 6
+Attacks: 7 (6 weapon, constrict)
+Damage: As weapon/2d4
+Save: F7
+Morale: 9
+Hoard Class: XVII
+XP: 1700
+These female demons have a six-armed human-like body and the lower body of a snake. They stand 7' tall and measure 20' from head to tip of tail. A marilith usually holds a longsword in each of its six hands and wears many bangles and jewels. They may attack with their six arms and with their tails to constrict all in the same round. Mariliths are only affected by +1 weapons or better. They have the following spell-like abilities, usable at will: charm person, darkness 10' radius, detect invisibility, levitate, polymorph self, project image, pyrotechnics, and read languages. In addition, a marilith may gate (75% probability of success) a vrock, hezrou, glabrezu, nalfeshnee or balor demon (determine randomly).
+
+Mercury Ooze
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 30' (10')
+Armor Class: 9
+Hit Dice: 5
+Attacks: 1
+Damage: 2d4+3 plus mecury poisoning
+Save: F5
+Morale: 10
+Hoard Class: Nil
+XP: 350
+Mercury ooze appears to be a sentient form of actual mercury. Created by some bizarre arcane experiment in ages past, the the mercury ooze is a monster best left alone. It appears as a pool of shiny silvery-white liquid about 8 feet long and 6 inches thick. It can compress its body to a thickness of 1 inch to slip into cracks and crevices. Anyone struck by a mercury ooze must make a successful saving throw versus paralyzation or lose 1 point of Dexterity and Constitution. One week later, a second saving throw versus paralyzation must be made or else the victim suffers the effects of a permanent confusion spell. The effects of both the spell and the ability score losses can be cured with cure disease or similar spells.
+
+Memory Moss
+No. Enc.: 1d8 (2d6)
+Alignment: Neutral
+Movement: 0
+Armor Class: 9
+Hit Dice: 1 (1 hit point)
+Attacks: 1
+Damage: See below
+Save: F1
+Morale: 12
+Hoard Class: None
+XP: 13
+Memory moss appears as one-foot square patch of black moss. When a living creature moves within 60 feet of a patch, it attacks by attempting to steal that creature's memories. It can target a single creature each round. A targeted creature must succeed at a save versus spells or lose all memories within the last 24 hours. This is particularly nasty to spellcasters, who lose all spells memorized within the last 24 hours. Once the memory moss steals a creature's memories, it sinks back down and does not attack again for one day. Any creature who loses its memories acts as if affected by a confusion spell for the next 1d4 hours. Lost memories can be regained by eating the memory moss that absorbed them. Doing so requires a save versus poison, with failure resulting in the creature being nauseated for 1d6 minutes and suffering a -2 penalty to all rolls during that time.
+A creature that eats memory moss temporarily gains the memories currently stored therein, including spells stolen from spellcasters. Any non-spellcaster that attempts to gain a spell in this way must succeed at an Intelligence check or the spell fizzles away. After 24 hours, the memories fade, though creatures eating the moss to regain their own memories do not lose them after 24 hours. Fire and cold kill a single patch of memory moss. When first encountered, there is a 25% chance that the memory moss retains memories from its last target. Such moss does not attack by stealing memories, but by assuming a vaguely humanoid form and casting whatever spells it may still possess.
+
+Mimic
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 30' (10')
+Armor Class: 7
+Hit Dice: 7-10
+Attacks: 1
+Damage: 3d4
+Save: F7-10
+Morale: 8
+Hoard Class: None
+XP: 790
+A mimic can have almost any dimensions, but usually is not more than 10' long. These creatures are able to take the form of inanimate objects made of wood and/or stone, such as doors, statues, etc. Younger mimics (7-8 HD) are more intelligent, can speak, and may negotiate with adventurers if it is made worthwhile. Older mimics (9-10 HD) have grown ancient and senile, attacking with only the interest of consuming flesh. Mimics attack when a being touches them. The being is held attached to the mimic with a glue-like substance, and the mimic bludgeons with an emergent pseudopod for 3d4 hp damage. The more intelligent mimics speak their own language and Common.
+
+Mongrelman
+No. Enc.: 2d6 (5d20)
+Alignment: Neutral
+Movement: 60' (30')
+Armor Class: 6
+Hit Dice: Varies
+Attacks: Varies
+Damage: Varies
+Save: Varies
+Morale: 8
+Hoard Class: XX
+XP: 10 per Hit Die
+Mongrelmen are abominable creatures that possess the blood and body parts of many different creatures. They are shunned by society and often retreat into underground caves or dungeons to eke out their existence. They are shy by nature and often find themselves enslaved to a greater power. Mongrelmen live together in small groups where the largest and strongest serves as a chieftain. They are adept at mimicry and can imitate the sounds they have heard at will. They are also skilled at camouflage and prefer to hide, or lure opponents into traps, instead of engaging in direct conflict.
+Their language consists of a mixture of human, goblin, and Pigman words along with a mixture of animal sounds. Mongrelmen also include ambient environmental sounds in their language to allow them to communicate without giving away their position to others. The Hit Dice of mongrelmen varies and the damage they inflict is subject to either weapon type or hit dice (Examples: HD 1-3: 1d6; HD 4-6: 1-8; and HD 7-8: 1-10).
+
+Muculent Worm
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 30' (10')
+Armor Class: 4
+Hit Dice: 10
+Attacks: 1 (bite)
+Damage: 2d6
+Save: F10
+Morale: 10
+Hoard Class: IV
+XP: 2400
+A muculent worm is a slimy creature similar to a purple worm but much smaller in size, though still quite large (15-20 feet in length). Its body is covered with a sticky mucus that quickly become coated with earth, rocks, debris -- even treasure! Because of this, a muculent worm is often difficult to distinguish from its environment, which grants it the ability to surprise opponents on a roll of 1-5 on 1d6. Muculent worms eat their prey whole. Any attack that exceeds its target by four or more results in the worm's doing just this. Swallowed targets take 2d6 points of damage per round until either the worm or they are dead.
+
+Nalfeshnee (Demon of the Fourth Circle)
+No. Enc.: 1d3 (1d6)
+Alignment: Chaotic
+Movement: 90' (30')
+    Fly: 120' (40')
+Armor Class: -1
+Hit Dice: 11
+Attacks: 3 (2 claws, bite)
+Damage: 1d4/1d4/2d4
+Save: F11
+Morale: 10
+Hoard Class: XVIII
+XP: 4400
+These 10-foot tall demons have the torso and arms of an ape, with the head and legs of a boar. They have small but functional feathered wings. Nalfeshnee are unaffected by ordinary weapons. In combat, they attack with their claws and bite, or employ one of the following spell-like abilities at will: darkness 10' radius, detect magic, dispel magic, fear (as wand of fear), illusion (as the wand of illusion), levitate, polymorph self, project image, read languages, symbol (despair and fear), and telekinesis (500 lbs.). In addition, a nalfeshnee may gate (65% probability of success) a vrock, hezrou, glabrezu, or nalfeshnee demon (determine randomly).
+
+Necrophidius
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 90' (30')
+Armor Class: 2
+Hit Dice: 2
+Attacks: 1 (bite)
+Damage: 1d8 + paralysis
+Save: F2
+Morale: 12
+Hoard Class: Nil
+XP: 38
+The necrophidius appears to be a 10-foot long skeletal snake topped with a human skull, whose eyes glow with a hellish red light. It is not, however, undead and therefore cannot be turned. The necrophidius is a construct created by a magic-user to serve as a guardian or assassin. It performs either task with great skill and, being a construct, it never questions its duty.
+The necrophidius opens combat with an ability called the “dance of death.” All within 30 feet of the creature must make a saving throw against magic or become entranced for 2d4 rounds, during which time they can take no action. The necrophidius then moves into bite, which causes paralyzation for 6d6 rounds, unless the target makes a successful saving throw versus magic.
+
+Olive Slime
+No. Enc.: 1d4 (1d4)
+Alignment: Neutral
+Movement: 3' (1')
+Armor Class: 9
+Hit Dice: 2+2
+Attacks: 1
+Damage: Metamorphosis
+Save: F2
+Morale: 12
+Hoard Class: None
+XP: 29
+Olive slime is a plantlike growth found in dark, damp underground areas. Olive slime is sticky, wet, and olive drab in color. It clings to walls, ceilings, and floors and consumes any organic matter it contacts. It drops from ceilings and walls when it detects movement beneath it. A single patch of olive slime drains 1 point of Intelligence per round. On the first round of contact, it can be scraped off a creature, but after that round, the slime must be burned, frozen, or cut away (this deals an equal amount of damage to the victim). Extreme heat, cold, and acid or a cure disease spell destroys a patch of olive slime. A creature brought to 0 Intelligence dies and becomes a slime zombie (see page XX).
+
+Otyugh
+No. Enc.: 1 (1-2)
+Alignment: Neutral
+Movement: 60' (20')
+Armor Class: 3
+Hit Dice: 6-8
+Attacks: 3 (2 tentacles, bite)
+Damage: 1d8/1d8/1d4+1
+Save: F6-8
+Morale: 10
+Hoard Class: See below
+XP: 820; 1140; 1560
+An otyugh has a body 8' in diameter, with a short pseudopod extending from their thick hides, which is covered in eyes. This prevents the creature from being surprised. An otyugh attacks living creatures if it feels threatened or if it is hungry; otherwise it is content to remain hidden, eating carrion or left over kills from predators. Otyughs slash opponents with their barbed tentacles for 1d8 hp damage each, and their mouths deal a hideous bite from which the victim must save versus poison or contract a rotting disease that inflicts 1d3 hp damage per day. These creatures have a low intelligence, but have a unique language and can communicate telepathically. They keep no treasure of their own, but may partner with other monsters and help guard treasure in exchange for leftovers.
+
+Piercer
+No. Enc.: 3d6 (3d6)
+Alignment: Neutral
+Movement: 10' (3')
+Armor Class: 3
+Hit Dice: 1-4
+Attacks: 1
+Damage: 1d6 per HD
+Save: F1-4
+Morale: 10
+Hoard Class: None
+XP: 10, 20, 50, 80
+These creatures are specially adapted to cavernous environments, as they perfectly resemble stalactites. When they sense body heat or movement, they drop from a cavern ceiling to impale and eat a victim. The largest ones are 6' long, and the smallest are 1' long.
+
+Phycomid
+No. Enc.: 1d4 (1d4)
+Alignment: Neutral
+Movement: 10' (3')
+Armor Class: 4
+Hit Dice: 4
+Attacks: 1
+Damage: 1d6 + infection
+Save: F4
+Morale: 12
+Hoard Class: VI
+XP: 245
+The phycomid resembled a small blob of decomposing organic matter with many small mushrooms growing from it. A typical patch of phycomid covers an area of 2 feet. The phycomid attacks by extruding a small tube from its body and firing a glob of acid at its foe at a range of 10 feet. A creature hit by the acid must make a save versus poison or sprout tiny mushroom-like growths that cause death in 30 minutes unless the victim receives a cure disease spell. The victim's body is consumed by the mushroom sprouts when it dies and changes into a phycomid.
+
+Quasit
+No. Enc.: 1 (0)
+Alignment: Chaotic
+Movement: 150' (50')
+Armor Class: 2
+Hit Dice: 3
+Attacks: 3 (2 claws, bite)
+Damage: 1d2/1d2/1d4
+Save: F3
+Morale: 10
+Hoard Class: XI x 2
+XP: 95
+
+In its natural form, a quasit is a small demonic creature that stands about 1'
+tall. They often serve more powerful demons, but are most commonly encountered
+as familiars to chaotic magic-users. Quasits take no damage from non-magical
+weapons, except those of iron. In addition, they do not suffer damage from
+fire, cold, or electrical-based attacks. They regenerate 1 hp per round.
+Quasits save versus magical effects as a F7. They attack with claws and
+a bite. Victims of the claw attacks must save versus poison or lose 1 point of
+DEX for 2d6 rounds, for each successful attack. Quasits have the following
+spell-like abilities: detect good, detect magic, invisibility, and polymorph
+self (limited to the form of a bat, giant centipede, toad, or wolf). In
+addition, 1 time per day a quasit may induce fear (as the spell, except that
+its area is a 30' radius).
+magic-user functions as if 1 level higher and regenerates 1 hp per round.
+Conversely, if the quasit is more than a mile away from the magic-user, the
+master functions as if 1 level lower than normal. However, if not more than
+one mile apart, a quasit is able to communicate via telepathy with the
+magic-user, and he may perceive the surroundings of the quasit through all of
+its senses, including 60' infravision. A quasit may commune for its master
+1 time per week, and is allowed 1d4+2 questions. If a quasit familiar is
+killed, the master loses 4 levels permanently.
+
+Froglock
+No. Enc.: 1d8 (3d6)
+Alignment: Chaotic
+Movement: 90' (30')
+    Swim: 120' (40')
+Armor Class: 4
+Hit Dice: 2
+Attacks: 3 or 1 (2 claws, 1 bite or weapon)
+Damage: 1d6/1d6/1d4 + paralysis or weapon
+Save: F2
+Morale: 9
+Hoard Class: XIX
+XP: 120
+
+Froglock are degenerate, subterranean creatures who serve the foul demon lord
+Tsath-Dagon. Like their master, Froglock are of broadly batrachian appearance
+but possess small bat-like ears in addition to vicious fangs and, in many
+cases, small horns. They are drawn to underground locations suffused with
+Chaotic energies.
+
+Froglock shy away from sunlight and suffer a -1 penalty to their attack rolls
+and saving throws if they operate in it. If given sufficient room in combat,
+they can hop at enemies, which gives them a +1 bonus to attack and damage
+rolls. When fighting at close quarters, they bite opponents, trying to inject
+them with a paralyzing poison. Failure to save against it results in paralysis
+for 3d6 turns. Froglock in groups larger than six typically include a leader, an
+anti-cleric who can cast spells as it were a cleric of the same level as its
+hit dice.
+
+Roper
+No. Enc.: 1d3 (1d3)
+Alignment: Chaotic
+Movement: 30' (10')
+Armor Class: 0
+Hit Dice: 10-12
+Attacks: 1
+Damage: 5d4
+Save: F10-12
+Morale: 8
+Hoard Class: V x 2
+XP: 2400
+A roper stands some 9' tall and tapers from 3 or 4 feet in diameter at the base to 1 foot across at the top. A roper's coloration and temperature change to match the features of the surrounding cave. A roper hunts by standing very still and imitating a stalagmite. This tactic often allows it to attack with surprise. When prey comes within reach, it lashes out with one of its six rope-like strands to a distance of up to 50'. If a roper hits with a strand attack, the strand latches onto the opponent's body. This deals no damage but drags the opponent to the roper's immense mouth, in 10E increments per round. In addition, the victim suffers from weakness for 1d4 rounds. A character must succeed in a force doors check in order to break away from a roper's strand. Ropers suffer only 50% damage from cold-based attacks, and are immune to electrical-based attacks. However, fire is disagreeable to them and they suffer -4 to save versus fire-based attacks.
+
+Shambling Mound
+No. Enc.: 1d3 (1d3)
+Alignment: Neutral
+Movement: 60' (20')
+Armor Class: 0
+Hit Dice: 8-11
+Attacks: 2
+Damage: 2d8/2d8
+Save: F8-11
+Morale: 12
+Hoard Class: VIII, IX, XIV
+XP: 1820
+Shambling mounds, also called shamblers, appear to be heaps of rotting vegetation. They are actually intelligent, carnivorous plants. A shambler's brain and sensory organs are located in its upper body, buried deep within its slimy dense trunk. A shamblerEs body has an 8-foot girth and is about 6' tall when the creature stands erect. These creatures batter opponents with two huge, arm-like appendages. If both hit in the same round, a victim has been grabbed and it will be smothered to death by the shambler's abundant mucus in 2d4 rounds. The victim can only get free if the shambler is killed. Shamblers take no damage from electricity. Instead, any electricity attack used against a shambler grants it 1 HD (the creature actually grows). In addition, fire-based attacks do not harm it. Cold-based attacks do half damage, or no damage if the shambler succeeds in a saving throw. Weapons deal half damage. However, since shamblers are intelligent plant creatures they are susceptible to spells that affect plants.
+
+Skullmural
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 30' (10')
+Armor Class: 6
+Hit Dice: 3
+Attacks: 1 (blood drain)
+Damage: 1d6
+Save: F3
+Morale: 10
+Hoard Class: Nil
+XP: 80
+
+A skullmural appears to be a horrifying skull-like design carved into a wall.
+It is in fact a bizarre amoeboid creature, suffused with Chaotic power. It may
+seep slowly along walls, ceilings, and other surfaces, positioning itself for
+attack, which can cause adventurers to think they have a mistake in mapping.
+If anyone touches the skullmural, the creature gains a free attack, at +4 to
+hit. The skullmural attacks by fastening tiny protoplasmic hooks and suckers
+into flesh to drink the victim's blood and other juices. Once attached, it
+drains 1d6 hit points per round and does not stop until killed or driven off
+with flame, alcohol, or melted butter. If blood is poured out near
+a skullmural, it will occupy itself with the blood rather than attacking
+creatures. A sated skullmural changes to a reddish color and bloats slightly,
+seeping back to its original position.
+
+Slime Zombie
+No. Enc.: 1d4+1 (2d6+4)
+Alignment: Neutral
+Movement: 15' (5')
+Armor Class: 8
+Hit Dice: 6
+Attacks: 1
+Damage: 1d6 + infestation
+Save: F4
+Morale: 12
+Hoard Class: None
+XP: 1320
+Slime zombies are created when a living creature is slain by a patch of olive slime (see page XX). The zombie's sole purpose is to capture or kill new prey for its master (i.e. the olive slime that created it), with which it maintains a mind link that has a maximum range of 200 miles. Any creature hit by a slime zombie must make a saving throw versus poison or be infested with olive slime. Despite their name, slime zombies are not undead but plants, which makes them immune to poison, sleep, paralysis, stunning, and polymorph, as well as mind-influencing effects. They are likewise immune to electricity-based attacks. Weapons, whether normal or magical, do not harm them, as they simply pass through their slimy form.
+
+Slug, Giant
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 60' (20')
+Armor Class: 8
+Hit Dice: 12
+Attacks: 1 (bite)
+Damage: 1d12
+Save: F12
+Morale: 10
+Hoard Class: None
+XP: 2000
+Giant slugs are larger, much stronger versions of normal slugs. They are pale gray in color with a dull white underbelly. They have a single pair of long, thin tentacles or antennae. The giant slug uses them to sense brightness, heat, and to smell. A typical giant slug is 20' long but can grow to twice that length. Its squishy flexible body allows it to squeeze into relatively narrow corridors, though it may be in such a way as to prevent turning. A large slime trail marks the ground as it moves. Giant slugs are found in moist or wet environments such as swamps, marshes, rain forests, and dungeons. They are both scavengers and predators feeding on both plants and animals. Giant slugs are nocturnal creatures and spend the daylight hours away from the heat of the sun. Giant slugs may attack with a bite, but they often employ their highly dangerous acid spittle to a range of 60'. If struck, a victim suffers 5d8 hp acid damage. Giant slugs are only harmed by sharp weapons or magical blunt weapons (magical value deals damage only).
+
+Spawn of Arach-Nacha
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 120' (40')
+    Web: 180' (60')
+Armor Class: 5
+Hit Dice: 3
+Attacks: 1 (bite)
+Damage: 2d8 + poison
+Save: F3
+Morale: 10
+Hoard Class: VI
+XP: 95
+
+A Spawn of Arach-Nacha is a hideous 7-foot long spider, sent to the Material
+Plane to wreak havoc in the name of its master, the demon lord Arach-Nacha.
+Looking like a hairy black spider with a face resembling a twisted mockery of
+a Man's, a Spawn of Arach-Nacha considers itself “royalty” among terrestrial
+spiders, which obey its commands instinctively and without question. Indeed,
+a Spawn have a 30% chance of being able to summon 1d3 black widow (50%) or
+crab spiders (50%) to its aid once per day.
+
+A Spawn of Arach-Nacha is dangerous in combat, especially if fought within its
+web, which has the same properties as the magic-user spell of the same name.
+Its bite is extremely poisonous, requiring a save versus poison at -2 to avoid
+immediate death.
+
+Spider, Phase
+No. Enc.: 1d4 (1d4)
+Alignment: Neutral
+Movement: 60' (20')
+    On web: 150' (50')
+Armor Class: 7
+Hit Dice: 5 + 5
+Attacks: 1 bite
+Damage: 1d6
+Save: F5
+Morale: 8
+Hoard Class: XVIII
+XP: 660
+These 8-foot long giant spiders are native to Astral Space (see page XX) and attack with a poisonous bite. Victims must succeed in a saving throw versus poison or die. Phase spiders are difficult opponents, since they spend most of the time out of phase, and invulnerable to attack. If the spell phase door is cast on a phase spider it cannot phase out again for 7 rounds. The webs of this spider are very sticky, and it takes a creature with 18 STR or higher 1 round to break out. If STR is 17, it takes 2 rounds. The webs burn easily, as with a web spell.
+
+Stirge Demon
+No. Enc.: 1d4 (1d6)
+Alignment: Chaotic
+Movement: 20' (6')
+    Fly: 60' (30')
+Armor Class: -2
+Hit Dice: 7
+Attacks: 3 (2 claws, 1 bite)
+Damage: 2d4+4/2d4+4/1d8+2
+Save: F7
+Morale: 10
+Hoard Class: II
+XP: 1140
+A stirge demon is a loathsome cross between a human, a stirge, and an abyssal fly. It stands on four stirge-like hind legs and grasps with its humanlike forelimbs, which end in chitinous claw-like fingers. It has the wings of a stirge, though wrinkled and seemingly useless. Its stirge-like head has distinctly human features and is topped with a bristled, backswept mane. Its mouth is tiny and filled with fangs, though its nose is long and is used to pierce and draw blood.
+At will, a stirge demon use the following spells: darkness, detect good, detect magic, detect invisible, telekinesis, and teleport. Once per day, it has a 35% chance of summoning another stirge demon or 2d8 dretches. Except when using spells, the stirge demon drones and buzzes like a fly. Every creature within a 30-foot radius must save successfully against spells or fall into a comatose sleep for 2d4 hours. A creature who saves successfully is immune to this effect for 24 hours. The stirge demon will drain blood from a sleeping victim, dealing 1d4 points of damage each round. This grants the victim a second saving throw to wake up, but, if it too fails, he remains asleep for the duration or until drained of all his blood.
+
+Stone Golem
+No. Enc.: 1 (0)
+Alignment: Neutral
+Movement: 60' (20')
+Armor Class: 5
+Hit Dice: 14
+Attacks: 1 (first)
+Damage: 3d8
+Save: F14
+Morale: 12
+Hoard Class: None
+XP: 4200
+Stone golems have powerful fists that can deal 3d8 damage every other round. In addition, stone golems can cast slow at an opponent within 10' every other round. Only weapons at least +2 or better can damage stone golems. Spells are ineffective, except for rock to mud, which acts to slow the golem for 2d6 rounds. Mud to rock repairs all damage a stone golem has suffered. If stone to flesh is cast on the golem, it becomes susceptible to all normal attacks for 1 full round.
+
+Succubus
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 120' (40')
+    Fly: 180' (60')
+Armor Class: 0
+Hit Dice: 6
+Attacks: 2 (claws)
+Damage: 1d3/1d3
+Save: F6
+Morale: 7
+Hoard Class: XI, XIV, XV
+XP: 1320
+Succubi resemble very attractive human women, save for their bat-like wings. When not in the realms of chaos, they haunt the material plane in search of humans to tempt. They are able to drain a mortal of a level if lured into some act of passion, or by simply planting a kiss on the victim. Otherwise, succubi may attack with deceptively formidable claws. They are not susceptible to damage by ordinary weapons. Succubi have the following spell-like abilities usable at will: charm person, clairaudience, ESP, ethereal form (as the oil of etherealness), shape change, and suggestion. In addition, a succubus or incubus may gate (65% probability of success) a balor demon or attempt to gate (5% probability of success) a demon lord.
+
+Tenebrous Worm
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 30' (10')
+Armor Class: 1
+Hit Dice: 10
+Attacks: 1
+Damage: 2d6 + 1d6 acid
+Save: F10
+Morale: 10
+Hoard Class: XXI
+XP: 2400
+The tenebrous worm resembles a 6-foot long, sleek, gray caterpillar. The front half of its body, including its head is covered in long, dull, black coarse bristles. Two large, multi-facted eyes dot its head and two large, pearl white mandibles flank its mouth. The mandibles can be broken off from a dead tenebrous worm and sold for 1d3 x 1000 gp each. These mandibles drip a highly corrosive acid, dealing 1d6 points of damage, in addition to the 2d6 damage dealt by the bite itself. A creature attacking a tenebrous worm with an unarmed or similar attack must make saving throw versus paralysis or be paralyzed for 1d4 rounds.
+
+Termaxian Husk
+No. Enc.: 1d8 (1d8)
+Alignment: Chaotic
+Movement: 120' (40')
+Armor Class: 7
+Hit Dice: 6
+Attacks: 2 (fists)
+Damage: 2d10/2d10
+Save: F5
+Morale: 12
+Hoard Class: None
+XP: 570
+A Termaxian husk is a horrible, zombie-like creature created when a humanoid creature is exposed to an alchemically prepared elixir made from Jubilex's deliquescing flesh. This elixir “hollows out” the creature, destroying its mind, and leaving its body a puppet under the control of Turms Termax. The husk is a potent melee combatant, able to deliver hard-hitting attacks with its fists. In addition, any time a husk is hit with a slashing or piercing weapon, there is a 50% chance that its elixir-infused blood will spray onto the attacker, requiring an immediate saving throw versus poison. Failure results in the loss of 1d6 points of Wisdom per round until either the attacker reaches 0, in which case he becomes a Termaxian husk himself, or a cure disease or neutralize poison spell is applied, which eliminates the toxin. Lost Wisdom points return in 1d6 days. Termaxian husks are not undead, but they are immune to sleep, charm, and hold spells. They cannot travel more than 200 miles from Turms Termax's current location or he loses control of them and they die.
+
+Termaxian Mummy
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 60' (20')
+Armor Class: 3
+Hit Dice: 7
+Attacks: 1
+Damage: 1d12 + choke
+Save: F7
+Morale: 12
+Hoard Class: XIX
+XP: 1140
+Termaxian mummies are a rare form of undead created by the cult of Turms Termax in order to punish a member who has betrayed the cult in some fashion. Through a magical ritual, the betrayer is granted imperishable existence dedicated to a singular task, such as the protection of a cult site against interlopers. The mummy remains dormant until events related to its purpose occur or commanded by a Termaxian adept of 7th level or above.
+Because of the peculiar circumstances of their creation, Termaxian mummies generally retain vestiges of their former personalities. Many, if not most, of these mummies hate their undead servitude to the cult but can do nothing to rebel against it. However, if either circumstances or a command of the conKomodo-Dragonmaning adept pit them against some deeply held positive belief or emotion of their former lives -- mere hatred of servitude is not enough -- there is a good chance (60%) that they can reassert their wills and act accordingly.
+Like normal mummies, Termaxian mummies are so fearsome tthat any being seeing one must make a saving throw or suffer ill consequences. Unlike normal mummies, however, the saving throw must be made against death (Wisdom bonuses or penalties, if any, apply to this roll) and failure results in being afflicted with the effects of a feeblemind spell. This effect can only be lifted by means of remove curse; no other remedy will work.
+When a Termaxian mummy successfully strikes, its victim is caught in its choking grip, suffering 1d12 points of damage on the first and subsequent rounds until either the victim is dead or the mummy is destroyed or forced to relinquish its grip in some fashion. These mummies can be distracted from their tasks by persons, events, or objects associated with their past life in a powerful way -- or perception of the same, for, just like mortal beings, they can be deceived, including through the use of illusion magic.
+Termaxian mummies are virtually indestructible by physical means, being immune to damage by anything other than spells, including fire. Like other undead, though, they are unaffected by sleep, charm, and hold spells.
+
+Termaxian Necrolyte
+No. Enc.: 1 (1)
+Alignment: Neutral
+Armor Class: 3
+Movement: 60' (20')
+Hit Dice: 7
+Attacks: 1 touch (1d8), Spells
+Save: M7
+Morale: 10
+Hoard Class: XVII
+XP: 570
+A Termaxian necrolyte is a magic-user of the cult of Turms Termax, who, by means of various secret rituals and enchantments, has become undying. Despite its skeletal appearance, it is not technically a type of undead, at least not as the term is usual understood. Clerics have no power over necrolytes and thus cannot turn them. Like true undead, though, a necrolyte is immune to sleep, charm, and hold spells. The cold touch of a necrolyte deals 1d8 points of damage and all of these creatures can cast spells as if they were 7th-level magic-users. Many are also equipped with offensive magic items, such as wands.
+In return for the gift of immortality, necrolytes typically serve as guardians of locations of particular importance to the cult of Turms Termax. While acting as such, they are free to continue their researches into magic and occult lore, unfettered from the weaknesses to which all flesh is prone. Those who serve the cult well might one day gain access to more powerful rituals that set them further down the path to apotheosis.
+
+Terrim
+No. Enc.: 1d4 (2d12)
+Alignment: Neutral
+Movement: 120' (40')
+Armor Class: 5
+Hit Dice: 8
+Attacks: 1 (weapon)
+Damage: 1d6 or weapon
+Save: E8
+Morale: 8
+Hoard Class: XVIII
+XP: 1060
+
+Terrim are descendants of the Steam Kingdoms who fled underground after the
+rise of the Eld. They look much like Men, but possess fair, almost albino
+complexions and similarly fair hair. They tend toward slenderness but are
+nevertheless well-muscled and look almost like classical statues come to life.
+The Terrim dress in loose, flowing clothing of dark but attractive colors.
+Unlike their “cousins,” the Derrim, the Terrim are thoughtful and pacific,
+preferring to use violence only as a last resort.
+
+All Terrim are inherently magical, possessing the ability to cast spells as if
+they were a magic-user of the same level as their Hit Dice. When a group of 20
+or more is encountered, there will be one leader present, whose Hit Dice are
+determined by rolling 1d4+8. This leader may possess magic items, with
+a probability equal to 5% per Hit Die per type of magic. In the presence of
+the leader, Terrim have a morale of 10 rather than 8.
+
+Thelidu
+No. Enc.: 1d4 (1d4)
+Alignment: Chaotic
+Movement: 120' (40')
+Armor Class: 5
+Hit Dice: 4+3
+Attacks: 3 (2 claws, tentacles)
+Damage: 1d6/1d6/1d4
+Save: M5
+Morale: 9
+Hoard Class: VIII, IX, XXII
+XP: 1250
+
+Thelidu (the term is both singular and plural) are a hateful species of
+conquerors from Outside, who use arcane devices to travel from world to world
+in search of slaves and resources. Possessing scaly, rubbery, vaguely humanoid
+bodies, the Thelidu have octopus-like heads and faces that are masses of
+tentacles. Gelatinous green in color, these monstrosities are worshiped as
+near-gods on countless worlds -- and feared on countless more.
+
+Thelidu are masters of the mind, which has earned them the sobriquet “brain
+demons,” though they are not in fact demons of any kind and indeed view demons
+as just another species to be conquered. All Thelidu are capable of using
+several mental powers that mimic the effects of magic-user spells: charm
+monster, charm person, clairvoyance, ESP, levitate, and suggestion. These
+abilities are usable at will and can be resisted with successful saves versus
+spells. A successful melee hit on a single target with both claws and
+tentacles results in death in 1d6 rounds, as the Thelidu cracks open the
+victim's skull and extracts its brain.
+
+Thessalgorgon
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 60' (20')
+Armor Class: -2
+Hit Dice: 8
+Attacks: 9 (8 bites, 1 gore)
+Damage: 1d10 (x8) + 1d6/2d8
+Save: F8
+Morale: 11
+Hoard Class: None
+XP: 1560
+A thessalgorgon is a cross between an eight-headed hydra and a gorgon. It stands at least twice as tall as a normal human. Its large central, bull-like head is ringed by eight snake-like heads, each spitting and hissing. Its entire body is covered in thick, metallic scales of coppery-green. This monstrosity attacks with its snake heads, which deal an extra 1d6 points of acid damage on a successful hit. Once per hour, these heads can also belch a stream of acid 5 feet high, 5 feet wide, and 40 feet long, dealing 4d6 damage (save versus breath for half). The creature's gorgon head can gore and breathe a cloud of petrification gas 10' wide and 60' long. Anyone caught within the cloud must save versus petrification or be turned to stone.
+
+Tick, Giant
+No. Enc.: 3d4 (3d4)
+Alignment: Neutral
+Movement: 30' (10')
+Armor Class: 3
+Hit Dice: 2-4
+Attacks: 1
+Damage: 1d4
+Save: F2-4
+Morale: 8
+Hoard Class: None
+XP: 29
+These creatures are 1' to 3' long, and attack with a bite. If successful, they have attached themselves and drain 1d6 hp damage worth of blood each round thereafter, until they have drained an equivalent of blood equal to their maximum hp total. Giant ticks do not let go of a victim unless burned, killed, or suffocated by submersion in water. In addition, all victims have a 50% probability of contracting a wasting disease that kills the victim in 2d4 days. The spell cure disease is effective in eliminating this illness.
+
+Komodo Dragonmen, Two-Headed
+No. Enc.: 1d3 (1d3)
+Alignment: Chaotic
+Movement: 120' (40')
+Armor Class: 4
+Hit Dice: 10
+Attacks: 4 (2 claws, 2 bites) or 2 weapons
+Damage: 1d6/1d6/1d10/1d10 or by weapon
+Save: F10
+Morale: 10
+Hoard Class: XIX
+XP: 1700
+Two-headed Komodo-Dragonmen stand about 10 feet tall and weight about 2000 pounds. Their hides are mottled green or gray and their facial features resemble that of normal Komodo-Dragonmen. Two-headed Komodo-Dragonmen typically dress in rags or tattered clothes or even rusted armor on occasion. Their legs end in three-toed feet and their powerful arms end in sharpened claws. Like normal Komodo-Dragonmen, two-headed Komodo-Dragonmen regenerate, but at the reduced rate of 1 hit point per round. This regeneration operates exactly like that of ordinary Komodo-Dragonmen, including the effect of fire and acid in stopping it.
+
+Turnkey Golem
+No. Enc.: 1d8 (1d8)
+Alignment: Neutral
+Movement: 180' (60')
+Armor Class: 2
+Hit Dice: 10
+Attacks: 2 (fists)
+Damage: 2d10/2d10
+Save: F5
+Morale: 10
+Hoard Class: None
+XP: 3800
+Turnkey golems are magical automatons created to act as guardians in prisons and other places of incarceration. They resemble featureless, 7-foot tall humanoids made from a pliable but sturdy black material similar to tar. Like all golems, they are unaffected by ordinary weapons, poison, and gas and are immune to the effects of hold, sleep, and charm spells. They can detect evil, detect magic, and detect invisibility at will at a range of 120'. Furthermore, a turnkey golem's touch acts as a hold person spell; its effects can be resisted by a successful saving throw versus spells at -2.
+
+Undead Ooze
+No. Enc.: 1 (1)
+Alignment: Chaotic
+Movement: 20' (6')
+Armor Class: 9
+Hit Dice: 6
+Attacks: 1 (slam)
+Damage: 2d4 + see below
+Save: F6
+Morale: 12
+Hoard Class: None
+XP: 920
+An undead ooze is a large, viscous, black mass, from which the bones of its previous victims protrude. Possessing an evil intelligence, it prefers to attack from surprise or by stalking its prey and attacking when the opportunity presents itself. The undead ooze attacks by slamming its body into its prey. It usually engulfs its foes or expels its skeleton allies to contend with its enemies.
+Foes whom the undead ooze attempts to engulf must make a saving throw versus death or be sucked into its gelatinous body. Engulfed creatures take 1d6 points of cold damage per round until either they or the undead ooze is killed. An undead ooze can also expel skeletons from its body, which fight on its behalf. Any given ooze has 1d4 skeletons within its body, but can only expel one per round. Expelled skeletons fight immediately and, if destroyed, may be reanimated later by the ooze.
+
+Vampire Rose
+No. Enc.: 1d4 (1d4)
+Alignment: Neutral
+Movement: 5' (1')
+Armor Class: 5
+Hit Dice: 4
+Attacks: 1 (blood drain)
+Damage: 1d4+2
+Save: F3
+Morale: 12
+Hoard Class: Nil
+XP: 135
+
+Vampire roses look like normal white rose bushes and are often mistaken for
+such. The typical vampire rose bush stands about 3 feet tall and has many
+branches. The plant stands motionless until its prey moves within range, when
+it strikes with a thorny stalk. Opponents struck are grabbed and drained of
+blood at a rate of 1d4+2 hit points per round. An opponent can break free of
+the grab with a successful Strength check. Otherwise, the vampire rose
+continues to drain its blood. When fully sated with blood, the vampire rose's
+petals flush red.
+
+Vrock (Demon of the First Circle)
+No. Enc.: 1d3 (1d6)
+Alignment: Chaotic
+Movement: 120' (40')
+    Fly: 180' (60')
+Armor Class: 0
+Hit Dice: 8
+Attacks: 5 (2 claws, 2 rear claws, beak)
+Damage: 1d4/1d4/1d8/1d8/1d6
+Save: F8
+Morale: 11
+Hoard Class: XXI
+XP: 2060
+These demons resemble 8-foot tall humanoid vultures. They are susceptible to damage from ordinary weapons. In combat they may attack with all five attacks if airborne, or 2 claws and a bite if on the ground. Vrocks have the following spell-like abilities usable at will: darkness 10' radius, detect invisibility, and telekinesis (200lbs.). In addition, a vrock may gate (10% probability of success) a vrock demon.
+
+Xorn
+No. Enc.: 1d4 (1d4)
+Alignment: Neutral
+Movement: 90' (30')
+Armor Class: -2
+Hit Dice: 7 + 7
+Attacks: 4 (3 claws, bite)
+Damage: 1d3/1d3/1d4/6d4
+Save: F7
+Morale: 10
+Hoard Class: XI x 3, XII, XIII, XXI
+XP: 1700
+Xorns are about 5' tall and are native to the elemental plane of earth. When on the material plane they live deep within labyrinths, where they feed on minerals. Xorns are able to blend in their environment, and can surprise opponents on 1-3 on 1d6. Xorns do not attack fleshly beings except to defend themselves or their property, since they cannot digest meat. Xorns are indifferent to creatures of the material plane with the sole exception of anyone carrying a significant amount of precious metals or minerals, which xorns eat. They can smell food up to 20' away, and may ask adventurers to give them their precious metals. If refused, they will almost always (90%) attack to take it forcefully. Xorns are completely immune to fire or cold-based attacks. They suffer only half damage from electrical-based attacks, or no damage with a successful saving throw. The spells rock to mud and stone to flesh reduce a xorn to AC 8 for 1 round, and the xorn cannot attack as it transforms back to its original form. A xorn can glide through stone, dirt, or almost any other sort of earth except metal after 1 round of preparation. A phase door spell cast on an area containing a burrowing xorn kills it instantly.
+
+Zombie, Brute
+No. Enc.: 1d6 (1d10)
+Alignment: Chaotic
+Movement: 30' (10')
+Armor Class: 4
+Hit Dice: 6
+Attacks: 2
+Damage: 2d6/2d6
+Save: F6
+Morale: 12
+Hoard Class: None
+XP: 570
+Zombie brutes are large, hulking undead creatures reanimated through the dark magical rituals. Like normal zombies, zombie brutes have limited intelligence, acting instead on whatever simple instructions their creator gives them. They share all the normal undead immunities (mind-influencing effects, poison, sleep, paralysis, disease) and can only be struck by +1 or better weapons. Zombie brutes rise again 1d6 turns after reaching zero hit points unless either their bodies are utterly destroyed or their mouths are filled with salt and sewn shut. Otherwise, the brute pulls itself back together at full hit points and resumes its former activities, whatever they may have been.
+
+Zombie, Juju
+No. Enc.: 1d4 (1d8)
+Alignment: Chaotic
+Movement: 140' (50')
+Armor Class: 6
+Hit Dice: 4+4
+Attacks: 1
+Damage: 1d8
+Save: F4
+Morale: 12
+Hoard Class: None
+XP: 100
+Juju zombies are fearsome undead opponents. They are distinguished from other zombies by their dark gray skin. Although they are often mistaken for regular zombies, juju zombies are stronger, faster, and possess a greater capacity for action. They can use missile weapons and climb like 4th-level thieves. Like all undead, they are immune to mind-influencing effects, poison, sleep, paralysis, and disease. They are also immune to damage from electricity, magic missiles, and cold. They take half damage from fire-based attacks. A juju zombie can only be struck by a +1 or better weapon. They both attack and are turned as if they were 6 hit dice monsters.

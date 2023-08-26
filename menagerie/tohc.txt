@@ -1,0 +1,172 @@
+s15: %(name)s from the Tome of Horrors Complete, Copyright 2011, Necromancer Games, Inc., published and distributed by Frog God Games
+
+Yellow Musk Creeper
+-------------------------------------------------------------------------
+Hit Dice: 3
+Armor Class: 4 [15]
+Attack: Pollen spray (see below) or 2 tendrils (1d8)
+Saving Throw: 14
+Special: Create yellow musk zombie, intelligence damage,
+pollen spray, rejuvenation
+Move: 3
+Alignment: Neutrality
+Challenge Level/XP: 5/240
+
+The yellow musk creeper is a slow-moving plant that attacks living creatures
+and feeds on their intelligence, eventually turning such creatures into yellow
+musk zombies. Creepers can be found in moderate to warm climates or
+underground, and are rarely encountered elsewhere.
+
+The plant is a large, green clinging vine with ivy-like leaves of dark green.
+Small, dark green bulbs and bright yellow flowers mottled with purple adorn
+the plant. The actual root of the plant is a large bulbous, brown sac that
+lies beneath the surface of the ground where the yellow musk creeper grows.
+
+Yellow musk creepers lie silent until prey approaches within 10 feet.
+The small flowers of the creeper then puff a musky-smelling fine powder
+at a single target, attempting to entrance the target. If attacked, a yellow
+musk creeper lashes out with its tendrils.
+
+Yellow musk creepers are never encountered alone. They always have
+a retinue of yellow musk zombies with them. These zombies will defend
+the creeper against all attacks.
+
+A yellow musk creeper can spray a tiny cloud of hypnotic pollen at a single
+creature within 30 feet. An opponent hit by the cloud must succeed on a saving
+throw or be entranced for 1d4 minutes (as by a charm monster spell). Entranced
+creatures can take no action other than to move to the yellow musk creeper. An
+entranced creature resists any attempt to halt its progress. A victim within
+reach of the yellow musk creeper stands there and offers no resistance to the
+monster’s attacks.
+
+A yellow musk creeper can insert hundreds of tiny roots into the head of an
+entranced foe within any space occupied by the creeper. An entranced foe does
+not resist this attack and does not receive a saving throw to break free of
+its entranced state. This attack deals 1d4 points of intelligence damage each
+round. A victim reduced to intelligence 0 becomes a yellow musk zombie under
+the control of the creeper that created it in 1 hour (see that entry in this
+book).
+
+The transformation can be prevented by the casting of neutralize poison
+followed by a restoration spell.  A yellow musk creeper can be killed only if
+its root is dug up, then burned, hacked apart, or otherwise destroyed.
+Reducing the creeper to 0 or less hp puts it out of commission, allowing
+excavation of its roots. The main root has an AC of 1 [18] and 10 hp. As long
+as the root remains intact, a yellow musk creeper regrows in about 2 weeks.
+
+Credit: The Yellow Musk Creeper originally appeared in the First Edition Fiend
+Folio (© TSR/Wizards of the Coast, 1981) and is used by permission
+
+Copyright Notice: Author Scott Greene, based on original material by Albie
+Fiore.
+
+Do Not Sniff the Yellow Flowers!
+In the midst of a jungle there is a low depression with fairly steep,
+rocky sides covered with green vines of yellow and purple flowers. The
+vines extend into the depression and partially obscure a giant stone head
+with a demonic face. The stone head was carved for a stone golem that
+was never completed (or, for a more challenging encounter, a stone
+golem that was completed and activated and is now buried just under the
+surface of the depression.
+The vines belong, of course, a yellow musk creeper. Its 1d6 yellow
+musk zombies are stationed in the jungle around the depression. It’s not
+uncommon for a band of adventurers to be “herded” by the zombies into
+the depression and the waiting tendrils of their master.
+The stone head contains a crystal matrix composed of a ruby, sapphire,
+emerald and diamond encased in a golden sphere. Each jewel is worth
+1,000 gp and the gold sphere is worth 500 gp.
+
+
+Yellowjacket, Giant
+-------------------------------------------------------------------------
+Hit Dice: 4
+Armor Class: 4 [15]
+Attacks: bite (1d3) or sting (1d4 + poison)
+Saving Throw: 13
+Special: Poison, pheromone
+Move: 1/20 (flying)
+Alignment: Neutrality
+Challenge Level/XP: 6/400
+
+Giant yellowjackets are 8 feet long with alternating bands of black and
+yellow on their thorax and abdomen. Workers generally have thicker
+black bands than the queen or soldiers. The yellowjacket’s stinger is
+slightly curved and barbed and their mandibles are well-formed and
+developed, allowing them to chew their food. They attack by biting foes,
+saving its sting unless confronting a more powerful opponent. If attacked,
+a giant yellowjacket releases a pheromone that makes all yellowjackets in
+the area more aggressive (+1 to attack, damage).
+
+Copyright Notice: Author Scott Greene.
+
+The Apple Orchard
+The branches of a dozen blossoming apple trees hang low with ripe
+fruit. On the ground around the trunks, daisies, peonies and lilies grow
+rampant. Bloody chunks of meat are scattered among the flowers, the
+barely identifiable flesh sliced and diced into gory pieces. A goblin lies
+in the bushes, its head severed at the neck, and one leg missing entirely.
+Blood pools in thick puddles under the grasses. A massive 15-foot-long
+snake skeleton is wrapped around the upper branches of one of the apple
+trees. The orchard is the home of a nest of giant yellowjackets that drove
+the giant snake from its underground burrow and moved in. The snake
+was slaughtered in the tree where it crawled to escape, and its flesh used to
+feed the young yellowjackets. The yellowjackets live in the underground
+warrens, and send 12 warriors out to attack anyone wandering around the
+insects’ food sources.
+
+Yeti
+-------------------------------------------------------------------------
+Hit Dice: 4
+Armor Class: 5 [14]
+Attack: 2 claws (1d6)
+Saving Throw: 13
+Special: Cold, frightful gaze, squeeze, immunity to cold,
+double damage from fire, surprise on roll of 1-4 on 1d6 in
+snowy areas
+Move: 15
+Alignment: Neutrality
+Challenge Level/XP: 7/600
+
+A yeti is a large, hulking humanoid covered in white, shaggy fur. Its
+hands end in razor-sharp claws. The yeti’s head is large and sports a
+large round mouth filled with fangs. The typical yeti stands 9 feet tall and
+weighs 600 or more pounds.
+Yetis make their lairs in remote mountains and hills. They are fierce
+predators with ravenous appetites, dining on mountain goats, sheep and
+humanoids. They are particularly fond of human and elf flesh.
+Creatures within 30 feet that meet the eyes of a yeti must succeed on a
+saving throw or stand paralyzed in fear (treat as a hold person spell) for 3
+rounds. A creature that successfully saves cannot be affected again by the
+frightful gaze of that yeti for one day.
+A yeti’s body generates intense cold, dealing 1d6 points of damage to
+those that contact it for at least one round. An opponent hit by both of
+a yeti’s claw attacks in the same round must pass a saving throw or be
+squeezed for 2d6 points of damage (plus 1d6 points of cold damage) each
+round the hold is maintained. The victim can escape with an open doors
+check.
+
+Credit: The Yeti originally appeared in the First Edition Monster Manual (©
+TSR/Wizards of the Coast, 1977) and is used by permission.
+
+Copyright Notice: Author Scott Greene, based on original material by Gary
+Gygax.
+
+Everyone Knows They Bounce
+An ancient stone lamaserie is constructed on cliffs overlooking a
+sprawling village. The lamaserie and village are located on a high
+plateau inhabited by blue-furred tigers, takins, gazelles, cranes and snow
+chickens.
+The villagers keep goats and yaks and grow fields of barley during
+their short growing season. The village is ruled by a brotherhood of
+1d10+3 monks who dwell in a newer, smaller monastery within the
+village. The lama is a 6th level monk named Shamar, a stately, elderly
+gentleman with kind eyes and a sharp nose and chin.
+The old lamaserie is a sprawling complex with tall walls that have,
+over hundreds of winters, developed deep cracks and partially tumbled
+to the bottom of the cliff. The lamaserie is two-stories tall and has an
+enclosed courtyard and a three-story stone watchtower. Stairs wind up
+the side of the cliffs connecting the lamaserie to the village. The stairs
+climb 60 feet and are often slick with ice or moisture.
+The lamaserie is now inhabited by 1d6+3 yeti. They have made a few
+raids into the village and the monks are preparing a response, though
+they would much rather hire a band of adventurers to do it for them.

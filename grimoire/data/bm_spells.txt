@@ -1,0 +1,126 @@
+#Continual Flame
+#Level: 2 (Cleric)
+#Duration: Permanent
+#Range: 20' torch/5 feet candle
+#A flame, equivalent in brightness to a torch (20
+#feet), springs forth from an inanimate object that
+#you touch. The effect looks like a regular flame,
+#but it creates no heat and does not use oxygen.
+#A Continual Flame can be covered and hidden
+#but not smothered or quenched. This spell may be
+#cast directly on a creature’s possessions, but the
+#creature receives a saving throw (Spells). This spell
+#cast be cast on inanimate objects only.
+
+#Animate Statue
+#Level: 3 (Cleric) / 4 (Magic-User)
+#Duration: 1d10 rounds + 1 per level
+#Range: 1 inanimate statue
+#By means of this spell, a cleric or magic-user can
+#animate a statue for a period of time equal to
+#1d10 rounds plus the caster’s level.
+#The statue will only respond to the verbal com-
+#mands of its creator. Although the exact hit dice
+#are subject to the material of the statue, it is sug-
+#gested that the Referee use the Animated Statues
+#(Crystal, Stone, and Iron) presented in the Laby-
+#rinth Lord Core Rulebook (p.98) as base guide-
+#lines.
+#Statue Move AC HD #AT DMG
+#Crystal 90’(30’) 4 3 2 1d6x2
+#Stone 60’(20’) 4 5 2 2d6x2
+#Iron 30’(10’) 4 4 2 1d8x2
+#Note that if the caster dies while the golem is still
+#animated, it will go berserk and attack a random
+#target.
+
+#Vitharia's Vengeful Visage
+#Level: 2
+#Duration: See below
+#Range: 0
+#This spell functions as a lesser version of the 4th
+#level magic-user spell Fear.
+#This spell creates an illusion that deforms the face
+#of the caster (or accentuates a pre-existing de-
+#formity) and inspires terror in living humanoid crea-
+#tures within an invisible cone (5' wide origin, 20'
+#long, and 15' diameter at the terminal end).
+#Those who behold the Vengeful Visage panic and
+#flee from fear of the caster if they fail their saving
+#throw (Spells). Victims flee from the caster as fast
+#as their movement rate allows, for a number of
+#rounds equal to half the caster's level (rounded
+#up). This spell has no effect on blind creatures or
+#creatures of 4 or greater hit dice.
+#Vitharia was a young elven magic-user of great
+#promise who was defaced when pummeled in
+#the street by thugs.
+#He was later bludgeoned and eaten by a mimic.
+
+Baltron's Effusive Bloodboil
+Level: 2
+Duration: 3 rounds
+Range: 30'
+One target's blood increases in temperature over 3 rounds.
+[from Barrowmaze]
+
+Djriixim's Purple Haze
+Level: 3
+Duration: Until dispersed, ~6 turns
+Range: 60'
+Conjures a 20' cube of thick purple vapor. Those caught within suffer
+hallucinations for as long as they are in the cloud and for 1d4+1 rounds after
+leaving. Save negates the additional rounds but target must immediately
+consume 1 meal.  [from Barrowmaze]
+
+Fennril's Exquisite Strangulation
+Level: 1
+Duration: Concentration
+Range: 10' per level
+Each round, target takes d6 damage +1 additional point per level. During the
+strangulation the victim can take no action and will focus solely on
+attempting to breath. Creatures of large size or over 4 HD are unaffected.
+Save negates.
+[from Barrowmaze]
+
+Galaxina's Scintillating Spark Shower
+Level 2
+Duration: Instantaneous
+Range: 0
+Sizzling, crackling sparks leap from the caster's fingertips in an area of
+effect 10' across and 25' deep All those within the area suffer 2d4 points of
+damage, or 4d4 points of damage if they bear metallic armor or weapon. Save
+for half damage.
+[from Barrowmaze]
+
+Hitzemun's Blue Feet
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+As a boy, the Ice Mage Hitzemun teacher insisted that to master ice magic,
+Hitzemun should be outside in the winter environment barefoot as often as
+possible.  Hitzemun discovered that his feet were not the proper type to be
+outside during the winter, so he developed *Hitzemun's Blue Feet*.
++2 save vs cold, feet immune to cold, and have traction on icy surfaces.
+[Submitted by Imon Fyre, from Barrowmaze]
+
+Mazakala's Mucilaginous Effluvium
+Level: 1
+Duration: 1 round
+Range: 5' per level (30' max)
+
+Caster may spit forth a ball of sticky mucilage at any target.  Targeting 1)
+the head and blind; 2) the body and constrain; or 3) the feet and immobilize.
+Targets 4 HD or more get +2 save to negate.  [from Barrowmaze]
+
+Mazakala was a young, promising human mage, who, after creating this spell,
+was bitten in half by a Pteranodon while marching to Barrowmaze.
+
+Zozomir's Stentorian Shout
+Level: 3
+Duration: Special
+Range: 30' Cone
+Caster emits a thunderous yell that deafens (2d6 rounds) and damages (d6 per
+caster level) all those within its 45deg cone of effect.  Save negates
+deafness and reduces damage by half.  Crystal creatures take double damage
+from the spell.  [from Barrowmaze]

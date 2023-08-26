@@ -97,7 +97,7 @@ def parse(lines):
                 redo = True
             else:
                 accum.append(line)
-            collecting = munge.parse.lookfor(lambda l: l.endswith('.'), accum, munge.space_reduce)
+            collecting = munge.lookfor(lambda l: l.endswith('.'), accum, munge.space_reduce)
             continue
         yield line
     if collecting:

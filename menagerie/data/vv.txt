@@ -1,0 +1,777 @@
+s15: Varlets and Vermin, Copyright 2010, Roger S. G. Sorolla
+
+Vulture, Doom
+Armor Class: 7 [12]
+Hit Dice: 2
+Attacks: Beak 1d4
+Saving Throw: 16
+Special: None
+Move: 3/15 (flying)
+Challenge Level/XP: 2/30
+
+These foul and cowardly birds do not attack the unharmed, but will always
+prefer to attack whoever in a group has lost the most hit points, no matter
+what their level or equipment. Larger and more aggressive than normal
+vultures, small numbers of the doom breed circle high over dungeon entrances,
+battlefields, and other places from whence the grievously wounded are known to
+stagger.
+
+
+Mithridatium Bush
+Armor Class: 8 [11]
+Hit Dice: 3
+Attacks: None
+Saving Throw: 14
+Special: Sleep cloud; immunities
+Move: 0
+Challenge Level/XP: 1/15
+
+This plant appears to be a shrub or hedge with tightly closed pods. On the
+close approach of living creatures, the pods open, revealing exotic
+blackish-crimson flowers that exhale soporific pollen throughout a 5 foot
+range. All within range must save (as poison) or fall into a dreamless sleep,
+with grogginess lasting a full hour after waking. The bush is not harmed by
+blunt, piercing, or missile weapons. Local folklore hints at woeful
+consequences if its leaves and branches are burned, but what these consequences
+are exactly, if anything, is something for the referee to decide.
+
+
+Strangle Vines
+Armor Class: 7 [12]
+Hit Dice: 2
+Attacks: 3 whips; strangle 1d3/round
+Saving Throw: 16
+Special: Entangle, immunity
+Move: 0
+Challenge Level/XP: 2/30
+
+A mass of animated, carnivorous vines that lash out at random when approached
+closely. If they hit on an exact multiple of 4, they ensnare the throat and do
+1d3 damage that and each subsequent round, otherwise a hit merely entangles the
+victim's limbs (-2 to hit and +2 to be hit per entangling). The vines are not
+harmed by blunt, piercing, or missile weapons.
+
+
+Razor Thorns
+Armor Class: 7 [12]
+Hit Dice: 2
+Attacks: 2 whips, 1d3 each
+Saving Throw: 16
+Special: Immunity, bonus vs. unarmored, thorns.
+Move: 0
+Challenge Level/XP: 2/30
+
+Cousin to strangle vine, this tangle of malicious thorny vines will lash out at
+random when approached closely, with +2 to hit against an unarmored opponent.
+Unlike strangle vines, they do not ensnare victims, but have the same immunity
+to blunt, piercing, or missile weapons. The thorns are detachable and stick in
+the flesh, so that the wounds do not heal until all the thorns have been
+plucked out, taking 1 round/hit point damage.
+
+Trickster Beast
+Armor Class: 4 [15] (counting +4 dexterity and luck bonus)
+Hit Dice: 1d4 hit points
+Attacks: None
+Saving Throw: 14 (counting +4 dexterity and luck bonus)
+Special: Minor illusions
+Move: 15
+Challenge Level/XP: 1/15
+
+These quick-thinking, fast-talking animals come from a smaller mammal species,
+be they rabbits, foxes, monkeys, or whatever fits the area. They are able to
+walk on their hind legs and to change their appearance magically, appearing as
+a small-sized creature such as a dwarf or gnome, or a man-sized creature if one
+sits on the other's shoulders. They can also create sound and glowing light
+illusions at will to a range of 60 feet. Trickster beasts usually are out to
+relieve adventurers of their treasure by deception, but sometimes they team
+with more malicious creatures to create a lethal ambush. A few times they even
+really do intend to help the party on their mission.
+
+
+Rat, Panzer
+Armor Class: 3 [16]
+Hit Dice: 1d4 hit points
+Attacks: Bite, 1d3
+Saving Throw: 18
+Special: 5% chance of disease
+Move: 9
+Challenge Level/XP: A/5
+
+Armored breeds of rats include both the mutant strains with keratinous plating,
+and the rarer and more disturbing examples of rats who have managed to clothe
+themselves in small helmets and mail coats.  These stats, without the disease,
+can also represent hostile armadillos, tortoises, or horned toads.
+
+
+Rat, Scaler
+Armor Class: 7 [12]
+Hit Dice: 1d4 hit points
+Attacks: Bite, 1d3
+Saving Throw: 18
+Special: Surprise on 1-4, 5% disease
+Move: 12, 6 on walls/ceilings
+Challenge Level/XP: A/5
+
+It is either adhesive, sucker-tipped toes, or steely hooked claws, that allow
+these grayish-brown mutant rats to scale walls and hang from ceilings in the
+dungeon. Their self- righting instinct is as sure as a cat's, allowing them to
+drop and dive jaws-first on passers-by. Scaler rats can be re-imagined as
+hostile, gecko-like lizards, or perhaps giant black squirrels in a woodland
+setting.
+
+Rat, Miner
+Armor Class: 7 [12]
+Hit Dice: 1d4 hit points
+Attacks: Claws, 1d3+1
+Saving Throw: 18
+Special: +2 to hit vs. armor, surprise on 1-4
+Move: 12, 3 through earth
+Challenge Level/XP: B/10
+
+Shallow dungeon levels are often dug into packed earth or clay. In such an
+environment a digging pest can thrive, and so the vicious Miner Rats are found
+in their tiny and labyrinthine burrows, ready to pop out of walls or ceilings
+to assault the unwary. Minerals in their diet help build their tough,
+armor-punching claws. These stats can also model aggressive breeds of moles,
+badgers, or prehistoric horned gophers.  Tougher Miner types are rumored to
+exist at lower levels, with red-hot claws that crack and melt through solid
+stone.
+
+Rat Swarm
+Armor Class: 9 [10]
+Hit Dice: 2 (attacks as ½ HD)
+Attacks: Up to 4 per person in area, 1 damage each
+Saving Throw: 16
+Special: Damage resistant
+Move: 12
+Challenge Level/XP: 2/30
+
+Swarming rats are individually of normal size but are bound together by
+ravening hunger, collective intelligence, or foul magic. These stats represent
+a fearsome pack of some two score rats spread over a roughly 10 by 5 foot area.
+Even one of these can challenge a low level party, because it is hard to
+protect the weak and wounded from their onslaught. Their bites do little damage
+individually but there are many of them. The pack will move to engulf the
+maximum number of victims allowed by its area. Anyone within the swarm's area
+takes 4 attacks per round while those on the borders fighting it take 2.
+Attacks without area effect, such as weapon strikes, can do only 1 point of
+damage per hit to the swarm.
+
+The swarm's hit points represent sufficient dead to disperse the rats, but
+multiple routed swarms may rally and regroup at some point in the future.
+Disease, even at a 5% chance, can be an especially nasty addition to the swarm
+due to the high frequency of attacks. These rules can also model any kind of
+swarming and biting creatures, from angry frogs to killer bees.
+
+Rat, Zombie
+Armor Class: 8 [11]
+Hit Dice: 2d4 hit points (attack and are turned as 1 HD creatures)
+Attacks: Claws, 1d3
+Saving Throw: 17
+Special: Disease 15%
+Move: 9
+Challenge Level/XP: 1/15
+
+It may not even be apparent that these are undead creatures until the fighting
+begins up close. The disease chance is that much greater, and the rats
+themselves are that much tougher, for being undead. These stats will also do
+for any kind of zombified small animal.
+
+Botflies, Giant
+Armor Class: 6 [13]
+Hit Dice: 1
+Attacks: Bite, 1d2
+Saving Throw: 17
+Special: 20% chance to inject larvae; fire vulnerability
+Move: 15 (flying)
+Challenge Level/XP: 1/15
+
+Foul insects that feed off carrion and refuse, giant botflies also have a
+chance to inject larvae into the body of their victim after a successful bite
+attack. The larvae are hard to detect normally at first; they will incubate
+under the skin for 1d4+1 days and then burst forth as 2d6 immature botflies (1
+HP each, no injection attack) doing 1 point of damage in the process per
+hatched fly. Only a cure disease spell or stronger healing magic will destroy
+the larvae. If damaged by normal or magical fire, a botfly's wings will burn
+off, leaving it unable to fly. Its AC will be 9 [10] and its walking movement
+only 3.
+
+
+Pillbugs, Giant
+Armor Class: 4 [15]
+Hit Dice: 1-1
+Attacks: Bite, 1d3
+Saving Throw: 17
+Special: Roll up (AC, save improved by 4)
+Move: 6, or 9 rolling
+Challenge Level/XP: 1/15
+
+Pillbugs dwell among rotting garbage and wood, and where these things are piled
+in huge heaps, the giant variety can be found. With tough armored plates
+overlapping like banded mail, these three-foot long, many-footed insects are
+hard enough to hit. But when they have taken half or more of their hit points
+in damage, they roll up into an armored ball. In this form the pillbug is even
+harder to hit (armor class and saves improved by 4), cannot attack, and moves
+to escape danger by a strange kind of gyroscopic rolling.
+
+
+Chartreuse Crud
+No stats (Special)
+
+Chartreuse crud is a sickly yellow- green infestation that resembles a slithery
+lichen     composed     of feathery, overlapping scales. It is photophobic,
+fleeing from even dim light with remarkable quickness, pooling in dark shadows,
+corners, and crannies. Pieces of clothing, heaps of garbage or rubble, and
+treasure sacks are particularly nasty hiding places for the crud.
+
+There is disagreement on the exact nature of its danger to explorers, and it is
+possible that different strains exist with different effects. If uncertain
+about the basic facts of chartreuse crud, roll d6 on this table:
+
+1: Hallucinogenic effect on touch; character is confused (as confusion spell) and must save every hour to regain wits from this spell-like effect.
+2: Corrodes metal as a rust monster, but any kind of metal, not just ferrous.
+3: Eats leather, wood, hair, and other non-living substances of plant or animal origin.
+4: Is harmless, but sticks to hands and feet, or their coverings, making them slippery (-2 to hit while on hands, +2 to be hit while on feet).
+5: Enters the bloodstream; every 6 hours, save or lose 1 HP from poison-like effects until cure disease is applied.
+6: Roll twice more for two effects; if 6 is rolled again, this has the poison-like effect "on contact, save at +2 or die."
+
+A light spell cast directly on the crud will destroy it, but other normally
+destructive means such as fire or acid will have no effect on it.
+
+
+Golem, Scrap
+Armor Class: 7 [12]
+Hit Dice: 2 (10 hp)
+Attacks: Strike, 1d6-1
+Saving Throw: 16
+Special: Surprise (1-4), takes half damage from piercing weapons and fire
+Move: 3
+Challenge Level/XP: 2/30
+
+"Golem" may be a misnomer, as it is hard to see how or why these
+conglomerations of refuse would have been animated intentionally.  Rather than
+towering over its foes, a scrap golem uses natural disguise to leap at them,
+snaking out ropy tendrils of flying debris. Each damage result from 0-5
+represents a hit by a different component of the golem.
+
+0: Rotten food, no damage
+1: Bone piece, 25% chance of lodging in wound
+2: Wood splinter, 50% chance of lodging in wound
+3: Blunt brick piece
+4: Sharp stone fragment
+5: Sharp rusty metal scrap, 50% chance of lodging in wound, then further 50% of contracting dungeon tetanus (fatal within 1-4 days).
+
+Items lodged in the wound from damage prevent healing of those hit points until
+carefully removed (1 round per hit point of damage).
+
+
+Translucent Worms
+Armor Class: 9 [10], -4 to be hit in habitat
+Hit Dice: 1d4 hit points
+Attacks: Bite/burrow, 1d4
+Saving Throw: 18
+Special: Translucent (surprise 1-4 in habitat), flesh burrowing, splitting.
+Move: 6
+Challenge Level/XP: B/10
+
+Translucent worms have about the thickness of a good piece of rope and stretch
+from one to four feet long, a length reflected by their hit point roll. Their
+normal habitat is in piles of rotting refuse or vegetation, but they can also
+be found in dirt and murky water. If they roll a 4 for damage on their attack
+they have burrowed into the flesh of the victim and automatically hit each
+round thereafter until dead, but no longer benefit from their habitat penalty
+to be hit.
+
+Hard as it is to believe, flesh burrowing is not the most annoying trait of
+translucent worms. Indeed, when a worm of 2 or more hit points is struck by a
+physical attack, this only splits the worm into two worms, dividing the hit
+points of the former worm between them.  The "rear" worm spends 1 combat round
+re-forming mouth parts and then joins the fray. Only a 1 hp worm can be slain
+by striking. Fire and other area effects damage the worms normally.
+
+
+Fungi, Saucer
+Armor Class: 8 [11]
+Hit Dice: Saucer 1+1, stalk 1
+Attacks: Saucer edge 1d4
+Saving Throw: 17
+Special: Launch saucer
+Move: Saucer 12 (flying), stalk 0
+Challenge Level/XP: 1/15
+
+These two to four foot tall mushrooms will detach their saucer caps and send
+them flying at intruders who approach within 90 feet. In flight, the saucers
+extend sharp edges capable of cutting rope, flesh, or leather. If the saucer
+misses its target or hits for 1 or 2 points, it returns to the stalk, which
+spends a combat round recharging it for the next throw. If the stalk is
+destroyed, the corresponding saucer flops to the ground.
+
+Eye Droppers
+Armor Class: 8 [11]
+Hit Dice: 1+1
+Attacks: Bite 1d6
+Saving Throw: 17
+Special: Surprise 1-5
+Move: 3
+Challenge Level/XP: 1/15
+
+The basic form of an eye dropper is a gelatinous swirl of transparent
+protoplasm about the size of a sack.  Its name comes from two unsettling
+features. Over its lifetime it accumulates the teeth and eyes of its victims,
+preserved within its plasm and put to work as new body parts. It also is able
+to climb walls and ceilings and will often wrap itself around a stalactite or
+lintel, from where it will drop on its prey.  If its roll is enough to hit AC
+10 (with any dexterity bonuses) it will adhere to the victim, attacking at +4
+thereafter.
+
+Meat Slugs
+Armor Class: 9 [10]
+Hit Dice: 2
+Attacks: Bite 1d4
+Saving Throw: 16
+Special: Sticky slime
+Move: 6
+Challenge Level/XP: 1/15
+
+The slow moving meat slug is found in the food pens of strange underground
+races, though some wild slugs persist in shallower caverns. Meat slugs dine on
+wall scum, fungus, mold and anything else they can get their leech-like mouths
+on. Their slime is thick and sticky. If a melee weapon does maximum damage to
+the slug, it will be stuck, requiring a combat round to free. Also, anyone who
+treads on its 60 foot long slime trail must stop and loses half his or her
+move, this round and next.
+
+
+Degenerates
+Armor Class: 8 [11]
+Hit Dice: 1
+Attacks: Crude weapon 1d6
+Saving Throw: 17
+Special: None
+Move: 12
+Challenge Level/XP:
+
+Degenerates descend from human slaves used as the meat animals of abominable
+subterranean races.  Although they walk upright and wear crude garments, these
+pale- skinned cannibals have been bred down to a dog-like intelligence and have
+no moral scruples whatsoever.  In parleying, they appear to use words of the
+common tongue, but really it is a parrot-like regurgitation of random
+vocabulary and scraps of the other party's conversation. Their own behavior
+will complement the attitude of the adventurers. If approached with fear and
+caution, they will surge forward and attack; if approached aggressively, they
+will cower and submit; if approached with offers to cooperate, they will gladly
+agree, all the while looking for advantage and a chance to dine on fresh flesh.
+They make interesting slaves or antagonists of humanoid tribes, as their human
+form may attract misguided sympathy from the explorers.
+
+
+Moth, Fire
+Armor Class: 7 [12], -2 to be hit with melee weapons
+Hit Dice: 1
+Attacks: Fire 1d6/ 1d3
+Saving Throw: 17
+Special: Immune to fire
+Move: 18 flying
+Challenge Level/XP: 1/15
+
+With the way moths are fatally attracted to flame, it was only a matter of time
+before the first giant fireproof moths mutated and spread, in inhabited
+underground caverns where fires and lava flows are often lit. A fire moth has
+no attack in itself, but sweats an oily secretion that catches fire easily.
+The now-blazing moth will then ram into its foes for 1d6 fire damage on a
+successful hit, or fly overhead and drip flaming oil which hits for 1d3 damage.
+Low-level parties prone to carrying open torch flames and starting oil fires
+have a distinct hatred for these insects.
+
+
+Amphibious Jumping Tiger Shark
+Armor Class: 6 [13]
+Hit Dice: 2
+Attacks: Bite 1d6+1
+Saving Throw: 16
+Special: Leap
+Move: 18 swimming, 9 on land
+Challenge Level/XP: 2/30XP
+
+Only a mad wizard beginning to run out of ideas could have created this
+striped, furred, man-eating abomination. The size and shape of a five-foot-long
+shark, it also sports two powerful cat-like hind legs that retract partly into
+its body for streamlined swimming. On land it uses its legs to leap up to 30
+feet horizontally or 10 feet vertically. If can submerge itself at least 10
+feet for buoyancy and momentum, it can make a similar jump out of the water.
+
+Greenhair
+Armor Class: is hit automatically
+Hit Dice: 2+4
+Attacks: Entangle
+Saving Throw: 16
+Special: Attack immunity, entangle
+Move: 0
+Challenge Level/XP: 1/15XP
+
+Growing thickly in underground waters, these carnivorous weedy strands possess
+a dim and malevolent sentience. A single greenhair clump covers a roughly 5
+feet square area and can float as high as 10 feet in deep enough water.
+Greenhair does not attack as such, but rather seeks to entangle creatures
+moving through its zone, dragging them down and drowning them under the water.
+
+Each person in the area of greenhair must save at the start of each round, -2
+if carrying a heavy load, -4 if encumbered. Failing the save once means the
+victim cannot move.  Failing a second round's save means the victim is brought
+to his or her knees, a third means the victim is brought to hands and knees and
+it cannot use their arms, and a fourth means the victim is brought prone.
+
+If any of these take the victim's head underwater, he or she takes drowning
+damage per round as appropriate (or 1d6 damage/round if the rules do not cover
+drowning).  Greenhair can not be harmed by any weapons other than slashing
+melee weapons, but these automatically hit. Killing a greenhair clump releases
+its victim.
+
+
+Ice Nixie
+Armor Class: 6 [13] (counting +3 dexterity and luck bonus)
+Hit Dice: 1
+Attacks: Ice dagger 1d4 in melee; ice darts 1d3 with 20 foot range increment
+Saving Throw: 14 (counting +3 dexterity and luck bonus)
+Special: Freeze water, ice charm
+Move: 9, 15 (swimming)
+Challenge Level/XP: 1/15
+
+Cold-blooded variants of the familiar aquatic fey folk, ice nixies do not
+confine themselves to arctic pools, but spread their chill aura to all kinds of
+fresh water, including underground. They can cause water to freeze at a range
+of 60 feet, up to a cubic foot per combat round. They use the resultant ice to
+create all sorts of improvised structures, armaments, and inconveniences.
+
+The ice nixie's charm person power, usable once per day, is different from the
+normal nixie charm. It causes the victim's heart to grow cold, rather than
+warm, He or she becomes indifferent to the well- being of any comrades, and
+acts only in line with self-interest. If this extends to theft, betrayal and
+robbery, so be it, but certainly there is no reason to harm the inoffensive and
+penniless ice nixie. Only the nixie's will, or its death, will release a victim
+from the charm.
+
+
+Spitting Striders
+Armor Class: 6 [13]
+Hit Dice: 1
+Attacks: Bite 1d6; goo 1d4 with 15 foot range increment
+Saving Throw: 17
+Special: None
+Move: 12 on water, 6 on land
+Challenge Level/XP: 1/15
+
+If scholars know about these creatures, they surely must debate how insects of
+their size and weight can walk on water. Nevertheless, the spitting strider
+performs the miracle daily, perhaps aided by the viscous, caustic substance it
+spits from its sharp jaws at enemies.  Striders are unsure on land but will
+climb up to attack if they are being harassed from afar. If the water surface
+becomes choppy, they only move one third as fast.
+
+
+Torpor Remora
+Armor Class: 8 [11]
+Hit Dice: 1/2
+Attacks: Bite (slowing, no damage)
+Saving Throw: 18
+Special: Torpor
+Move: 6
+Challenge Level/XP: A/5
+
+Shallow and murky waters are the habitat of the torpor remora, a blackish-green
+eel about the size of a small cat. These creatures attack the feet by
+preference, using the armor class of a character's footwear (soft leather is AC
+8[11], hard leather is AC 7[12], metal shod boots are AC 4[15], full plate
+footwear is AC 2[17]).  If a remora hits, it attaches itself, and the victim
+must save each round (poison) or undergo the effects of a slow spell, moving
+and acting at half speed. Because the remora's bite has a numbing effect,
+someone who is hit is not likely to notice it. A slowed person hit by a second,
+different remora becomes completely paralyzed. Each hour after the initial
+bite, a save is allowed to undo one effect (paralyzed people become slowed,
+slowed go back to normal).
+
+
+Barrel Beast
+Armor Class: 9 [10]
+Hit Dice: 1 to 3
+Attacks: 1d6 kick
+Saving Throw: 17, 16 or 14 by hit dice
+Special: Overbear, knothole attack 1d6 (10 foot range), damage resistance
+Move: 9
+Challenge Level/XP: 1-3/15, 30, 60
+
+An innocent looking barrel can come to be stuffed full of the infamous barrel
+beast in the same way that a deserted shell is taken over by a hermit crab. One
+end of the barrel is missing, and this end sits on the floor while the beast
+watches through a knothole. When a living being approaches within 5 feet, the
+beast rears up on its long, clam-like, prehensile foot and clobbers the victim
+with the barrel, doing 1d4 damage on a successful hit, and knocking him or her
+down unless a save is made. Thereafter, the barrel lies on its side, rolling
+and hopping around while the beast lashes out in normal melee attacks with its
+foot. Every other round the beast also squirts one opponent within 10 feet with
+a foul, acidic substance from the knothole, doing 1-6 damage unless he saves.
+The barrel beast is easy to hit but all weapon damage against it, except from
+chopping weapons like axes, is reduced by 2. When its hit points are at 0 or
+lower, the barrel breaks and the beast collapses into an inert, oozing mound of
+filth and hair. Different sizes of barrel beast (small keg beasts and big tun
+beasts) are known to exist.
+
+
+Hoard Serpent
+Armor Class: 4 [15]
+Hit Dice: 1 to 3
+Attacks: Bite or tail, as weapon damage.
+Saving Throw: 17, 16 or 14 by hit dice
+Special: Immunity, surprise on 1-4
+Move: 6
+Challenge Level/XP: 1-3/15, 30, 60
+
+The hoard serpent is both an embodiment and punishment of greed. It is formed
+by eldritch forces from a heap of treasure. Its body is a long, coiling stack
+of coins (100-200 of them), and it has 1 or 2 semi- precious gem eyes set in
+its head, which is also formed of scaled coins.  It attacks with a weapon from
+the hoard, either a dagger set in its jaw, or a sword-sized weapon set in its
+tail. It takes no damage from normal fire or missile weapons. 1 HD hoard
+serpents are made of copper coins, 2 HD of silver and 3 HD of gold, with each
+gem and weapon worth about 10 gp per hit die. When dead, the serpent's
+constituent treasure collapses and may be gathered normally.
+
+
+Man of Wounds
+Armor Class: 9 [10]
+Hit Dice: Equal to number of weapons stuck in body
+Attacks: Weapon, as fighter with level = hit dice
+Saving Throw: As fighter with level = hit dice
+Special: Damage reversal
+Move: 12
+Challenge Level/XP: 2/30
+
+It is not clear, even to the Man of Wounds himself, whether he has been blessed
+or cursed by the magic that makes any weapons that hit him stick in his body
+and add to his power. When found, he will have 2 or more weapons stuck in or to
+his body, with a hit die for each rolled according to the damage dealt by that
+weapon - so, a 1d4 dagger, 2d4 maul and 1d6 sword would give him three
+effective hit dice and 3d4 + 1d6 hit points. He also carries a weapon of his
+own.
+
+Any weapons that hit him stick to him; roll damage, and add that to his hit
+points, then add 1 to his hit dice. The only way to harm the Man of Wounds
+other than magic is to grab his weapons (on a bare-handed hit vs. AC 5[14]) and
+pull them out of his body, dealing damage equal to the weapon's hit die roll
+and reducing his Hit Dice by 1. When all his weapons are gone, the Man of
+Wounds' enchantment is broken, and he falls to the ground bleeding with zero
+Hit Points.
+
+
+Insistent Shale
+No stats (Special)
+
+Among the many marvels of the elements is a form of stone with the ambition to
+turn the world to silicate, petrifying all living or formerly living material
+it touches.  This insistent shale, as alchemists call it, appears to be a flat
+slab of intensely gray-colored rock, either lying on the ground or worked as a
+protective    measure     into    the architecture. Petrified statues of
+dungeon animals often announce its presence. Anyone who touches it with naked
+flesh must save or be turned to stone. Objects of organic material, such as
+wooden poles or leather boots, are also turned to stone by touching it. It can
+be damaged only by picks or blunt metal      weapons,     which      hit
+automatically. The shale requires 5- 30 points of damage to shatter, depending
+on its size - and when it shatters, all with exposed skin within 15 feet are
+attacked by flying fragments as a 4 Hit Dice monster, and if hit must save at
++2 or turn to stone. Depending on how the dungeon architect has used it,
+insistent shale can be a distraction, an annoyance, or a real threat to
+explorers.
+
+Pemblings
+Armor Class: 3 [16]
+Hit Dice: 1/2
+Attacks: Bite 1d4
+Saving Throw: 18
+Special: Damage immunity
+Move: 9, 10 foot leap
+Challenge Level/XP: B/5
+
+Pemblings are mindless lesser elemental creatures that look like fist-sized
+rocks when dormant.  Awakened, they open a wide mouth full of sharp teeth and
+start rolling rapidly toward their prey. They attack by leaping and biting,
+take only half damage from edged and pointed weapons, and are immune to normal
+fire.
+
+
+Skull Creeper
+Armor Class: 7 [12]
+Hit Dice: 1d4 hit points
+Attacks: Bite 1d3; strangle
+Saving Throw: 18
+Special: Damage resistance
+Move: 9
+Challenge Level/XP: A/5
+
+Sometimes, a necromancer who wants skeletal servants that can fit into tighter
+places will wire a human skull onto two sets of hand bones, creating an
+unnerving, spider-like scuttling thing. The creeper's first attack on making
+contact is a bite. On the second round and thereafter, it will try to hit the
+victim's unarmored AC (with dexterity modifiers) to crawl onto the body. If it
+succeeds, one round later it will reach the throat and start strangling for 1d6
+damage each round. Two creepers count as a whole skeleton both for animate dead
+and turning purposes.
+
+
+Dust of Ages
+No stats (Special)
+
+One little-known peril of ancient burial places is the dust that forms from the
+bones and bodies of the dead over centuries. If animated by collective regrets
+or an evil force, it will billow up when disturbed, forming a cloud of
+shifting, vaguely human faces and forms — echoes of those that were.
+
+The roughly 10 by 10 foot dust cloud may be turned as a 2 Hit Die undead
+monster. It seeks to engulf any intelligent creatures, who must save the first
+round so engulfed, or flee in terror for 1d6 rounds. If the creature stays, the
+dust will try more insidious means next round, invading breathing passages
+(unless another save is successful) and doing 1d6 choking damage per round.
+Weapons and magical spells are useless unless they specifically affect undead.
+A sprinkling with consecrated water will settle the dust down, but only for as
+long as the water remains.
+
+
+Cerement
+Armor Class: 8 [11]
+Hit Dice: 2
+Attacks: Touch for 1d3 wisdom drain, envelop for 1d6 wisdom drain
+Saving Throw: 16
+Special: Damage immunity
+Move: 9
+Challenge Level/XP: 2/30
+
+Haunted winding sheets and grave wrappings, or perhaps the bed sheets in an
+accursed tavern room, form the body of this undead creature. It will rise and
+attack in a snake-like or human-like parody of form. A successful hit threatens
+sanity, draining 1d3 wisdom points from the victim, while a second hit in a row
+will allow the creature to envelop its victim for 1d6 wisdom points. When a
+character goes below 3 wisdom points he or she becomes catatonically insane,
+and at 0 wisdom dies of fright. Wisdom is restored at 1 point per day of rest.
+Cerements can only be harmed by fire and slashing weapons.
+
+
+Fardarrig
+Armor Class: 5 [14] (counting +3 dexterity and luck bonus)
+Hit Dice: 1+1
+Attacks: Thighbone shillelagh 1d4
+Saving Throw: 14 (counting +3 dexterity and luck bonus)
+Special: Telekinesis of dead; ventriloquism
+Move: 15
+Challenge Level/XP: 1/15
+
+Fardarrigs are a type of graveyard leprechaun with brick-red skin.  Their main
+goal is to hide and frighten away intruders. Fardarrigs use ventriloquism and a
+telekinetic power to move dead corpses or body parts within 30 feet of their
+location, up to one whole body at a time. Corpses so animated will seem like a
+tough kind of undead. They will attack and take physical damage as a zombie or
+skeleton, but the parts may continue to attack after the creature is destroyed.
+Not being undead, they cannot be turned or damaged by holy means.  With enough
+supply of bodies, even a single fardarrig may create what seems to be a
+never-ending stream of undead foes.
+
+
+Ghost Face
+Armor Class: 4 [15]
+Hit Dice: 1
+Attacks: None
+Saving Throw: 17
+Special: Spells; breath, save or drain 1d4 Constitution; surprise 1-5; only damaged by magic weapons, holy water, or spells
+Move: 9 through stone or walls
+Challenge Level/XP: 2/30
+
+A solitary spirit not possessed of enough will to come back as a ghost or
+spectre may still manifest itself as a ghost face. The face will appear to
+emerge from a wall, door, hedge, or other barrier, appearing much as it did in
+life. All within 5 feet of it are exposed to its noxious breath (those reduced
+to 0 Constitution die) whose effects last a full day. The face also casts
+spells as a 3rd level wizard or evil cleric. It is exceptionally hard to deal
+with, using its ability to fade back into the walls and its high surprise
+chances to avoid direct attack or turning.
+
+
+Elemental Nuisance: Air
+Armor Class: 7 [12]
+Hit Dice: 1d4 hit points
+Attacks: Whirling debris (1d2)
+Saving Throw: 18
+Special: Damage immunity
+Move: 18 (as zephyr), 9 (as tornado)
+Challenge Level/XP: 1/15
+
+This minor air elemental manifests as a zephyr-like breeze, capable of blowing
+out torches, scattering held scrolls, and the like. When provoked, it forms
+into a small tornado. All within 10 feet of it must save or take 1d2 damage
+from debris kicked up by the twister. Being hit by the tornado itself will
+knock a bipedal creature of man-size or smaller to the ground. Apart from
+damage-dealing spells and magic weapons, the only way to kill an air nuisance
+is to stop it moving, smothering it with a cloak-sized (hit for 1d3 damage) or
+rug-sized (hit for 1d6 damage) piece of thick fabric.
+
+
+Elemental Nuisance: Earth
+Armor Class: 5 [14]
+Hit Dice: 1d6 hit points
+Attacks: None
+Saving Throw: 18
+Special: Trap, damage immunity
+Move: 12 in earth, 6 in stone
+Challenge Level/XP: 1/15
+
+The earth nuisance can be conjured in dirt or stone. Either way, it has a
+direct and persistent way of inconveniencing those who tread on it - it
+instantly scoops out a shallow pit in its substance and then clamps the pit's
+walls onto the victim's feet (save or be trapped and unable to walk). If in
+stone, it can not be harmed by any physical means other than blunt weapons, and
+in earth, only by sharp weapons when these are used to dig. Furthermore, any
+physical hit does 2 less damage to the earth nuisance, unless it is by a pick
+or shovel.
+
+
+Elemental Nuisance: Fire
+Armor Class: 6 [13]
+Hit Dice: 1d4 hit points
+Attacks: Ignite for 1d2
+Saving Throw: 18
+Special: Ignite, damage immunities and vulnerabilities
+Move: 12
+Challenge Level/XP: 1/15
+
+The fire nuisance is easily spotted, being a flickering, fist-sized yellow
+flame that moves quickly along any surface. It is sometimes ordered to conceal
+itself in a larger fire or to provide a permanent flame for a wall torch. If it
+hits, it rushes onto the victim's hair or clothing and ignites it, causing 1d2
+damage on the first round and every round thereafter until the fire is
+smothered or doused. It also has a particular fondness for spellbooks and
+scrolls.
+
+Being hit by water will damage it - 1d3 for a bottle full, 1d6 for a bucket and
+it is also subject to smothering damage just as the air nuisance is. No other
+effect except cold-related magic will harm it.
+
+
+Elemental Nuisance: Water
+Armor Class: 7 [12]
+Hit Dice: 1d4 hit points
+Attacks: Choke
+Saving Throw: 18
+Special: Ruin items, damage immunities
+Move: 9, 15 swimming
+Challenge Level/XP: 1/15
+
+Unlike the fearsome wave shape of its larger kindred, a water elemental
+nuisance appears as a pool or trickle on land, or as a ripple in a larger
+volume of water, with a volume of only a couple of quarts (litres). If it
+reaches a character, it will crawl on his or her body and equipment for 1- 3
+rounds, dousing lit flames, ruining unprotected scrolls and spellbooks, and
+damaging non-magic metal armor with a rapid rusting power so that it will lose
+1 AC benefit per round. When this period of time is over, the nuisance will
+head for the victim's mouth and throat, and unless a save succeeds will do 1d6
+choking damage per round. It can only be destroyed by splashing it to pieces;
+thus, only hand-held weapons and impact effects (such as magic missile) will
+damage it, and then only for 1 point per hit. What's more, a non-magic metal
+weapon that hits will be damaged, taking a permanent -1 damage penalty (minimum
+0 damage).

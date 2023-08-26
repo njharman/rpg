@@ -1,0 +1,891 @@
+## Note: edited from original
+##Tomes
+
+##Tomes and Schools of Magic
+##One aspect of the idea of tomes of spells which bears discussion is in
+##how it relates to the concept of “schools of magic”. The assumption in
+##this book is that many types or schools of magic exist, each studying the
+##arcane techniques to give power over a certain aspect of reality. Magic-
+##users using the standard spell list (sometimes also known as mages) are
+##generalists, focussing largely on magic of invocation and transmutation,
+##but also studying a smattering of many other types of magic, without
+##delving deeply into any one. On the other hand, each type of specialist
+##magic-user (i.e. the illusionist, elementalist, necromancer and vivimancer)
+##studies a single school of magic which has minimal overlap with the
+##other schools.
+
+##The Book of Deceptions
+##Recommended for use by: Illusionists
+##A tome containing spells which are commonly taught to low level
+##illusionists. Any of these spells could be included in an illusionist
+##character's initial spell selection at 1st level.
+
+Glamour
+Level: 1
+Duration: Until Dispelled/Disbelieved
+Range: Touch
+Alters the appearance of a single normal object. A single quality of the
+affected object is modified – its colour, texture, flavour and so on.
+
+Invisibility, Lesser
+Level: 1
+Duration: Special
+Range: Touch
+As |Invisibility|_, except that the target is only invisible when immobile.
+The target becomes visible whenever they move, and invisible when keeping
+still.
+
+Spook
+Level: 1
+Duration: Special
+Range: 10'
+The caster advances threateningly towards a single creature within range and
+the magic of this spell causes the target to perceive the caster as a greatly
+feared adversary, save negates The spell taps into the target's natural fears
+who will turn and flee at maximum speed, experiencing a phantasm of being
+pursued by the imagined horror.
+
+##The Book of Figurines and Puppets
+##Recommended for use by: Magic-users
+##This tome contains a set of curious spells which were perhaps developed
+##by a magic-user with a penchant for puppetry.
+
+Marionette
+Level: 1
+Duration: 1 round per level
+Range: 60'
+Each round the caster may to control a single limb of any target within range,
+save negates.  Any attacks or other actions made with a controlled limb suffer
+a -2 penalty.
+
+Animate Puppet
+Level: 1
+Duration: 1 turn per level
+Range: 60'
+Enables caster to take remote control of a single puppet, mannequin or stuffed
+toy within range. The spell has no effect on puppets which have an
+intelligence of their own or are already magically controlled or animated.
+Note that controlled puppets are incapable of combat and that the caster is
+not able to see through the puppet's eyes.
+
+Animate Puppet, Mass
+Level: 3
+Duration: 1 turn per level
+Range: 60'
+The grand pinnacle of magical puppetry, this spell places all puppets
+and figurines within range under the caster's control, as per
+|Animate Puppet|_.
+The power of the spell is such that the controlled puppets are capable of
+attacking as 1HD creatures, doing up to 1d4 or d6 damage, depending on
+their construction.
+
+Animate Statue
+Level: 2
+Duration: 1 turn per level
+Range: Touch
+Brings a single statue which the caster touches to life. Statues of up to 1'
+tall per level of the caster may be animated.  The animated statue may either
+be controlled by the caster, responding to the verbal commands of its creator.
+Note that if the caster dies while the statue is animated, it will go berserk.
+Or, may have an awakened intelligence of its own and interact as a free-willed
+being.
+
+Inhabit Figurine
+Level: 3
+Duration: 1 turn per level
+Range: 30'
+Transfers caster's life force into a puppet or figurine within range,
+gaining complete control of this new body. While the caster is inhabiting
+the targeted puppet, his own body lies dormant, as if affected by |Feign
+Death|_.
+The caster maintains his own hit points, saves, attack bonus, etc. while
+inhabiting the puppet, but is only able to be harmed by magic.  When the
+spell's duration expires, or at any time the caster wishes, his life force
+returns immediately to his real body, which awakens.
+
+Command Construct
+Level: 4
+Duration: 1d6 turns
+Range: 60'
+Targeting a single golem, living statue or similar magically animated
+construct within range, this spell allows the caster to take over complete
+control of the creature, commanding it as an automaton for the duration, save
+negates.
+If the target is already under the direct command of another, must overcome
+as |Dispel Magic|_.
+
+Voodoo Doll
+Level: 5
+Duration: Permanent
+Range: Touch
+This sinister magic allows the caster to remotely inflict pain and even real
+harm to a victim. The spell requires the construction and enchantment of
+a small doll which must resemble the target at least superficially and contain
+some part of the target's body – hair, blood, saliva, etc.
+
+
+##The Book of Meta-Magic
+##Recommended for use by: Magic-users
+##Aside from the ever-popular dispel magic, the study of meta-magic – that
+##is spells with the power to manipulate other spells – is usually only
+##pursued by arch-mages and academics. This tome contains a selection of
+##the kind of spells which might be found in the possession of such
+##wizards.
+##One especially interesting use of the spells in this tome would be in a
+##campaign based around a magic academy, where all the PCs are magic-
+##users of various types, and their primary enemies are the wizards of a
+##rival guild.
+
+Arcane Mark
+Level: 1
+Duration: Permanent
+Range: Touch
+Imbues a magical signature, identifying the caster, onto the surface of an
+object. The mark may be visible or invisible – in the latter case detect magic
+will cause it to glow. It may also be accompanied by a short message, up to 10
+words per caster level.
+
+Charm Spell
+Level: 2
+Duration: Special
+Range: 60'
+Enables the caster to befriend a memorized spell which exists in the mind of
+another mage, save negates.  The charmed spell will not willingly harm the
+caster, and will randomly choose another target if it is cast with that
+intention.  Additionally, the caster may ask the charmed spell to resist being
+cast, requiring "owner" to make a save in order to cast the spell.
+
+Spell Reading
+Level: 2
+Duration: 1 turn per level
+Range: 60'
+Caster gains ability to scan target's minds to divine which, if any, spells
+they have memorized. It takes one round of scanning to detect the overall
+presence of spells in a target's mind, and then one round to gain specific
+knowledge of one individual spell.
+
+Trigger
+Level: 2
+Duration: 24 hours
+Range: 0
+Modifies a second spell (which must be cast in the following round), causing
+its activation and/or duration to be tied to a specific triggering action. Any
+trigger which can be performed by the caster as a simple brief action may be
+chosen – some examples of suitable triggers are: blowing out a candle,
+speaking a single word, drawing a weapon.
+
+Dweomerlight
+Level: 3
+Duration: 6 turns
+Range: 60'
+Causes all memorized spells and all spells cast within range to glow in
+a variety of scintillating colours.  Spell casters' heads will be surrounded by a halo
+of rainbow hues, while spells actually cast produce vivid streaks of light,
+making the target and the source unquestionable.  The manifested colours
+broadly allow specific spells to be identified.
+
+Command Spell
+Level: 4
+Duration: Instantaneous
+Range: 60'
+Similar |Charm Spell|_, this spell enables caster to cause a spell to cast
+itself immediately, save negates.  The caster has complete control over the
+casting of the targeted spell. The spell is still cast from the perspective of
+the targeted magic-user.
+
+Instant Memorization
+Level: 5
+Duration: Instantaneous
+Range: 0
+When cast upon a formulae, causes the targeted spell to leap instantly into
+the caster's mind, obviating the usual process of memorization. The caster may
+or may not know what the targeted spell is, but it must be one that they
+can cast and there must be an empty slot for it or Instant Memorization fails.
+
+Mnemonic Obfuscation
+Level: 5
+Duration: 24 hours
+Range: Self
+When memorized, this spell causes the mental energy patterns of all other
+memorized spells to be encoded in a bizarre and mindbending cypher. Affording
+complete protection from magic which can affect memorized spells.
+The presence of the encrypted formulae presents a forces anyone reading the
+caster's mind by any means, to save or be affected by |Confusion|_ for 1d6
+rounds.  Additionally, the obfuscated spells are so unusual in their
+manifestation that all mages take a -2 penalty to any saves against the spells
+and there is a slight chance of penetrating a Shield of Magic.
+
+Spying Sigil
+Level: 4
+Duration: Special
+Range: Touch
+Inserts a tiny inconspicuous sigil into the text of an arcane formulae which
+is is undetectable by visual examination. If the spell in which the sigil has
+been placed is memorized by a the sigil is implanted into the mage's mind.  As
+long as the sigil remains in the target's mind, its creator is aware and able
+to see through the target's eyes and hear through the target's ears and the
+target is -4 to saves against ESP, Charm, Suggestion, etc. cast by the creator.
+The sigil remains active until the spell it was memorized with is cast.
+
+Steal Spell
+Level: 5
+Duration: Special
+Range: 60'
+Effects the transference of the mental energy pattern of a single memorized
+spell from the mind of the target into that of the caster, save negates. The
+spell stolen is chosen at random, unless the caster has specific knowledge of
+which spells the target has memorized
+
+
+##The Book of Pranks
+##Recommended for use by: Illusionists
+##A tome containing spells created by an illusionist whose area of specialist
+##interest was jokes and humour.
+
+Uncontrollable Laughter
+Level: 1
+Duration: 6 rounds, +1 round per level
+Range: 120'
+1 HD per caster level are affected by an odd phantasm causing them to find
+everything incredibly funny, save negates.  Affected targets can resist the
+effects for the first 1d4 rounds (adjusted by WIS), after which they collapse
+in torrents of laughter. Creatures with INT scores of 4 or less are totally
+unaffected.
+
+Lost and Found
+Level: 1
+Duration: 1 hour per level
+Range: Touch
+Causes a single small object to become invisible and be replaced with an
+illusionary duplicate hidden in a different location within 30'.  If the
+illusionary object is discovered and touched, it disappears and is replaced
+with another duplicate in a more cunningly hidden location.  The cycle of
+discovery and duplication continues for the spell's duration.  If at any time
+the real object is touched or moved, the spell ends.
+
+Hapless Fool
+Level: 2
+Duration: 1 turn
+Range: 30'
+Once within the spell's duration, the caster may cloak a single action with an
+illusion.  The cloaked action is made to appear to all observers like
+a slapstick accident. Thus, witnesses may perceive a murder victim to slip and
+fall on his own blade, or a stolen item may seem to fall into the sack of an
+unaware passer-by.
+On-lookers are allowed a save to detect that all is not as it seems, though
+only the most eagle-eyed will see completely through the illusion and perceive
+what really occurred.
+
+Phantasm of the Laughing Gnome
+Level: 3
+Duration: 1 hour per level
+Range: 60'
+Conjures an illusionary gnome which will follow the chosen target around for
+the duration.  Due to its unreal nature the gnome cannot be harmed in any way,
+and cannot be outrun or evaded, even by teleportation magic.
+The gnome can have one of several effects, chosen at the time of casting.
+**Jovial gnome**: acts as a friendly and good-spirited companion, making jokes
+and pranks and generally trying to lift the spirits of the being it follows.
+**Boisterous gnome**: apparently horrendously drunk, makes a huge amount of
+noise as it follows its target.  **Sneering gnome**: This gnome's humour is
+cynical and bitter, always trying to ridicule and degrade its target.
+Note that this spell does not allow a saving throw, as the words and actions
+of the gnome have an effect regardless of whether the target realises it
+is an illusion or not.
+
+Slapstick Fun!
+Level: 3
+Duration: 1 round per level
+Range: 60'
+Cast upon an area, this odd illusion disguises any acts of violence occurring
+within as boisterous rough-and-tumble. In this manner, dangerous weapons are
+disguised as harmless and acts of violence or even killing are likewise veiled
+in a comedic manner.
+Any onlooker who has reason to doubt the reality of what he or she is
+perceiving is allowed a save to see through the illusion.
+
+##The Chronomancer's Workbook
+##Recommended for use by: Magic-users
+##One of the most obscure, mysterious and esoteric branches of the arcane
+##is the study of chronomancy – spells which manipulate time in various
+##ways. The 9th level spell time stop is a commonly known spell of this
+##type. This tome contains a trio of spells of an unusual nature which deal
+##with the manipulation of time.
+
+Pre-emptive Strike
+Level: 2
+Duration: 1 round
+Range: 0
+The first time the caster is attacked they (and they only) gain a "bonus"
+round. This additional round occurs before any attack that triggered it,
+giving the caster a chance, before anyone else can act, to attack, cast
+spells, etc. The caster does not even need to be aware of the attack for the
+spell to warp time. The spell auto casts.
+
+Undo
+Level: 4
+Duration: Permanent
+Range: 120'
+A more advanced and lesser-known variant of |Dispel Magic|_, this spell is able
+to manipulate time and can dispel any spell cast in the previous round,
+including spells of instantaneous duration.
+
+Zoetrope
+Level: 9
+Duration: Permanent
+Range: 10'
+This powerful spell creates an area of space where time is warped so
+tightly that a single moment is repeated over and over for all eternity.
+The area affected is a cylinder 10' high and 10' in diameter. Any
+creatures or objects in this area when the spell is cast, or anything
+subsequently entering the area is caught in the time loop. From the
+outside, the time loop appears to be a spinning column of light, wherein
+can be seen, semi-transparent and phantom-like, the last few seconds of
+normal existence of everything trapped inside.
+The Zoetrope is an extremely powerful dweomer, and is unaffected by
+|Dispel Magic|_. A |Wish|_ is sufficient to release a single creature or object
+from its confines, but if magic ever existed which could undo this spell
+entirely, it is now lost.
+The casting of this spell carries a certain risk to the chronomancer, who
+has a 10% chance of accidentally being sucked into the zoetrope and
+trapped.
+
+##The Dimensional Treatise
+##Recommended for use by: Magic-users
+##Dimensionalism is an obscure and taxing branch of arcane study which
+##includes powerful spells which warp the fabric of space and the forces of
+##motion. Commonly known spells such as teleport, dimension door and
+##rope trick are included in this sphere of study. This tome details a
+##number of lesser-known dimensional spells.
+
+##Tessellate
+##Level: 1
+##Duration: Instantaneous
+##Range: 10'
+##This simple dimensional magic is used to instantly pack a group of
+##objects into the smallest possible space. The objects to be packed must
+##all be within range. Living creatures cannot be affected, neither can
+##objects worn or held by creatures. As the spell is completed the affected
+##objects are teleported instantaneously into a neatly packed cuboid. At the
+##caster's option objects may be packed inside a container of suitable size,
+##effectively increasing its carrying capacity by one third.
+
+Hide
+Level: 1
+Duration: 1 round per level
+Range: 10' per level
+Causes a single small object to briefly disappear into a tiny sub-dimension.
+The object can be brought back at will by the caster, and returns automatically
+when the spell duration ends.
+
+Disappear
+Level: 2
+Duration: 1 round per level
+Range: 10' per level
+Causes a single targeted creature or object to briefly disappear into a small,
+temporary, sub-dimension, save negates. The target can be brought back at will
+by the caster, and returns automatically when the spell duration ends.
+While in the sub-dimension the target is completely cut off. No harm will come
+to it.  A targeted object may be up to 10lbs in weight and 1' cubed volume per
+caster level.  A creature must have less HD than caster.  Although, caster may
+use this spell on himself.
+
+Hideaway
+Level: 4
+Duration: 1 turn per level
+Range: 10' per level
+Transports caster and 1 target per caster level to a small, temporary,
+sub-dimension, save negates.  While in the sub-dimension the caster and any
+companions are completely isolated. The caster may choose to exit the
+sub-dimension at any time, and may likewise allow any other creatures to exit.
+Without the caster's permission, escape is only possible via powerful magic
+such as |Limited Wish|_, or when the spell's duration ends.
+
+Channel
+Level: 3
+Duration: 1 round
+Range: 10' per level
+Creates a short-lived dimensional channel between caster's current location and any
+point within range. The channel enables the transmission of spells which
+are cast into it.  Spells thus transmitted take effect as if they were cast at
+its end point.
+
+Summon Dimensional Horror
+Level: 4
+Duration: 1 turn per level
+Range: 120'
+This spell allows the caster to conjure forth a single specimen of a
+variety of bizarre and dangerous creatures which normally dwell in odd
+dimensional spaces.
+The summoned creature is completely under the caster's control for the
+duration of the spell, after which it vanishes.
+
+Dimensional Ward
+Level: 4
+Duration: 1 turn per level
+Range: 30'
+Disrupts the functioning of all magic dealing with sub-dimensions, including
+spells such as |Rope Trick|_, |Dimension Door|_, |Teleport|_ and magical items
+such as a Bag of Holding or a Portable Hole.  Within the spell's range and
+duration, all such magic ceases to function, dumping the contents of
+sub-dimensional spaces into the real world.
+
+Arcane Window
+Level: 4
+Duration: 1 turn per level
+Range: Touch
+Conjures a 3' square one-way magical window through 144' of wood, 12' of
+stone, or 6" of metal. The caster may move window along wall at 10' per round
+and make it visible to others or not. Stuff may pass through window, remember
+one-wayness.
+
+Rotational Acceleration
+Level: 5
+Duration: 2d4 rounds
+Range: 5' per level
+Brings about a bizarre modification of the laws of force and movement within
+a bounded area, causing all objects and creatures in the affected area to
+enter eagerly into a state of rapid spinning. In the first round of the
+spell's effect, creatures in the affected area experience an odd sensation of
+falling and of losing control of their momentum.  Spinning creatures suffer -4
+to attacks in the first round. Most other actions, including spell casting,
+are impossible.  From the second round of onwards, all actions are impossible,
+as the affected creatures spin and tumble with ever-increasing speed.  Each
+round, affected creatures have a 50% chance of suffering 1d6 damage due to
+collisions, and a 25% chance of spinning wildly out of the area of effect.
+Carried items are very likely to fly off as a creature spins.  The spell only
+affects moving creatures or objects, and can be avoided by any creature able
+stand completely still.
+
+Spell Door
+Level: 6
+Duration: 1 round per level
+Range: Unlimited
+Opens a dimensional channel between the caster and any location in the
+caster's line of sight or is well known to them. In subsequent rounds spells
+may be cast through the spell door, having them emerge as if cast from the
+distant location.
+
+Dimensional Block
+Level: 8
+Duration: Permanent
+Range: 30'
+As |Dimensional Ward|_.
+
+Dimensional Portal
+Level: 9
+Duration: Permanent
+Range: Unlimited
+Brings a magical doorway into existence, linking his current location with
+another place which is well known to him. The door is of normal size, and
+allows instantaneous travel in both directions.
+
+Sphere of Annihilation
+Level: 7
+Duration: 1 round per level
+Range: 60'
+Temporarily rupturing the fabric of reality, this spell conjures forth
+a Sphere of Annihilation. The caster is welcome to attempt to control the
+sphere as normal.
+
+####The Prism Codex
+####Recommended for use by: Illusionists
+####As masters of light and colour, illusionists have developed a variety of
+####spells enabling the storage and transmission of information in the form
+####of light. All the spells in this tome are commonly used with a minor
+####magical item known as a codex prism. This item is described in
+####Appendix III.
+##
+##Script Codex (reversible)
+##Level: 1
+##Duration: 1 round
+##Range: Sight
+##A book, scroll or the like script touched by caster is magically transmuted
+##into a series of flashing colours.  The usefulness of the spell is only
+##realised by its reversed form – which allows second caster to transmute
+##a perceived stream of flashing colours instantaneously back into script, which
+##appears in his mind as if he had read the transmuted writing.
+##This spell is also commonly used in conjunction with a Codex Prism allowing
+##transmuted light patterns to be stored and decoded at a later date.
+##
+##Light Codex (reversible)
+##Level: 2
+##Duration: 1 minute per level
+##Range: Sight
+##Similar |Script Codex|_, this spell allows caster to transmute all visual
+##phenomena within his range of perception into encoded light patterns which can
+##then be decoded by the reversed spell.
+##
+##Sound Codex (reversible)
+##Level: 2
+##Duration: 1 minute per level
+##Range: 50' per level
+##Similar to the |Script Codex|_, this spell allows caster to
+##transmute all sounds within his range of hearing into encoded light
+##patterns which can then be decoded by the reversed spell.
+##
+##Full Codex (reversible)
+##Level: 3
+##Duration: 1 minute per level
+##Range: 50' per level
+##Combines the effects of |Sound Codex|_ and |Light Codex|_, allowing
+##caster to transmute all of his visual and aural perceptions into
+##encoded light patterns which can then be decoded by the reversed spell.
+
+##The Tome of Ooze and Slime
+##Recommended for use by: Magic-users and vivimancers
+
+Grease
+Level: 1
+Duration: 1 round per level
+Range: 60'
+Produces a thin layer of an oily slime which covers either an 10' square or an
+roughly human sized object. Save to move (through area) or handle (object).
+
+Gelatinous Transformation
+Level: 3
+Duration: 2 rounds per level
+Range: 60'
+Causes a single object or creature to undergo a complete transformation into
+a gelatinous state, similar to an ooze or pudding, save negates.  Targets are
+able to move 20' per round, and can easily travel up walls, along ceilings,
+and through small holes and gaps. Gelatinous creatures are invulnerable to
+normal attacks, and can only be harmed by magic or fire. They themselves
+cannot attack or cast spells.  An object affected by this spell is transformed
+into an animate ooze controlled by the caster.
+
+Control Ooze
+Level: 4
+Duration: 1d6 turns
+Range: 60'
+Cast in the presence of an ooze, jelly, pudding or slime type creature, exerts
+a powerful influence on the being, causing it to come completely under the
+caster's control. Oozes with a degree of intelligence are allowed a save to
+resist, but the mindless are powerless against it.
+
+Slime Blast
+Level: 4
+Duration: Instantaneous
+Range: 120'
+Unleashes a 20' radius explosion of Green Slime.  Creatures in the affected
+area must save to avoid being hit by 1d4 hit points worth of green slime.
+
+
+##The Tome of the Spider Mage
+##Recommended for use by: Magic-users
+##Containing a set of spells dealing with webs, threads and ropes, this
+##tome may be the life's work of a powerful arachnophiliac magic-user.
+
+Command Rope
+Level: 1
+Duration: Instantaneous
+Range: 10' per level
+Animates a rope or similar cord to either tie itself in a knot or untie an
+existing knot. Once tied, the knot has no magical properties, and can be
+untied normally.
+
+Attach Rope
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+Attaches one end of a rope or similar cord to any non-living object. This
+incredibly strong magical bond cannot be broken, the rope itself will snap
+first. At the end of the spell's duration, or at any time the caster wishes,
+the rope is released.
+
+Conjure Rope
+Level: 1
+Duration: 6 turns
+Range: 0
+Conjures 50' per caster level of normal hemp rope.
+
+Rope Walk
+Level: 1
+Duration: 1 round per level
+Range: Touch
+Enables one target per caster level to walk along ropes at his normal rate of
+movement, and with no risk of falling. Only ropes which are on a horizontal
+and which could normally support the target's weight may be traversed. Target
+is so at ease while rope walking that they may perform any normal actions,
+including attacking or spell casting.
+
+Strengthen Rope
+Level: 1
+Duration: 1 hour per level
+Range: Touch
+Enchants a single length of rope or similar cord is magically strengthened,
+giving it the ability to support 10x the normal weight and to resist cutting.
+
+Skein
+Level: 1
+Duration: 1 hour per level
+Range: Self
+The caster reaches into his lightly clenched fist and pulls out a glossy,
+almost transparent thread. The thread can be unravelled for up to 200' per
+level of the caster. It can be deliberately cut or broken without much
+difficulty, but is unlikely to break without interference. If used to support
+weight, it can carry only 5lbs before breaking.  At the end of the spell's
+duration, or at any time the caster wishes, the skein vanishes.
+
+Web Walk
+Level: 2
+Duration: 1 round per level
+Range: Touch
+One target per caster level gains ability to walk and climb, along ropes,
+skeins, webbing and the like as quickly and easily as they can move on the
+ground. Targets can traverse threads of any thickness, even those which could
+not normally support his weight. This spell has the additional effect of
+preventing the target from becoming stuck in natural or magical webs.
+However, it does not help creatures who are already bound up in webbing.
+
+Spider Skein
+Level: 2
+Duration: 1 turn per level
+Range: 0
+The caster touches a surface and a sticky thread forms, connecting his hand to
+the surface touched. The caster can cause the thread to extend 60' per round
+to a maximum length of 100' per level.  The skein is attached with incredible
+strength (as |Attach Rope|_) to both the caster's hand, and to the surface
+touched. The caster can disconnect either end of the thread at will. It
+requires 18 STR to break or 20 points of damage to cut. When the spell's
+duration expires the thread vanishes.
+
+Grapple
+Level: 2
+Duration: 1 turn per level
+Range: Length of rope
+As |Attach Rope|_ but one end of held rope will animate, snaking itself to the
+surface or object caster wishes to attach to.
+
+Relentless Binding
+Level: 2
+Duration: 1 hour per level
+Range: 30'
+Enchants the binding of a one bound target per caster level. For the duration
+of the spell the target can not "escape", nor can the binding be untied, cut,
+burned or damaged in any way short of a |Disintegrate|_. This spell can be
+dispelled as normal, and the caster may cancel it at any time (although this
+does not automatically undo the bindings).
+
+Bond Bane
+Level: 3
+Duration: Instantaneous
+Range: 10' per level
+Burns all types of rope, threads, cords and webbing within range.  Even
+magical ropes and webs are destroyed unless they have a specific immunity to
+magical fire. Any creatures, other than caster, in close proximity to the
+burning cords suffer 1d8 points of fire damage. May be cast at a thought,
+allowing even a bound and/or gagged caster to escape. Note: this spell and
+|Relentless Binding|_ will cancel out each other.
+
+Conducting Skein
+Level: 4
+Duration: 1 turn
+Range: Length of rope
+Caster gains the ability to deliver touch spells through ropes, threads and
+skeins. Both the caster and the target must be touching the conducting skein.
+
+Rope Ward
+Level: 5
+Duration: 1 turn per level
+Range: Touch
+Creates a powerful ward whose boundary is defined by the placement of a rope
+of up to 50' in length As the spell is cast an invisible ward springs up
+vertically from the rope, making a wall 20' high. The ward prevents spells,
+breath weapons, heat, cold, electricity, physical attacks and creatures from
+passing either way. It is affected normally by |Dispel Magic|_ or
+|Disintegrate|_.  Once placed, the rope may be moved by the caster, altering
+the shape of the ward. If the rope leaves the ground the ward vanishes, but
+will reappear if the rope is replaced.
+
+Ascend
+Level: 3
+Duration: 3 turns
+Range: Touch
+Cast upon a piece of rope up to 50' long, which rises into the air creating
+a 5' wide passage through any non-magical barriers it encounters.  Once the
+rope has ascended to its full length it hangs down, allowing creatures to
+climb up through the newly created passages. When the duration ends, or at any
+time the caster desires, the rope falls and any passages created close once
+more.
+
+Conducting Web
+Level: 5
+Duration: 1 turn
+Range: Extent of Web
+Caster gains the ability to deliver touch spells through webs and "meshes" of
+ropes or similar cords. The caster must be touching the web as he casts the
+desired touch spell which is conducted to every creature in contact with the
+web.
+
+Rope Like Steel
+Level: 7
+Duration: Permanent
+Range: Touch
+Enchants 10' of rope per caster level with the strength, but not the
+weight, of steel.
+
+Web of Arachne
+Level: 9
+Duration: Permanent
+Range: 20' per level
+Creates a huge volume of sticky threads which entrap creatures as |Web|_. In
+addition to entanglement, all creatures in or touching the web must save or be
+affected by |Temporal Stasis|_ for 2d6 days. The caster can move freely through
+a web he has created. The web is unaffected by |Dispel Magic|_ and is not
+damaged by fire (normal or magical). Sections of the web can be
+|Disintegrate|_\d.
+
+
+## Hand book
+
+Hand, Annoying
+Level: 1
+Duration: 1 turn per level
+Range: 10' per level
+Conjures a small, disembodied, white-gloved hand that distracts one target (taps on
+shoulder, flicks ear, waves in face, etc.) Resulting in -2 to hit
+or other actions.  Caster may change target every round.  It has AC 10 and as
+many hit points as the caster.
+
+Hand, Interposing
+Level: 2
+Duration: 1 turn per level
+Range: 10' per level
+Conjures a large floating, disembodied, white-gloved hand that moves to remain
+between the caster and one opponent regardless of where the caster moves or
+how the opponent tries to get around it. Any creature weighing 2,000 pounds or
+less is unable to push past the hand.  A new target may be selected each
+round. It has AC 12 and as many hit points as the caster.
+
+Hand, Forceful
+Level: 3
+Duration: 1 turn per level
+Range: 10' per level
+Functions like |Hand, Interposing|_, except that it pushes away an opponent. The
+force is capable of shoving away beings that weigh 2000 pounds or less.
+Creatures weighing less than 8,000 pounds may advance at half their normal
+rate per round.  It has AC 14 and as many hit points as the caster.
+
+Hand, Grasping
+Level: 4
+Duration: 1 turn per level
+Range: 10' per level
+Functions like |Hand, Interposing|_, except it can grasp a being weighing less
+than 2000 pounds to hold it in place.  The hand can push a being of 8,000
+pounds or less away from caster.  Creatures of up to 16,000 pounds in weight
+can be hindered so that their movement rate is reduced by half. It has AC 16
+and as many hit points as the caster.
+
+Hand, Clenched
+Level: 5
+Duration: 1 turn per level
+Range: 10' per level
+Conjures a large, floating, disembodied, boxing gloved hand that can strike
+one opponent that the caster selects per round.  The strikes always hit,
+effects below.  Alternatively, it has the capabilities of a |Hand, Grasping|_.
+It has AC 18 and as many hit points as the caster.
+========= ===============================
+d20       Strike Effects
+========= ===============================
+**1-10**  1d6
+**11-16** 2d6
+**17-19** 3d6 + stun for 1 round
+**20**    4d6 + stun for 3 rounds
+========= ===============================
+
+Hand, Crushing
+Level: 6
+Duration: 1 turn per level
+Range: 10' per level
+Conjures a large, green, disembodied hand that can grasp and squeeze one
+opponent per round. The attacks always hit, and the severity of the damage is
+determined by the duration of the squeezing.  The target suffers 1d10 hit
+points of damage per round grasped, to a maximum of 4d10 per round.
+Alternatively, it may strike as a |Hand, Clenched|_ and has the capabilities of
+a |Hand, Grasping|_.  It has AC 20 and as many hit points as the caster.
+
+
+## Fire Book
+
+Fire Seeds
+Level: 4
+Duration: Special
+Range: 40'
+Each seed will retain its enchantment for 1 turn per caster level.
+**Acorn Grenades:** Up to four acorns turn into hurled weapons that can be
+thrown up to 40' dealing 2d8 points of fire damage in 10' radius, save for 1/2.
+**Holly Berry Bombs:** Up to eight holly berries into special bombs.  When the
+caster speaks a word of command within 40' of the berries, each berry
+instantly bursts into flames, causing 1d8 points of fire damage in 10'
+radius, save for 1/2.
+
+Flame Charm
+Level: 4
+Duration: 1 turn per level
+Range: 30'
+Enchants a flame source to form a circle of dancing, wavering magical flame.
+All beings that see the flame must save or be mesmerized into a motionless
+daze. If the spell |Suggestion|_ is cast on any being in this state, the save
+is with a -4 penalty. Should a mesmerized victim have his vision taken away
+from the flames, or vision is blocked, he shakes the influence of the spell.
+
+
+## Force Book
+
+Globe of Invulnerability
+Level: 6
+Duration: 1 turn per level
+Range: Self
+Identical to |Globe of Invulnerability, Lesser|_, except that it provides
+complete protection from 5th level and lower magic.
+
+Globe of Invulnerability, Lesser
+Level: 4
+Duration: 1 turn per level
+Range: Self
+A mobile, faintly shimmering magical 5' radius sphere surrounds the caster and
+excludes all spell effects of 3rd level or lower. Such spells fail to affect
+any target located within the globe and their area of effect does not include
+the warded area.  Any type of spell can be cast through or out of the magical
+globe.  The globe can be brought down by a |Dispel Magic|_ spell.
+
+Faithful Hound
+Level: 5
+Duration: 1 hour per level
+Range: 20'
+Summons a phantom guard dog which sees invisible, ethereal, out of phase and
+similar creatures.  The hound immediately starts barking loudly if any creature
+approaches that is the size of a giant rat or larger. If an intruder loiters
+the hound delivers a magical vicious bite; +10 to hit, 3d6 damage.  The hound
+cannot be attacked, but it can be dispelled. The caster must always remain
+within the guarded area, else the spell is broken.
+
+
+## Need a tome
+
+Transmute Metal to Wood
+Level: 5
+Duration: Permanent cannot be dispelled
+Range: 80'
+Transmutes one metal object to wood.
+
+Glass Like Steel
+Level: 8
+Duration: Permanent cannot be dispelled
+Range: Touch
+Gives on piece of glass the strength of steel.
+
+##Dweomer of Rage
+##Level: 6
+##Duration: 1 round per level
+##Range: Self
+##Allows caster to drink a potion of heroism or super-heroism, and experience an
+##amplified effect. The potion is quaffed and the spell cast.  The caster
+##becomes a wild, immensely powerful berserk fighter with +2 to damage die size
+##and two attacks per round. The caster's current hp total is set aside and new
+##total rolled as fighting man, and his AC is improved by 4.  He attacks as
+##a fighter of the same level as the caster.  Due to the blind blood rage
+##induced by this spell, the caster has no choice but to continue fighting all
+##enemies present until the spell ends. When spell ends, if current hp is less
+##than amount set aside, caster suffers double the difference in damage.

@@ -1,0 +1,625 @@
+## Note: edited from original
+## Necro
+
+Necrosis
+Level: 4
+Duration: Permanent
+Range: Touch
+Touched body part turns black and becomes useless in 1 round.  Over 2d4 turns
+it will shrivel, die, and fall off.
+
+Destruction
+Level: 7
+Duration: Permanent
+Range: Touch
+Target dies and falls to dust with little chance of ever returning from the
+dead, no save.
+
+Bind Spirit
+Level: 6
+Duration: Special
+Range: Touch
+Summons a spirit from beyond the grave and binds it into an object. The object
+is thus imbued with one of the following spells: |Darkness|_, |Exterminate|_,
+|Haunting|_, |Preserve Dead|_, |Unseen Servant|_, |Feign Death|_, |Resist
+Turning|_, |Seal Tomb|_.  The object's effect moves with the object and is
+permanent until the imbued spirit is released or dispelled.
+The imbued object radiates magic and is treated as undead. In addition to the
+normal means of dispelling, the bound spirit can be released by a successful
+turning attempt (as a 12HD monster).
+There is a 2% chance per month that the bound spirit will escape.  A released
+spirit manifests as a wraith, and is free-willed, not under the caster's
+control. Once the spirit has been released it cannot be returned to the
+object.
+
+Charm Undead
+Level: 4
+Duration: Special
+Range: 30'
+As |Charm Monster|_ but only affects undead.
+
+Choke
+Level: 2
+Duration: 1 round per level
+Range: 60'
+Summons a pair of spectral hands to clasp the throat and begin choking
+a single target. Each round the victim takes d6 damage. The victim can take no
+action and will focus solely on attempting to breath. Due to the ghostly
+nature of the choking hands, it is not possible for the victim to wrench them
+away. Save negates.
+
+Command Dead
+Level: 1
+Duration: 1 turn
+Range: 10'
+Reanimates d8 HD of recently deceased creatures, These undead are
+mindless and are fully under the caster's control.
+The caster cannot command the reanimated creatures to use any special
+abilities nor do the possess any knowledge they had in life. When the duration
+expires the deceased fall immediately back into the grip of death.
+
+Command Undead (reversible)
+Level: 1
+Duration: Special
+Range: 10'
+Caster may command undead as a divine of same level.
+
+Contact Spirit
+Level: 5
+Duration: Special
+Range: 10'
+Similar to |Speak With Dead|_, but allows the caster to communicate with the
+spirit of any deceased being whose name is known.
+The spirit communicates as a faint voice from beyond the grave, audible to all
+beings within 30' of the location where the spell is cast.  Powerful spirits
+may be resist being contacted.
+
+Corpse Visage
+Level: 2
+Duration: 1 day per level
+Range: Touch
+Caster takes on the facial appearance, voice, and rough body shape of
+a touched corpse.  The caster's face reflects the exact state of the corpse as
+it decays.  Nonetheless the spell is often enough to deceive.
+
+Curse of Undeath
+Level: 5
+Duration: Permanent
+Range: 60'
+The necromancer places a curse on a single target in range, declaring
+that their fate upon death is to rise again as undead, save negates.
+
+Death Geas
+Level: 7
+Duration: Special
+Range: 30'
+Compels target to undertake a quest determined by the caster, similar to
+|Geas|_, with the addition that if the victim dies while performing the quest
+he will rise as undead and not rest until the quest is fulfilled.
+
+Death Recall
+Level: 2
+Duration: 1 turn
+Range: Touch
+Touching the body of a creature which has died within the last 24 hours, the
+caster enters a trance state and experiences a vision of the last 10 minutes
+of the creature's life, ending with its death.  The vision is from the point
+of view of the creature, and overwhelms the caster's own senses for the
+duration.
+
+Detach
+Level: 4
+Duration: 1 turn per level
+Range: Touch
+Targeted body part detaches from its owner, save negates. Who can then control
+the part as an independent entity. Thus hands may crawl around, legs may hop,
+and even heads can be detached and rolled.  If the body part is not reattached
+(which happens automatically) during the spell's duration it dies.
+Alternatively, a missing body part may be replaced with any convenient dead
+(but not for too long) part the caster or their hunch-backed minion may have
+access to.
+
+Organ Swap
+Level: 6
+Duration: Permanent
+Range: Touch
+Enables the transplantation of bodily organs except the brain from one being
+to another. The affected creatures must both be of the similar species and
+must both be alive.  The organs must be physically cut from the bodies of the
+subjects and transplanted – this spell only fuses the new organs into place
+and heals of any damage inflicted by the process.
+The caster has the option of actually exchanging the organs of both
+creatures, or of simply removing an organ from one and transferring it to
+the other.
+
+Organ Swap, Greater
+Level: 8
+Duration: Permanent
+Range: Touch
+As |Organ Swap|_ additionally enabling the transplantation of brains or
+other organs between similar species.
+
+Detect Disease
+Level: 1
+Duration: Instantaneous
+Range: 30'
+Enables caster to detect whether a single object or creature carries
+a disease. Both normal and magical diseases can be detected, and the caster
+has a 5% chance per level of detecting the exact type of disease carried.
+
+Detect Undead
+Level: 1
+Duration: 1 turn per level
+Range: 60'
+Enables caster to sense the presence of undead creatures within 60'. While
+a notion of their "strength" is provided the precise location or type of
+undead is not revealed.
+
+Dying Words
+Level: 1
+Duration: Special
+Range: 60'
+Causes a corpse to utter a short phrase as determined by the caster
+immediately, or when some trigger event occurs.
+
+Exterminate
+Level: 1
+Duration: Instantaneous
+Range: 15'
+Instantly kills small vermin (rodents, insects and spiders). Larger vermin,
+including giant versions of normal vermin, must save or die. Creatures of
+greater than animal intelligence are not affected.
+
+Gaseous Form
+Level: 5
+Duration: As long as desired
+Range: Self
+The caster and everything they are carrying transforms into a cloud of mist.
+While in gaseous form the caster can only be harmed by magic, and can neither
+attack nor cast spells.
+
+Shadow Touch
+Level: 1
+Duration: 1 round per level
+Range: Touch
+The caster's hands are enveloped with a dark blue glow which can be used to inflict
+1d6 hit points damage and draining d4x points of STR. Save negates drain, but
+not the damage.
+
+Ghoul Touch
+Level: 2
+Duration: 1 round per level
+Range: Touch
+The caster's hands are enveloped with a pale green glow which can be used to
+inflict 1d8 hit points of damage and paralysis for 2d4 turns. Save negates
+paralysis, but not the damage.
+
+Lich Touch
+Level: 3
+Duration: 1 round per level
+Range: Touch
+The caster's hands are enveloped with a black glow which can be used to
+inflict 1d12 points of cold damage and permanent fear.  Save negates fear, but
+not the damage.
+
+Mummy Touch
+Level: 4
+Duration: 1 round per level
+Range: Touch
+The caster's hands are enveloped with a sickly yellow glow which can be used
+to inflict the hideous curse of mummy rot.  Victim is -2 to all actions, loses
+1 CON every hour until death, which can't be regained by magic or naturally.
+Mummy rot can only be cured with |Remove Curse|_ followed by |Cure Disease|_
+both of which must overcome caster's level like with |Dispel Magic|_.
+
+Guardian Spirit
+Level: 5
+Duration: Until triggered
+Range: 0
+Summons a lost soul from the underworld and tasks it to guard the location
+where this spell is cast. The spirit lies dormant and invisible in the locale
+to be protected, but will manifest in one three ways when any living being
+enters the area.  As a wraith which fights intruders.  Or, at the caster's
+current location, warning of the intrusion. Lastly, as a chilling fog, similar
+to |Fog Cloud|_, but causing 1hp of cold damage per round.  All forms of
+manifestation of the spirit will happen only once, after which the spirit is
+released from its task.
+
+Haunting
+Level: 1
+Duration: 1 turn per level
+Range: 60'
+Places an enchantment on the area where cast, causing it to exhibit signs of
+being haunted.  A haunting is susceptible to turning, as an undead equal to
+caster level.
+
+Inter (reversible)
+Level: 4
+Duration: Permanent
+Range: 60'
+Inter causes one target within range to be pulled into the earth over the
+course of 2d4 rounds, save to negate.  The interment may be prevented if the
+victim is aided by four or more creatures of average STR.
+The reverse, exhume, causes buried bodies to rise from the earth.  The caster
+may choose which bodies are exhumed, perhaps by reading names from
+gravestones.
+
+Knowledge of Life
+Level: 6
+Duration: Instantaneous
+Range: 60'
+Provides an instant insight into the history and personality of an undead
+creature during its former mortal life. The objective answer to one specific
+question may also be gained.  Very powerful undead may save to negate.
+
+Lend Fortitude (reversible)
+Level: 2
+Duration: Permanent
+Range: Touch
+Transfers some of the caster's physical constitution to a living target. The
+caster loses any number of CON points desired and the target gains the same
+number.  The reverse, Leech Fortitude, causes target to save or lose 1 point
+of CON per 3 levels of the caster. The caster gains the leeched points.
+
+Locate Remains
+Level: 1
+Duration: 1 turn per level
+Range: 20' per level
+Caster senses the direction (as the crow flies) towards all remains of any
+dead creatures in range. Including corporeal undead such as skeletons,
+zombies and ghouls, although the caster cannot distinguish them from normal
+corpses. Specific remains may be located if detailed knowledge about them is
+known.
+
+Invisibility to Undead
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+Renders one target per level completely undetectable to undead.  If the target
+attacks any undead, his presence is revealed, but even then only to the
+individuals which were attacked.  Creatures with 5HD or more are allowed
+a save to "see past invisibility" and those with 9HD or more are never
+deceived.
+
+Portent of Doom
+Level: 5
+Duration: 1 day per level
+Range: 60'
+Places a deathly curse upon a single target within range, save negates.  Once
+per day, an undead assailant of HD equal to the victim's will appear out of
+nowhere within 60' of the victim, pronounce the victim's doom, and proceed to
+attack.
+
+Preserve Dead
+Level: 1
+Duration: 1 day per level
+Range: 30'
+Prevents the onset of decay in one dead body per level.  Also, for the
+duration of the spell, creatures who are destined to rise as undead (such as
+those slain by a ghoul) will not do so.
+
+Raise Dead, Lesser
+Level: 4
+Duration: Special
+Range: Touch
+Similar to |Raise Dead|_ But, not permanently. The raised creature suffers the
+normal period of recovery. Then is fine for one day per caster level.  After
+that, the creature must roll on the following table, every day, with
+a cumulative +2% modifier per day.
+
+======== =============================================
+d100     daily effects
+======== =============================================
+01-24    Lose 1/2 HD
+25-34    Lose one point of CON
+35-44    Lose one point of DEX
+45-54    Lose one point of STR
+55-59    Fingers, teeth or hair rot away or fall out,
+         CHA reduced by one
+60-64    A limb dies and drops off
+65-69    Lose one experience level
+70-73    Overcome with murderous lust
+74-78    Overwhelmed with sorrow
+79-83    Can no longer bear to eat; starvation begins
+84-87    Cannibalism; otherwise starvation begins
+88-91    Semi-corporeal; AC improves by 2 points,
+         unable to manipulate fine objects
+92-94    Fully incorporeal; cannot interact the
+         physical world in any way
+95-99    Undead
+00+      Death
+======== =============================================
+
+Ray of Pain
+Level: 2
+Duration: 1 round per level
+Range: 20' per level
+Effects a ray of shadowy energy leaping from the caster's hand. Target takes
+1d4 hit points of damage if they save. Otherwise, Target takes 1d6 points +1
+point per caster level of damage and suffers wracking pain for the duration.
+
+Reassemble
+Level: 3
+Duration: Instantaneous
+Range: 60'
+Repairs 1d6 hit points per caster level of damage to all forms of corporeal
+undead. The hit points may be divided between any number of undead within
+range. Even undead which have been killed recently may be restored.
+
+Reinstate Spirit
+Level: 9
+Duration: Permanent
+Range: 30'
+This spell allows the caster to summon the spirit of a deceased being whose
+name is known and to cause it to be reinstated into a corpse.  The maximum age
+of spirit which can be reinstated as |Speak With Dead|_.  Powerful spirits may
+save to resist being reinstated.
+The newly undead creature, equivalent to a wight, reinstated spirit retains
+its personality and all knowledge of its life (and beyond). It is not
+necessarily favourably disposed towards the caster and may resent being
+forcibly brought into a state of undeath.
+
+Resist Turning
+Level: 2
+Duration: 6 turns
+Range: 0
+Protects undead creatures in 15' radius from being turned or controlled. Must
+overcome caster as |Dispel Magic|_.  Can be centred on the caster, object or
+location.
+
+Sacrificial Exchange
+Level: 4
+Duration: Permanent
+Range: 0
+By making a bargain with the powers of death, caster can exchange one soul for
+another, bringing a dead creature back to life in return for a sacrifice of
+equal magnitude. Effects as |Raise Dead|_.
+
+Seal Tomb
+Level: 2
+Duration: Permanent
+Range: 60'
+Places a magical seal upon a single crypt within range, causing it to close
+and become magically locked. The caster himself can pass through the door
+unhindered, and can optionally grant access to undead. The spell may also be
+used to seal closed a single sarcophagus or coffin lid.
+
+Skeletal Army
+Level: 9
+Duration: Until Destroyed
+Range: 120'
+Cast in a graveyard, site of a battle, etc. causes up to 3d6 HD per caster
+level of skeletons to reanimate and rise up ready to do the caster's bidding.
+
+Skeletal Servitor
+Level: 1
+Duration: 1 turn per level
+Range: Touch
+Reanimates a single skeleton under the caster's control as |Animate Dead|_.
+
+Skull Sight
+Level: 3
+Duration: 1 turn per level
+Range: Unlimited
+Allows caster to see through the eye sockets of a skull which he has specially
+prepared by anointing it with a mixture made from rare herbs (costing 500sp)
+and the eyeball of an undead creature.  If the caster has anointed several
+skulls, he can freely switch between them within the spell's duration.
+
+Skull Speech
+Level: 3
+Duration: 1 turn per level
+Range: Unlimited
+Allows caster to hear and speak through a skull which he has specially
+prepared by anointing it with a mixture made from rare herbs (costing 500sp)
+and the tongue of an undead creature.  If the caster has anointed several
+skulls, he can freely switch between them within the spell's duration.
+
+Skull Animation
+Level: 5
+Duration: 1 turn per level
+Range: Unlimited
+Allows caster to animate a skull which he has specially prepared by anointing
+it with a mixture made from rare herbs (costing 500sp) and the heart of an
+undead creature.  Caster also sees, hears, and may speak as |Skull Sight|_,
+|Skull Speech|_. The skull may attach itself to any convenient skeleton (which
+then is also animated under caster's control) or simply float with 30'
+movement.  If the caster has anointed several skulls, he can freely switch
+between them within the spell's duration.
+
+Spectral Hand
+Level: 1
+Duration: 1 turn per level
+Range: 20' per level
+Summons a ghostly glowing hand within the spell's range which the caster can
+direct at will. It can be used to deliver touch spells, granting a +2 attack
+bonus.
+The hand can only be harmed by magic, and has an 20 AC. If the hand is damaged
+it disappears and the caster suffers 1d4 hit points of damage.
+
+Steal Life Force
+Level: 9
+Duration: Permanent
+Range: Touch
+Ages target and rejuvenates the caster, save negates.
+
+Summon Undead I
+Level: 2
+Duration: 1 turn per level
+Range: 10'
+Conjures (2d4) 1 HD undead that arrive in d6 rounds to the location specified
+by the caster. They may then be commanded to fight. Or, perform other tasks
+within their abilities. The exact monsters are chosen by the referee.
+
+Summon Undead II
+Level: 3
+Duration: 1 turn per level
+Range: 20'
+As |Summon Undead I|_, but brings forth (1d6) 2 HD undead.
+
+Summon Undead III
+Level: 4
+Duration: 1 turn per level
+Range: 30'
+As |Summon Undead I|_, but brings forth (1d4) 3 HD undead.
+
+Summon Undead IV
+Level: 5
+Duration: 1 turn per level
+Range: 40'
+As |Summon Undead I|_, but brings forth (1d3) 4 HD undead.
+
+Summon Undead V
+Level: 6
+Duration: 1 turn per level
+Range: 50'
+As |Summon Undead I|_, but brings forth (1d2) 5 HD undead.
+
+Summon Undead VI
+Level: 7
+Duration: 1 turn per level
+Range: 60'
+As |Summon Undead I|_, but brings forth (1d2) 6 HD undead.
+
+Summon Undead VII
+Level: 8
+Duration: 1 turn per level
+Range: 70'
+As |Summon Undead I|_, but brings forth (1d2) 7 HD undead, or (1) 8 HD undead.
+
+Summon Swarm
+Level: 2
+Duration: Concentration
+Range: 60'
+Conjures a seething mass of vermin creatures such as bats, rats, spiders,
+flying insects, centipedes chosen by caster.  The swarm fills a 10' cube and
+moves at jogging speed. Any creatures engulfed by the swarm suffer d4 points
+of damage per round due to the numerous bites or stings. Victims can choose to
+forgo all other actions, including movement, to reduce the swarm's damage to
+1.  The swarm can only be damaged by fire, area effects, and magic. It
+disperses after taking 2 points of damage per caster level.
+
+Swarm Transformation
+Level: 4
+Duration: Special
+Range: Self
+Transforms caster into a swarm of bats, rats, spiders, or other vermin. Caster
+may move and attack as |Summon Swarm|_.  Likewise the caster as swarm can only
+be damaged by fire, area attacks, and magic.  The caster remains in swarm form
+as long as he wishes, or until death.
+
+Symbol
+Level: 8
+Duration: 1 turn per level
+Range: 10'
+This spell functions as the magic-user spell of the same name.
+Necromancers may only inscribe symbols of death, fear, insanity or pain.
+
+Undead Regeneration
+Level: 6
+Duration: 1 round per level
+Range: 60'
+Up to 1d8 HD per level of undead creatures of the caster's choosing are
+enchanted so as to be indestructible. The affected creatures may be damaged as
+normal, and appear to perish, however they will rise the round after "death".
+Enchanted undead which are destroyed by a turning ability, or by very powerful
+magic such as the |Disintegrate|_ are unable to regenerate.
+
+Valour in Death
+Level: 3
+Duration: Combat
+Range: Touch
+Causes a being killed in combat to rise again and continue fighting. It can
+only be cast while a battle is in progress.  The risen combatant is not
+considered undead, and is not controlled by the caster. A being raised by this
+spell has the sole purpose of participating in the ongoing battle - he or she
+will perform no actions to other ends.  The being possesses an eerie strength,
+granting +2 to attacks and is immune to all fear and morale effects.
+When the fighting stops the being drops to the ground, truly dead and
+suffering a penalty to their chance of surviving subsequent resurrection
+attempts.
+
+Vampiric Enslavement
+Level: 3
+Duration: Special
+Range: Touch
+Creates a potion containing a quantity of the caster's blood (causing a loss
+of one point of CON for a week) The enchanted blood must be consumed by the
+victim who comes under a powerful charm, save negates.  At the end of a period
+of time based on victim's CON as per |Charm Person|_ more blood enchanted by this spell
+must be provided to the victim, who now craves the caster's blood. Indeed if
+the spell's duration ends without being refreshed, charmed victims are likely
+to attack the caster to drink his blood.
+
+Wall of Gloom
+Level: 4
+Duration: Concentration + d4 rounds
+Range: 60'
+Conjures an opaque barrier of pure darkness 5' thick, 20' high, and up to 20'
+long per caster level. Anyone touching the wall must save or be affected as
+|Fear|_. Creatures passing through the wall, must save or be paralysed. The
+caster, undead and all creatures with a connection to darkness or shadow are
+unhindered by the wall.
+
+Wall of Bone
+Level: 5
+Duration: 6 turns per level
+Range: 60'
+Forms a wall of bones 4' thick and 1000 square feet of surface area.  The
+bones bite and claw for d6 damage per round to any living being in reach.  The
+caster may open (and close) a passage through the wall. Likewise a passage may
+be forced by "turning" 12HD undead.  The bones will rapidly turn to dust at
+end of duration
+
+Zombie Servitor
+Level: 2
+Duration: 1 turn per level
+Range: Touch
+Reanimates a single corpse as a zombie under the caster's control as |Animate
+Dead|_.
+
+Zone of Sinister Stillness
+Level: 3
+Duration: Permanent
+Range: 60'
+Enchants area with an unsettling air of silence. Beings within its area
+will have the feeling that any sound they make is disturbing something which
+is better left in peace. Inside the zone fear effects are at -2 to resist,
+morale boosting effects cannot function, and various audible and sound based
+effects are diminished.
+
+Zone of Weakness
+Level: 4
+Duration: Permanent
+Range: 60'
+Enchants area with a chill that drains strength. Living creatures within the
+zone are affected by a crippling weakness, reducing STR to 1/3.
+
+Zone of Creeping Terror
+Level: 5
+Duration: Permanent
+Range: 60'
+Enchants area with an atmosphere of dread. Living creatures within the zone
+must make a save every turn or be overcome with terror and the desire to leave
+the area as soon as possible.
+
+Zone of Death
+Level: 6
+Duration: Permanent
+Range: 60'
+Enchants area to be inimical to life. Living creatures within the zone
+take 1d6 points of damage per round. A zone of death is often littered with
+corpses of its victims.
+
+##Summon Familiar
+##Level: 1
+##Duration: See description of magic-user spell
+##Range: 10' per level
+##This spell works in basically the same way as the magic-user spell, with
+##several differences. The same types of creatures may respond to the
+##spell, but in the case of a necromancer they are often reanimated
+##corpses – an undead cat or raven, for example. Necromancers casting
+##this spell may also summon creatures such as an unusually large spider
+##or centipede.
+##The probability of a special familiar remains at 5%, but only an imp or
+##quasit will respond to this spell.

@@ -1,0 +1,303 @@
+Detect Magic
+Level: 1
+Duration: Permanent
+Range: Touch
+Draw pentagram, place item within (caster may not touch it), rub live blessed
+chicken(5sp) on object, chop chicken head off and watch it run around.  If it
+falls onto its left side item is magical, amount of blood equals power of
+item. Those very gifted with divination or long experienced can divine
+specific abilities of item by evaluating the pattern of blood left by chicken
+(caster level squared + d100 >= 100).  Other sacrifices may be more effective,
+less effective, or dangerous.  Chickens work so people keep using them.  Also,
+they taste good roasted up afterwards.
+
+**Warning:** Be ready for what evil and/or cursed items will do to your
+chicken.
+
+Summon Familiar
+Level: 1
+Duration: Permanent
+Range: Self
+Expend caster's level squared pawns of Viz.
+Caster must also permanently sacrifice 1 point from a physical ability (STR,
+DEX, CON). In turn the caster gains 1HD, some minor abilities based on type of
+familiar attracted, and the loyal companionship of a little buddy.
+Common familiars include; Bat, Cat, Hawk, Lizard, Owl, Raven, Toad, Weasel.
+Animal familiars are more intelligent than ordinary animals, and may
+communicate empathetically with caster. They have AC16, 1 HD(d4) per two
+caster levels, and save as master.  There is a chance (d20 + caster level >=
+20) that an extraordinary familiar will be attracted such as; brownie, imp,
+    pseudo-dragon, or quasit.
+The death of familiar is traumatic. The owner will lose 1HD, be reduced to
+0 HP and be stunned for several rounds.  If a familiar is slain or dismissed
+a new one may not be summoned for 333 days.
+
+Symbiotic Familiar
+Level: 1
+Duration: Permanent
+Range: Self
+As |Summon Familiar|_ but causes a familiar to grow within the caster's body.
+Alternatively allows an existing familiar to meld with the caster's body,
+giving it the ability to conceal itself within the caster's own flesh.
+A symbiotic familiar is able to freely enter and leave the caster's body.
+When the caster takes damage while in symbiosis with a familiar every 4th
+point will be inflicted on the familiar.
+================= ==========================================
+Symbiot Familiar  Effect
+================= ==========================================
+Mimosa            sensitivity to vibrations in 60'
+Deadly Nightshade +2 to saves vs poisons
+Blue mold         immunity to fungal or mold spores
+Yellow mold       |Spore Cloud|_ 1/day
+Toadstools        see invisible fey
+Fly Agaric        |Summon Swarm|_ 1/day
+================= ==========================================
+
+Illusionary Script
+Level: 1
+Duration: Permanent
+Range: Touch
+Expend 1 pawn of Viz.
+The script appears to be some form of foreign or magical writing.  Only the
+people designated by the caster at the time of the casting are able to read
+the writing; it is unintelligible to any other being, although an illusionist
+recognizes it as illusory script.
+
+Explosive Runes
+Level: 2
+Duration: Until triggered
+Range: Touch
+Expend 4 pawns of Viz.
+Trace mystic runes upon a book, map, scroll, or similar object.  The runes
+detonate when read, dealing 4d6 points of damage in a 10' radius.  The
+reader suffers full damage, no save.  Anyone else in the area of effect may
+save 1/2. Unless magically protected from fire, the object on which the runes
+were written is obliterated.  The caster and any other beings specifically
+instructed can read the protected writing without triggering the runes.
+A magic-user has a 10% chance per level of detecting the runes, and if
+detected may bypass them with same chance as dispelling magic.  Failure sets
+off runes.
+
+Magic Mouth
+Level: 2
+Duration: Special
+Range: 30'
+Expend 4 pawns of Viz.
+Imbues object with an enchanted mouth that suddenly appears and speaks its
+message the next time a specified event occurs. The message, which must be
+thirty or fewer words long, can be in any language known by the caster.
+
+Fire Trap
+Level: 4
+Duration: Until triggered
+Range: Touch
+Expend 16 pawns of Viz.
+Wards any object that can be opened and closed.  When someone other than the
+caster opens the object, flames explode in a 5' radius. Dealing 6d6 points of
+fire damage. The opener suffers full damage, others may save for 1/2.
+The item protected by the trap is not harmed by this explosion.  Fire Trap is
+hard to detect and disable. |Knock|_ does not bypass it. All other attempts to
+remove the trap are at half, and failure triggers the trap.
+
+Ritual Curse
+Level: 4
+Duration: Until Removed
+Range: Special
+Expend 16 pawns of Viz.
+Using something personal (hair, cloths, etc) the caster may curse a target.
+Curses have varied effects.
+
+Instant Summons
+Level: 4
+Duration: Instantaneous
+Range: Infinite
+16 pawns of Viz and 1000sp gem.
+The caster calls a previously prepared nonliving item from virtually any
+location directly to his hand.  Casting Instant Summons places a magical mark
+on the item and magically and invisibly inscribes the name of the item on the
+prepared gem. Thereafter, the caster can summon the item (and crush the gem)
+by speaking a special word.  Only the caster can use the gem in this way.  The
+item can be summoned from another plane.
+
+Mnemonic Enhancer
+Level: 5
+Duration: Instantaneous
+Range: Self
+Expend 25 pawns of Viz.
+Caster regains previously cast spells without the need for rest. Up to
+3 levels in any combination of spells the caster had previously memorized.
+
+Summon Elemental
+Level: 5
+Duration: Permanent until banished
+Range: 120'
+Expend 25 pawns of Viz.
+Summons and binds an elemental which must follow the caster's commands,
+including the command to return to its home plane. But, the elemental obeys
+the caster for only as long as the caster maintains concentration; and if the
+caster ceases to concentrate, even for a moment, the elemental is released and
+will get medieval all over its former master.
+
+Secret Chest
+Level: 5
+Duration: Permanent until lost ;)
+Range: Special
+Expend 25 pawns of Viz and 5000sp to construct fancy chest.
+Hides a special chest on another plane of existence.  The caster may retrieve
+(and re-hide) the chest at will.  When summoned it appears next to him.
+
+Simulacrum
+Level: 5
+Duration: Permanent
+Range: 0
+Expend 25 pawns of Viz.
+Creates a pseudo-duplicate of any creature out of snow and ice form, and some
+piece of the creature to be duplicated (hair, nail, or the like) must be
+placed inside the snow or ice. The simulacrum appears to be the same as the
+original, but it has only one-half of the real creature's hit points. The
+duplicate has a faulty memory of the original's life, but will remember most
+details 30% of the time. At all times the simulacrum remains under the
+caster's absolute command. Although, no special telepathic link exists.  If
+destroyed, a simulacrum reverts to snow and ice.  A simulacrum will radiate
+magic and |True Seeing|_ will reveal it for what it is.
+
+Contact Other Plane
+Level: 6
+Duration: Special
+Range: Self
+Expend 36 pawns of Viz.
+The caster creates a mental contact with the planes, forces, powers, and
+geometries of the beyond, in order to gain answers.  The caster must concentrate
+on maintaining the ritual in order to ask questions and receive answers at the
+rate of one per round.  Questions are answered with "yes", "no", "maybe",
+"never", "irrelevant", or some other one-word answer.
+The greater the number of questions asked the deeper into the planes of
+existence the caster delves.  The depth determines chance that the knowledge
+is available at that level, the chance of receiving a correct answer, and the
+chance that the caster will become temporarily insane from the experience.
+Temporary insanity lasts for as many weeks as the “number” of the plane where
+the caster's sanity failed… or perhaps was deliberately removed.  The base
+chance indicated on the table is reduced by 1 for every level the caster is
+above 9.
+======= ======= ======== =============
+???     d8 Know d12 True d20 Insanity
+======= ======= ======== =============
+**<=3** 7-8     9-12     1,   3 wks
+**4**   6-8     7-12     1-2, 4 wks
+**5**   5-8     5-12     1-4, 5 wks
+**6**   4-8     3-12     1-6, 6 wks
+**7**   3-8     3-12     1-8, 7 wks
+**8**   2-8     2-12     1-10, 8 wks
+**9**   2-8     2-12     1-11, 9 wks
+======= ======= ======== =============
+
+Legend Lore
+Level: 6
+Duration: Special
+Range: Self
+Expend 36 pawns of Viz.
+Legend lore reveals legends about an important person, place, or thing.  If
+the person or thing is at hand, or if the caster is in the place in question,
+the casting time is d8 hours. If the caster has detailed information on the
+target the casting time is d10 days.  Otherwise it takes d100 days. During the
+casting, the caster cannot engage in other than routine activities: eating,
+sleeping, and so forth.  If the person, place, or thing is not of legendary
+importance, no information is gained.
+
+Spiritwrack
+Level: 6
+Duration: Special
+Range: 60'
+Expend 36 pawns of Viz and gems, see below.
+By using the blood of a demon or devil combined with powdered gems equal to
+100sp per HD of the intended victim the caster scribes a scroll used to
+torture an infernal being, powerful vampire or lich. No save if the target's
+name is known.
+
+When the scroll is read, the victim is held in place and can take no actions.
+After 1 turn, the victim is in absolute agony and loses 1 hp per HD. After
+2 turns, it loses half its HP. One more turn and it is propelled back to its
+home plane, imprisoned there for 1 year per caster level.  This spell is often
+used to extort something from its victim, and may be stopped at any time short
+of imprisonment.
+
+Summon Weather
+Level: 6
+Duration: 4d12 hours
+Range: several miles
+Expend 36 pawns of Viz.
+As Zealot Spell |Control Weather|_.
+
+Summon Demon
+Level: 7
+Duration: Special
+Range: 10'
+Expend 666 pawns of Viz.
+This complicated ritual requires a circle of protection for the caster, and
+a pentacle-bound area of imprisonment for the demon to be constructed with
+various magical markings and candles.  The summoning takes 1 turn per HD of
+the demon. Demons are allowed a save to resist the summoning.  The Summon
+Demon spell creates a binding pact on any agreement made between demon and
+caster.  After any service is performed, the demon is propelled back to its
+home plane. There is a base 5% chance that the bargaining is grossly
+mishandled, setting the demon loose to wreak vengeance on the caster. This
+chance is lowered by 1% per caster level above 15.
+
+Trap the Soul
+Level: 7
+Duration: Permanent
+Range: 10'
+Expend 49 pawns of Viz and a gem, see below.
+Forces a creature's life force (and its material body) into a gem. Which holds
+the trapped entity until the gem is broken, releasing the life force  and
+allowing the material body to reform.  Requires gem of at least 1,000sp value
+per HD of the creature to be trapped. The trap can be triggered in
+one of two ways.
+**Spell Completion:** completed by speaking its final word as a standard
+action as if one were casting a regular spell. Save negates and shatters the
+gem.
+**Trigger Object:** The second method is far more insidious.  Both the
+creature's name and the trigger word must be inscribed on the trigger object.
+As soon as the target picks up or accepts the trigger object, its life force
+is automatically transferred to the gem without the benefit of a saving throw.
+
+Astral Projection
+Level: 7
+Duration: Special
+Range: Touch
+Expend pawns of Viz equal to the square of each target's level.
+Projects the astral forms of up to seven willing creatures linked in a circle at the
+time of the casting. Leaving their physical bodies behind in a state of
+suspended animation. Fellow travelers are dependent upon the caster and must
+accompany him at all times.  If something happens to the caster during the
+journey, his companions are stranded.  Since the astral plane touches upon
+other planes, the caster may enter them, forming a new physical body on the
+plane of existence entered.  While on the astral plane, the astral body is
+connected at all times to the physical body by a silvery cord.  When a second
+body is formed on a different plane, the incorporeal silvery cord remains
+invisibly attached to the new body. If the second body or the astral form is
+slain, the cord simply returns to the body where it rests on the material
+plane, thereby reviving it from its state of suspended animation.  If the cord
+is broken, the caster is killed, astrally and physically. Luckily, very few
+things can destroy a silver cord.  The projection lasts until the caster desires it
+to end, or until it is terminated by some outside means.
+
+##Permanency
+##Level: 8
+##Duration: Permanent
+##Range: Special
+##This spell makes certain other spells permanent. The caster can
+##make the following spells permanent in regard to himself:
+##comprehend languages, detect evil, detect invisibility, detect
+##magic, infravision, protection from evil, protection from normal
+##missiles, read magic, tongues, and unseen servant.
+##The desired spell is cast and then followed with the permanency
+##spell. These spells cannot be cast on other creatures. The
+##caster loses 1 point of CON. This application of
+##permanency can be dispelled only by a higher level caster
+##In addition to personal use, permanency can be used to make
+##the following spells permanent on another creature, or an object
+##(as appropriate): enlarge, fear, gust of wind, invisibility, magic
+##mouth, prismatic sphere, stinking cloud, wall of fire, wall of
+##force, and web. The latter application of this spell may be
+##dispelled by dispel magic used normally.

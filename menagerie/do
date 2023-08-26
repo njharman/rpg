@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DEST=~/tmp/menagerie.rst
+FONT=~/.fonts/:/usr/share/fonts/truetype/freefont/
+PDF=~/tmp/"G&G - Menagerie.pdf"
+
+SOURCES="data/swc.txt data/tohc.txt data/mon.txt data/mc.txt data/bm.txt data/vv.txt"
+SOURCES="data/swc.txt data/tohc.txt data/mon.txt"
+
+mkdir -p ~/gng/
+./sw_monsters.py $@ $SOURCES > $DEST
+
+#rst2pdf -e preprocess -s handbook --font-path=$FONT -o "$PDF" $DEST
+#rst2pdf -e preprocess -s menagerie.style --first-page-on-right --font-path=$FONT -o "$PDF" $DEST

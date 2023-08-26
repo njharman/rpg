@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DEST=~/gng
+
+./ll_spells.py Mage         > $DEST/hermeticist_spells.rst
+./ll_spells.py Vivimancer   > $DEST/vivimancer_spells.rst
+./ll_spells.py Necromancer  > $DEST/necromancer_spells.rst
+./ll_spells.py Illusionist  > $DEST/illusionist_spells.rst
+./ll_spells.py Elementalist > $DEST/elementalist_spells.rst
+
+./ll_spells.py > $DEST/grimoire.rst
+rst2pdf -e preprocess -s grimoire.style --first-page-on-right --font-path=/home/njharman/.fonts/:/usr/share/fonts/truetype/freefont/ -o $DEST/G\&G\ -\ Grimoire.pdf $DEST/grimoire.rst
+rm -f *build_temp $DEST/*.build_temp *.build_temp

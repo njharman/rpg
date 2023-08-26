@@ -1,0 +1,424 @@
+##II. New Monsters
+
+Alabaster Homunculus
+No. Enc.: 1 (1d4)
+Alignment: Neutral
+Movement: 90' (30')
+Armor Class: 3
+Hit Dice: 1 (6 hit points)
+Attacks: None
+Damage: None
+Save: MU3
+Morale: 12
+Hoard Class: None
+XP: 10
+Servants created by powerful magic-users, these creatures are small (1'
+high) alabaster figurines carved in a likeness of their master. They are
+carved so as to contain an internal cavity with a lid or stopper in the top
+of their heads. The cavity is filled with the master's blood, giving the
+creature a translucent pinkish tinge. This blood, in conjunction with
+magic spells, gives life to the homunculus.
+In its normal state, an alabaster homunculus is inanimate, preferring to
+stand absolutely still, as if a normal statue. In this state the creature is
+utterly defenceless, and can be killed if the blood is poured out from its
+body. However during the creation of the homunculus, the magic-user
+chooses a secret command word which can be used to activate it. When
+the command word is spoken (with unlimited range) the homunculus
+immediately awakens to do the caster's bidding. When activated, the
+caster has a vague telepathic link with the homunculus which allows him
+to give commands to the creature, and it in turn to silently give reports of
+its whereabouts. An activated homunculus is incredibly stealthy, having a
+5 in 6 chance of being undetected by observers. The homunculus is
+small and weak, and while able to carry small items (such as a scroll or a
+key), it is incapable of combat. A homunculus can remain active for up to
+24 hours per week.
+Alabaster homunculi are typically created as guardians of a magic-user's
+home, as they can be contacted at any distance and be used to keep an
+eye on the place while the caster is away. They are also sometimes
+useful in emergency situations, as an aide to a magic-user who is
+endangered in his home. These homunculi, when inactive, usually stand
+in a secret location, where they are unlikely to be found or disturbed.
+
+Death Cap, Giant
+No. Enc.: 1d8 (1d8)
+Alignment: Neutral
+Movement: 0
+Armor Class: 7
+Hit Dice: 2
+Attacks: None
+Damage: None
+Save: F2
+Morale: 12
+Hoard Class: VII
+XP: 38
+Giant death caps are pale greenish mushrooms growing up to 6' in
+height. They are immobile and have no form of attack, but emanate a
+sinister charm which entices creatures coming within 30' to approach
+the fungus and eat of their flesh. A saving throw versus spells is allowed
+to resist the charm. The mushrooms' flesh contains a potent poison,
+causing death within 1d6 rounds unless a successful saving throw is
+made.
+The ground around giant death caps is often littered with the mycelium-
+riddled remains of previous victims, which may conceal treasure.
+
+##Elementals
+##==========
+##In addition to the planes composed of the four classical elements (fire,
+##air, earth & water) and the elementals which dwell there, a number of
+##other elemental planes exist which are in turn inhabited by their own
+##unique elementals. A selection of such creatures is detailed here.
+##The exact nature of the cosmological connection between the classical
+##elemental planes and these new planes is left to the Referee to
+##decide. It could be that they are simply lesser, or lesser-known, elemental
+##planes, or they could alternatively be viewed as sub-planes which are
+##formed where two of the classical elemental planes meet. For example
+##the plane of lava might be seen as an intersection between the planes of
+##fire and earth.
+
+Ash Frost
+No. Enc.: 1 (1) 1 (1)
+Alignment: Neutral Neutral
+Movement: 120' (40') 120' (40')
+Armor Class: 2/0/-2 2/0/-2
+Hit Dice: 8/12/16 8/12/16
+Attacks: 1 1
+Damage: 1d8 or 2d8 or 3d8 1d8 or 2d8 or 3d8
+Save: F8 or F12 or F16 F8 or F12 or F16
+Morale: 10 10
+Hoard Class: None None
+XP: 1,570/2,800/3,300 1,570/2,800/3,300
+
+Ash Elementals: Ash elementals appear as a creeping mass of black ash
+and smoke. For every hit die possessed they are 2' in diameter and 1/2'
+high. Their attacks cause damage by desiccation and choking. Anyone
+within 20' of an ash elemental must save versus poison or suffer -2 to
+attack rolls due to the blinding smoke. The touch of an ash elemental is
+toxic to plants – normal plants wither and die, while plant-like monsters
+automatically suffer 1d8 hit points damage per round.
+
+Frost Elementals: Frost elementals appear as giant humanoids made of
+frost and ice, and are 2' high for every hit die possessed. They freeze
+water on touch – up to 100 square feet per round, up to a depth of 6
+inches. When in contact with snow or ice, a frost elemental regenerates
+1d6 hit points per round. They suffer half damage from cold based
+attacks, and double damage from fire.
+
+Lava Mud
+No. Enc.: 1 (1) 1 (1)
+Alignment: Neutral Neutral
+Movement: 120' (40') 90' (30')
+Armor Class: 2/0/-2 2/0/-2
+Hit Dice: 8/12/16 8/12/16
+Attacks: 1 1
+Damage: 1d8 or 2d8 or 3d8 1d8 or 2d8 or 3d8
+Save: F8 or F12 or F16 F8 or F12 or F16
+Morale: 10 10
+Hoard Class: None None
+XP: 1,570/2,800/3,300 1,570/2,800/3,300
+
+Lava Elementals: Lava elementals appear as giant, roughly-shaped
+humanoids made of magma and volcanic rock. They are 2' high for
+every hit die possessed. Lava elementals are surrounded by a 20' radius
+area of searing heat – causing metals to heat up. Upon the second round
+within range, all characters using metallic weapons or armour suffer 1d4
+hit points damage. On the 3rd and subsequent rounds in the creature's
+presence, metal using characters suffer 2d4 hit points damage and
+others suffer 1d4 hit points damage. Any wooden objects touching a
+lava elemental burst into flame.
+
+Mud Elementals: Mud elementals appear as a seething slimy mass of
+ooze and silt. For every hit die possessed they are 2' in diameter and
+1/2' high. They attack by lashing out with sticky waves of goo,
+attempting to drag victims into their ooze. A target which is successfully
+hit by a mud elemental will be pulled into its mass and automatically
+suffer smothering damage each round. Mud elementals can smother any
+number of victims, but can only make an attack against one new target
+per round.
+A mud elemental's form is completely mutable, allowing it to move
+through very small spaces such as the gap beneath a door. They are
+equally at home on land or in water.
+
+Steam
+No. Enc.: 1 (1)
+Alignment: Neutral
+Movement: 180' (60') – flying
+Armor Class: 2/0/-2
+Hit Dice: 8/12/16
+Attacks: 1
+Damage: 1d8 or 2d8 or 3d8
+Save: F8 or F12 or F16
+Morale: 10
+Hoard Class: None
+XP: 1,570/2,800/3,300
+
+Steam Elementals: Steam elementals appear as an amorphous cloud of
+searing steam approximately 2' in diameter per hit die. They attack by
+condensing their form and enveloping a target, causing damage by
+burning. The creature's heat is such that it kills any normal plants or
+insects it comes into contact with, and causes 1d6 hit points damage to
+all creatures within 20'.
+
+Air / Earth Elementines
+No. Enc.: 1 (1) 1 (1)
+Alignment: Neutral Neutral
+Movement: 120' (40') 120' (40')
+Armor Class: 4/2 4/2
+Hit Dice: 1/3 1/3
+Attacks: 1 1
+Damage: Special – see below Special – see below
+Save: F1 or F3 F1 or F3
+Morale: 10 10
+Hoard Class: None None
+XP: 10/50 10/50
+
+Fire Water Elementines
+No. Enc.: 1 (1) 1 (1)
+Alignment: Neutral Neutral
+Movement: 120' (40') 90' (30')
+Armor Class: 4/2 4/2
+Hit Dice: 1/3 1/3
+Attacks: 1 1
+Damage: 1d4/2d4 1-2/1d6
+Save: F1 or F3 F1 or F3
+Morale: 10 10
+Hoard Class: None None
+XP: 10/50 10/50
+Elementines are semi-intelligent beings made of pure elemental matter of
+one kind or another. They are native to the elemental planes, but can be
+summoned by certain spells. Elementines can only be harmed by magic
+and magical weapons.
+There are two different power levels of elementines, and the type
+present will be determined by the spell used to summon them. Lesser
+elementines have AC 4, HD 1 and are generally around 2' in diameter,
+whereas greater elementines have AC 2, HD 3 and are around 5' in
+diameter.
+
+Air Elementines: Air elementines are formed of powerful wind vortices,
+and are usually only visible by the dust which they stir up as they move.
+They 'attack' foes by surrounding them with their chaotic air currents,
+not causing any damage but potentially distracting and confusing the
+target. A creature successfully attacked by an air elementine suffers -2 to
+its attacks due to the distraction, and cannot cast spells or use missile
+weapons. These effects last for one round. A creature attacked by a
+greater air elementine must also make a save versus paralysis or be
+stunned for 1d4 rounds.
+
+Earth Elementines: Earth elementines can only manifest within a large
+body of stone or earth – usually the ground. They can move within this
+earth medium without being noticed (except by detect magic), and attack
+by disrupting the ground beneath an opponent's feet. The attack does
+not cause any damage, but the target is usually knocked over and is
+stunned for one round. Attacks by greater earth elementines cause the
+target to be stunned for 1 to 3 rounds.
+
+Fire Elementines: Fire elementines appear as a sphere of flame. The
+creature attacks simply by touching an opponent, causing damage and
+the ignition of flammable materials.
+
+Water Elementines: Water elementines appear as a spherical or snake-
+like formation in a body of water, and can only be summoned where a
+sufficient quantity of water exists – at least a small pool. They cannot
+leave the body of water from which they are formed. They attack by
+overwhelming opponents, causing damage by drowning. Creatures
+which can breathe water are unaffected by a water elementine's attacks,
+but fire-based creatures suffer double damage.
+
+Flame Terror
+No. Enc.: 1 (2–8)
+Alignment: Neutral (Evil)
+Movement: 150' (40')
+Armor Class: 3
+Hit Dice: 4+4
+Attacks: 1 (flame gout)
+Damage: 1d10
+Save: F4
+Morale: 10
+Hoard Class: None
+XP: 290
+Flame terrors are evil creatures native to the plane of fire, where they are
+not uncommon. They are occasionally summoned to the material plane
+by magic-users. They take one of several forms: a raging column of fire,
+a humanoid with flames in place of legs, or a bronze statue wreathed in
+flames.
+In combat flame terrors have the ability to blink, as per the spell. No fire-
+based or fire-affecting spells can function within 20' of a flame terror.
+
+Fly Agaric, Monstrous
+No. Enc.: 1 (1–4)
+Alignment: Neutral
+Movement: 0
+Armor Class: 7
+Hit Dice: 3
+Attacks: Spore cloud
+Damage: See below
+Save: F3
+Morale: 12
+Hoard Class: None
+XP: 80
+The “toadstools" of folklore, these giant red & white spotted fungi stand
+up to 6' tall. While they have no form of direct attack, they present two
+dangers to adventurers. Firstly, they are typically host to a seething
+swarm of flies and maggots (see the Insect swarm monster in the
+Referee book). Secondly, anyone coming within 5' of a
+monstrous fly agaric must save versus poison or be affected by the spell
+confusion, due to the hallucinogenic effects of the mushroom’s spores.
+
+Fluid Beast
+No. Enc.: 1–3 (2–5)
+Alignment: Neutral (Evil)
+Movement: 60' (20') / 180' (60') – swimming
+Armor Class: 5
+Hit Dice: 6+6
+Attacks: 3 (2 jets, slam)
+Damage: 1d4/1d4/4d4
+Save: F6
+Morale: 10
+Hoard Class: None
+XP: 680
+Fluid beasts are evil creatures native to the plane of water, but are
+sometimes encountered on the material plane if summoned by magic.
+They have several possible forms, which they can switch between at will:
+a fountain or pool of water, a green-tinged cloud in a body of water, or a
+gelatinous blob riddled with pipes and tentacles.
+On land they attack by expelling high pressured water jets, effective at
+up to 10' away, and having a 1 in 6 chance of blinding victims for 1d6
+rounds. In the water their attack is deadlier, as they use their water jets to
+propel their huge bulk into their victims in a violent slamming attack.
+No water-based or water-affecting spells can function within 20' of a
+fluid beast.
+
+Goblin, Fey
+No. Enc.: 2d4 (6d10)
+Alignment: Neutral or Chaotic
+Movement: 60' (20')
+Armor Class: 6
+Hit Dice: 1
+Attacks: 1 (weapon)
+Damage: 1d6 or weapon
+Save: MU1
+Morale: 7
+Hoard Class: III (XX)
+XP: 16
+Cousins of normal goblins, fey goblins dwell in mysterious dimensions
+which exist in parallel to the physical world. Crossover points sometimes
+exist between the two dimensions, allowing those versed in their use to
+travel between worlds.
+Their appearance is similar to that of normal goblins: 3' tall, with red or
+yellow eyes, and orange tinged skin. However, fey goblins, even
+members of the same tribe, vary wildly in form, no two looking alike.
+Their facial features may be extremely distorted, with huge noses,
+mouths, ears or eyes. Odd features such as giant hands, or extremely
+long arms or fingers are not uncommon. Likewise they typically dress in
+a bizarre hodgepodge of styles, often combining various types of armour
+piecemeal.
+Fey goblins are naturally magical, and gain a +4 bonus to saving throws
+against illusions or mind-affecting magic. 1 in 4 fey goblins additionally
+has one of the following abilities, usable once per day: dimension leap or
+limited invisibility (as a fey elf), ray of fire / cold (as an elementalist),
+color spray or wall of vapor (as an illusionist).
+Their organisation is similar to that of normal goblins, including the use
+of dire wolves as mounts and the presence of a goblin king and
+bodyguards. Fey goblin kings always know two of the magical abilities
+listed above.
+
+Leprotic Dead
+No. Enc.: 1d6 (2d6)
+Alignment: Chaotic
+Movement: 90' (30')
+Armor Class: 6
+Hit Dice: 3
+Attacks: 2
+Damage: 1d6 + disease
+Save: F 3
+Morale: 12
+Hoard Class: None
+XP: 80
+Swathed in loose rags or bandages, the flesh of these undead monsters
+can be seen to crawl and seethe. Their flesh is in a strange state between
+life and death – at once riddled with disease and virulently alive.
+Each round of combat, leprotic dead regenerate two hit points. Severed
+limbs can be reattached, and even fatal damage taking he creature below
+0hp can be regenerated. The only way they can be permanently killed is
+by fire.
+In melee the leprotic dead attack with their fists. Each successful hit
+carries with it the risk of leprosy infection. The target must save versus
+poison, with a +3 bonus, or contract the disease. Infected victims suffer a
+loss of 2 points of CHA per month, dying when CHA reaches 0. Those
+who die from the disease will themselves become leprotic dead.
+Although they hoard and carry no treasure themselves, leprotic dead are
+often found as guardians of ancient treasure troves.
+
+Soil Fiend
+No. Enc.: 1 (2–5)
+Alignment: Neutral (Evil)
+Movement: 120' (40') / 30' (10') – burrowing
+Armor Class: 4
+Hit Dice: 5+5
+Attacks: 2 (claws)
+Damage: 1d8/1d8
+Save: F5
+Morale: 10
+Hoard Class: None
+XP: 860
+Soil fiends are evil creatures native to the plane of earth, where they live
+in labyrinthine burrows. They are occasionally encountered on the
+material plane when summoned by magic. Soil fiends usually appear as
+swine-like beasts with a grinning skull for a head and a back covered
+with sharp spines. They may also change into a rough humanoid form
+of slimy, lumpy clay.
+Soil fiends are able to meld into bare earth or stone, leaving only a vague
+moist outline. They can then leap suddenly to attack, surprising on a roll
+of 1–5.
+In combat, if a victim is successfully attacked by both the fiend's claws in
+one round, then the creature manages to cling onto the target. Once a
+soil fiend is clinging to a target it automatically inflicts 2d6 damage per
+round, and cannot be removed unless killed.
+No earth-affecting magic can function within 40' of a soil fiend.
+
+Warp Fiend
+No. Enc.: 1 (1)
+Alignment: Chaotic (Evil)
+Movement: 120' (40')
+Armor Class: 1
+Hit Dice: 6
+Attacks: 1 (special)
+Damage: None
+Save: MU6
+Morale: 10
+Hoard Class: None
+XP: 1070
+A horror summoned from the bizarre spaces which exist between
+dimensions, the warp fiend's appearance defies comprehension, being
+constructed of impossible geometrical forms and textures. Merely looking
+upon the creature is enough to trigger temporary madness – all viewing
+a warp fiend must save versus spells of be affected by the confusion
+spell.
+Warp fiends have no physical form of attack, but have several magical
+abilities which they use to cause mayhem. A warp fiend can use one of
+the following abilities once per round: conjure a 10' square wall of force,
+teleport one creature up to 50' (without error), dispel magic as a 6th
+level magic-user.
+
+Wind Horror
+No. Enc.: 1 (2–8)
+Alignment: Neutral (Evil)
+Movement: 30' (10') / 240' (80') – flying
+Armor Class: 2
+Hit Dice: 4
+Attacks: 1
+Damage: 3d4
+Save: F4
+Morale: 10
+Hoard Class: None
+XP: 190
+Wind horrors are natives of the plane of air, but can be summoned to
+the material plane by magic-users. They are typically invisible, being only
+noticeable as a strong gust of wind. In this form they move at 80' per
+round. In order to attack a, wind horror must manifest into a dense
+cloud of fog filled with lashing tentacles and sinister eyes.
+The wind horror's attack takes the form of a blast of fine particles
+emitted from its whirlwind-like core. The blast can target a single
+creature up to 30' distant.
+Wind horrors are immune to normal weapons, and are only able to be
+harmed by spells or magical weapons of +2 or greater enchantment. All
+air-affecting magic fails within 50' of a wind horror.
