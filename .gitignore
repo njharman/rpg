@@ -10,6 +10,7 @@ eggs
 sdist
 develop-eggs
 .installed.cfg
+.python-version
 
 # Unit test / coverage reports
 .coverage
