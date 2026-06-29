@@ -64,7 +64,7 @@ def format_results(results):
 
 def rolld6():
     count = 10000
-    print '|    | {0} |'.format(' | '.join('{0:^5}'.format(i) for i in range(11)))
+    print('|    | {0} |'.format(' | '.join('{0:^5}'.format(i) for i in range(11))))
     for times in range(1, 11):
         results = defaultdict(int)
         for i in range(count):
@@ -74,21 +74,21 @@ def rolld6():
                 if roll == 6:
                     asix += 1
             results[asix] += 1
-        print '| {0:<2} | {1} |'.format(times, ' | '.join('{0:5.2f}'.format((results.get(i, 0) * 100.0) / count) for i in range(0, 11)))
+        print('| {0:<2} | {1} |'.format(times, ' | '.join('{0:5.2f}'.format((results.get(i, 0) * 100.0) / count) for i in range(0, 11))))
 
 
 if __name__ == '__main__':
     count = 100000
 
-    print '\nx in d6 chance: calculated'
-    print format_results(x_in_d6_calculated())
-    print '\nx in d6 chance: {0} iterations'.format(count)
-    print 'chance  1d6          2d6          3d6'
-    print x_in_d6_multiple_d6(count)
+    print('\nx in d6 chance: calculated')
+    print(format_results(x_in_d6_calculated()))
+    print('\nx in d6 chance: {0} iterations'.format(count))
+    print('chance  1d6          2d6          3d6')
+    print(x_in_d6_multiple_d6(count))
 
-    print '\nd20 + stat >= 20: {0} iterations'.format(count)
-    print format_results(stat_testor(count, lambda stat: stat + d20() >= 20))
-    print '\nd20 + stat > 20: {0} iterations'.format(count)
-    print format_results(stat_testor(count, lambda stat: stat + d20() > 20))
-    print '\nd20 <= stat: {0} iterations'.format(count)
-    print format_results(stat_testor(count, lambda stat: d20() <= stat))
+    print('\nd20 + stat >= 20: {0} iterations'.format(count))
+    print(format_results(stat_testor(count, lambda stat: stat + d20() >= 20)))
+    print('\nd20 + stat > 20: {0} iterations'.format(count))
+    print(format_results(stat_testor(count, lambda stat: stat + d20() > 20)))
+    print('\nd20 <= stat: {0} iterations'.format(count))
+    print(format_results(stat_testor(count, lambda stat: d20() <= stat)))

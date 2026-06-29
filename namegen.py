@@ -120,11 +120,11 @@ def checkUnproductiveNonTerminals(nameGrammar):
     grammarProductive = []
     finished = False
     while not finished:
-        print "grammarProductive:"
-        print grammarProductive
-        print "grammarUnchecked:"
-        print grammarUnchecked
-        print
+        print("grammarProductive:")
+        print(grammarProductive)
+        print("grammarUnchecked:")
+        print(grammarUnchecked)
+        print()
         finished = True
         for rule, rhs in grammarUnchecked.items():
             matchNonTerminal = reNonTerminal.search(rhs)
@@ -186,7 +186,7 @@ def nameGen(nameGrammar):
 #errorStr = verifyGrammar(fooGrammar)
 # if errorStr:
 #    sys.exit(errorStr)
-# print nameGen(fooGrammar)
+# print(nameGen(fooGrammar))
 
 for i in range(10):
-    print nameGen(fooGrammar)
+    print(nameGen(fooGrammar))

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 '''Quick hack to compare d20 vs d24 vs d30 for D&D to-hit rolls.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
@@ -11,37 +12,37 @@ import die
 def print_summary(roll, count):
     stat = die.stats.Statistic(roll)
     stat.do_run(count)
-    print '%-4i %ss' % (count, roll)
+    print('%-4i %ss' % (count, roll))
     cumulative = 0.0
     count = float(count)
     for rolled, times in stat.bucket:
         percent = (times / count) * 100
         cumulative += percent
-        print '%5s -> %-5i %6.2f%% %6.2f%%' % (rolled, times, percent, cumulative),
+        print('%5s -> %-5i %6.2f%% %6.2f%%' % (rolled, times, percent, cumulative), end='')
         if rolled == stat.avr:
-            print ' "average"'
+            print(' "average"')
 
 
 def print_summaries(rolls, count):
     stats = list()
-    print '%-9i' % (count, ),
+    print('%-9i' % (count, ), end='')
     for roll in rolls:
         stat = die.stats.Statistic(roll)
         stat.do_run(count)
         stat.cumulative = 0.0
         stats.append(stat)
-        print '%-15s' % (str(roll), ),
-    print
+        print('%-15s' % (str(roll), ), end='')
+    print()
     count = float(count)
     for rolled in range(1, 21):
-        print '%4s -> ' % (rolled, ),
+        print('%4s -> ' % (rolled, ), end='')
         for stat in stats:
             try:
                 times = stat._bucket[rolled]
                 max = stat.bucket[-1][0]
                 if rolled == 20 and max > 20:
                     times += sum(stat._bucket[x] for x in range(21, max + 1))
-                    #print '\n', stat.roll, [(x, stat._bucket[x]) for x in range(21, len(stat._bucket)+1)]
+                    #print('\n', stat.roll, [(x, stat._bucket[x]) for x in range(21, len(stat._bucket)+1)])
                 percent = (times / count) * 100
                 stat.cumulative += percent
             except KeyError:
@@ -50,8 +51,8 @@ def print_summaries(rolls, count):
                 avr = 'a'
             else:
                 avr = ' '
-            print '%5.2f%% %6.2f%%%s' % (percent, stat.cumulative, avr, ),
-        print
+            print('%5.2f%% %6.2f%%%s' % (percent, stat.cumulative, avr, ), end='')
+        print()
 
 
 def add(mod):

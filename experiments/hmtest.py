@@ -188,7 +188,9 @@ class Combatant(object):
     @property
     def aggregate_averages(self):
         stats = self._calc_aggreagate_averages(self._aggregate_stats)
-        return 'hit/miss: %(hits_avg)i/%(misses_avg)i (%(percent_avg)0.1f%%), %(crits_avg)i/%(max_hit_avg)ihp crits/max, %(afumble_avg)i/%(dfumble_avg)i a/d fumbles, %(pdefense_avg)i/%(npdefense_avg)i p/n defenses, %(knockouts_avg)i/%(longest_ko_avg)i k/r/l' % stats
+        return ('''hit/miss: %(hits_avg)i/%(misses_avg)i (%(percent_avg)0.1f%%), %(crits_avg)i/%(max_hit_avg)ihp crits/max,'''
+          ''' %(afumble_avg)i/%(dfumble_avg)i a/d fumbles, %(pdefense_avg)i/%(npdefense_avg)i p/n defenses,'''
+          ''' %(knockouts_avg)i/%(longest_ko_avg)i k/r/l''') % stats
 
     def _calc_aggreagate_averages(self, aggregates):
         stats = defaultdict(int)
@@ -478,7 +480,7 @@ def fight_stats(a, b, func, count, play_by_play=False):
     knockouts = {a.name: 0, b.name: 0}
     foo = bubba(a)
     bar = bubba(b)
-    print '%s\n%svs\n%s' % (foo, ' ' * ((len(foo) - 2) / 2), bar)
+    print('%s\n%svs\n%s' % (foo, ' ' * ((len(foo) - 2) / 2), bar))
     for i in range(count):
         winner = func(a, b, play_by_play)
         if winner:
@@ -492,13 +494,13 @@ def fight_stats(a, b, func, count, play_by_play=False):
     pount = count / 100.0
     awins = wins[a.name] / 100.0
     bwins = wins[b.name] / 100.0
-    print '''%-12s %i/%0.1f%% wins (%0.1f%% by death, %0.1f%% by ko). Killed %4i and ko'd %4i times.''' % (a.name, wins[a.name], wins[a.name] / pount, deaths[b.name] / awins, knockouts[b.name] / awins, deaths[a.name], knockouts[a.name])
+    print('''%-12s %i/%0.1f%% wins (%0.1f%% by death, %0.1f%% by ko). Killed %4i and ko'd %4i times.''' % (a.name, wins[a.name], wins[a.name] / pount, deaths[b.name] / awins, knockouts[b.name] / awins, deaths[a.name], knockouts[a.name]))
     for line in a.aggregate_stats:
-        print ' ' * 12, line
-    print '''%-12s %i/%0.1f%% wins (%0.1f%% by death, %0.1f%% by ko). Killed %4i and ko'd %4i times.''' % (b.name, wins[b.name], wins[b.name] / pount, deaths[a.name] / bwins, knockouts[a.name] / bwins, deaths[b.name], knockouts[b.name])
+        print(' ' * 12, line)
+    print('''%-12s %i/%0.1f%% wins (%0.1f%% by death, %0.1f%% by ko). Killed %4i and ko'd %4i times.''' % (b.name, wins[b.name], wins[b.name] / pount, deaths[a.name] / bwins, knockouts[a.name] / bwins, deaths[b.name], knockouts[b.name]))
     for line in b.aggregate_stats:
-        print ' ' * 12, line
-    print ''
+        print(' ' * 12, line)
+    print()
     a.reset_stats()
     b.reset_stats()
 
@@ -543,7 +545,7 @@ def test_dieroll(die_func, count=100000):
 
 def calc_dieroll_results(bucket, count):
     count = float(count)
-    rolls = bucket.keys()
+    rolls = list(bucket.keys())
     rolls.sort()
     total = 0
     ptotal = 100
@@ -562,15 +564,15 @@ def calc_dieroll_results(bucket, count):
 
 def dieroll_average_n_max(roll, count=100000):
     rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
-    print roll.name, '%.2f' % avg, max
+    print(roll.name, '%.2f' % avg, max)
 
 
 def dieroll_detail(roll, count=100000):
     rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
-    print roll.name
+    print(roll.name)
     for roll in rolls:
-        print roll
-    print
+        print(roll)
+    print()
 
 
 

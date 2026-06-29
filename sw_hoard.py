@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 '''Generating a Random Treasure Hoard according to Sword & Wizardry Complete Rules.
 
 Quick, dirty, incomplete.  Changes from Swords & Wizardy include; gem & jewerly
@@ -364,12 +364,32 @@ def arms_n_armor(roll):
         '+3 %s' % melee_weapon(d20),
         '+3 shield',
         '+3 %s' % armor,
-        random.choice(('+1 blunt %(w)s that destroys undead', '+1 thrown %(w)s that returns to hand', '+1 %(w)s, extra attack', '%(w)s, +1, +2 vs. particular type of foe', '%(w)s, +1, +4 vs. particular type of foe', '%(w)s, +2, +3 vs. particular type of foe', '+4 %(w)s', '+5 %(w)s', 'Flaming %(w)s', 'Freezing %(w)s', 'Dancing %(w)s', 'Intelligent %(w)s')) % {'w': melee_weapon(d20)},
-        random.choice(('+4 %(a)s', '+4 shield', '+5 %(a)s', '+5 shield', '%(a)s of Arrow Deflection', 'Demonic %(a)s', 'Ethereal %(a)s', 'Fiery %(a)s')) % {'a': armor},
-        #][roll - 1]  # Zero indexed.
+        random.choice((
+            '+1 blunt %(w)s that destroys undead',
+            '+1 thrown %(w)s that returns to hand',
+            '+1 %(w)s, extra attack',
+            '%(w)s, +1, +2 vs. particular type of foe',
+            '%(w)s, +1, +4 vs. particular type of foe',
+            '%(w)s, +2, +3 vs. particular type of foe',
+            '+4 %(w)s',
+            '+5 %(w)s',
+            'Flaming %(w)s',
+            'Freezing %(w)s',
+            'Dancing %(w)s',
+            'Intelligent %(w)s')) % {'w': melee_weapon(d20)},
+        random.choice((
+            '+4 %(a)s',
+            '+4 shield',
+            '+5 %(a)s',
+            '+5 shield',
+            '%(a)s of Arrow Deflection',
+            'Demonic %(a)s',
+            'Ethereal %(a)s',
+            'Fiery %(a)s')) % {'a': armor},
         ][roll - 1]  # Zero indexed.
 
 
+# TODO: this numbers here seem off.
 def remarkable(roll):
     if roll in (1, 21, 22):
         return lesser_wand(d6)
@@ -387,6 +407,8 @@ def remarkable(roll):
         return greater_misc(d20)
     if roll == 45:
         return staves(d10)
+    # always return something
+    return lesser_misc(d20)
 
 
 def round_gem(gem):
@@ -436,7 +458,7 @@ def generate(amount):
     potions = list()
     scrolls = list()
     other = list()
-    for i in range(amount / 100):
+    for i in range(amount // 100):
         if d10() == 10:
             gp -= 100
             if d20() == 20:
@@ -453,7 +475,7 @@ def generate(amount):
                         lambda: d100() + 75,
                         lambda: d100() * 10,
                         ])())
-    for i in range(amount / 1000):
+    for i in range(amount // 1000):
         if d10() == 10:
             gp -= 1000
             if d20() == 20:
@@ -470,7 +492,7 @@ def generate(amount):
                         lambda: d6() * 300,
                         lambda: d100() * 100,
                         ])())
-    for i in range(amount / 5000):
+    for i in range(amount // 5000):
         if d10() == 10:
             gp -= 5000
             if d20() == 20:
@@ -490,25 +512,25 @@ def generate(amount):
     gems = round_gems(gems)
     potions = group_potions(potions)
     if len(potions) > 1:
-        print 'Potions of %s, and %s' % (', '.join(potions[:-1]), potions[-1])
+        print('Potions of %s, and %s' % (', '.join(potions[:-1]), potions[-1]))
     elif potions:
-        print 'Potion of %s' % potions[0]
+        print('Potion of %s' % potions[0])
     if scrolls:
         scrolls.sort()
-        print '\n'.join(scrolls)
+        print('\n'.join(scrolls))
     if other:
         other.sort()
-        print '\n'.join(other)
-    print '\nTotal monetary value: %i' % (gp + sum(gems))
+        print('\n'.join(other))
+    print('\nTotal monetary value: %i' % (gp + sum(gems)))
     if gp:
-        print 'Coins: %i gp' % gp
+        print('Coins: %i gp' % gp)
     if gems:
-        print 'Gems & Jewelry: %sgp' % 'gp, '.join(group_gems(gems))
+        print('Gems & Jewelry: %sgp' % 'gp, '.join(group_gems(gems)))
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print 'Usage:'
-        print '%s <gp value of hoard>' % sys.argv[0]
+        print('Usage:')
+        print('%s <gp value of hoard>' % sys.argv[0])
     else:
         generate(int(sys.argv[1]))

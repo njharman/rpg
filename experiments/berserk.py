@@ -39,14 +39,14 @@ def berserk(count, val):
 
 def out(text):
     #text = text.replace(' ', '&nbsp;')
-    print text
+    print(text)
 
 
 if __name__ == '__main__':
-        #print 'sustain ' + format_durations(sustain_berserk(count, wiz))
-        count = 10000
-        out('2d6 + mod >= value, 2 always fail, "rolled" {0} times.'.format(count))
-        out('            modifier')
-        out('value ' + '    '.join('{0:+2}'.format(r) for r in range(0, 10)))
-        for wiz in range(3, 19):
-            out(' {0:2}    '.format(wiz) + berserk(count, wiz))
+    # print('sustain ' + format_durations(sustain_berserk(count, wiz)))
+    count = 10000
+    out('2d6 + mod >= value, 2 always fail, "rolled" {0} times.'.format(count))
+    out('            modifier')
+    out('value ' + '    '.join('{0:+2}'.format(r) for r in range(0, 10)))
+    for wiz in range(3, 19):
+        out(' {0:2}    '.format(wiz) + berserk(count, wiz))

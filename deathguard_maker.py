@@ -151,7 +151,7 @@ Feats = AutoTable(
 
 def mod(stat):
     '''Stat mod'''
-    return (stat / 2) - 5
+    return (stat // 2) - 5
 
 
 class FighterType(object):
@@ -177,21 +177,21 @@ class FighterType(object):
         def stuff(text):
             return indent(text, indent_level + 1)
 
-        print self.type % (self.level), self.cr
-        print indent('Hits: %s' % ' / '.join(map(str, self.hitpoints)))
-        print indent('Move: %s' % (', '.join(self.moves)))
-        print indent('\n'.join(self.stats))
-        print indent(', '.join(self.saves))
-        print indent('AC: ' + ', '.join(self.armorclasses))
-        print indent('SD: ' + '; '.join(self.special_defenses))
-        print indent('Attacks: %s, %s' % (self.bab, self.grapple))
-        print stuff('\n'.join(self.attacks))
-        print indent('Powers:')
-        print stuff('\n'.join(self.powers))
-        print indent('Feats:')
-        print stuff('\n'.join(self.feats))
-        print indent('Equipment:')
-        print stuff('\n'.join(self.items))
+        print(self.type % (self.level), self.cr)
+        print(indent('Hits: %s' % ' / '.join(map(str, self.hitpoints))))
+        print(indent('Move: %s' % (', '.join(self.moves))))
+        print(indent('\n'.join(self.stats)))
+        print(indent(', '.join(self.saves)))
+        print(indent('AC: ' + ', '.join(self.armorclasses)))
+        print(indent('SD: ' + '; '.join(self.special_defenses)))
+        print(indent('Attacks: %s, %s' % (self.bab, self.grapple)))
+        print(stuff('\n'.join(self.attacks)))
+        print(indent('Powers:'))
+        print(stuff('\n'.join(self.powers)))
+        print(indent('Feats:'))
+        print(stuff('\n'.join(self.feats)))
+        print(indent('Equipment:'))
+        print(stuff('\n'.join(self.items)))
 
     def _get_DC_result(self, table):
         (save, thing) = table.get_result()
@@ -240,12 +240,12 @@ class FighterType(object):
 
     def _set_base_powers(self):
         cha_mod = mod(self.cha)
-        half_hd = self.level / 2
+        half_hd = self.level // 2
         self.powers = list()
         self.powers.insert(0, '''10' Darkness Despair(-1 actions) DC%i Will''' % (10 + half_hd + cha_mod))
         if self.spell_warped:
             self.powers.insert(0, '''Absorb Spell (+4 Str/Dex/Con, 10/energy, lvl*5 vitality, lvl*5' speed''')
-        for i in range(self.level / 5):
+        for i in range(self.level // 5):
             self.powers.append(self._get_DC_result(Power))
 
     def _set_base_magic(self):
@@ -336,8 +336,8 @@ class FighterType(object):
 
     @property
     def saves(self):
-        poor = self.level / 3
-        good = (self.level + 4) / 2
+        poor = self.level // 3
+        good = (self.level + 4) // 2
         fort = poor + mod(self.con) + mod(self.cha) + self.ring_bonus
         ref = poor + mod(self.dex) + mod(self.cha) + self.ring_bonus
         will = good + mod(self.wis) + mod(self.cha) + self.ring_bonus

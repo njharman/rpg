@@ -10,7 +10,10 @@ eggs
 sdist
 develop-eggs
 .installed.cfg
-.python-version
+.venv
+
+# is a symlink to root direcotry dice.py TODO: make this a proper package
+experiements/dice.py
 
 # Unit test / coverage reports
 .coverage
