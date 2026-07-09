@@ -37,7 +37,7 @@ def replace_quantity(text):
     if match is None:
         return 1, text
     dice, total = map(int, match.group(1).split('-'))
-    value = sum(random.randint(1, total / dice) for x in range(dice))
+    value = sum(random.randint(1, total // dice) for x in range(dice))
     return value, re.sub(r'(\d+-\d+)', lambda x: f'{value:,}', text)
 
 
@@ -50,20 +50,19 @@ def table(chart, roll=None):
         if roll <= val:
             if len(row) == 2:
                 return row[1]
-            else:
-                return row[1:]
+            return row[1:]
 
 
 def _2d8_potions(rules, roll=None):
-    things = list()
-    for i in range(random.randint(1, 4) + random.randint(1, 4)):
+    things = []
+    for _ in range(random.randint(1, 4) + random.randint(1, 4)):
         things.append(_potion(rules, roll))
     return ', '.join(things)
 
 
 def _d4_scrolls(rules, roll=None):
-    things = list()
-    for i in range(random.randint(1, 4)):
+    things = []
+    for _ in range(random.randint(1, 4)):
         things.append(_scroll(rules, roll))
     return ', '.join(things)
 
@@ -123,14 +122,11 @@ def _scroll(rules, roll=None):
     level d4+dungeon level
     """
     result = table(rules.scroll, roll)
-    if 'trap' == result.lower():
+    if result.lower() == 'trap':
         return f'Trapped Scroll  {table(rules.scroll_trap)}'
     if 'spell' in result.lower():
         caster = random.choice(['Cleric', 'Magic-user', 'Magic-user', 'Magic-user'])
-        spells = ', '.join(f'{c}x{x}' for c, _, x in reduce_groups(map(
-            lambda x: (1, 0, table(rules.scroll_levels)),
-            range(int(re.match(r'(\d+)', result).group(1))),
-            )))
+        spells = ', '.join(f'{c}x{x}' for c, _, x in reduce_groups((1, 0, table(rules.scroll_levels)) for x in range(int(re.match(r'(\d+)', result).group(1)))))
         return f'{caster} scroll {spells}'
     return f'Scroll of {result}'
 
@@ -145,10 +141,7 @@ def _wsr(rules, roll=None):
     if 'wand' in result.lower():
         charges = f' ({d12() + d12()} charges)'
     elif 'staff' in result.lower():
-        if 'Healing' in result or 'Snek' in result:
-            charges = ''
-        else:
-            charges = ' ({d12() + d12() + d12()} charges)'
+        charges = '' if 'Healing' in result or 'Snek' in result else ' ({d12() + d12() + d12()} charges)'
     elif 'rod' in result.lower():
         charges = f' ({d12()} charges)'
     return f'{result}{charges}'
@@ -157,11 +150,11 @@ def _wsr(rules, roll=None):
     if '*' in result:
         return result
     if 'wand' in result.lower():
-        charges = ' [6th, %i charges]' % random.randint(80 / div, 200 / div)
+        charges = f' [6th, {random.randint(80 // div, 200 // div)} charges]'
     elif 'staff' in result.lower():
-        charges = ' [8th, %i charges]' % random.randint(40 / div, 100 / div)
+        charges = f' [8th, {random.randint(40 // div, 100 // div)} charges]'
     elif 'rod' in result.lower():
-        charges = ' [%i charges]' % random.randint(15 / div, 25 / div)
+        charges = f' [{random.randint(15 // div, 25 // div)} charges]'
     return f'{result}{charges}'
 
 
@@ -180,30 +173,28 @@ class Treasures:
 
 class Jewelries(Treasures):
     def __init__(self, ruleset):
-        if ruleset == 'bx':
-            pass
-        elif ruleset == 'odd':
+        if ruleset == 'bx' or ruleset == 'odd':
             pass
         else:
             raise ValueError(f'Unknown ruleset [{ruleset}]')
 
     def _roll(self, count, group):
         """Roll up count pieces of jewlery, group ignored."""
-        for x in range(count):
+        for _x in range(count):
             value = (d6() + d6() + d6()) * 100
             if value >= 1800:
-                type = 'jewelry platinum and gems'
+                design = 'jewelry platinum and gems'
             elif value >= 1600:
-                type = 'jewelry gold with gems'
+                design = 'jewelry gold with gems'
             elif value >= 1200:
-                type = 'jewelry sivler with gems'
+                design = 'jewelry sivler with gems'
             elif value >= 1000:
-                type = 'jewelry wrought platinum'
+                design = 'jewelry wrought platinum'
             elif value >= 700:
-                type = 'jewelry wrought gold'
+                design = 'jewelry wrought gold'
             else:
-                type = 'jewelry wrought silver'
-            yield 1, value, type
+                design = 'jewelry wrought silver'
+            yield 1, value, design
 
 
 class Gems(Treasures):
@@ -236,12 +227,12 @@ class Gems(Treasures):
             [  # 1000 GP Gems (transparent)
                 'Emerald: Transparent deep green',  # Water Undead protection / control
                 'Ruby: Transparent crimson',  # Fire Good luck
-                'Sapphire: Transparent vivid blue',  # Air inteligence, boosts magic
+                'Sapphire: Transparent vivid blue',  # Air intelligence, boosts magic
                 ],
             [  # 5000 GP Gems
                 'Diamond: Transparent clear blue-white',
                 ],
-            ]  # noqa
+            ]
         self.unusual = [
             'Crystal Ball',
             'of Controlling Earth Elementals',
@@ -265,7 +256,7 @@ class Gems(Treasures):
         size = value = 0
         only_one = False  # Only one magical gem.
         for x in range(count):
-            # Roll in groups; but reset when larger, magical or valueable.
+            # Roll in groups; but reset when larger, magical or valuable.
             if x % group == 0 or size or value == 0 or value > 500:
                 roll = d100()
                 for i, v in enumerate(self.gem_value_chance):
@@ -348,18 +339,18 @@ class OddRules(Rules):
     jewelries = Jewelries('odd')
     gems = Gems('odd')
     TREASURE_TYPES = {
-        'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('gp', 35, '2000-12000'),  ('gems', 50, '6-36'),  ('jewelry', 50, '3-18'),  ('magic', 40, (_item, _item, _item))),  # noqa: E241
-        'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('gp', 25, '1000-3000'),   ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (_martial, ))),  # noqa: E241
-        'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (_item, _item))),  # noqa: E241
-        'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  ('gp', 60, '1000-6000'),   ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 20, (_item, _item, _potion))),  # noqa: E241
-        'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('gp', 25, '1000-8000'),   ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 30, (_item, _item, _item, _scroll))),  # noqa: E241
-        'f': (None,                     ('sp', 45, '2000-20000'),  ('gp', 45, '1000-12000'),  ('gems', 20, '2-24'),  ('jewelry', 20, '1-12'),  ('magic', 35, (_noweap, _noweap, _noweap, _potion, _scroll))),  # noqa: E241
-        'g': (None,                     None,                      ('gp', 75, '10000-40000'), ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 40, (_item, _item, _item, _item, _scroll))),  # noqa: E241
-        'h': (('cp', 25, '3000-24000'), ('sp', 75, '1000-100000'), ('gp', 75, '10000-60000'), ('gems', 50, '1-100'), ('jewelry', 50, '1-40'),  ('magic', 20, (_item, _item, _item, _item, _potion, _scroll))),  # noqa: E241
-        'i': (None,                     None,                      None,                      ('gems', 50, '2-16'),  ('jewelry', 50, '2-16'),  ('magic', 20, (_item, ))),  # noqa: E241
-        'o': (('cp', 25, '1000-4000'),  ('sp', 20, '1000-3000'),   None,                      None,                  None,                     None),  # noqa: E241
-        'q': (None,                     None,                      None,                      ('gems', 50, '1-4'),   None,                     None),  # noqa: E241
-        's': (None,                     None,                      None,                      None,                  None,                     ('magic', 40, (_2d8_potions, ))),  # noqa: E241
+        'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('gp', 35, '2000-12000'),  ('gems', 50, '6-36'),  ('jewelry', 50, '3-18'),  ('magic', 40, (_item, _item, _item))),
+        'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('gp', 25, '1000-3000'),   ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (_martial, ))),
+        'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (_item, _item))),
+        'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  ('gp', 60, '1000-6000'),   ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 20, (_item, _item, _potion))),
+        'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('gp', 25, '1000-8000'),   ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 30, (_item, _item, _item, _scroll))),
+        'f': (None,                     ('sp', 45, '2000-20000'),  ('gp', 45, '1000-12000'),  ('gems', 20, '2-24'),  ('jewelry', 20, '1-12'),  ('magic', 35, (_noweap, _noweap, _noweap, _potion, _scroll))),
+        'g': (None,                     None,                      ('gp', 75, '10000-40000'), ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 40, (_item, _item, _item, _item, _scroll))),
+        'h': (('cp', 25, '3000-24000'), ('sp', 75, '1000-100000'), ('gp', 75, '10000-60000'), ('gems', 50, '1-100'), ('jewelry', 50, '1-40'),  ('magic', 20, (_item, _item, _item, _item, _potion, _scroll))),
+        'i': (None,                     None,                      None,                      ('gems', 50, '2-16'),  ('jewelry', 50, '2-16'),  ('magic', 20, (_item, ))),
+        'o': (('cp', 25, '1000-4000'),  ('sp', 20, '1000-3000'),   None,                      None,                  None,                     None),
+        'q': (None,                     None,                      None,                      ('gems', 50, '1-4'),   None,                     None),
+        's': (None,                     None,                      None,                      None,                  None,                     ('magic', 40, (_2d8_potions, ))),
         }
     item = [
         (20, 'Sword', _sword),  # Greyhawk
@@ -505,22 +496,22 @@ class BxRules(Rules):
     jewelries = Jewelries('bx')
     gems = Gems('bx')
     TREASURE_TYPES = {
-        'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('ep', 20, '1000-4000'),   ('gp', 35, '2000-12000'),  ('pp', 25, '1000-2000'),   ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 30, (_item, _item, _item))),  # noqa: E241
-        'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('ep', 25, '1000-4000'),   ('gp', 25, '1000-3000'),   None,                      ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (_martial, ))),  # noqa: E241
-        'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   ('ep', 10, '1000-4000'),   None,                      None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (_item, _item))),  # noqa: E241
-        'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  None,                      ('gp', 60, '1000-6000'),   None,                      ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 15, (_item, _item, _potion))),  # noqa: E241
-        'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('ep', 25, '1000-4000'),   ('gp', 25, '1000-8000'),   None,                      ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 25, (_item, _item, _item, _scroll))),  # noqa: E241
-        'f': (None,                     ('sp', 10, '2000-20000'),  ('ep', 20, '1000-8000'),   ('gp', 45, '1000-12000'),  ('pp', 30, '1000-3000'),   ('gems', 20, '2-24'),  ('jewelry', 10, '1-12'),  ('magic', 30, (_noweap, _noweap, _noweap, _potion, _scroll))),  # noqa: E241
-        'g': (None,                     None,                      None,                      ('gp', 50, '10000-40000'), ('pp', 50, '1000-6000'),   ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 35, (_item, _item, _item, _item, _scroll))),  # noqa: E241
-        'h': (('cp', 25, '3000-24000'), ('sp', 50, '1000-100000'), ('ep', 50, '10000-40000'), ('gp', 50, '10000-60000'), ('pp', 25, '5000-20000'),  ('gems', 50, '1-100'), ('jewelry', 50, '10-40'), ('magic', 15, (_item, _item, _item, _item, _potion, _scroll))),  # noqa: E241
-        'i': (None,                     None,                      None,                      None,                      ('pp', 30, '1000-8000'),   ('gems', 50, '2-12'),  ('jewelry', 50, '2-12'),  ('magic', 15, (_item, ))),  # noqa: E241
-        'j': (('cp', 25, '1000-4000'),  ('sp', 10, '1000-3000'),   None,                      None,                      None,                      None,                  None,                     None),  # noqa: E241
-        'k': (None,                     ('sp', 30, '1000-6000'),   ('ep', 10, '1000-2000'),   None,                      None,                      None,                  None,                     None),  # noqa: E241
-        'l': (None,                     None,                      None,                      None,                      None,                      ('gems', 50, '1-4'),   None,                     None),  # noqa: E241
-        'm': (None,                     None,                      None,                      ('gp', 40, '2000-8000'),   ('pp', 50, '5000-30000'),  ('gems', 55, '5-20'),  ('jewelry', 45, '2-12'),  None),  # noqa: E241
-        'o': (None,                     None,                      None,                      None,                      None,                      None,                  None,                     ('magic', 50, (_d4_scrolls, ))),  # noqa: E241
-        'u': (('cp', 10, '1-100'),      ('sp', 10, '1-100'),       None,                      ('gp', 5, '1-100'),        None,                      ('gems', 5, '1-4'),    ('jewelry', 5, '1-4'),    ('magic', 2, (_item, ))),  # noqa: E241
-        'v': (None,                     ('sp', 10, '1-100'),       ('ep', 10, '1-100'),       ('gp', 10, '1-100'),       ('pp', 5, '1-100'),        ('gems', 10, '1-4'),   ('jewelry', 10, '1-4'),   ('magic', 5, (_item, ))),  # noqa: E241
+        'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('ep', 20, '1000-4000'),   ('gp', 35, '2000-12000'),  ('pp', 25, '1000-2000'),   ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 30, (_item, _item, _item))),
+        'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('ep', 25, '1000-4000'),   ('gp', 25, '1000-3000'),   None,                      ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (_martial, ))),
+        'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   ('ep', 10, '1000-4000'),   None,                      None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (_item, _item))),
+        'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  None,                      ('gp', 60, '1000-6000'),   None,                      ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 15, (_item, _item, _potion))),
+        'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('ep', 25, '1000-4000'),   ('gp', 25, '1000-8000'),   None,                      ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 25, (_item, _item, _item, _scroll))),
+        'f': (None,                     ('sp', 10, '2000-20000'),  ('ep', 20, '1000-8000'),   ('gp', 45, '1000-12000'),  ('pp', 30, '1000-3000'),   ('gems', 20, '2-24'),  ('jewelry', 10, '1-12'),  ('magic', 30, (_noweap, _noweap, _noweap, _potion, _scroll))),
+        'g': (None,                     None,                      None,                      ('gp', 50, '10000-40000'), ('pp', 50, '1000-6000'),   ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 35, (_item, _item, _item, _item, _scroll))),
+        'h': (('cp', 25, '3000-24000'), ('sp', 50, '1000-100000'), ('ep', 50, '10000-40000'), ('gp', 50, '10000-60000'), ('pp', 25, '5000-20000'),  ('gems', 50, '1-100'), ('jewelry', 50, '10-40'), ('magic', 15, (_item, _item, _item, _item, _potion, _scroll))),
+        'i': (None,                     None,                      None,                      None,                      ('pp', 30, '1000-8000'),   ('gems', 50, '2-12'),  ('jewelry', 50, '2-12'),  ('magic', 15, (_item, ))),
+        'j': (('cp', 25, '1000-4000'),  ('sp', 10, '1000-3000'),   None,                      None,                      None,                      None,                  None,                     None),
+        'k': (None,                     ('sp', 30, '1000-6000'),   ('ep', 10, '1000-2000'),   None,                      None,                      None,                  None,                     None),
+        'l': (None,                     None,                      None,                      None,                      None,                      ('gems', 50, '1-4'),   None,                     None),
+        'm': (None,                     None,                      None,                      ('gp', 40, '2000-8000'),   ('pp', 50, '5000-30000'),  ('gems', 55, '5-20'),  ('jewelry', 45, '2-12'),  None),
+        'o': (None,                     None,                      None,                      None,                      None,                      None,                  None,                     ('magic', 50, (_d4_scrolls, ))),
+        'u': (('cp', 10, '1-100'),      ('sp', 10, '1-100'),       None,                      ('gp', 5, '1-100'),        None,                      ('gems', 5, '1-4'),    ('jewelry', 5, '1-4'),    ('magic', 2, (_item, ))),
+        'v': (None,                     ('sp', 10, '1-100'),       ('ep', 10, '1-100'),       ('gp', 10, '1-100'),       ('pp', 5, '1-100'),        ('gems', 10, '1-4'),   ('jewelry', 10, '1-4'),   ('magic', 5, (_item, ))),
         }
     item = [  # Expert
         (10, 'Armor', _armor),
@@ -577,7 +568,7 @@ class BxRules(Rules):
         # (11, 'Efreeti Bottle'),
         # (11, 'Elven Cloak and Boots'),
         # (11, 'Gauntlets of Ogre Power'),
-        # (11, 'Helm of Reading Languages'), # Intead of change alignment
+        # (11, 'Helm of Reading Languages'), # Instead of change alignment
         # (11, 'Helm of Telepathy'),
         # (11, 'Medallion of ESP'),
         # (11, 'Rope of Climbing'),
@@ -736,7 +727,7 @@ class BxRules(Rules):
         if ego is None:
             ego = d12()
         intelligent = d6() + 6
-        powers = list()
+        powers = []
         if intelligent >= 10:
             powers.append('speech')
         elif intelligent >= 7:
@@ -761,10 +752,7 @@ class BxRules(Rules):
                 extra += 1
             elif result == 'roll thrice':
                 extra += 2
-            elif result not in powers:
-                powers.append(result)
-                extra -= 1
-            elif '3x damge' in result or 'Heas as spell' in result:
+            elif result not in powers or '3x damge' in result or 'Heas as spell' in result:
                 powers.append(result)
                 extra -= 1
         return f'{alignment} {ego} Ego, {intelligent} Int, {", ".join(powers)}'
@@ -849,7 +837,7 @@ class BasicRules(BxRules):
         (4, 'Scarab of Protection'),  # Instead of Crystal Ball.
         (5, 'Elven Cloak and Boots'),
         (6, 'Gauntlets of Ogre Power'),
-        (7, 'Helm of Reading Languages'),  # Intead of change alignment.
+        (7, 'Helm of Reading Languages'),  # Instead of change alignment.
         (8, 'Helm of Telepathy'),
         (9, 'Medallion of ESP'),
         (10, 'Rope of Climbing'),
@@ -921,6 +909,7 @@ class AliasedGroup(click.Group):
             return rv
         if cmd_name == 'gems':
             return click.Group.get_command(self, ctx, 'gem')
+        return None
 
 
 @click.command(cls=AliasedGroup)
@@ -944,10 +933,7 @@ def cli(ctx, low_level, odd, roll):
 for name in ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'wsr'):
     def _inner(name=name):
         def func(ctx, count):
-            click.echo('\n'.join(f'{c} x {x}' for c, v, x in reduce_groups(map(
-                lambda x: (1, 0, globals()[f'_{name}'](ctx.obj['treasure'], ctx.obj['roll'])),
-                range(count),
-                ))))
+            click.echo('\n'.join(f'{c} x {x}' for c, v, x in reduce_groups((1, 0, globals()[f'_{name}'](ctx.obj['treasure'], ctx.obj['roll'])) for x in range(count))))
         func.__name__ = name
         func.__doc__ = 'Roll up ' + {
                 'wsr': 'wand, staff, rod.',
@@ -955,10 +941,10 @@ for name in ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'ws
                 'scroll': 'magic scrolls and maps.',
                 'potion': 'potioins.'}.get(name, f'magic {name}s.')
         return func
-    func = _inner()
-    func = click.pass_context(func)
-    func = click.argument('count', default=1, type=int)(func)
-    cli.command()(func)
+    subcommand = _inner()
+    subcommand = click.pass_context(subcommand)
+    subcommand = click.argument('count', default=1, type=int)(subcommand)
+    cli.command()(subcommand)
 
 
 @cli.command()
@@ -985,11 +971,11 @@ def gem(ctx, count, group):
     click.echo('\n'.join(t.gems.lines(count, group)))
 
 
-@cli.command()
-@click.option('-s', '--something', default=False, is_flag=True, help='Re-reoll until something.')
+@cli.command('type')
+@click.option('-s', '--something', default=False, is_flag=True, help='Re-roll until something.')
 @click.argument('code')
 @click.pass_context
-def type(ctx, code, something):
+def treasure_type(ctx, code, something):
     """Roll up treasure type."""
     t = ctx.obj['treasure']
     stuff = list(t.type(code.lower()))

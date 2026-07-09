@@ -12,37 +12,37 @@ import die
 def print_summary(roll, count):
     stat = die.stats.Statistic(roll)
     stat.do_run(count)
-    print('%-4i %ss' % (count, roll))
+    print(f'{count:<4} {roll}s')
     cumulative = 0.0
     count = float(count)
     for rolled, times in stat.bucket:
         percent = (times / count) * 100
         cumulative += percent
-        print('%5s -> %-5i %6.2f%% %6.2f%%' % (rolled, times, percent, cumulative), end='')
+        print(f'{rolled:>5} -> {times:<5} {percent:6.2f}% {cumulative:6.2f}%', end='')
         if rolled == stat.avr:
             print(' "average"')
 
 
 def print_summaries(rolls, count):
     stats = list()
-    print('%-9i' % (count, ), end='')
+    print(f'{count:<9}', end='')
     for roll in rolls:
         stat = die.stats.Statistic(roll)
         stat.do_run(count)
         stat.cumulative = 0.0
         stats.append(stat)
-        print('%-15s' % (str(roll), ), end='')
+        print(f'{roll!s:<15}', end='')
     print()
     count = float(count)
     for rolled in range(1, 21):
-        print('%4s -> ' % (rolled, ), end='')
+        print(f'{rolled:>4} -> ', end='')
         for stat in stats:
             try:
                 times = stat._bucket[rolled]
-                max = stat.bucket[-1][0]
-                if rolled == 20 and max > 20:
-                    times += sum(stat._bucket[x] for x in range(21, max + 1))
-                    #print('\n', stat.roll, [(x, stat._bucket[x]) for x in range(21, len(stat._bucket)+1)])
+                highest = stat.bucket[-1][0]
+                if rolled == 20 and highest > 20:
+                    times += sum(stat._bucket[x] for x in range(21, highest + 1))
+                    # print('\n', stat.roll, [(x, stat._bucket[x]) for x in range(21, len(stat._bucket)+1)])
                 percent = (times / count) * 100
                 stat.cumulative += percent
             except KeyError:
@@ -51,7 +51,7 @@ def print_summaries(rolls, count):
                 avr = 'a'
             else:
                 avr = ' '
-            print('%5.2f%% %6.2f%%%s' % (percent, stat.cumulative, avr, ), end='')
+            print(f'{percent:5.2f}% {stat.cumulative:6.2f}%{avr}', end='')
         print()
 
 

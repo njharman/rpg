@@ -9,7 +9,7 @@ colleges = {
         'R': 'Arcane Rituals',
         'D': 'Divine',
         }
-college_lookup = dict((v, k) for k, v in colleges.items())
+college_lookup = {v: k for k, v in colleges.items()}
 
 spell_index = [
     'Hyper Healing (V)             20',
@@ -657,13 +657,13 @@ spell_index = [
     'Zone of Death (N)                   18',
     'Zone of Sinister Stillness (N)      18',
     'Zone of Weakness (N)                18',
-    '''Baltron's Effusive Bloodboil (T)  BM''',
-    '''Djriixim's Purple Haze (T)        BM''',
-    '''Fennril's Exquisite Strangulation (T)  BM''',
-    '''Galaxina's Scintillating Spark Shower (T)  BM''',
-    '''Hitzemun's Blue Feet (T)          BM''',
-    '''Mazakala's Mucilaginous Effluvium (T)  BM''',
-    '''Zozomir's Stentorian Shout (T)    BM''',
+    """Baltron's Effusive Bloodboil (T)  BM""",
+    """Djriixim's Purple Haze (T)        BM""",
+    """Fennril's Exquisite Strangulation (T)  BM""",
+    """Galaxina's Scintillating Spark Shower (T)  BM""",
+    """Hitzemun's Blue Feet (T)          BM""",
+    """Mazakala's Mucilaginous Effluvium (T)  BM""",
+    """Zozomir's Stentorian Shout (T)    BM""",
     'Spiritual Armor (D)                 BM',
     'Ice Bolt (E)                        GG',
     'Fire Storm (E)                      GG',

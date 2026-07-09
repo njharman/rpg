@@ -10,7 +10,7 @@ import cmd
 import random
 
 
-class Table(object):
+class Table:
     """Object that when evaluated into string will return random result from table.
 
     @param dice: callable that returns something comparable to x.
@@ -43,7 +43,7 @@ def table_d100(*table):
     return Table(lambda: random.randint(1, 100), *table)
 
 
-class fwd_ref(object):
+class fwd_ref:
     """Allows forward referencing of Table objects."""
 
     def __init__(self, table):
@@ -420,9 +420,9 @@ if __name__ == '__main__':
             # Cmd is stupid, why not use doc strings for help?
             for name, func in self.__dict__.items():
                 if name.startswith('do_') and func.__doc__:
-                    def help_foo(self):
+                    def help_foo(self, func=func, name=name):
                         print(func.__doc__)
-                        setattr(self, 'help_%s' % name[2:], help_foo)
+                        setattr(self, f'help_{name[2:]}', help_foo)
 
         def emptyline(self):
             """Default action."""
@@ -456,7 +456,7 @@ if __name__ == '__main__':
             print(Chamber, Contents)
 
         def do_trick_or_trap(self, line):
-            """Ha!"""  # noqa: D400
+            """Ha!"""
             print(Trick_or_Trap)
 
         def do_pools_are_cool(self, line):

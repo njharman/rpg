@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-'''Context-free grammar random name generator
+"""Context-free grammar random name generator
 
 Jeremy Thurgood <jerith@is.und.ac.za>
 Highly experimental at present, but sort of working
-'''
+"""
 
 import random
 import re
@@ -16,35 +16,35 @@ stringUndefinedNonTerminal = "Undefined non-terminal \"%(undefinedNonTerminal)s\
 # Test grammar -- will be read from a file when I decide how to do it properly
 # with minimum effort (for the user and the code)
 orkGrammar = {
-    "name": ["<nameStart><nameMiddle0to3><nameEnd>"],
-    "nameMiddle0to3": ["", "<nameMiddle>", "<nameMiddle><nameMiddle>", "<nameMiddle><nameMiddle><nameMiddle>"],
-    "nameStart": ["<nsCons><nmVowel>", "<nsCons><nmVowel>", "<nsCons><nmVowel>", "<nsVowel>"],
-    "nameMiddle": ["<nmCons><nmVowel>"],
-    "nameEnd": ["<neCons><neVowel>", "<neCons>", "<neCons>"],
-    "nsCons": ["D", "G", "K", "T", "Gr"],
-    "nsVowel": ["E", "U"],
-    "nmCons": ["d", "g", "k", "t", "r", "s", "z", "kt", "rs", "gr"],
-    "nmVowel": ["a", "e", "i", "o", "u"],
-    "neCons": ["r", "s", "z"],
-    "neVowel": ["a", "u"]
+    'name': ['<nameStart><nameMiddle0to3><nameEnd>'],
+    'nameMiddle0to3': ['', '<nameMiddle>', '<nameMiddle><nameMiddle>', '<nameMiddle><nameMiddle><nameMiddle>'],
+    'nameStart': ['<nsCons><nmVowel>', '<nsCons><nmVowel>', '<nsCons><nmVowel>', '<nsVowel>'],
+    'nameMiddle': ['<nmCons><nmVowel>'],
+    'nameEnd': ['<neCons><neVowel>', '<neCons>', '<neCons>'],
+    'nsCons': ['D', 'G', 'K', 'T', 'Gr'],
+    'nsVowel': ['E', 'U'],
+    'nmCons': ['d', 'g', 'k', 't', 'r', 's', 'z', 'kt', 'rs', 'gr'],
+    'nmVowel': ['a', 'e', 'i', 'o', 'u'],
+    'neCons': ['r', 's', 'z'],
+    'neVowel': ['a', 'u'],
     }
 
 fooGrammar = {
-    "name": ["<nameStart><nameMiddle0to2><nameEnd>"],
-    "nameMiddle0to2": ["", "<nameMiddle>", "<nameMiddle><nameMiddle>"],
-    "nameStart": ["<nsCons><nmVowel>", "<nsCons><nmVowel>", "<nsCons><nmVowel>", "<nsVowel>"],
-    "nameMiddle": ["<nmCons><nmVowel>"],
-    "nameEnd": ["<neCons><neVowel>", "<neCons>", "<neCons>"],
-    "nsCons": ["J", "M", "P", "N", "Y", "D", "F"],
-    "nmCons": ["l", "m", "lm", "th", "r", "s", "ss", "p", "f", "mb", "b", "lb", "d", "lf"],
-    "neCons": ["r", "n", "m", "s", "y", "l", "th", "b", "lb", "f", "lf"],
-    "nsVowel": ["A", "Au", "Ei"],
-    "nmVowel": ["a", "e", "i", "o", "u", "au", "oa", "ei"],
-    "neVowel": ["e", "i", "a", "au"]
+    'name': ['<nameStart><nameMiddle0to2><nameEnd>'],
+    'nameMiddle0to2': ['', '<nameMiddle>', '<nameMiddle><nameMiddle>'],
+    'nameStart': ['<nsCons><nmVowel>', '<nsCons><nmVowel>', '<nsCons><nmVowel>', '<nsVowel>'],
+    'nameMiddle': ['<nmCons><nmVowel>'],
+    'nameEnd': ['<neCons><neVowel>', '<neCons>', '<neCons>'],
+    'nsCons': ['J', 'M', 'P', 'N', 'Y', 'D', 'F'],
+    'nmCons': ['l', 'm', 'lm', 'th', 'r', 's', 'ss', 'p', 'f', 'mb', 'b', 'lb', 'd', 'lf'],
+    'neCons': ['r', 'n', 'm', 's', 'y', 'l', 'th', 'b', 'lb', 'f', 'lf'],
+    'nsVowel': ['A', 'Au', 'Ei'],
+    'nmVowel': ['a', 'e', 'i', 'o', 'u', 'au', 'oa', 'ei'],
+    'neVowel': ['e', 'i', 'a', 'au'],
     }
 
 # Regular expression to catch non-terminals, used frequently, so global
-reNonTerminal = re.compile(r"<(\w+)>")
+reNonTerminal = re.compile(r'<(\w+)>')
 
 # checkTypes() is only useful while testing with internally specified
 # grammars.
@@ -62,13 +62,14 @@ def checkTypes(nameGrammar):
     data file.
     """
     if not isinstance(nameGrammar, dict):
-        return "Grammar data is not a dictionary!"
+        return 'Grammar data is not a dictionary!'
     for rule, rhs in nameGrammar.items():
         if not isinstance(rhs, list):
-            return "Rule \"%s\" is not a list!" % rule
+            return f"Rule \"{rule}\" is not a list!"
         for option in rhs:
             if not isinstance(option, str):
-                return "Rule \"%s\" does not contain only strings!" % rule
+                return f"Rule \"{rule}\" does not contain only strings!"
+    return ''
 
 # Grammar verification stuff follows.  We can probably make this throw
 # warnings
@@ -91,10 +92,10 @@ def checkUndefinedNonTerminals(nameGrammar):
             matchNonTerminal = reNonTerminal.search(tempStr)
             while matchNonTerminal:
                 if matchNonTerminal.group(1) not in nameGrammar:
-                    return {"undefinedNonTerminal":
-                            matchNonTerminal.group(1), "rule": rule}
-                tempStr = reNonTerminal.sub("", tempStr, 1)
+                    return {'undefinedNonTerminal': matchNonTerminal.group(1), 'rule': rule}
+                tempStr = reNonTerminal.sub('', tempStr, 1)
                 matchNonTerminal = reNonTerminal.search(tempStr)
+    return {}
 
 
 def checkUnproductiveNonTerminals(nameGrammar):
@@ -115,24 +116,24 @@ def checkUnproductiveNonTerminals(nameGrammar):
             return a
         return recurse(a + 1)
 
-    grammarUnchecked = dict([(rule, "".join(rhs))
-                            for (rule, rhs) in nameGrammar.items()])
+    grammarUnchecked = {rule: ''.join(rhs) for rule, rhs in nameGrammar.items()}
     grammarProductive = []
     finished = False
     while not finished:
-        print("grammarProductive:")
+        print('grammarProductive:')
         print(grammarProductive)
-        print("grammarUnchecked:")
+        print('grammarUnchecked:')
         print(grammarUnchecked)
         print()
         finished = True
-        for rule, rhs in grammarUnchecked.items():
+        for rule, rhs_ in grammarUnchecked.items():
+            rhs = rhs_
             matchNonTerminal = reNonTerminal.search(rhs)
             while matchNonTerminal:
                 matchString = matchNonTerminal.group(1)
                 if matchString not in grammarProductive:
                     break
-                rhs = rhs.replace("<" + matchString + ">", "")
+                rhs = rhs.replace('<' + matchString + '>', '')
                 finished = False
                 matchNonTerminal = reNonTerminal.search(rhs)
             if not matchNonTerminal:
@@ -155,25 +156,27 @@ def checkUnusedNonTerminals(nameGrammar):
 
     XXX: INCOMPLETE
     """
-    pass
 
 
 def verifyGrammar(nameGrammar):
-    '''verifyGrammar() uses the above functions to verify the correctness of a
-    grammar.  This isn't perfect, but it should catch the most common problems.
-    '''
+    """verifyGrammar() uses the above functions to verify the correctness of a
+    grammar.
+
+    This isn't perfect, but it should catch the most common problems.
+    """
     error = checkTypes(nameGrammar)
     if error:
         return error
     error = checkUndefinedNonTerminals(nameGrammar)
     if error:
         return stringUndefinedNonTerminal % error
-    if "name" not in nameGrammar:
+    if 'name' not in nameGrammar:
         return "Rule \"name\" not present!"
+    return ''
 
 
 def nameGen(nameGrammar):
-    nameStr = random.choice(nameGrammar["name"])
+    nameStr = random.choice(nameGrammar['name'])
     matchNonTerminal = reNonTerminal.search(nameStr)
     while matchNonTerminal:
         subStr = random.choice(nameGrammar[matchNonTerminal.group(1)])
@@ -188,5 +191,5 @@ def nameGen(nameGrammar):
 #    sys.exit(errorStr)
 # print(nameGen(fooGrammar))
 
-for i in range(10):
+for _ in range(10):
     print(nameGen(fooGrammar))

@@ -120,7 +120,7 @@ class ZeroLevel(SortThings):
         (0, '', 'Battleaxe (2h)', 'Male'),
         (0, '', '', 'Male'),
         (0, '', '', 'Male'),
-        ]))
+        ], strict=False))
 
     def __str__(self):
         hp = random.choice(self.table[0][:4])
@@ -154,9 +154,11 @@ class ZeroLevel(SortThings):
 
 class Leveled(SortThings):
     def __str__(self):
-        return f'{self.what} {self.name}: {self.equipment}. {self.hp}hp, AC{self.ac}, to-hit 10, Saves: {self.saves},'\
-                ' Abilities: ' + ' '.join(f'{modifier(x):+}' for x in [self.str, self.int, self.wis, self.dex, self.con, self.cha]) + \
-                f'. {self.hire}'
+        return (
+            f'{self.what} {self.name}: {self.equipment}. {self.hp}hp, AC{self.ac}, to-hit 10, Saves: {self.saves},'
+            ' Abilities: ' + ' '.join(f'{modifier(x):+}' for x in [self.str, self.int, self.wis, self.dex, self.con, self.cha]) +
+            f'. {self.hire}'
+            )
 
     def _calc_hp(self, first_lvl_max):
         return first_lvl_max + modifier(self.con) + sum(self.hd() for i in range(self.level - 1))
@@ -325,7 +327,7 @@ class Settlement:
 
     def recruit(self, attempts, modifier=0):
         number = 0
-        for x in range(attempts):
+        for _ in range(attempts):
             number += max(0, (d6() - 2 + modifier))
         byday = defaultdict(list)
         for x in (self.what() for i in range(number)):

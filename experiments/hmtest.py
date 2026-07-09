@@ -1,17 +1,33 @@
 #!/usr/bin/python
-'''Hack Master 5ed combat tests.
+"""Hack Master 5ed combat tests.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain 2012.
 Website: http://trollandflame.blogspot.com/
-'''
+"""
 import sys
 from collections import defaultdict
 
-from dice import *
+from dice import (
+    d3p,
+    d4p,
+    d4x,
+    d6p,
+    d6x,
+    d8p,
+    d8x,
+    d10p,
+    d12p,
+    d12x,
+    d20,
+    d20p,
+    d20x,
+    d100p,
+    d100x,
+)
 
 
-class BaseProtection(object):
+class BaseProtection:
 
     def __init__(self, name, damage_reduction, defense, initiative=0, speed=0):
         self.name = name
@@ -26,20 +42,19 @@ class BaseProtection(object):
 
 class Armor(BaseProtection):
     def hit(self, damage, hvydr):
-        '''Reduce damage by DR.'''
+        """Reduce damage by DR."""
         return max(0, damage - (self.dr + hvydr))
 
 
 class Shield(BaseProtection):
     def __init__(self, *args, **kwargs):
-        self._threshold = kwargs.get('threshhold', list())
-        if 'threshhold' in kwargs:
-            del kwargs['threshhold']
-        super(Shield, self).__init__(*args, **kwargs)
+        self._threshold = kwargs.get('threshold', list())
+        kwargs.pop('threshold', None)
+        super().__init__(*args, **kwargs)
         self.shattered = False
 
     def hit(self, damage):
-        '''Reduce damage by DR, test for shatter.'''
+        """Reduce damage by DR, test for shatter."""
         if self.shattered or not self._threshold:
             return damage
         passed = damage - self.dr
@@ -49,23 +64,19 @@ class Shield(BaseProtection):
             # Opposed die rolls to see if shield destroyed.
             attacker = d20()
             defender = d20()
-            if damage >= self._threshold[2] and attacker > (defender - 6):
-                self.shatter()
-            elif damage >= self._threshold[1] and attacker > defender:
-                self.shatter()
-            elif damage >= self._threshold[0] and attacker > (defender + 6):
+            if (damage >= self._threshold[2] and attacker > (defender - 6)) or (damage >= self._threshold[1] and attacker > defender) or (damage >= self._threshold[0] and attacker > (defender + 6)):
                 self.shatter()
         return max(0, passed)
 
     def shatter(self):
         if not self.shattered:
-            self.name = "shattered %s" % self.name
+            self.name = f"shattered {self.name}"
             self.defense = 0
             self.dr = 0
         self.shattered = True
 
 
-class Weapon(object):
+class Weapon:
     def __init__(self, name, size, speed, reach, hvydr, damage_dice, shield_dice, damage_bonus=0):
         self.name = name
         self.size = size
@@ -91,17 +102,17 @@ class Weapon(object):
             for die in dice:
                 total += die()
                 roll.append('+'.join(str(d) for d in die._rolls))
-        roll.append('+%i' % self.damage_bonus)
+        roll.append(f'+{self.damage_bonus}')
         self.last_roll = ' '.join(roll)
         return total + self.damage_bonus
 
 
-class Combatant(object):
+class Combatant:
 
     def __init__(self, name, hitpoints, top_save, atk_bonus, dmg_bonus, def_bonus, spd_bonus, weapon, shield, armor):
-        '''
+        """
         def_bonus does not include armor or shield
-        '''
+        """
         self.name = name
         self.original_hp = hitpoints
         # threshold of pain!!!
@@ -118,7 +129,7 @@ class Combatant(object):
         self.reset_stats()
 
     def reset(self):
-        '''Internal values'''
+        """Internal values"""
         self.hitpoints = self.original_hp
         self.shield = self.gimmie_shield()
         self.topped = False             # False or count at which no longer topped
@@ -137,11 +148,11 @@ class Combatant(object):
     def __str__(self):
         prone = '_' if self.prone else ''
         topped = '*' if self.topped else ''
-        return '%s[%ihp%s%s]' % (self.name, self.hitpoints, prone, topped)
+        return f'{self.name}[{self.hitpoints}hp{prone}{topped}]'
 
     @property
     def def_bonus(self):
-        '''from armor, shields, weapon,'''
+        """from armor, shields, weapon,"""
         defense = self._def_bonus
         if self.armor:
             defense += self.armor.defense
@@ -158,11 +169,10 @@ class Combatant(object):
 
     @property
     def def_die(self):
-        '''Die rolled for defense'''
+        """Die rolled for defense"""
         if self.topped or self.prone:
             return d8p
-        else:
-            return d20p
+        return d20p
 
     @property
     def speed(self):
@@ -181,16 +191,16 @@ class Combatant(object):
     def aggregate_stats(self):
         stats = self._calc_aggreagate(self._aggregate_stats)
         return [
-                '%(swings)i swings hit/miss %(hits)i/%(misses)i %(percent)0.1f%%: %(max_hit)i maxdmg, %(topsaves)i top saves' % stats,
-                '%(crits)i/%(pcrits)0.1f%% crits, %(afumble)i/%(pafumble)0.1f%% %(dfumble)i/%(pdfumble)0.1f%% a/d fumbles, %(pdefense)i/%(npdefense)i p/n defenses' % stats,
+                f"{stats['swings']} swings hit/miss {stats['hits']}/{stats['misses']} {stats['percent']:0.1f}%: {stats['max_hit']} maxdmg, {stats['topsaves']} top saves",
+                f"{stats['crits']}/{stats['pcrits']:0.1f}% crits, {stats['afumble']}/{stats['pafumble']:0.1f}% {stats['dfumble']}/{stats['pdfumble']:0.1f}% a/d fumbles, {stats['pdefense']}/{stats['npdefense']} p/n defenses",
                ]
 
     @property
     def aggregate_averages(self):
         stats = self._calc_aggreagate_averages(self._aggregate_stats)
-        return ('''hit/miss: %(hits_avg)i/%(misses_avg)i (%(percent_avg)0.1f%%), %(crits_avg)i/%(max_hit_avg)ihp crits/max,'''
-          ''' %(afumble_avg)i/%(dfumble_avg)i a/d fumbles, %(pdefense_avg)i/%(npdefense_avg)i p/n defenses,'''
-          ''' %(knockouts_avg)i/%(longest_ko_avg)i k/r/l''') % stats
+        return (f"hit/miss: {stats['hits_avg']}/{stats['misses_avg']} ({stats['percent_avg']:0.1f}%), {stats['crits_avg']}/{stats['max_hit_avg']}hp crits/max,"
+          f" {stats['afumble_avg']}/{stats['dfumble_avg']} a/d fumbles, {stats['pdefense_avg']}/{stats['npdefense_avg']} p/n defenses,"
+          f" {stats['knockouts_avg']}/{stats['longest_ko_avg']} k/r/l")
 
     def _calc_aggreagate_averages(self, aggregates):
         stats = defaultdict(int)
@@ -237,40 +247,35 @@ class Combatant(object):
             stats['percent'] = 0.0
 
     def _format_stats(self, stats):
-        return 'hit/miss: %(hits)i/%(misses)i (%(percent)0.1f%%), %(crits)i crits, max hit %(max_hit)i, %(afumble)i/%(dfumble)i a/d fumbles, %(pdefense)s/%(npdefense)s p/n defenses' % stats
+        return f"hit/miss: {stats['hits']}/{stats['misses']} ({stats['percent']:0.1f}%), {stats['crits']} crits, max hit {stats['max_hit']}, {stats['afumble']}/{stats['dfumble']} a/d fumbles, {stats['pdefense']}/{stats['npdefense']} p/n defenses"
 
     def can_act(self, count):
-        '''
+        """
         :param count: current count up.
-        '''
+        """
         if self.dead:
             return False
-        elif self.topped is not False:
+        if self.topped is not False:
             if self.topped > count:
                 self.topped -= 1
             else:
                 self.topped = False
                 self.stat_dict['recovery'] += 1
             return False
-        elif self.prone: # hack with attack() performs standup
+        if self.prone or self.free_attack: # hack with attack() performs standup
             return True
-        elif self.free_attack:
-            return True
-        elif self.next_attack > count:
-            return False
-        else:
-            return True
+        return not self.next_attack > count
 
     def attack(self, count, defender, free=False):
-        '''
+        """
         :param defender: Combatant I am attacking
         :param free: a free attack that does not reset my count
-        '''
+        """
         if self.prone:
             # 1 sec to standup
             self.prone = False
             self.next_attack = count + self.speed
-            return '%s standing up' % (self, )
+            return f'{self} standing up'
         if self.free_attack:
             self.free_attack = False
             return self.attack(count, defender, free=True)
@@ -309,7 +314,7 @@ class Combatant(object):
         else:
             self.stat_dict['misses'] += 1
         bits = list()
-        bits.append('%s(%i+%i) -> %s(%i+%i)' % (self, atk_roll, atk_tot - atk_roll, defender, def_roll, def_tot - def_roll))
+        bits.append(f'{self}({atk_roll}+{atk_tot - atk_roll}) -> {defender}({def_roll}+{def_tot - def_roll})')
         if hit or shieldhit:
             if atk_roll >= 20 and atk_tot > def_tot:
                 self.stat_dict['crits'] += 1
@@ -326,16 +331,16 @@ class Combatant(object):
             if defender.shield and not (defender.topped or defender.prone):
                 passed, shattered = defender.hit_shield(damage)
                 took = defender.hit(passed, 0) # No hvydr when hitting shield.
-                bits.append('%s for %i(%s), %spassed %i%s%s' % (text, damage, self.weapon.last_roll, 'shattered and ' if shattered else '', passed, ', took %i damage' % took if took else '', defender.check_for_top(count, took)))
+                bits.append(f"{text} for {damage}({self.weapon.last_roll}), {'shattered and ' if shattered else ''}passed {passed}{f', took {took} damage' if took else ''}{defender.check_for_top(count, took)}")
             else:
                 took = defender.hit(damage, self.weapon.hvydr)
-                bits.append('%s for %i(%s), took %i damage%s' % (text, damage, self.weapon.last_roll, took, defender.check_for_top(count, took)))
+                bits.append(f'{text} for {damage}({self.weapon.last_roll}), took {took} damage{defender.check_for_top(count, took)}')
             # Must come after application of damage.
             if damage >= 30:
                 defender.prone = True
         else:
             bits.append('missed')
-        results = [' '.join(t.strip() for t in bits if t), ]
+        results = [' '.join(t.strip() for t in bits if t) ]
         # Fumbles.el
         if atk_roll == 1 and atk_tot <= def_tot:
             results.append('Attacker fumble: Not implemented.')
@@ -364,7 +369,7 @@ class Combatant(object):
 #                results.append('Near perfect defense: %s took %i damage%s%s' % (self, damage, text, top_text))
 #                defender.stat_dict['npdefense'] += 1
             if def_roll >= 20:
-                results.append('Perfect defense: %s' % defender.attack(count, self, True))
+                results.append(f'Perfect defense: {defender.attack(count, self, True)}')
                 defender.stat_dict['pdefense'] += 1
         if not free:  # update count
             if defender.topped or defender.prone:
@@ -374,25 +379,24 @@ class Combatant(object):
         return '\n    '.join(results)
 
     def hit(self, damage, hvydr):
-        '''
+        """
         return damage getting through armor.
         hvydr: amount of heavy (>= 5) DR ignored.
-        '''
+        """
         damage = self.armor.hit(damage, hvydr)
         if damage > 0:
             self.hitpoints -= damage
         return max(0, damage)
 
     def hit_shield(self, damage):
-        '''return damage getting through shield, T/F if shattered'''
+        """return damage getting through shield, T/F if shattered"""
         if not self.shield:
-            raise Exception('I got no shield')
+            raise ValueError('I got no shield')
         damage = self.shield.hit(damage)
         if self.shield.shattered:
             self.shield = False
             return damage, True
-        else:
-            return damage, False
+        return damage, False
 
     def check_for_top(self, count, damage):
         if self.hitpoints <= 0:
@@ -409,34 +413,34 @@ class Combatant(object):
             self.topped += top  # Add seconds topped.
             self.prone = True
             self.free_attack = False
-            return ', topped[%i] (%i>%i) for %i seconds!' % (self.top, roll, self.top_save, top)
-        else:
-            self.stat_dict['topsaves'] += 1
-            return ', made ToP[%i] (%i<=%i) save!' % (self.top, roll, self.top_save)
+            return f', topped[{self.top}] ({roll}>{self.top_save}) for {top} seconds!'
+        self.stat_dict['topsaves'] += 1
+        return f', made ToP[{self.top}] ({roll}<={self.top_save}) save!'
 
 
 def fight(a, b, play_by_play=False, deathmatch=False):
-    '''
+    """
     :param a: combatant 'a'.
     :param b: combatant 'b'.
     :return: winner of fight or None on draw
-    '''
+    """
     def status(dude):
         if dude.dead:
             return 'Dead'
-        elif dude.topped:
-            return 'Writhing in pain unti %i' % (dude.topped, )
-        elif dude.prone:
+        if dude.topped:
+            return f'Writhing in pain unti {dude.topped}'
+        if dude.prone:
             return 'Prone'
-        elif count == dude.next_attack:
+        if count == dude.next_attack:
             return 'Ready'
-        else:
-            return 'Waiting until %i' % (dude.next_attack, )
+        return f'Waiting until {dude.next_attack}'
 
     if play_by_play:
-        pbp = lambda t: (sys.stdout.write(t), sys.stdout.write('\n'))
+        def pbp(t):
+            return (sys.stdout.write(t), sys.stdout.write('\n'))
     else:
-        pbp = lambda t: None
+        def pbp(t):
+            return None
     pbp('')
     for count in range(1, 10000):  # Count here is hackmaster initiative count.
         # Support simultaneous attacks.
@@ -451,37 +455,37 @@ def fight(a, b, play_by_play=False, deathmatch=False):
             if b.can_act(count):
                 attacks.append((b, a))
         for attacker, defender in attacks:
-            pbp('%-3i %s' % (count, attacker.attack(count, defender)))
+            pbp(f'{count:<3} {attacker.attack(count, defender)}')
         winnars = [d for d in (a, b) if not (d.dead or (not deathmatch and d.topped))]
         if len(winnars) != 2:
             break
-    pbp('%s %s\n  %s' % (a, status(a), a.stats))
-    pbp('%s %s\n  %s' % (b, status(b), b.stats))
+    pbp(f'{a} {status(a)}\n  {a.stats}')
+    pbp(f'{b} {status(b)}\n  {b.stats}')
     if len(winnars) == 1:
         win = winnars[0]
-        pbp('%s wins!' % (win, ))
+        pbp(f'{win} wins!')
         return win
+    return None
 
 
 def fight_stats(a, b, func, count, play_by_play=False):
-    '''
+    """
     :param a: combatant 'a'.
     :param b: combatant 'b'.
     :param func: resolve one fight func(a, b)
     :param count: how many fights to run
-    '''
+    """
     def bubba(d):
         if d.shield:
-            return '%s in %s with %s & %s' % (d, d.armor, d.weapon, d.shield)
-        else:
-            return '%s in %s with %s' % (d, d.armor, d.weapon)
+            return f'{d} in {d.armor} with {d.weapon} & {d.shield}'
+        return f'{d} in {d.armor} with {d.weapon}'
     wins = {a.name: 0, b.name: 0}
     deaths = {a.name: 0, b.name: 0}
     knockouts = {a.name: 0, b.name: 0}
     foo = bubba(a)
     bar = bubba(b)
-    print('%s\n%svs\n%s' % (foo, ' ' * ((len(foo) - 2) / 2), bar))
-    for i in range(count):
+    print(f"{foo}\n{' ' * int((len(foo) - 2) / 2)}vs\n{bar}")
+    for _ in range(count):
         winner = func(a, b, play_by_play)
         if winner:
             wins[winner.name] += 1
@@ -494,10 +498,10 @@ def fight_stats(a, b, func, count, play_by_play=False):
     pount = count / 100.0
     awins = wins[a.name] / 100.0
     bwins = wins[b.name] / 100.0
-    print('''%-12s %i/%0.1f%% wins (%0.1f%% by death, %0.1f%% by ko). Killed %4i and ko'd %4i times.''' % (a.name, wins[a.name], wins[a.name] / pount, deaths[b.name] / awins, knockouts[b.name] / awins, deaths[a.name], knockouts[a.name]))
+    print(f"{a.name:<12} {wins[a.name]}/{wins[a.name] / pount:0.1f}% wins ({deaths[b.name] / awins:0.1f}% by death, {knockouts[b.name] / awins:0.1f}% by ko). Killed {deaths[a.name]:4} and ko'd {knockouts[a.name]:4} times.")
     for line in a.aggregate_stats:
         print(' ' * 12, line)
-    print('''%-12s %i/%0.1f%% wins (%0.1f%% by death, %0.1f%% by ko). Killed %4i and ko'd %4i times.''' % (b.name, wins[b.name], wins[b.name] / pount, deaths[a.name] / bwins, knockouts[a.name] / bwins, deaths[b.name], knockouts[b.name]))
+    print(f"{b.name:<12} {wins[b.name]}/{wins[b.name] / pount:0.1f}% wins ({deaths[a.name] / bwins:0.1f}% by death, {knockouts[a.name] / bwins:0.1f}% by ko). Killed {deaths[b.name]:4} and ko'd {knockouts[b.name]:4} times.")
     for line in b.aggregate_stats:
         print(' ' * 12, line)
     print()
@@ -506,10 +510,11 @@ def fight_stats(a, b, func, count, play_by_play=False):
 
 
 #   damage reduction, defense, splinter thresholds [d20p+6, d20p, d20p-6, automatic]
-buckler = lambda: Shield('buckler', 4, 2, threshhold=[8, 12, 16, 20])
-small_shield = lambda: Shield('small shield', 4, 4, threshhold=[8, 12, 16, 20])
-medium_shield = lambda: Shield('medium shield', 6, 6, threshhold=[12, 18, 24, 30])
-large_shield = lambda: Shield('large shield', 6, 6, threshhold=[12, 18, 24, 30])
+buckler = lambda: Shield('buckler', 4, 2, threshold=[8, 12, 16, 20])
+small_shield = lambda: Shield('small shield', 4, 4, threshold=[8, 12, 16, 20])
+medium_shield = lambda: Shield('medium shield', 6, 6, threshold=[12, 18, 24, 30])
+large_shield = lambda: Shield('large shield', 6, 6, threshold=[12, 18, 24, 30])
+
 
 #   damage reduction, defense, initiative, speed penalty
 no_armor = Armor('no armor',     0,  0, -1, 0)
@@ -537,9 +542,9 @@ halb = Combatant('Halberder',  53, 8, 4, 3, 4, -2, halberd, lambda: None, armor)
 zwei = Combatant('Compensatr', 53, 8, 4, 3, 4, -2, twohandsword, lambda: None, armor)
 
 
-def test_dieroll(die_func, count=100000):
+def dieroll_test(die_func, count=100000):
     bucket = defaultdict(int)
-    for i in range(count + 1):
+    for _ in range(count + 1):
         bucket[die_func()] += 1
     return bucket, count
 
@@ -553,27 +558,26 @@ def calc_dieroll_results(bucket, count):
     for i in range(1, max(rolls) + 1):
         if bucket[i]:
             percent = (bucket[i] / count) * 100
-            results.append('%-3i %5i %5.2f%% %6.2f%%' %
-                        (i, bucket[i], percent, ptotal))
+            results.append(f'{i:<3} {bucket[i]:5} {percent:5.2f}% {ptotal:6.2f}%')
             ptotal -= percent
             total += i * bucket[i]
         else:
-            results.append('%-3i         not rolled' % (i, ))
+            results.append(f'{i:<3}         not rolled')
     return results, (total / count), rolls[-1]
 
 
 def dieroll_average_n_max(roll, count=100000):
-    rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
-    print(roll.name, '%.2f' % avg, max)
+    _, avg, highest = calc_dieroll_results(*dieroll_test(roll, count))
+    print(roll.name, f'{avg:.2f}', highest)
+
 
 
 def dieroll_detail(roll, count=100000):
-    rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
+    rolls, _, _ = calc_dieroll_results(*dieroll_test(roll, count))
     print(roll.name)
     for roll in rolls:
         print(roll)
     print()
-
 
 
 if __name__ == '__main__':
@@ -587,7 +591,7 @@ if __name__ == '__main__':
         dieroll_average_n_max(d12p, count)
         dieroll_average_n_max(d20p, count)
         dieroll_average_n_max(d100p, count)
-        print
+        print()
         dieroll_average_n_max(d4x, count)
         dieroll_average_n_max(d6x, count)
         dieroll_average_n_max(d8x, count)

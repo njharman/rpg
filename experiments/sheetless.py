@@ -1,22 +1,22 @@
 #!/usr/bin/env python
-'''Exploratory tests on hit probabilities of sheetless (draft name) RPG.
+"""Exploratory tests on hit probabilities of sheetless (draft name) RPG.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain June 2026.
 Website: http://trollandflame.blogspot.com/
-'''
+"""
 
-from collections import defaultdict
 import random
+from collections import defaultdict
 
-from dice import d6, d8, d10, d12, d20, d24, d100, d0, d36, Dice
+from dice import Dice, d0, d3d6, d6, d8, d10, d20, d24
 
 
 class Character:
     def __init__(self, name, hit_die, hd=1, combat=1):
         self.name = name
         self.hit_die = hit_die
-        self.health = d36() # same as Con
+        self.health = d3d6() # same as Con
         #TODO: str, dex
         self.wounds = list()
         self.hd = hd
@@ -35,7 +35,7 @@ class Character:
         self.attack = d20
 
     def __str__(self):
-        dead = "DEAD " if self.dead else ""
+        dead = 'DEAD ' if self.dead else ''
         return f"{self.name} - {dead}Health:{self.health}{self.wounds} HP:{self.hp} Arm:{self.arm} Blk:{self.block.name} Cov:{self.cover}+ {self.attack.name}/{self.dmg.name}"
 
     @property
@@ -48,27 +48,24 @@ class Character:
     def take_damage(self, dmg):
         """First taken from hit protection, then absorbed by armor and then health"""
         if dmg <= 0:
-            return ""
+            return ''
         if self.hp > 0:
             self.hp -= dmg
             if self.hp < 0:
                 self.hp = 0
-            return "absorbed by hit protection"
+            return 'absorbed by hit protection'
         if self.arm == 0:
             self.wounds.append(dmg)
             if self.dead:
                 return f"killed by {dmg} point wound"
-            else:
-                return f"took {dmg} point wound"
+            return f"took {dmg} point wound"
         new = dmg - self.arm
         if new > 0:
             self.wounds.append(new)
             if self.dead:
                 return f"killed by {new} point wound after arm{self.arm} absorption"
-            else:
-                return f"took {new} point wound after arm{self.arm} absorption"
-        else:
-            return "absorbed by armor"
+            return f"took {new} point wound after arm{self.arm} absorption"
+        return 'absorbed by armor'
 
 
 
@@ -93,8 +90,7 @@ class Mook:
     def __str__(self):
         if self.taken_out:
             return f"{self.name} TAKEN OUT"
-        else:
-            return f"{self.name} {self.hd-self.hits}/{self.hd}HD {self.ac}AC {self.dmg.name}"
+        return f"{self.name} {self.hd-self.hits}/{self.hd}HD {self.ac}AC {self.dmg.name}"
 
     @property
     def taken_out(self):
@@ -131,7 +127,7 @@ class HillGiant(Mook):
 
 class Noble(Mook):
     def __init__(self):
-        super().__init__("Noble", ac=2, hd=3, dmg=d6)
+        super().__init__('Noble', ac=2, hd=3, dmg=d6)
 
 
 
@@ -147,7 +143,7 @@ class Party:
         self.combatants = characters
 
     def __str__(self):
-        return "\n".join(str(c) for c in self.combatants)
+        return '\n'.join(str(c) for c in self.combatants)
 
     def combat(self, *mooks):
         def party_attacks(melees):
@@ -156,22 +152,21 @@ class Party:
                     continue
                 target = picktarget(targets)
                 if not target:
-                    print(f"{character.name} has no targets left", end="")
+                    print(f"{character.name} has no targets left", end='')
                     target = picktarget(mooks)
                     if not target:
-                        print(".")
+                        print('.')
                         continue
-                    else:
-                        print(f", jumps on {target.name} ...")
+                    print(f", jumps on {target.name} ...")
                 target_number = 20 - target.ac - character.ranks_combat
                 attack_roll = character.attack()
                 if attack_roll >= target_number and attack_roll >= 20:
                     target.hits += 2
-                    takeout = " and takes out" if target.taken_out else ""
+                    takeout = ' and takes out' if target.taken_out else ''
                     print(f"{character.name} crits{takeout} {target.name} {attack_roll} >= {target_number}")
                 elif attack_roll >= target_number:
                     target.hits += 1
-                    takeout = " and takes out" if target.taken_out else ""
+                    takeout = ' and takes out' if target.taken_out else ''
                     print(f"{character.name} hits{takeout} {target.name} {attack_roll} >= {target_number}")
                 else:
                     print(f"{character.name} misses {target.name} {attack_roll} >= {target_number}")
@@ -191,7 +186,7 @@ class Party:
                         print(f"  blocks {dmg} damage from {t.name} shattering their shield")
                         character.block = d0
                     else:
-                        print(f"  {block} block fails, {t.name} inflicts {dmg} damage, {character.take_damage(dmg)}")
+                       print(f"  {block} block fails, {t.name} inflicts {dmg} damage, {character.take_damage(dmg)}")
                 for dmg, t in attacks:
                     print(f"  {t.name} inflicts {dmg} damage, {character.take_damage(dmg)}")
                     if character.dead:
@@ -218,17 +213,17 @@ class Party:
         for character in self.combatants:
             character.start_combat()
         complete = False
-        round = 0
+        turn = 0
         while not complete:
-            if all(c.dead for c in melees.keys()):
-                print("All characters are dead. Combat over.")
+            if all(c.dead for c in melees):
+                print('All characters are dead. Combat over.')
                 complete = True
                 break
             if all(m.taken_out for m in mooks):
-                print("All oppenents are takenout. Combat over.")
+                print('All oppenents are takenout. Combat over.')
                 complete = True
                 break
-            round += 1
+            turn += 1
             party, mon = d6(), d6()
             print(f"\nRound {round}: Initiative party:{party} Monsters:{mon}")
             distribute(melees)
@@ -249,13 +244,13 @@ class Party:
 
 
 
-sword = Item("Sword", dmg=d6, attack=d20)
-battle_axe = Item("Battle Axe", dmg=d8, attack=d24)
-arm_lgt = Item("Light Armor", arm=2)
-arm_med = Item("Medium Armor", arm=3)
-arm_hvy = Item("Heavy Armor", arm=4)
-sh_med= Item("Medium Shield", block=d6, cover=5)
-sh_lrg = Item("Large Shield", block=d8, cover=3)
+sword = Item('Sword', dmg=d6, attack=d20)
+battle_axe = Item('Battle Axe', dmg=d8, attack=d24)
+arm_lgt = Item('Light Armor', arm=2)
+arm_med = Item('Medium Armor', arm=3)
+arm_hvy = Item('Heavy Armor', arm=4)
+sh_med= Item('Medium Shield', block=d6, cover=5)
+sh_lrg = Item('Large Shield', block=d8, cover=3)
 
 def equip(character, *args):
     for item in args:
@@ -264,14 +259,14 @@ def equip(character, *args):
 
 
 if __name__ == '__main__':
-    tzin = Character("Tzin", d6, hd=2, combat=2)
-    lauf = Character("Luaf", d6, hd=1, combat=1)
+    tzin = Character('Tzin', d6, hd=2, combat=2)
+    lauf = Character('Luaf', d6, hd=1, combat=1)
     equip(tzin, sword, arm_med, sh_med)
     equip(lauf, battle_axe, arm_hvy)
 
     gang = Party(tzin, lauf)
     print(gang)
-    #gang.combat(Orc(), Orc(), Orc(), Orc(), Ogre())
+    # gang.combat(Orc(), Orc(), Orc(), Orc(), Ogre())
     gang.combat(Noble(), Noble())
     print()
     print(gang)

@@ -4,11 +4,12 @@
 import re
 import sys
 from collections import defaultdict
+from pathlib import Path
 
-import rpg.parse
-import rpg.legal
 import munge
 import munge.rst
+import rpg.legal
+import rpg.parse
 import spell_data
 
 level_names = ('', '1st Circle', '2nd Circle', '3rd Circle', '4th Circle', '5th Circle', '6th Circle', '7th Circle', '8th Circle', '9th Circle')
@@ -20,7 +21,7 @@ def strip_college(spell):
     return spell
 
 
-class Spell(object):
+class Spell:
     def __init__(self):
         self.name = None        # Just name not including college.
         self.college = None     # Things like cleric, necromancer.
@@ -37,7 +38,7 @@ class Spell(object):
     @property
     def fullname(self):
         '''Name and college.'''
-        return '%s (%s)' % (self.name, self.college)
+        return f'{self.name} ({self.college})'
 
     def as_dict(self):
         return dict(name=self.name, college=self.college, level=self.level, range=self.range, duration=self.duration, source=self.source)
@@ -56,26 +57,26 @@ class Spell(object):
                 durations.append(varmit)
         if levels:
             levels.insert(0, self)
-            level = ', '.join('%s (%s)' % (s.level, s.college) for s in levels)
+            spell_level = ', '.join(f'{s.level} ({s.college})' for s in levels)
         else:
-            level = self.level
+            spell_level = self.level
         if ranges:
             ranges.insert(0, self)
-            range = ', '.join('%s (%s)' % (s.range, s.college) for s in ranges)
+            spell_range = ', '.join(f'{s.range} ({s.college})' for s in ranges)
         else:
-            range = self.range
+            spell_range = self.range
         if durations:
             durations.insert(0, self)
-            duration = ', '.join('%s (%s)' % (s.duration, s.college) for s in durations)
-            duration = duration.replace('rounds per level', 'rnds/lvl').replace('round per level', 'rnd/lvl').replace('hour per level', 'hr/lvl').replace(' per level', '/lvl')
+            spell_duration = ', '.join(f'{s.duration} ({s.college})' for s in durations)
+            spell_duration = spell_duration.replace('rounds per level', 'rnds/lvl').replace('round per level', 'rnd/lvl').replace('hour per level', 'hr/lvl').replace(' per level', '/lvl')
         else:
-            duration = self.duration
-        lines.append('.. _%s:\n' % self.name.lower())
+            spell_duration = self.duration
+        lines.append(f'.. _{self.name.lower()}:\n')
         lines.append(self.fullname)
         lines.append('-' * len(self.fullname))
-        lines.append(':Circle: %s' % level)
-        lines.append(':Range: %s' % range)
-        lines.append(':Duration: %s' % duration)
+        lines.append(f':Circle: {spell_level}')
+        lines.append(f':Range: {spell_range}')
+        lines.append(f':Duration: {spell_duration}')
         for para in self.body:
             if not para.strip().startswith('-'):
                 lines.append('')
@@ -94,9 +95,9 @@ def spell_index():
             print(e)
             print(line)
         if college:
-            name = '%s (%s)' % (name, college)
+            name = f'{name} ({college})'
         if not source.startswith('AEC'):
-            source = 'TT %s' % source
+            source = f'TT {source}'
         index[name.lower()] = source
     return index
 
@@ -122,7 +123,7 @@ def merge_dupe(spells):
     if len(spells) == 1:
         return spells
     unique = list()
-    by_college = dict((s.college, s) for s in spells)
+    by_college = {s.college: s for s in spells}
     for spell in spells:
         body = (' '.join(spell.body)).lower()
         if 'same name' in body:
@@ -133,7 +134,7 @@ def merge_dupe(spells):
                 college = 'M'
             else:
                 college = None
-            core = by_college.get(college, None)
+            core = by_college.get(college)
             if core:
                 # print(f'  variant of {core.fullname}', file=sys.stderr)
                 core.variants.append(spell)
@@ -154,7 +155,7 @@ def parse_spells(parse_me, skip=()):
     source_index = spell_index()
     spells = list()
     for college, file, parser in parse_me:
-        for spell in parser(open(file)):
+        for spell in parser(Path(file).open()):
             if spell.college is None:
                 spell.college = college
             # Verify spell is "known".
@@ -165,7 +166,7 @@ def parse_spells(parse_me, skip=()):
                 continue
             source = source_index.get(fullname, source_index.get(basename, None))
             if source is None:
-                raise Exception('Unknown Spell: %s' % spell.fullname)
+                raise ValueError(f'Unknown Spell: {spell.fullname}')
             spell.source = source
             spells.append(spell)
     spells.sort(key=lambda x: x.name)
@@ -204,7 +205,7 @@ def split_spells(lines):
             if match:
                 name = match.group(1)
                 if match.group(2) not in valid_colleges:
-                    raise Exception('Unknown college: %s (%s)' % (name, match.group(2)))
+                    raise ValueError(f'Unknown college: {name} ({match.group(2)})')
             if body:  # End previous para if any.
                 spell.body.append(' '.join(body))
                 body = list()
@@ -218,10 +219,10 @@ def split_spells(lines):
         elif line.startswith('Range:'):
             spell.range = line.split(':', 1)[1].strip()
         else:
-            line = line.rstrip()
-            body.append(line)
+            myline = line.rstrip()
+            body.append(myline)
             # Start new paragraph.
-            if len(line) < 70 and line.endswith('.'):
+            if len(myline) < 70 and myline.endswith('.'):
                 spell.body.append(' '.join(body))
                 body = list()
     # Don't forget the last spell/para.
@@ -273,10 +274,10 @@ def output_tm(trademarks):
     print(munge.by_para(trademarks))
 
 
-def output_ogl(sec15=(), open='This entire work is designated as Open Game Content under the OGL.', product=''):
+def output_ogl(sec15=(), open_content='This entire work is designated as Open Game Content under the OGL.', product=''):
     print('\n.. page:: oneColumn')
     print(munge.rst.title('=', 'Open Game License'))
-    print('\n', open)
+    print('\n', open_content)
     if product:
         print('\n', product)
     print(munge.rst.title('-', 'License'))
@@ -295,24 +296,25 @@ def output_descriptions(spells):
         print(spell)
         print('\n')
     for spell in spells:
-        print('.. |%s| replace:: *%s*' % (spell.name, spell.name))
+        print(f'.. |{spell.name}| replace:: *{spell.name}*')
 
 
 def output_unlisted(byname):
     '''Spells not part of normal spell lists.
+
     Including tomes, excluding divine, rituals and wizard.
     '''
     def funknsort(x):
         # put tome spells last
         if x.college in ('T',):
-            return 'zzzzzz%s' % x.name
+            return f'zzzzzz{x.name}'
         return x.name
     listed = set()
     for college in ['Elementalist', 'Illusionist', 'Mage', 'Necromancer', 'Vivimancer']:
         for level in spell_data.lists[college.lower()]:
-            listed |= set(strip_college(s).lower() for s in level)
-    all = set(strip_college(s.name).lower() for s in byname.values() if s.college not in ('D', 'W', 'R'))
-    byname, bylevel, byclass = by_things(byname[s] for s in (all - listed))
+            listed |= {strip_college(s).lower() for s in level}
+    spells = {strip_college(s.name).lower() for s in byname.values() if s.college not in ('D', 'W', 'R')}
+    byname, bylevel, _byclass = by_things(byname[s] for s in (spells - listed))
     output_college_list('unlisted', bylevel, '#. %(name)s (%(college)s)', sort=funknsort)
 
 
@@ -322,7 +324,7 @@ def get_college_list(college, byname):
 
 def output_level(level, spells, template, sort=lambda x: x.name):
     '''Output one level of spells.'''
-    print
+    print()
     for spell in sorted(spells, key=sort):
         print(template % spell.as_dict())
 
@@ -331,7 +333,7 @@ def output_college_list(college, spells, template='#. %(name)s', page=5, sort=la
     '''College's list of spells.'''
     if page:
         print('\n.. page:: spellList\n')
-        print(munge.rst.title('-', '%s Spell List' % college))
+        print(munge.rst.title('-', f'{college} Spell List'))
         print('\n.. raw:: pdf\n\n   FrameBreak')
     for level in sorted(spells.keys()):
         if level == page:
@@ -342,14 +344,14 @@ def output_college_list(college, spells, template='#. %(name)s', page=5, sort=la
 
 def do_spell_sheet(spells, college):
     '''Back side of char sheet, five columns.'''
-    byname, bylevel, byclass = by_things(spells)
+    byname, _bylevel, _byclass = by_things(spells)
     spells = get_college_list(college.lower(), byname)
-    print('%s Spell List' % college, file=sys.stderr)
+    print(f'{college} Spell List', file=sys.stderr)
     for level in sorted(spells.keys()):
         print(munge.rst.title('-', level_names[level]))
         print()
         for spell in sorted(spells[level], key=lambda x: x.name):
-            print('#. %(name)s' % spell.as_dict())
+            print(f'#. {spell.name}')
         if level >= 5:
             break
         print('\n.. raw:: pdf\n\n   FrameBreak')
@@ -374,11 +376,11 @@ def do_spell_list(spells):
 
 def do_grimoire(spells):
     merged = merge_variants(spells)
-    byname, bylevel, byclass = by_things(spells)
-    print('%i spells, %i after merge' % (len(spells), len(merged)), file=sys.stderr)
+    byname, _bylevel, byclass = by_things(spells)
+    print(f'{len(spells)} spells, {len(merged)} after merge', file=sys.stderr)
 
     print(munge.rst.title('*', 'Gold & Glory Grimoire'))
-    print('''A compact reference of %i spells for use at the game table, ver 2.1.''' % len(merged))
+    print(f'''A compact reference of {len(merged)} spells for use at the game table, ver 2.1.''')
     print('''Compiled and **heavily** edited by Norman J. Harman Jr. <njharman@gmail.com>.''')
     print(
         '''\nSourced from Daniel Proctor's *"AEC"*, Gavin Norman's *"T&T"*, Greg Gillespie's *"BMI & BMII"*.'''

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# vim: set fileencoding=utf-8 :
 
 """Extensive "What are monsters doing".
 
@@ -10,6 +9,7 @@ https://blog.d4caltrops.com/p/ose-encounter-activity-tables.html
 """
 
 import random
+
 import click
 
 # from dice import d6, d12, d100
@@ -14029,8 +14029,10 @@ class Table:
     """What are monsters doing table for one monster."""
 
     def __init__(self, name, rows):
-        assert len(name)
-        assert len(rows)
+        if not len(name):
+            raise ValueError('name must not be empty')
+        if not len(rows):
+            raise ValueError('rows must not be empty')
         if ',' in name:
             one, two = [x.strip() for x in name.split(',')]
             name = f'{two} {one}'
@@ -14051,8 +14053,8 @@ def parse_tables(data):
     tables = {}
     rows = []
     name = ''
-    for line in data.split('\n'):
-        line = line.strip()
+    for aline in data.split('\n'):
+        line = aline.strip()
         if not line:
             continue
         if line.startswith('Table:'):
@@ -14070,12 +14072,12 @@ def parse_tables(data):
 tables = parse_tables(wamd_data)
 
 
-@click.group()
-# @click.option('-r', '--roll', default=None, type=int, help='Use this d100 roll.')
+@click.command()
+# TODO: add option for specific monster.
+# TODO: add option to pick number of rolls instead of print entire table
 @click.pass_context
 def cli(ctx):
     """Roll up BX random encounters."""
-    # ctx.obj['roll'] = roll
     for monster in ose_monsters:
         print(tables[monster])
 

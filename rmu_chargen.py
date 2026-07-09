@@ -6,10 +6,10 @@ Copyright: Released into Public Domain Mar 2026.
 Website: http://trollandflame.blogspot.com/
 """
 
+import cmd
 import random
 from collections import namedtuple
-import cmd
-import readline
+
 from dice import d100
 
 POWERLEVELS = {
@@ -114,7 +114,7 @@ class Species(namedtuple('Species', [
     'Name', 'BonusDP',
     'Ag', 'Co', 'Em', 'In', 'Me', 'Pr', 'Qu', 'Re', 'SD', 'St',
     'RR_Cha', 'RR_Ess', 'RR_Men', 'RR_Phy',
-    'Endurance', 'Hits', 'Recovery'
+    'Endurance', 'Hits', 'Recovery',
     ])):
 
     def __str__(self):
@@ -125,13 +125,13 @@ SPECIES = {
         'Human, common', 50,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0,
-        0, 25, 1.0
+        0, 25, 1.0,
         ),
     'Half-Elf': Species(
         'Half-Elf', 18,
         2, 0, 0, 0, 0, 2, 2, 0, -3, 2,
         -5, -5, -5, 5,
-        5, 25, 1.0
+        5, 25, 1.0,
         ),
     }
 
@@ -170,6 +170,14 @@ def statd100(minimum):
     if roll < minimum:
         return statd100(minimum)
     return roll
+
+
+def parse_choice(text, count):
+    """Parse a 1-based menu choice, raising ValueError if out of range."""
+    value = int(text)
+    if value <= 0 or value > count:
+        raise ValueError()
+    return value
 
 
 def match_stat(stats, name):
@@ -324,14 +332,12 @@ class CharacterGen(cmd.Cmd):
             print(f' {i+1}) {x}')
         choice = input('choice > ')
         if not choice.strip():
-            print(f'')
+            print('')
             return
         try:
-            choice = int(choice)
-            if choice <= 0 or choice > len(choices):
-                raise ValueError()
+            choice = parse_choice(choice, len(choices))
         except ValueError:
-            print(f'Invalid choice\n')
+            print('Invalid choice\n')
         else:
             choices[choice-1][1]()
 
@@ -382,11 +388,9 @@ class CharacterGen(cmd.Cmd):
             print(f'run "boost" to pick {self.char.stat_boosts} remaining boosts.')
             return
         try:
-            choice = int(choice)
-            if choice <= 0 or choice > len(choices):
-                raise ValueError()
+            choice = parse_choice(choice, len(choices))
         except ValueError:
-            print(f'Invalid choice\n')
+            print('Invalid choice\n')
         else:
             choices[choice-1]()
             self.char.stat_boosts -= 1

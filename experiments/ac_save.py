@@ -1,18 +1,18 @@
 #!/usr/bin/python
-'''Armor class vs shield save experiments.
+"""Armor class vs shield save experiments.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
 Website: http://trollandflame.blogspot.com/
-'''
+"""
 
-from dice import *
+from dice import d10, d20
 
 
 def hitcha(count, AC, tohit, bonus):
-    '''AC + tohit + d20 >= 20 = hit
+    """AC + tohit + d20 >= 20 = hit
     xdlucky comes up number = save where x = bonus
-    '''
+    """
     lucky10 = d10()
     lucky20 = d20()
     AB = AC - bonus
@@ -53,26 +53,34 @@ def hitcha(count, AC, tohit, bonus):
 
 
 def oneser(stats):
-    print('{count}: hit AC {ab} {hitab:6} {hab_p:5.2f}%'.format(**stats))
-    print('{count}: hit AC {ac} {hitac:6} {hac_p:5.2f}%'.format(**stats))
-    print('{0:{1}}: difference      {diff_p:5.2f}%'.format(' ', len(str(stats['count'])), **stats))
-    print('{count}: sav10    {sav10:6} {s10_p:5.2f}%'.format(**stats))
+    print(f"{stats['count']}: hit AC {stats['ab']} {stats['hitab']:6} {stats['hab_p']:5.2f}%")
+    print(f"{stats['count']}: hit AC {stats['ac']} {stats['hitac']:6} {stats['hac_p']:5.2f}%")
+    print(f"{' ':{len(str(stats['count']))}}: difference      {stats['diff_p']:5.2f}%")
+    print(f"{stats['count']}: sav10    {stats['sav10']:6} {stats['s10_p']:5.2f}%")
 
 
 def ac_rangefull(count, tohit, bonus):
-    print('{count} iterations of +{tohit} tohit vs +{bonus} todef.'.format(count=count, tohit=tohit, bonus=bonus))
+    print(f'{count} iterations of +{tohit} tohit vs +{bonus} todef.')
     print('     modifying AC  |    d10 save(s)      diff |')
     for armor in range(10, 1, -1):
         stats = hitcha(count, armor, tohit, bonus)
-        print('AC {ab:2} {hitab}/{hab_p:.2f}% | AC {ac:2} {hit10}/{h10_p:.2f}% {diff10_p:5.2f}% | sav10 {sav10}/{s10_p:5.2f}% sav20 {sav20}/{s20_p:5.2f}% of {hitac} |'.format(**stats))
+        print(
+            f"AC {stats['ab']:2} {stats['hitab']}/{stats['hab_p']:.2f}% | "
+            f"AC {stats['ac']:2} {stats['hit10']}/{stats['h10_p']:.2f}% {stats['diff10_p']:5.2f}% | "
+            f"sav10 {stats['sav10']}/{stats['s10_p']:5.2f}% "
+            f"sav20 {stats['sav20']}/{stats['s20_p']:5.2f}% of {stats['hitac']} |",
+        )
 
 
 def ac_range(count, tohit, bonus):
-    print('{count} iterations of +{tohit} tohit vs +{bonus} to AC or {bonus}d10 save rolls.'.format(count=count, tohit=tohit, bonus=bonus))
+    print(f'{count} iterations of +{tohit} tohit vs +{bonus} to AC or {bonus}d10 save rolls.')
     print('hit w/ bonus | hit w/ saves |  diff  |')
     for armor in range(10, 1, -2):
         stats = hitcha(count, armor, tohit, bonus)
-        print('AC {ab:2} {hab_p:5.2f}% | AC {ac:2} {h10_p:5.2f}% | {diff10_p:5.2f}% |'.format(**stats))
+        print(
+            f"AC {stats['ab']:2} {stats['hab_p']:5.2f}% | "
+            f"AC {stats['ac']:2} {stats['h10_p']:5.2f}% | {stats['diff10_p']:5.2f}% |",
+        )
 
 
 if __name__ == '__main__':
@@ -81,7 +89,7 @@ if __name__ == '__main__':
     tohit = 5
     for bonus in range(1, 8):
         ac_range(count, tohit, bonus)
-        print
+        print()
 
 #    for tohit in range(1,10):
 #        for bonus in range(1, 4):

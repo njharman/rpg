@@ -12,11 +12,17 @@ import random
 
 import click
 
-d2 = lambda: random.randint(1, 2)
-d4 = lambda: random.randint(1, 4)
-d6 = lambda: random.randint(1, 6)
-d12 = lambda: random.randint(1, 12)
-d100 = lambda: random.randint(1, 100)
+
+def d2():
+    return random.randint(1, 2)
+def d4():
+    return random.randint(1, 4)
+def d6():
+    return random.randint(1, 6)
+def d12():
+    return random.randint(1, 12)
+def d100():
+    return random.randint(1, 100)
 
 
 class OddStocking:
@@ -83,11 +89,11 @@ class OddStocking:
 
     def stock_rooms(self, rooms):
         """Contents of X rooms iterator."""
-        for i in range(rooms):
-            contents = list()
+        for _ in range(rooms):
+            contents = []
             treasure = False
             if d6() <= 2:
-                contents.append('%dHD monster' % self.MONSTER[self.level]())
+                contents.append(f'{self.MONSTER[self.level]()}HD monster')
                 treasure = d6() <= 3
             else:
                 treasure = d6() == 1
@@ -130,7 +136,7 @@ class BxStocking:
         'art',
         'statue',
         'fungal/other growth',
-        'extreme odor'
+        'extreme odor',
         ]
     ROOMTRAP = [
         'pit {self.level*10}ft',
@@ -180,7 +186,7 @@ class BxStocking:
             }
 
     def fstr(self, template):
-        return eval(f"f'{template}'", globals(), locals())
+        return eval(f"f'{template}'", globals(), locals())  # noqa: S307
 
     def _jewelry(self, x):
         """Roll up some jewelry."""
@@ -195,37 +201,34 @@ class BxStocking:
             jew = self._jewelry(1) if d100() <= 2 else ''
             magic = ', 1 magic' if d100() <= 2 else ''
             return f'{d6()*100:,}sp{gp}{gem}{jew}{magic}'
-        elif self.level <= 3:
+        if self.level <= 3:
             gp = f', {d6()*100:,}gp' if d100() <= 50 else ''
             gem = f', {d6()} gems' if d100() <= 10 else ''
             jew = self._jewelry(d2()) if d100() <= 5 else ''
             magic = ', 1 magic' if d100() <= 8 else ''
             return f'{d12()*100:,}sp{gp}{gem}{jew}{magic}'
-        elif self.level <= 5:
+        if self.level <= 5:
             gem = f', {d6()} gems' if d100() <= 20 else ''
             jew = self._jewelry(d4()) if d100() <= 10 else ''
             magic = ', 1 magic' if d100() <= 10 else ''
             return f'{d6()*1000:,}sp, {d6()*200:,}gp{gem}{jew}{magic}'
-        elif self.level <= 7:
+        if self.level <= 7:
             gem = f', {d6()} gems' if d100() <= 30 else ''
             jew = self._jewelry(d6()) if d100() <= 15 else ''
             magic = ', 1 magic' if d100() <= 15 else ''
             return f'{d6()*2000:,}sp, {d6()*500:,}gp{gem}{jew}{magic}'
-        else:
-            gem = f', {d6()} gems' if d100() <= 40 else ''
-            jew = self._jewelry(d6()) if d100() <= 20 else ''
-            magic = ', 1 magic' if d100() <= 20 else ''
-            return f'{d6()*5000:,}sp, {d6()*1000:,}gp{gem}{jew}{magic}'
+        gem = f', {d6()} gems' if d100() <= 40 else ''
+        jew = self._jewelry(d6()) if d100() <= 20 else ''
+        magic = ', 1 magic' if d100() <= 20 else ''
+        return f'{d6()*5000:,}sp, {d6()*1000:,}gp{gem}{jew}{magic}'
 
     def _empty(self, roll):
         """1-in-6 hidden treasure"""
         if d6() == 1:
             if d6() <= 4:
                 return self.fstr(f'Hidden and trapped {self._treasure(roll)}; {random.choice(self.TREASURETRAP)}')
-            else:
-                return self.fstr(f'Hidden {self._treasure(roll)}')
-        else:
-            return 'Empty'
+            return self.fstr(f'Hidden {self._treasure(roll)}')
+        return 'Empty'
 
     def _monster(self, roll):
         """3-in-6 w/treasure"""
@@ -239,12 +242,11 @@ class BxStocking:
         """2-in-6 trapped treasure, else room trap."""
         if d6() <= 2:
             return self.fstr(f'Trapped {self._treasure(roll)}; {random.choice(self.TREASURETRAP)}')
-        else:
-            return self.fstr(f'Trap: {random.choice(self.ROOMTRAP)}')
+        return self.fstr(f'Trap: {random.choice(self.ROOMTRAP)}')
 
     def stock_rooms(self, rooms):
         """Contents of X rooms iterator."""
-        for i in range(rooms):
+        for _i in range(rooms):
             roll = d6()
             yield self.STOCKING_TABLE[roll](roll)
 

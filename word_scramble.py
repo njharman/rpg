@@ -23,11 +23,11 @@ def progmulagate(v, c):
     random.shuffle(vowels)
     random.shuffle(consts)
     word = list()
-    if 1 == random.randint(1, 3):
+    if random.randint(1, 3) == 1:
         word.append(vowels.pop())
     for letter in consts:
         word.append(letter)
-        if vowels and 1 != random.randint(1, 4):
+        if vowels and random.randint(1, 4) != 1:
             word.append(vowels.pop())
     return ''.join(word)
 
@@ -44,8 +44,8 @@ if __name__ == '__main__':
     text = sys.argv[1]
     vowels, consts = fuxate(text)
 
-    for x in range(5):
+    for _ in range(5):
         print(simple(text))
 
-    for x in range(10):
+    for _ in range(10):
         print(progmulagate(vowels, consts))

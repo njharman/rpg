@@ -2,8 +2,27 @@
 # +3 +2 +1            -1     +2 +2 +1 +1     -1
 import random
 
-from die import *
-from chargen_data import *
+from chargen_data import (
+    add_honors,
+    city_biz,
+    crimes,
+    entitlements,
+    hamlet_biz,
+    heritages,
+    inheirited_armors,
+    inheirited_deeds,
+    inheirited_mounts,
+    inheirited_weapons,
+    offices,
+    races,
+    siblings,
+    socialclasses,
+    starting_money,
+    titles,
+    town_biz,
+    village_biz,
+)
+from die import d4, d20, d100, do_roll
 
 
 def do_table(table, roll=None):
@@ -13,9 +32,10 @@ def do_table(table, roll=None):
     for target, item in table:
         if roll <= target:
             return item
+    return None
 
 
-class Relative(object):
+class Relative:
     """
     Parents, siblings, etc
     """
@@ -28,7 +48,7 @@ class Relative(object):
         return self.relation
 
 
-class Unknown(object):
+class Unknown:
     """
     Missing parent
     """
@@ -36,15 +56,15 @@ class Unknown(object):
     def __init__(self, relation):
         self.relation = relation
 
-    def __nonzero__(self):
+    def __bool__(self):
         """always claim to not be here"""
         return False
 
     def __str__(self):
-        return self.relation + " Unknown"
+        return self.relation + ' Unknown'
 
 
-class Character(object):
+class Character:
     """
     Assign Abilities
     Pick Gender
@@ -56,17 +76,17 @@ class Character(object):
     """
 
     def __init__(self):
-        self._gender = "Male"
+        self._gender = 'Male'
         self._money_modifier = 0   # number modifier
         self._race_dict = {}  # race info dict
         self._profession_dict = {}  # class info dict
         self._honor = []    # list of honor adjustments ("reason", adj)
-        self._info = []     # list of informations about character
+        self._info = []     # list of information about character
         self.siblings = []
         self.buildpoints = 5
 
     def __getattr__(Self, name):
-        return ""
+        return ''
 
     def _prop_set_gender(self, gender):
         self._gender = gender
@@ -91,7 +111,7 @@ class Character(object):
     def _add_honor(self, cause):
         """Add tuple(reason adjustment) to honor list"""
         honor = add_honors.get(cause, (None, 0))
-        if honor[0] != None:
+        if honor[0] is not None:
             self._honor.append(honor)
 
     def _add_info(self, info):
@@ -100,9 +120,9 @@ class Character(object):
 
     def calc_physical(self):
         gender = self.gender.lower()[0]
-        self.height = do_roll(self._race_value('%sheight' % gender, "0d1"))
-        self.weight = do_roll(self._race_value('%sweight' % gender, "0d1"))
-        self.age = do_roll(self._race_value('age', "0d1"))
+        self.height = do_roll(self._race_value(f'{gender}height', '0d1'))
+        self.weight = do_roll(self._race_value(f'{gender}weight', '0d1'))
+        self.age = do_roll(self._race_value('age', '0d1'))
 
     def set_attributes(self, stats):
         self.strength = stats[0]
@@ -113,41 +133,41 @@ class Character(object):
         self.charisma = stats[5]
 
     def roll_birthdate(self):
-        return "todo"
+        return 'todo'
 
     def roll_birth(self):
         """set stuff based on birth 4g+4h"""
         self.birthdate = self.roll_birthdate()
-        self.father = Relative("Father")
-        self.mother = Relative("Mother")
+        self.father = Relative('Father')
+        self.mother = Relative('Mother')
 
-        roll = d100 + self._race_value("4g")
+        roll = d100 + self._race_value('4g')
         if roll > 90:
-            illegitimate = d100 + self._race_value("4h")
+            illegitimate = d100 + self._race_value('4h')
             if illegitimate <= 5:
-                self.illegitimate = "You were abandoned at birth."
-                self.father = Unknown("Father")
-                self.mother = Unknown("Mother")
-                self._add_honor("abandoned")
-                self.social = "LLC"
+                self.illegitimate = 'You were abandoned at birth.'
+                self.father = Unknown('Father')
+                self.mother = Unknown('Mother')
+                self._add_honor('abandoned')
+                self.social = 'LLC'
             elif illegitimate <= 30:
-                self.illegitimate = "Birth was result of rape."
-                self.father = Unknown("Father")
-                self._add_honor("son of rapist")
+                self.illegitimate = 'Birth was result of rape.'
+                self.father = Unknown('Father')
+                self._add_honor('son of rapist')
             elif illegitimate <= 60:
-                self.illegitimate = "Mother was a prostitue."
-                self.father = Unknown("Father")
-                self._add_honor("prostitute mother")
+                self.illegitimate = 'Mother was a prostitue.'
+                self.father = Unknown('Father')
+                self._add_honor('prostitute mother')
             elif illegitimate <= 90:
-                self.illegitimate = "Birth was result of an adulterous affair."
+                self.illegitimate = 'Birth was result of an adulterous affair.'
                 if d100 <= 25:
-                    self.father = Unknown("Father")
-                self._add_honor("illegitimate birth")
+                    self.father = Unknown('Father')
+                self._add_honor('illegitimate birth')
             else:
-                self.illegitimate = "Birth was arranged through a surrogate mother."
+                self.illegitimate = 'Birth was arranged through a surrogate mother.'
                 if d100 <= 75:
-                    self.mother = Unknown("Mother")
-                self._add_honor("surrogate mother")
+                    self.mother = Unknown('Mother')
+                self._add_honor('surrogate mother')
 
         def _remarry(parent):
             attr = getattr(self, parent)
@@ -155,8 +175,8 @@ class Character(object):
             if roll == 1:
                 attr.famous = True
             if roll >= 15:
-                setattr(self, "birth%s" % parent, attr)
-                setattr(self, parent, Relative("Step Father"))
+                setattr(self, f"birth{parent}", attr)
+                setattr(self, parent, Relative('Step Father'))
 
         if self.father and d100 >= 81:
             self.father.deceased = True
@@ -166,9 +186,9 @@ class Character(object):
         if (not self.mother or self.mother.deceased) and (not self.father or self.father.deceased):
             self.orphan = True
         elif self.mother and not self.father:
-            _remarry("mother")
+            _remarry('mother')
         elif self.father and not self.mother:
-            _remarry("father")
+            _remarry('father')
 
     def roll_parental_quaity(self):
         """4I"""
@@ -180,12 +200,9 @@ class Character(object):
 
     def roll_siblings(self):
         roll = d100
-        if roll >= 96:
-            illegitimate = -20
-        else:
-            illegitimate = 0
-        for i in range(do_table(siblings, roll)):
-            sibling = Relative(random.choice(["Sister", "Brother"]))
+        illegitimate = -20 if roll >= 96 else 0
+        for _i in range(do_table(siblings, roll)):
+            sibling = Relative(random.choice(['Sister', 'Brother']))
             # todo make them illegitimate
             self.siblings.append(sibling)
             if d100 > 80:
@@ -193,11 +210,11 @@ class Character(object):
             else:
                 roll = d100 + self.charisma + illegitimate
                 if roll <= 25:
-                    sibling.something = "bitter rival"
+                    sibling.something = 'bitter rival'
                 elif roll > - 85:
-                    sibling.something = "devoted"
+                    sibling.something = 'devoted'
                 else:
-                    sibling.something = "meh"
+                    sibling.something = 'meh'
                 roll = d100
                 # > 95 twins > 99 identical twins
 
@@ -205,25 +222,25 @@ class Character(object):
         count = len([s for s in self.siblings if not s.deceased])
         count = len(self.siblings)
         if count == 0:
-            self._add_info("First born")
+            self._add_info('First born')
         elif count == 1:
-            self._add_info(random.choice["First born", "Second born"])
+            self._add_info(random.choice['First born', 'Second born'])
         elif count == 2:
-            self._add_info(random.choice["First born", "Middle born", "Last born"])
+            self._add_info(random.choice['First born', 'Middle born', 'Last born'])
         elif count == 3:
-            self._add_info(random.choice["First born", "Second born", "Second to last born", "Last born"])
+            self._add_info(random.choice['First born', 'Second born', 'Second to last born', 'Last born'])
         else:
-            self._add_info(random.choice["First born", "Second born", "Middle born", "Middle born", "Second to last born", "Last born"])
-        if "Middle born" in self._info:
+            self._add_info(random.choice['First born', 'Second born', 'Middle born', 'Middle born', 'Second to last born', 'Last born'])
+        if 'Middle born' in self._info:
             pass
             # roll minor personality quirk
-        if "First born" in self._info:
+        if 'First born' in self._info:
             self._money_modifier += 5
-        if "Second born" in self._info:
+        if 'Second born' in self._info:
             self._money_modifier += 2
-        if "Second to last born" in self._info:
+        if 'Second to last born' in self._info:
             self._money_modifier -= 2
-        if "Last born" in self._info:
+        if 'Last born' in self._info:
             self._money_modifier -= 5
 
     def roll_social(self):
@@ -243,33 +260,29 @@ class Character(object):
             return ranks[index]
 
         social = do_table(socialclasses)
-        if social == "SLC":
+        if social == 'SLC':
             roll = d20
             if roll <= 5:
-                self._add_info("Runaway slave.")
+                self._add_info('Runaway slave.')
             elif roll <= 15:
-                self._add_info("Criminal, charged with %s" % do_table(crimes))
+                self._add_info(f"Criminal, charged with {do_table(crimes)}")
             else:
-                self._add_info("Stripped of former status and banished.")
+                self._add_info('Stripped of former status and banished.')
             self.social = social
             _set_parents_social(do_table(socialclasses))
             return
 
         _set_parents_social(social)
         if self.orphan:
-            if self.father:
-                social = _shift_social(social, -2)
-            else:
-                social = "LLC"
-        elif self.illegitimate:
-            if self.father and d100 <= 85:
-                social = _shift_social(social, -1)
+            social = _shift_social(social, -2) if self.father else 'LLC'
+        elif self.illegitimate and self.father and d100 <= 85:
+            social = _shift_social(social, -1)
         self.social = social
 
-        if social == "MUC":
+        if social == 'MUC':
             self.roll_office()
             self.roll_entitlements()
-        if social == "UUC":
+        if social == 'UUC':
             self.roll_title()
             self.roll_entitlements()
 
@@ -291,7 +304,7 @@ class Character(object):
         count = 1
         while count > 0:
             roll = d100
-            if self.social == "UUC":
+            if self.social == 'UUC':
                 roll += 20
             if roll > 100:
                 count += 1
@@ -305,7 +318,7 @@ class Character(object):
 
     def roll_money(self):
         """must do class first"""
-        mod = dict(SLC=-30, LLC=-20, MLC=-15, ULC=-10, LMC=-5, MMC=0, UMC=+5, LUC=+10, MUC=+15, UUC=+20)
+        mod = {'SLC': -30, 'LLC': -20, 'MLC': -15, 'ULC': -10, 'LMC': -5, 'MMC': 0, 'UMC': +5, 'LUC': +10, 'MUC': +15, 'UUC': +20}
         roll = d100 + self._money_modifier + mod[self.social]
         if self.orphan:
             roll -= 20
@@ -334,36 +347,36 @@ class Character(object):
         count = 1
         while count > 0:
             roll = d100
-            if self.social == "UUC":
+            if self.social == 'UUC':
                 roll += 20
             if roll <= 100:
                 break
             count += 1
         result = do_table(inheirited_deeds, roll)
-        data = dict(country="country")
-        if "biz" in result:
+        data = {'country': 'country'}
+        if 'biz' in result:
             data['biz'] = self.roll_business(result)
-        self._add_info("Inherited deed to %s." % (result % data))
+        self._add_info('Inherited deed to %s.' % (result % data))
 
     def roll_business(self, result):
-        if "city" in result:
+        if 'city' in result:
             biz = city_biz
-        elif "town" in result:
+        elif 'town' in result:
             biz = town_biz
-        elif "village" in result:
+        elif 'village' in result:
             biz = village_biz
         else:
             biz = hamlet_biz
         return random.choice(biz)
 
     def roll_weapon(self):
-        mod = dict(SLC=-1000, LLC=-500, MLC=-200, ULC=-100, LMC=-50, MMC=0, UMC=+50, LUC=+100, MUC=+200, UUC=+500)
-        self._add_info("Inherited weapon, %s." % do_table(inheirited_weapons, random.randint(1, 10000)))
+        # {"SLC": -1000, "LLC": -500, "MLC": -200, "ULC": -100, "LMC": -50, "MMC": 0, "UMC": +50, "LUC": +100, "MUC": +200, "UUC": +500}
+        self._add_info(f"Inherited weapon, {do_table(inheirited_weapons, random.randint(1, 10000))}.")
 
     def roll_armor(self):
-        mod = dict(SLC=-500, LLC=-200, MLC=-100, ULC=-50, LMC=-25, MMC=0, UMC=+25, LUC=+50, MUC=+100, UUC=+200)
-        self._add_info("Inherited armor, %s." % do_table(inheirited_armors, random.randint(1, 4000)))
+        # {"SLC": -500, "LLC": -200, "MLC": -100, "ULC": -50, "LMC": -25, "MMC": 0, "UMC": +25, "LUC": +50, "MUC": +100, "UUC": +200}
+        self._add_info(f"Inherited armor, {do_table(inheirited_armors, random.randint(1, 4000))}.")
 
     def roll_mount(self):
-        mod = dict(SLC=-500, LLC=-200, MLC=-100, ULC=-50, LMC=-25, MMC=0, UMC=+25, LUC=+50, MUC=+100, UUC=+200)
-        self._add_info("Inherited mount, %s." % do_table(inheirited_mounts, random.randint(1, 6000)))
+        # {"SLC": -500, "LLC": -200, "MLC": -100, "ULC": -50, "LMC": -25, "MMC": 0, "UMC": +25, "LUC": +50, "MUC": +100, "UUC": +200}
+        self._add_info(f"Inherited mount, {do_table(inheirited_mounts, random.randint(1, 6000))}.")

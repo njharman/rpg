@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Simple command line dice roller.
 
-One or more rolls seperated by whitespace.
+One or more rolls separated by whitespace.
 
 Understands RPG dice notation: 3d6 d20+4 2d4-2 d6*3.
 Drop lowest: 3d6d1.
@@ -13,10 +13,10 @@ Copyright: Released into Public Domain Jan 2021
 Website: http://trollandflame.blogspot.com/
 """
 
+import random
 import re
 import sys
 import time
-import random
 
 random.seed(time.time())
 
@@ -53,10 +53,8 @@ def parse(text, verbose):
         text = ','.join(str(x) for x in rolls)
         if len(rolls) > 1 or mod:
             return f'{text}{op}{mod} = {total}'
-        else:
-            return f'{text}'
-    else:
-        return total
+        return f'{text}'
+    return total
 
 
 if __name__ == '__main__':

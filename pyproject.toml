@@ -1,13 +1,100 @@
 [project]
 name = "rpg"
 version = "0.1.0"
-description = "Collection of RPG tools and toys"
+description = "Norm's collection of RPG tools and toys"
 readme = "README.rst"
 requires-python = ">=3.14.6"
-# personal packages
-# rpglib - in this directory
-# dice - in this directory, not a package, symlinked where needed.
-# die
+# internal packages
+#   rpglib - in this directory
+#   dice - in this directory, not a package, symlinked where needed.
 dependencies = [
   "click",
+  "die",
+  ]
+
+[dependency-groups]
+dev = [
+  "pre-commit>=4.6.0",
+  "pytest>=8",
+  "ruff>=0.15.21",
+]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 120
+extend-include = ["d"]  # This is a python file (without extension for one-letter command line)
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint.per-file-ignores]
+"rpglib/rpg/parse.py" = [
+  "PLW2901", # `for` loop variable `para` overwritten by assignment target
+  ]
+"pcbackground/test_*.py" = [
+  "S101", # Use of `assert` detected (It's how pytest works!)
+  ]
+
+[tool.ruff.lint]
+ignore = [
+  "A005", # Module `calendar` shadows a Python standard-library module
+  "C408", # Unnecessary `list()` call (rewrite as a literal)
+  "COM819", # Trailing comma rox your sox!
+  "E501", # line too long
+  "E731", # I'll assign lambda expression if I want to, and I do!
+  "PLW0108", # Lambda may be unnecessary; consider inlining inner function
+  "F405", # star imports
+  "RET503", # Missing explicit return; No, learn Python instead!
+  "RUF012", # Mutable default value for class attribute
+  "S311", # Standard pseudo-random generators are not suitable for security/cryptographic purposes
+  "SIM108", # No like ternary operator
+  "SIM300", # Code well, yoda does
+  "TRY003", # Avoid specifying long messages outside the exception class
+  # temporary
+  "ERA001", # commented-out code
+  "PERF401", #PERF401 Use a list comprehension to create a transformed list  Use a list comprehension to create a transformed list
+  "RUF001", # String contains ambiguous `×`
+  "SIM115", # Use a context manager for opening files
+  "T201", # `print` found
+]
+select = [
+  #"ARG", # flake8 unused arguments (not really helpful, unused func args are common and ok)
+  #"D", # pydocstyle (too much)
+  #"N", # pep8-naming (too opinionated)
+  #"NPY", # numpy
+  #"PD", # pandas
+  #"PL", # Full Pylint (too much)
+  #"PLR", # Pylint refactor (too much/too opinionated)
+  "A", # flake8-builtins
+  "ASYNC", # https://docs.astral.sh/ruff/rules/#flake8-async-async
+  "B", # flake8-bugbear
+  "BLE", # flake8-blind-except
+  "C4", # unnecessary comprehensions, map()
+  "COM", # flake8-commas
+  "DTZ", # flake8-datetimez
+  "E", # pycodestyle
+  "ERA", # No commented out code
+  "EXE", # flake8-executable
+  "F", # pyflakes
+  "FLY", # flynt
+  "G", # flake8-logging-format
+  "I", # isort
+  "ICN", # https://github.com/joaopalmeiro/flake8-import-conventions
+  "ISC", # https://pypi.org/project/flake8-implicit-str-concat/
+  "LOG", # flake8-logging
+  "PERF", # perflint
+  "PIE", # https://pypi.org/project/flake8-pie/
+  "PLC", # Pylint conventions
+  "PLE", # Pylint error
+  "PLW", # Pylint warnings
+  "PT", # https://pypi.org/project/flake8-pytest-style/
+  "PTH", # flake8 use pathlib
+  "RET", # https://pypi.org/project/flake8-return/
+  "RUF", # Ruff rules
+  "S", # https://docs.astral.sh/ruff/rules/#flake8-bandit-s
+  "SIM", # https://pypi.org/project/flake8-simplify/
+  "T", # flake8-debugger
+  "TRY", # tryceratops
+  "UP", # pyupgrade
+  "W", # pycodestyle
   ]

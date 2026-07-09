@@ -10,7 +10,6 @@ import sys
 
 import die
 
-
 d6 = die.Standard(6)
 d6m = lambda: max(1, d6() - 1)
 d6p = lambda: d6() + 1

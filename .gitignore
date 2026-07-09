@@ -1,20 +1,17 @@
 .DS_Store
 
-# Packages
-*.py[co]
-*.egg
-*.egg-info
-dist
+# Package artifacts
+__pycache__
 build
-eggs
 sdist
-develop-eggs
 .installed.cfg
+# uv
 .venv
-
-# is a symlink to root direcotry dice.py TODO: make this a proper package
-experiements/dice.py
 
 # Unit test / coverage reports
 .coverage
+.pytest_cache
 .tox
+
+# is a symlink to root direcotry dice.py TODO: make this a proper package
+experiements/dice.py

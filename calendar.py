@@ -21,7 +21,7 @@ def cmp(a, b):
     return (a > b) - (a < b)
 
 
-class Weather(object):
+class Weather:
     """Generate weather.
 
     :param temps: sequence of temps from coldest to hottest.
@@ -42,7 +42,7 @@ class Weather(object):
             mymax = min(length - 1, avg + 2)  # (length / 2))
             temp = min(mymax, max(mymin, idx))
             # Also, increasing chance to back off from extremes.
-            if temp == mymin or temp == mymax:
+            if temp in (mymin, mymax):
                 cum = 0
                 for i in range(len(self._past_temp)):
                     if temp == self._past_temp[i]:
@@ -55,8 +55,7 @@ class Weather(object):
             """Cold or Hot front."""
             # Chance of jumping > 1 temp.
             delta = direction * random.choice((1, 1, 1, 1, 1, 2, 2, 3))
-            value = past + delta
-            return value
+            return past + delta
 
         def to_avg(avg):
             """Move temp to average."""
@@ -67,7 +66,7 @@ class Weather(object):
         def to_trend(avg):
             """Continue temp trend from past."""
             past = self._past_temp[0]
-            directions = list()
+            directions = []
             for temp in self._past_temp:
                 directions.append(cmp(past, temp))
             # Perturb if stable weather.
@@ -80,10 +79,7 @@ class Weather(object):
             self._past_temp[0] = avg_idx
             self._past_temp.rotate(1)
         # If past weather was not avg, increase trend chance.
-        if avg_idx == self._past_temp[0]:
-            forecast = (to_avg, to_avg, to_trend)
-        else:
-            forecast = (to_avg, to_trend, to_trend)
+        forecast = (to_avg, to_avg, to_trend) if avg_idx == self._past_temp[0] else (to_avg, to_trend, to_trend)
         self._idx = normalize(avg_idx, random.choice(forecast)(avg_idx))
         self._past_temp.rotate(1)
         self._past_temp[0] = self._idx
@@ -91,21 +87,21 @@ class Weather(object):
 
     def _calc_rain(self, season, temp):
         """Percipitation per "watch"."""
-        rainy = list()
+        rainy = []
         self._rain_chance += season.chance
         if self._raining:  # double chance if already raining
             self._rain_chance += season.chance
         self._raining = False
         chance = self._rain_chance
-        for i in range(4):
+        for _i in range(4):
             rain = ''
             if random.randint(1, 100) <= chance:
                 chance += 10
                 self._raining = True
                 if random.randint(1, 100) == 100:
-                    rain = '**%s**' % random.choice(season.freak)
+                    rain = f'**{random.choice(season.freak)}**'
                 else:
-                    rain = '*%s*' % random.choice(season.rain[temp])
+                    rain = f'*{random.choice(season.rain[temp])}*'
             rainy.append(rain)
         if not self._raining or self._rain_chance > 80:
             self._rain_chance = 0
@@ -117,7 +113,7 @@ class Weather(object):
         self.rain = self._calc_rain(season, self.temp)
 
 
-class Calendar(object):
+class Calendar:
     """Generate calendar."""
 
     def __init__(self, month_data, lunar_cycle, weather):
@@ -215,7 +211,7 @@ Season = namedtuple('Season', ['chance', 'rain', 'freak'])
 spring = Season(
         10,
         {
-            'froz': ('sleet', 'flury', ),
+            'froz': ('sleet', 'flury' ),
             'cold': ('sleet', ),
             'cool': ('driz', 'rain'),
             'mild': ('driz', 'rain', 'storm'),
@@ -230,8 +226,8 @@ summer = Season(
         {
             'froz': ('fluries', 'snow'),
             'cold': ('sleet', 'driz', 'rain'),
-            'cool': ('driz', 'rain', 'rain',),
-            'mild': ('driz', 'rain', 'rain',),
+            'cool': ('driz', 'rain', 'rain'),
+            'mild': ('driz', 'rain', 'rain'),
             'warm': ('driz', 'rain', 'rain', 'storm'),
             'hot ': ('driz', 'rain', 'storm'),
             'boil': ('driz', 'rain', 'storm'),
@@ -300,25 +296,22 @@ weather = Weather(temperatures)
 # 28 day lunar cycle
 calendar = Calendar(MONTHS, 28, weather)
 
-for month_number, month in enumerate(calendar.a_year(374)):
-    month_number += 1
+for mumber, month in enumerate(calendar.a_year(374)):
+    month_number = mumber + 1
     table = '======================== ========================== ========================== ========================== =========================='
     print(table)
-    print('%24s %26s %26s %26s %26s' % (
-            '[%i] %s, %s' % (month_number, calendar.month, calendar.year),
-            'Morning', 'Afternoon', 'Evening', 'Night'))
+    month_label = f'[{month_number}] {calendar.month}, {calendar.year}'
+    print(f'{month_label:>24} {"Morning":>26} {"Afternoon":>26} {"Evening":>26} {"Night":>26}')
     print(table)
     for day in month():
-        event_bits = list()
+        event_bits = []
         if day.moon:
-            event_bits.append('%s' % day.moon)      # moon phase
+            event_bits.append(f'{day.moon}')      # moon phase
         elif day.moon in ('lunar', 'solar'):
-            event_bits.append('**%s**' % day.moon)  # highlight eclipses
+            event_bits.append(f'**{day.moon}**')  # highlight eclipses
         if day.day_of_year == 363 - 180:
             event_bits.append('*sols*')
-        elif day.day_of_year == 363 - 90:
-            event_bits.append('*equx*')
-        elif day.day_of_year == 363 - 270:
+        elif day.day_of_year == 363 - 90 or day.day_of_year == 363 - 270:
             event_bits.append('*equx*')
         elif day.day_of_year == 363:
             event_bits.append('*sols*')
@@ -329,19 +322,19 @@ for month_number, month in enumerate(calendar.a_year(374)):
                 event_bits.append('*mkt*')  # new moon is market day
             if day.day == 13:
                 event_bits.append('*pit*')  # 13th of month is Pit Fight Night!
-        day_bits = ['%02i %-5s %-15s' % (day.day, day.temp, ' '.join(event_bits)), ]
+        day_bits = [f"{day.day:02} {day.temp:<5} {' '.join(event_bits):<15}" ]
         for i in range(4):
             if i == 3:
-                watch_bits = ['OOO OOO', ]      # 3x 4hr
+                watch_bits = ['OOO OOO' ]      # 3x 4hr
             else:
-                watch_bits = ['oooo oooo', ]    # 4x 1hr
+                watch_bits = ['oooo oooo' ]    # 4x 1hr
             if day.rain[i]:
                 watch_bits.append(day.rain[i])
             if i == 3 and day.meteor:  # lunar meteor storm always at night
                 watch_bits.append(r'**\***')
             if random.randint(1, 400) == 1:  # 1 in 100 chance (per day) of special event
                 watch_bits.append('**!** ')
-            day_bits.append('%-26s' % ' '.join(watch_bits))
+            day_bits.append(f"{' '.join(watch_bits):<26}")
         print(' '.join(day_bits))
     print(table)
     print()

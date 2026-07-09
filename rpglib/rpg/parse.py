@@ -4,18 +4,20 @@
 
 import re
 import sys
+from pathlib import Path
 
 import munge
+from munge import by_para, replace_typography, strip_emptylines, strip_newlines
 from munge.out import parapper
 from munge.rst import escape_asterisk
-from munge import replace_typography, by_para, strip_newlines, strip_emptylines
+
 from rpg.mobs import MOBS
 
 # munge MOBS
 for mob in MOBS.values():
     mob['atk'] = ', '.join(mob['atk'])
     if mob['special']:
-        mob['special'] = '; %s' % ', '.join(mob['special'])
+        mob['special'] = f"; {', '.join(mob['special'])}"
     else:
         mob['special'] = ''
 
@@ -28,10 +30,10 @@ names = (
         'Applewood', 'Arcos', 'Arnaxelda', 'Arnson', 'Baalbek', 'Bannock', 'Barsnowik', 'Brymgn',
         'Crab-Claw', 'Dhekeon', 'Dingo-Baby', 'Dirtin', 'Diveen', 'Emnuron', 'Gak', 'Gallock',
         'Gargar', 'Gblug', 'Gerg', 'Gethron', 'Grizelda', 'Gulwag', 'Gurn', 'Hephecates',
-        'Ibex-ibydl' 'Jabbard', 'Jurkgal', 'Kakta', 'Kelingard', 'O\'Veargne', 'Kelmok', 'Kohl',
+        'Ibex-ibydlJabbard', 'Jurkgal', 'Kakta', 'Kelingard', 'O\'Veargne', 'Kelmok', 'Kohl',
         'Leggat', 'Lesieg', 'Li\'On-Ess', 'Lorktho', 'Manon-itziq', 'Meerab', 'Meray', 'Minos',
         'Moniphine', 'Mortimer', 'Nathalas', 'Nul', 'Octus', 'Ogbog', 'Oggle', 'Orthos', 'Ossithrax',
-        'Panther-man', 'Parnel', 'Rosilk', 'Sarla', 'Sayer of the Truth', 'Serella', 'Serouc' 'Shagrot',
+        'Panther-man', 'Parnel', 'Rosilk', 'Sarla', 'Sayer of the Truth', 'Serella', 'SeroucShagrot',
         'Sinnis', 'Sir Pelinore', 'Spider-Pig', 'Tallbow', 'Thala-Kul', 'Thar', 'The Keeper', 'Tumbledown',
         'Uzgot', 'Valtor', 'Ventis', 'Vizix\'Vol', 'Vultrix', 'Willock', 'Wortbad', 'Xxaxik', 'Yark-Bree',
         'Yasuq-Jac', 'Zur', 'Zygstral', 'Grr\'Woof-nub', 'Arnd',
@@ -42,7 +44,8 @@ RE_CRYPT = re.compile(r'^(\w+ Crypt \d+:)')
 RE_ALPHA = re.compile(r'^([A-Z]\.)')
 RE_QUOTE = re.compile(r'("[^"]+")')
 RE_ILLUS = re.compile(r'Show the players illustration #\d+ from the Barrowmaze I*\s*Illustration Booklet\.?\s*', flags=re.I)
-RE_NAMES = re.compile(r'(%s)' % '|'.join('(?:%s\'?s?)' % n for n in names))
+_names_pattern = '|'.join(f"(?:{n}'?s?)" for n in names)
+RE_NAMES = re.compile(f'({_names_pattern})')
 RE_LLMOB = re.compile(
     r"""(?P<name>(?:Greater )?(?:Giant )?[A-Z][-'\w]+(?: of)?(?: [A-Z][-'\w]+)?)(?:\s+\((?P<count>\d+)\))?"""
     r"""\s+AL: [CLN], AC: [^,]+, HD: (?P<hd>[^,]+), HP: [^#]+, #AT: [^,]+, DMG: [^,]+, [A-Z]+\s*\(\d+\)(?:,\s+Spell[^\.]+\.)?''""")
@@ -97,7 +100,7 @@ def parse(lines):
                 redo = True
             else:
                 accum.append(line)
-            collecting = munge.lookfor(lambda l: l.endswith('.'), accum, munge.space_reduce)
+            collecting = munge.lookfor(lambda x: x.endswith('.'), accum, munge.space_reduce)
             continue
         yield line
     if collecting:
@@ -122,26 +125,26 @@ def translate(bits):
     if name.startswith('fire beetle'):
         yield 'beetle, giant fire'
     if 'saurus' in name:
-        yield 'dinosaur, %s' % name
-    yield '%s (%shd)' % (name, bits['hd'])
-    yield '%s (%shd)' % (name.rstrip('s'), bits['hd'])
+        yield f'dinosaur, {name}'
+    yield f"{name} ({bits['hd']}hd)"
+    yield f"{name.rstrip('s')} ({bits['hd']}hd)"
     # Maybe regex pulled in some shit like 'Four', or 'Several'
     yield name.split()[-1].rstrip('s')
     if name.endswith('ies'):
         name = name[:-3] + 'y'
         yield name
-    for type in (
+    for monster in (
             'golem', 'pudding', 'scorpion', 'demon', 'wight', 'elemental', 'zombie', 'clockwork', 'naga',
             'giant', 'mold', 'eagle', 'vulture', 'clockwork', 'spider', 'harpy', 'crab', 'fly', 'swarm',
             'rat', 'ooze', 'fungi', 'snake', 'barrow', 'crypt',
             ):
-        if ' %s' % type in name:
-            head, tail = name.rsplit(' %s' % type, 1)
-            funtime = '%s%s, %s' % (type, tail.rstrip('s'), head)
+        if f' {monster}' in name:
+            head, tail = name.rsplit(f' {monster}', 1)
+            funtime = f"{monster}{tail.rstrip('s')}, {head}"
             yield funtime
             if funtime.endswith('ies'):
                 yield funtime[:-3] + 'y'
-            yield '%s (%shd)' % (funtime, bits['hd'])
+            yield f"{funtime} ({bits['hd']}hd)"
 
 
 def monsterate(match):
@@ -158,14 +161,18 @@ def monsterate(match):
     fail = list()
     for name in translate(bits):
         if name in MOBS:
-            body = 'MV%(mv)s, %(hd)sHD, %(atk)s%(special)s; %(ac)sAC, %(sv)s+, ML%(ml)s, %(cl)s/%(xp)s' % MOBS[name]
+            mob = MOBS[name]
+            body = (
+                f"MV{mob['mv']}, {mob['hd']}HD, {mob['atk']}{mob['special']}; "
+                f"{mob['ac']}AC, {mob['sv']}+, ML{mob['ml']}, {mob['cl']}/{mob['xp']}"
+            )
             break
-        else:
-            fail.append(name)
+        fail.append(name)
     else:
         foo = '\n  '.join(fail)
         sys.stderr.write(f'missing {bits["name"]}\n{foo}')
-    return '*%s*: %s' % (('%(count)s %(name)s' % bits).strip(), body)
+    label = f"{bits['count']} {bits['name']}".strip()
+    return f'*{label}*: {body}'
 
 
 def output(paragraphs):
@@ -177,14 +184,12 @@ def output(paragraphs):
             print()
             continue
         para = escape_asterisk(para)
-        if para.startswith('<order>'):
-            print(para[7:].strip())
-        elif para.startswith('<table>'):
+        if para.startswith(('<order>', '<table>')):
             print(para[7:].strip())
         elif para.startswith('Burial Alcoves:'):
             alcoves, contents = para.split('Contents: ')
-            # print(indenter('Alcoves:\n%s' % alcoves[len('Burial Alcoves: '):]))
-            # print(indenter('Contents:\n%s' % contents))
+            # print(indenter(f"Alcoves:\n{alcoves[len('Burial Alcoves: '):]}"))
+            # print(indenter(f'Contents:\n{contents}'))
             print('*Alcoves:*', alcoves[len('Burial Alcoves: '):])
             print()
             print('*Contents:*', contents)
@@ -209,5 +214,5 @@ def output(paragraphs):
 
 
 if __name__ == '__main__':
-    lines = parse(strip_emptylines(by_para(replace_typography(strip_newlines(open(sys.argv[1]))))))
+    lines = parse(strip_emptylines(by_para(replace_typography(strip_newlines(Path(sys.argv[1]).open())))))
     output(lines)

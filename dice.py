@@ -27,7 +27,7 @@ Notes::
 History::
     2.0.1 June 2026
       - Add Dice class
-      - Add d0 null die, and d36 3d6 die
+      - Add d0 null die, and d3d6 a 3d6 die
       - move name outside of BaseDie
     2.0.0 first version with a number
       - add drm()
@@ -45,13 +45,55 @@ import random
 __version__ = '2.0.0'
 
 __all__ = (
+    'Die',
+    'ExplodingDie',
+    'FighterExplodingDie',
+    'd0',
+    'd2',
+    'd2p',
+    'd2x',
+    'd3',
+    'd3d6',
+    'd3p',
+    'd3x',
+    'd4',
+    'd4',
+    'd4p',
+    'd4x',
+    'd6',
+    'd6',
+    'd6p',
+    'd6x',
+    'd8',
+    'd8',
+    'd8p',
+    'd8x',
+    'd10',
+    'd10',
+    'd10p',
+    'd10x',
+    'd12',
+    'd12',
+    'd12p',
+    'd12x',
+    'd16',
+    'd16p',
+    'd16x',
+    'd20',
+    'd20',
+    'd20p',
+    'd20x',
+    'd24',
+    'd24p',
+    'd24x',
+    'd30',
+    'd30p',
+    'd30x',
+    'd100',
+    'd100',
+    'd100p',
+    'd100x',
     'do_roll',
-    'Die', 'ExplodingDie', 'FighterExplodingDie',
-    'd4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100',
-    'd2', 'd3', 'd4', 'd6', 'd8', 'd10', 'd12', 'd16', 'd20', 'd24', 'd30', 'd100',
-    'd0', 'd36',
-    'd2x', 'd3x', 'd4x', 'd6x', 'd8x', 'd10x', 'd12x', 'd16x', 'd20x', 'd24x', 'd30x', 'd100x',
-    'd2p', 'd3p', 'd4p', 'd6p', 'd8p', 'd10p', 'd12p', 'd16p', 'd20p', 'd24p', 'd30p', 'd100p',
     'drm',
     )
 
@@ -64,12 +106,12 @@ def do_roll(notation):
     else:
         roll = 0
     count, die = [int(x) for x in notation.split('d')]
-    for i in range(count):
+    for _i in range(count):
         roll += random.randint(1, die)
     return roll
 
 
-class BaseDie(object):
+class BaseDie:
     """Base Die functionality.
 
     Creates 'labels' that make 1d(size) 'die rolls' when called, used as int
@@ -135,7 +177,7 @@ class Die(BaseDie):
                 return 0
             return random.randint(1, size)
         self.name = f'd{size}'
-        super(Die, self).__init__(d)
+        super().__init__(d)
 
 
 class Dice(BaseDie):
@@ -152,7 +194,7 @@ class Dice(BaseDie):
         def d(size=size, number=number):
             return sum(random.randint(1, size) for _ in range(number))
         self.name = f'{number}d{size}'
-        super(Dice, self).__init__(d)
+        super().__init__(d)
 
 
 class ExplodingDie(BaseDie):
@@ -174,7 +216,7 @@ class ExplodingDie(BaseDie):
             xsize = size
 
         def d(size=size, xsize=xsize, explode_range=explode_range):
-            self._rolls = list()
+            self._rolls = []
             while True:
                 roll = random.randint(1, size)
                 self._rolls.append(roll)
@@ -185,14 +227,17 @@ class ExplodingDie(BaseDie):
                 size = xsize
             return sum(self._rolls)
 
-        assert xsize > 1
-        assert explode_range < size
-        assert explode_range < xsize
+        if xsize <= 1:
+            raise ValueError(f'xsize must be > 1, got {xsize}')
+        if explode_range >= size:
+            raise ValueError(f'explode_range must be < size, got {explode_range} >= {size}')
+        if explode_range >= xsize:
+            raise ValueError(f'explode_range must be < xsize, got {explode_range} >= {xsize}')
         if correct_math:
             self.name = f'd{size}p'
         else:
             self.name = f'd{size}x'
-        super(ExplodingDie, self).__init__(d)
+        super().__init__(d)
 
 
 class FighterExplodingDie(BaseDie):
@@ -222,7 +267,7 @@ class FighterExplodingDie(BaseDie):
             return roll
 
         self.name = f'd{size}fx'
-        super(FighterExplodingDie, self).__init__(d)
+        super().__init__(d)
 
 
 d2 = Die(2)
@@ -239,7 +284,7 @@ d30 = Die(30)
 d100 = Die(100)
 
 d0 = Die(0) # Always returns 0
-d36 = Dice(6, 3) # 3d6
+d3d6 = Dice(6, 3) # 3d6
 
 d2x = ExplodingDie(2)
 d3x = ExplodingDie(3)

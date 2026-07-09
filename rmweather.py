@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
-'''Roll weather according to 16.0 Gamemaster Law RMFRP'''
-from __future__ import print_function
+"""Roll weather according to 16.0 Gamemaster Law RMFRP"""
 
-import sys
-import math
-import random
 import datetime
+import math
 import operator
+import random
+import sys
 
-from dice import drm, d100
-
+from dice import d100, drm
 
 #    V        IV       III      II       I
-temp_mod_table_src = '''
+temp_mod_table_src = """
 1   01-05    1-10     01-12    01-16    01-25
 2   06-10    11-20    13-24    17-32    26-50
 3   11-15    21-30    25-36    33-48    51-75
@@ -73,7 +71,7 @@ temp_mod_table_src = '''
 58  178e
 59  179e
 60  180+e
-'''
+"""
 
 precipitation_table = [        # Min Max Dur Mod   In Mod Wind Mod Move Awareness Tracking Direction
         (0, 'Calm ',             -99, 999, 0, 0,   0,  0,  1, -10,   0,    0,   0,    0),
@@ -245,7 +243,7 @@ months_table = [
 
 
 def normalize_time(h, m):
-    '''Convert minutes > 60 to additional hours.'''
+    """Convert minutes > 60 to additional hours."""
     if m >= 60:
         m -= 60
         h += 1
@@ -260,25 +258,24 @@ def normalize_time(h, m):
 
 
 def _calc_windchill(temp, wind):
-    '''Return windchill for temperature and wind speed.'''
+    """Return windchill for temperature and wind speed."""
     # Windchill only applies to lower temps and wind 5mph or above.
     if temp > windchill_table[0][1] or wind < windchill_table[1][0]:  # Only valid for ranges in table.
         return temp
     temp_row = windchill_table[0]
     table = windchill_table[1:]
-    for column, row_temp in enumerate(temp_row):
-        if row_temp <= temp:
-            break
+    column = next((i for i, row_temp in enumerate(temp_row) if row_temp <= temp), len(temp_row) - 1)
     for speed, *row in table:
         if wind <= speed:
             return temp + row[column - 1]  # Column is indexed off of full row, with speed.
+    return None
 
 
-class Hour(object):
-    '''
+class Hour:
+    """
     :param hour: 1-24
     :param temp: temperature F defg
-    '''
+    """
     def __init__(self, hour, temp, wind, precipitation, precipitation_mods):
         self.hour = hour
         self.temp = temp
@@ -291,22 +288,22 @@ class Hour(object):
         self.precipitation_direction_mod = precipitation_mods[3]
 
 
-class Day(object):
-    '''
+class Day:
+    """
     :param prev_day: previous Day() instance
     :param precipitation_chance: chance of precipitation this day (unless previous day's precip carries over)
     :param cloud_table: roll for cloud cover
     :param lowavg: avg low temp
-    :param low_mod: modifer for table roll
+    :param low_mod: modifier for table roll
     :param lowtable: roll on table for low temp variation
     :param highavg: avg low temp
-    :param high_mod: modifer for table roll
+    :param high_mod: modifier for table roll
     :param hightable: roll on table for high temp variation
     :param wind_mod: modifier for wind speed table roll
     :param sunrise: data from month table
     :param sunset: data from month table
     :param latitude: modifies sun rise/set
-    '''
+    """
     def __init__(self, prev_day, precipitation_chance, cloud_table, lowavg, low_mod, lowtable, highavg, high_mod, hightable, wind_mod, sunrise, sunset, latitude):
         self.prev_day = prev_day
         self.low, self.low_mod = self._roll_temp(lowavg, operator.sub, low_mod - high_mod, lowtable)
@@ -318,7 +315,7 @@ class Day(object):
 
     @property
     def hours(self):
-        '''Hour instance for each hour of day.'''
+        """Hour instance for each hour of day."""
         for hour, temp in enumerate(self._hours[1:], start=1):
             if self.precipitation_start <= hour <= self.precipitation_end:
                 precipitation = self.precipitation
@@ -329,11 +326,11 @@ class Day(object):
             yield Hour(datetime.time(hour=hour), temp, self.wind, precipitation, mods)
 
     def _calc_sun(self, latitude, sunrise, sunset):
-        '''Return Time instances (sunrise, midday, sunset).
+        """Return Time instances (sunrise, midday, sunset).
         :param latitude: latitude
         :param sunrise: data from month table
         :param sunset: data from month table
-        '''
+        """
         # WTF doesn't datetime.time support arithmetic!!!
         def calc_midday(rise, sets):
             hour = sets.hour - rise.hour
@@ -355,9 +352,9 @@ class Day(object):
         shour, smin = sunset
         rhour, rmin = normalize_time(rhour, rmin + mod)
         shour, smin = normalize_time(shour, smin + mod)
-        rise = datetime.datetime.utcnow()
+        rise = datetime.datetime.now(datetime.UTC)
         rise = rise.replace(hour=rhour, minute=rmin, second=0, microsecond=0)
-        sets = datetime.datetime.utcnow()
+        sets = datetime.datetime.now(datetime.UTC)
         sets = sets.replace(hour=shour, minute=smin, second=0, microsecond=0)
         mids = calc_midday(rise, sets)
         self.sunrise = rise.time()
@@ -365,9 +362,9 @@ class Day(object):
         self.sunset = sets.time()
 
     def _calc_temperature(self, prev_day):
-        '''Calculate temp for every hour in the day.
+        """Calculate temp for every hour in the day.
         :param prev_day: previous Day() instance.
-        '''
+        """
         # high around midday, low hour before sunrise
         # let d = high-low possible from previous day
         # evenly distribute 1/3 prevd between prevmidday and prevsunset
@@ -386,10 +383,10 @@ class Day(object):
         self._set_hours_temperatures(low, self.midday.hour, self.low, morning_delta)
 
     def _calc_precipitation(self, prev_day, chance, cloud_table):
-        '''Is it raining?
+        """Is it raining?
         :param chance: % chance of precipitation
         :param cloud_table: data from month table
-        '''
+        """
         if prev_day and prev_day.precipitation_end > 24:
             self.precipitation = prev_day.precipitation
             self.precipitation_start = 1
@@ -422,9 +419,9 @@ class Day(object):
             self.cloud = 'Cloudy'
 
     def _roll_precipitation(self):
-        '''Determine precipitation parameters.'''
+        """Determine precipitation parameters."""
         def _roll_duration(base, mod):
-            '''Look up precipitation duration from table.'''
+            """Look up precipitation duration from table."""
             roll = drm() + mod
             for row in precipitation_duration_table:
                 if roll <= row[0]:
@@ -432,7 +429,7 @@ class Day(object):
             return precipitation_duration_table[-1][base]
 
         def _roll_inches(base, mod):
-            '''Look up precipitation inches from table.'''
+            """Look up precipitation inches from table."""
             roll = drm() + mod
             for row in precipitation_inches_table:
                 if roll <= row[0]:
@@ -440,7 +437,7 @@ class Day(object):
             return precipitation_inches_table[-1][base]
 
         roll = d100()
-        for i, precipitation, mintemp, maxtemp, duration, duration_mod, inches, inchmod, wind, windmod, movemod, awaremod, trackmod, directionmod in precipitation_table:
+        for i, precipitation, mintemp, maxtemp, duration, duration_mod, _inches, _inchmod, wind, windmod, movemod, awaremod, trackmod, directionmod in precipitation_table:
             if roll <= i:
                 if self.high > maxtemp or self.low < mintemp:
                     return None, 0
@@ -449,9 +446,10 @@ class Day(object):
                 self.precipitation_end = self.precipitation_start + _roll_duration(duration, duration_mod)
                 # stupidly high inches = _roll_inches(inches, inchmod)
                 return precipitation, self._roll_wind(wind, windmod)
+        return None
 
     def _roll_wind(self, base, storm_mod):
-        '''Look up wind speed from table.'''
+        """Look up wind speed from table."""
         roll = drm() + storm_mod + self.wind_mod
         # Only modify non-storm winds.
         if base == 1:
@@ -462,20 +460,21 @@ class Day(object):
         return wind_table[0][base]
 
     def _roll_temp(self, avg, op, mod, table):
-        '''Look up temp variation from table.'''
+        """Look up temp variation from table."""
         roll = drm() + mod
         # todo: replace with table lookup func
         for i, var, newmod in table:
             if i > roll:
                 return op(avg, var), newmod
+        return None
 
     def _set_hours_temperatures(self, start, end, initial, delta):
-        '''Update temp for hours in day.
+        """Update temp for hours in day.
         :param start: start hour
         :param end: end our
         :param initial:  temp at start hour
         :param delta: hourly change in temp
-        '''
+        """
         temp = initial
         for h in range(start, end):
             self._hours[h] = int(temp)
@@ -483,13 +482,13 @@ class Day(object):
         return temp
 
 
-class Month(object):
-    '''One month of weather/climate data.
+class Month:
+    """One month of weather/climate data.
     :param month: the month number 1-12, 1 being 2nd month of winter
     :param climate: type of climate, causes some modifiers
     :param latitude: latitude
     :param elevation: elevation
-    '''
+    """
     def __init__(self, month, climate, latitude, elevation):
         self.month = month
         self.month_data = months_table[month - 1]
@@ -499,8 +498,8 @@ class Month(object):
         self._temp_table = self._munge_temp_data(temp_mod_table_src)
 
     def calc_days(self, start, end):
-        '''Calculate data for Month.'''
-        self.days = list()
+        """Calculate data for Month."""
+        self.days = []
         # Some of current day is calculated from prev day, so create one.
         day = self._next_day(None)
         for i in range(start, end + 1):
@@ -511,7 +510,7 @@ class Month(object):
         self._next_day(day)
 
     def _next_day(self, prev_day):
-        '''Calc values for next day of month, return Day instance.'''
+        """Calc values for next day of month, return Day instance."""
         sunrise = self.month_data[1]
         sunset = self.month_data[2]
         highavg, highvar = self.month_data[3]
@@ -551,16 +550,16 @@ class Month(object):
             wind_mod += 5
         if self.month in (12, 1, 2):  # Winter
             wind_mod -= 10
-        day = Day(prev_day, precip_chance, cloud_table, lowavg + temp_avg, low_mod, self._temp_table[lowvar], highavg + temp_avg, high_mod, self._temp_table[highvar], wind_mod, sunrise, sunset, self.lat)
-        return day
+        return Day(prev_day, precip_chance, cloud_table, lowavg + temp_avg, low_mod, self._temp_table[lowvar], highavg + temp_avg, high_mod, self._temp_table[highvar], wind_mod, sunrise, sunset, self.lat)
 
     def _munge_temp_data(self, data):
-        '''Rearrange table from book, convert codes to numbers.'''
-        table = list(([], [], [], [], []))
+        """Rearrange table from book, convert codes to numbers."""
+        table = [[], [], [], [], []]
         for row in data.strip().split('\n'):
             bits = row.strip().split()
             temp = bits[0]
-            for i, bit in enumerate(bits[1:]):
+            for i, loopbit in enumerate(bits[1:]):
+                bit = loopbit
                 if '*' in bit:
                     bit = bit[:-1]
                     futuremod = 25
@@ -583,11 +582,11 @@ class Month(object):
 
 def print_chart(days):
     for day in days:
-        print('\n%2s' % (day.nth, ), c.climate, day.cloud, day.wind, 'mph %s/%s low/high' % (day.low, day.high), 'rise', day.sunrise, 'mid', day.midday, 'set', day.sunset)
+        print(f'\n{day.nth:>2}', c.climate, day.cloud, day.wind, f'mph {day.low}/{day.high} low/high', 'rise', day.sunrise, 'mid', day.midday, 'set', day.sunset)
         if day.nth == 10:
-            print('check lvl %i bubonic' % random.randint(1, 10))
+            print(f'check lvl {random.randint(1, 10)} bubonic')
         if day.nth == 20:
-            print('check lvl %i pneumonic' % random.randint(1, 10))
+            print(f'check lvl {random.randint(1, 10)} pneumonic')
         for h in day.hours:
             notes = list()
             if h.temp == day.low:
@@ -597,32 +596,33 @@ def print_chart(days):
             else:
                 low_high = ' '
             if h.hour.hour == day.sunrise.hour:
-                sun = '%02i:%02i rise' % (day.sunrise.hour, day.sunrise.minute)
+                sun = f'{day.sunrise.hour:02}:{day.sunrise.minute:02} rise'
             elif h.hour.hour == day.midday.hour:
-                sun = '%02i:%02i' % (day.midday.hour, day.midday.minute)
+                sun = f'{day.midday.hour:02}:{day.midday.minute:02}'
             elif h.hour.hour == day.sunset.hour:
-                sun = '%02i:%02i set' % (day.sunset.hour, day.sunset.minute)
+                sun = f'{day.sunset.hour:02}:{day.sunset.minute:02} set'
             else:
                 sun = ''
             rain = h.precipitation or ''
             if rain and h.precipitation_move_mod:
-                notes.append('Maneuvers(%s)' % h.precipitation_move_mod)
+                notes.append(f'Maneuvers({h.precipitation_move_mod})')
             if rain and h.precipitation_awareness_mod:
-                notes.append('Awareness(%s)' % h.precipitation_awareness_mod)
+                notes.append(f'Awareness({h.precipitation_awareness_mod})')
             if rain and h.precipitation_tracking_mod:
-                notes.append('Tracking(%s)' % h.precipitation_tracking_mod)
+                notes.append(f'Tracking({h.precipitation_tracking_mod})')
             if rain and h.precipitation_direction_mod:
-                notes.append('Direction Sense(%s)' % h.precipitation_direction_mod)
+                notes.append(f'Direction Sense({h.precipitation_direction_mod})')
             if sun:
                 notes.append(sun)
             if h.chill != h.temp:
                 if h.temp > 35:  # Hi-temp wind chill only factor if exposed.
-                    temp = '%2i[%i]' % (h.temp, h.chill)
+                    temp = f'{h.temp:2}[{h.chill}]'
                 else:
-                    temp = '%2i(%i)' % (h.temp, h.chill)
+                    temp = f'{h.temp:2}({h.chill})'
             else:
-                temp = '%2i' % h.temp
-            print('  %s%02i:%02i %s%s deg %s%s' % (sun and '*' or ' ', h.hour.hour, h.hour.minute, low_high, temp, rain, ', '.join(notes)))
+                temp = f'{h.temp:2}'
+            star = (sun and '*') or ' '
+            print(f'  {star}{h.hour.hour:02}:{h.hour.minute:02} {low_high}{temp} deg {rain}{", ".join(notes)}')
 
 
 if __name__ == '__main__':

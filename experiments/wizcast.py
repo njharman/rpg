@@ -1,18 +1,19 @@
 #!/usr/bin/python
-'''No idea.
+"""No idea.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
 Website: http://trollandflame.blogspot.com/
-'''
+"""
 
 from collections import defaultdict
-from dice import *
+
+from dice import d20x
 
 
-def test_dieroll(die_func, count=100000):
+def dieroll_test(die_func, count=100000):
     bucket = defaultdict(int)
-    for i in range(count + 1):
+    for _ in range(count + 1):
         bucket[die_func()] += 1
     return bucket, count
 
@@ -23,29 +24,26 @@ def calc_dieroll_results(bucket, count):
     rolls.sort()
     total = 0
     ptotal = 100
-    results = list()
+    results = []
     for i in range(1, max(rolls) + 1):
         if bucket[i]:
             percent = (bucket[i] / count) * 100
-            results.append('%-3i %5i %5.2f%% %6.2f%%' % (i, bucket[i], percent, ptotal))
+            results.append(f'{i:<3} {bucket[i]:5} {percent:5.2f}% {ptotal:6.2f}%')
             ptotal -= percent
             total += i * bucket[i]
         else:
-            results.append('%-3i         not rolled' % (i, ))
+            results.append(f'{i:<3}         not rolled')
     return results, (total / count), rolls[-1]
 
 
 def dieroll_average_n_max(roll, count=100000):
-    rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
-    print(roll.__name__, '%.2f' % avg, max)
+    _rolls, _avg, _max = calc_dieroll_results(*dieroll_test(roll, count))
 
 
 def dieroll_detail(roll, count=100000):
-    rolls, avg, max = calc_dieroll_results(*test_dieroll(roll, count))
-    print(roll.__name__)
+    rolls, _avg, _max = calc_dieroll_results(*dieroll_test(roll, count))
     for roll in rolls:
-        print(roll)
-    print()
+        print(roll) # TODO: implement
 
 
 def miscast():
@@ -58,22 +56,21 @@ def wizcast(to_cast_bonus, delayed=True, roll=None):
         if delayed:
             roll += 5
     if roll == 1:
-        return 'miscast(%i) - %s' % (roll, miscast())
+        return f'miscast({roll}) - {miscast()}'
     roll += to_cast_bonus
     if roll >= 20:
-        return 'cast(%i)' % (roll, )
-    elif roll >= 15:
-        return 'delayed(%i)' % (roll, )
-    elif roll >= 10:
-        return 'failed(%i)' % (roll, )
-    elif roll >= 5:
-        return 'lost(%i)' % (roll, )
-    else:
-        return 'miscast(%i) - %s' % (roll, miscast())
+        return f'cast({roll})'
+    if roll >= 15:
+        return f'delayed({roll})'
+    if roll >= 10:
+        return f'failed({roll})'
+    if roll >= 5:
+        return f'lost({roll})'
+    return f'miscast({roll}) - {miscast()}'
 
 
 def do_wizcast(to_cast_bonus=4):
-    results = list()
+    results = []
     delayed = False
     while True:
         results.append(wizcast(to_cast_bonus, delayed))
@@ -88,61 +85,49 @@ def do_wizcast(to_cast_bonus=4):
 
 
 def test_wizcast(runcount, to_cast_bonus):
-    '''success/fail chances.'''
+    """success/fail chances."""
     results = defaultdict(int)
     casted = defaultdict(int)
     failed = defaultdict(int)
-    for i in range(runcount):
-        cast, time, text = do_wizcast(to_cast_bonus)
+    for _ in range(runcount):
+        cast, time, _text = do_wizcast(to_cast_bonus)
         cast = cast[:cast.find('(')].lower()
         results[cast] += 1
         if cast == 'cast':
             casted[time] += 1
         else:
             failed[time] += 1
-    print('\nChance for various outcomes of casting attempt.')
-    print('        count percentage')
     for result in ('miscast', 'lost', 'failed', 'cast'):
-        count = results[result]
-        print('%-8s %3i  %2.0f%%' % (result.title() + ':', count, (count * 100.0) / runcount))
-    print('\nCasting times:')
+        results[result]
     running = 0
     for i in sorted(casted.keys()):
         running += casted[i]
-        print('%2i rnds %4i  %5.2f%% %6.2f%%' % (i, casted[i], (casted[i] * 100.0) / results['cast'], (running * 100.0) / results['cast']))
-    print()
-    print('avg casting time: %.1f rnds' % (sum(k * v for k, v in casted.items()) / (results['cast'] + 0.0), ))
-    print('avg failure time: %.1f rnds' % (sum(k * v for k, v in failed.items()) / (runcount - results['cast'] + 0.0), ))
 
 
 def test_wizspell(runcount, to_cast_bonus):
-    '''How many times can one spell be cast before miscast/lost'''
+    """How many times can one spell be cast before miscast/lost"""
     results = defaultdict(int)
-    for i in range(runcount):
+    for _ in range(runcount):
         count = 0
         while True:
-            result, time, text = do_wizcast(to_cast_bonus)
+            result, _time, _text = do_wizcast(to_cast_bonus)
             result = result[:result.find('(')].lower()
-            #print(result, time, text)
+            # print(result, time, text)
             if result in ('lost', 'miscast'):
                 break
-            elif result in ('cast', ):
+            if result in ('cast', ):
                 count += 1
         results[count] += 1
         # print(count, '\n')
     total = sum(results.values())
-    lost_total = results[0]
+    results[0]
     lost_percentage = (results[0] * 100.0) / total
     del results[0]
-    cast_total = sum(results.values())
-    cast_percentage = 100 - lost_percentage
+    sum(results.values())
+    100 - lost_percentage
     running = 0
-    print('\nChance spell is cast x number of times before being lost.')
     for i in sorted(results.keys()):
-        print('%2i times %4i  %5.2f%% %6.2f%%' % (i, results[i], (results[i] * 100.0) / total, cast_percentage - ((running * 100.0) / total)))
         running += results[i]
-    print('Cast     %4i  %5.2f%% %6.2f%%' % (cast_total, cast_percentage, cast_percentage, ))
-    print('Lost     %4i  %5.2f%% %6.2f%%' % (lost_total, lost_percentage, lost_percentage, ))
 
 
 if __name__ == '__main__':

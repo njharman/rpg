@@ -16,9 +16,9 @@ import random
 
 def hp_line(columns, template):
     """Line of hit points."""
-    bits = list()
+    bits = []
     bits.append(template % '\\')
-    for col in range(1, columns):
+    for _ in range(1, columns):
         hits = random.randint(3, 8)
         bits.append(template % ('O' * hits))
     return ''.join(bits)
@@ -26,13 +26,13 @@ def hp_line(columns, template):
 
 def ac_line(columns, template):
     """Line of armor class."""
-    bits = list()
+    bits = []
     bits.append(template % 'AC \\___')
-    for col in range(1, columns):
+    for _ in range(1, columns):
         bits.append(template % 'O O O O O X /')
     bits.append('\n')
     bits.append(template % '')
-    for col in range(1, columns):
+    for _ in range(1, columns):
         bits.append(template % 'O O O O O X')
     return ''.join(bits)
 
@@ -41,16 +41,16 @@ def page(columns, page_length, page_width):
     """One page."""
     column = page_width // columns
     table = ' '.join(['=' * column] * columns)
-    template = '%%-%is' % (column + 1)
+    template = '%%-%is' % (column + 1)  # noqa: UP031
     print('Notes:\n')
     print(table)
-    for i in range(6):
+    for _ in range(6):
         print(ac_line(columns, template))
-    for i in range(page_length - 6):
+    for _ in range(page_length - 6):
         print(hp_line(columns, template))
     print(table)
 
 
-for i in range(8):
+for _ in range(8):
     page(4, 40, 80)
     print()

@@ -19,12 +19,12 @@ d6 = lambda: random.randint(1, 6)
 roll = lambda: d6() + d6() + d6()
 
 rolls = list()
-for i in range(1, 13):
+for _ in range(1, 13):
     foo = [roll() for x in range(6)]
     rolls.append((sum(foo), foo))
 rolls.sort(reverse=True)
 print('total: scores  * = score >= 15')
 for total, scores in rolls:
-    abilities = '  '.join(f'{x} :{y:2}' for x, y in zip(names, scores))
+    abilities = '  '.join(f'{x} :{y:2}' for x, y in zip(names, scores, strict=False))
     good = '*' * sum(x >= 15 for x in scores)
     print(f'{total}: {abilities} {good}')

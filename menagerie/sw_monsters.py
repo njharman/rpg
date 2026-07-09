@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# vim: set fileencoding=utf-8 name> :
 # Author: Norman J. Harman Jr. <njharman@gmail.com>
 # License: Released into Public Domain Nov 2012
 
@@ -19,16 +18,28 @@
 # Swords & Wizardry, S&W, and Mythmere Games are trademarks of Matthew J. Finch.
 # This software and author are not affiliated with Matthew J. Finch, Mythmere Games™, Frog God Games, Necromancer Games.
 
-import os
+
+import contextlib
 import re
 import sys
 from collections import defaultdict
+from pathlib import Path
 
 import rpg.munge.rst
-from rpg.munge import RE_EMPTYLINE, alpha_sort, by_para, slurp_re, replace_typography, \
-        strip_emptylines, strip_newlines, strip_comments, by_page, dehyphenate
-from rpg.munge.out import parapper
 from known import known
+from rpg.munge import (
+    RE_EMPTYLINE,
+    alpha_sort,
+    by_page,
+    by_para,
+    dehyphenate,
+    replace_typography,
+    slurp_re,
+    strip_comments,
+    strip_emptylines,
+    strip_newlines,
+)
+from rpg.munge.out import parapper
 
 ODD_DAMAGE = {
         '1d2':  'd2',
@@ -118,10 +129,10 @@ def save_ll_to_sw(save, hd):
     try:
         if save[0:2] in save_chart:
             return save_chart[save[0:2]][int(save[2:])]
-        elif save[0] in save_chart:
+        if save[0] in save_chart:
             return save_chart[save[0]][int(save[1:])]
         return (18, 17, 16, 14, 13, 12, 11, 9, 8, 6, 5, 4, 3)[min(int(hd), 12)]
-    except Exception as e:
+    except (ValueError, IndexError, TypeError):
         return save
 
 
@@ -129,11 +140,10 @@ def move_ll_to_sw(movement):
     match = re_ll_move.search(movement)
     if match:
         return ('', '3', '6', '9', '12', '15', '18')[int(match.group(1)[0])]
-    else:
-        return movement
+    return movement
 
 
-class Monster(object):
+class Monster:
     '''One entry from tome of "monsters".'''
 
     def __init__(self, name):
@@ -167,10 +177,10 @@ class Monster(object):
         bonus = ''
         hp = ''
         if self.hd_bonus:
-            bonus = '+%s' % self.hd_bonus
+            bonus = f'+{self.hd_bonus}'
         if self.hp:
-            hp = ' (%s hp)' % self.hp
-        return '%s%s%s' % (self.hd, bonus, hp)
+            hp = f' ({self.hp} hp)'
+        return f'{self.hd}{bonus}{hp}'
 
     def odd_line(self):
         '''OD&D One line statblock.'''
@@ -180,8 +190,8 @@ class Monster(object):
         foo = re.compile(r'([-\d]*)\s*([^(]+)\s*\(([^)]+)\)')
         bits = list()
         attacks = list()
-        for old in self.attack:
-            old = old.lower()
+        for old_ in self.attack:
+            old = old_.lower()
             old = re.sub(r'weapon or strike', 'strike', old)
             options = list()
             for atk in old.split(' or '):
@@ -191,21 +201,19 @@ class Monster(object):
                     count, attack, damage = match.groups()
                     attack = attack.strip()
                     damage = ODD_DAMAGE.get(damage, damage)
-                    damage = re.sub(' \+ ', '+', damage)
+                    damage = re.sub(r' \+ ', '+', damage)
                     damage = re.sub(' plus ', '+', damage)
-                    try:
+                    with contextlib.suppress(ValueError):
                         if int(count) == 1:
                             count = ''
-                    except:
-                        pass
                     if count:
-                        bit = '%sx %s (%s)' % (count, damage, attack)
+                        bit = f'{count}x {damage} ({attack})'
                     else:
-                        bit = '%s (%s)' % (damage, attack)
+                        bit = f'{damage} ({attack})'
                     if attack == 'weapon' and not count and damage == 'd6':
                         bit = 'weapon'
                 else:
-                    bit = '(%s)' % atk
+                    bit = f'({atk})'
                 options.append(bit)
             new = ' or '.join(options)
             #print '|', new
@@ -214,19 +222,19 @@ class Monster(object):
         data['atk'] = ', '.join(attacks)
         data['ac'] = self.ac_dsc
         data['mv'] = re.sub(r'\s*\(flying\)', '(fly)', data['mv'])
-        data['xp'] = ODD_XP.get(self.hd, 'WTF %s' % self.hd)
+        data['xp'] = ODD_XP.get(self.hd, f'WTF {self.hd}')
         if self.hd in ODD_SV:
             data['sv'] = ODD_SV[self.hd]
         else:
             data['sv'] = max(3, 18-self.hd)
-        if self.hd_bonus and isinstance(self.hd_bonus, (int, long)):
+        if self.hd_bonus and isinstance(self.hd_bonus, int):
             data['xp'] += 25 * self.hd_bonus
-        bits.append('''%(name)s: %(hd)shd %(ac)sAC %(sv)s+ %(mv)s", %(atk)s,''' % data)
+        bits.append(f'''{data['name']}: {data['hd']}hd {data['ac']}AC {data['sv']}+ {data['mv']}", {data['atk']},''')
         if data['special']:
-            bits.append('**%s**' % ', '.join(a.lower() for a in data['special']))
+            bits.append(f"**{', '.join(a.lower() for a in data['special'])}**")
         if data['ml']:
-            bits.append('ML%s' % data['ml'])
-        bits.append('''%(xp)sXP''' % data)
+            bits.append(f"ML{data['ml']}")
+        bits.append(f'''{data['xp']}XP''')
         return ' '.join(bits)
 
     def stat_line(self):
@@ -235,12 +243,12 @@ class Monster(object):
         bits = list()
         data = self.as_dict()
         data['atk'] = ', '.join(a for a in data['atk']).replace(')', '').replace('(', '')
-        bits.append('''%(name)s %(hd)sHD [%(atk)s] AC%(ac)s %(sv)s+ %(mv)s\' ''' % data)
+        bits.append(f'''{data['name']} {data['hd']}HD [{data['atk']}] AC{data['ac']} {data['sv']}+ {data['mv']}\' ''')
         if data['special']:
-            bits.append('(**%s**)' % ', '.join(a for a in data['special']))
+            bits.append(f"(**{', '.join(a for a in data['special'])}**)")
         if data['ml']:
-            bits.append('ML%s' % data['ml'])
-        bits.append('''CL%(cl)s %(xp)sXP''' % data)
+            bits.append(f"ML{data['ml']}")
+        bits.append(f'''CL{data['cl']} {data['xp']}XP''')
         return ' '.join(bits)
 
     def format(self, legal=False):
@@ -251,26 +259,26 @@ class Monster(object):
                 ]
         if self.hd:
             lines.extend([
-                ':Hit Dice: %s' % self.hitdice,
-                ':Attack: %s' % ', '.join(self.attack),
-                ':AC: %s' % self.ac_asc,
-                ':Save: %s' % self.save,
-                ':Special: %s' % ', '.join(self.special),
-                ':Move: %s' % self.move,
-                ':Alignment: %s' % self.alignment,
-                ':CL/XP: %s/%s' % (self.cl, self.xp),
+                f':Hit Dice: {self.hitdice}',
+                f":Attack: {', '.join(self.attack)}",
+                f':AC: {self.ac_asc}',
+                f':Save: {self.save}',
+                f":Special: {', '.join(self.special)}",
+                f':Move: {self.move}',
+                f':Alignment: {self.alignment}',
+                f':CL/XP: {self.cl}/{self.xp}',
                 ])
         if self.number:
             lines.append('')
-            lines.append('Number encountered: %s' % (self.number, ))
+            lines.append(f'Number encountered: {self.number}')
         if self.description:
             lines.append('')
             lines.append('\n\n'.join(parapper(p) for p in self.description))
         else:
-            print >> sys.stderr, self.name
+            print(self.name, file=sys.stderr)
         if legal and self.s15:
-            lines.append('\nSource: %s' % self.source)
-            lines.append('\nCopyright: %s' % self.s15)
+            lines.append(f'\nSource: {self.source}')
+            lines.append(f'\nCopyright: {self.s15}')
         return '\n'.join(lines)
 
     def as_tuple(self):
@@ -345,18 +353,18 @@ class Monster(object):
                 name = name[6:] + ', Giant'
             if name not in known:
                 if name:
-                    raise Exception('Not known [%s]' % name)
+                    raise ValueError(f'Not known [{name}]')
                 else:
-                    raise Exception('No name!\n%s' % '\n'.join(lines))
+                    raise ValueError(f'No name!\n{"\n".join(lines)}')
         try:
             entry = cls(name)
             # if entry.name.endswith(', Giant'):
             #    entry.name = 'Giant %s' % entry.name.rsplit(', ', 1)[0]
             #    entry.name = 'Giant %s' % entry.name.rsplit(', ', 1)[0]
             challenge = False  # Some entries don't have regular stats.
-            l = 1  # Start past name.
-            while l < stop:
-                key, _, value = [b.strip() for b in lines[l].partition(':')]
+            start = 1  # Start past name.
+            while start < stop:
+                key, _, value = [b.strip() for b in lines[start].partition(':')]
                 if key == 'Source':
                     entry.source = value
                 elif key == 'S15':
@@ -368,20 +376,20 @@ class Monster(object):
                     try:
                         entry.ac_dsc = int(value)
                         entry.ac_asc = 20 - (int(value) + 1)
-                    except Exception:
+                    except ValueError:
                         try:
                             entry.ac_dsc, entry.ac_asc = map(int, re_ac.match(value).groups())
-                        except Exception:
-                            print >> sys.stderr, 'FAIL AC "%s" %s' % (value, entry.name)
+                        except (AttributeError, ValueError):
+                            print(f'FAIL AC "{value}" {entry.name}', file=sys.stderr)
                 elif key == 'Saving Throw' or key == 'Save':
                     entry.save = value
                 elif key == 'Attack' or key == 'Attacks':
-                    l, raw = slurp_re(re_attribute, l, lines, ':')
+                    start, raw = slurp_re(re_attribute, start, lines, ':')
                     entry.attack = [s.strip().rstrip('.') for s in raw.split(',')]
                 elif key == 'Damage':
                     entry.attack = [value, ]
                 elif key == 'Special':
-                    l, raw = slurp_re(re_attribute, l, lines, ':')
+                    start, raw = slurp_re(re_attribute, start, lines, ':')
                     entry.special = [s.strip().rstrip('.').replace('magic resistance ', 'MR') for s in raw.split(',') if s.lower() != 'none']
                 elif key.startswith('Move'):
                     entry.move = value
@@ -392,26 +400,26 @@ class Monster(object):
                 elif key == 'Hoard Class':
                     entry.hoard = value
                 elif key == 'Number Encountered' or key == 'No. Enc':
-                    l, raw = slurp_re(re_attribute, l, lines, ':')
+                    start, raw = slurp_re(re_attribute, start, lines, ':')
                     entry.number = raw
                 elif key == 'XP':
                     entry.xp = value
-                    l += 1
+                    start += 1
                     break  # XP is last stat for LL style monsters.
                 elif key in ('Challenge Level/XP', 'CL/XP'):
                     challenge = value
-                    l += 1
+                    start += 1
                     break  # CL/XP is last stat for SW style monsters.
                 else:
                     # No stats.
                     break
-                l += 1
-            for para in strip_emptylines(by_para(lines[l:], (custom_break, ))):
+                start += 1
+            for para in strip_emptylines(by_para(lines[start:], (custom_break, ))):
                 key, _, text = [b.strip() for b in para.partition(':')]
                 if key == 'Credit':  # tohc only thing we aren't allowed to use.
                     pass
                 elif key == 'Copyright Notice':  # tohc only authors.
-                    entry.s15 = '%s; %s' % (entry.s15, text)
+                    entry.s15 = f'{entry.s15}; {text}'
                 elif key == 'MiniAdventure':
                     entry.mini_adventure.append(text)
                 # Assume rest of paras after mini-adventure is mini-adventure.
@@ -436,19 +444,17 @@ class Monster(object):
                 hd, cl, xp = match.groups()
                 entry.cl = cl
                 entry.xp = int(xp.replace(',', ''))
-                try:
-                    # Some entries vary save by hit die.
+                # Some entries vary save by hit die.
+                with contextlib.suppress(IndexError):
                     entry.save = saves[x]
-                except IndexError:
-                    pass
                 yield entry
                 if hd:  # Multiple entries with different HD.
                     entry.hd = int(hd)
-                    entry.name = '%s (%sHD)' % (entry.name.split('(')[0].strip(), hd)
+                    entry.name = f"{entry.name.split('(')[0].strip()} ({hd}HD)"
                     entry = entry.clone()
         except:
-            print >> sys.stderr, 'Line #%i Mob: %s\n' % (l, entry.__dict__)
-            print 'Some Lines:\n', ''.join(lines[l - 10:l + 5])
+            print(f'Line #{start} Mob: {entry.__dict__}\n', file=sys.stderr)
+            print('Some Lines:\n', ''.join(lines[start - 10:start + 5]))
             raise
 
 
@@ -487,42 +493,42 @@ def split_mc_entries(source, s15, lines):
     '''Entry splitter that works on Monster Compendium.'''
     entry = list()
     description = list()
-    for l in lines:
-        if l.startswith('##'):      # Comment line.
+    for line in lines:
+        if line.startswith('##'):      # Comment line.
             continue
-        if RE_EMPTYLINE.match(l):   # Empty lines separate entries.
+        if RE_EMPTYLINE.match(line):   # Empty lines separate entries.
             entry = list()
             description = list()
             continue
-        if len(l) < 30:             # Skip the redundant entry names.
+        if len(line) < 30:             # Skip the redundant entry names.
             continue
         # MC has attributes all on one line.  Reformat them into style
         # Entry.from_entry understands.
-        match = re.match(r'(^[^:]+):\s+(HD .*;.*)$', l)
+        match = re.match(r'(^[^:]+):\s+(HD .*;.*)$', line)
         if match:
             name, rest = match.groups()
             bits = [b.strip() for b in rest.split(';')]
             entry.append(name)
-            entry.append('Source: %s' % source)
-            entry.append('S15: %s' % (s15 % {'name': name}))
+            entry.append(f'Source: {source}')
+            entry.append(f'S15: {s15 % {"name": name}}')
             for bit in bits:
                 name, value = bit.split(' ', 1)
                 if name == 'HD':
-                    entry.append('Hit Dice: %s' % value)
+                    entry.append(f'Hit Dice: {value}')
                 elif name == 'AC':
-                    entry.append('Armor Class: %s' % ' ['.join(value.split('[')))
+                    entry.append(f"Armor Class: {' ['.join(value.split('['))}")
                 elif name == 'Atk':
-                    entry.append('Attacks: %s' % value)
+                    entry.append(f'Attacks: {value}')
                 elif name == 'Save':
-                    entry.append('Saving Throw: %s' % value)
+                    entry.append(f'Saving Throw: {value}')
                 elif name == 'Move':
-                    entry.append('Move: %s' % value)
+                    entry.append(f'Move: {value}')
                 elif name == 'CL/XP':
                     clxp = value
                 else:
                     entry.append(bit)
             # CL/XP must be last, used to detect end of attributes.
-            entry.append('CL/XP: %s' % clxp)
+            entry.append(f'CL/XP: {clxp}')
             for para in description:
                 entry.append('')
                 entry.append(para)
@@ -530,14 +536,13 @@ def split_mc_entries(source, s15, lines):
             # Multiple entries under one description.
             entry = list()
         else:
-            description.append(l)
+            description.append(line)
 
 
 def monsterfy(entries):
     '''Convert sequence of entry sections into sequence of Monster instances.'''
     for entry in entries:
-        for m in Monster.from_entry(entry):
-            yield(m)
+        yield from Monster.from_entry(entry)
 
 
 def remove_dupes(seq):
@@ -556,11 +561,7 @@ def remove_dupes(seq):
 def two_to_one_columns(pages):
     '''Given two-column pages (say from pdftotext -layout), return lines of one column.'''
     def good_mid(mid, page):
-        for l in page:
-            if len(l) > mid:
-                if l[mid] != ' ':
-                    return False
-        return True
+        return all(len(x) <= mid or x[mid] == ' ' for x in page)
 
     def calc_mid(page):
         for mid in (39, 38, 40, 37, 41, 36, 42, 35, 43, 34, 44):
@@ -571,31 +572,30 @@ def two_to_one_columns(pages):
         if mid:
             two = list()
             two.append('')
-            for l in page:
-                yield l[:mid].strip()
-                if len(l) > mid:
-                    two.append(l[mid:].strip())
-            for l in two:
-                yield l
+            for x in page:
+                yield x[:mid].strip()
+                if len(x) > mid:
+                    two.append(x[mid:].strip())
+            for x in two:
+                yield x
         else:
-            print >> sys.stderr, 'Did not find mid point for page %i' % i
-            for l in page:
-                yield l
+            print(f'Did not find mid point for page {i}', file=sys.stderr)
+            for x in page:
+                yield x
 
 
 def tuco(sources):
     # Tool to use when hand munging text files.
     # Output one column of two column source
-    pages = list(by_page(strip_newlines(replace_typography(open(sources)))))
-    print >> sys.stderr, 'Found %i pages' % len(pages)
-    print '\n'.join(two_to_one_columns(pages))
+    pages = list(by_page(strip_newlines(replace_typography(Path(sources).open()))))
+    print(f'Found {len(pages)} pages', file=sys.stderr)
+    print('\n'.join(two_to_one_columns(pages)))
 
 
 def split_on_monster(source, s15, lines):
     '''Parse lines into entry "sections".'''
     if source == 'mc':
-        for e in split_mc_entries(source, s15, lines):
-            yield e
+        yield from split_mc_entries(source, s15, lines)
         return
     # Delimiter is line after name
     delimeter, skip_delimeter = {
@@ -609,32 +609,31 @@ def split_on_monster(source, s15, lines):
             }[source]
     entry = list()
     first = True
-    for l in lines:
-        if l.startswith(delimeter):
+    for line in lines:
+        if line.startswith(delimeter):
             name = entry.pop()
             if name.startswith('('):  # Some names split onto two lines.
                 name = entry.pop() + ' ' + name
             if not first:
                 yield entry
             first = False
-            entry = list((name, ))
-            entry.append('Source: %s' % source)
-            entry.append('S15: %s' % (s15 % {'name': name}))
+            entry = [(name, )]
+            entry.append(f'Source: {source}')
+            entry.append(f'S15: {s15 % {"name": name}}')
             if skip_delimeter:
                 continue
-        entry.append(l)
-    else:
-        yield entry
+        entry.append(line)
+    yield entry
 
 
 def make_menagerie(sources):
     menagerie = list()
     for filename in sources:
-        file = open(filename)
+        file = Path(filename).open()
         s15 = file.readline()
         if not s15.startswith('s15: '):
-            raise Exception('Bad section 15 line.')
-        source = os.path.basename(filename).partition('.')[0].partition('_')[0]
+            raise ValueError('Bad section 15 line.')
+        source = Path(filename).name.partition('.')[0].partition('_')[0]
         lines = dehyphenate(strip_newlines(strip_comments(replace_typography(file))))
         monsters = list(monsterfy(split_on_monster(source, s15[5:], lines)))
         menagerie.extend(monsters)
@@ -648,15 +647,15 @@ def print_by_alpha(seq):
     for thing in seq:
         if thing.name[0] != chapter:
             chapter = thing.name[0]
-            print rpg.munge.rst.page('twoColumn')
-        print thing.format(False)
-        print '\n'
+            print(rpg.munge.rst.page('twoColumn'))
+        print(thing.format(False))
+        print('\n')
 
 
 def print_one_per_page(seq):
     for thing in seq:
-        print thing.format(False)
-        print rpg.munge.rst.page('oneColumn')
+        print(thing.format(False))
+        print(rpg.munge.rst.page('oneColumn'))
 
 
 # TODO: null align = neutral
@@ -674,27 +673,27 @@ if __name__ == '__main__':
         parser.add_argument('--minify', action='store_true', help='''Output minified JSON''')
         parser.add_argument('--json', action='store_true', help='''Output prettified JSON''')
         parser.add_argument('--tuco', action='store_true', help='''Output one column version of two-column source''')
-        cmdline = parser.parse_args()
-        return cmdline
+        return parser.parse_args()
 
     config = command_line()
     if config.tuco:
         tuco(config.sources)
     else:
         menagerie = make_menagerie(config.sources)
-        print >> sys.stderr, 'Found %i entries' % len(menagerie)
+        print(f'Found {len(menagerie)} entries', file=sys.stderr)
         if config.json:
-            print 'MOBS =', json.dumps([m.as_dict() for m in menagerie], sort_keys=True, indent=2)
+            print('MOBS =', json.dumps([m.as_dict() for m in menagerie], sort_keys=True, indent=2))
         elif config.minify:
-            print 'MOBS =', json.dumps([m.as_dict() for m in menagerie], sort_keys=True, separators=(',', ':'))
+            print('MOBS =', json.dumps([m.as_dict() for m in menagerie], sort_keys=True, separators=(',', ':')))
         elif config.python:
-            print 'MOBS = {\n    %s\n    }' % ',\n    '.join('"%s": %s' % (m.name.lower(), m.as_dict(skip=('body', 'source', 's15'))) for m in menagerie)
+            entries = ',\n    '.join(f'"{m.name.lower()}": {m.as_dict(skip=("body", "source", "s15"))}' for m in menagerie)
+            print(f'MOBS = {{\n    {entries}\n    }}')
         elif config.oddline:
-            print '\n'.join(m.odd_line() for m in menagerie if isinstance(m.hd, (int, long)))
+            print('\n'.join(m.odd_line() for m in menagerie if isinstance(m.hd, int)))
         elif config.statline:
-            print '\n'.join(m.stat_line() for m in menagerie)
+            print('\n'.join(m.stat_line() for m in menagerie))
         else:
-            print rpg.munge.rst.title('=', 'Menagerie')
-            # print rpg.munge.rst.page('twoColumn')
-            print rpg.munge.rst.page('oneColumn')
+            print(rpg.munge.rst.title('=', 'Menagerie'))
+            # print(rpg.munge.rst.page('twoColumn'))
+            print(rpg.munge.rst.page('oneColumn'))
             print_one_per_page(menagerie)
