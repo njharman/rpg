@@ -25,11 +25,15 @@ Notes::
     Where p=1/6 is the probability of success and q=1-p=5/6 is the probability of failure.
 
 History::
+    2.0.1 June 2026
+      - Add Dice class
+      - Add d0 null die, and d36 3d6 die
+      - move name outside of BaseDie
     2.0.0 first version with a number
-      - added drm().
-      - changed do_roll to expect +x after. 2d6+10 vs 10+2d6.
-      - changed ExplodingDie math_correct parameter to correct_math.
-      - added __repr__ to classes.
+      - add drm()
+      - refactor do_roll to expect +x after. 2d6+10 vs 10+2d6
+      - refactor ExplodingDie math_correct parameter to correct_math
+      - add __repr__ to classes
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
@@ -234,9 +238,8 @@ d24 = Die(24)
 d30 = Die(30)
 d100 = Die(100)
 
-# 3d6
 d0 = Die(0) # Always returns 0
-d36 = Dice(6, 3)
+d36 = Dice(6, 3) # 3d6
 
 d2x = ExplodingDie(2)
 d3x = ExplodingDie(3)
