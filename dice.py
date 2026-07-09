@@ -45,6 +45,7 @@ __all__ = (
     'Die', 'ExplodingDie', 'FighterExplodingDie',
     'd4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100',
     'd2', 'd3', 'd4', 'd6', 'd8', 'd10', 'd12', 'd16', 'd20', 'd24', 'd30', 'd100',
+    'd0', 'd36',
     'd2x', 'd3x', 'd4x', 'd6x', 'd8x', 'd10x', 'd12x', 'd16x', 'd20x', 'd24x', 'd30x', 'd100x',
     'd2p', 'd3p', 'd4p', 'd6p', 'd8p', 'd10p', 'd12p', 'd16p', 'd20p', 'd24p', 'd30p', 'd100p',
     'drm',
@@ -71,17 +72,14 @@ class BaseDie(object):
     or converted to str.
 
     :param size: Number of faces on die.
-    :param name_fmt: Used with size to set self.name.
     :param die_func: Callable, returns a roll of die.
     """
 
-    def __init__(self, size, name_fmt, die_func):
-        assert size > 1  # Infinite loops are overrated.
-        self.name = name_fmt % size
+    def __init__(self, die_func):
         self.die = die_func
 
     def __repr__(self):
-        return '%s()' % (self.__class__.__name__, )
+        return f'{self.__class__.__name__}()'
 
     def __call__(self):
         """Return roll as integer when called."""
@@ -129,8 +127,28 @@ class Die(BaseDie):
 
     def __init__(self, size):
         def d(size=size):
+            if size == 0:
+                return 0
             return random.randint(1, size)
-        super(Die, self).__init__(size, 'd%i', d)
+        self.name = f'd{size}'
+        super(Die, self).__init__(d)
+
+
+class Dice(BaseDie):
+    """One or more normal Dice.
+
+    Create callables that make (number)d(size) 'die rolls' when called, used in
+    math or converted to str.
+
+    :param size: Number of faces on each die.
+    :param number: Number of dice.
+    """
+
+    def __init__(self, size, number):
+        def d(size=size, number=number):
+            return sum(random.randint(1, size) for _ in range(number))
+        self.name = f'{number}d{size}'
+        super(Dice, self).__init__(d)
 
 
 class ExplodingDie(BaseDie):
@@ -148,8 +166,6 @@ class ExplodingDie(BaseDie):
     """
 
     def __init__(self, size, xsize=None, explode_range=1, correct_math=False):
-        """
-        """
         if xsize is None:
             xsize = size
 
@@ -169,10 +185,10 @@ class ExplodingDie(BaseDie):
         assert explode_range < size
         assert explode_range < xsize
         if correct_math:
-            name = 'd%ip'
+            self.name = f'd{size}p'
         else:
-            name = 'd%ix'
-        super(ExplodingDie, self).__init__(size, name, d)
+            self.name = f'd{size}x'
+        super(ExplodingDie, self).__init__(d)
 
 
 class FighterExplodingDie(BaseDie):
@@ -191,8 +207,6 @@ class FighterExplodingDie(BaseDie):
     """
 
     def __init__(self, size, explode_range=1):
-        super(FighterExplodingDie, self).__init__(size, 'd%ifx')
-
         def d(explode=False):
             if not explode:
                 roll = max(random.randint(1, size), random.randint(1, size))
@@ -202,7 +216,9 @@ class FighterExplodingDie(BaseDie):
             if roll > (size - explode_range):
                 roll += (d(True) - 1)
             return roll
-        self.die = d
+
+        self.name = f'd{size}fx'
+        super(FighterExplodingDie, self).__init__(d)
 
 
 d2 = Die(2)
@@ -217,6 +233,10 @@ d20 = Die(20)
 d24 = Die(24)
 d30 = Die(30)
 d100 = Die(100)
+
+# 3d6
+d0 = Die(0) # Always returns 0
+d36 = Dice(6, 3)
 
 d2x = ExplodingDie(2)
 d3x = ExplodingDie(3)
