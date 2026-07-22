@@ -48,7 +48,7 @@ import collections
 import random
 import sys
 
-from dice import d4, d6, d8, d10, d20, d100
+from die import d4, d6, d8, d10, d20, d100
 
 POTIONS = [
     (3, 'Animal Control'),

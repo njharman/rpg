@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """No idea.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
@@ -8,7 +8,7 @@ Website: http://trollandflame.blogspot.com/
 
 from collections import defaultdict
 
-from dice import d20x
+from die import d20x
 
 
 def dieroll_test(die_func, count=100000):
@@ -110,15 +110,15 @@ def test_wizspell(runcount, to_cast_bonus):
     for _ in range(runcount):
         count = 0
         while True:
-            result, _time, _text = do_wizcast(to_cast_bonus)
+            result, time, text = do_wizcast(to_cast_bonus)
             result = result[:result.find('(')].lower()
-            # print(result, time, text)
+            print(result, time, text)
             if result in ('lost', 'miscast'):
                 break
             if result in ('cast', ):
                 count += 1
         results[count] += 1
-        # print(count, '\n')
+        print(count, '\n')
     total = sum(results.values())
     results[0]
     lost_percentage = (results[0] * 100.0) / total

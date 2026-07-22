@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """No idea.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
@@ -8,7 +8,7 @@ Website: http://trollandflame.blogspot.com/
 
 from collections import defaultdict
 
-from dice import d6, d20
+from die import d6, d20
 
 
 def stat_testor(count, func):

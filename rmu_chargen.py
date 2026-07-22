@@ -10,7 +10,7 @@ import cmd
 import random
 from collections import namedtuple
 
-from dice import d100
+from die import d100
 
 POWERLEVELS = {
     # name: (stat minimum, average temp, average potential, stat boosts)

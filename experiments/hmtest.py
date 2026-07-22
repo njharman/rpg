@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """Hack Master 5ed combat tests.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
@@ -8,7 +8,7 @@ Website: http://trollandflame.blogspot.com/
 import sys
 from collections import defaultdict
 
-from dice import (
+from die import (
     d3p,
     d4p,
     d4x,
@@ -97,11 +97,11 @@ class Weapon:
         dice = self.shield_dice if shield else self.damage_dice
         for die in dice:
             total += die()
-            roll.append('+'.join(str(d) for d in die._rolls))
+            roll.append(die.face)
         if critical:
             for die in dice:
                 total += die()
-                roll.append('+'.join(str(d) for d in die._rolls))
+                roll.append(die.face)
         roll.append(f'+{self.damage_bonus}')
         self.last_roll = ' '.join(roll)
         return total + self.damage_bonus
@@ -568,13 +568,13 @@ def calc_dieroll_results(bucket, count):
 
 def dieroll_average_n_max(roll, count=100000):
     _, avg, highest = calc_dieroll_results(*dieroll_test(roll, count))
-    print(roll.name, f'{avg:.2f}', highest)
+    print(roll.notation, f'{avg:.2f}', highest)
 
 
 
 def dieroll_detail(roll, count=100000):
     rolls, _, _ = calc_dieroll_results(*dieroll_test(roll, count))
-    print(roll.name)
+    print(roll.notation)
     for roll in rolls:
         print(roll)
     print()

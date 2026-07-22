@@ -7,7 +7,7 @@ import operator
 import random
 import sys
 
-from dice import d100, drm
+from die import d100, d100rm
 
 #    V        IV       III      II       I
 temp_mod_table_src = """
@@ -395,7 +395,7 @@ class Day:
             self.wind = prev_day.wind  # todo roll my own wind
             cloud_mod = 30
         else:
-            roll = drm() + chance
+            roll = d100rm() + chance
             if roll > 100:
                 self.precipitation = None
                 while self.precipitation is None:
@@ -422,7 +422,7 @@ class Day:
         """Determine precipitation parameters."""
         def _roll_duration(base, mod):
             """Look up precipitation duration from table."""
-            roll = drm() + mod
+            roll = d100rm() + mod
             for row in precipitation_duration_table:
                 if roll <= row[0]:
                     return row[base]
@@ -430,7 +430,7 @@ class Day:
 
         def _roll_inches(base, mod):
             """Look up precipitation inches from table."""
-            roll = drm() + mod
+            roll = d100rm() + mod
             for row in precipitation_inches_table:
                 if roll <= row[0]:
                     return row[base]
@@ -450,7 +450,7 @@ class Day:
 
     def _roll_wind(self, base, storm_mod):
         """Look up wind speed from table."""
-        roll = drm() + storm_mod + self.wind_mod
+        roll = d100rm() + storm_mod + self.wind_mod
         # Only modify non-storm winds.
         if base == 1:
             roll += self.wind_mod
@@ -461,7 +461,7 @@ class Day:
 
     def _roll_temp(self, avg, op, mod, table):
         """Look up temp variation from table."""
-        roll = drm() + mod
+        roll = d100rm() + mod
         # todo: replace with table lookup func
         for i, var, newmod in table:
             if i > roll:

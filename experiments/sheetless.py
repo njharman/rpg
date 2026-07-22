@@ -9,7 +9,7 @@ Website: http://trollandflame.blogspot.com/
 import random
 from collections import defaultdict
 
-from dice import Dice, d0, d3d6, d6, d8, d10, d20, d24
+from die import d0, d3d6, d6, d8, d10, d20, d24, parse
 
 
 class Character:
@@ -36,7 +36,7 @@ class Character:
 
     def __str__(self):
         dead = 'DEAD ' if self.dead else ''
-        return f"{self.name} - {dead}Health:{self.health}{self.wounds} HP:{self.hp} Arm:{self.arm} Blk:{self.block.name} Cov:{self.cover}+ {self.attack.name}/{self.dmg.name}"
+        return f"{self.name} - {dead}Health:{self.health}{self.wounds} HP:{self.hp} Arm:{self.arm} Blk:{self.block.notation} Cov:{self.cover}+ {self.attack.notation}/{self.dmg.notation}"
 
     @property
     def dead(self):
@@ -90,7 +90,7 @@ class Mook:
     def __str__(self):
         if self.taken_out:
             return f"{self.name} TAKEN OUT"
-        return f"{self.name} {self.hd-self.hits}/{self.hd}HD {self.ac}AC {self.dmg.name}"
+        return f"{self.name} {self.hd-self.hits}/{self.hd}HD {self.ac}AC {self.dmg.notation}"
 
     @property
     def taken_out(self):
@@ -122,7 +122,7 @@ class HillGiant(Mook):
     _counter = 0
     def __init__(self):
         HillGiant._counter += 1
-        super().__init__(f"HillGiant{HillGiant._counter}", ac=4, hd=8, dmg=Dice(8, 2))
+        super().__init__(f"HillGiant{HillGiant._counter}", ac=4, hd=8, dmg=parse('2d8'))
 
 
 class Noble(Mook):

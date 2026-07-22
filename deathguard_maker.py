@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """Generate K'jorian Deathguards.
 
 D&D 3.5 era NPC "monster" generator"

@@ -5,6 +5,7 @@ __pycache__
 build
 sdist
 .installed.cfg
+
 # uv
 .venv
 
@@ -12,6 +13,3 @@ sdist
 .coverage
 .pytest_cache
 .tox
-
-# is a symlink to root direcotry dice.py TODO: make this a proper package
-experiements/dice.py

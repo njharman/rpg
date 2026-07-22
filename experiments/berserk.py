@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """Berserk Probabilitiy Experiments.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
@@ -8,7 +8,7 @@ Website: http://trollandflame.blogspot.com/
 
 from collections import defaultdict
 
-from dice import d6
+from die import d6
 
 
 def sustain_berserk(count, wis, damage=0):

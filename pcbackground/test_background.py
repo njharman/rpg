@@ -1,8 +1,8 @@
 import unittest
 
 import background
+import die
 from background import Character, Relative, Unknown
-from die import DieFactory, do_roll
 
 __copyright__ = 'Copyright (c) 2007 Norman J. Harman Jr. njharman@gmail.com'
 __license__ = """Licensed under the FSF GPL
@@ -27,49 +27,37 @@ __doc__ = f"""
 """
 
 
-class SequentialDieFactory(DieFactory):
-    def __init__(self, size):
-        def inner(size=size):
-            while (True):
-                yield from range(1, size + 1)
-        foo = inner()
+class CyclingRng:
+    """Deterministic rng: choice() walks a fixed value sequence, cycling, returning the
+    matching face. Injected into a die so it rolls scripted values.
+    """
 
-        def d():
-            return next(foo)
-        self.die = d
+    def __init__(self, values):
+        self.values = list(values)
+        self.i = 0
+
+    def choice(self, seq):
+        value = self.values[self.i % len(self.values)]
+        self.i += 1
+        for face in seq:
+            if face[1] == value:
+                return face
+        raise ValueError(f'{value} not in {seq}')
 
 
-class ListDieFactory(DieFactory):
-    def __init__(self, die_list):
-        def inner(die_list=die_list):
-            while (True):
-                yield from die_list
-        foo = inner()
+def SequentialDieFactory(size):
+    """Die rolling 1,2,...,size, repeating."""
+    return die.Standard(size, rng=CyclingRng(range(1, size + 1)))
 
-        def d():
-            return next(foo)
-        self.die = d
+
+def ListDieFactory(values):
+    """Die rolling the given values in order, repeating; d100 faces cover every value used."""
+    return die.Standard(100, rng=CyclingRng(values))
 
 
 background.d4 = SequentialDieFactory(4)
 background.d20 = SequentialDieFactory(20)
 background.d100 = SequentialDieFactory(100)
-
-
-class Test_stuff(unittest.TestCase):
-    def test_do_roll(self):
-        answer = do_roll('2d6')
-        answer = do_roll('40+2d6')
-        answer = do_roll('40+2d1')
-        assert answer == 42
-
-    def test_DieFactory(self):
-        d20 = DieFactory(20)
-        10 + d20
-        d20 + 10
-        f"{d20}"
-        '%i' % d20 # noqa: UP031
-        assert d20 < 21
 
 
 class Test_Unknown(unittest.TestCase):

@@ -22,7 +22,7 @@ from chargen_data import (
     town_biz,
     village_biz,
 )
-from die import d4, d20, d100, do_roll
+from die import d4, d20, d100, roll
 
 
 def do_table(table, roll=None):
@@ -120,9 +120,9 @@ class Character:
 
     def calc_physical(self):
         gender = self.gender.lower()[0]
-        self.height = do_roll(self._race_value(f'{gender}height', '0d1'))
-        self.weight = do_roll(self._race_value(f'{gender}weight', '0d1'))
-        self.age = do_roll(self._race_value('age', '0d1'))
+        self.height = roll(self._race_value(f'{gender}height', '0'))
+        self.weight = roll(self._race_value(f'{gender}weight', '0'))
+        self.age = roll(self._race_value('age', '0'))
 
     def set_attributes(self, stats):
         self.strength = stats[0]
@@ -319,24 +319,24 @@ class Character:
     def roll_money(self):
         """must do class first"""
         mod = {'SLC': -30, 'LLC': -20, 'MLC': -15, 'ULC': -10, 'LMC': -5, 'MMC': 0, 'UMC': +5, 'LUC': +10, 'MUC': +15, 'UUC': +20}
-        roll = d100 + self._money_modifier + mod[self.social]
+        total = d100 + self._money_modifier + mod[self.social]
         if self.orphan:
-            roll -= 20
+            total -= 20
         if len(self.siblings) == 0:
-            roll += 10
+            total += 10
         # fg +10 mu -10 th +5
         # bp = +2d12
-        if roll <= 5:
+        if total <= 5:
             self.roll_debt()
-        if roll > 101:
+        if total > 101:
             self.roll_weapon()
-        if roll > 106:
+        if total > 106:
             self.roll_armor()
-        if roll > 111:
+        if total > 111:
             self.roll_mount()
-        if roll > 116:
+        if total > 116:
             self.roll_deed()
-        self.money = do_roll(do_table(starting_money))
+        self.money = roll(do_table(starting_money))
         if self.orphan:
             self.money /= 2
 

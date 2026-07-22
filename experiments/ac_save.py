@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """Armor class vs shield save experiments.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
@@ -6,7 +6,7 @@ Copyright: Released into Public Domain Jan 2021.
 Website: http://trollandflame.blogspot.com/
 """
 
-from dice import d10, d20
+from die import d10, d20
 
 
 def hitcha(count, AC, tohit, bonus):

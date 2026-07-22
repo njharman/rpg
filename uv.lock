@@ -34,9 +34,12 @@ wheels = [
 
 [[package]]
 name = "die"
-version = "0.2.0"
+version = "3.0.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/52/a7/c2ba9bbd846c87ff92585d48359cf66f47e1cbc9367fb46b39a5044553e1/die-0.2.0.tar.gz", hash = "sha256:692f399c8c41b9b65edcae37c63f7a2e13cf5a7e213f92206ff971caad06c571", size = 11741, upload-time = "2012-08-26T03:53:33.61Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a4/f7/d6f30e3cbd9272e0c1d5ac3b5ce55187b078432927763c23454c3b6ee8f1/die-3.0.0.tar.gz", hash = "sha256:6627e91558c892bbbecdebac69fef51578e9990b037eff0ebf7ec1ba672bb639", size = 79409, upload-time = "2026-07-22T01:08:29.672Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/14/ea/fb8f60ea2b14650653e7d7919ed2367804cbebf16888b5d74060f212bdc0/die-3.0.0-py3-none-any.whl", hash = "sha256:714c82cfb36aee1b57250a1e89b86d65e0e778f350335c1828ae36bce054b9f4", size = 33028, upload-time = "2026-07-22T01:08:26.298Z" },
+]
 
 [[package]]
 name = "distlib"
@@ -209,7 +212,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "click" },
-    { name = "die" },
+    { name = "die", specifier = ">=3.0.0" },
 ]
 
 [package.metadata.requires-dev]

@@ -9,8 +9,7 @@ import random
 import re
 
 import click
-
-from dice import d6, d12, d100
+from die import d6, d12, d100
 
 
 def reduce_groups(things):

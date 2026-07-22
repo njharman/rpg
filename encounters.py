@@ -12,8 +12,6 @@ import random
 
 import click
 
-# from dice import d6, d12, d100
-
 # CSIO
 # 1 Attacked by Surprise
 # 2 Attacked

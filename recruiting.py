@@ -9,8 +9,7 @@ import random
 from collections import defaultdict
 
 import click
-
-from dice import d6
+from die import d6
 
 
 def d(pips):

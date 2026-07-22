@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """English sounding citynames.
 
 From http://inkwellideas.com/?page_id=631
