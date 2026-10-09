@@ -26,7 +26,7 @@ from die import d4, d20, d100, roll
 
 
 def do_table(table, roll=None):
-    """Return item from table based on roll"""
+    """Return item from table based on roll."""
     if roll is None:
         roll = d100
     for target, item in table:
@@ -36,9 +36,7 @@ def do_table(table, roll=None):
 
 
 class Relative:
-    """
-    Parents, siblings, etc
-    """
+    """Parents, siblings, etc."""
 
     def __init__(self, relation):
         self.relation = relation
@@ -49,15 +47,13 @@ class Relative:
 
 
 class Unknown:
-    """
-    Missing parent
-    """
+    """Missing parent."""
 
     def __init__(self, relation):
         self.relation = relation
 
     def __bool__(self):
-        """always claim to not be here"""
+        """Always claim to not be here."""
         return False
 
     def __str__(self):
@@ -65,14 +61,15 @@ class Unknown:
 
 
 class Character:
-    """
+    """Character, generated in this order.
+
     Assign Abilities
     Pick Gender
     Pick Race
     Roll Birth & Parents
     Roll Heritage
     Roll Social
-    Pick Class
+    Pick Class.
     """
 
     def __init__(self):
@@ -88,34 +85,46 @@ class Character:
     def __getattr__(Self, name):
         return ''
 
-    def _prop_set_gender(self, gender):
+    @property
+    def gender(self):
+        return self._gender
+
+    @gender.setter
+    def gender(self, gender):
         self._gender = gender
         self.calc_physical()
-    gender = property(lambda s: s._gender, _prop_set_gender)
 
-    def _prop_set_race(self, race):
+    @property
+    def race(self):
+        return self._race
+
+    @race.setter
+    def race(self, race):
         self._race = race
         self._race_dict = races[race]
         self.calc_physical()
-    race = property(lambda s: s._race, _prop_set_race)
 
-    def _prop_set_social(self, value):
+    @property
+    def social(self):
+        return self._social
+
+    @social.setter
+    def social(self, value):
         self._social = value
         self._add_honor(value)
-    social = property(lambda s: s._social, _prop_set_social)
 
     def _race_value(self, key, default=0):
-        """Silly helper to pull value from race dictionary"""
+        """Silly helper to pull value from race dictionary."""
         return self._race_dict.get(key, default)
 
     def _add_honor(self, cause):
-        """Add tuple(reason adjustment) to honor list"""
+        """Add tuple(reason adjustment) to honor list."""
         honor = add_honors.get(cause, (None, 0))
         if honor[0] is not None:
             self._honor.append(honor)
 
     def _add_info(self, info):
-        """Add string to info list"""
+        """Add string to info list."""
         self._info.append(info)
 
     def calc_physical(self):
@@ -136,7 +145,7 @@ class Character:
         return 'todo'
 
     def roll_birth(self):
-        """set stuff based on birth 4g+4h"""
+        """Set stuff based on birth 4g+4h."""
         self.birthdate = self.roll_birthdate()
         self.father = Relative('Father')
         self.mother = Relative('Mother')
@@ -191,7 +200,7 @@ class Character:
             _remarry('father')
 
     def roll_parental_quaity(self):
-        """4I"""
+        """4I."""
 
     def roll_heritage(self):
         result = do_table(heritages)
@@ -244,7 +253,7 @@ class Character:
             self._money_modifier -= 5
 
     def roll_social(self):
-        """4f"""
+        """4f."""
         def _set_parents_social(social):
             if self.mother:
                 self.mother.social = social
@@ -287,19 +296,19 @@ class Character:
             self.roll_entitlements()
 
     def roll_title(self):
-        """UUC have chance of special office held"""
+        """UUC have chance of special office held."""
         result = do_table(titles)
         if result:
             self._add_info(result)
 
     def roll_office(self):
-        """MUC have chance of special office held"""
+        """MUC have chance of special office held."""
         result = do_table(offices)
         if result:
             self._add_info(result)
 
     def roll_entitlements(self):
-        """DMG 3C, for UUC and MUC"""
+        """DMG 3C, for UUC and MUC."""
         data = {'social': self.social, 'd4': d4}
         count = 1
         while count > 0:
@@ -317,7 +326,7 @@ class Character:
             count -= 1
 
     def roll_money(self):
-        """must do class first"""
+        """Must do class first."""
         mod = {'SLC': -30, 'LLC': -20, 'MLC': -15, 'ULC': -10, 'LMC': -5, 'MMC': 0, 'UMC': +5, 'LUC': +10, 'MUC': +15, 'UUC': +20}
         total = d100 + self._money_modifier + mod[self.social]
         if self.orphan:

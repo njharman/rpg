@@ -43,7 +43,7 @@ RE_ROOMS = re.compile(r'^(\d+)\. ')
 RE_CRYPT = re.compile(r'^(\w+ Crypt \d+:)')
 RE_ALPHA = re.compile(r'^([A-Z]\.)')
 RE_QUOTE = re.compile(r'("[^"]+")')
-RE_ILLUS = re.compile(r'Show the players illustration #\d+ from the Barrowmaze I*\s*Illustration Booklet\.?\s*', flags=re.I)
+RE_ILLUS = re.compile(r'Show the players illustration #\d+ from the Barrowmaze I*\s*Illustration Booklet\.?\s*', flags=re.IGNORECASE)
 _names_pattern = '|'.join(f"(?:{n}'?s?)" for n in names)
 RE_NAMES = re.compile(f'({_names_pattern})')
 RE_LLMOB = re.compile(
@@ -214,5 +214,6 @@ def output(paragraphs):
 
 
 if __name__ == '__main__':
-    lines = parse(strip_emptylines(by_para(replace_typography(strip_newlines(Path(sys.argv[1]).open())))))
+    with Path(sys.argv[1]).open() as file:
+        lines = parse(strip_emptylines(by_para(replace_typography(strip_newlines(file)))))
     output(lines)

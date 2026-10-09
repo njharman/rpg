@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Context-free grammar random name generator
+"""Context-free grammar random name generator.
 
 Jeremy Thurgood <jerith@is.und.ac.za>
 Highly experimental at present, but sort of working
@@ -159,8 +159,7 @@ def checkUnusedNonTerminals(nameGrammar):
 
 
 def verifyGrammar(nameGrammar):
-    """verifyGrammar() uses the above functions to verify the correctness of a
-    grammar.
+    """verifyGrammar() uses the above functions to verify the correctness of a grammar.
 
     This isn't perfect, but it should catch the most common problems.
     """

@@ -46,7 +46,7 @@ class Character:
         self.hp = sum(self.hit_die() for _ in range(self.hd))
 
     def take_damage(self, dmg):
-        """First taken from hit protection, then absorbed by armor and then health"""
+        """First taken from hit protection, then absorbed by armor and then health."""
         if dmg <= 0:
             return ''
         if self.hp > 0:

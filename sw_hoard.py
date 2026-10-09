@@ -352,7 +352,7 @@ minor_weapon_ability = TableFactory(MINOR_WEAPON_ABILITY)
 
 
 def melee_weapon(die):
-    """25% of swords are unique"""
+    """25% of swords are unique."""
     weapon = _melee_weapon(die)
     if d4() == 4:
         weapon.replace('Sword', 'Unique Sword')
@@ -361,10 +361,7 @@ def melee_weapon(die):
 
 def scroll(roll):
     def pick(count, die):
-        spells = list()
-        for _ in range(count):
-            spells.append(levels[die() - 1])
-        spells.sort()
+        spells = sorted(levels[die() - 1] for _ in range(count))
         return f'scroll of {len(spells)} spells; {", ".join(spells)}'
 
     d1 = lambda: 1

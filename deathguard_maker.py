@@ -14,7 +14,8 @@ import random
 class Table:
     """Object that when evaluated into string will return random result from table."""
     def __init__(self, dice, *table):
-        """
+        """Table rolled with dice.
+
         @param dice: callable that returns something comparable to x.
         @param *table: list of tuples (x,foo1,foo2,fooN) where x is comparable to return value of dice and foo? are evaluatable into strings.
         """
@@ -34,7 +35,7 @@ class Table:
 
 
 class AutoTable(Table):
-    """Table that figures out it's own dice and uses slots instead of actual die rolls in table"""
+    """Table that figures out it's own dice and uses slots instead of actual die rolls in table."""
 
     def __init__(self, *table):
         new_table = []
@@ -48,7 +49,7 @@ class AutoTable(Table):
 
 
 class fwd_ref:
-    """Allows forward referencing of Table objects"""
+    """Allows forward referencing of Table objects."""
 
     def __init__(self, table):
         self.table = table
@@ -58,7 +59,7 @@ class fwd_ref:
 
 
 class Maybe:
-    """Returns emptystring instead of table entry 1/3 time"""
+    """Returns emptystring instead of table entry 1/3 time."""
 
     def __init__(self, table):
         self.table = table
@@ -151,7 +152,7 @@ Feats = AutoTable(
 
 
 def mod(stat):
-    """Stat mod"""
+    """Stat mod."""
     return (stat // 2) - 5
 
 
@@ -170,10 +171,7 @@ class FighterType:
         indent_level = 1
 
         def indent(text, indent_level=1):
-            lines = []
-            for line in text.split('\n'):
-                lines.append(f"{'  ' * indent_level}{line}")
-            return '\n'.join(lines)
+            return '\n'.join(f"{'  ' * indent_level}{line}" for line in text.split('\n'))
 
         def stuff(text):
             return indent(text, indent_level + 1)

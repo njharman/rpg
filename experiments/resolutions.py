@@ -23,10 +23,7 @@ def stat_testor(count, func):
 
 
 def x_in_d6_calculated():
-    results = list()
-    for chance in range(1, 6):
-        results.append({'chance': f'1-{chance}', 'count': 0, 'win': 'na', 'percent': ((chance * 100.0) / 6)})
-    return results
+    return [{'chance': f'1-{chance}', 'count': 0, 'win': 'na', 'percent': ((chance * 100.0) / 6)} for chance in range(1, 6)]
 
 
 def x_in_d6_multiple_d6(count):
@@ -54,10 +51,8 @@ def x_in_d6_multiple_d6(count):
 
 
 def format_results(results):
-    result = list()
-    result.append('stat sucessess')
-    for data in results:
-        result.append(f"{data['chance']:3}  {data['win']} / {data['percent']:.4}%")
+    result = ['stat sucessess']
+    result.extend(f"{data['chance']:3}  {data['win']} / {data['percent']:.4}%" for data in results)
     return '\n'.join(result)
 
 

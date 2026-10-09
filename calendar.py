@@ -66,9 +66,7 @@ class Weather:
         def to_trend(avg):
             """Continue temp trend from past."""
             past = self._past_temp[0]
-            directions = []
-            for temp in self._past_temp:
-                directions.append(cmp(past, temp))
+            directions = [cmp(past, temp) for temp in self._past_temp]
             # Perturb if stable weather.
             if sum(abs(t) for t in directions) == 0:
                 directions = (-1, 1)

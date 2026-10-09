@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Island Book 1
+"""Island Book 1.
 
 By Bill Davis and Bob Bledsaw copyright 1978 Judges Guild
 """

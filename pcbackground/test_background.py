@@ -28,8 +28,9 @@ __doc__ = f"""
 
 
 class CyclingRng:
-    """Deterministic rng: choice() walks a fixed value sequence, cycling, returning the
-    matching face. Injected into a die so it rolls scripted values.
+    """Deterministic rng: choice() walks a fixed value sequence, cycling, returning the matching face.
+
+    Injected into a die so it rolls scripted values.
     """
 
     def __init__(self, values):

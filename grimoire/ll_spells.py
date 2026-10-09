@@ -37,7 +37,7 @@ class Spell:
 
     @property
     def fullname(self):
-        '''Name and college.'''
+        """Name and college."""
         return f'{self.name} ({self.college})'
 
     def as_dict(self):
@@ -85,7 +85,7 @@ class Spell:
 
 
 def spell_index():
-    '''Mapping of all spells to their source.'''
+    """Mapping of all spells to their source."""
     re_tt_index = re.compile(r'^(.+)\s+\((.+)\)\s*(.+)$')
     index = dict()
     for line in spell_data.spell_index:
@@ -103,9 +103,7 @@ def spell_index():
 
 
 def merge_variants(spells):
-    '''Given list of spells find and merge spells that vary only by
-    college, level, range, duration.
-    '''
+    """Given list of spells find and merge spells that vary only by college, level, range, duration."""
     grouped = defaultdict(list)
     for spell in spells:
         grouped[spell.name].append(spell)
@@ -117,9 +115,7 @@ def merge_variants(spells):
 
 
 def merge_dupe(spells):
-    '''Given group of spells, find the main one and (possibly) make all the
-    others variants.
-    '''
+    """Given group of spells, find the main one and (possibly) make all the others variants."""
     if len(spells) == 1:
         return spells
     unique = list()
@@ -146,36 +142,38 @@ def merge_dupe(spells):
 
 
 def parse_spells(parse_me, skip=()):
-    '''Given properly munged text_files, parsers and list of spells to skip.
+    """Given properly munged text_files, parsers and list of spells to skip.
+
     :param parse_me: seq of ('S', 'file', parser) where 'S' is one-letter college name.
     :param skip: spells matching these names will be skipped.
     :return: sorted list of Spell instances.
-    '''
+    """
     skip_these = [s.lower() for s in skip]
     source_index = spell_index()
     spells = list()
     for college, file, parser in parse_me:
-        for spell in parser(Path(file).open()):
-            if spell.college is None:
-                spell.college = college
-            # Verify spell is "known".
-            basename = spell.name.lower()
-            fullname = spell.fullname.lower()
-            if basename in skip_these or fullname in skip_these:
-                # print(f'Skipping Spell: {spell.fullname}', file=sys.stderr)
-                continue
-            source = source_index.get(fullname, source_index.get(basename, None))
-            if source is None:
-                raise ValueError(f'Unknown Spell: {spell.fullname}')
-            spell.source = source
-            spells.append(spell)
+        with Path(file).open() as lines:
+            for spell in parser(lines):
+                if spell.college is None:
+                    spell.college = college
+                # Verify spell is "known".
+                basename = spell.name.lower()
+                fullname = spell.fullname.lower()
+                if basename in skip_these or fullname in skip_these:
+                    # print(f'Skipping Spell: {spell.fullname}', file=sys.stderr)
+                    continue
+                source = source_index.get(fullname, source_index.get(basename, None))
+                if source is None:
+                    raise ValueError(f'Unknown Spell: {spell.fullname}')
+                spell.source = source
+                spells.append(spell)
     spells.sort(key=lambda x: x.name)
     # print(f'{len(spells)} spells found')
     return spells
 
 
 def split_spells(lines):
-    '''Generator of spell stanzas.'''
+    """Generator of spell stanzas."""
     re_name = re.compile(r'([^(]+)\s*\((.+)\)')
     valid_colleges = spell_data.college_lookup.keys()
     spell = Spell()
@@ -247,7 +245,7 @@ def parse_aec(lines):
 
 
 def by_things(spells):
-    '''Group sequence of spells by name, level, and class.'''
+    """Group sequence of spells by name, level, and class."""
     byname = dict()
     bylevel = defaultdict(list)
     byclass = defaultdict(lambda: defaultdict(list))
@@ -260,7 +258,7 @@ def by_things(spells):
 
 
 def list_to_bylevel(spell_list, byname):
-    '''Convert spell_list to mapping of spells bylevel.'''
+    """Convert spell_list to mapping of spells bylevel."""
     bylevel = defaultdict(list)
     for i, level in enumerate(spell_list):
         for name in level:
@@ -286,7 +284,7 @@ def output_ogl(sec15=(), open_content='This entire work is designated as Open Ga
 
 
 def output_descriptions(spells):
-    '''Output spell descriptions, alphabetically.'''
+    """Output spell descriptions, alphabetically."""
     print('\n.. page:: twoColumn\n')
     startswith = spells[0].name[0]
     for spell in spells:
@@ -300,13 +298,13 @@ def output_descriptions(spells):
 
 
 def output_unlisted(byname):
-    '''Spells not part of normal spell lists.
+    """Spells not part of normal spell lists.
 
     Including tomes, excluding divine, rituals and wizard.
-    '''
+    """
     def funknsort(x):
         # put tome spells last
-        if x.college in ('T',):
+        if x.college == 'T':
             return f'zzzzzz{x.name}'
         return x.name
     listed = set()
@@ -323,14 +321,14 @@ def get_college_list(college, byname):
 
 
 def output_level(level, spells, template, sort=lambda x: x.name):
-    '''Output one level of spells.'''
+    """Output one level of spells."""
     print()
     for spell in sorted(spells, key=sort):
         print(template % spell.as_dict())
 
 
 def output_college_list(college, spells, template='#. %(name)s', page=5, sort=lambda x: x.name):
-    '''College's list of spells.'''
+    """College's list of spells."""
     if page:
         print('\n.. page:: spellList\n')
         print(munge.rst.title('-', f'{college} Spell List'))
@@ -343,7 +341,7 @@ def output_college_list(college, spells, template='#. %(name)s', page=5, sort=la
 
 
 def do_spell_sheet(spells, college):
-    '''Back side of char sheet, five columns.'''
+    """Back side of char sheet, five columns."""
     byname, _bylevel, _byclass = by_things(spells)
     spells = get_college_list(college.lower(), byname)
     print(f'{college} Spell List', file=sys.stderr)
@@ -358,7 +356,7 @@ def do_spell_sheet(spells, college):
 
 
 def do_spell_list(spells):
-    '''Spell listings'''
+    """Spell listings."""
     byname, bylevel, byclass = by_things(spells)
 
     print(munge.rst.title('*', 'Mage Lists'))

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-'''Quick hack to compare d20 vs d24 vs d30 for D&D to-hit rolls.
+"""Quick hack to compare d20 vs d24 vs d30 for D&D to-hit rolls.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Oct 2010.
 Website: http://trollandflame.blogspot.com/
-'''
+"""
 
 import die
 

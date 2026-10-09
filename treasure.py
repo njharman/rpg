@@ -53,17 +53,11 @@ def table(chart, roll=None):
 
 
 def _2d8_potions(rules, roll=None):
-    things = []
-    for _ in range(random.randint(1, 4) + random.randint(1, 4)):
-        things.append(_potion(rules, roll))
-    return ', '.join(things)
+    return ', '.join(_potion(rules, roll) for _ in range(random.randint(1, 4) + random.randint(1, 4)))
 
 
 def _d4_scrolls(rules, roll=None):
-    things = []
-    for _ in range(random.randint(1, 4)):
-        things.append(_scroll(rules, roll))
-    return ', '.join(things)
+    return ', '.join(_scroll(rules, roll) for _ in range(random.randint(1, 4)))
 
 
 def _item(rules, roll=None):

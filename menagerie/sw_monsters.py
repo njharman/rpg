@@ -144,7 +144,7 @@ def move_ll_to_sw(movement):
 
 
 class Monster:
-    '''One entry from tome of "monsters".'''
+    """One entry from tome of "monsters"."""
 
     def __init__(self, name):
         self.name = name
@@ -173,7 +173,7 @@ class Monster:
 
     @property
     def hitdice(self):
-        '''Reformatted hitdice.'''
+        """Reformatted hitdice."""
         bonus = ''
         hp = ''
         if self.hd_bonus:
@@ -183,7 +183,7 @@ class Monster:
         return f'{self.hd}{bonus}{hp}'
 
     def odd_line(self):
-        '''OD&D One line statblock.'''
+        """OD&D One line statblock."""
         # keys = ('name', 'hd', 'ac', 'sv', 'atk', 'special', 'mv', 'al', 'ml', 'ne', 'cl', 'xp', 'body', 'source', 's15')
         def reduce_damage(match):
             return ODD_DAMAGE.get(match.group(1), match.group(1))
@@ -238,7 +238,7 @@ class Monster:
         return ' '.join(bits)
 
     def stat_line(self):
-        '''One line statblock.'''
+        """One line statblock."""
         # keys = ('name', 'hd', 'ac', 'sv', 'atk', 'special', 'mv', 'al', 'ml', 'ne', 'cl', 'xp', 'body', 'source', 's15')
         bits = list()
         data = self.as_dict()
@@ -252,7 +252,7 @@ class Monster:
         return ' '.join(bits)
 
     def format(self, legal=False):
-        '''ReStructuredText output of entry.'''
+        """ReStructuredText output of entry."""
         lines = [
                 self.name,
                 '-' * len(self.name),
@@ -282,7 +282,7 @@ class Monster:
         return '\n'.join(lines)
 
     def as_tuple(self):
-        '''Suitable for JSONification.'''
+        """Suitable for JSONification."""
         return (
             self.name,
             self.hitdice,
@@ -305,7 +305,7 @@ class Monster:
             )
 
     def as_dict(self, skip=(), only=()):
-        '''Suitable for JSONification.'''
+        """Suitable for JSONification."""
         keys = ('name', 'hd', 'ac', 'sv', 'atk', 'special', 'mv', 'al', 'ml', 'ne', 'cl', 'xp', 'body', 'source', 's15')
         attr = {'hd': 'hitdice', 'ac': 'ac_asc', 'sv': 'save', 'atk': 'attack', 'mv': 'move', 'al': 'alignment', 'ml': 'morale', 'ne': 'number', 'body': 'description'}
         data = dict()
@@ -337,10 +337,11 @@ class Monster:
 
     @classmethod
     def from_entry(cls, lines):
-        '''Convert entry into one or more Monster instances.
+        """Convert entry into one or more Monster instances.
+
         Entries with multiple hit dice are split into individual instances.
         :param lines: entry split into lines.
-        '''
+        """
         stop = len(lines)
         name = lines[0].strip()
         # Change mc "foo demon" do "demon, foo"
@@ -471,7 +472,7 @@ re_hd = re.compile(r'^(\d+)(?:\+(\d+d?\d*))?\s*(?:\((\d+) hp\))?$')
 
 
 def parse_hd(entry, value):
-    '''Complicated parsing of hit dice attribute.'''
+    """Complicated parsing of hit dice attribute."""
     try:
         entry.hd = int(value)
     except ValueError:
@@ -490,7 +491,7 @@ def parse_hd(entry, value):
 
 
 def split_mc_entries(source, s15, lines):
-    '''Entry splitter that works on Monster Compendium.'''
+    """Entry splitter that works on Monster Compendium."""
     entry = list()
     description = list()
     for line in lines:
@@ -540,13 +541,13 @@ def split_mc_entries(source, s15, lines):
 
 
 def monsterfy(entries):
-    '''Convert sequence of entry sections into sequence of Monster instances.'''
+    """Convert sequence of entry sections into sequence of Monster instances."""
     for entry in entries:
         yield from Monster.from_entry(entry)
 
 
 def remove_dupes(seq):
-    '''Prefer in order swc, tohc, vv, others, mc'''
+    """Prefer in order swc, tohc, vv, others, mc."""
     grouped = defaultdict(list)
     for entry in seq:
         grouped[entry.name.lower()].append(entry)
@@ -559,7 +560,7 @@ def remove_dupes(seq):
 
 
 def two_to_one_columns(pages):
-    '''Given two-column pages (say from pdftotext -layout), return lines of one column.'''
+    """Given two-column pages (say from pdftotext -layout), return lines of one column."""
     def good_mid(mid, page):
         return all(len(x) <= mid or x[mid] == ' ' for x in page)
 
@@ -587,13 +588,14 @@ def two_to_one_columns(pages):
 def tuco(sources):
     # Tool to use when hand munging text files.
     # Output one column of two column source
-    pages = list(by_page(strip_newlines(replace_typography(Path(sources).open()))))
+    with Path(sources).open() as file:
+        pages = list(by_page(strip_newlines(replace_typography(file))))
     print(f'Found {len(pages)} pages', file=sys.stderr)
     print('\n'.join(two_to_one_columns(pages)))
 
 
 def split_on_monster(source, s15, lines):
-    '''Parse lines into entry "sections".'''
+    """Parse lines into entry "sections"."""
     if source == 'mc':
         yield from split_mc_entries(source, s15, lines)
         return
@@ -629,14 +631,14 @@ def split_on_monster(source, s15, lines):
 def make_menagerie(sources):
     menagerie = list()
     for filename in sources:
-        file = Path(filename).open()
-        s15 = file.readline()
-        if not s15.startswith('s15: '):
-            raise ValueError('Bad section 15 line.')
-        source = Path(filename).name.partition('.')[0].partition('_')[0]
-        lines = dehyphenate(strip_newlines(strip_comments(replace_typography(file))))
-        monsters = list(monsterfy(split_on_monster(source, s15[5:], lines)))
-        menagerie.extend(monsters)
+        with Path(filename).open() as file:
+            s15 = file.readline()
+            if not s15.startswith('s15: '):
+                raise ValueError('Bad section 15 line.')
+            source = Path(filename).name.partition('.')[0].partition('_')[0]
+            lines = dehyphenate(strip_newlines(strip_comments(replace_typography(file))))
+            monsters = list(monsterfy(split_on_monster(source, s15[5:], lines)))
+            menagerie.extend(monsters)
     menagerie = remove_dupes(menagerie)
     menagerie.sort(key=lambda m: alpha_sort(m.name))
     return menagerie

@@ -23,81 +23,154 @@ dev = [
 cache_dir = "$HOME/.cache/pytest/rpg"
 
 [tool.ruff]
-target-version = "py314"
 line-length = 120
-extend-include = ["d"]  # This is a python file (without extension for one-letter command line)
+extend-include = ["d"]  # python file without extension, a one-letter command line tool
 
 [tool.ruff.format]
 quote-style = "single"
 
-[tool.ruff.lint.per-file-ignores]
-"rpglib/rpg/parse.py" = [
-  "PLW2901", # `for` loop variable `para` overwritten by assignment target
-  ]
-"pcbackground/test_*.py" = [
-  "S101", # Use of `assert` detected (It's how pytest works!)
-  ]
-
 [tool.ruff.lint]
-ignore = [
-  "A005", # Module `calendar` shadows a Python standard-library module
-  "C408", # Unnecessary `list()` call (rewrite as a literal)
-  "COM819", # Trailing comma rox your sox!
-  "E501", # line too long
-  "E731", # I'll assign lambda expression if I want to, and I do!
-  "PLW0108", # Lambda may be unnecessary; consider inlining inner function
-  "F405", # star imports
-  "RET503", # Missing explicit return; No, learn Python instead!
-  "RUF012", # Mutable default value for class attribute
-  "S311", # Standard pseudo-random generators are not suitable for security/cryptographic purposes
-  "SIM108", # No like ternary operator
-  "SIM300", # Code well, yoda does
-  "TRY003", # Avoid specifying long messages outside the exception class
-  # temporary
-  "ERA001", # commented-out code
-  "PERF401", #PERF401 Use a list comprehension to create a transformed list  Use a list comprehension to create a transformed list
-  "RUF001", # String contains ambiguous `×`
-  "SIM115", # Use a context manager for opening files
-  "T201", # `print` found
-]
 select = [
-  #"ARG", # flake8 unused arguments (not really helpful, unused func args are common and ok)
-  #"D", # pydocstyle (too much)
-  #"N", # pep8-naming (too opinionated)
-  #"NPY", # numpy
-  #"PD", # pandas
-  #"PL", # Full Pylint (too much)
-  #"PLR", # Pylint refactor (too much/too opinionated)
   "A", # flake8-builtins
-  "ASYNC", # https://docs.astral.sh/ruff/rules/#flake8-async-async
+  "ASYNC", # flake8-async
   "B", # flake8-bugbear
   "BLE", # flake8-blind-except
   "C4", # unnecessary comprehensions, map()
   "COM", # flake8-commas
+  # pydocstyle, docstring formatting only; missing-docstring D1xx deliberately not selected
+  "D200", # one-line docstring fits on one line
+  "D201", # no blank line before function docstring
+  "D202", # no blank line after function docstring
+  "D205", # blank line between summary and description
+  "D206", # indent docstring with spaces
+  "D207", # docstring under-indented
+  "D208", # docstring over-indented
+  "D209", # multi-line closing quotes on own line
+  "D210", # no whitespace around docstring text
+  "D211", # no blank line before class docstring (pick of D203/D211)
+  "D212", # multi-line summary on first line (pick of D212/D213)
+  "D300", # triple double quotes
+  "D301", # r-string if backslashes in docstring
+  "D403", # capitalize first word
+  "D415", # summary ends with punctuation
+  "D419", # no empty docstrings
   "DTZ", # flake8-datetimez
   "E", # pycodestyle
-  "ERA", # No commented out code
+  "ERA", # no commented out code
   "EXE", # flake8-executable
   "F", # pyflakes
-  "FLY", # flynt
+  "FLY", # flynt: "".join() of static strings → f-string
+  "FURB", # refurb: modern idioms (open().read() → read_text, operator funcs, min/max)
   "G", # flake8-logging-format
   "I", # isort
-  "ICN", # https://github.com/joaopalmeiro/flake8-import-conventions
-  "ISC", # https://pypi.org/project/flake8-implicit-str-concat/
+  "ICN", # import conventions
+  "ISC", # implicit string concat
   "LOG", # flake8-logging
-  "PERF", # perflint
-  "PIE", # https://pypi.org/project/flake8-pie/
-  "PLC", # Pylint conventions
-  "PLE", # Pylint error
-  "PLW", # Pylint warnings
-  "PT", # https://pypi.org/project/flake8-pytest-style/
-  "PTH", # flake8 use pathlib
-  "RET", # https://pypi.org/project/flake8-return/
-  "RUF", # Ruff rules
-  "S", # https://docs.astral.sh/ruff/rules/#flake8-bandit-s
-  "SIM", # https://pypi.org/project/flake8-simplify/
-  "T", # flake8-debugger
-  "TRY", # tryceratops
-  "UP", # pyupgrade
-  "W", # pycodestyle
-  ]
+  "PERF", # perflint: slow loop patterns (append in loop, dict.items misuse)
+  "PGH", # pygrep-hooks (blanket noqa, etc.)
+  "PIE", # flake8-pie: misc cruft (unneeded pass, dup class fields, redundant range start)
+  "PLC", # pylint conventions
+  "PLE", # pylint errors
+  "PLW", # pylint warnings
+  "PT", # flake8-pytest-style
+  "PTH", # use pathlib
+  "RET", # flake8-return
+  "RSE", # flake8-raise
+  "RUF", # ruff rules
+  "S", # flake8-bandit
+  "SIM", # flake8-simplify
+  "SLF", # private member access
+  "T10", # debugger: leftover breakpoint()/pdb
+  "T20", # print: stray print()/pprint()
+  "TID", # tidy imports
+  "TRY", # tryceratops: exception handling (raise bare Exception, verbose re-raise, try/else, log.exception)
+  "UP", # pyupgrade: drop syntax obsolete for target-version
+  "W", # pycodestyle warnings
+  "YTT", # sys.version misuse
+]
+ignore = [
+  "A005", # module `calendar` shadows stdlib; it's a script, never imported as a lib
+  "C408", # dict()/list() calls are fine
+  "COM812", # conflicts with the formatter
+  "COM819", # trailing commas are fine
+  "E501", # line length is the formatter's job
+  "E731", # lambda assignment is fine
+  "F405", # star imports of data tables are intended
+  "PLW0108", # lambda wrappers kept for readability
+  "RET503", # implicit return None is fine
+  "RUF012", # fix wants typing.ClassVar annotation; no type hints
+  "S311", # random used for games/sim, not crypto
+  "SIM108", # ternaries allowed, not required
+  "SIM300", # yoda conditions are fine
+  "T201", # print is the output of these CLI scripts
+  "TRY003", # long messages at raise site are fine
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [
+  "F401", # re-exports
+]
+"rpglib/rpg/parse.py" = [
+  "ERA001", # commented-out tables / code
+  "PLW2901", # `for` loop variable `para` deliberately rebound while parsing
+]
+"**/test_*.py" = [
+  "S101", # assert is how pytest works
+  "S108", # temp paths in tests
+  "SLF001", # tests may poke private members
+]
+# TODO: fix commented out tables / code
+"calendar.py" = [
+  "ERA001", # commented-out tables / code
+]
+"dmg_dungeon_generator.py" = [
+  "ERA001", # commented-out tables / code
+]
+"experiments/ac_save.py" = [
+  "ERA001", # commented-out tables / code
+]
+"experiments/berserk.py" = [
+  "ERA001", # commented-out tables / code
+]
+"experiments/d20_vs_d24_vs_d30.py" = [
+  "ERA001", # commented-out tables / code
+  "SLF001", # experiment reads die.Stats internal bucket
+]
+"experiments/hmtest.py" = [
+  "ERA001", # commented-out tables / code
+]
+"experiments/sheetless.py" = [
+  "ERA001", # commented-out tables / code
+]
+"grimoire/ll_spells.py" = [
+  "ERA001", # commented-out tables / code
+]
+"grimoire/spell_data.py" = [
+  "ERA001", # commented-out tables / code
+]
+"menagerie/known.py" = [
+  "ERA001", # commented-out tables / code
+]
+"menagerie/sw_monsters.py" = [
+  "ERA001", # commented-out tables / code
+]
+"methodI.py" = [
+  "ERA001", # commented-out tables / code
+]
+"namegen.py" = [
+  "ERA001", # commented-out tables / code
+]
+"pcbackground/background.py" = [
+  "ERA001", # commented-out tables / code
+]
+"rmu_chargen.py" = [
+  "ERA001", # commented-out tables / code
+]
+"rmweather.py" = [
+  "ERA001", # commented-out tables / code
+  "SLF001", # Day reads the previous Day's private hours
+]
+"treasure.py" = [
+  "ERA001", # commented-out tables / code
+  "RUF001", # `×` multiplication sign is intended in treasure text
+]

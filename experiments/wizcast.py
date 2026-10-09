@@ -105,7 +105,7 @@ def test_wizcast(runcount, to_cast_bonus):
 
 
 def test_wizspell(runcount, to_cast_bonus):
-    """How many times can one spell be cast before miscast/lost"""
+    """How many times can one spell be cast before miscast/lost."""
     results = defaultdict(int)
     for _ in range(runcount):
         count = 0
@@ -115,7 +115,7 @@ def test_wizspell(runcount, to_cast_bonus):
             print(result, time, text)
             if result in ('lost', 'miscast'):
                 break
-            if result in ('cast', ):
+            if result == 'cast':
                 count += 1
         results[count] += 1
         print(count, '\n')

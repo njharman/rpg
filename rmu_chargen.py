@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Rolemaster Unified stats
+"""Generate Rolemaster Unified stats.
 
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Mar 2026.
@@ -89,7 +89,7 @@ class Stat:
 
     @property
     def stat(self):
-        """tempoary / potential."""
+        """Tempoary / potential."""
         return f'{self.temporary}/{self.potential}'
 
     @property
@@ -176,7 +176,7 @@ def parse_choice(text, count):
     """Parse a 1-based menu choice, raising ValueError if out of range."""
     value = int(text)
     if value <= 0 or value > count:
-        raise ValueError()
+        raise ValueError
     return value
 
 
@@ -258,8 +258,7 @@ class Character:
             f'Endurance: {self.endurance}',
             f'Resistances: {self.rr_cha} Channeling, {self.rr_ess} Essence, {self.rr_men} Mentalism, {self.rr_phy} Physical',
             ]
-        for stat in self.stats:
-            bits.append(str(stat))
+        bits.extend(str(stat) for stat in self.stats)
         if self.bonus_dp:
             bits.append(f'Bonus DP: {self.bonus_dp}')
         if self.stat_boosts > 0:
@@ -325,14 +324,12 @@ class CharacterGen(cmd.Cmd):
 
     def do_species(self, arg):
         """Set character species."""
-        choices = list()
-        for species in SPECIES.values():
-            choices.append((str(species), lambda s=species: self.char.set_species(s)))
+        choices = [(str(species), lambda s=species: self.char.set_species(s)) for species in SPECIES.values()]
         for i, (x, _) in enumerate(choices):
             print(f' {i+1}) {x}')
         choice = input('choice > ')
         if not choice.strip():
-            print('')
+            print()
             return
         try:
             choice = parse_choice(choice, len(choices))

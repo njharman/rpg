@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""From  Dragon #9 "Tombs & Crypts" by James M. Ward
+"""From  Dragon #9 "Tombs & Crypts" by James M. Ward.
 
 The mystery, challenge and pleasure of any wargamer in discover- ing and opening a tomb of some unknown being is well
 known to those that have done it. The creation of these tombs can be a very drawn out, head scratching process for the

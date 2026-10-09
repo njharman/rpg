@@ -110,9 +110,7 @@ class Weapon:
 class Combatant:
 
     def __init__(self, name, hitpoints, top_save, atk_bonus, dmg_bonus, def_bonus, spd_bonus, weapon, shield, armor):
-        """
-        def_bonus does not include armor or shield
-        """
+        """def_bonus does not include armor or shield."""
         self.name = name
         self.original_hp = hitpoints
         # threshold of pain!!!
@@ -129,7 +127,7 @@ class Combatant:
         self.reset_stats()
 
     def reset(self):
-        """Internal values"""
+        """Internal values."""
         self.hitpoints = self.original_hp
         self.shield = self.gimmie_shield()
         self.topped = False             # False or count at which no longer topped
@@ -152,7 +150,7 @@ class Combatant:
 
     @property
     def def_bonus(self):
-        """from armor, shields, weapon,"""
+        """From armor, shields, weapon,."""
         defense = self._def_bonus
         if self.armor:
             defense += self.armor.defense
@@ -169,7 +167,7 @@ class Combatant:
 
     @property
     def def_die(self):
-        """Die rolled for defense"""
+        """Die rolled for defense."""
         if self.topped or self.prone:
             return d8p
         return d20p
@@ -250,9 +248,7 @@ class Combatant:
         return f"hit/miss: {stats['hits']}/{stats['misses']} ({stats['percent']:0.1f}%), {stats['crits']} crits, max hit {stats['max_hit']}, {stats['afumble']}/{stats['dfumble']} a/d fumbles, {stats['pdefense']}/{stats['npdefense']} p/n defenses"
 
     def can_act(self, count):
-        """
-        :param count: current count up.
-        """
+        """:param count: current count up."""
         if self.dead:
             return False
         if self.topped is not False:
@@ -267,7 +263,8 @@ class Combatant:
         return not self.next_attack > count
 
     def attack(self, count, defender, free=False):
-        """
+        """Attack defender.
+
         :param defender: Combatant I am attacking
         :param free: a free attack that does not reset my count
         """
@@ -379,8 +376,8 @@ class Combatant:
         return '\n    '.join(results)
 
     def hit(self, damage, hvydr):
-        """
-        return damage getting through armor.
+        """Return damage getting through armor.
+
         hvydr: amount of heavy (>= 5) DR ignored.
         """
         damage = self.armor.hit(damage, hvydr)
@@ -389,7 +386,7 @@ class Combatant:
         return max(0, damage)
 
     def hit_shield(self, damage):
-        """return damage getting through shield, T/F if shattered"""
+        """Return damage getting through shield, T/F if shattered."""
         if not self.shield:
             raise ValueError('I got no shield')
         damage = self.shield.hit(damage)
@@ -419,7 +416,8 @@ class Combatant:
 
 
 def fight(a, b, play_by_play=False, deathmatch=False):
-    """
+    """Fight a vs b to the end.
+
     :param a: combatant 'a'.
     :param b: combatant 'b'.
     :return: winner of fight or None on draw
@@ -469,7 +467,8 @@ def fight(a, b, play_by_play=False, deathmatch=False):
 
 
 def fight_stats(a, b, func, count, play_by_play=False):
-    """
+    """Run many fights and report stats.
+
     :param a: combatant 'a'.
     :param b: combatant 'b'.
     :param func: resolve one fight func(a, b)

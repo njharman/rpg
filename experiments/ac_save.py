@@ -10,8 +10,10 @@ from die import d10, d20
 
 
 def hitcha(count, AC, tohit, bonus):
-    """AC + tohit + d20 >= 20 = hit
-    xdlucky comes up number = save where x = bonus
+    """Roll hits against AC with lucky saves.
+
+    AC + tohit + d20 >= 20 = hit
+    xdlucky comes up number = save where x = bonus.
     """
     lucky10 = d10()
     lucky20 = d20()

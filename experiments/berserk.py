@@ -32,9 +32,7 @@ def berserk(count, val):
             roll = d6() + d6()
             if roll != 2 and roll + modifier >= val:
                 counts[modifier] += 1
-    values = []
-    for i in range(10):
-        values.append(counts.get(i, 0))
+    values = [counts.get(i, 0) for i in range(10)]
     return ' '.join(f'{(x * 100.0) / count:2.0f}%' for x in values)
 
 

@@ -223,7 +223,7 @@ class BxStocking:
         return f'{d6()*5000:,}sp, {d6()*1000:,}gp{gem}{jew}{magic}'
 
     def _empty(self, roll):
-        """1-in-6 hidden treasure"""
+        """1-in-6 hidden treasure."""
         if d6() == 1:
             if d6() <= 4:
                 return self.fstr(f'Hidden and trapped {self._treasure(roll)}; {random.choice(self.TREASURETRAP)}')
@@ -231,7 +231,7 @@ class BxStocking:
         return 'Empty'
 
     def _monster(self, roll):
-        """3-in-6 w/treasure"""
+        """3-in-6 w/treasure."""
         treasure = ' w/ treasure' if d6() <= 3 else ''
         return f'{self.MONSTER[self.level]()}HD monster{treasure}'
 
@@ -272,7 +272,7 @@ class MegadungeonStocking(BxStocking):
             }
 
     def _hellrock(self, roll):
-        """hellrock special"""
+        """Hellrock special."""
         return random.choice(self.HELLROCK)
 
     def _funk(self, roll):

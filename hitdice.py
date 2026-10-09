@@ -28,12 +28,10 @@ def ac_line(columns, template):
     """Line of armor class."""
     bits = []
     bits.append(template % 'AC \\___')
-    for _ in range(1, columns):
-        bits.append(template % 'O O O O O X /')
+    bits.extend(template % 'O O O O O X /' for _ in range(1, columns))
     bits.append('\n')
     bits.append(template % '')
-    for _ in range(1, columns):
-        bits.append(template % 'O O O O O X')
+    bits.extend(template % 'O O O O O X' for _ in range(1, columns))
     return ''.join(bits)
 
 

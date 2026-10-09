@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Roll weather according to 16.0 Gamemaster Law RMFRP"""
+"""Roll weather according to 16.0 Gamemaster Law RMFRP."""
 
 import datetime
 import math
@@ -272,7 +272,8 @@ def _calc_windchill(temp, wind):
 
 
 class Hour:
-    """
+    """One hour of weather.
+
     :param hour: 1-24
     :param temp: temperature F defg
     """
@@ -289,7 +290,8 @@ class Hour:
 
 
 class Day:
-    """
+    """One day of weather.
+
     :param prev_day: previous Day() instance
     :param precipitation_chance: chance of precipitation this day (unless previous day's precip carries over)
     :param cloud_table: roll for cloud cover
@@ -327,9 +329,10 @@ class Day:
 
     def _calc_sun(self, latitude, sunrise, sunset):
         """Return Time instances (sunrise, midday, sunset).
+
         :param latitude: latitude
         :param sunrise: data from month table
-        :param sunset: data from month table
+        :param sunset: data from month table.
         """
         # WTF doesn't datetime.time support arithmetic!!!
         def calc_midday(rise, sets):
@@ -363,6 +366,7 @@ class Day:
 
     def _calc_temperature(self, prev_day):
         """Calculate temp for every hour in the day.
+
         :param prev_day: previous Day() instance.
         """
         # high around midday, low hour before sunrise
@@ -384,8 +388,9 @@ class Day:
 
     def _calc_precipitation(self, prev_day, chance, cloud_table):
         """Is it raining?
+
         :param chance: % chance of precipitation
-        :param cloud_table: data from month table
+        :param cloud_table: data from month table.
         """
         if prev_day and prev_day.precipitation_end > 24:
             self.precipitation = prev_day.precipitation
@@ -470,10 +475,11 @@ class Day:
 
     def _set_hours_temperatures(self, start, end, initial, delta):
         """Update temp for hours in day.
+
         :param start: start hour
         :param end: end our
         :param initial:  temp at start hour
-        :param delta: hourly change in temp
+        :param delta: hourly change in temp.
         """
         temp = initial
         for h in range(start, end):
@@ -484,10 +490,11 @@ class Day:
 
 class Month:
     """One month of weather/climate data.
+
     :param month: the month number 1-12, 1 being 2nd month of winter
     :param climate: type of climate, causes some modifiers
     :param latitude: latitude
-    :param elevation: elevation
+    :param elevation: elevation.
     """
     def __init__(self, month, climate, latitude, elevation):
         self.month = month
