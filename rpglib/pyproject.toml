@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rpglib"
+version = "0.0.1"
+description = "Shared helpers for Norm's RPG tools; imported as `rpg`."
+requires-python = ">=3.14.6"
+license = "MIT"
+authors = [{ name = "Norman J. Harman Jr.", email = "njharman@gmail.com" }]
+
+[tool.hatch.build.targets.wheel]
+packages = ["rpg"]

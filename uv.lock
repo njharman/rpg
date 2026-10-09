@@ -199,6 +199,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "click" },
     { name = "die" },
+    { name = "rpglib" },
 ]
 
 [package.dev-dependencies]
@@ -212,6 +213,7 @@ dev = [
 requires-dist = [
     { name = "click" },
     { name = "die", specifier = ">=3.0.0" },
+    { name = "rpglib", editable = "rpglib" },
 ]
 
 [package.metadata.requires-dev]
@@ -220,6 +222,11 @@ dev = [
     { name = "pytest", specifier = ">=8" },
     { name = "ruff", specifier = ">=0.15.21" },
 ]
+
+[[package]]
+name = "rpglib"
+version = "0.0.1"
+source = { editable = "rpglib" }
 
 [[package]]
 name = "ruff"

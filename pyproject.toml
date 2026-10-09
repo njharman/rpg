@@ -4,13 +4,16 @@ version = "0.1.0"
 description = "Norm's collection of RPG tools and toys"
 readme = "README.rst"
 requires-python = ">=3.14.6"
-# internal packages
-#   rpglib - in this directory
-#   dice - in this directory, not a package, symlinked where needed.
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = [
   "click",
   "die>=3.0.0",
+  "rpglib",  # ./rpglib, imported as `rpg`
   ]
+
+[tool.uv.sources]
+rpglib = { path = "rpglib", editable = true }
 
 [dependency-groups]
 dev = [
