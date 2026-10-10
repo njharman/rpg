@@ -17,9 +17,9 @@ rpglib = { path = "rpglib", editable = true }
 
 [dependency-groups]
 dev = [
-  "pre-commit>=4.6.0",
+  "pre-commit>=4.6.2",
   "pytest>=8",
-  "ruff>=0.15.21",
+  "ruff>=0.16.10",
 ]
 
 [tool.pytest.ini_options]
