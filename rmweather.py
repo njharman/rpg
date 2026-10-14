@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Roll weather according to 16.0 Gamemaster Law RMFRP."""
 
-import datetime
+import datetime as dt
 import math
 import operator
 import random
@@ -325,7 +325,7 @@ class Day:
             else:
                 precipitation = None
                 mods = (0, 0, 0, 0)
-            yield Hour(datetime.time(hour=hour), temp, self.wind, precipitation, mods)
+            yield Hour(dt.time(hour=hour), temp, self.wind, precipitation, mods)
 
     def _calc_sun(self, latitude, sunrise, sunset):
         """Return Time instances (sunrise, midday, sunset).
@@ -348,16 +348,16 @@ class Day:
             if minute >= 60:
                 minute -= 60
                 hour += 1
-            return rise + datetime.timedelta(hours=hour, minutes=minute)
+            return rise + dt.timedelta(hours=hour, minutes=minute)
 
         mod = 15 * ((latitude - 40) // 7)
         rhour, rmin = sunrise
         shour, smin = sunset
         rhour, rmin = normalize_time(rhour, rmin + mod)
         shour, smin = normalize_time(shour, smin + mod)
-        rise = datetime.datetime.now(datetime.UTC)
+        rise = dt.datetime.now(dt.UTC)
         rise = rise.replace(hour=rhour, minute=rmin, second=0, microsecond=0)
-        sets = datetime.datetime.now(datetime.UTC)
+        sets = dt.datetime.now(dt.UTC)
         sets = sets.replace(hour=shour, minute=smin, second=0, microsecond=0)
         mids = calc_midday(rise, sets)
         self.sunrise = rise.time()
