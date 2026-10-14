@@ -33,19 +33,19 @@ repos:
       - id: rst-inline-touching-normal
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.12.22
+    rev: 0.13.1
     hooks:
       - id: uv-lock
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.10
+    rev: v0.17.0
     hooks:
       - id: ruff-check
         # args: [--fix]
       # - id: ruff-format  # off: would wreck hand-aligned data tables and generated mobs.py
 
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.25
+    rev: '0.26'
     hooks:
       - id: validate-pyproject
 
