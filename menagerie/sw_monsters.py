@@ -25,9 +25,9 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-import rpg.munge.rst
+import mungetext.rst
 from known import known
-from rpg.munge import (
+from mungetext import (
     RE_EMPTYLINE,
     alpha_sort,
     by_page,
@@ -39,7 +39,7 @@ from rpg.munge import (
     strip_emptylines,
     strip_newlines,
 )
-from rpg.munge.out import parapper
+from mungetext.out import parapper
 
 ODD_DAMAGE = {
         '1d2':  'd2',
@@ -649,7 +649,7 @@ def print_by_alpha(seq):
     for thing in seq:
         if thing.name[0] != chapter:
             chapter = thing.name[0]
-            print(rpg.munge.rst.page('twoColumn'))
+            print(mungetext.rst.page('twoColumn'))
         print(thing.format(False))
         print('\n')
 
@@ -657,7 +657,7 @@ def print_by_alpha(seq):
 def print_one_per_page(seq):
     for thing in seq:
         print(thing.format(False))
-        print(rpg.munge.rst.page('oneColumn'))
+        print(mungetext.rst.page('oneColumn'))
 
 
 # TODO: null align = neutral
@@ -695,7 +695,7 @@ if __name__ == '__main__':
         elif config.statline:
             print('\n'.join(m.stat_line() for m in menagerie))
         else:
-            print(rpg.munge.rst.title('=', 'Menagerie'))
-            # print(rpg.munge.rst.page('twoColumn'))
-            print(rpg.munge.rst.page('oneColumn'))
+            print(mungetext.rst.title('=', 'Menagerie'))
+            # print(mungetext.rst.page('twoColumn'))
+            print(mungetext.rst.page('oneColumn'))
             print_one_per_page(menagerie)

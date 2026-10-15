@@ -6,10 +6,10 @@ import re
 import sys
 from pathlib import Path
 
-import munge
-from munge import by_para, replace_typography, strip_emptylines, strip_newlines
-from munge.out import parapper
-from munge.rst import escape_asterisk
+import mungetext
+from mungetext import by_para, replace_typography, strip_emptylines, strip_newlines
+from mungetext.out import parapper
+from mungetext.rst import escape_asterisk
 
 from rpg.mobs import MOBS
 
@@ -55,8 +55,8 @@ def strip_tt_pagebreaks(lines):
     """TT has pagenumber preceding pagebreak."""
     previous = None
     for line in lines:
-        if munge.PAGE_BREAK in line:
-            line = line.replace(munge.PAGE_BREAK, '')
+        if mungetext.PAGE_BREAK in line:
+            line = line.replace(mungetext.PAGE_BREAK, '')
             previous = None
         if previous is not None:
             yield previous
@@ -69,7 +69,7 @@ def strip_aec_pagebreaks(lines):
     """AEC has pagenumber after pagebreak and page break line is garbage."""
     skip = False
     for line in lines:
-        if munge.PAGE_BREAK in line:
+        if mungetext.PAGE_BREAK in line:
             skip = True
             continue
         if skip:
@@ -100,7 +100,7 @@ def parse(lines):
                 redo = True
             else:
                 accum.append(line)
-            collecting = munge.lookfor(lambda x: x.endswith('.'), accum, munge.space_reduce)
+            collecting = mungetext.lookfor(lambda x: x.endswith('.'), accum, mungetext.space_reduce)
             continue
         yield line
     if collecting:
@@ -193,12 +193,12 @@ def output(paragraphs):
             print('*Alcoves:*', alcoves[len('Burial Alcoves: '):])
             print()
             print('*Contents:*', contents)
-        elif para.endswith(':') and len(para) < 50 and munge.is_cap(para[0]):
-            print(munge.rst.title(3, para))
+        elif para.endswith(':') and len(para) < 50 and mungetext.is_cap(para[0]):
+            print(mungetext.rst.title(3, para))
         else:
             if RE_ROOMS.search(para):
                 number, para = para.split('. ', 1)
-                print(munge.rst.title(2, number))
+                print(mungetext.rst.title(2, number))
             para = RE_CRYPT.sub(r'**\1**', para)
             para = RE_ALPHA.sub(r'**\1**', para)
             para = RE_ILLUS.sub(r'', para)

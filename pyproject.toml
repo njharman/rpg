@@ -3,16 +3,18 @@ name = "rpg"
 version = "0.1.0"
 description = "Norm's collection of RPG tools and toys"
 readme = "README.rst"
-requires-python = ">=3.14.6"
+requires-python = ">=3.15"
 license = "MIT"
 license-files = ["LICENSE"]
 dependencies = [
   "click",
   "die>=3.0.0",
+  "mungetext",
   "rpglib",  # ./rpglib, imported as `rpg`
   ]
 
 [tool.uv.sources]
+mungetext = { git = "https://github.com/njharman/mungetext" }
 rpglib = { path = "rpglib", editable = true }
 
 [dependency-groups]

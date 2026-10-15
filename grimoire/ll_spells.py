@@ -6,8 +6,8 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-import munge
-import munge.rst
+import mungetext
+import mungetext.rst
 import rpg.legal
 import rpg.parse
 import spell_data
@@ -232,14 +232,14 @@ def split_spells(lines):
 
 def parse_tt(lines):
     tt = rpg.parse.strip_tt_pagebreaks(lines)
-    tt = munge.strip_comments(tt)
+    tt = mungetext.strip_comments(tt)
     tt = split_spells(tt)
     return list(tt)
 
 
 def parse_aec(lines):
     aec = rpg.parse.strip_aec_pagebreaks(lines)
-    aec = munge.strip_comments(aec)
+    aec = mungetext.strip_comments(aec)
     aec = split_spells(aec)
     return list(aec)
 
@@ -268,19 +268,19 @@ def list_to_bylevel(spell_list, byname):
 
 
 def output_tm(trademarks):
-    print(munge.rst.title('=', 'Trademarks'))
-    print(munge.by_para(trademarks))
+    print(mungetext.rst.title('=', 'Trademarks'))
+    print(mungetext.by_para(trademarks))
 
 
 def output_ogl(sec15=(), open_content='This entire work is designated as Open Game Content under the OGL.', product=''):
     print('\n.. page:: oneColumn')
-    print(munge.rst.title('=', 'Open Game License'))
+    print(mungetext.rst.title('=', 'Open Game License'))
     print('\n', open_content)
     if product:
         print('\n', product)
-    print(munge.rst.title('-', 'License'))
-    print('\n'.join(munge.by_para(rpg.legal.ogl)))
-    print('\n'.join(munge.by_para(rpg.legal.merge_ogl(sec15))))
+    print(mungetext.rst.title('-', 'License'))
+    print('\n'.join(mungetext.by_para(rpg.legal.ogl)))
+    print('\n'.join(mungetext.by_para(rpg.legal.merge_ogl(sec15))))
 
 
 def output_descriptions(spells):
@@ -331,12 +331,12 @@ def output_college_list(college, spells, template='#. %(name)s', page=5, sort=la
     """College's list of spells."""
     if page:
         print('\n.. page:: spellList\n')
-        print(munge.rst.title('-', f'{college} Spell List'))
+        print(mungetext.rst.title('-', f'{college} Spell List'))
         print('\n.. raw:: pdf\n\n   FrameBreak')
     for level in sorted(spells.keys()):
         if level == page:
             print('\n.. raw:: pdf\n\n   FrameBreak')
-        print(munge.rst.title('~', level_names[level]))
+        print(mungetext.rst.title('~', level_names[level]))
         output_level(level, spells[level], template, sort)
 
 
@@ -346,7 +346,7 @@ def do_spell_sheet(spells, college):
     spells = get_college_list(college.lower(), byname)
     print(f'{college} Spell List', file=sys.stderr)
     for level in sorted(spells.keys()):
-        print(munge.rst.title('-', level_names[level]))
+        print(mungetext.rst.title('-', level_names[level]))
         print()
         for spell in sorted(spells[level], key=lambda x: x.name):
             print(f'#. {spell.name}')
@@ -359,14 +359,14 @@ def do_spell_list(spells):
     """Spell listings."""
     byname, bylevel, byclass = by_things(spells)
 
-    print(munge.rst.title('*', 'Mage Lists'))
+    print(mungetext.rst.title('*', 'Mage Lists'))
     output_college_list('Hermeticist', get_college_list('mage', byname))
     output_college_list('Elementalist', get_college_list('Elementalist', byname))
     output_college_list('Illusionist', get_college_list('Illusionist', byname))
     output_college_list('Necromancer', get_college_list('Necromancer', byname))
     output_college_list('Vivimancer', get_college_list('Vivimancer', byname))
     print('\n.. page:: twoColumn\n')
-    print(munge.rst.title('*', 'Other Lists'))
+    print(mungetext.rst.title('*', 'Other Lists'))
     output_college_list('Divine', byclass['D'], page=4)
     output_unlisted(byname)
     output_college_list('All', bylevel, '#. %(name)s (%(college)s)')
@@ -377,7 +377,7 @@ def do_grimoire(spells):
     byname, _bylevel, byclass = by_things(spells)
     print(f'{len(spells)} spells, {len(merged)} after merge', file=sys.stderr)
 
-    print(munge.rst.title('*', 'Gold & Glory Grimoire'))
+    print(mungetext.rst.title('*', 'Gold & Glory Grimoire'))
     print(f'''A compact reference of {len(merged)} spells for use at the game table, ver 2.1.''')
     print('''Compiled and **heavily** edited by Norman J. Harman Jr. <njharman@gmail.com>.''')
     print(
@@ -387,7 +387,7 @@ def do_grimoire(spells):
     print('\n', ' '.join(rpg.legal.aecTM))
 
     print('''\n.. raw:: pdf\n\n  FrameBreak\n''')
-    print(munge.rst.title('=', 'Colleges of Magic'))
+    print(mungetext.rst.title('=', 'Colleges of Magic'))
     print('\nThere are innumerable traditions of magic. Over time, five major colleges have emerged;')
     print('**Hermetics (M)** the original Magi taught by Thoth-Hermes.')
     print('**Elementalists (E)** air, earth, fire, water.')
@@ -406,13 +406,13 @@ def do_grimoire(spells):
     print('Several spells have identical effects to **Divine (D)** prayers.')
     print('Finally there are **Tomes (T)** of "lost" formulae or the specialized creations of an obscure school.')
 
-    print(munge.rst.title('=', 'Ritual Casting'))
+    print(mungetext.rst.title('=', 'Ritual Casting'))
     print('''\nAny mage may perform rituals of arcane formulae they have and can read.''')
     print('''\nRituals take **10 minutes** and require concentrated magical energy, known as *Viz* (typically square of spell's circle). But, they need not be memorized ahead of time.''')
     print('''\n*Viz* comes in "pawns" which generally costs 10-20sp per pawn.  In addition, all sorts of mystical plants, substances, animal parts and the like provide "free" *Viz*.''')
 
     print('''\n.. raw:: pdf\n\n  FrameBreak\n''')
-    print(munge.rst.title('-', 'Partial Ritual List'))
+    print(mungetext.rst.title('-', 'Partial Ritual List'))
     output_college_list('Arcane Rituals', byclass['R'], template='#. `%(name)s`_', page=False)
     output_college_list('Hermeticist', get_college_list('mage', byname), template='#. `%(name)s`_')
     output_college_list('Elementalist', get_college_list('Elementalist', byname), template='#. `%(name)s`_')
