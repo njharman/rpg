@@ -21,7 +21,8 @@ rpglib = { path = "rpglib", editable = true }
 dev = ["pre-commit>=4.6.2", "pytest>=9", "pytest-cov>=7.1.0", "ruff>=0.17"]
 
 [tool.pytest]
-testpaths = ["pcbackground", "rpglib"]
+testpaths = ["pcbackground", "rpglib", "tests"]
+pythonpath = ["."]  # tests import top-level scripts
 cache_dir = "$HOME/.cache/pytest/rpg"  # keep churn out of Dropbox
 strict = true
 addopts = ["-ra", "--cov"]
