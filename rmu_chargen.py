@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Generate Rolemaster Unified stats.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Mar 2026.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 
 import cmd
@@ -89,7 +90,7 @@ class Stat:
 
     @property
     def stat(self):
-        """Tempoary / potential."""
+        """Temporary / potential."""
         return f'{self.temporary}/{self.potential}'
 
     @property
@@ -142,7 +143,7 @@ class Culture(namedtuple('Culture', [
     def __str__(self):
         return self.Name
 # CULTURES = {
-#     # *max 2 ranks per specialization excep langaugages
+#     # *max 2 ranks per specialization except languages
 #     'Cosmopolitan': Culture(
 #         'Cosmopolitan',
 #         ((2, 'Perception'), (1, 'Body Development'), (1, 'Unarmed*'), (4, 'COMPOSITION|PERFORMANCE ART'), (6, 'CRAFTING|VOCATION'),

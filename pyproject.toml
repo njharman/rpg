@@ -10,7 +10,7 @@ dependencies = [
   "click",
   "die>=3.0.0",
   "mungetext",
-  "rpglib",  # ./rpglib, imported as `rpg`
+  "rpglib",  # local ./rpglib, imported as `rpg`
   ]
 
 [tool.uv.sources]
@@ -40,10 +40,30 @@ exclude_also = ["if __name__ == .__main__.:"]
 
 [tool.ruff]
 line-length = 120
-extend-include = ["d"]  # python file without extension, a one-letter command line tool
+extend-include = ["d"]  # d is a python file, a one-letter command line tool
 
 [tool.ruff.format]
 quote-style = "single"
+# hand-aligned book tables, formatter would wreck the columns
+exclude = [
+  "rpglib/rpg/mobs.py",  # generated
+  "encounters.py",
+  "treasure.py",
+  "rmweather.py",
+  "dmg_dungeon_generator.py",
+  "tombgenerator.py",
+  "deathguard_maker.py",
+  "rmu_chargen.py",
+  "recruiting.py",
+  "citynames.py",
+  "rpglib/rpg/parse.py",
+  "grimoire/*",
+  "menagerie/*",
+  "pcbackground/chargen_data.py",
+  "pcbackground/background.py",  # aligned trailing comments
+  "experiments/hmtest.py",  # aligned trailing comments
+  "jgislandgenerator.py",  # aligned trailing comments
+]
 
 # TODO: fix commented out tables / code
 [tool.ruff.lint.per-file-ignores]

@@ -1,5 +1,11 @@
 #!/usr/bin/env python
-# Parse LL AEC and TT to produced various combined spell listings.
+"""Parse LL AEC and TT to produce various combined spell listings.
+
+Version: 10/16/2026
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Oct 2026.
+Website: https://github.com/njharman/rpg
+"""
 
 import re
 import sys
@@ -30,7 +36,7 @@ class Spell:
         self.duration = None
         self.source = None      # What book it comes from.
         self.body = list()      # Body text.
-        self.variants = list()  # "Indentical to cleric spell of same name.
+        self.variants = list()  # "Identical to cleric spell of same name.
 
     def __str__(self):
         return '\n'.join(self.format())
@@ -49,12 +55,12 @@ class Spell:
         levels = list()
         ranges = list()
         durations = list()
-        for varmit in self.variants:
-            levels.append(varmit)
-            if varmit.range != self.range:
-                ranges.append(varmit)
-            if varmit.duration != self.duration:
-                durations.append(varmit)
+        for variant in self.variants:
+            levels.append(variant)
+            if variant.range != self.range:
+                ranges.append(variant)
+            if variant.duration != self.duration:
+                durations.append(variant)
         if levels:
             levels.insert(0, self)
             spell_level = ', '.join(f'{s.level} ({s.college})' for s in levels)
@@ -187,7 +193,7 @@ def split_spells(lines):
             if in_table == 0:  # End previous para, start table.
                 spell.body.append(' '.join(body))
                 body = list()
-            if in_table < 2:  # Tables, have three === seperator lines.
+            if in_table < 2:  # Tables, have three === separator lines.
                 in_table += 1
             else:  # End table.
                 table.append(line.rstrip())
@@ -382,7 +388,7 @@ def do_grimoire(spells):
     print('''Compiled and **heavily** edited by Norman J. Harman Jr. <njharman@gmail.com>.''')
     print(
         '''\nSourced from Daniel Proctor's *"AEC"*, Gavin Norman's *"T&T"*, Greg Gillespie's *"BMI & BMII"*.'''
-        ''' With a few original creations.  No compatibility is claimed with those or any other product.'''
+        ''' With a few original creations. No compatibility is claimed with those or any other product.'''
         ''' Any mistakes, typos, etc. are assuredly Norm's fault.''')
     print('\n', ' '.join(rpg.legal.aecTM))
 
@@ -409,7 +415,7 @@ def do_grimoire(spells):
     print(mungetext.rst.title('=', 'Ritual Casting'))
     print('''\nAny mage may perform rituals of arcane formulae they have and can read.''')
     print('''\nRituals take **10 minutes** and require concentrated magical energy, known as *Viz* (typically square of spell's circle). But, they need not be memorized ahead of time.''')
-    print('''\n*Viz* comes in "pawns" which generally costs 10-20sp per pawn.  In addition, all sorts of mystical plants, substances, animal parts and the like provide "free" *Viz*.''')
+    print('''\n*Viz* comes in "pawns" which generally costs 10-20sp per pawn. In addition, all sorts of mystical plants, substances, animal parts and the like provide "free" *Viz*.''')
 
     print('''\n.. raw:: pdf\n\n  FrameBreak\n''')
     print(mungetext.rst.title('-', 'Partial Ritual List'))

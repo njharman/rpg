@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 """No idea.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 
 from collections import defaultdict
@@ -43,7 +44,7 @@ def dieroll_average_n_max(roll, count=100000):
 def dieroll_detail(roll, count=100000):
     rolls, _avg, _max = calc_dieroll_results(*dieroll_test(roll, count))
     for roll in rolls:
-        print(roll) # TODO: implement
+        print(roll)  # TODO: implement
 
 
 def miscast():
@@ -91,7 +92,7 @@ def test_wizcast(runcount, to_cast_bonus):
     failed = defaultdict(int)
     for _ in range(runcount):
         cast, time, _text = do_wizcast(to_cast_bonus)
-        cast = cast[:cast.find('(')].lower()
+        cast = cast[: cast.find('(')].lower()
         results[cast] += 1
         if cast == 'cast':
             casted[time] += 1
@@ -111,7 +112,7 @@ def test_wizspell(runcount, to_cast_bonus):
         count = 0
         while True:
             result, time, text = do_wizcast(to_cast_bonus)
-            result = result[:result.find('(')].lower()
+            result = result[: result.find('(')].lower()
             print(result, time, text)
             if result in ('lost', 'miscast'):
                 break

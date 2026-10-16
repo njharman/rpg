@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Roll weather according to 16.0 Gamemaster Law RMFRP."""
+"""Roll weather according to 16.0 Gamemaster Law RMFRP.
+
+Version: 10/16/2026
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Oct 2026.
+Website: https://github.com/njharman/rpg
+"""
 
 import datetime as dt
 import math
@@ -275,7 +281,7 @@ class Hour:
     """One hour of weather.
 
     :param hour: 1-24
-    :param temp: temperature F defg
+    :param temp: temperature F deg
     """
     def __init__(self, hour, temp, wind, precipitation, precipitation_mods):
         self.hour = hour
@@ -477,7 +483,7 @@ class Day:
         """Update temp for hours in day.
 
         :param start: start hour
-        :param end: end our
+        :param end: end hour
         :param initial:  temp at start hour
         :param delta: hourly change in temp.
         """

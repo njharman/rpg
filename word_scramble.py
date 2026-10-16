@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Simple word scrambler."""
+"""Simple word scrambler.
+
+Version: 10/16/2026
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Oct 2026.
+Website: https://github.com/njharman/rpg
+"""
 
 import random
 
@@ -41,6 +47,7 @@ def simple(text):
 
 if __name__ == '__main__':
     import sys
+
     text = sys.argv[1]
     vowels, consts = fuxate(text)
 

@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 """No idea.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 
 from collections import defaultdict
@@ -23,7 +24,9 @@ def stat_testor(count, func):
 
 
 def x_in_d6_calculated():
-    return [{'chance': f'1-{chance}', 'count': 0, 'win': 'na', 'percent': ((chance * 100.0) / 6)} for chance in range(1, 6)]
+    return [
+        {'chance': f'1-{chance}', 'count': 0, 'win': 'na', 'percent': ((chance * 100.0) / 6)} for chance in range(1, 6)
+    ]
 
 
 def x_in_d6_multiple_d6(count):
@@ -42,23 +45,32 @@ def x_in_d6_multiple_d6(count):
                 tre += 1
             elif d6() in pants:
                 tre += 1
-        data = {'chance': f'1-{chance}', 'count': count, 'one': one, 'onep': (one * 100.0) / count, 'two': two, 'twop': (two * 100.0) / count, 'tre': tre, 'trep': (tre * 100.0) / count}
+        data = {
+            'chance': f'1-{chance}',
+            'count': count,
+            'one': one,
+            'onep': (one * 100.0) / count,
+            'two': two,
+            'twop': (two * 100.0) / count,
+            'tre': tre,
+            'trep': (tre * 100.0) / count,
+        }
         results.append(
-            f"{data['chance']:3}  {data['one']} / {data['onep']:.4}%  "
-            f"{data['two']} / {data['twop']:.4}%  {data['tre']} / {data['trep']:.4}%",
+            f'{data["chance"]:3}  {data["one"]} / {data["onep"]:.4}%  '
+            f'{data["two"]} / {data["twop"]:.4}%  {data["tre"]} / {data["trep"]:.4}%',
         )
     return '\n'.join(results)
 
 
 def format_results(results):
-    result = ['stat sucessess']
-    result.extend(f"{data['chance']:3}  {data['win']} / {data['percent']:.4}%" for data in results)
+    result = ['stat successes']
+    result.extend(f'{data["chance"]:3}  {data["win"]} / {data["percent"]:.4}%' for data in results)
     return '\n'.join(result)
 
 
 def rolld6():
     count = 10000
-    print(f"|    | {' | '.join(f'{i:^5}' for i in range(11))} |")
+    print(f'|    | {" | ".join(f"{i:^5}" for i in range(11))} |')
     for times in range(1, 11):
         results = defaultdict(int)
         for _ in range(count):
@@ -68,7 +80,7 @@ def rolld6():
                 if roll == 6:
                     asix += 1
             results[asix] += 1
-        print(f"| {times:<2} | {' | '.join(f'{(results.get(i, 0) * 100.0) / count:5.2f}' for i in range(11))} |")
+        print(f'| {times:<2} | {" | ".join(f"{(results.get(i, 0) * 100.0) / count:5.2f}" for i in range(11))} |')
 
 
 if __name__ == '__main__':

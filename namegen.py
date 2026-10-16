@@ -11,7 +11,7 @@ import re
 
 # This should be done using gettext for i18n, but I can't be bothered to figure
 # out how to do it properly, so I'm using replacement strings for now.
-stringUndefinedNonTerminal = "Undefined non-terminal \"%(undefinedNonTerminal)s\" in rule \"%(rule)s\"."
+stringUndefinedNonTerminal = 'Undefined non-terminal "%(undefinedNonTerminal)s" in rule "%(rule)s".'
 
 # Test grammar -- will be read from a file when I decide how to do it properly
 # with minimum effort (for the user and the code)
@@ -27,7 +27,7 @@ orkGrammar = {
     'nmVowel': ['a', 'e', 'i', 'o', 'u'],
     'neCons': ['r', 's', 'z'],
     'neVowel': ['a', 'u'],
-    }
+}
 
 fooGrammar = {
     'name': ['<nameStart><nameMiddle0to2><nameEnd>'],
@@ -41,7 +41,7 @@ fooGrammar = {
     'nsVowel': ['A', 'Au', 'Ei'],
     'nmVowel': ['a', 'e', 'i', 'o', 'u', 'au', 'oa', 'ei'],
     'neVowel': ['e', 'i', 'a', 'au'],
-    }
+}
 
 # Regular expression to catch non-terminals, used frequently, so global
 reNonTerminal = re.compile(r'<(\w+)>')
@@ -49,8 +49,8 @@ reNonTerminal = re.compile(r'<(\w+)>')
 # checkTypes() is only useful while testing with internally specified
 # grammars.
 # Once we're parsing an external file it becomes unnecessary since we generate
-# the data types ourselves instead of asking a human to do it.  As such, error
-# strings are hardcoded.  Anyone who sees them would be messing around in here
+# the data types ourselves instead of asking a human to do it. As such, error
+# strings are hardcoded. Anyone who sees them would be messing around in here
 # anyway.
 
 
@@ -58,23 +58,24 @@ def checkTypes(nameGrammar):
     """Check given grammar object for correct datatypes.
 
     This function is only really necessary while the grammar's still being
-    specified in here.  It will likely disappear when we parse the grammar from a
+    specified in here. It will likely disappear when we parse the grammar from a
     data file.
     """
     if not isinstance(nameGrammar, dict):
         return 'Grammar data is not a dictionary!'
     for rule, rhs in nameGrammar.items():
         if not isinstance(rhs, list):
-            return f"Rule \"{rule}\" is not a list!"
+            return f'Rule "{rule}" is not a list!'
         for option in rhs:
             if not isinstance(option, str):
-                return f"Rule \"{rule}\" does not contain only strings!"
+                return f'Rule "{rule}" does not contain only strings!'
     return ''
 
-# Grammar verification stuff follows.  We can probably make this throw
+
+# Grammar verification stuff follows. We can probably make this throw
 # warnings
-# and correct problems, but that's a job for another day.  Incorrect grammars
-# probably won't provide useful output anyway.  If this stuff gets big enough
+# and correct problems, but that's a job for another day. Incorrect grammars
+# probably won't provide useful output anyway. If this stuff gets big enough
 # it may be pushed into its own module.
 
 
@@ -83,7 +84,7 @@ def checkUndefinedNonTerminals(nameGrammar):
 
     An undefined non-terminal is a non-terminal symbol used in a symbol
     definition that has no definition of its own and cannot therefore be
-    expanded.  Undefined non-terminals can lead to ugly error messages
+    expanded. Undefined non-terminals can lead to ugly error messages
     instead of beautifully generated names.
     """
     for rule, rhs in nameGrammar.items():
@@ -102,15 +103,16 @@ def checkUnproductiveNonTerminals(nameGrammar):
     """Check grammar for possibly unproductive non-terminals.
 
     An unproductive non-terminal is a non-terminal symbol that cannot be
-    converted to a terminal symbol in the given grammar.  A good example of this
+    converted to a terminal symbol in the given grammar. A good example of this
     is a non-terminal symbol that includes itself in its definition.
 
     This function is currently very basic and should be extended (rewritten?) to
     allow warnings for _possible_ unproductive non-terminals and errors for
-    _definite_ unproductive non-terminals.  Volunteers?
+    _definite_ unproductive non-terminals. Volunteers?
 
     XXX: INCOMPLETE
     """
+
     def recurse(a):
         if a == 5:
             return a
@@ -143,6 +145,7 @@ def checkUnproductiveNonTerminals(nameGrammar):
                 continue
             grammarUnchecked[rule] = rhs
 
+
 # More grammar checking functions to come:
 #   Unused non-terminals
 # Loop detection would be nice, but currently a little impractical.
@@ -170,7 +173,7 @@ def verifyGrammar(nameGrammar):
     if error:
         return stringUndefinedNonTerminal % error
     if 'name' not in nameGrammar:
-        return "Rule \"name\" not present!"
+        return 'Rule "name" not present!'
     return ''
 
 
@@ -183,9 +186,10 @@ def nameGen(nameGrammar):
         matchNonTerminal = reNonTerminal.search(nameStr)
     return nameStr
 
+
 # Main body
 # checkUnproductiveNonTerminals(fooGrammar)
-#errorStr = verifyGrammar(fooGrammar)
+# errorStr = verifyGrammar(fooGrammar)
 # if errorStr:
 #    sys.exit(errorStr)
 # print(nameGen(fooGrammar))

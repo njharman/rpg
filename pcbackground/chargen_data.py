@@ -1,3 +1,10 @@
+"""Tables used by background.py.
+
+Version: 10/16/2026
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Oct 2026.
+Website: https://github.com/njharman/rpg
+"""
 from die import d4
 
 heritages = [
@@ -71,7 +78,7 @@ crimes = [
     [26, 'Burglary'],
     [37, 'Destruction of Property'],
     [38, 'Embezzlement of Funds'],
-    [39, 'Exortion'],
+    [39, 'Extortion'],
     [43, 'Forgery'],
     [48, 'Defrauding Government'],
     [53, 'Theft'],
@@ -136,18 +143,18 @@ add_honors = {
     'UUC': ('Social class', 10),
     'abandoned': ('Abandoned at birth', -3),
     'son of rapist': ('Son of rapist', -5),
-    'prostitute mother': ('Mother was a prostitue', -10),
+    'prostitute mother': ('Mother was a prostitute', -10),
     'illegitimate birth': ('Illegitimate birth', -3),
     'surrogate mother': ('Surrogate mother', -1),
-    'heritage great dishonor': ('Greatly dishonrable heritage', -5),
-    'heritage dishonor': ('Dishonrable heritage', -2),
-    'heritage honor': ('Honrable heritage', 2),
-    'heritage great honor': ('Greatly honrable heritage', 5),
+    'heritage great dishonor': ('Greatly dishonorable heritage', -5),
+    'heritage dishonor': ('Dishonorable heritage', -2),
+    'heritage honor': ('Honorable heritage', 2),
+    'heritage great honor': ('Greatly honorable heritage', 5),
     }
 
-inheirited_weapons = [
+inherited_weapons = [
     (2000, 'Sling'),
-    (2200, 'Quatersaff'),
+    (2200, 'Quarterstaff'),
     (2400, 'Shortspear'),
     (2500, 'Darts'),
     (2700, 'Club'),
@@ -174,7 +181,7 @@ inheirited_weapons = [
     (6300, 'Halberd'),
     (6500, 'Guisarme'),
     (6700, 'Ranseur'),
-    (6900, 'Battlaaxe'),
+    (6900, 'Battleaxe'),
     (7100, 'Short Bow'),
     (7300, 'Light Crossbow'),
     (7400, 'Kukri'),
@@ -184,7 +191,7 @@ inheirited_weapons = [
     (8000, 'Heavy Spiked Shield'),
     (8500, 'Longsword'),
     (8600, 'Trident'),
-    (8800, 'Warhamer'),
+    (8800, 'Warhammer'),
     (9000, 'Greataxe'),
     (9100, 'Rapier'),
     (9200, 'Scythe'),
@@ -194,12 +201,12 @@ inheirited_weapons = [
     (9800, 'Bastard Sword'),
     (9900, 'Lance'),
     (9950, 'Long Bow'),
-    (9990, 'Combposite Shortbow'),
+    (9990, 'Composite Shortbow'),
     (9999, 'Hand Crossbow'),
     (99999, 'Composite Longbow'),
     ]
 
-inheirited_armors = [
+inherited_armors = [
     (1500, 'Padded'),
     (2000, 'Leather'),
     (2300, 'Hide'),
@@ -214,7 +221,7 @@ inheirited_armors = [
     (9999, 'Full plate'),
     ]
 
-inheirited_mounts = [
+inherited_mounts = [
     (2000, 'Mule'),
     (3000, 'Donkey'),
     (3500, 'Ox'),
@@ -230,7 +237,7 @@ inheirited_mounts = [
     (9999, 'Light Horse x 4, carriage'),
     ]
 
-inheirited_deeds = [
+inherited_deeds = [
     (5, 'parcel of land in wilderness - harsh climate'),
     (10, 'parcel of land in wilderness - inhabited by monsters'),
     (15, 'parcel of land in wilderness - inhabited by humanoids'),
@@ -250,10 +257,10 @@ inheirited_deeds = [
     (85, 'parcel of land in %(country)s borders - town, home'),
     (90, 'parcel of land in %(country)s borders - town, %(biz)s'),
     (95, 'parcel of land in %(country)s borders - city, home'),
-    (999, 'parcel of land in %(country)s borders - city, %s(biz)s'),
+    (999, 'parcel of land in %(country)s borders - city, %(biz)s'),
     ]
 
 hamlet_biz = ['Smith', 'Alehouse']
-village_biz = [*hamlet_biz, 'Armorer', 'Bakers', 'Butchers', 'Fisthmongers', 'Inn', 'Hay Merchant', 'Livestock Merchant', 'Food Merchant', 'Basket Weaver']
-town_biz = [*village_biz, 'Barbers', 'Brewer', 'Carpenters', 'Coopers', 'Leathworkers', 'Locksmiths', 'Masons', 'General Merchant', 'Painters', 'Saddlers', 'Stable', 'Shoemakers', 'Tailors', 'Tannery', 'Tavern', 'Wood Merchant', 'Cloth Weaver', 'Undertaker', 'Weapon makers']
-city_biz = [*town_biz, 'Alchemist', 'Bathers', 'Booksellers', 'Scribes', 'Chandlers', 'Chicken Butchers', 'Doctors', 'Furriers', 'Glassblowers', 'Glovemakers', 'Hatmakers', 'Jewlers', 'Musical Instruments', 'Spice Merchant', 'Used Cloths', 'Pastrycooks', 'Plasterers', 'Purcemakers', 'Rugmakers', 'Scabbardmakers', 'Sculpteors', 'Restaurant', 'Wine Merchant']
+village_biz = [*hamlet_biz, 'Armorer', 'Bakers', 'Butchers', 'Fishmongers', 'Inn', 'Hay Merchant', 'Livestock Merchant', 'Food Merchant', 'Basket Weaver']
+town_biz = [*village_biz, 'Barbers', 'Brewer', 'Carpenters', 'Coopers', 'Leatherworkers', 'Locksmiths', 'Masons', 'General Merchant', 'Painters', 'Saddlers', 'Stable', 'Shoemakers', 'Tailors', 'Tannery', 'Tavern', 'Wood Merchant', 'Cloth Weaver', 'Undertaker', 'Weapon makers']
+city_biz = [*town_biz, 'Alchemist', 'Bathers', 'Booksellers', 'Scribes', 'Chandlers', 'Chicken Butchers', 'Doctors', 'Furriers', 'Glassblowers', 'Glovemakers', 'Hatmakers', 'Jewelers', 'Musical Instruments', 'Spice Merchant', 'Used Clothes', 'Pastrycooks', 'Plasterers', 'Pursemakers', 'Rugmakers', 'Scabbardmakers', 'Sculptors', 'Restaurant', 'Wine Merchant']

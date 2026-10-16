@@ -3,9 +3,10 @@
 
 According to B/X or ODD Rules.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 
 import random
@@ -15,12 +16,20 @@ import click
 
 def d2():
     return random.randint(1, 2)
+
+
 def d4():
     return random.randint(1, 4)
+
+
 def d6():
     return random.randint(1, 6)
+
+
 def d12():
     return random.randint(1, 12)
+
+
 def d100():
     return random.randint(1, 100)
 
@@ -37,7 +46,7 @@ class OddStocking:
         7: lambda: 2000 * d6(),
         8: lambda: 5000 * d6(),
         9: lambda: 5000 * d6(),
-        }
+    }
     GOLD = {
         1: lambda: 10 * d6(),
         2: lambda: 100 * d6(),
@@ -48,7 +57,7 @@ class OddStocking:
         7: lambda: 500 * d6(),
         8: lambda: 1000 * d6(),
         9: lambda: 1000 * d6(),
-        }
+    }
     GEMS = {
         1: 5,
         2: 10,
@@ -59,8 +68,8 @@ class OddStocking:
         7: 30,
         8: 40,
         9: 40,
-        }
-    JEWLERY = GEMS
+    }
+    JEWELRY = GEMS
     MAGIC = {
         1: 5,
         2: 5,
@@ -71,7 +80,7 @@ class OddStocking:
         7: 15,
         8: 20,
         9: 20,
-        }
+    }
     MONSTER = {
         1: lambda: (1, 1, 2, 2, 3, 4)[d6() - 1],
         2: lambda: (1, 2, 3, 3, 4, 5)[d6() - 1],
@@ -82,7 +91,7 @@ class OddStocking:
         7: lambda: (4, 5, 5, 5, 6, 6)[d6() - 1],
         8: lambda: (5, 5, 6, 6, 6, 6)[d6() - 1],
         9: lambda: (5, 5, 6, 6, 6, 6)[d6() - 1],
-        }
+    }
 
     def __init__(self, level):
         self.level = level
@@ -103,8 +112,8 @@ class OddStocking:
                     contents.append(f'{self.GOLD[self.level]():,}gp')
                 if d100() <= self.GEMS[self.level]:
                     contents.append('gems')
-                if d100() <= self.JEWLERY[self.level]:
-                    contents.append('jewlery')
+                if d100() <= self.JEWELRY[self.level]:
+                    contents.append('jewelry')
                 if d100() <= self.MAGIC[self.level]:
                     contents.append('magic')
             yield ', '.join(contents)
@@ -122,7 +131,7 @@ class BxStocking:
         7: lambda: (5, 6, 7, 7, 7, 8)[d6() - 1],
         8: lambda: (6, 7, 7, 8, 8, 9)[d6() - 1],
         9: lambda: (7, 8, 8, 9, 9, 19)[d6() - 1],
-        }
+    }
     SPECIAL = [
         'alarm',
         'animating object(s)',
@@ -137,7 +146,7 @@ class BxStocking:
         'statue',
         'fungal/other growth',
         'extreme odor',
-        ]
+    ]
     ROOMTRAP = [
         'pit {self.level*10}ft',
         'falling block (save vs petr)',
@@ -154,7 +163,7 @@ class BxStocking:
         'door sludge bucket (encounter checks)',
         'green slime',
         'caltrops',
-        ]
+    ]
     TREASURETRAP = [
         'poison needle',
         'poison needle',
@@ -172,7 +181,7 @@ class BxStocking:
         'curse (save vs spells)',
         'fiery explosion ({self.level}d6 save vs breath)',
         'stink bomb (save vs death)',
-        ]
+    ]
 
     def __init__(self, level):
         self.level = level
@@ -183,7 +192,7 @@ class BxStocking:
             4: self._monster,
             5: self._special,
             6: self._trap,
-            }
+        }
 
     def fstr(self, template):
         return eval(f"f'{template}'", globals(), locals())  # noqa: S307
@@ -191,36 +200,36 @@ class BxStocking:
     def _jewelry(self, x):
         """Roll up some jewelry."""
         # TODO: use treasure gen
-        jewels = [f'{100*(d6()+d6()+d6()):,}' for x in range(x)]
+        jewels = [f'{100 * (d6() + d6() + d6()):,}' for x in range(x)]
         return f', {", ".join(jewels)} jewelry'
 
     def _treasure(self, roll):
         if self.level == 1:
-            gp = f', {d6()*10}gp' if d100() <= 50 else ''
+            gp = f', {d6() * 10}gp' if d100() <= 50 else ''
             gem = f', {d6()} gems' if d100() <= 5 else ''
             jew = self._jewelry(1) if d100() <= 2 else ''
             magic = ', 1 magic' if d100() <= 2 else ''
-            return f'{d6()*100:,}sp{gp}{gem}{jew}{magic}'
+            return f'{d6() * 100:,}sp{gp}{gem}{jew}{magic}'
         if self.level <= 3:
-            gp = f', {d6()*100:,}gp' if d100() <= 50 else ''
+            gp = f', {d6() * 100:,}gp' if d100() <= 50 else ''
             gem = f', {d6()} gems' if d100() <= 10 else ''
             jew = self._jewelry(d2()) if d100() <= 5 else ''
             magic = ', 1 magic' if d100() <= 8 else ''
-            return f'{d12()*100:,}sp{gp}{gem}{jew}{magic}'
+            return f'{d12() * 100:,}sp{gp}{gem}{jew}{magic}'
         if self.level <= 5:
             gem = f', {d6()} gems' if d100() <= 20 else ''
             jew = self._jewelry(d4()) if d100() <= 10 else ''
             magic = ', 1 magic' if d100() <= 10 else ''
-            return f'{d6()*1000:,}sp, {d6()*200:,}gp{gem}{jew}{magic}'
+            return f'{d6() * 1000:,}sp, {d6() * 200:,}gp{gem}{jew}{magic}'
         if self.level <= 7:
             gem = f', {d6()} gems' if d100() <= 30 else ''
             jew = self._jewelry(d6()) if d100() <= 15 else ''
             magic = ', 1 magic' if d100() <= 15 else ''
-            return f'{d6()*2000:,}sp, {d6()*500:,}gp{gem}{jew}{magic}'
+            return f'{d6() * 2000:,}sp, {d6() * 500:,}gp{gem}{jew}{magic}'
         gem = f', {d6()} gems' if d100() <= 40 else ''
         jew = self._jewelry(d6()) if d100() <= 20 else ''
         magic = ', 1 magic' if d100() <= 20 else ''
-        return f'{d6()*5000:,}sp, {d6()*1000:,}gp{gem}{jew}{magic}'
+        return f'{d6() * 5000:,}sp, {d6() * 1000:,}gp{gem}{jew}{magic}'
 
     def _empty(self, roll):
         """1-in-6 hidden treasure."""
@@ -258,7 +267,7 @@ class MegadungeonStocking(BxStocking):
         'Doom lure',
         'Lawful geometries',
         'Vaedium',
-        ]
+    ]
 
     def __init__(self, level):
         self.level = level
@@ -269,7 +278,7 @@ class MegadungeonStocking(BxStocking):
             4: self._empty,
             5: self._empty,
             6: self._funk,
-            }
+        }
 
     def _hellrock(self, roll):
         """Hellrock special."""
@@ -284,7 +293,7 @@ class MegadungeonStocking(BxStocking):
             4: self._trap,
             5: self._hellrock,
             6: self._special,
-            }[d6()](roll)
+        }[d6()](roll)
 
 
 @click.command()

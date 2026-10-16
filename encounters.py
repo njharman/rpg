@@ -16,7 +16,7 @@ import click
 # 1 Attacked by Surprise
 # 2 Attacked
 # 3 Slanders / Insults
-# 4 Question Characetrs
+# 4 Question Characters
 # 5 PROPOSITION
 # 6 SPECIAL
 #
@@ -37,8 +37,8 @@ import click
 # 10 wraith
 # 11 blink dog
 # 12 zombies
-# 13 skeletions
-# 14 dervicshes
+# 13 skeletons
+# 14 dervishes
 # 15 illusionist
 # 16 invisible stalker
 # 17 mind flayer
@@ -60,9 +60,9 @@ import click
 # 11 begger
 # 12 drunks
 # 13 messenger
-# 14 performaer
+# 14 performer
 # 15 lamplighter
-# 16 buffon
+# 16 buffoon
 # 17 vigilantes
 # 18 town crier
 # 19 fugitive
@@ -77,7 +77,7 @@ import click
 # 6 kidnap player
 #
 # noble
-# 1 Sheriif
+# 1 Sheriff
 # 2 Knight
 # 3 Genera
 # 4 Gentleman
@@ -87,7 +87,7 @@ import click
 # common quarter
 # 1 goblin
 # 2 orc
-# 3 orgre
+# 3 ogre
 # 4 bandit
 # 5 dwarf
 # 6 g. rat
@@ -96,14 +96,14 @@ import click
 # 1 sharper
 # 2 begger
 # 3 slaver
-# 4 performaer
+# 4 performer
 # 5 bard
 # 6 mercenary
 #
 # seafront quarter
 # 1 sailor
 # 2 sailor
-# 3 bucanner
+# 3 buccaneer
 # 4 pirate
 # 5 sea capt
 # 6 begger
@@ -2710,7 +2710,7 @@ Arguing about religion with a visiting hill giant
 Putting the finishing touches on an immense pergola
 Bending down to trim treetops, more sun for grapes
 Retrieving wicker wrapped feta wheels, cooling in a cave
-Blendindg troll-blood into their wine for added "kick"
+Blending troll-blood into their wine for added "kick"
 Roasting mutton, at least seven sheep worth on spits
 Boiling a humungous haggis in a coracle-sized cauldron
 Rolling a giant rock to seal prisoners inside their sleeping cave
@@ -3261,9 +3261,9 @@ Hiding unsightly scars on her shins from a run-in with loggers
 Watching over the construction of an orc sawmill
 Hunted for refusing to abandon her half-human child
 Watering deadly noose vines, growing in boughs above
-Idly decapacitating rose blossoms into a basket
+Idly decapitating rose blossoms into a basket
 Weaving wreaths of forget-me-nots and weeping
-In love with a fiery efreeti, will end in in tragic embrace
+In love with a fiery efreeti, will end in tragic embrace
 Wringing out her hair after a long, soaking, rain
 
 Table: dwarf
@@ -3953,7 +3953,7 @@ Hollow spines are prized by both scroll-scribes and assassins alike
 Wrestling with a large octopus
 
 Table: fish, giant (sturgeon)
-Attacking an aquatic caecila for supper
+Attacking an aquatic caecilia for supper
 Missing a few plates after a run-in with a sea serpent
 Colliding with a caravel, sharp ridges puncturing the hull
 Overfished by sages for parchment protecting isinglass
@@ -5430,7 +5430,7 @@ Skimming the surface of water with their wide wingtips
 Glaring menacingly at adventurer's setting up a camp
 Slamming into a troll, the full force nearly knocking it down
 Grabbing a helpless gnome to larder for later
-Spirting away a halfling farmer, with rake still in hand
+Spiriting away a halfling farmer, with rake still in hand
 Guarding a shrine to a feathered deity, well-fed & mostly tame
 Straying nearer and nearer to a cyclops's flock of sheep
 Harrying a hippogriff herd, about to create an aerial stampede
@@ -5821,7 +5821,7 @@ Evacuating in chaos after the assassination of their leader
 Sniping generals/mediums/clerics from camouflaged positions
 Evading an enemy with superior strength
 Sparring mercilessly, occasionally resulting in minor wounds
-Expediating victory by leveraging their thoul reserves
+Expediting victory by leveraging their thoul reserves
 Staggering crossbow volleys for maximum efficiency
 Feigning disorderly retreat to encircle an overconfident enemy
 Starving their giant tuatara siege-breakers
@@ -5844,7 +5844,7 @@ Table: horse, draft
 Ambling slowly along a crumbling wooden fence-line
 Plodding up to the bank of a pond to have a hearty drink
 Being tenderly groomed by a one-eyed halfling farmer
-Raptly champing on freshy mown hay
+Raptly champing on freshly mown hay
 Chafing under an ill-fitting yoke
 Scratching at dry, barren soil in frustration
 Devouring fallen sour apples with toothy gusto
@@ -6048,7 +6048,7 @@ Seething as a torch waving shield bearer keeps them at bay
 Emerging from a huge, conical hive of uniform gravel
 Streaming from the eyes of a single elf skull
 Flourishing on a farmer's fresh vegetables
-Surrounding a twitching caecilla
+Surrounding a twitching caecilia
 Flowing from the belly of a bloated zombie
 Thickening into arcane sigils in the presence of magic
 Following the commands of a kobold shaman
@@ -7414,7 +7414,7 @@ Swimming alongside a docile whale shark
 Guarding their mistress - a sea hag who ensorcelled them
 Telling an ancient fable about a great drying
 Guiding grateful fishermen to a bountiful shoal
-Tending to a garden of subsonic shreiker coral
+Tending to a garden of subsonic shrieker coral
 Haggling with a secretive manta ray-folk traders
 Tithing to a tyrannical storm giant who lives nearby
 Harnessing dolphins to an ornate chariot
@@ -9301,7 +9301,7 @@ Dragging an unconscious cleric into a once grated drain
 Starving a gnoll, trapped and surrounded on a tall stone plinth
 Excavating a spacious den, leavings and dirt abound
 Stealing supplies from nearby bugbears via a tunnel network
-Feeding on florescent fungus, sprouting from nearly every surface
+Feeding on fluorescent fungus, sprouting from nearly every surface
 Tainting everything they touch with yellow mould spores
 Frothing at the mouth and desperately hydrophobic
 Tunneling throughout, lost count of the # of buckler-sized holes
@@ -10307,7 +10307,7 @@ Flabbergasting even the oldest of salts with eloquent speech
 Splintering the rudder of a minotaur man-of-war
 Fleeing from the sudden surfacing of a dragon turtle
 Striking at a swooping sea wyvern
-Followed by clingy remorafollk, tolerated for their cleaning
+Followed by clingy remorafolk, tolerated for their cleaning
 Struggling to unearth a hoard, half buried due to hurricane
 Gliding, just beneath the waves, easy to lose track of length
 Swallowing only the tastiest water termites
@@ -10365,7 +10365,7 @@ Benumbing a bugbear, white as a sheet
 Lurking in a pool of murkiness below a fly-infested slab of meat
 Bisecting the floor, stretching from one side to the other
 Materializing due to an illusionist's mishap
-Blotting out the gimmer of small pile of coins
+Blotting out the glimmer of a small pile of coins
 Melding/contorting into a spitting image of a medusa's shadow
 Blurring usually sharp edges, like the haze above a campfire
 Menacing some legend-tripping youths, far out of their depth
@@ -11323,7 +11323,7 @@ Avoiding a roiling vortex on the surface of the sea
 Plucking panicked pirates from the foredecks
 Basking in the warm water of shallower seas
 Preying on delicious dragon turtle eggs
-Biolumenescing balefully beneath the waterline
+Bioluminescing balefully beneath the waterline
 Protecting a jewel-like lagoon of saltwater nixies
 Breaking anchor chains/moorings to set ships adrift
 Proudly bearing scars and barbed hooks all along his mantle
@@ -13639,7 +13639,7 @@ Hunting a lineage to extinction, interested in recruiting help
 Wavering like a bonfire on a windy day, glowering at a statue
 Inhabiting an inlaid silver circle, hollow promises to liberators
 Whimpering in a soft voice, hoping to draw in unsuspecting prey
-Initiating a waithspawn teaching to feed on former friends
+Initiating a wraithspawn teaching to feed on former friends
 Whispering forbidden secrets into the ear of a studying wizard
 Instantly materializing as a medium rings a big bronze gong
 Withering a warhorse with a single cold caress

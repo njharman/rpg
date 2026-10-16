@@ -1,22 +1,26 @@
 #!/usr/bin/env python
-# Author: Norman J. Harman Jr. <njharman@gmail.com>
-# License: Released into Public Domain Nov 2012
+"""Parse 'text' versions of various OGL RPG monster tomes.
 
-# Parses 'text' versions of various OGL RPG monster tomes. Text versions are
-# created using pdftotext, and unfortunately, some hand munging.
+Text versions are created using pdftotext, and unfortunately, some hand munging.
 
-# Supported Tombs:
-#  * Swords & Wizardary Core / Complete
-#    pdftotext -f 92 -l 116 -eol unix -raw -nopgbrk "S&W - Rules (complete).pdf" data/swcomplete.txt
-#  * Tome of Horrors Complete
-#  * Monster Compendium (Swords & Wizardary)
-#  * Varlets and Vermin
-#  * Barrow Maze New Monsters
-#  * Dwimmermount New Monsters
-#
-# Tome of Horrors Complete is a trademark of Frog God Games.
-# Swords & Wizardry, S&W, and Mythmere Games are trademarks of Matthew J. Finch.
-# This software and author are not affiliated with Matthew J. Finch, Mythmere Games™, Frog God Games, Necromancer Games.
+Supported Tomes:
+ * Swords & Wizardry Core / Complete
+   pdftotext -f 92 -l 116 -eol unix -raw -nopgbrk "S&W - Rules (complete).pdf" data/swcomplete.txt
+ * Tome of Horrors Complete
+ * Monster Compendium (Swords & Wizardry)
+ * Varlets and Vermin
+ * Barrow Maze New Monsters
+ * Dwimmermount New Monsters
+
+Tome of Horrors Complete is a trademark of Frog God Games.
+Swords & Wizardry, S&W, and Mythmere Games are trademarks of Matthew J. Finch.
+This software and author are not affiliated with Matthew J. Finch, Mythmere Games™, Frog God Games, Necromancer Games.
+
+Version: 10/16/2026
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Nov 2012.
+Website: https://github.com/njharman/rpg
+"""
 
 
 import contextlib
@@ -102,7 +106,7 @@ re_numbers = re.compile(r'(-?[\d,]+)')          # Positive/Negative numbers only
 re_ac = re.compile(r'(-?\d+)\s*\[(\d+)\]')      # Format: descending [ascending]
 
 # Challenge Level / Experience formats
-#  can have comma's in xp
+#  can have commas in xp
 #  one entry cl/xp: 2/30
 #  multiple number first: 7 HD (7/600), 8 HD (8/800), 9 HD (9/1,100)
 #  multiple hitdie first: HD 7 (10/1400); HD 8 (11/1700); HD 9 (12/2000)
@@ -149,7 +153,7 @@ class Monster:
     def __init__(self, name):
         self.name = name
         self.hd = None              # Numeric or "complex" Hit Dice.
-        self.hd_bonus = None        # The +3 in "3+3 HD"k
+        self.hd_bonus = None        # The +3 in "3+3 HD"
         self.hp = None              # Some entries list specific hit points.
         self.ac_raw = ''
         self.ac_asc = 0
@@ -344,7 +348,7 @@ class Monster:
         """
         stop = len(lines)
         name = lines[0].strip()
-        # Change mc "foo demon" do "demon, foo"
+        # Change mc "foo demon" to "demon, foo"
         if name.lower().endswith(' demon prince'):
             name = 'Demon Prince, ' + name.replace(' Demon Prince', '')
         elif name.lower().endswith(' demon'):
@@ -503,7 +507,7 @@ def split_mc_entries(source, s15, lines):
             continue
         if len(line) < 30:             # Skip the redundant entry names.
             continue
-        # MC has attributes all on one line.  Reformat them into style
+        # MC has attributes all on one line. Reformat them into style
         # Entry.from_entry understands.
         match = re.match(r'(^[^:]+):\s+(HD .*;.*)$', line)
         if match:
@@ -600,7 +604,7 @@ def split_on_monster(source, s15, lines):
         yield from split_mc_entries(source, s15, lines)
         return
     # Delimiter is line after name
-    delimeter, skip_delimeter = {
+    delimiter, skip_delimiter = {
             'tohc': ('-------------------------------------------------------------------------', True),
             'mon': ('Hit Dice:', False),
             'swc': ('Hit Dice:', False),
@@ -612,7 +616,7 @@ def split_on_monster(source, s15, lines):
     entry = list()
     first = True
     for line in lines:
-        if line.startswith(delimeter):
+        if line.startswith(delimiter):
             name = entry.pop()
             if name.startswith('('):  # Some names split onto two lines.
                 name = entry.pop() + ' ' + name
@@ -622,7 +626,7 @@ def split_on_monster(source, s15, lines):
             entry = [(name, )]
             entry.append(f'Source: {source}')
             entry.append(f'S15: {s15 % {"name": name}}')
-            if skip_delimeter:
+            if skip_delimiter:
                 continue
         entry.append(line)
     yield entry

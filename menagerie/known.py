@@ -1,4 +1,10 @@
-# "Known" names of entries, useful for finding parsing errors.
+"""Known names of entries, useful for finding parsing errors.
+
+Version: 10/16/2026
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Oct 2026.
+Website: https://github.com/njharman/rpg
+"""
 
 known = [
 ## LL Conversions

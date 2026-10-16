@@ -6,9 +6,10 @@ easily marked off during play.
 
 Rolls d6+2, prints 8 pages.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Oct 2012.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 
 import random

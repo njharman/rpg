@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Quick hack to roll D&D character abilities.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 
 import sys

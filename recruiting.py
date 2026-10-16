@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Wilderlands campaign town hireling recruiting.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 import random
 from collections import defaultdict
@@ -283,7 +284,7 @@ class MagicUser(Leveled):
 
 
 class Thief(Leveled):
-    # 2-6th level thief masquarding
+    # 2-6th level thief masquerading
     type = 'Thief'
     hire = '30gp + 2gp/day'
     ac = 7

@@ -6,7 +6,7 @@ D&D 3.5 era NPC "monster" generator"
 Version: 5/06/2009
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain 2009.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 import random
 
@@ -35,7 +35,7 @@ class Table:
 
 
 class AutoTable(Table):
-    """Table that figures out it's own dice and uses slots instead of actual die rolls in table."""
+    """Table that figures out its own dice and uses slots instead of actual die rolls in table."""
 
     def __init__(self, *table):
         new_table = []
@@ -85,7 +85,7 @@ ArmorEffect = AutoTable(
 
 WeaponEffect = AutoTable(
     (2, """+1d6 Black (elec)"""),
-    (4, """+1d6 Vibraion (sonic)"""),
+    (4, """+1d6 Vibration (sonic)"""),
     (2, """+1d6 Purple melt (acid/taint diseased / DC10+dam Fort negate)"""),
     (2, """+2d4 Purple flame (taint diseased / DC10+dam Fort negate)"""),
     (2, """+1 wound(vampire)"""),
@@ -100,7 +100,7 @@ GrappleEffect = AutoTable(
     )
 
 MeleeWeapon = AutoTable(
-    (2, """%(melee_tohit)+3i Tenticle 1d8%(melee_damage)+i', GrappleEffect, '[auto grapple]"""),
+    (2, """%(melee_tohit)+3i Tentacle 1d8%(melee_damage)+i', GrappleEffect, '[auto grapple]"""),
     (2, """%(melee_tohit)+3i Pincer 2d8%(melee_damage)+i', GrappleEffect, '[auto grapple]"""),
     (4, """%(melee_tohit)+3i Razor Chain 3d4%(melee_damage)+i', GrappleEffect, '[+2 disarm, trip, opt reach]"""),
     (4, """%(melee_tohit)+3i Three-piece-mace 1d8%(melee_damage)+i', GrappleEffect, '[trip, opt reach]"""),
@@ -135,7 +135,7 @@ Power = AutoTable(
     (2,  0, """Stop Teleport/etc"""),
     (2,  0, """Animate world to attack foes +%(level)i tohit 2d6 damage"""),
     (2,  0, """Regeneration 5/rnd"""),
-    (1,  0, """Balefull Regeneration 2/per creature w/in 30"""),
+    (1,  0, """Baleful Regeneration 2/per creature w/in 30"""),
     (1,  0, """Familiar beholder 4 stalks"""),
     (1,  0, """Reverse Gravity"""),
     (1,  0, """Alter structure of world (move/create walls, + gravity + slow + animate etc.)"""),
@@ -143,7 +143,7 @@ Power = AutoTable(
 
 Feats = AutoTable(
     (1, """Whirlwind, attack all in reach"""),
-    (1, """Sprink Attack"""),
+    (1, """Spring Attack"""),
     (1, """Deflect Arrows"""),
     (1, """Deflect Arrows+magical"""),
     (2, """+2 Save"""),

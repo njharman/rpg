@@ -1,3 +1,10 @@
+"""Hackmaster: Roll character background: birth, family, heritage, social class and inheritance.
+
+Version: 10/16/2026
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Oct 2026.
+Website: https://github.com/njharman/rpg
+"""
 # 17 15 13 10 10 8     15 15 13 13 10 8
 # +3 +2 +1            -1     +2 +2 +1 +1     -1
 import random
@@ -9,10 +16,10 @@ from chargen_data import (
     entitlements,
     hamlet_biz,
     heritages,
-    inheirited_armors,
-    inheirited_deeds,
-    inheirited_mounts,
-    inheirited_weapons,
+    inherited_armors,
+    inherited_deeds,
+    inherited_mounts,
+    inherited_weapons,
     offices,
     races,
     siblings,
@@ -164,7 +171,7 @@ class Character:
                 self.father = Unknown('Father')
                 self._add_honor('son of rapist')
             elif illegitimate <= 60:
-                self.illegitimate = 'Mother was a prostitue.'
+                self.illegitimate = 'Mother was a prostitute.'
                 self.father = Unknown('Father')
                 self._add_honor('prostitute mother')
             elif illegitimate <= 90:
@@ -199,7 +206,7 @@ class Character:
         elif self.father and not self.mother:
             _remarry('father')
 
-    def roll_parental_quaity(self):
+    def roll_parental_quality(self):
         """4I."""
 
     def roll_heritage(self):
@@ -220,7 +227,7 @@ class Character:
                 roll = d100 + self.charisma + illegitimate
                 if roll <= 25:
                     sibling.something = 'bitter rival'
-                elif roll > - 85:
+                elif roll > 85:
                     sibling.something = 'devoted'
                 else:
                     sibling.something = 'meh'
@@ -228,18 +235,17 @@ class Character:
                 # > 95 twins > 99 identical twins
 
     def roll_order_of_birth(self):
-        count = len([s for s in self.siblings if not s.deceased])
         count = len(self.siblings)
         if count == 0:
             self._add_info('First born')
         elif count == 1:
-            self._add_info(random.choice['First born', 'Second born'])
+            self._add_info(random.choice(['First born', 'Second born']))
         elif count == 2:
-            self._add_info(random.choice['First born', 'Middle born', 'Last born'])
+            self._add_info(random.choice(['First born', 'Middle born', 'Last born']))
         elif count == 3:
-            self._add_info(random.choice['First born', 'Second born', 'Second to last born', 'Last born'])
+            self._add_info(random.choice(['First born', 'Second born', 'Second to last born', 'Last born']))
         else:
-            self._add_info(random.choice['First born', 'Second born', 'Middle born', 'Middle born', 'Second to last born', 'Last born'])
+            self._add_info(random.choice(['First born', 'Second born', 'Middle born', 'Middle born', 'Second to last born', 'Last born']))
         if 'Middle born' in self._info:
             pass
             # roll minor personality quirk
@@ -361,7 +367,7 @@ class Character:
             if roll <= 100:
                 break
             count += 1
-        result = do_table(inheirited_deeds, roll)
+        result = do_table(inherited_deeds, roll)
         data = {'country': 'country'}
         if 'biz' in result:
             data['biz'] = self.roll_business(result)
@@ -380,12 +386,12 @@ class Character:
 
     def roll_weapon(self):
         # {"SLC": -1000, "LLC": -500, "MLC": -200, "ULC": -100, "LMC": -50, "MMC": 0, "UMC": +50, "LUC": +100, "MUC": +200, "UUC": +500}
-        self._add_info(f"Inherited weapon, {do_table(inheirited_weapons, random.randint(1, 10000))}.")
+        self._add_info(f"Inherited weapon, {do_table(inherited_weapons, random.randint(1, 10000))}.")
 
     def roll_armor(self):
         # {"SLC": -500, "LLC": -200, "MLC": -100, "ULC": -50, "LMC": -25, "MMC": 0, "UMC": +25, "LUC": +50, "MUC": +100, "UUC": +200}
-        self._add_info(f"Inherited armor, {do_table(inheirited_armors, random.randint(1, 4000))}.")
+        self._add_info(f"Inherited armor, {do_table(inherited_armors, random.randint(1, 4000))}.")
 
     def roll_mount(self):
         # {"SLC": -500, "LLC": -200, "MLC": -100, "ULC": -50, "LMC": -25, "MMC": 0, "UMC": +25, "LUC": +50, "MUC": +100, "UUC": +200}
-        self._add_info(f"Inherited mount, {do_table(inheirited_mounts, random.randint(1, 6000))}.")
+        self._add_info(f"Inherited mount, {do_table(inherited_mounts, random.randint(1, 6000))}.")

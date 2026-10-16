@@ -15,9 +15,10 @@ Rulesets (command line flag, rules name):
 B/X is Old-School Essentials Rules Tome v1.4.
 -r is same as -rx.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 import collections
 import itertools
@@ -213,9 +214,9 @@ def entry_odd_noweap_any(rules, roll=None):
     return entry_odd_any(rules, roll, skip=NO_WEAPONS)
 
 
-# OD&D Vol 2, Maps.  Magic/Maps Determination: 76-00 is a map; Maps table picks kind.
+# OD&D Vol 2, Maps. Magic/Maps Determination: 76-00 is a map; Maps table picks kind.
 MAP_KINDS = [(60, 'treasure'), (90, 'magic'), (100, 'both')]
-# Treasure maps, d8.  Quantities are N-M dice (000s are thousands).
+# Treasure maps, d8. Quantities are N-M dice (000s are thousands).
 MAP_TREASURE = [
     ('10000-40000 silver', ),
     ('5000-30000 gold', ),
@@ -335,7 +336,7 @@ class Gems(Treasures):
     sizes = {2: 'large', 4: 'giant', 8: 'enormous'}
 
     def __init__(self, chances, specials=True):
-        """chances: cumulative d100 chance of each value in values.  specials: 1 in 10 gems may be magical or larger."""
+        """chances: cumulative d100 chance of each value in values. specials: 1 in 10 gems may be magical or larger."""
         self.chances = chances
         self.specials = specials
 
@@ -450,7 +451,7 @@ class Rules:
     - name: shown by the CLI, see title.
     - raw: True if rules as written, no tweaks.
     - TREASURE_TYPES: treasure type code -> rows of (kind, chance, amount), None for kinds the type lacks.
-      Kind is a coin, 'gems', 'jewelry' or 'magic'.  Amount is a quantity (N-M, see replace_quantity);
+      Kind is a coin, 'gems', 'jewelry' or 'magic'. Amount is a quantity (N-M, see replace_quantity);
       for magic it is the entry_* functions to roll.
     - gems, jewelries: Treasures instances.
     - item: magic item categories, rows of (highest roll, category, entry_* function).
@@ -539,14 +540,14 @@ class OddRules(Rules):
     gems = GemsOdd()
     jewelries = JewelriesOdd()
     mislead = ('delusion', 'poison')  # "Referee will mislead", even a sip of poison kills.
-    # Referee rolls which Giants.  Hill 60%, others 10% each.
+    # Referee rolls which Giants. Hill 60%, others 10% each.
     _random_giant = [(60, 'Hill'), (70, 'Stone'), (80, 'Frost'), (90, 'Fire'), (100, 'Cloud')]
     # Referee rolls which of the six Dragons.
     _random_dragon = [(1, 'White'), (2, 'Black'), (3, 'Green'), (4, 'Blue'), (5, 'Red'), (6, 'Golden')]
     # Wands 100, Staves 200 charges, except these (Vol 2, Wands and Staves).
     _chargeless = ('Metal Detection', 'Enemy Detection', 'Secret Doors', 'Healing', 'Snake Staff', 'Striking')
-    # Treasure Types, thousands of coins are written 1000-6000 (d6 x 1000).  Columns: cp sp gp gems jewelry magic.
-    # Roll for each of Gems and Jewelry.  Magic "any" is a roll on the Magic/Maps table, 25% maps.
+    # Treasure Types, thousands of coins are written 1000-6000 (d6 x 1000). Columns: cp sp gp gems jewelry magic.
+    # Roll for each of Gems and Jewelry. Magic "any" is a roll on the Magic/Maps table, 25% maps.
     TREASURE_TYPES = {
         'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('gp', 35, '2000-12000'),  ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 40, (entry_odd_any, entry_odd_any, entry_odd_any))),
         'a-desert': (('cp', 20, '1000-4000'), ('sp', 25, '1000-4000'), ('gp', 30, '1000-6000'), ('gems', 50, '10-40'), ('jewelry', 50, '10-40'), ('magic', 60, (entry_item, entry_item, entry_item))),
@@ -677,7 +678,7 @@ class OddRules(Rules):
         (99, 'Spell Storing (<spells>)'),
         (100, 'Many Wishes (4-24)'),
         ]
-    # Wands: Magic-Users only.  Staves: (C)lerics, (M)agic-Users.
+    # Wands: Magic-Users only. Staves: (C)lerics, (M)agic-Users.
     wsr = [
         (15, 'Wand of Metal Detection (M)'),
         (20, 'Wand of Enemy Detection (M)'),
@@ -733,7 +734,7 @@ class OddRules(Rules):
         ]
     # Sword Alignment; percentages reversed (Lawful and Chaotic swapped) for the Energy Draining sword.
     _sword_alignment = [(65, 'Lawful'), (90, 'Neutral'), (100, 'Chaotic')]
-    # Primary Powers.  96-99 is two rolls ignoring 96-99 (00 allowed), 00 is an Extraordinary Ability.
+    # Primary Powers. 96-99 is two rolls ignoring 96-99 (00 allowed), 00 is an Extraordinary Ability.
     _sword_primary = [
         (15, 'Note Shifting Walls & Rooms'),
         (30, 'Detect Sloping Passages'),
@@ -745,10 +746,10 @@ class OddRules(Rules):
         (90, 'Detect Magic'),
         (95, 'Detect Gems (# and Size)'),
         ]
-    # Languages, in addition to alignment's.  Judgement: book has 86-95 Four and 90-99 Five, took 96-99.
+    # Languages, in addition to alignment's. Judgement: book has 86-95 Four and 90-99 Five, took 96-99.
     # 00 is two rolls ignoring 00.
     _sword_languages = [(50, 1), (70, 2), (85, 3), (95, 4), (99, 5)]
-    # Extraordinary Abilities.  98-99 is two rolls ignoring over 97, 00 is three rolls.
+    # Extraordinary Abilities. 98-99 is two rolls ignoring over 97, 00 is three rolls.
     _sword_extraordinary = [
         (10, 'Clairaudience'),
         (20, 'Clairvoyance'),
@@ -771,7 +772,7 @@ class OddRules(Rules):
         }
 
     def sword_extras(self, sword):
-        """Alignment, Intelligence, Egoism and Origin/Purpose.  Vol 2, Explanations of Magic Items: Swords."""
+        """Alignment, Intelligence, Egoism and Origin/Purpose. Vol 2, Explanations of Magic Items: Swords."""
         alignment = table(self._sword_alignment)
         if 'Energy Draining' in sword:
             alignment = {'Lawful': 'Chaotic', 'Chaotic': 'Lawful'}.get(alignment, alignment)
@@ -846,7 +847,7 @@ class OddRules(Rules):
     def _non_standard_charges(self, item):
         """Charges text for items that don't use the standard wand, staff or rod rule; None for the standard.
 
-        Vol 2 and Greyhawk, Wands and Staves.  Items that only exist in Greyhawk never match in Vol 2.
+        Vol 2 and Greyhawk, Wands and Staves. Items that only exist in Greyhawk never match in Vol 2.
         """
         if any(word in item for word in self._chargeless):
             return ''
@@ -859,7 +860,7 @@ class OddRules(Rules):
         return None
 
     def _random_spells(self):
-        """Ring of Spell Storing: 1-6 spells, 20% Clerical, half of those Chaotic.  Never mixed."""
+        """Ring of Spell Storing: 1-6 spells, 20% Clerical, half of those Chaotic. Never mixed."""
         spell_type = 'Magic-user'
         if d100() <= 20:
             spell_type = 'Chaotic Cleric' if d100() <= 50 else 'Cleric'
@@ -910,7 +911,7 @@ class GreyhawkRawRules(OddRules):
         (99, 'Sword of Sharpness'),
         (100, 'Vorpal Blade'),
         ]
-    # Armor/Shield +4 are Mithral, +5 Adamantite.  Vulnerable armor looks +1 to +4 but is -1 to -4.
+    # Armor/Shield +4 are Mithral, +5 Adamantite. Vulnerable armor looks +1 to +4 but is -1 to -4.
     armor = [
         (20, 'Shield +1'),
         (40, 'Armor +1'),
@@ -957,7 +958,7 @@ class GreyhawkRawRules(OddRules):
         (97, 'Spear +3'),
         (100, 'Cursed Spear of Backbiting (appears +1-3)'),
         ]
-    # (F)ighters only.  Referee rolls which Giants and Dragons.
+    # (F)ighters only. Referee rolls which Giants and Dragons.
     potion = [
         (3, 'Growth'),
         (6, 'Diminution'),
@@ -1013,7 +1014,7 @@ class GreyhawkRawRules(OddRules):
         (99, 'Spell Storing (<spells>)'),
         (100, 'Many Wishes (4-24)'),
         ]
-    # Wands, Staves and Rods.  (A)ll, (C)lerics, (F)ighters, (M)agic-Users, (T)hieves.
+    # Wands, Staves and Rods. (A)ll, (C)lerics, (F)ighters, (M)agic-Users, (T)hieves.
     # Book prints Magic Detection as 15-20, overlapping Enemy Detection, took 16-20.
     wsr = [
         (10, 'Wand of Metal Detection (M)'),
@@ -1087,7 +1088,7 @@ class GreyhawkRawRules(OddRules):
         (29, 'Animated Broom (All)'),
         (34, 'Helm of Reading Magic and Languages (All)'),
         (37, 'Helm of Telepathy (All)'),
-        (39, 'Helm of Teleportion'),
+        (39, 'Helm of Teleportation'),
         (41, 'Helm of Brilliance (All)'),
         (47, 'Helm of Chaos (Law) (All)'),
         (49, 'Flying Carpet (All)'),
@@ -1188,7 +1189,7 @@ class GreyhawkRawRules(OddRules):
 
 
 class GreyhawkRules(GreyhawkRawRules):
-    """Greyhawk with tweaks.  Everything not listed here is as GreyhawkRawRules.
+    """Greyhawk with tweaks. Everything not listed here is as GreyhawkRawRules.
 
     Differences from the books:
     - Treasure Type F's magic is rings, wands/staves/rods and misc. magic (no maps, nor armor, potion or scroll)
@@ -1242,9 +1243,9 @@ class GreyhawkRules(GreyhawkRawRules):
         (99, '-1-3 Plate of Vulnerability'),
         (100, 'Plate of Etherealness'),
         ]
-    # Misc. weapons: custom table, only loosely Greyhawk's.  Same kinds of items but re-balanced odds and counts
+    # Misc. weapons: custom table, only loosely Greyhawk's. Same kinds of items but re-balanced odds and counts
     # (3-18 +1 arrows, 3-18 +1 bolts, 2-12 +2 bolts, Arrow/Bolt of Slaying, own daggers, Magic Bow +1, Axe +1 to +3,
-    # Mace +1 to +3).  Added: Sling +1, "Unusual Misc Weapon" +1, Axe of Missing, Sticky Mace.
+    # Mace +1 to +3). Added: Sling +1, "Unusual Misc Weapon" +1, Axe of Missing, Sticky Mace.
     weapon = [
         (10, '3-18 Magic Arrows +1'),
         (15, '2-12 Magic Arrows +2'),
@@ -1277,7 +1278,7 @@ class GreyhawkRules(GreyhawkRawRules):
         (99, 'Sticky Mace'),
         (100, 'Cursed Spear of Backbiting'),
         ]
-    # Scrolls: custom table, not the book's.  Differs: Curse (book 51-60) is a 1-10 trap using Rules.scroll_trap
+    # Scrolls: custom table, not the book's. Differs: Curse (book 51-60) is a 1-10 trap using Rules.scroll_trap
     # instead of the book's Curse table; Protection: Demons replaces the book's 7 Spells.
     scroll = [
         (10, 'trap'),
@@ -1307,14 +1308,14 @@ class GreyhawkRules(GreyhawkRawRules):
 class ExpertRawRules(Rules):
     """B/X Expert treasure and magic items, rules as written in Old-School Essentials Rules Tome v1.4.
 
-    Magic item tables use the Expert (character level 4+) column.  Where the book is ambiguous the choice is
-    commented "Judgement".  Gem names and jewelry designs are flavor; the book gives only their values.
+    Magic item tables use the Expert (character level 4+) column. Where the book is ambiguous the choice is
+    commented "Judgement". Gem names and jewelry designs are flavor; the book gives only their values.
     """
     name = 'Expert'
     raw = True
     gems = Gems([20, 45, 75, 95, 100], specials=False)
     jewelries = Jewelries()
-    # Treasure Types, thousands of coins are written 1000-6000 (d6 x 1000).  Columns: cp sp ep gp pp gems jewelry magic.
+    # Treasure Types, thousands of coins are written 1000-6000 (d6 x 1000). Columns: cp sp ep gp pp gems jewelry magic.
     # Individual treasure P-T have no percentage, it is always there.
     TREASURE_TYPES = {
         'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('ep', 20, '1000-4000'),   ('gp', 35, '2000-12000'),  ('pp', 25, '1000-2000'),   ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 30, (entry_item, entry_item, entry_item))),
@@ -1350,7 +1351,7 @@ class ExpertRawRules(Rules):
         (95, 'Sword', entry_sword),
         (100, 'Weapon', entry_weapon),
         ]
-    # Each "Armor" is replaced by a rolled type, see armor_type.  Cursed armor tests as +1.
+    # Each "Armor" is replaced by a rolled type, see armor_type. Cursed armor tests as +1.
     armor = [
         (15, 'Armor +1'),
         (25, 'Armor +1, Shield +1'),
@@ -1556,11 +1557,11 @@ class ExpertRawRules(Rules):
         (99, 'War Hammer +2'),
         (100, 'War Hammer +3, Dwarven Thrower'),
         ]
-    # Sentient Swords.  Special purpose swords are always sentient, Int 12 and Ego 12.
+    # Sentient Swords. Special purpose swords are always sentient, Int 12 and Ego 12.
     _sword_special_chance = 5  # 1-in-20.
     _sword_sentient_chance = 30
     _sword_alignment = [(13, 'Lawful'), (18, 'Neutral'), (20, 'Chaotic')]
-    # Languages, in addition to alignment's.  00 is two rolls, adding results.
+    # Languages, in addition to alignment's. 00 is two rolls, adding results.
     _sword_languages = [(50, 1), (70, 2), (85, 3), (95, 4), (99, 5)]
     # Duplicates are re-rolled.
     _sword_sensory = [
@@ -1613,7 +1614,7 @@ class ExpertRawRules(Rules):
         return table(self._armor_type)
 
     def charges(self, item):
-        """Rods 1d10, staves 3d10, wands 2d10.  Rod of Cancellation is single use; Healing and Snakes staves need none."""
+        """Rods 1d10, staves 3d10, wands 2d10. Rod of Cancellation is single use; Healing and Snakes staves need none."""
         if 'Cancellation' in item:
             return ' [single use]'
         if 'Staff of Healing' in item or 'Staff of Snakes' in item:
@@ -1683,7 +1684,7 @@ class ExpertRawRules(Rules):
         return self._sword_language_count() + self._sword_language_count()
 
     def _random_spells(self):
-        """Ring of Spell Storing: 1d6 spells, 20% divine.  Judgement: levels rolled as for scrolls."""
+        """Ring of Spell Storing: 1d6 spells, 20% divine. Judgement: levels rolled as for scrolls."""
         caster = 'Cleric' if d100() <= 20 else 'Magic-user'
         return f'{caster} spells {self.spell_summary(caster, d6())}'
 
@@ -1698,7 +1699,7 @@ BX_MISC_SWAPS = {'Crystal Ball': 'Scarab of Protection', 'Helm of Alignment Chan
 
 
 class ExpertRules(ExpertRawRules):
-    """B/X Expert treasure and magic items with tweaks.  Everything not listed here is as ExpertRawRules.
+    """B/X Expert treasure and magic items with tweaks. Everything not listed here is as ExpertRawRules.
 
     Differences from the book (each is also commented where made, "Book:" is what the book has):
     - Gems give a 1% chance of a 5,000gp Diamond, and 1 in 10 gems may be magical or larger.
@@ -1736,7 +1737,7 @@ class ExpertRules(ExpertRawRules):
         (85, '+1 Shield'),
         (95, '+2 Shield'),
         (99, '+3 Shield'),
-        (100, 'Armor of Etherealness'),  # Added from Greyhawk.  Book: +3 Shield.
+        (100, 'Armor of Etherealness'),  # Added from Greyhawk. Book: +3 Shield.
         ]
     misc = [(roll, BX_MISC_SWAPS.get(item, item)) for roll, item in ExpertRawRules.misc]
     ring = [
@@ -1764,7 +1765,7 @@ class ExpertRules(ExpertRawRules):
         (31, '3 Spells'),
         (34, '5 Spells'),
         (35, 'Protection: Demons'),  # Book: 7 Spells.
-        (40, 'trap'),  # Book: Curse.  Trap uses Rules.scroll_trap.
+        (40, 'trap'),  # Book: Curse. Trap uses Rules.scroll_trap.
         (50, 'Protection: Elementals'),
         (60, 'Protection: Lycanthropes'),
         (65, 'Protection: Magic'),
@@ -1795,7 +1796,7 @@ class ExpertRules(ExpertRawRules):
         (100, '+3 Sword'),
         ]
     # Book: no class notes; Staff of Snakes, Wand of Fire Balls, Wand of Lightning Bolts.
-    # (A)rcane, (D)ivine casters, (any) class.  Book: rods any class, staves casters, wands arcane casters.
+    # (A)rcane, (D)ivine casters, (any) class. Book: rods any class, staves casters, wands arcane casters.
     wsr = [
         (8, 'Rod of Cancellation (any)'),
         (11, 'Staff of Commanding (DA)'),
@@ -1995,7 +1996,7 @@ class BasicRawRules(ExpertRawRules):
 
 
 class BasicRules(ExpertRules):
-    """B/X Basic (character levels 1-3) magic items with tweaks.  Everything else is as ExpertRules.
+    """B/X Basic (character levels 1-3) magic items with tweaks. Everything else is as ExpertRules.
 
     Differences from the book (each is also commented where made): misc. items, scrolls, swords and weapons tables,
     and the ExpertRules differences (gems, Treasure Type F, armor type odds, charges and sentient swords).
@@ -2006,10 +2007,10 @@ class BasicRules(ExpertRules):
     potion = BasicRawRules.potion
     ring = BasicRawRules.ring
     misc = [(roll, BX_MISC_SWAPS.get(item, item)) for roll, item in BasicRawRules.misc]
-    # Book: Curse.  Trap uses Rules.scroll_trap.
+    # Book: Curse. Trap uses Rules.scroll_trap.
     scroll = [(roll, 'trap' if text == 'Curse' else text) for roll, text in BasicRawRules.scroll]
     # Book: d8, 1 -1 Cursed, 2 +1, 3 +2 vs Lycanthropes, 4 +2 vs Spell Users, 5 +3 vs Dragons, 6 +3 vs Undead,
-    # 7 +1 Light, 8 +2.  Changed to d14: much increased chances of +1 and Light, double chance of cursed.
+    # 7 +1 Light, 8 +2. Changed to d14: much increased chances of +1 and Light, double chance of cursed.
     sword = [
         (2, '-1 Sword, Cursed'),
         (3, '+1 Sword, +2 vs. Lycanthropes'),
@@ -2020,7 +2021,7 @@ class BasicRules(ExpertRules):
         (10, '+1 Sword, Light'),
         (14, '+1 Sword'),
         ]
-    # (A)rcane, (D)ivine casters.  Book: Staff of Snakes.
+    # (A)rcane, (D)ivine casters. Book: Staff of Snakes.
     wsr = [
         (1, 'Rod of Cancellation'),
         (2, 'Staff of Healing (D)'),
@@ -2034,14 +2035,14 @@ class BasicRules(ExpertRules):
         (2, 'Axe +1'),
         (3, 'Dagger +1'),
         (4, 'Mace +1'),
-        (5, 'Spear +1'),  # Added Spear.  Book: d4.
+        (5, 'Spear +1'),  # Added Spear. Book: d4.
         ]
 
     def _spell_level(self, caster):
         return BasicRawRules._spell_level(self, caster)  # noqa: SLF001
 
 
-# --raw: each ruleset's rules as written.  OD&D is only as written.
+# --raw: each ruleset's rules as written. OD&D is only as written.
 RAW_RULES = {BasicRules: BasicRawRules, ExpertRules: ExpertRawRules, GreyhawkRules: GreyhawkRawRules, OddRules: OddRules}
 
 

@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 """Hack Master 5ed combat tests.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain 2012.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 import sys
 from collections import defaultdict
@@ -132,7 +133,7 @@ class Combatant:
         self.shield = self.gimmie_shield()
         self.topped = False             # False or count at which no longer topped
         self.prone = False
-        self.next_attack = 1            # next count I can acton
+        self.next_attack = 1            # next count I can act on
         self.free_attack = False        # free attack from defender
         self.attacked = False           # been attacked since my last swing
         if hasattr(self, 'stat_dict'):
@@ -150,7 +151,7 @@ class Combatant:
 
     @property
     def def_bonus(self):
-        """From armor, shields, weapon,."""
+        """From armor, shields, weapon."""
         defense = self._def_bonus
         if self.armor:
             defense += self.armor.defense
@@ -338,7 +339,7 @@ class Combatant:
         else:
             bits.append('missed')
         results = [' '.join(t.strip() for t in bits if t) ]
-        # Fumbles.el
+        # Fumbles.
         if atk_roll == 1 and atk_tot <= def_tot:
             results.append('Attacker fumble: Not implemented.')
             self.stat_dict['afumble'] += 1
@@ -426,7 +427,7 @@ def fight(a, b, play_by_play=False, deathmatch=False):
         if dude.dead:
             return 'Dead'
         if dude.topped:
-            return f'Writhing in pain unti {dude.topped}'
+            return f'Writhing in pain until {dude.topped}'
         if dude.prone:
             return 'Prone'
         if count == dude.next_attack:

@@ -4,7 +4,7 @@
 Version: 12/28/2008
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain 2008.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 import cmd
 import random
@@ -77,12 +77,12 @@ Trick_or_Trap = table_d20(
     (10, """20'x20' elevator room descends 2 levels and will not ascend for 30 turns.""", ),
     (11, """20'x20' elevator room descends 2-5 levels plus 1 level per unsuccessful door opening attempt and will not ascend for 60 turns.""", ),
     (12, """Wall 10' behind slides across passage for 40-60 turns.""", ),
-    (13, """Oil followed by flame falls on random chacters 2d6 fire damage.""", ),
+    (13, """Oil followed by flame falls on random characters 2d6 fire damage.""", ),
     (14, """Pit 10' deep with crushing sides.""", ),
     (15, """Arrow trap 1-3 arrows 1 in 20 are poisoned.""", ),
     (16, """Spear trap 1-3 spears 1 in 20 are poisoned.""", ),
     (17, """60' of passage contains""", Gas, ),
-    (18, """Door falls outward causeing 1d10 damage or ceiling collapses 2d10 damage.""", ),
+    (18, """Door falls outward causing 1d10 damage or ceiling collapses 2d10 damage.""", ),
     (19, Illusionary_Wall, ),
     (20, """Chute down 1 level. Cannot be ascended in any manner.""", ),
     )
@@ -102,9 +102,9 @@ Treasure_Guarded = table_d20(
     (12, """with blade scything across inside.""", ),
     (13, """with poisonous vermin living inside.""", ),
     (14, """with""", Gas, ),
-    (15, """with trapdoor opening infront of container.""", ),
-    (16, """with trapdoor opening 6' infront of container.""", ),
-    (17, """with stone block dropiping in front of container.""", ),
+    (15, """with trapdoor opening in front of container.""", ),
+    (16, """with trapdoor opening 6' in front of container.""", ),
+    (17, """with stone block dropping in front of container.""", ),
     (18, """with spears from walls when container is opened.""", ),
     (19, """with Explosive Runes.""", ),
     (20, """with Symbol.""", ),
@@ -112,7 +112,7 @@ Treasure_Guarded = table_d20(
 
 Treasure_Hidden = table_d20(
     (3, """and is invisible.""", ),
-    (5, """and is illsioned to hide appearance.""", ),
+    (5, """and is illusioned to hide appearance.""", ),
     (6, """secret space under.""", ),
     (8, """secret compartment.""", ),
     (9, """in plain view.""", ),
@@ -199,7 +199,7 @@ Passage_Width = table_d20(
 
 Magic_Pool = table_d20(
     (8, """magic pool turns gold into (1-11) lead or (12-20) platinum""", ),
-    (15, """magic pool ads or subtracts 1d3 points from random ability score""", ),
+    (15, """magic pool adds or subtracts 1d3 points from random ability score""", ),
     (17, """talking pool that will grant 1 wish""", ),
     (20, """teleporter pool""", ),
     )
@@ -313,7 +313,7 @@ UnusualShape = table_d20(
     (13, """room/chamber, whatever shape/size fits map.""", ),
     (15, """oval""", Room_or_Chamber, ),
     (15, """hexagonal""", Room_or_Chamber, ),
-    (19, """octangonal""", Room_or_Chamber, ),
+    (19, """octagonal""", Room_or_Chamber, ),
     (20, """cave""", ),
     )
 
@@ -390,7 +390,7 @@ Stairs = table_d20(
     (12, """Chimney up 2 levels to a""", fwd_ref('Onward'), """\nPassage continues check again after 30'.""", ),
     (13, """Chimney down 1 level to a""", fwd_ref('Onward'), """\nPassage continues check again after 30'.""", ),
     (16, """Trap door down 1 level to a""", fwd_ref('Onward'), """\nPassage continues check again after 30'.""", ),
-    (17, """Trap door down 2 level to a""", fwd_ref('Onward'), """\nPassage continues check again after 30'.""", ),
+    (17, """Trap door down 2 levels to a""", fwd_ref('Onward'), """\nPassage continues check again after 30'.""", ),
     (20, """Trap door up 1 level to a""", fwd_ref('Onward'), """\nPassage continues check again after 30'.""", ),  # modification of DMG's wonky result
     )
 
@@ -410,9 +410,9 @@ Onward = table_d20(
 
 if __name__ == '__main__':
     class OnwardToAdventure(cmd.Cmd):
-        """Simple text intefrace to random dungeon generator."""
+        """Simple text interface to random dungeon generator."""
 
-        intro = """Random Dungeon Delve.\nBased off of 1st edition AD&D Dungeon Master's Guide. A tool for DM's to use while generating random dungeons.\n\n? for help.\n<enter> to explore!"""
+        intro = """Random Dungeon Delve.\nBased off of 1st edition AD&D Dungeon Master's Guide. A tool for DMs to use while generating random dungeons.\n\n? for help.\n<enter> to explore!"""
         prompt = '\nAdventure awaits: '
 
         def __init__(self, *arg, **kwarg):
@@ -429,7 +429,7 @@ if __name__ == '__main__':
             print(Onward)
 
         def help_about(self):
-            print('Written by njharman@gmail.com Dec, 2008.  source code is in the public domain.')
+            print('Written by njharman@gmail.com Dec, 2008. Source code is in the public domain.')
 
         def help_help(self):
             print("You're not the sharpest sword in the rack, are you?")
@@ -440,7 +440,7 @@ if __name__ == '__main__':
             return True
 
         def do_onward(self, line):
-            """Onward to adventure!  Generates new dungeon feature.  Same as pressing <enter>."""
+            """Onward to adventure!  Generates new dungeon feature. Same as pressing <enter>."""
             print(Onward)
 
         def do_opendoor(self, line):

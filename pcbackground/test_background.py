@@ -4,28 +4,6 @@ import background
 import die
 from background import Character, Relative, Unknown
 
-__copyright__ = 'Copyright (c) 2007 Norman J. Harman Jr. njharman@gmail.com'
-__license__ = """Licensed under the FSF GPL
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
-"""
-__doc__ = f"""
-{__copyright__}
-{__license__}
-"""
-
 
 class CyclingRng:
     """Deterministic rng: choice() walks a fixed value sequence, cycling, returning the matching face.
@@ -114,8 +92,17 @@ class Test_Character(unittest.TestCase):
         assert t.mother.deceased
         # go through other paths
         background.d20 = ListDieFactory([1, 2, 15])
-        for seq in [[10, 99, 99], [10, 99, 80], [95, 5], [95, 30], [95, 60],
-                    [95, 90, 25], [95, 90, 99], [95, 99, 75], [95, 99, 99] ]:
+        for seq in [
+            [10, 99, 99],
+            [10, 99, 80],
+            [95, 5],
+            [95, 30],
+            [95, 60],
+            [95, 90, 25],
+            [95, 90, 99],
+            [95, 99, 75],
+            [95, 99, 99],
+        ]:
             background.d100 = ListDieFactory(seq)
             t = Character()
             t.roll_birth()
@@ -138,6 +125,11 @@ class Test_Character(unittest.TestCase):
         background.d100 = SequentialDieFactory(100)
         for _i in range(101):
             t.roll_order_of_birth()
+        for count in range(1, 6):
+            t = Character()
+            t.siblings = [Relative('Sister') for _ in range(count)]
+            t.roll_order_of_birth()
+            assert t._info
 
     def test_social(self):
         t = Character()

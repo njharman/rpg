@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generating a Random Treasure Hoard according to Sword & Wizardry Complete Rules.
 
-Quick, dirty, incomplete. Changes from Swords & Wizardy include; gem & jewerly
+Quick, dirty, incomplete. Changes from Swords & Wizardry include; gem & jewelry
 values are rounded, reordered potions and Minor Magic roll so healing more common
 than Diminution and the Clair*, cosmetic changes to text.
 
@@ -9,8 +9,9 @@ Swords & Wizardry, S&W, and Mythmere Games are trademarks of Matthew J. Finch.
 Author is not affiliated with Matthew J. Finch, Mythmere Games(TM), or Frog God
 Games(TM).
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 
 This entire work is designated as Open Game Content under the OGL
 
@@ -444,7 +445,7 @@ def arms_n_armor(roll):
     ][roll - 1]  # Zero indexed.
 
 
-# TODO: this numbers here seem off.
+# TODO: these numbers here seem off.
 def remarkable(roll):
     if roll in (1, 21, 22):
         return lesser_wand(d6)

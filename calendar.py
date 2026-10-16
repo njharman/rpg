@@ -4,14 +4,16 @@
 Quick hack for author's Gold and Glory campaign.
 
 Day is split into four "watches" 'Morning', 'Afternoon', 'Evening' are 4 hours each.
-'Night' last 12 hours
+'Night' lasts 12 hours
 
 Use rst2pdf to create PDF.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Oct 2012.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
+
 import random
 from collections import deque, namedtuple
 
@@ -37,7 +39,7 @@ class Weather:
     def _calc_temp(self, avg_idx):
         def normalize(avg, idx):
             length = len(self.temps)
-            # Keep in range of our temps array.  Not too far from avg.
+            # Keep in range of our temps array. Not too far from avg.
             mymin = max(0, avg - 2)  # (length / 2))
             mymax = min(length - 1, avg + 2)  # (length / 2))
             temp = min(mymax, max(mymin, idx))
@@ -84,7 +86,7 @@ class Weather:
         return self.temps[self._idx]
 
     def _calc_rain(self, season, temp):
-        """Percipitation per "watch"."""
+        """Precipitation per "watch"."""
         rainy = []
         self._rain_chance += season.chance
         if self._raining:  # double chance if already raining
@@ -180,15 +182,15 @@ class Calendar:
         """Return dictionary of values for day."""
         self.weather.forecast(self._month.season, self._month.temp)
         return Day(
-                self.day,
-                self.day_of_year,
-                self._month.name,
-                self.year,
-                self.weather.temp,
-                self.weather.rain,
-                self.moon_phase,
-                self.moon_shower,
-                )
+            self.day,
+            self.day_of_year,
+            self._month.name,
+            self.year,
+            self.weather.temp,
+            self.weather.rain,
+            self.moon_phase,
+            self.moon_shower,
+        )
 
     def a_month(self):
         """Generates each day for current month."""
@@ -207,57 +209,57 @@ class Calendar:
 
 Season = namedtuple('Season', ['chance', 'rain', 'freak'])
 spring = Season(
-        10,
-        {
-            'froz': ('sleet', 'flury' ),
-            'cold': ('sleet', ),
-            'cool': ('driz', 'rain'),
-            'mild': ('driz', 'rain', 'storm'),
-            'warm': ('driz', 'rain', 'storm'),
-            'hot ': ('driz', 'rain', 'storm', 'storm'),
-            'boil': ('driz', 'rain', 'storm', 'storm'),
-            },
-        ('hail',),
-        )
+    10,
+    {
+        'froz': ('sleet', 'flurry'),
+        'cold': ('sleet',),
+        'cool': ('driz', 'rain'),
+        'mild': ('driz', 'rain', 'storm'),
+        'warm': ('driz', 'rain', 'storm'),
+        'hot ': ('driz', 'rain', 'storm', 'storm'),
+        'boil': ('driz', 'rain', 'storm', 'storm'),
+    },
+    ('hail',),
+)
 summer = Season(
-        3,
-        {
-            'froz': ('fluries', 'snow'),
-            'cold': ('sleet', 'driz', 'rain'),
-            'cool': ('driz', 'rain', 'rain'),
-            'mild': ('driz', 'rain', 'rain'),
-            'warm': ('driz', 'rain', 'rain', 'storm'),
-            'hot ': ('driz', 'rain', 'storm'),
-            'boil': ('driz', 'rain', 'storm'),
-            },
-        ('tornado',),
-        )
+    3,
+    {
+        'froz': ('flurries', 'snow'),
+        'cold': ('sleet', 'driz', 'rain'),
+        'cool': ('driz', 'rain', 'rain'),
+        'mild': ('driz', 'rain', 'rain'),
+        'warm': ('driz', 'rain', 'rain', 'storm'),
+        'hot ': ('driz', 'rain', 'storm'),
+        'boil': ('driz', 'rain', 'storm'),
+    },
+    ('tornado',),
+)
 autumn = Season(
-        5,
-        {
-            'froz': ('flury', 'flury', 'snow'),
-            'cold': ('driz', 'sleet', 'sleet', 'flury'),
-            'cool': ('driz', 'rain'),
-            'mild': ('driz', 'rain'),
-            'warm': ('driz', 'rain'),
-            'hot ': ('driz', 'rain'),
-            'boil': ('driz', 'rain'),
-            },
-        ('icestorm',),
-        )
+    5,
+    {
+        'froz': ('flurry', 'flurry', 'snow'),
+        'cold': ('driz', 'sleet', 'sleet', 'flurry'),
+        'cool': ('driz', 'rain'),
+        'mild': ('driz', 'rain'),
+        'warm': ('driz', 'rain'),
+        'hot ': ('driz', 'rain'),
+        'boil': ('driz', 'rain'),
+    },
+    ('icestorm',),
+)
 winter = Season(
-        5,
-        {
-            'froz': ('flury', 'snow', 'snow', 'bliz'),
-            'cold': ('flury', 'snow', 'snow'),
-            'cool': ('sleet', 'sleet', 'flury', 'flury', 'snow'),
-            'mild': ('driz', 'driz', 'rain', 'rain', 'flury'),
-            'warm': ('driz', 'driz', 'rain'),
-            'hot ': ('driz', 'driz', 'rain'),
-            'boil': ('driz', 'driz', 'rain'),
-            },
-        ('whiteout',),
-        )
+    5,
+    {
+        'froz': ('flurry', 'snow', 'snow', 'bliz'),
+        'cold': ('flurry', 'snow', 'snow'),
+        'cool': ('sleet', 'sleet', 'flurry', 'flurry', 'snow'),
+        'mild': ('driz', 'driz', 'rain', 'rain', 'flurry'),
+        'warm': ('driz', 'driz', 'rain'),
+        'hot ': ('driz', 'driz', 'rain'),
+        'boil': ('driz', 'driz', 'rain'),
+    },
+    ('whiteout',),
+)
 
 Day = namedtuple('Day', ['day', 'day_of_year', 'month', 'year', 'temp', 'rain', 'moon', 'meteor'])
 
@@ -275,7 +277,7 @@ MONTHS = {
     8: Month('Novus', 36, autumn, 'cool'),
     9: Month('Decus', 36, winter, 'cold'),
     10: Month('Festivus', 5, winter, 'cold'),
-    }
+}
 
 
 temperatures = (
@@ -286,7 +288,7 @@ temperatures = (
     'warm',
     'hot ',
     'boil',
-    )
+)
 
 weather = Weather(temperatures)
 # twelve 36 day months, followed by one 5 day winter festival
@@ -294,8 +296,8 @@ weather = Weather(temperatures)
 # 28 day lunar cycle
 calendar = Calendar(MONTHS, 28, weather)
 
-for mumber, month in enumerate(calendar.a_year(374)):
-    month_number = mumber + 1
+for number, month in enumerate(calendar.a_year(374)):
+    month_number = number + 1
     table = '======================== ========================== ========================== ========================== =========================='
     print(table)
     month_label = f'[{month_number}] {calendar.month}, {calendar.year}'
@@ -304,7 +306,7 @@ for mumber, month in enumerate(calendar.a_year(374)):
     for day in month():
         event_bits = []
         if day.moon:
-            event_bits.append(f'{day.moon}')      # moon phase
+            event_bits.append(f'{day.moon}')  # moon phase
         elif day.moon in ('lunar', 'solar'):
             event_bits.append(f'**{day.moon}**')  # highlight eclipses
         if day.day_of_year == 363 - 180:
@@ -314,25 +316,25 @@ for mumber, month in enumerate(calendar.a_year(374)):
         elif day.day_of_year == 363:
             event_bits.append('*sols*')
         elif month_number == 11:
-            event_bits.append('*fest*')     # Festivus!
+            event_bits.append('*fest*')  # Festivus!
         else:
             if day.moon == 'new':
                 event_bits.append('*mkt*')  # new moon is market day
             if day.day == 13:
                 event_bits.append('*pit*')  # 13th of month is Pit Fight Night!
-        day_bits = [f"{day.day:02} {day.temp:<5} {' '.join(event_bits):<15}" ]
+        day_bits = [f'{day.day:02} {day.temp:<5} {" ".join(event_bits):<15}']
         for i in range(4):
             if i == 3:
-                watch_bits = ['OOO OOO' ]      # 3x 4hr
+                watch_bits = ['OOO OOO']  # 3x 4hr
             else:
-                watch_bits = ['oooo oooo' ]    # 4x 1hr
+                watch_bits = ['oooo oooo']  # 4x 1hr
             if day.rain[i]:
                 watch_bits.append(day.rain[i])
             if i == 3 and day.meteor:  # lunar meteor storm always at night
                 watch_bits.append(r'**\***')
             if random.randint(1, 400) == 1:  # 1 in 100 chance (per day) of special event
                 watch_bits.append('**!** ')
-            day_bits.append(f"{' '.join(watch_bits):<26}")
+            day_bits.append(f'{" ".join(watch_bits):<26}')
         print(' '.join(day_bits))
     print(table)
     print()

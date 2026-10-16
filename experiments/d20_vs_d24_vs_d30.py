@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Quick hack to compare d20 vs d24 vs d30 for D&D to-hit rolls.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Oct 2010.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 
 import die
@@ -58,18 +59,20 @@ def print_summaries(rolls, count):
 def add(mod):
     def func(rolls):
         return rolls[0] + mod
+
     return func
+
 
 d6 = die.Standard(6)
 d20 = die.Standard(20)
 d24 = die.Standard(24)
 d30 = die.Standard(30)
 
-d20_attack = die.Roll([d20, ], 'd20')
-d24_attack = die.Roll([d24, ], 'd24')
-d30_attack = die.Roll([d30, ], 'd30')
-d20plus2_attack = die.FuncRoll(add(2), [d20, ], 'd20+2')
-d20plus4_attack = die.FuncRoll(add(4), [d20, ], 'd20+4')
+d20_attack = die.Roll([d20], 'd20')
+d24_attack = die.Roll([d24], 'd24')
+d30_attack = die.Roll([d30], 'd30')
+d20plus2_attack = die.FuncRoll(add(2), [d20], 'd20+2')
+d20plus4_attack = die.FuncRoll(add(4), [d20], 'd20+4')
 best_attack = die.FuncRoll(max, [d20, d20], '2d20(best)')
 worst_attack = die.FuncRoll(min, [d20, d20], '2d20(worst)')
 

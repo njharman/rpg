@@ -1,3 +1,11 @@
+"""Spell index and lists used by ll_spells.py.
+
+Version: 10/16/2026
+Author: Norman J. Harman Jr. <njharman@gmail.com>
+Copyright: Released into Public Domain Oct 2026.
+Website: https://github.com/njharman/rpg
+"""
+
 colleges = {
         'M': 'Hermeticist',
         'I': 'Illusionist',

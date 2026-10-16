@@ -12,7 +12,7 @@ def merge_ogl(*args):
 
 aecTM = (
     """Labyrinth Lord(tm), Advanced Labyrinth Lord(tm) and Goblinoid Games(tm) are trademarks of Daniel Proctor.""",
-    )
+)
 
 
 # Open Game License
@@ -37,7 +37,7 @@ ogl = (
     """15. COPYRIGHT NOTICE""",
     """Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.""",
     """System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson.""",
-    )
+)
 
 
 # ogl section 15
@@ -88,7 +88,7 @@ aec15 = (
     """Yeti from the Tome of Horrors, copyright 2002, Necromancer Games, Inc.; author Scott Green, based on original material by Gary Gygax.""",
     """Labyrinth Lord(tm) Copyright 2007-2009, Daniel Proctor. Author Daniel Proctor.""",
     """Advanced Edition Companion, Copyright 2009-2010, Daniel Proctor. Author Daniel Proctor.""",
-    )
+)
 
 # ogl section 15 from BMII
 bm15 = (
@@ -198,17 +198,15 @@ bm15 = (
     """Zombie, Juju from the Tome of Horrors, Copyright 2002, Necromancer Games, Inc.; Author Scott Green, based on original material by Gary Gygax.""",
     """Barrowmaze, Copyright 2012, Greg Gillespie; Author Greg Gillespie.""",
     """Barrowmaze II, Copyright 2012, Greg Gillespie; Author Greg Gillespie.""",
-    )
+)
 
 
 # ogl section 15
 swc15 = (
     """Swords & Wizardry Core Rules, Copyright 2008, Matthew J. Finch.""",
     """Swords & Wizardry Complete Rules, Copyright 2010, Matthew J. Finch.""",
-    )
+)
 
 
 # ogl section 15
-tt15 = (
-    'Theorems & Thaumaturgy Copyright 2012 Gavin Norman. Author Gavin Norman.',
-    )
+tt15 = ('Theorems & Thaumaturgy Copyright 2012 Gavin Norman. Author Gavin Norman.',)

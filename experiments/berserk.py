@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-"""Berserk Probabilitiy Experiments.
+"""Berserk Probability Experiments.
 
+Version: 10/16/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain 2010.
-Website: http://trollandflame.blogspot.com/
+Website: https://github.com/njharman/rpg
 """
 
 from collections import defaultdict

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""From  Dragon #9 "Tombs & Crypts" by James M. Ward.
+"""From Dragon #9 "Tombs & Crypts" by James M. Ward.
 
-The mystery, challenge and pleasure of any wargamer in discover- ing and opening a tomb of some unknown being is well
+The mystery, challenge and pleasure of any wargamer in discovering and opening a tomb of some unknown being is well
 known to those that have done it. The creation of these tombs can be a very drawn out, head scratching process for the
 judge. I have created a set of graphs to ease this creation process.
 
@@ -12,7 +12,7 @@ If the number rolled totals less than 0% just assume you have a 01% roll.
 
 The pair Factor stands for more than one being buried in the tomb, for example: 2 brave fighters that killed each other in battle.
 The mated pair stands for a husband and wife type tomb not necessarily a human type.
-The being refers to a intelligent creature whose followers thought enough of it to place it in a special crypt of honor.
+The being refers to an intelligent creature whose followers thought enough of it to place it in a special crypt of honor.
 
 1. Soldier, 2. Hero, 3. Priest, 4. Pair, 5. Mated. Pair, 6. Lord, 7. King, 8. Patriarch, 9. EHP, 10. Magic User, 11. Wiz- ard, 12. Being
 

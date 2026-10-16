@@ -259,11 +259,13 @@ def test_lines_header_and_indent():
         '3 gems:',
         ' 2 x 100gp Jade - Light green',
         ' 1 x 200gp large Carnelian - Orange',
-        ]
+    ]
 
 
 def test_lines_single_piece_no_header():
-    assert FixedTreasures([(1, 1000, 'jewelry wrought platinum')], 'jewelry', 'jewelry').lines(1, 1) == ['1,000gp jewelry wrought platinum']
+    assert FixedTreasures([(1, 1000, 'jewelry wrought platinum')], 'jewelry', 'jewelry').lines(1, 1) == [
+        '1,000gp jewelry wrought platinum'
+    ]
     assert FixedTreasures([(1, 0, 'Jade Crystal Ball')]).lines(1, 10) == ['Jade Crystal Ball']
 
 
@@ -272,7 +274,7 @@ def test_lines_odd_generic_noun_plural():
         '3 gems:',
         ' 1 x 10gp gem',
         ' 2 x 50gp gems',
-        ]
+    ]
 
 
 def test_amount_plurals():

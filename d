@@ -22,6 +22,7 @@ random.seed(time.time())
 
 DICE = re.compile(r'(\d*d)?(\d+)([-+*]\d+)?(d\d)?')
 
+
 def parse(text, verbose):
     """Parse dice string."""
     match = DICE.match(text)
