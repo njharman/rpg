@@ -13,29 +13,22 @@ Copyright: Released into Public Domain Jan 2021.
 Website: http://trollandflame.blogspot.com/
 """
 import collections
+import itertools
+import operator
 import random
 import re
 
 import click
 from die import d6, d12, d100
 
+NO_WEAPONS = ('Sword', 'Misc. Weapon')
+
 
 def reduce_groups(things):
-    """Combine (count, value, thing)."""
-    things = sorted(things, key=lambda x: (x[1], x[2]))
-    truecount = 0
-    for i, stuff in enumerate(things):
-        count, value, thing = stuff
-        truecount += count
-        try:
-            _, nvalue, nthing = things[i + 1]
-        except IndexError:
-            nvalue = nthing = None
-        if value == nvalue and thing == nthing:
-            continue
-        else:
-            yield truecount, value, thing
-            truecount = 0
+    """Combine (count, value, thing) with the same value and thing, summing the counts."""
+    ordered = sorted(things, key=operator.itemgetter(1, 2))
+    for (value, thing), group in itertools.groupby(ordered, key=operator.itemgetter(1, 2)):
+        yield sum(count for count, _, _ in group), value, thing
 
 
 def replace_quantity(text):
@@ -46,144 +39,164 @@ def replace_quantity(text):
     """
     rolls = []
 
-    def roll(match):
-        dice, total = map(int, match.groups())
+    def roll_range(match):
+        dice, maximum = map(int, match.groups())
         scale = 1
-        if dice and dice % 1000 == 0 and total % 1000 == 0:
-            dice, total, scale = dice // 1000, total // 1000, 1000
-        if dice and total % dice == 0:
-            value = sum(random.randint(1, total // dice) for _ in range(dice))
+        if dice and dice % 1000 == 0 and maximum % 1000 == 0:
+            dice, maximum, scale = dice // 1000, maximum // 1000, 1000
+        if dice and maximum % dice == 0:
+            value = sum(random.randint(1, maximum // dice) for _ in range(dice))
         else:
-            value = random.randint(dice, total)
+            value = random.randint(dice, maximum)
         rolls.append(value * scale)
         return f'{value * scale:,}'
-    result = re.sub(r'(\d+)-(\d+)', roll, text)
+    result = re.sub(r'(\d+)-(\d+)', roll_range, text)
     return (rolls[0] if rolls else 1), result
 
 
 def table(chart, roll=None):
-    """Roll on chart using roll."""
+    """Roll on chart using roll; a row's remaining columns are returned, one column alone is not wrapped."""
     if roll is None:
         roll = random.randint(1, chart[-1][0])  # auto detect highest value.
-    for row in chart:
-        val = row[0]
-        if roll <= val:
-            if len(row) == 2:
-                return row[1]
-            return row[1:]
+    for threshold, *columns in chart:
+        if roll <= threshold:
+            return columns[0] if len(columns) == 1 else tuple(columns)
+    raise RollOutOfRange(f'Roll {roll} is higher than the table maximum {chart[-1][0]}.')
 
 
-def _2d8_potions(rules, roll=None):
-    return ', '.join(_potion(rules, roll) for _ in range(random.randint(1, 4) + random.randint(1, 4)))
+def _roll_table(rules, name, roll=None):
+    """Roll on rules.<name>, fill in any <random details>, roll any quantities."""
+    return replace_quantity(rules.random_details(table(getattr(rules, name), roll)))[1]
 
 
-def _d4_scrolls(rules, roll=None):
-    return ', '.join(_scroll(rules, roll) for _ in range(random.randint(1, 4)))
+def _disguised(rules, name, result, words):
+    """Referee misleads: if result contains any of words, it looks like another roll on rules.<name>."""
+    liar = next((word for word in words if word in result.lower()), None)
+    if liar is None:
+        return result
+    fake = result
+    while any(word in fake.lower() for word in words):
+        fake = _roll_table(rules, name)
+    return f'{fake} ({liar})'
 
 
-def _rolled(rules, name, roll=None):
-    """Roll on rules.<name>, fill in any <details>, roll any quantities."""
-    return replace_quantity(rules.detail(table(getattr(rules, name), roll)))[1]
+def _map_treasure(rules, number):
+    parts = []
+    for spec in MAP_TREASURE[number - 1]:
+        count, text = replace_quantity(spec)
+        if spec.endswith('gems'):
+            text += f' worth {sum(quantity * value for quantity, value, _ in rules.gems.roll(count, 10)):,}gp'
+        elif spec.endswith('jewelry'):
+            text += f' worth {sum(quantity * value for quantity, value, _ in rules.jewelries.roll(count, 1)):,}gp'
+        parts.append(text)
+    return ', '.join(parts)
 
 
-def _item(rules, roll=None, skip=()):
+def _map_magic(rules, number):
+    count, skip, forced = MAP_MAGIC[number - 1]
+    return '; '.join([entry_item(rules, skip=skip) for _ in range(count)] + [roll_function(rules) for roll_function in forced])
+
+
+def entry_2d8_potions(rules, roll=None):
+    return ', '.join(entry_potion(rules, roll) for _ in range(random.randint(1, 4) + random.randint(1, 4)))
+
+
+def entry_d4_scrolls(rules, roll=None):
+    return ', '.join(entry_scroll(rules, roll) for _ in range(random.randint(1, 4)))
+
+
+def entry_item(rules, roll=None, skip=()):
     """Roll item category and item, rerolling categories named in skip."""
     while True:
-        name, func = table(rules.item, roll)
-        if name not in skip:
-            return func(rules)
+        category, roll_function = table(rules.item, roll)
+        if category not in skip:
+            return roll_function(rules)
         roll = None
 
 
-NO_WEAPONS = ('Sword', 'Misc. Weapon')
+def entry_martial(rules, roll=None):
+    roll_function = random.choice((entry_sword, entry_armor, entry_weapon))
+    return roll_function(rules, roll)
 
 
-def _any(rules, roll=None, skip=()):
-    """OD&D Vol 2 Magic/Maps Determination table: 75% magic item, 25% map."""
-    if (roll or d100()) > 75:
-        return _map(rules)
-    return _item(rules, skip=skip)
-
-
-def _noweap_any(rules, roll=None):
-    """OD&D Vol 2 Type F: "no weapons, any other"."""
-    return _any(rules, roll, skip=NO_WEAPONS)
-
-
-def _martial(rules, roll=None):
-    func = random.choice((_sword, _armor, _weapon))
-    return func(rules, roll)
-
-
-def _noweap(rules, roll=None):
+def entry_noweap(rules, roll=None):
     """Rings, wsr, and misc only."""
-    func = random.choice((_ring, _wsr, _misc))
-    return func(rules, roll)
+    roll_function = random.choice((entry_ring, entry_wsr, entry_misc))
+    return roll_function(rules, roll)
 
 
-def _armor(rules, roll=None):
-    return re.sub(r'(Armor)', rules.armor_type, _rolled(rules, 'armor', roll))
+def entry_armor(rules, roll=None):
+    return re.sub(r'(Armor)', rules.armor_type, _roll_table(rules, 'armor', roll))
 
 
-def _misc(rules, roll=None):
+def entry_misc(rules, roll=None):
     result = table(rules.misc, roll)
     if isinstance(result, list):  # Greyhawk, roll for which table, then on it.
         result = table(result, roll)
-    return replace_quantity(rules.detail(result))[1]
+    return replace_quantity(rules.random_details(result))[1]
 
 
-def _potion(rules, roll=None):
+def entry_potion(rules, roll=None):
     """Last 6+d6 turns."""
-    result = _rolled(rules, 'potion', roll)
-    liar = next((word for word in rules.mislead if word in result.lower()), None)
-    if liar:  # Referee misleads, potion looks like another.
-        fake = result
-        while any(word in fake.lower() for word in rules.mislead):
-            fake = _rolled(rules, 'potion')
-        result = f'{fake} ({liar})'
+    result = _disguised(rules, 'potion', _roll_table(rules, 'potion', roll), rules.mislead)
     return result if result.startswith('Oil') else f'Potion of {result}'
 
 
-def _ring(rules, roll=None):
-    result = _rolled(rules, 'ring', roll)
-    if 'delusion' in result.lower():
-        fake = result
-        while 'delusion' in fake.lower():
-            fake = _rolled(rules, 'ring')
-        result = f'{fake} (delusion)'
-    return f'Ring of {result}'
+def entry_ring(rules, roll=None):
+    return f'Ring of {_disguised(rules, "ring", _roll_table(rules, "ring", roll), ("delusion", ))}'
 
 
-def _sword(rules, roll=None):
-    return rules.sword_extras(_rolled(rules, 'sword', roll))
+def entry_sword(rules, roll=None):
+    return rules.sword_extras(_roll_table(rules, 'sword', roll))
 
 
-def _scroll(rules, roll=None):
-    """Spells and maps.
-
-    25% are cleric
-    level d4+dungeon level
-    """
+def entry_scroll(rules, roll=None):
+    """Spells, protections, traps and (Expert) maps."""
     result = table(rules.scroll, roll)
-    if result.lower() == 'trap':
-        return f'Trapped Scroll  {table(rules.scroll_trap)}'
-    if result.lower() == 'curse':
-        return f'Cursed Scroll: {table(rules.scroll_trap)}'
-    if 'spell' in result.lower():
-        caster = random.choice(['Cleric', 'Magic-user', 'Magic-user', 'Magic-user'])
-        count = int(re.match(r'(\d+)', result).group(1))
-        spells = ', '.join(f'{c}x{x}' for c, _, x in reduce_groups((1, 0, rules.spell_level(caster)) for x in range(count)))
-        return f'{caster} scroll {spells}'
-    return f'Scroll of {result}'
+    match result.lower():
+        case 'trap':
+            return f'Trapped Scroll: {table(rules.scroll_trap)}'
+        case 'curse':
+            return f'Cursed Scroll: {table(rules.scroll_trap)}'
+        case lowered if 'spell' in lowered:
+            caster = random.choice(['Cleric', 'Magic-user', 'Magic-user', 'Magic-user'])
+            return f'{caster} scroll {rules.spell_summary(caster, int(result.split()[0]))}'
+        case _:
+            return f'Scroll of {result}'
 
 
-def _weapon(rules, roll=None):
-    return _rolled(rules, 'weapon', roll)
+def entry_weapon(rules, roll=None):
+    return _roll_table(rules, 'weapon', roll)
 
 
-def _wsr(rules, roll=None):
-    result = _rolled(rules, 'wsr', roll)
+def entry_wsr(rules, roll=None):
+    """Wand, Staff, Rod."""
+    result = _roll_table(rules, 'wsr', roll)
     return f'{result}{rules.charges(result)}'
+
+
+def entry_odd_map(rules, roll=None):
+    """Roll up a map, and what it leads to."""
+    kind = table(MAP_KINDS, roll)
+    if kind == 'treasure':
+        return f'Map to treasure: {_map_treasure(rules, random.randint(1, 8))}'
+    if kind == 'magic':
+        return f'Map to magic: {_map_magic(rules, random.randint(1, 8))}'
+    treasure, magic, there = MAP_BOTH[random.randint(1, 8) - 1]
+    text = f'Map to treasure: {_map_treasure(rules, treasure)}; magic: {_map_magic(rules, magic)}'
+    return f'{text} (already there)' if there else text
+
+
+def entry_odd_any(rules, roll=None, skip=()):
+    """OD&D Vol 2 Magic/Maps Determination table: 75% magic item, 25% map."""
+    if (roll or d100()) > 75:
+        return entry_odd_map(rules)
+    return entry_item(rules, skip=skip)
+
+
+def entry_odd_noweap_any(rules, roll=None):
+    """OD&D Vol 2 Type F: "no weapons, any other"."""
+    return entry_odd_any(rules, roll, skip=NO_WEAPONS)
 
 
 # OD&D Vol 2, Maps.  Magic/Maps Determination: 76-00 is a map; Maps table picks kind.
@@ -207,8 +220,8 @@ MAP_MAGIC = [
     (2, (), ()),
     (2, (), ()),
     (3, ('Sword', ), ()),
-    (3, (), (_potion, )),
-    (3, (), (_scroll, _potion)),
+    (3, (), (entry_potion, )),
+    (3, (), (entry_scroll, entry_potion)),
     ]
 # Magic & Treasure maps, d8: (treasure map #, magic map #, already there).
 MAP_BOTH = [
@@ -223,164 +236,141 @@ MAP_BOTH = [
     ]
 
 
-def _map_treasure(rules, number):
-    parts = []
-    for spec in MAP_TREASURE[number - 1]:
-        count, text = replace_quantity(spec)
-        if spec.endswith('gems'):
-            text += f' worth {sum(c * v for c, v, _ in rules.gems.roll(count, 10)):,}gp'
-        elif spec.endswith('jewelry'):
-            text += f' worth {sum(c * v for c, v, _ in rules.jewelries.roll(count, 1)):,}gp'
-        parts.append(text)
-    return ', '.join(parts)
-
-
-def _map_magic(rules, number):
-    count, skip, forced = MAP_MAGIC[number - 1]
-    return '; '.join([_item(rules, skip=skip) for _ in range(count)] + [func(rules) for func in forced])
-
-
-def _map(rules, roll=None):
-    """Roll up a map, and what it leads to."""
-    kind = table(MAP_KINDS, roll)
-    if kind == 'treasure':
-        return f'Map to treasure: {_map_treasure(rules, random.randint(1, 8))}'
-    if kind == 'magic':
-        return f'Map to magic: {_map_magic(rules, random.randint(1, 8))}'
-    treasure, magic, there = MAP_BOTH[random.randint(1, 8) - 1]
-    text = f'Map to treasure: {_map_treasure(rules, treasure)}; magic: {_map_magic(rules, magic)}'
-    return f'{text} (already there)' if there else text
+class RollOutOfRange(ValueError):
+    """A roll is higher than the highest row of the table it was made on."""
 
 
 class Treasures:
-    def format(self, things):
-        for count, value, thing in sorted(things, key=lambda x: x[1] or 99999):
-            yield f'{count:2} x {value or "":4}{"gp" if value else "  "} {thing}'
-
-    def lines(self, count, group):
-        return list(self.format(reduce_groups(self._roll(count, group))))
+    """Base for gems and jewelry; subclasses yield (1, value, description) per piece from _roll."""
 
     def roll(self, count, group):
-        """List of (count, value, gem)."""
+        """List of (count, value, description)."""
         return list(reduce_groups(self._roll(count, group)))
 
-
-class Jewelries(Treasures):
-    def __init__(self, ruleset):
-        if ruleset == 'expert' or ruleset == 'altgreyhawk':
-            pass
-        else:
-            raise ValueError(f'Unknown ruleset [{ruleset}]')
-
     def _roll(self, count, group):
-        """Roll up count pieces of jewlery, group ignored."""
-        for _x in range(count):
-            value = (d6() + d6() + d6()) * 100
-            if value >= 1800:
-                design = 'jewelry platinum and gems'
-            elif value >= 1600:
-                design = 'jewelry gold with gems'
-            elif value >= 1200:
-                design = 'jewelry sivler with gems'
-            elif value >= 1000:
-                design = 'jewelry wrought platinum'
-            elif value >= 700:
-                design = 'jewelry wrought gold'
-            else:
-                design = 'jewelry wrought silver'
-            yield 1, value, design
+        raise NotImplementedError
+
+    def lines(self, count, group):
+        return list(self._format(self.roll(count, group)))
+
+    def _format(self, things):
+        for count, value, thing in sorted(things, key=lambda row: row[1] or 99999):
+            yield f'{count:2} x {value or "":4}{"gp" if value else "  "} {thing}'
 
 
 class Gems(Treasures):
-    def __init__(self, ruleset):
-        if ruleset == 'expert':
-            self.gem_value_chance = [20, 45, 75, 95, 100]
-            self.gem_value_chance = [20, 45, 75, 95, 99, 100]  # modified to give 1% chance of diamond
-        elif ruleset == 'altgreyhawk':
-            self.gem_value_chance = [10, 25, 75, 90, 99, 100]
-        else:
-            raise ValueError(f'Unknown ruleset [{ruleset}]')
-        self.values = [10, 50, 100, 500, 1000, 5000, 10000, 25000, 50000]
-        self.gems = [
-            [  # 10 GP Gems (multicolored)
-                'Agate: Multi-colored circles',  # Safe sleep
-                'Tiger Eye: Brown with golden center under-hue',
-                ],
-            [  # 50 GP Gems (stone)
-                'Bloodstone: Dark gray with red flecks',  # Weather Control
-                'Moonstone: Lustrous white with pale blue glow',  # Lycanthropy
-                ],
-            [  # 100 GP Gems (solid color)
-                'Carnelian: Orange to reddish brown',  # Protection from Evil
-                'Jade: Light green, deep green, green and white',  # Protection from poison
-                ],
-            [  # 500 GP Gems (translucent)
-                'Pearl: Lustrous white, pinkish, to pure black',  # Wisdom
-                'Topaz: Translucent golden yellow',  # Earth Wards of evil
-                ],
-            [  # 1000 GP Gems (transparent)
-                'Emerald: Transparent deep green',  # Water Undead protection / control
-                'Ruby: Transparent crimson',  # Fire Good luck
-                'Sapphire: Transparent vivid blue',  # Air intelligence, boosts magic
-                ],
-            [  # 5000 GP Gems
-                'Diamond: Transparent clear blue-white',
-                ],
-            ]
-        self.unusual = [
-            'Crystal Ball',
-            'of Controlling Earth Elementals',
-            'Amulet of Non-detection',
-            'Scarab of Protection from Level Drain',
-            'Scarab of Enraging Enemies',
-            'Glowstone as light spell',
-            'Warstone +1 if built into weapon',
-            'Ioun Stone absorbs d20 spell levels',
-            'Ioun Stone geas',
-            'Ioun Stone 16 Int',
-            'Ioun Stone regen 1hp turn',
-            'Ioun Stone +1 spell slot',
-            'of Prayer',
-            'of Poison Detection',
-            'Demonstone',
-            ]
+    values = [10, 50, 100, 500, 1000, 5000, 10000, 25000, 50000]
+    gems = [
+        [  # 10 GP Gems (multicolored)
+            'Agate: Multi-colored circles',  # Safe sleep
+            'Tiger Eye: Brown with golden center under-hue',
+            ],
+        [  # 50 GP Gems (stone)
+            'Bloodstone: Dark gray with red flecks',  # Weather Control
+            'Moonstone: Lustrous white with pale blue glow',  # Lycanthropy
+            ],
+        [  # 100 GP Gems (solid color)
+            'Carnelian: Orange to reddish brown',  # Protection from Evil
+            'Jade: Light green, deep green, green and white',  # Protection from poison
+            ],
+        [  # 500 GP Gems (translucent)
+            'Pearl: Lustrous white, pinkish, to pure black',  # Wisdom
+            'Topaz: Translucent golden yellow',  # Earth Wards of evil
+            ],
+        [  # 1000 GP Gems (transparent)
+            'Emerald: Transparent deep green',  # Water Undead protection / control
+            'Ruby: Transparent crimson',  # Fire Good luck
+            'Sapphire: Transparent vivid blue',  # Air intelligence, boosts magic
+            ],
+        [  # 5000 GP Gems
+            'Diamond: Transparent clear blue-white',
+            ],
+        ]
+    unusual = [
+        'Crystal Ball',
+        'of Controlling Earth Elementals',
+        'Amulet of Non-detection',
+        'Scarab of Protection from Level Drain',
+        'Scarab of Enraging Enemies',
+        'Glowstone as light spell',
+        'Warstone +1 if built into weapon',
+        'Ioun Stone absorbs d20 spell levels',
+        'Ioun Stone geas',
+        'Ioun Stone 16 Int',
+        'Ioun Stone regen 1hp turn',
+        'Ioun Stone +1 spell slot',
+        'of Prayer',
+        'of Poison Detection',
+        'Demonstone',
+        ]
+    sizes = {2: 'large', 4: 'giant', 8: 'enormous'}
+
+    def __init__(self, chances):
+        """chances: cumulative d100 chance of each value in values."""
+        self.chances = chances
 
     def _roll(self, count, group):
         """Roll up count gems, in groups of size group."""
         size = value = 0
-        only_one = False  # Only one magical gem.
-        for x in range(count):
+        magical_found = False  # Only one magical gem.
+        for position in range(count):
             # Roll in groups; but reset when larger, magical or valuable.
-            if x % group == 0 or size or value == 0 or value > 500:
+            if position % group == 0 or size or value == 0 or value > 500:
                 roll = d100()
-                for i, v in enumerate(self.gem_value_chance):
-                    if roll <= v:
-                        gem = random.choice(self.gems[i])
-                        value = self.values[i]
-                        break
+                tier = next(index for index, chance in enumerate(self.chances) if roll <= chance)
+                gem = random.choice(self.gems[tier])
+                value = self.values[tier]
             size = ''
-            if x % 10 == 1:  # 1 in 10 gems have chance of being special.
-                # 30% chance to be magical, only if 100gp or greator and only one.
-                if d100() <= 30 and value >= 100 and not only_one:
+            if position % 10 == 1:  # 1 in 10 gems have chance of being special.
+                # 30% chance to be magical, only if 100gp or greater and only one.
+                if d100() <= 30 and value >= 100 and not magical_found:
                     value = 0
                     if 'Diamond' in gem:  # All magical Diamonds are True Seeing Gems.
                         gem = 'Diamond of True Seeing'
                     else:
                         gem = f'{gem[0:gem.index(":")]} {random.choice(self.unusual)}'
-                    only_one = True  # Only one magic gem per hoard.
+                    magical_found = True  # Only one magic gem per hoard.
                 # 20% of non-magical gems are larger than usual.
                 elif d100() <= 20:
-                    mult = random.choice([2, 2, 2, 4, 4, 8])
-                    value = value * mult
-                    size = {
-                        2: 'large',
-                        4: 'giant',
-                        8: 'enormous',
-                        }[mult] + ' '
+                    multiplier = random.choice([2, 2, 2, 4, 4, 8])
+                    value *= multiplier
+                    size = f'{self.sizes[multiplier]} '
             yield 1, value, f'{size}{gem}'
 
 
-class BookGems(Treasures):
+class Jewelries(Treasures):
+    designs = [  # (minimum value, design), highest first.
+        (1800, 'jewelry platinum and gems'),
+        (1600, 'jewelry gold with gems'),
+        (1200, 'jewelry silver with gems'),
+        (1000, 'jewelry wrought platinum'),
+        (700, 'jewelry wrought gold'),
+        (0, 'jewelry wrought silver'),
+        ]
+
+    def _roll(self, count, group):
+        """Roll up count pieces of jewelry, group ignored."""
+        for _ in range(count):
+            value = (d6() + d6() + d6()) * 100
+            design = next(design for minimum, design in self.designs if value >= minimum)
+            yield 1, value, design
+
+
+# TODO: implement fur Treasures.
+# Furs:    Pelt   Trimming* Cape / Jacket  Coat
+# beaver   2      20 g.p.   200 g.p.       400 g.p.
+# ermine   4      120 g.p.  3,600S.P.      7,200g.p.
+# fox      3      90 S.P.   300 g.p.       600 g.p.
+# marten   4      10 g.p.   400 g.p.       800 g.p.
+# mink     3      30 g.p.   100 g.p.       5,400g.p.
+# muskrat  1      40 g.p.   4,500S.P.      200 g.p.
+# sable    5      150 g.p.  2,700g.p.      9,000 S.P.
+# seal     5      25 g.p.   125 g.p.       250 g.p
+#
+# * on collar cuffs and edges of garment
+
+
+class GemsOdd(Treasures):
     """OD&D Vol 2, Treasure: Gems, as written.
 
     Base value by d100; then d6 per gem (or group of gems), each 1 moves up a category.
@@ -395,8 +385,8 @@ class BookGems(Treasures):
         if count <= 10:
             group = 1
         value = 0
-        for x in range(count):
-            if x % group == 0:
+        for position in range(count):
+            if position % group == 0:
                 index = self.values.index(table(self.base))
                 while d6() == 1 and index < len(self.values) - 1:
                     index += 1
@@ -404,12 +394,12 @@ class BookGems(Treasures):
             yield 1, value, 'gem'
 
 
-class BookJewelries(Treasures):
+class JewelriesOdd(Treasures):
     """OD&D Vol 2, Treasure: Jewelry, as written."""
 
     def _roll(self, count, group):
-        """Roll up count pieces of jewlery, group ignored."""
-        for _x in range(count):
+        """Roll up count pieces of jewelry, group ignored."""
+        for _ in range(count):
             roll = d100()
             if roll <= 20:
                 value = (d6() + d6() + d6()) * 100
@@ -420,22 +410,25 @@ class BookJewelries(Treasures):
             yield 1, value, 'jewelry'
 
 
-"""
-Furs:    Pelt   Trimming* Cape / Jacket  Coat
-beaver   2      20 g.p.   200 g.p.       400 g.p.
-ermine   4      120 g.p.  3,600S.P.      7,200g.p.
-fox      3      90 S.P.   300 g.p.       600 g.p.
-marten   4      10 g.p.   400 g.p.       800 g.p.
-mink     3      30 g.p.   100 g.p.       5,400g.p.
-muskrat  1      40 g.p.   4,500S.P.      200 g.p.
-sable    5      150 g.p.  2,700g.p.      9,000 S.P.
-seal     5      25 g.p.   125 g.p.       250 g.p
-
-* on collar cuffs and edges of garment
-"""
-
-
 class Rules:
+    """Base of the rulesets: the tables to roll on and the hooks that adjust a roll.
+
+    A ruleset subclass supplies:
+    - name: shown by the CLI.
+    - TREASURE_TYPES: treasure type code -> rows of (kind, chance, amount), None for kinds the type lacks.
+      Kind is a coin, 'gems', 'jewelry' or 'magic'.  Amount is a quantity (N-M, see replace_quantity);
+      for magic it is the entry_* functions to roll.
+    - gems, jewelries: Treasures instances.
+    - item: magic item categories, rows of (highest roll, category, entry_* function).
+    - sword, armor, weapon, potion, scroll, ring, wsr, misc: rows of (highest roll, text), see table().
+      Text may hold <name> placeholders, filled by random_details from _random_<name>.
+    - _spell_level(caster): method returning the table of spell levels for a scroll's spells.
+    - scroll_trap: effects of a trapped scroll.
+
+    Class attributes below can be overridden to change how rolls are adjusted: mislead.
+    Subclasses override armor_type, charges and sword_extras to post-process a rolled item.
+    """
+
     scroll_trap = [
         (2, 'Summons Monster'),
         (4, '+/-2 penalty to Attack/Saves/AC'),
@@ -444,98 +437,96 @@ class Rules:
         (8, 'Fatal disease 2d6 turns (no save)'),
         ]
     mislead = ('delusion', )  # Potions that look like another potion.
-    no_cleric = ()  # Spell levels Clerics don't have, for scrolls.
 
     def armor_type(self, match):
         return match.group(1)
 
-    def charges(self, result):
-        """Text for the charges of a wand, staff or rod."""
-        return ''
+    def random_details(self, text):
+        """Replace each <name> with a roll on self._random_name (a table or a method); leave unknown names."""
+        def roll_detail(match):
+            source = getattr(self, f'_random_{match.group(1)}', None)
+            if source is None:
+                return match.group(0)
+            return source() if callable(source) else table(source)
+        return re.sub(r'<(\w+)>', roll_detail, text)
+
+    def spell_summary(self, caster, count):
+        """Roll the levels of count spells, as '2x1st, 1x3rd'."""
+        levels = reduce_groups((1, 0, table(self._spell_level(caster))) for _ in range(count))
+        return ', '.join(f'{quantity}x{level}' for quantity, _, level in levels)
 
     def sword_extras(self, sword):
         """Alignment, intelligence, special powers and such for a rolled sword."""
         return sword
 
-    def spell_level(self, caster):
-        """Roll the level of one spell."""
-        while True:
-            level = table(self.scroll_levels)
-            if caster != 'Cleric' or level not in self.no_cleric:
-                return level
-
-    def detail(self, text):
-        """Replace <name> with a roll on detail_name (table or method); leave unknown names."""
-        return re.sub(r'<(\w+)>', lambda match: self._detail(match.group(1), match.group(0)), text)
-
-    def _detail(self, name, default):
-        value = getattr(self, f'detail_{name}', None)
-        if value is None:
-            return default
-        return value() if callable(value) else table(value)
-
-    def type(self, tt, roll=None):
+    def treasure_type(self, code, roll=None):
         """Roll a treasure type."""
-        for check in self.TREASURE_TYPES[tt]:
+        for check in self.TREASURE_TYPES[code]:
             if check:
-                yield from self.roll(*check, roll)
+                yield from self._roll_check(*check, roll)
 
-    def roll(self, what, chance, treasure, roll=None):
-        """For single check of Treasure Type."""
+    def _roll_check(self, kind, chance, amount, roll=None):
+        """For single check of Treasure Type; amount is a quantity (N-M), or for magic the functions to roll."""
         if roll is None:
             roll = d100()
         if roll > chance:
             return
-        if what == 'magic':
-            for item_func in treasure:
-                yield item_func(self)
+        if kind == 'magic':
+            for roll_function in amount:
+                yield roll_function(self)
         else:
-            count, text = replace_quantity(treasure)
-            yield f'{text} {what}'
-            if what == 'gems':
+            count, text = replace_quantity(amount)
+            yield f'{text} {kind}'
+            if kind == 'gems':
                 yield from self.gems.lines(count, 10)
-            if what == 'jewelry':
+            if kind == 'jewelry':
                 yield from self.jewelries.lines(count, 1)
+
+    def charges(self, item):
+        """Text for the charges of a wand, staff or rod."""
+        return ''
 
 
 class OddRules(Rules):
-    """Original D&D, Vol 2 Monsters & Treasure (1974), exactly as written.
+    """Original D&D three LBB, Vol 2 Monsters & Treasure (1974), exactly as written.
 
-    Tables are transcribed from the Vol 2 text; "00" is 100.
     Where the book is ambiguous the choice is commented "Judgement".
     """
     name = 'odd'
-    jewelries = BookJewelries()
-    gems = BookGems()
+    gems = GemsOdd()
+    jewelries = JewelriesOdd()
     mislead = ('delusion', 'poison')  # "Referee will mislead", even a sip of poison kills.
-    no_cleric = ('6th', )  # Judgement: Vol 1 Clerics have no 6th level spells.
+    # Referee rolls which Giants.  Hill 60%, others 10% each.
+    _random_giant = [(60, 'Hill'), (70, 'Stone'), (80, 'Frost'), (90, 'Fire'), (100, 'Cloud')]
+    # Referee rolls which of the six Dragons.
+    _random_dragon = [(1, 'White'), (2, 'Black'), (3, 'Green'), (4, 'Blue'), (5, 'Red'), (6, 'Golden')]
     # Wands 100, Staves 200 charges, except these (Vol 2, Wands and Staves).
-    chargeless = ('Metal Detection', 'Enemy Detection', 'Secret Doors', 'Healing', 'Snake Staff', 'Striking')
+    _chargeless = ('Metal Detection', 'Enemy Detection', 'Secret Doors', 'Healing', 'Snake Staff', 'Striking')
     # Treasure Types, thousands of coins are written 1000-6000 (d6 x 1000).  Columns: cp sp gp gems jewelry magic.
     # Roll for each of Gems and Jewelry.  Magic "any" is a roll on the Magic/Maps table, 25% maps.
     TREASURE_TYPES = {
-        'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('gp', 35, '2000-12000'),  ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 40, (_any, _any, _any))),
-        'a-desert': (('cp', 20, '1000-4000'), ('sp', 25, '1000-4000'), ('gp', 30, '1000-6000'), ('gems', 50, '10-40'), ('jewelry', 50, '10-40'), ('magic', 60, (_item, _item, _item))),
-        'a-water': (None,               None,                      ('gp', 60, '5000-30000'),  ('gems', 60, '10-60'), ('jewelry', 60, '10-60'), ('magic', 50, (_map, ))),
-        'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('gp', 25, '1000-3000'),   ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (_martial, ))),  # Weapon, Armor, or Misc. Weapon.
-        'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (_any, _any))),
-        'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  ('gp', 60, '1000-6000'),   ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 20, (_any, _any, _potion))),
-        'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('gp', 25, '1000-8000'),   ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 30, (_any, _any, _any, _scroll))),
-        'f': (None,                     ('sp', 10, '2000-20000'),  ('gp', 45, '1000-12000'),  ('gems', 20, '2-24'),  ('jewelry', 20, '2-24'),  ('magic', 35, (_noweap_any, _noweap_any, _noweap_any, _potion, _scroll))),
-        'g': (None,                     None,                      ('gp', 75, '10000-40000'), ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 40, (_any, _any, _any, _any, _scroll))),
-        'h': (('cp', 25, '3000-24000'), ('sp', 50, '1000-100000'), ('gp', 75, '10000-60000'), ('gems', 50, '1-100'), ('jewelry', 50, '10-40'), ('magic', 20, (_any, _any, _any, _any, _potion, _scroll))),
-        'i': (None,                     None,                      None,                      ('gems', 50, '2-16'),  ('jewelry', 50, '2-16'),  ('magic', 20, (_any, ))),
+        'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('gp', 35, '2000-12000'),  ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 40, (entry_odd_any, entry_odd_any, entry_odd_any))),
+        'a-desert': (('cp', 20, '1000-4000'), ('sp', 25, '1000-4000'), ('gp', 30, '1000-6000'), ('gems', 50, '10-40'), ('jewelry', 50, '10-40'), ('magic', 60, (entry_item, entry_item, entry_item))),
+        'a-water': (None,               None,                      ('gp', 60, '5000-30000'),  ('gems', 60, '10-60'), ('jewelry', 60, '10-60'), ('magic', 50, (entry_odd_map, ))),
+        'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('gp', 25, '1000-3000'),   ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (entry_martial, ))),  # Weapon, Armor, or Misc. Weapon.
+        'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (entry_odd_any, entry_odd_any))),
+        'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  ('gp', 60, '1000-6000'),   ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 20, (entry_odd_any, entry_odd_any, entry_potion))),
+        'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('gp', 25, '1000-8000'),   ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 30, (entry_odd_any, entry_odd_any, entry_odd_any, entry_scroll))),
+        'f': (None,                     ('sp', 10, '2000-20000'),  ('gp', 45, '1000-12000'),  ('gems', 20, '2-24'),  ('jewelry', 20, '2-24'),  ('magic', 35, (entry_odd_noweap_any, entry_odd_noweap_any, entry_odd_noweap_any, entry_potion, entry_scroll))),
+        'g': (None,                     None,                      ('gp', 75, '10000-40000'), ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 40, (entry_odd_any, entry_odd_any, entry_odd_any, entry_odd_any, entry_scroll))),
+        'h': (('cp', 25, '3000-24000'), ('sp', 50, '1000-100000'), ('gp', 75, '10000-60000'), ('gems', 50, '1-100'), ('jewelry', 50, '10-40'), ('magic', 20, (entry_odd_any, entry_odd_any, entry_odd_any, entry_odd_any, entry_potion, entry_scroll))),
+        'i': (None,                     None,                      None,                      ('gems', 50, '2-16'),  ('jewelry', 50, '2-16'),  ('magic', 20, (entry_odd_any, ))),
         }
     # Magic/Maps Determination: Magic Items.
     item = [
-        (20, 'Sword', _sword),
-        (35, 'Armor', _armor),
-        (40, 'Misc. Weapon', _weapon),
-        (65, 'Potion', _potion),
-        (85, 'Scroll', _scroll),
-        (90, 'Ring', _ring),
-        (95, 'Wand/Staff', _wsr),
-        (100, 'Misc. Magic', _misc),
+        (20, 'Sword', entry_sword),
+        (35, 'Armor', entry_armor),
+        (40, 'Misc. Weapon', entry_weapon),
+        (65, 'Potion', entry_potion),
+        (85, 'Scroll', entry_scroll),
+        (90, 'Ring', entry_ring),
+        (95, 'Wand/Staff', entry_wsr),
+        (100, 'Misc. Magic', entry_misc),
         ]
     sword = [
         (35, 'Sword +1'),
@@ -606,12 +597,6 @@ class OddRules(Rules):
         (96, 'Treasure Finding'),
         (100, 'Heroism'),
         ]
-    # Referee rolls which Giants.  Hill 60%, others 10% each.
-    detail_giant = [(60, 'Hill'), (70, 'Stone'), (80, 'Frost'), (90, 'Fire'), (100, 'Cloud')]
-    # Referee rolls which of the six Dragons.
-    detail_dragon = [(1, 'White'), (2, 'Black'), (3, 'Green'), (4, 'Blue'), (5, 'Red'), (6, 'Golden')]
-    # Spell level is d6.
-    scroll_levels = [(1, '1st'), (2, '2nd'), (3, '3rd'), (4, '4th'), (5, '5th'), (6, '6th')]
     scroll = [
         (20, '1 Spell'),
         (35, '2 Spells'),
@@ -705,9 +690,9 @@ class OddRules(Rules):
         (100, 'Mirror of Life Trapping'),
         ]
     # Sword Alignment; percentages reversed (Lawful and Chaotic swapped) for the Energy Draining sword.
-    sword_alignment = [(65, 'Lawful'), (90, 'Neutral'), (100, 'Chaotic')]
+    _sword_alignment = [(65, 'Lawful'), (90, 'Neutral'), (100, 'Chaotic')]
     # Primary Powers.  96-99 is two rolls ignoring 96-99 (00 allowed), 00 is an Extraordinary Ability.
-    sword_primary = [
+    _sword_primary = [
         (15, 'Note Shifting Walls & Rooms'),
         (30, 'Detect Sloping Passages'),
         (40, 'Locate Secret Doors'),
@@ -720,9 +705,9 @@ class OddRules(Rules):
         ]
     # Languages, in addition to alignment's.  Judgement: book has 86-95 Four and 90-99 Five, took 96-99.
     # 00 is two rolls ignoring 00.
-    sword_languages = [(50, 1), (70, 2), (85, 3), (95, 4), (99, 5)]
+    _sword_languages = [(50, 1), (70, 2), (85, 3), (95, 4), (99, 5)]
     # Extraordinary Abilities.  98-99 is two rolls ignoring over 97, 00 is three rolls.
-    sword_extraordinary = [
+    _sword_extraordinary = [
         (10, 'Clairaudience'),
         (20, 'Clairvoyance'),
         (30, 'ESP'),
@@ -736,8 +721,8 @@ class OddRules(Rules):
         (92, 'Healing (1 point/6 turns or 6 points/day)'),
         (97, '1-4 x Normal Strength for 1-10 Turns, once/day'),
         ]
-    sword_purposes = ['Slay Magic-Users', 'Slay Clerics', 'Slay Fighting-Men', 'Slay Monsters', 'Defeat Law', 'Defeat Chaos']
-    sword_purpose_powers = {
+    _sword_purposes = ['Slay Magic-Users', 'Slay Clerics', 'Slay Fighting-Men', 'Slay Monsters', 'Defeat Law', 'Defeat Chaos']
+    _sword_purpose_powers = {
         'Lawful': 'paralyze Chaotic opponents',
         'Neutral': '+1 to all saving throws',
         'Chaotic': 'disintegrate Lawful opponents',
@@ -745,7 +730,7 @@ class OddRules(Rules):
 
     def sword_extras(self, sword):
         """Alignment, Intelligence, Egoism and Origin/Purpose.  Vol 2, Explanations of Magic Items: Swords."""
-        alignment = table(self.sword_alignment)
+        alignment = table(self._sword_alignment)
         if 'Energy Draining' in sword:
             alignment = {'Lawful': 'Chaotic', 'Chaotic': 'Lawful'}.get(alignment, alignment)
         if any(word in sword for word in ('Holy', 'Sharpness', 'Vorpal')):  # Judgement: Paladin / Lawful only swords.
@@ -758,25 +743,25 @@ class OddRules(Rules):
             intelligence = 12
         if intelligence >= 7:
             ego = 12 if special else d12()
-            powers = self.sword_primary_powers({7: 1, 8: 2}.get(intelligence, 3))
+            powers = self._sword_primary_powers({7: 1, 8: 2}.get(intelligence, 3))
             parts += [f'Int {intelligence}', f'Ego {ego}', 'telepathy' if intelligence == 12 else 'speech' if intelligence >= 10 else 'empathy']
             if intelligence >= 10:
-                languages = self.sword_language_count()
+                languages = self._sword_language_count()
                 parts.append(f'{languages} language{"" if languages == 1 else "s"} besides {alignment}')
             if intelligence >= 11:
                 parts.append('reads magic')
             if intelligence == 12:
-                powers += self.sword_extraordinary_powers()
+                powers += self._sword_extraordinary_powers()
             if special:
-                purpose = random.choice(self.sword_purposes)
+                purpose = random.choice(self._sword_purposes)
                 while (alignment, purpose) in (('Lawful', 'Defeat Law'), ('Chaotic', 'Defeat Chaos')):  # Judgement: can't defeat itself.
-                    purpose = random.choice(self.sword_purposes)
-                powers.append(f'{purpose}, {self.sword_purpose_powers[alignment]}')
+                    purpose = random.choice(self._sword_purposes)
+                powers.append(f'{purpose}, {self._sword_purpose_powers[alignment]}')
             if powers:
                 parts.append(', '.join(f'{power} x{count}' if count > 1 else power for power, count in collections.Counter(powers).items()))
         return f'{sword} ({", ".join(parts)})'
 
-    def sword_primary_powers(self, count):
+    def _sword_primary_powers(self, count):
         found = []
         for _ in range(count):
             roll = d100()
@@ -784,64 +769,81 @@ class OddRules(Rules):
             if 96 <= roll <= 99:
                 rolls = []
                 while len(rolls) < 2:
-                    sub = d100()
-                    if not 96 <= sub <= 99:
-                        rolls.append(sub)
-            for result in rolls:
-                found += self.sword_extraordinary_powers() if result == 100 else [table(self.sword_primary, result)]
+                    reroll = d100()
+                    if not 96 <= reroll <= 99:
+                        rolls.append(reroll)
+            for rolled in rolls:
+                found += self._sword_extraordinary_powers() if rolled == 100 else [table(self._sword_primary, rolled)]
         return found
 
-    def sword_extraordinary_powers(self):
+    def _sword_extraordinary_powers(self):
         roll = d100()
         if roll <= 97:
-            return [replace_quantity(table(self.sword_extraordinary, roll))[1]]
-        return [replace_quantity(table(self.sword_extraordinary, random.randint(1, 97)))[1] for _ in range(2 if roll < 100 else 3)]
+            return [replace_quantity(table(self._sword_extraordinary, roll))[1]]
+        return [replace_quantity(table(self._sword_extraordinary, random.randint(1, 97)))[1] for _ in range(2 if roll < 100 else 3)]
 
-    def sword_language_count(self):
+    def _sword_language_count(self):
         roll = d100()
         if roll < 100:
-            return table(self.sword_languages, roll)
-        return sum(table(self.sword_languages, random.randint(1, 99)) for _ in range(2))
+            return table(self._sword_languages, roll)
+        return sum(table(self._sword_languages, random.randint(1, 99)) for _ in range(2))
 
-    def max_charges(self, result):
-        """(most, unit) or None.  Vol 2, Wands and Staves."""
-        if any(word in result for word in self.chargeless):
-            return None
-        if 'Wand' in result:
-            return 100, 'charges'
-        if 'Staff' in result:
-            return 200, 'charges'
+    def charges(self, item):
+        """The maximum charges, wands 100, staves 200, Greyhawk rods 25."""
+        non_standard = self._non_standard_charges(item)
+        if non_standard is not None:
+            return non_standard
+        if 'Wand' in item:
+            return ' [100 charges]'
+        if 'Staff' in item:
+            return ' [200 charges]'
+        if 'Rod' in item:
+            return ' [25 charges]'
+        return ''
+
+    def _non_standard_charges(self, item):
+        """Charges text for items that don't use the standard wand, staff or rod rule; None for the standard.
+
+        Vol 2 and Greyhawk, Wands and Staves.  Items that only exist in Greyhawk never match in Vol 2.
+        """
+        if any(word in item for word in self._chargeless):
+            return ''
+        if 'Cancellation' in item:
+            return ' [single use]'
+        if 'Rulership' in item:
+            return ' [10 charges]'
+        if 'Absorption' in item:
+            return ' [100 spell levels]'
         return None
 
-    def found_charges(self, most):
-        return most
-
-    def charges(self, result):
-        maximum = self.max_charges(result)
-        if maximum is None:
-            return ''
-        most, unit = maximum
-        return f' ({self.found_charges(most)} {unit})'
-
-    def detail_spells(self):
+    def _random_spells(self):
         """Ring of Spell Storing: 1-6 spells, 20% Clerical, half of those Chaotic.  Never mixed."""
-        caster = 'Magic-user'
+        spell_type = 'Magic-user'
         if d100() <= 20:
-            caster = 'Chaotic Cleric' if d100() <= 50 else 'Cleric'
-        levels = reduce_groups((1, 0, self.spell_level(caster.split()[-1])) for _ in range(d6()))
-        return f'{caster} spells {", ".join(f"{c}x{x}" for c, _, x in levels)}'
+            spell_type = 'Chaotic Cleric' if d100() <= 50 else 'Cleric'
+        return f'{spell_type} spells {self.spell_summary(spell_type.split()[-1], d6())}'
+
+    def _spell_level(self, caster):
+        """Spell level is d6.  Judgement: Vol 1 Clerics have no 6th level spells, so d5."""
+        levels = [(1, '1st'), (2, '2nd'), (3, '3rd'), (4, '4th'), (5, '5th'), (6, '6th')]
+        return levels[:5] if caster == 'Cleric' else levels
 
 
 class GreyhawkRules(OddRules):
-    """Original D&D Vol 2 plus Greyhawk Supplement I (1975), exactly as written.
+    """Original D&D three LBB plus Greyhawk Supplement I (1975), exactly as written.
 
     Greyhawk's Magic/Maps Determination Additions and Changes replace the Vol 2 tables
     for swords, misc. weapons, armor, potions, rings, wands/staves/rods and misc. magic.
     Item categories, scrolls, treasure types and sword sentience stay as Vol 2.
     """
     name = 'greyhawk'
+    # Judgement: Storm Giants are in Greyhawk's monsters, Hill Giants lose a share to them.
+    _random_giant = [(50, 'Hill'), (60, 'Stone'), (70, 'Frost'), (80, 'Fire'), (90, 'Cloud'), (100, 'Storm')]
+    # Greyhawk adds Brass, Copper, Bronze, Silver Dragons (and calls Golden, Gold).
+    _random_dragon = [(1, 'White'), (2, 'Black'), (3, 'Green'), (4, 'Blue'), (5, 'Red'), (6, 'Gold'), (7, 'Brass'), (8, 'Copper'), (9, 'Bronze'), (10, 'Silver')]
+    _random_slaying = [(1, 'Giant Class'), (2, 'Undead Class'), (3, 'Flying Monsters'), (4, 'Other Monsters'), (5, 'Enchanted Monsters')]
     # Greyhawk corrects Staff of Striking, it uses charges.
-    chargeless = ('Metal Detection', 'Enemy Detection', 'Secret Doors', 'Healing', 'Snake Staff')
+    _chargeless = ('Metal Detection', 'Enemy Detection', 'Secret Doors', 'Healing', 'Snake Staff')
     sword = [
         (30, 'Sword +1'),
         (35, 'Sword +1, +2 vs. Lycanthropes'),
@@ -946,11 +948,6 @@ class GreyhawkRules(OddRules):
         (97, 'Super-heroism (F)'),
         (100, 'Oil of Etherealness'),
         ]
-    # Judgement: Storm Giants are in Greyhawk's monsters, Hill Giants lose a share to them.
-    detail_giant = [(50, 'Hill'), (60, 'Stone'), (70, 'Frost'), (80, 'Fire'), (90, 'Cloud'), (100, 'Storm')]
-    # Greyhawk adds Brass, Copper, Bronze, Silver Dragons (and calls Golden, Gold).
-    detail_dragon = [(1, 'White'), (2, 'Black'), (3, 'Green'), (4, 'Blue'), (5, 'Red'), (6, 'Gold'), (7, 'Brass'), (8, 'Copper'), (9, 'Bronze'), (10, 'Silver')]
-    detail_slaying = [(1, 'Giant Class'), (2, 'Undead Class'), (3, 'Flying Monsters'), (4, 'Other Monsters'), (5, 'Enchanted Monsters')]
     # Many Wishes: Greyhawk doesn't repeat Vol 2's number.
     ring = [
         (5, 'Invisibility'),
@@ -1147,21 +1144,6 @@ class GreyhawkRules(OddRules):
         ]
     misc = [(30, misc_i), (60, misc_ii), (75, misc_iii), (90, misc_iv), (100, misc_v)]
 
-    def max_charges(self, result):
-        """Greyhawk: Rods typically 25 charges unless noted."""
-        if 'Rulership' in result:
-            return 10, 'charges'
-        if 'Absorption' in result:
-            return 100, 'spell levels'
-        if 'Rod' in result:
-            return 25, 'charges'
-        return super().max_charges(result)
-
-    def charges(self, result):
-        if 'Cancellation' in result:
-            return ' (single use)'
-        return super().charges(result)
-
 
 class AltGreyhawkRules(GreyhawkRules):
     """Greyhawk with Norm's tweaks.  Everything not listed here is as Greyhawk.
@@ -1170,20 +1152,21 @@ class AltGreyhawkRules(GreyhawkRules):
     - Treasure Type F's magic is rings, wands/staves/rods and misc. magic (no maps, nor armor, potion or scroll)
       plus a potion and a scroll.
     - Treasure Types O, Q, S are added, they are not OD&D (AD&D Monster Manual style).
-    - Gems and Jewelry are the Gems / Jewelries classes (not the book's rolls).
+    - Gems and Jewelry are the Gems / Jewelries classes (not GemsOdd / JewelriesOdd).
     - Swords: cursed swords are 83-87 +1 Cursed Berserker, 88-92 -1 Cursed, 93-97 -2 Cursed (book 83 +1, 84-97 -2).
     - Armor, misc. weapons and scrolls are Norm's tables, see below.
-    - Wand, staff and rod charges are found partly used, 40% to 100% of the book's number.
+    - Wand, staff and rod charges are rolled: wand 80-200 (6th level), staff 40-100 (8th), rod 15-25.
+      Chargeless items, Rods of Cancellation, Rulership and Absorption are as Greyhawk.
     """
     name = 'altgreyhawk'
-    jewelries = Jewelries('altgreyhawk')
-    gems = Gems('altgreyhawk')
+    gems = Gems([10, 25, 75, 90, 99, 100])
+    jewelries = Jewelries()
     TREASURE_TYPES = {
         **GreyhawkRules.TREASURE_TYPES,
-        'f': (None,                     ('sp', 10, '2000-20000'),  ('gp', 45, '1000-12000'),  ('gems', 20, '2-24'),  ('jewelry', 20, '2-24'),  ('magic', 35, (_noweap, _noweap, _noweap, _potion, _scroll))),
+        'f': (None,                     ('sp', 10, '2000-20000'),  ('gp', 45, '1000-12000'),  ('gems', 20, '2-24'),  ('jewelry', 20, '2-24'),  ('magic', 35, (entry_noweap, entry_noweap, entry_noweap, entry_potion, entry_scroll))),
         'o': (('cp', 25, '1000-4000'),  ('sp', 20, '1000-3000'),   None,                      None,                  None,                     None),
         'q': (None,                     None,                      None,                      ('gems', 50, '1-4'),   None,                     None),
-        's': (None,                     None,                      None,                      None,                  None,                     ('magic', 40, (_2d8_potions, ))),
+        's': (None,                     None,                      None,                      None,                  None,                     ('magic', 40, (entry_2d8_potions, ))),
         }
     sword = [row for row in GreyhawkRules.sword if row[0] < 83] + [
         (87, 'Sword +1, Cursed Berserker'),
@@ -1208,7 +1191,7 @@ class AltGreyhawkRules(GreyhawkRules):
         (78, 'Plate & Shield +3'),
         (80, 'Mithral Shield +4'),
         (82, 'Mithral Plate +4'),
-        (83, 'Mithral Plate & Shield + 4'),
+        (83, 'Mithral Plate & Shield +4'),
         (85, 'Adamantite Shield +5'),
         (86, 'Adamantite Plate +5'),
         (87, 'Adamantite Plate & Shield +5'),
@@ -1253,7 +1236,7 @@ class AltGreyhawkRules(GreyhawkRules):
         (100, 'Cursed Spear of Backbiting'),
         ]
     # Scrolls: Norm's table, not the book's.  Differs: Curse (book 51-60) is a 1-10 trap using Rules.scroll_trap
-    # instead of the book's Curse table; Protection: Demons replaces the book's 7 Spells.
+    # instead of the book's Curse table (BUG: scroll_trap is inherited from OddRules, so it is the Curse table); Protection: Demons replaces the book's 7 Spells.
     scroll = [
         (10, 'trap'),
         (30, '1 Spell'),
@@ -1266,45 +1249,52 @@ class AltGreyhawkRules(GreyhawkRules):
         (100, 'Protection: Magic'),
         ]
 
-    def found_charges(self, most):
-        return random.randint(max(1, most * 2 // 5), most)
+    def charges(self, item):
+        non_standard = self._non_standard_charges(item)
+        if non_standard is not None:
+            return non_standard
+        if 'Wand' in item:
+            return f' [6th, {random.randint(80, 200)} charges]'
+        if 'Staff' in item:
+            return f' [8th, {random.randint(40, 100)} charges]'
+        if 'Rod' in item:
+            return f' [{random.randint(15, 25)} charges]'
+        return ''
 
 
 class ExpertRules(Rules):
+    """D&D Basic / Expert Treasure and Magic items."""
     name = 'expert'
-    jewelries = Jewelries('expert')
-    gems = Gems('expert')
+    gems = Gems([20, 45, 75, 95, 99, 100])  # Book is [20, 45, 75, 95, 100], modified to give 1% chance of diamond.
+    jewelries = Jewelries()
     TREASURE_TYPES = {
-        'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('ep', 20, '1000-4000'),   ('gp', 35, '2000-12000'),  ('pp', 25, '1000-2000'),   ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 30, (_item, _item, _item))),
-        'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('ep', 25, '1000-4000'),   ('gp', 25, '1000-3000'),   None,                      ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (_martial, ))),
-        'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   ('ep', 10, '1000-4000'),   None,                      None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (_item, _item))),
-        'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  None,                      ('gp', 60, '1000-6000'),   None,                      ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 15, (_item, _item, _potion))),
-        'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('ep', 25, '1000-4000'),   ('gp', 25, '1000-8000'),   None,                      ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 25, (_item, _item, _item, _scroll))),
-        'f': (None,                     ('sp', 10, '2000-20000'),  ('ep', 20, '1000-8000'),   ('gp', 45, '1000-12000'),  ('pp', 30, '1000-3000'),   ('gems', 20, '2-24'),  ('jewelry', 10, '1-12'),  ('magic', 30, (_noweap, _noweap, _noweap, _potion, _scroll))),
-        'g': (None,                     None,                      None,                      ('gp', 50, '10000-40000'), ('pp', 50, '1000-6000'),   ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 35, (_item, _item, _item, _item, _scroll))),
-        'h': (('cp', 25, '3000-24000'), ('sp', 50, '1000-100000'), ('ep', 50, '10000-40000'), ('gp', 50, '10000-60000'), ('pp', 25, '5000-20000'),  ('gems', 50, '1-100'), ('jewelry', 50, '10-40'), ('magic', 15, (_item, _item, _item, _item, _potion, _scroll))),
-        'i': (None,                     None,                      None,                      None,                      ('pp', 30, '1000-8000'),   ('gems', 50, '2-12'),  ('jewelry', 50, '2-12'),  ('magic', 15, (_item, ))),
+        'a': (('cp', 25, '1000-6000'),  ('sp', 30, '1000-6000'),   ('ep', 20, '1000-4000'),   ('gp', 35, '2000-12000'),  ('pp', 25, '1000-2000'),   ('gems', 50, '6-36'),  ('jewelry', 50, '6-36'),  ('magic', 30, (entry_item, entry_item, entry_item))),
+        'b': (('cp', 50, '1000-8000'),  ('sp', 25, '1000-6000'),   ('ep', 25, '1000-4000'),   ('gp', 25, '1000-3000'),   None,                      ('gems', 25, '1-6'),   ('jewelry', 25, '1-6'),   ('magic', 10, (entry_martial, ))),
+        'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   ('ep', 10, '1000-4000'),   None,                      None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (entry_item, entry_item))),
+        'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  None,                      ('gp', 60, '1000-6000'),   None,                      ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 15, (entry_item, entry_item, entry_potion))),
+        'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('ep', 25, '1000-4000'),   ('gp', 25, '1000-8000'),   None,                      ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 25, (entry_item, entry_item, entry_item, entry_scroll))),
+        'f': (None,                     ('sp', 10, '2000-20000'),  ('ep', 20, '1000-8000'),   ('gp', 45, '1000-12000'),  ('pp', 30, '1000-3000'),   ('gems', 20, '2-24'),  ('jewelry', 10, '1-12'),  ('magic', 30, (entry_noweap, entry_noweap, entry_noweap, entry_potion, entry_scroll))),
+        'g': (None,                     None,                      None,                      ('gp', 50, '10000-40000'), ('pp', 50, '1000-6000'),   ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 35, (entry_item, entry_item, entry_item, entry_item, entry_scroll))),
+        'h': (('cp', 25, '3000-24000'), ('sp', 50, '1000-100000'), ('ep', 50, '10000-40000'), ('gp', 50, '10000-60000'), ('pp', 25, '5000-20000'),  ('gems', 50, '1-100'), ('jewelry', 50, '10-40'), ('magic', 15, (entry_item, entry_item, entry_item, entry_item, entry_potion, entry_scroll))),
+        'i': (None,                     None,                      None,                      None,                      ('pp', 30, '1000-8000'),   ('gems', 50, '2-12'),  ('jewelry', 50, '2-12'),  ('magic', 15, (entry_item, ))),
         'j': (('cp', 25, '1000-4000'),  ('sp', 10, '1000-3000'),   None,                      None,                      None,                      None,                  None,                     None),
         'k': (None,                     ('sp', 30, '1000-6000'),   ('ep', 10, '1000-2000'),   None,                      None,                      None,                  None,                     None),
         'l': (None,                     None,                      None,                      None,                      None,                      ('gems', 50, '1-4'),   None,                     None),
         'm': (None,                     None,                      None,                      ('gp', 40, '2000-8000'),   ('pp', 50, '5000-30000'),  ('gems', 55, '5-20'),  ('jewelry', 45, '2-12'),  None),
-        'o': (None,                     None,                      None,                      None,                      None,                      None,                  None,                     ('magic', 50, (_d4_scrolls, ))),
-        'u': (('cp', 10, '1-100'),      ('sp', 10, '1-100'),       None,                      ('gp', 5, '1-100'),        None,                      ('gems', 5, '1-4'),    ('jewelry', 5, '1-4'),    ('magic', 2, (_item, ))),
-        'v': (None,                     ('sp', 10, '1-100'),       ('ep', 10, '1-100'),       ('gp', 10, '1-100'),       ('pp', 5, '1-100'),        ('gems', 10, '1-4'),   ('jewelry', 10, '1-4'),   ('magic', 5, (_item, ))),
+        'o': (None,                     None,                      None,                      None,                      None,                      None,                  None,                     ('magic', 50, (entry_d4_scrolls, ))),
+        'u': (('cp', 10, '1-100'),      ('sp', 10, '1-100'),       None,                      ('gp', 5, '1-100'),        None,                      ('gems', 5, '1-4'),    ('jewelry', 5, '1-4'),    ('magic', 2, (entry_item, ))),
+        'v': (None,                     ('sp', 10, '1-100'),       ('ep', 10, '1-100'),       ('gp', 10, '1-100'),       ('pp', 5, '1-100'),        ('gems', 10, '1-4'),   ('jewelry', 10, '1-4'),   ('magic', 5, (entry_item, ))),
         }
     item = [  # Expert
-        (10, 'Armor', _armor),
-        (15, 'Misc', _misc),
-        (35, 'Potion', _potion),
-        (40, 'Ring', _ring),
-        (70, 'Scroll', _scroll),
-        (90, 'Sword', _sword),
-        (95, 'W/S/R', _wsr),
-        (100, 'Weapon', _weapon),
+        (10, 'Armor', entry_armor),
+        (15, 'Misc', entry_misc),
+        (35, 'Potion', entry_potion),
+        (40, 'Ring', entry_ring),
+        (70, 'Scroll', entry_scroll),
+        (90, 'Sword', entry_sword),
+        (95, 'W/S/R', entry_wsr),
+        (100, 'Weapon', entry_weapon),
         ]
-
-    def armor_type(self, x):
-        return random.choice(['Leather', 'Leather', 'Chain', 'Chain', 'Chain', 'Plate', 'Plate'])
 
     armor = [
         (15, '+1 Plate'),
@@ -1323,7 +1313,7 @@ class ExpertRules(Rules):
         (53, '-2 Cursed Armor'),
         (54, '+4 Adamantite Plate'),  # Instead of curse
         (56, 'AC9 Armor Cursed'),
-        (62, '-2  Cursed Shield'),
+        (62, '-2 Cursed Shield'),
         (65, 'Shield of Missile Attraction'),  # Instead of -2 shield
         (85, '+1 Shield'),
         (95, '+2 Shield'),
@@ -1331,7 +1321,7 @@ class ExpertRules(Rules):
         (100, 'Armor of Etherealness'),  # Added from ODD
         ]
     misc = [
-        (1, '<misc>'),
+        (1, '<misc>'),  # BUG: placeholder, rolls output a literal '<misc>'.
         # (3, 'Amulet against Scrying'),
         # (5, 'Bag of Devouring'),
         # (11, 'Bag of Holding'),
@@ -1340,9 +1330,9 @@ class ExpertRules(Rules):
         # (11, 'Boots of Traveling and Leaping'),
         # (11, 'Broom of Flying'),
         # (11, 'Crystal Ball'),
-        # (11, 'Crystal Ball w/ Clariaudience'),
+        # (11, 'Crystal Ball w/ Clairaudience'),
         # (11, 'Crystal Ball w/ ESP'),
-        # (11, 'Displacer Clock'),
+        # (11, 'Displacer Cloak'),
         # (11, 'Drums of Panic'),
         # (11, 'Efreeti Bottle'),
         # (11, 'Elven Cloak and Boots'),
@@ -1388,7 +1378,7 @@ class ExpertRules(Rules):
         (29, 'Djinn Summoning'),
         (39, 'Fire Resistance'),
         (50, 'Invisibility'),
-        (55, 'Protection +2'),  # Instead of 5' raidius
+        (55, 'Protection +2'),  # Instead of 5' radius
         (70, 'Protection +1'),
         (72, 'Regeneration'),
         (74, 'Spell Storing'),
@@ -1398,14 +1388,6 @@ class ExpertRules(Rules):
         (94, 'Weakness'),
         (98, '1-4 Wishes'),  # Replaced multiple 1-2, 1-3, 2-4 to this.
         (100, 'X-Ray Vision'),
-        ]
-    scroll_levels = [
-        (25, '1st'),
-        (50, '2nd'),
-        (70, '3rd'),
-        (85, '4th'),
-        (95, '5th'),
-        (100, '6th'),
         ]
     scroll = [
         (15, '1 Spell'),
@@ -1420,7 +1402,7 @@ class ExpertRules(Rules):
         (75, 'Protection: Undead'),
         (80, 'Map to magic item.'),
         (82, 'Map to 1d6×10 gems and 2d10 pieces of jewellery.'),
-        (82, 'Map to 2 magic items.'),
+        (82, 'Map to 2 magic items.'),  # BUG: duplicate key 82, this row can never be rolled.
         (83, 'Map to 3 magic items (no swords).'),
         (84, 'Map to 3 magic items and 1 potion.'),
         (85, 'Map to 3 magic items, 1 scroll, 1 potion.'),
@@ -1433,7 +1415,7 @@ class ExpertRules(Rules):
         ]
     sword = [
         (2, '-1 Sword, Cursed'),
-        (4, '-2 Sword, Cursed Beserker'),  # Added Beserker
+        (4, '-2 Sword, Cursed Berserker'),  # Added Berserker
         (40, '+1 Sword'),
         # Replaced 4 +1 with these
         (42, '+1 Sword of Cold: +3 vs. Fire Creatures'),
@@ -1456,115 +1438,6 @@ class ExpertRules(Rules):
         (100, '+3 Sword'),
         ]
 
-    def sword_extras(self, sword):
-        if ',' not in sword and d100() <= 10:  # Only if not already funky, double to 2 in 20.
-            sword = f'{sword} {self.special_sword()}'
-        elif d100() <= 30:
-            sword = f'{sword}: {self.sentient_sword()}'
-        return sword
-
-    def charges(self, result):
-        # BX, changed charge dice d12 instead d10.
-        charges = ''
-        if 'wand' in result.lower():
-            charges = f' ({d12() + d12()} charges)'
-        elif 'staff' in result.lower():
-            charges = '' if 'Healing' in result or 'Snek' in result else f' ({d12() + d12() + d12()} charges)'
-        elif 'rod' in result.lower():
-            charges = f' ({d12()} charges)'
-        return charges
-        # TODO: resolve dead code, Greyhawk charges, unreachable (it was after the return in _wsr).
-        div = 1
-        if '*' in result:
-            return ''
-        if 'wand' in result.lower():
-            charges = f' [6th, {random.randint(80 // div, 200 // div)} charges]'
-        elif 'staff' in result.lower():
-            charges = f' [8th, {random.randint(40 // div, 100 // div)} charges]'
-        elif 'rod' in result.lower():
-            charges = f' [{random.randint(15 // div, 25 // div)} charges]'
-        return charges
-
-    def special_sword(self):
-        # 1/20 are special purpose (also sentient)
-        purpose = table([
-            (1, 'Arcane casters'),
-            (2, 'Divine casters'),
-            (3, 'Warriors'),
-            (4, '<roll for monster>'),
-            (5, 'Lawfuls'),
-            (6, 'Chaotics'),
-            ])
-        alignment = purpose[:-1] if purpose in ('Lawfuls', 'Chaotics') else None
-        return f'of Slaying {purpose}: {self.sentient_sword(alignment=alignment, ego=12)}'
-
-    def sentient_sword(self, alignment=None, ego=None):
-        extraordinary_powers = [
-            (10, 'Clairaudience'),
-            (20, 'Clairvoyance'),
-            (30, 'ESP (3/day)'),
-            (35, '3x damage for d6 rnds (1/day)'),  # Can be duplicated.
-            (40, 'Flying (3/day)'),
-            (45, 'Heal as spell (1/day)'),  # Can be duplicated.
-            (54, 'Illusion (3/day)'),
-            (59, 'Levitation'),
-            (69, 'Telekinesis (3/day)'),
-            (79, 'Telepatthy (3/day)'),
-            (88, 'Teleportation (3/day)'),
-            (97, 'X-Ray Vision (3/day)'),
-            (99, 'roll twice'),
-            (100, 'roll thrice'),
-            ]
-        sensory_powers = [
-            (5, 'Know Depth & Direction'),  # Replaced slopes with this and swapped with detect good/evil.
-            (10, 'Detect Slopes & Shifting/Teleports'),  # Combined, added teleport and swapped with detect good/evil.
-            (15, 'Locate Gems 60 ft. (3/day)'),
-            (25, 'Sense Magic 20 ft. (3/day)'),
-            (35, 'Locate Named Metal 60 ft. (3/day)'),
-            (50, 'Sense Chaos 20 ft.'),  # Split and trippled rarity.
-            (65, 'Sense Law 20 ft.'),  # Split and trippled rarity.
-            (75, 'See Traps (3/day)'),
-            (85, 'See Secret Doors (3/day)'),
-            (95, 'See Invisible'),
-            (99, 'roll for extraordinary'),
-            (100, 'roll twice'),
-            ]
-        # 30% and all special purpose re sentient.
-        if alignment is None:
-            alignment = table([(13, 'Lawful'), (18, 'Neutral'), (20, 'Chaotic')])
-        if ego is None:
-            ego = d12()
-        intelligent = d6() + 6
-        powers = []
-        if intelligent >= 10:
-            powers.append('speech')
-        elif intelligent >= 7:
-            powers.append('empathy')
-        if intelligent >= 11:
-            powers.append('reads')
-        extra = min(1, (intelligent - 11))
-        power = min(3, (intelligent - 6))
-        while power > 0:
-            result = table(sensory_powers)
-            if result == 'roll twice':
-                power += 1
-            elif result == 'roll for extraordinary':
-                extra += 1
-                power -= 1
-            elif result not in powers:
-                powers.append(result)
-                power -= 1
-        while extra > 0:
-            result = table(extraordinary_powers)
-            if result == 'roll twice':
-                extra += 1
-            elif result == 'roll thrice':
-                extra += 2
-            elif result not in powers or '3x damge' in result or 'Heas as spell' in result:
-                powers.append(result)
-                extra -= 1
-        return f'{alignment} {ego} Ego, {intelligent} Int, {", ".join(powers)}'
-
     wsr = [
         # Rods d10 charges
         (8, 'Rod of Cancellation (any)'),
@@ -1581,8 +1454,8 @@ class ExpertRules(Rules):
         (45, 'Wand of Enemy Detection'),
         (50, 'Wand of Fear'),
         (55, 'Wand of Fire'),  # Changed from Fire Balls
-        (60, 'Wand of Illiusion'),
-        (65, 'Wand of Lighting'),  # Changed from Lighting Bolts
+        (60, 'Wand of Illusion'),
+        (65, 'Wand of Lightning'),  # Changed from Lightning Bolts
         (70, 'Wand of Magic Detection'),
         (75, 'Wand of Metal Detection (any)'),  # Allow any
         (80, 'Wand of Negation'),
@@ -1616,21 +1489,133 @@ class ExpertRules(Rules):
         (99, 'War Hammer +2'),
         (100, 'Dwarven Hammer +3'),
         ]
+    # Slaying swords, d6: purpose; 1/20 swords are special purpose (also sentient).
+    _sword_slaying = [
+        (1, 'Arcane casters'),
+        (2, 'Divine casters'),
+        (3, 'Warriors'),
+        (4, '<roll for monster>'),
+        (5, 'Lawfuls'),
+        (6, 'Chaotics'),
+        ]
+    _sword_extraordinary = [
+        (10, 'Clairaudience'),
+        (20, 'Clairvoyance'),
+        (30, 'ESP (3/day)'),
+        (35, '3x damage for d6 rnds (1/day)'),  # Can be duplicated.
+        (40, 'Flying (3/day)'),
+        (45, 'Heal as spell (1/day)'),  # Can be duplicated.
+        (54, 'Illusion (3/day)'),
+        (59, 'Levitation'),
+        (69, 'Telekinesis (3/day)'),
+        (79, 'Telepathy (3/day)'),
+        (88, 'Teleportation (3/day)'),
+        (97, 'X-Ray Vision (3/day)'),
+        (99, 'roll twice'),
+        (100, 'roll thrice'),
+        ]
+    _sword_sensory = [
+        (5, 'Know Depth & Direction'),  # Replaced slopes with this and swapped with detect good/evil.
+        (10, 'Detect Slopes & Shifting/Teleports'),  # Combined, added teleport and swapped with detect good/evil.
+        (15, 'Locate Gems 60 ft. (3/day)'),
+        (25, 'Sense Magic 20 ft. (3/day)'),
+        (35, 'Locate Named Metal 60 ft. (3/day)'),
+        (50, 'Sense Chaos 20 ft.'),  # Split and tripled rarity.
+        (65, 'Sense Law 20 ft.'),  # Split and tripled rarity.
+        (75, 'See Traps (3/day)'),
+        (85, 'See Secret Doors (3/day)'),
+        (95, 'See Invisible'),
+        (99, 'roll for extraordinary'),
+        (100, 'roll twice'),
+        ]
+
+    def armor_type(self, match):
+        return random.choice(['Leather', 'Leather', 'Chain', 'Chain', 'Chain', 'Plate', 'Plate'])
+
+    def sword_extras(self, sword):
+        if ',' not in sword and d100() <= 10:  # Only if not already funky, double to 2 in 20.
+            sword = f'{sword} {self._special_sword()}'
+        elif d100() <= 30:
+            sword = f'{sword}: {self._sentient_sword()}'
+        return sword
+
+    def _special_sword(self):
+        purpose = table(self._sword_slaying)
+        alignment = purpose[:-1] if purpose in ('Lawfuls', 'Chaotics') else None
+        return f'of Slaying {purpose}: {self._sentient_sword(alignment=alignment, ego=12)}'
+
+    def _sentient_sword(self, alignment=None, ego=None):
+        # 30% and all special purpose re sentient.
+        if alignment is None:
+            alignment = table([(13, 'Lawful'), (18, 'Neutral'), (20, 'Chaotic')])
+        if ego is None:
+            ego = d12()
+        intelligence = d6() + 6
+        powers = []
+        if intelligence >= 10:
+            powers.append('speech')
+        elif intelligence >= 7:
+            powers.append('empathy')
+        if intelligence >= 11:
+            powers.append('reads')
+        extraordinary_rolls = min(1, (intelligence - 11))
+        sensory_rolls = min(3, (intelligence - 6))
+        while sensory_rolls > 0:
+            result = table(self._sword_sensory)
+            if result == 'roll twice':
+                sensory_rolls += 1
+            elif result == 'roll for extraordinary':
+                extraordinary_rolls += 1
+                sensory_rolls -= 1
+            elif result not in powers:
+                powers.append(result)
+                sensory_rolls -= 1
+        while extraordinary_rolls > 0:
+            result = table(self._sword_extraordinary)
+            if result == 'roll twice':
+                extraordinary_rolls += 1
+            elif result == 'roll thrice':
+                extraordinary_rolls += 2
+            # BUG: '3x damge' and 'Heas as spell' never match, so duplicates ('Can be duplicated') are never allowed.
+            elif result not in powers or '3x damge' in result or 'Heas as spell' in result:
+                powers.append(result)
+                extraordinary_rolls -= 1
+        return f'{alignment} {ego} Ego, {intelligence} Int, {", ".join(powers)}'
+
+    def charges(self, item):
+        # BX, changed charge dice d12 instead d10.
+        lowered = item.lower()
+        if 'wand' in lowered:
+            return f' [{d12() + d12()} charges]'
+        if 'staff' in lowered:
+            return '' if 'Healing' in item or 'Snek' in item else f' [{d12() + d12() + d12()} charges]'
+        if 'rod' in lowered:
+            return f' [{d12()} charges]'
+        return ''
+
+    def _spell_level(self, caster):
+        return [
+            (25, '1st'),
+            (50, '2nd'),
+            (70, '3rd'),
+            (85, '4th'),
+            (95, '5th'),
+            (100, '6th'),
+            ]
 
 
 class BasicRules(ExpertRules):
+    """D&D Basic Treasure and Magic items (levels 1-3)."""
     name = 'basic'
-    jewelries = Jewelries('expert')
-    gems = Gems('expert')
-    item = [  # Expert
-        (10, 'Armor', _armor),
-        (15, 'Misc', _misc),
-        (40, 'Potion', _potion),
-        (45, 'Ring', _ring),
-        (65, 'Scroll', _scroll),
-        (85, 'Sword', _sword),
-        (90, 'W/S/R', _wsr),
-        (100, 'Weapon', _weapon),
+    item = [  # Basic
+        (10, 'Armor', entry_armor),
+        (15, 'Misc', entry_misc),
+        (40, 'Potion', entry_potion),
+        (45, 'Ring', entry_ring),
+        (65, 'Scroll', entry_scroll),
+        (85, 'Sword', entry_sword),
+        (90, 'W/S/R', entry_wsr),
+        (100, 'Weapon', entry_weapon),
         ]
     armor = [
         (1, 'Armor +1'),
@@ -1668,11 +1653,6 @@ class BasicRules(ExpertRules):
         (5, 'Water Walking'),
         (6, 'Weakness'),
         ]
-    scroll_levels = [
-        (50, '1st'),
-        (83, '2nd'),
-        (100, '3rd'),
-        ]
     scroll = [
         (1, '1 Spell'),
         (2, '2 Spells'),
@@ -1709,18 +1689,25 @@ class BasicRules(ExpertRules):
         (5, 'Spear +1'),  # Added Spear
         ]
 
+    def _spell_level(self, caster):
+        return [
+            (50, '1st'),
+            (83, '2nd'),
+            (100, '3rd'),
+            ]
+
 
 class AliasedGroup(click.Group):
+    """Also accepts 'gems' for the 'gem' command."""
+
     def get_command(self, ctx, cmd_name):
-        rv = click.Group.get_command(self, ctx, cmd_name)
-        if rv is not None:
-            return rv
-        if cmd_name == 'gems':
-            return click.Group.get_command(self, ctx, 'gem')
-        return None
+        command = super().get_command(ctx, cmd_name)
+        if command is None and cmd_name == 'gems':
+            return super().get_command(ctx, 'gem')
+        return command
 
 
-@click.command(cls=AliasedGroup)
+@click.group(cls=AliasedGroup)
 @click.option('-b', '--basic', default=False, is_flag=True, help='Use B/X level 1-3 tables.')
 @click.option('-x', '--expert', default=False, is_flag=True, help='Use B/X tables (default).')
 @click.option('-o', '--odd', default=False, is_flag=True, help='Use ODD tables.')
@@ -1730,46 +1717,45 @@ class AliasedGroup(click.Group):
 @click.pass_context
 def cli(ctx, basic, expert, odd, greyhawk, alt_greyhawk, roll):
     """Roll up treasure hoards and items. B/X Expert by default."""
-    chosen = [rules for flag, rules in (
+    chosen = [rules_class for flag, rules_class in (
         (basic, BasicRules), (expert, ExpertRules), (odd, OddRules), (greyhawk, GreyhawkRules), (alt_greyhawk, AltGreyhawkRules),
         ) if flag]
     if len(chosen) > 1:
         raise click.UsageError('Choose only one of -b, -x, -o, -g, -a.')
-    treasure = (chosen or [ExpertRules])[0]()
-    click.echo(f'Using {treasure.name} rules.')
-    ctx.obj['treasure'] = treasure
+    rules = (chosen[0] if chosen else ExpertRules)()
+    click.echo(f'Using {rules.name} rules.')
+    ctx.obj['rules'] = rules
     ctx.obj['roll'] = roll
 
 
-for name in ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'wsr', 'misc', 'map'):
-    def _inner(name=name):
-        def func(ctx, count):
-            click.echo('\n'.join(f'{c} x {x}' for c, v, x in reduce_groups((1, 0, globals()[f'_{name}'](ctx.obj['treasure'], ctx.obj['roll'])) for x in range(count))))
-        func.__name__ = name
-        func.__doc__ = 'Roll up ' + {
-                'wsr': 'wand, staff, rod.',
-                'item': 'magic item.',
-                'misc': 'miscellaneous magic items.',
-                'map': 'treasure and magic maps.',
-                'scroll': 'magic scrolls.',
-                'potion': 'potions.'}.get(name, f'magic {name}s.')
-        return func
-    subcommand = _inner()
-    subcommand = click.pass_context(subcommand)
-    subcommand = click.argument('count', default=1, type=int)(subcommand)
-    cli.command()(subcommand)
-
-
-@cli.command()
-@click.argument('count', default=1)
-@click.argument('group', default=1)
-@click.pass_context
-def jewelry(ctx, count, group):
-    """Roll up Jewelries."""
-    if count > 1:
-        click.echo(f'{count} jewelries in groups of {group}:')
-    t = ctx.obj['treasure']
-    click.echo('\n'.join(t.jewelries.lines(count, group)))
+def _add_roll_item_cli_commands():
+    def _add(name, roll_function, description):
+        @cli.command(name, help=f'Roll up {description}')
+        @click.argument('count', default=1, type=int)
+        @click.pass_context
+        def command(ctx, count):
+            rules = ctx.obj['rules']
+            try:
+                rolled = reduce_groups((1, 0, roll_function(rules, ctx.obj['roll'])) for _ in range(count))
+                click.echo('\n'.join(f'{quantity} x {thing}' for quantity, _, thing in rolled))
+            except RollOutOfRange as error:
+                raise click.UsageError(str(error)) from error
+    # CLI subcommand name: (function to roll one, what the help says it rolls up).
+    ROLL_COMMANDS = {
+        'item': (entry_item, 'magic item.'),
+        'sword': (entry_sword, 'magic swords.'),
+        'armor': (entry_armor, 'magic armors.'),
+        'weapon': (entry_weapon, 'magic weapons.'),
+        'potion': (entry_potion, 'potions.'),
+        'scroll': (entry_scroll, 'magic scrolls.'),
+        'ring': (entry_ring, 'magic rings.'),
+        'wsr': (entry_wsr, 'wand, staff, rod.'),
+        'misc': (entry_misc, 'miscellaneous magic items.'),
+        'map': (entry_odd_map, 'treasure and magic maps.'),
+        }
+    for name, (func, description) in ROLL_COMMANDS.items():
+        _add(name, func, description)
+_add_roll_item_cli_commands()
 
 
 @cli.command()
@@ -1780,8 +1766,18 @@ def gem(ctx, count, group):
     """Roll up gems."""
     if count > 1:
         click.echo(f'{count} gems in groups of {group}:')
-    t = ctx.obj['treasure']
-    click.echo('\n'.join(t.gems.lines(count, group)))
+    click.echo('\n'.join(ctx.obj['rules'].gems.lines(count, group)))
+
+
+@cli.command()
+@click.argument('count', default=1)
+@click.argument('group', default=1)
+@click.pass_context
+def jewelry(ctx, count, group):
+    """Roll up Jewelries."""
+    if count > 1:
+        click.echo(f'{count} jewelries in groups of {group}:')
+    click.echo('\n'.join(ctx.obj['rules'].jewelries.lines(count, group)))
 
 
 @cli.command('type')
@@ -1790,13 +1786,14 @@ def gem(ctx, count, group):
 @click.pass_context
 def treasure_type(ctx, code, something):
     """Roll up treasure type."""
-    t = ctx.obj['treasure']
-    if code.lower() not in t.TREASURE_TYPES:
-        raise click.BadParameter(f'{code} is not one of {", ".join(sorted(t.TREASURE_TYPES))} for {t.name} rules.')
-    stuff = list(t.type(code.lower()))
-    while something and not stuff:
-        stuff = list(t.type(code.lower()))
-    click.echo('\n'.join(stuff) or 'Nothing')
+    rules = ctx.obj['rules']
+    type_code = code.lower()
+    if type_code not in rules.TREASURE_TYPES:
+        raise click.BadParameter(f'{code} is not one of {", ".join(sorted(rules.TREASURE_TYPES))} for {rules.name} rules.')
+    results = list(rules.treasure_type(type_code))
+    while something and not results:
+        results = list(rules.treasure_type(type_code))
+    click.echo('\n'.join(results) or 'Nothing')
 
 
 if __name__ == '__main__':

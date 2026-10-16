@@ -16,7 +16,7 @@ RULESETS = [
     treasure.AltGreyhawkRules,
 ]
 ODD_RULESETS = [rules for rules in RULESETS if issubclass(rules, treasure.OddRules)]
-FUNCS = ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'wsr', 'misc', 'map')
+FUNCS = ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'wsr', 'misc', 'odd_map')
 D100_TABLES = ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'wsr', 'misc')
 
 
@@ -49,7 +49,8 @@ def test_tables_ascending(rules):
 def test_odd_tables_are_d100(rules):
     for name, chart in tables(rules):
         assert keys(chart)[-1] == 100, f'{rules.name} {name}'
-    assert keys(rules.scroll_levels) == [1, 2, 3, 4, 5, 6]
+    assert keys(rules()._spell_level('Magic-user')) == [1, 2, 3, 4, 5, 6]
+    assert keys(rules()._spell_level('Cleric')) == [1, 2, 3, 4, 5]
     assert keys(rules.scroll_trap)[-1] == 8
 
 
@@ -58,7 +59,7 @@ def test_odd_tables_are_d100(rules):
 def test_functions_roll(rules, func):
     ruleset = rules()
     for _ in range(300):
-        result = getattr(treasure, f'_{func}')(ruleset)
+        result = getattr(treasure, f'entry_{func}')(ruleset)
         assert result
         if rules in ODD_RULESETS:
             assert not re.search(r'[<>{}]', result), result
@@ -69,7 +70,7 @@ def test_treasure_types_roll(rules):
     ruleset = rules()
     for code in ruleset.TREASURE_TYPES:
         for _ in range(100):
-            list(ruleset.type(code))
+            list(ruleset.treasure_type(code))
 
 
 @pytest.mark.parametrize('rules', ODD_RULESETS)
@@ -82,7 +83,7 @@ def test_odd_every_item_reachable(rules):
         for row in chart:
             if isinstance(row[1], list):
                 continue
-            result = ruleset.detail(treasure.table(chart, row[0]))
+            result = ruleset.random_details(treasure.table(chart, row[0]))
             assert result
             assert '<' not in result, f'{rules.name} {name} {row}'
 
@@ -93,7 +94,7 @@ def test_odd_type_codes():
 
 
 def test_potion_s_type_alt():
-    assert list(treasure.AltGreyhawkRules().type('s', 1))
+    assert list(treasure.AltGreyhawkRules().treasure_type('s', 1))
 
 
 def test_replace_quantity_thousands():
@@ -137,3 +138,45 @@ def test_cli_odd_type_s_is_unknown_but_alt_works():
     runner = CliRunner()
     assert runner.invoke(treasure.cli, ['-o', 'type', 's'], obj={}).exit_code == 2
     assert runner.invoke(treasure.cli, ['-a', 'type', '-s', 's'], obj={}).exit_code == 0
+
+
+def test_table_roll_above_maximum():
+    with pytest.raises(treasure.RollOutOfRange):
+        treasure.table([(1, 'a'), (2, 'b')], 3)
+
+
+def test_cli_roll_above_maximum_is_usage_error():
+    result = CliRunner().invoke(treasure.cli, ['-b', '-r', '50', 'potion'], obj={})
+    assert result.exit_code == 2
+    assert 'higher than the table maximum' in result.output
+
+
+@pytest.mark.parametrize(
+    ('item', 'expected'),
+    [
+        ('Wand of Fear (M)', ' [100 charges]'),
+        ('Staff of Power (M)', ' [200 charges]'),
+        ('Staff of Healing (C)', ''),
+        ('Wand of Metal Detection (M)', ''),
+        ('Rod of Cancellation (All)', ' [single use]'),
+        ('Rod of Rulership (All)', ' [10 charges]'),
+        ('Rod of Absorption (M)', ' [100 spell levels]'),
+        ('Rod of Lordly Might (F)', ' [25 charges]'),
+        ('Ring of Protection', ''),
+    ],
+)
+def test_charges_greyhawk(item, expected):
+    assert treasure.GreyhawkRules().charges(item) == expected
+
+
+def test_charges_alt_greyhawk_ranges():
+    rules = treasure.AltGreyhawkRules()
+    assert rules.charges('Rod of Cancellation (All)') == ' [single use]'
+    assert rules.charges('Staff of Healing (C)') == ''
+    for _ in range(200):
+        wand = int(re.search(r'(\d+) charges', rules.charges('Wand of Fear (M)')).group(1))
+        staff = int(re.search(r'(\d+) charges', rules.charges('Staff of Power (M)')).group(1))
+        rod = int(re.search(r'(\d+) charges', rules.charges('Rod of Lordly Might (F)')).group(1))
+        assert 80 <= wand <= 200
+        assert 40 <= staff <= 100
+        assert 15 <= rod <= 25

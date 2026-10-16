@@ -30,11 +30,12 @@ addopts = ["-ra", "--cov"]
 [tool.coverage.run]
 branch = true
 source = ["pcbackground", "rpglib/rpg"]
+source_dirs = ["tests"]
 data_file = "$HOME/.cache/coverage/rpg/.coverage"  # keep churn out of Dropbox
 
 [tool.coverage.report]
 show_missing = true
-skip_covered = true
+skip_covered = false
 exclude_also = ["if __name__ == .__main__.:"]
 
 [tool.ruff]
