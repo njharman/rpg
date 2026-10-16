@@ -254,8 +254,10 @@ class Treasures:
         return list(self._format(self.roll(count, group)))
 
     def _format(self, things):
-        for count, value, thing in sorted(things, key=lambda row: row[1] or 99999):
-            yield f'{count:2} x {value or "":4}{"gp" if value else "  "} {thing}'
+        things = sorted(things, key=lambda row: row[1] or 99999)
+        width = max((len(f'{value:,}') for _, value, _ in things if value), default=4)
+        for count, value, thing in things:
+            yield f'{count:2} x {f"{value:,}" if value else "":>{width}}{"gp" if value else "  "} {thing}'
 
 
 class Gems(Treasures):
@@ -476,7 +478,7 @@ class Rules:
                 yield roll_function(self)
         else:
             count, text = replace_quantity(amount)
-            yield f'{text} {kind}'
+            yield f'{text} {kind}' if kind in ('gems', 'jewelry') else f'{text}{kind}'
             if kind == 'gems':
                 yield from self.gems.lines(count, 10)
             if kind == 'jewelry':
