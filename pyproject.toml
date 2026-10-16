@@ -18,14 +18,23 @@ mungetext = { git = "https://github.com/njharman/mungetext" }
 rpglib = { path = "rpglib", editable = true }
 
 [dependency-groups]
-dev = [
-  "pre-commit>=4.6.2",
-  "pytest>=8",
-  "ruff>=0.16.10",
-]
+dev = ["pre-commit>=4.6.2", "pytest>=9", "pytest-cov>=7.1.0", "ruff>=0.17"]
 
-[tool.pytest.ini_options]
-cache_dir = "$HOME/.cache/pytest/rpg"
+[tool.pytest]
+testpaths = ["pcbackground", "rpglib"]
+cache_dir = "$HOME/.cache/pytest/rpg"  # keep churn out of Dropbox
+strict = true
+addopts = ["-ra", "--cov"]
+
+[tool.coverage.run]
+branch = true
+source = ["pcbackground", "rpglib/rpg"]
+data_file = "$HOME/.cache/coverage/rpg/.coverage"  # keep churn out of Dropbox
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_also = ["if __name__ == .__main__.:"]
 
 [tool.ruff]
 line-length = 120
@@ -34,7 +43,93 @@ extend-include = ["d"]  # python file without extension, a one-letter command li
 [tool.ruff.format]
 quote-style = "single"
 
+# TODO: fix commented out tables / code
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [
+  "F401", # re-exports
+]
+"rpglib/rpg/parse.py" = [
+  "ERA001", # commented-out tables / code
+  "PLW2901", # `for` loop variable `para` deliberately rebound while parsing
+]
+"**/test_*.py" = [
+  "S101", # assert is how pytest works
+  "S108", # temp paths in tests
+  "SLF001", # tests may poke private members
+]
+"calendar.py" = [
+  "ERA001", # commented-out tables / code
+]
+"dmg_dungeon_generator.py" = [
+  "ERA001", # commented-out tables / code
+]
+"experiments/ac_save.py" = [
+  "ERA001", # commented-out tables / code
+]
+"experiments/berserk.py" = [
+  "ERA001", # commented-out tables / code
+]
+"experiments/d20_vs_d24_vs_d30.py" = [
+  "ERA001", # commented-out tables / code
+  "SLF001", # experiment reads die.Stats internal bucket
+]
+"experiments/hmtest.py" = [
+  "ERA001", # commented-out tables / code
+]
+"experiments/sheetless.py" = [
+  "ERA001", # commented-out tables / code
+]
+"grimoire/ll_spells.py" = [
+  "ERA001", # commented-out tables / code
+]
+"grimoire/spell_data.py" = [
+  "ERA001", # commented-out tables / code
+]
+"menagerie/known.py" = [
+  "ERA001", # commented-out tables / code
+]
+"menagerie/sw_monsters.py" = [
+  "ERA001", # commented-out tables / code
+]
+"methodI.py" = [
+  "ERA001", # commented-out tables / code
+]
+"namegen.py" = [
+  "ERA001", # commented-out tables / code
+]
+"pcbackground/background.py" = [
+  "ERA001", # commented-out tables / code
+]
+"rmu_chargen.py" = [
+  "ERA001", # commented-out tables / code
+]
+"rmweather.py" = [
+  "ERA001", # commented-out tables / code
+  "SLF001", # Day reads the previous Day's private hours
+]
+"treasure.py" = [
+  "ERA001", # commented-out tables / code
+  "RUF001", # `×` multiplication sign is intended in treasure text
+]
+
 [tool.ruff.lint]
+ignore = [
+  "A005", # module `calendar` shadows stdlib; it's a script, never imported as a lib
+  "C408", # dict()/list() calls are fine
+  "COM812", # conflicts with the formatter
+  "COM819", # trailing commas are fine
+  "E501", # line length is the formatter's job
+  "E731", # lambda assignment is fine
+  "F405", # star imports of data tables are intended
+  "PLW0108", # lambda wrappers kept for readability
+  "RET503", # implicit return None is fine
+  "RUF012", # fix wants typing.ClassVar annotation; no type hints
+  "S311", # random used for games/sim, not crypto
+  "SIM108", # ternaries allowed, not required
+  "SIM300", # yoda conditions are fine
+  "T201", # print is the output of these CLI scripts
+  "TRY003", # long messages at raise site are fine
+]
 select = [
   "A", # flake8-builtins
   "ASYNC", # flake8-async
@@ -92,90 +187,4 @@ select = [
   "UP", # pyupgrade: drop syntax obsolete for target-version
   "W", # pycodestyle warnings
   "YTT", # sys.version misuse
-]
-ignore = [
-  "A005", # module `calendar` shadows stdlib; it's a script, never imported as a lib
-  "C408", # dict()/list() calls are fine
-  "COM812", # conflicts with the formatter
-  "COM819", # trailing commas are fine
-  "E501", # line length is the formatter's job
-  "E731", # lambda assignment is fine
-  "F405", # star imports of data tables are intended
-  "PLW0108", # lambda wrappers kept for readability
-  "RET503", # implicit return None is fine
-  "RUF012", # fix wants typing.ClassVar annotation; no type hints
-  "S311", # random used for games/sim, not crypto
-  "SIM108", # ternaries allowed, not required
-  "SIM300", # yoda conditions are fine
-  "T201", # print is the output of these CLI scripts
-  "TRY003", # long messages at raise site are fine
-]
-
-[tool.ruff.lint.per-file-ignores]
-"__init__.py" = [
-  "F401", # re-exports
-]
-"rpglib/rpg/parse.py" = [
-  "ERA001", # commented-out tables / code
-  "PLW2901", # `for` loop variable `para` deliberately rebound while parsing
-]
-"**/test_*.py" = [
-  "S101", # assert is how pytest works
-  "S108", # temp paths in tests
-  "SLF001", # tests may poke private members
-]
-# TODO: fix commented out tables / code
-"calendar.py" = [
-  "ERA001", # commented-out tables / code
-]
-"dmg_dungeon_generator.py" = [
-  "ERA001", # commented-out tables / code
-]
-"experiments/ac_save.py" = [
-  "ERA001", # commented-out tables / code
-]
-"experiments/berserk.py" = [
-  "ERA001", # commented-out tables / code
-]
-"experiments/d20_vs_d24_vs_d30.py" = [
-  "ERA001", # commented-out tables / code
-  "SLF001", # experiment reads die.Stats internal bucket
-]
-"experiments/hmtest.py" = [
-  "ERA001", # commented-out tables / code
-]
-"experiments/sheetless.py" = [
-  "ERA001", # commented-out tables / code
-]
-"grimoire/ll_spells.py" = [
-  "ERA001", # commented-out tables / code
-]
-"grimoire/spell_data.py" = [
-  "ERA001", # commented-out tables / code
-]
-"menagerie/known.py" = [
-  "ERA001", # commented-out tables / code
-]
-"menagerie/sw_monsters.py" = [
-  "ERA001", # commented-out tables / code
-]
-"methodI.py" = [
-  "ERA001", # commented-out tables / code
-]
-"namegen.py" = [
-  "ERA001", # commented-out tables / code
-]
-"pcbackground/background.py" = [
-  "ERA001", # commented-out tables / code
-]
-"rmu_chargen.py" = [
-  "ERA001", # commented-out tables / code
-]
-"rmweather.py" = [
-  "ERA001", # commented-out tables / code
-  "SLF001", # Day reads the previous Day's private hours
-]
-"treasure.py" = [
-  "ERA001", # commented-out tables / code
-  "RUF001", # `×` multiplication sign is intended in treasure text
 ]
