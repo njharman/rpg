@@ -110,7 +110,7 @@ exclude = [
 "menagerie/known.py" = [
   "ERA001", # commented-out tables / code
 ]
-"menagerie/sw_monsters.py" = [
+"menagerie/sw_menagerie.py" = [
   "ERA001", # commented-out tables / code
 ]
 "methodI.py" = [

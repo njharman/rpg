@@ -1,0 +1,14 @@
+#!/bin/bash
+# Build the Menagerie PDFs (handbook and letter) into build/.  See sw_menagerie.py.
+set -euo pipefail
+cd "$(dirname "$0")"
+
+OUT=build
+RST="$OUT/menagerie.rst"
+
+SOURCES="data/swc.txt data/tohc.txt data/mon.txt data/mc.txt data/bm.txt data/dw.txt data/vv.txt data/ll.txt"
+
+mkdir -p "$OUT"
+./sw_menagerie.py "$@" $SOURCES > "$RST"
+rst2pdf -e preprocess -s handbook.yaml --first-page-on-right -o "$OUT/G&G - Menagerie (handbook).pdf" "$RST"
+rst2pdf -e preprocess -s menagerie.yaml -o "$OUT/G&G - Menagerie (letter).pdf" "$RST"

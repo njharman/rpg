@@ -283,9 +283,9 @@ Members of the species that speak can also cast spells. Unlike other dragons,
 dwimmerdragons do not cast magic-user spells but rather those from the
 illusionist list.
 
-                                            Spells and Spell Levels Available
-Habitat    Probability Asleep    Probability of Speech    Breath Range, Shape, and Type    1    2    3
-Subterranean    20%    50%    50' long, 50' wide, cloud, sulfur mustard gas    4    3    3
+Habitat: subterranean. Probability asleep: 20%. Probability of speech: 50%. Breath:
+50' long, 50' wide cloud of sulfur mustard gas. Spells available (illusionist,
+if the dragon speaks): four 1st-level, three 2nd-level, and three 3rd-level.
 
 Dworg
 No. Enc.: 2d4 (2d10)

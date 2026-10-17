@@ -11,6 +11,15 @@ Supported Tomes:
  * Varlets and Vermin
  * Barrow Maze New Monsters
  * Dwimmermount New Monsters
+ * Labyrinth Lord conversions (data/ll.txt)
+
+Building PDFs:
+ ./build-pdfs writes build/menagerie.rst and two PDFs from it, one per style sheet.
+ Requires rst2pdf (its "preprocess" extension provides the ".. page::" directive).
+ * handbook.yaml: 6x9in, 12pt, headers/footers, embeds Liberation Sans/Serif
+   (needs the ttf-liberation package; rst2pdf finds the fonts via fontconfig).
+ * menagerie.yaml: Letter, 10pt, no headers/footers, blue links, built-in PDF
+   fonts (Times/Helvetica/Courier) so nothing needs to be installed.
 
 Tome of Horrors Complete is a trademark of Frog God Games.
 Swords & Wizardry, S&W, and Mythmere Games are trademarks of Matthew J. Finch.
@@ -30,7 +39,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import mungetext.rst
-from known import known
+from known import aliases, known
 from mungetext import (
     RE_EMPTYLINE,
     alpha_sort,
@@ -101,9 +110,22 @@ ODD_XP = {
         18:   6000,
         }
 
+SOURCES = {
+        'swc':  'Swords & Wizardry Complete Rules',
+        'tohc': 'Tome of Horrors Complete',
+        'mon':  'Monstrosities',
+        'mc':   'Monster Compendium: 0e',
+        'bm':   'Barrow Maze',
+        'dw':   'Dwimmermount',
+        'vv':   'Varlets and Vermin',
+        'll':   'Labyrinth Lord',
+        }
+
 re_attribute = re.compile(r'^[ \/A-Za-z]+:')    # Entry attribute.
 re_numbers = re.compile(r'(-?[\d,]+)')          # Positive/Negative numbers only.
-re_ac = re.compile(r'(-?\d+)\s*\[(\d+)\]')      # Format: descending [ascending]
+# Format: [label] descending [ascending] or descending/ascending.
+# Label is for entries with an AC per body part: "Goat 6 [13], Lion 5 [14]".
+re_ac = re.compile(r'(?:([A-Za-z][A-Za-z ]*?)\s+)?(-?\d+)\s*(?:\[(\d+)\]|/(\d+))')
 
 # Challenge Level / Experience formats
 #  can have commas in xp
@@ -114,9 +136,13 @@ re_clxp = re.compile(r'\s*(?:[HD\s]*(\d+)[HD\s]*\s)?\(?([AB\d]+)/([\d,]+)\)?,?;?
 
 # Match names with comma: "1st, 2nd (additional)"
 # So they can be reordered "2nd 1st (additional)"
+# MC stats are ';' separated, except where the source used ',' before a stat name.
+re_mc_split = re.compile(r';\s*|,\s*(?=(?:HD|AC|Atk|Move|Save|AL|CL/XP|Special)\b)')
+
 re_name = re.compile(r'([^(),]+),\s*([^()]+)\s*(\(.+\))?')
 
-re_ll_move = re.compile(r"([1-5]0)'")
+# One LL speed: "60' (20')" or "20'"; the encounter (parenthetical) rate wins.
+re_ll_move = re.compile(r"(\d+)'(?:\s*\((\d+)'\))?")
 
 save_chart = {
 #        'F': range(15, 0, -1),
@@ -141,10 +167,12 @@ def save_ll_to_sw(save, hd):
 
 
 def move_ll_to_sw(movement):
-    match = re_ll_move.search(movement)
-    if match:
-        return ('', '3', '6', '9', '12', '15', '18')[int(match.group(1)[0])]
-    return movement
+    def convert(match):
+        for rate in (match.group(2), match.group(1)):
+            if rate and int(rate) % 10 == 0 and int(rate):
+                return str(int(rate) * 3 // 10)
+        return match.group(0)
+    return re_ll_move.sub(convert, movement)
 
 
 class Monster:
@@ -158,6 +186,8 @@ class Monster:
         self.ac_raw = ''
         self.ac_asc = 0
         self.ac_dsc = 0
+        self.ac_parts = list()      # (label, ascending) when AC varies by body part.
+        self.hoard = ''
         self.save = ''
         self.attack = list()
         self.special = list()
@@ -185,6 +215,20 @@ class Monster:
         if self.hp:
             hp = f' ({self.hp} hp)'
         return f'{self.hd}{bonus}{hp}'
+
+    @property
+    def ac_text(self):
+        """Ascending AC, per part if it varies, raw text if not numeric."""
+        if len(self.ac_parts) > 1:
+            return ', '.join(f'{label} {asc}'.strip() for label, asc in self.ac_parts)
+        if self.ac_parts:
+            return self.ac_asc
+        return self.ac_raw
+
+    @property
+    def source_title(self):
+        """Full title of source document."""
+        return SOURCES.get(self.source, self.source)
 
     def odd_line(self):
         """OD&D One line statblock."""
@@ -231,7 +275,7 @@ class Monster:
             data['sv'] = ODD_SV[self.hd]
         else:
             data['sv'] = max(3, 18-self.hd)
-        if self.hd_bonus and isinstance(self.hd_bonus, int):
+        if self.hd_bonus and isinstance(self.hd_bonus, int) and isinstance(data['xp'], int):
             data['xp'] += 25 * self.hd_bonus
         bits.append(f'''{data['name']}: {data['hd']}hd {data['ac']}AC {data['sv']}+ {data['mv']}", {data['atk']},''')
         if data['special']:
@@ -265,13 +309,14 @@ class Monster:
             lines.extend([
                 f':Hit Dice: {self.hitdice}',
                 f":Attack: {', '.join(self.attack)}",
-                f':AC: {self.ac_asc}',
+                f':AC: {self.ac_text}',
                 f':Save: {self.save}',
                 f":Special: {', '.join(self.special)}",
                 f':Move: {self.move}',
                 f':Alignment: {self.alignment}',
                 f':CL/XP: {self.cl}/{self.xp}',
                 ])
+        lines.append(f':Source: {self.source_title}')
         if self.number:
             lines.append('')
             lines.append(f'Number encountered: {self.number}')
@@ -281,7 +326,6 @@ class Monster:
         else:
             print(self.name, file=sys.stderr)
         if legal and self.s15:
-            lines.append(f'\nSource: {self.source}')
             lines.append(f'\nCopyright: {self.s15}')
         return '\n'.join(lines)
 
@@ -325,6 +369,8 @@ class Monster:
         clone.ac_raw = self.ac_raw
         clone.ac_asc = self.ac_asc
         clone.ac_dsc = self.ac_dsc
+        clone.ac_parts = list(self.ac_parts)
+        clone.hoard = self.hoard
         clone.save = self.save
         clone.attack = list(self.attack)
         clone.special = list(self.special)
@@ -347,7 +393,7 @@ class Monster:
         :param lines: entry split into lines.
         """
         stop = len(lines)
-        name = lines[0].strip()
+        name = aliases.get(lines[0].strip(), lines[0].strip())
         # Change mc "foo demon" to "demon, foo"
         if name.lower().endswith(' demon prince'):
             name = 'Demon Prince, ' + name.replace(' Demon Prince', '')
@@ -377,15 +423,9 @@ class Monster:
                 elif key == 'Hit Dice':
                     parse_hd(entry, value)
                 elif key == 'Armor Class':
+                    value = value.replace('–', '-')  # noqa: RUF001 en-dash on purpose.
                     entry.ac_raw = value
-                    try:
-                        entry.ac_dsc = int(value)
-                        entry.ac_asc = 20 - (int(value) + 1)
-                    except ValueError:
-                        try:
-                            entry.ac_dsc, entry.ac_asc = map(int, re_ac.match(value).groups())
-                        except (AttributeError, ValueError):
-                            print(f'FAIL AC "{value}" {entry.name}', file=sys.stderr)
+                    parse_ac(entry, value)
                 elif key == 'Saving Throw' or key == 'Save':
                     entry.save = value
                 elif key == 'Attack' or key == 'Attacks':
@@ -395,16 +435,21 @@ class Monster:
                     entry.attack = [value, ]
                 elif key == 'Special':
                     start, raw = slurp_re(re_attribute, start, lines, ':')
-                    entry.special = [s.strip().rstrip('.').replace('magic resistance ', 'MR') for s in raw.split(',') if s.lower() != 'none']
+                    entry.special = [s.strip().rstrip('.').replace('magic resistance ', 'MR') for s in raw.split(',') if s.strip().rstrip('.').lower() != 'none']
                 elif key.startswith('Move'):
-                    entry.move = value
+                    # Secondary speeds (Fly, Swim) follow on indented lines.
+                    speeds = [value] if value else []
+                    while start + 1 < stop and lines[start + 1][:1].isspace():
+                        start += 1
+                        speeds.append(lines[start].strip())
+                    entry.move = ', '.join(speeds)
                 elif key == 'Alignment':
                     entry.alignment = value
                 elif key == 'Morale':
                     entry.morale = value
                 elif key == 'Hoard Class':
                     entry.hoard = value
-                elif key == 'Number Encountered' or key == 'No. Enc':
+                elif key in ('Number Encountered', 'No. Enc', 'No. Enc.'):
                     start, raw = slurp_re(re_attribute, start, lines, ':')
                     entry.number = raw
                 elif key == 'XP':
@@ -447,19 +492,19 @@ class Monster:
             saves = [b.replace('or ', '').strip() for b in entry.save.split(',')]
             for x, match in enumerate(re_clxp.finditer(challenge)):
                 hd, cl, xp = match.groups()
+                entry = entry.clone()
+                if hd:  # Multiple entries with different HD.
+                    entry.hd = int(hd)
+                    entry.name = f"{entry.name.split('(')[0].strip()} ({hd}HD)"
                 entry.cl = cl
                 entry.xp = int(xp.replace(',', ''))
                 # Some entries vary save by hit die.
                 with contextlib.suppress(IndexError):
                     entry.save = saves[x]
                 yield entry
-                if hd:  # Multiple entries with different HD.
-                    entry.hd = int(hd)
-                    entry.name = f"{entry.name.split('(')[0].strip()} ({hd}HD)"
-                    entry = entry.clone()
-        except:
+        except Exception:
             print(f'Line #{start} Mob: {entry.__dict__}\n', file=sys.stderr)
-            print('Some Lines:\n', ''.join(lines[start - 10:start + 5]))
+            print('Some Lines:\n', '\n'.join(lines[max(0, start - 10):start + 5]), file=sys.stderr)
             raise
 
 
@@ -468,6 +513,22 @@ def custom_break(line, accum):
         return '<author>' + line
     if line and len(line) < 40 and not ('Copyright Notice:' in line or 'Credit:' in line or line.endswith('.')):
         return 'MiniAdventure:' + line
+
+
+def parse_ac(entry, value):
+    """Parse armor class; numeric AC is the worst (easiest to hit) part."""
+    if re.fullmatch(r'-?\d+', value):
+        entry.ac_dsc = int(value)
+        entry.ac_asc = 20 - (int(value) + 1)
+        entry.ac_parts = [('', entry.ac_asc)]
+        return
+    parts = list()
+    for label, dsc, asc_bracket, asc_slash in re_ac.findall(value):
+        parts.append((label.strip(), int(dsc), int(asc_bracket or asc_slash)))
+    if not parts:  # Not numeric: "n/a", "Always hit", etc. Keep ac_raw.
+        return
+    entry.ac_parts = [(label, asc) for label, _, asc in parts]
+    _, entry.ac_dsc, entry.ac_asc = max(parts, key=lambda p: p[1])
 
 
 re_hp = re.compile(r'^(\d+)\s*hp$')
@@ -484,7 +545,7 @@ def parse_hd(entry, value):
         if match:
             hd, bonus, hp = match.groups()
             entry.hd = int(hd)
-            entry.hd_bonus = bonus
+            entry.hd_bonus = int(bonus) if bonus and bonus.isdigit() else bonus
             if hp:
                 entry.hp = int(hp)
         else:
@@ -512,12 +573,14 @@ def split_mc_entries(source, s15, lines):
         match = re.match(r'(^[^:]+):\s+(HD .*;.*)$', line)
         if match:
             name, rest = match.groups()
-            bits = [b.strip() for b in rest.split(';')]
+            bits = [b.strip() for b in re_mc_split.split(rest)]
+            clxp = None
             entry.append(name)
             entry.append(f'Source: {source}')
             entry.append(f'S15: {s15 % {"name": name}}')
             for bit in bits:
-                name, value = bit.split(' ', 1)
+                name, _, value = bit.partition(' ')
+                name = name.rstrip(':')
                 if name == 'HD':
                     entry.append(f'Hit Dice: {value}')
                 elif name == 'AC':
@@ -532,6 +595,8 @@ def split_mc_entries(source, s15, lines):
                     clxp = value
                 else:
                     entry.append(bit)
+            if clxp is None:
+                raise ValueError(f'No CL/XP [{line}]')
             # CL/XP must be last, used to detect end of attributes.
             entry.append(f'CL/XP: {clxp}')
             for para in description:
@@ -551,7 +616,7 @@ def monsterfy(entries):
 
 
 def remove_dupes(seq):
-    """Prefer in order swc, tohc, vv, others, mc."""
+    """Prefer in order bm, mon, swc, tohc, vv, mc, dw, ll."""
     grouped = defaultdict(list)
     for entry in seq:
         grouped[entry.name.lower()].append(entry)
@@ -623,7 +688,7 @@ def split_on_monster(source, s15, lines):
             if not first:
                 yield entry
             first = False
-            entry = [(name, )]
+            entry = [name]
             entry.append(f'Source: {source}')
             entry.append(f'S15: {s15 % {"name": name}}')
             if skip_delimiter:
@@ -686,7 +751,8 @@ if __name__ == '__main__':
         tuco(config.sources)
     else:
         menagerie = make_menagerie(config.sources)
-        print(f'Found {len(menagerie)} entries', file=sys.stderr)
+        names = ', '.join(Path(s).name for s in config.sources)
+        print(f'Found {len(menagerie)} entries in {names}', file=sys.stderr)
         if config.json:
             print('MOBS =', json.dumps([m.as_dict() for m in menagerie], sort_keys=True, indent=2))
         elif config.minify:
