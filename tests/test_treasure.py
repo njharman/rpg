@@ -13,12 +13,13 @@ RULESETS = [
     treasure.BasicRawRules,
     treasure.ExpertRules,
     treasure.ExpertRawRules,
+    treasure.AdvancedRawRules,
     treasure.OddRules,
     treasure.GreyhawkRawRules,
     treasure.GreyhawkRules,
 ]
 ODD_RULESETS = [rules for rules in RULESETS if issubclass(rules, treasure.OddRules)]
-BX_RULESETS = [rules for rules in RULESETS if issubclass(rules, treasure.ExpertRawRules)]
+OSE_RULESETS = [rules for rules in RULESETS if issubclass(rules, treasure.ExpertRawRules)]
 FUNCS = ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'wsr', 'misc', 'odd_map')
 D100_TABLES = ('item', 'sword', 'armor', 'weapon', 'potion', 'scroll', 'ring', 'wsr', 'misc')
 
@@ -148,10 +149,6 @@ def test_cli_type_s_only_tweaked_greyhawk():
     assert runner.invoke(treasure.cli, ['-g', 'type', '-s', 's'], obj={}).exit_code == 0
 
 
-def test_cli_alt_greyhawk_flag_removed():
-    assert CliRunner().invoke(treasure.cli, ['-a', 'potion'], obj={}).exit_code == 2
-
-
 def test_table_roll_above_maximum():
     with pytest.raises(treasure.RollOutOfRange):
         treasure.table([(1, 'a'), (2, 'b')], 3)
@@ -194,8 +191,8 @@ def test_charges_greyhawk_ranges():
         assert 15 <= rod <= 25
 
 
-@pytest.mark.parametrize('rules', BX_RULESETS)
-def test_bx_table_sizes(rules):
+@pytest.mark.parametrize('rules', OSE_RULESETS)
+def test_ose_table_sizes(rules):
     """Expert tables are d%, Basic magic tables are the book's die."""
     basic = issubclass(rules, (treasure.BasicRawRules, treasure.BasicRules))
     for name, chart in tables(rules):
@@ -207,27 +204,27 @@ def test_bx_table_sizes(rules):
         assert keys(treasure.BasicRawRules.weapon)[-1] == 4
 
 
-@pytest.mark.parametrize('rules', BX_RULESETS)
-def test_bx_type_codes(rules):
+@pytest.mark.parametrize('rules', OSE_RULESETS)
+def test_ose_type_codes(rules):
     assert set(rules.TREASURE_TYPES) == set('abcdefghijklmnopqrstuv')
     assert rules.TREASURE_TYPES['v'][2] == ('ep', 5, '1-100')
     assert list(rules().treasure_type('p'))
 
 
-def test_bx_raw_spell_levels():
+def test_ose_raw_spell_levels():
     rules = treasure.ExpertRawRules()
     assert treasure.table(rules._spell_level('Cleric'), 100) == '5th'
     assert treasure.table(rules._spell_level('Magic-user'), 100) == '6th'
 
 
-@pytest.mark.parametrize('rules', BX_RULESETS)
-def test_bx_charges(rules):
+@pytest.mark.parametrize('rules', OSE_RULESETS)
+def test_ose_charges(rules):
     ruleset = rules()
     assert ruleset.charges('Rod of Cancellation') == ' [single use]'
     assert ruleset.charges('Staff of Healing (D)') == ''
 
 
-def test_bx_raw_charges():
+def test_ose_raw_charges():
     rules = treasure.ExpertRawRules()
     assert rules.charges('Staff of Snakes') == ''
     for _ in range(200):
@@ -235,8 +232,8 @@ def test_bx_raw_charges():
         assert 3 <= int(re.search(r'(\d+) charges', rules.charges('Staff of Power')).group(1)) <= 30
 
 
-@pytest.mark.parametrize('rules', BX_RULESETS)
-def test_bx_special_purpose_sword(rules):
+@pytest.mark.parametrize('rules', OSE_RULESETS)
+def test_ose_special_purpose_sword(rules):
     ruleset = rules()
     for _ in range(300):
         sword = ruleset._sentient_sword(special=True)
@@ -288,3 +285,61 @@ def test_magic_gem_name_strips_description():
     names = {thing for _ in range(200) for _, value, thing in gems._roll(20, 10) if value == 0}
     assert names
     assert not any(' - ' in name for name in names)
+
+
+def test_advanced_cli():
+    runner = CliRunner()
+    for args in (['-a', 'item', '5'], ['-ra', 'item', '5'], ['--advanced-OSE', 'misc', '5'], ['-a', 'type', 'h']):
+        result = runner.invoke(treasure.cli, args, obj={})
+        assert result.exit_code == 0, result.output
+        assert 'Using Advanced rules as written.' in result.output
+    result = runner.invoke(treasure.cli, ['-a', '-b', 'item'], obj={})
+    assert result.exit_code != 0
+
+
+def test_advanced_rolls_have_no_placeholders():
+    rules = treasure.AdvancedRawRules()
+    for roll_function in (
+        treasure.entry_item,
+        treasure.entry_misc,
+        treasure.entry_sword,
+        treasure.entry_weapon,
+        treasure.entry_wsr,
+    ):
+        for _ in range(500):
+            result = roll_function(rules)
+            assert '<' not in result, result
+            assert '>' not in result, result
+
+
+def test_advanced_every_table_row_rolls():
+    rules = treasure.AdvancedRawRules()
+    for name in ('sword', 'weapon', 'wsr'):
+        for threshold, _ in getattr(rules, name):
+            assert treasure._roll_table(rules, name, threshold)
+    for _, chart in rules.misc:
+        for threshold, _ in chart:
+            assert treasure.entry_misc(rules, threshold)
+
+
+def test_advanced_charges():
+    rules = treasure.AdvancedRawRules()
+    assert rules.charges('Immovable Rod') == ''
+    assert rules.charges('Rod of Parrying') == ''
+    assert rules.charges('Rod of Absorption') == ' [50 charges]'
+    assert rules.charges('Rod of Cancellation') == ' [single use]'
+    assert rules.charges('Staff of the Healer').endswith(' charges]')
+
+
+def test_advanced_sword_type():
+    rules = treasure.AdvancedRawRules()
+    types = {rules.sword_extras('Sword +1').split(' +1')[0] for _ in range(200)}
+    assert types == {'Short Sword', 'Sword', 'Two-handed Sword'}
+    assert rules.sword_extras('Short Sword +2, Quickness').startswith('Short Sword +2, Quickness')
+
+
+def test_advanced_ioun_stones():
+    rules = treasure.AdvancedRawRules()
+    for _ in range(200):
+        result = rules._random_ioun()
+        assert result.startswith(tuple(f'{count} stones' for count in range(1, 11)))

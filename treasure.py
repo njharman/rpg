@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
-"""Random treasure generation for B/X or OD&D.
+"""Random treasure generation for OSE or OD&D.
 
 Rulesets (command line flag, rules name):
-    -b   Basic              B/X levels 1-3 rules with tweaks.
-    -x   Expert (default)   B/X Expert rules with tweaks.
+    -b   Basic              OSE levels 1-3 rules with tweaks.
+    -x   Expert (default)   OSE Expert rules with tweaks.
+    -a   Advanced           OSE Advanced rules as written.
     -g   OD&D + Greyhawk    OD&D Vol 2 + Greyhawk supplement with tweaks.
-    -o   OD&D               OD&D Vol 2 (Monsters & Treasure), rules as written; there are no OD&D tweaks.
+    -o   OD&D               OD&D Vol 2 (Monsters & Treasure), rules as written.
     -r/--raw                rules as written
     -rb  Basic rules as written
     -rx  Expert rules as written
     -rg  OD&D + Greyhawk rules as written
     -ro  OD&D rules as written, the same as -o.
+    -ra  Advanced rules as written, the same as -a.
 
-B/X is Old-School Essentials Rules Tome v1.4.
--r is same as -rx.
-
-Version: 10/16/2026
+Version: 10/17/2026
 Author: Norman J. Harman Jr. <njharman@gmail.com>
 Copyright: Released into Public Domain Jan 2021.
 Website: https://github.com/njharman/rpg
@@ -127,8 +126,8 @@ def entry_martial(rules, roll=None):
     return roll_function(rules, roll)
 
 
-def entry_bx_noweap(rules, roll=None):
-    """B/X "magic items (not weapons)": any item category but Sword and Weapon."""
+def entry_ose_noweap(rules, roll=None):
+    """OSE "magic items (not weapons)": any item category but Sword and Weapon."""
     return entry_item(rules, roll, skip=('Sword', 'Weapon'))
 
 
@@ -164,7 +163,7 @@ def entry_sword(rules, roll=None):
 
 
 def entry_scroll(rules, roll=None):
-    """Spells, protections, traps, curses and (B/X) treasure maps."""
+    """Spells, protections, traps, curses and (OSE) treasure maps."""
     result = table(rules.scroll, roll)
     match result.lower():
         case 'trap':
@@ -1306,7 +1305,7 @@ class GreyhawkRules(GreyhawkRawRules):
 
 
 class ExpertRawRules(Rules):
-    """B/X Expert treasure and magic items, rules as written in Old-School Essentials Rules Tome v1.4.
+    """OSE Expert treasure and magic items, rules as written from OSE Rules Tome v1.4.
 
     Magic item tables use the Expert (character level 4+) column. Where the book is ambiguous the choice is
     commented "Judgement". Gem names and jewelry designs are flavor; the book gives only their values.
@@ -1323,7 +1322,7 @@ class ExpertRawRules(Rules):
         'c': (('cp', 20, '1000-12000'), ('sp', 30, '1000-4000'),   ('ep', 10, '1000-4000'),   None,                      None,                      ('gems', 25, '1-4'),   ('jewelry', 25, '1-4'),   ('magic', 10, (entry_item, entry_item))),
         'd': (('cp', 10, '1000-8000'),  ('sp', 15, '1000-12000'),  None,                      ('gp', 60, '1000-6000'),   None,                      ('gems', 30, '1-8'),   ('jewelry', 30, '1-8'),   ('magic', 15, (entry_item, entry_item, entry_potion))),
         'e': (('cp',  5, '1000-10000'), ('sp', 30, '1000-12000'),  ('ep', 25, '1000-4000'),   ('gp', 25, '1000-8000'),   None,                      ('gems', 10, '1-10'),  ('jewelry', 10, '1-10'),  ('magic', 25, (entry_item, entry_item, entry_item, entry_scroll))),
-        'f': (None,                     ('sp', 10, '2000-20000'),  ('ep', 20, '1000-8000'),   ('gp', 45, '1000-12000'),  ('pp', 30, '1000-3000'),   ('gems', 20, '2-24'),  ('jewelry', 10, '1-12'),  ('magic', 30, (entry_bx_noweap, entry_bx_noweap, entry_bx_noweap, entry_potion, entry_scroll))),
+        'f': (None,                     ('sp', 10, '2000-20000'),  ('ep', 20, '1000-8000'),   ('gp', 45, '1000-12000'),  ('pp', 30, '1000-3000'),   ('gems', 20, '2-24'),  ('jewelry', 10, '1-12'),  ('magic', 30, (entry_ose_noweap, entry_ose_noweap, entry_ose_noweap, entry_potion, entry_scroll))),
         'g': (None,                     None,                      None,                      ('gp', 50, '10000-40000'), ('pp', 50, '1000-6000'),   ('gems', 25, '3-18'),  ('jewelry', 25, '1-10'),  ('magic', 35, (entry_item, entry_item, entry_item, entry_item, entry_scroll))),
         'h': (('cp', 25, '3000-24000'), ('sp', 50, '1000-100000'), ('ep', 50, '10000-40000'), ('gp', 50, '10000-60000'), ('pp', 25, '5000-20000'),  ('gems', 50, '1-100'), ('jewelry', 50, '10-40'), ('magic', 15, (entry_item, entry_item, entry_item, entry_item, entry_potion, entry_scroll))),
         'i': (None,                     None,                      None,                      None,                      ('pp', 30, '1000-8000'),   ('gems', 50, '2-12'),  ('jewelry', 50, '2-12'),  ('magic', 15, (entry_item, ))),
@@ -1694,12 +1693,12 @@ class ExpertRawRules(Rules):
         return [*levels[:4], (100, '5th')] if caster == 'Cleric' else levels
 
 
-# Custom B/X misc. items: these book items are replaced.
-BX_MISC_SWAPS = {'Crystal Ball': 'Scarab of Protection', 'Helm of Alignment Changing': 'Helm of Reading Languages and Magic'}
+# Custom OSE misc. items: these book items are replaced.
+OSE_MISC_SWAPS = {'Crystal Ball': 'Scarab of Protection', 'Helm of Alignment Changing': 'Helm of Reading Languages and Magic'}
 
 
 class ExpertRules(ExpertRawRules):
-    """B/X Expert treasure and magic items with tweaks. Everything not listed here is as ExpertRawRules.
+    """OSE Expert treasure and magic items with tweaks. Everything not listed here is as ExpertRawRules.
 
     Differences from the book (each is also commented where made, "Book:" is what the book has):
     - Gems give a 1% chance of a 5,000gp Diamond, and 1 in 10 gems may be magical or larger.
@@ -1739,7 +1738,7 @@ class ExpertRules(ExpertRawRules):
         (99, '+3 Shield'),
         (100, 'Armor of Etherealness'),  # Added from Greyhawk. Book: +3 Shield.
         ]
-    misc = [(roll, BX_MISC_SWAPS.get(item, item)) for roll, item in ExpertRawRules.misc]
+    misc = [(roll, OSE_MISC_SWAPS.get(item, item)) for roll, item in ExpertRawRules.misc]
     ring = [
         (5, 'Animal Control'),
         (10, 'Human Control'),
@@ -1905,7 +1904,7 @@ class ExpertRules(ExpertRawRules):
 
 
 class BasicRawRules(ExpertRawRules):
-    """B/X Basic (character levels 1-3) magic items, rules as written in Old-School Essentials Rules Tome v1.4.
+    """OSE Basic (character levels 1-3) magic items, rules as written from OSE Rules Tome v1.4.
 
     Treasure types, gems, jewelry and swords' sentience are as ExpertRawRules.
     """
@@ -1996,7 +1995,7 @@ class BasicRawRules(ExpertRawRules):
 
 
 class BasicRules(ExpertRules):
-    """B/X Basic (character levels 1-3) magic items with tweaks. Everything else is as ExpertRules.
+    """OSE Basic (character levels 1-3) magic items with tweaks. Everything else is as ExpertRules.
 
     Differences from the book (each is also commented where made): misc. items, scrolls, swords and weapons tables,
     and the ExpertRules differences (gems, Treasure Type F, armor type odds, charges and sentient swords).
@@ -2006,7 +2005,7 @@ class BasicRules(ExpertRules):
     armor = BasicRawRules.armor
     potion = BasicRawRules.potion
     ring = BasicRawRules.ring
-    misc = [(roll, BX_MISC_SWAPS.get(item, item)) for roll, item in BasicRawRules.misc]
+    misc = [(roll, OSE_MISC_SWAPS.get(item, item)) for roll, item in BasicRawRules.misc]
     # Book: Curse. Trap uses Rules.scroll_trap.
     scroll = [(roll, 'trap' if text == 'Curse' else text) for roll, text in BasicRawRules.scroll]
     # Book: d8, 1 -1 Cursed, 2 +1, 3 +2 vs Lycanthropes, 4 +2 vs Spell Users, 5 +3 vs Dragons, 6 +3 vs Undead,
@@ -2042,8 +2041,362 @@ class BasicRules(ExpertRules):
         return BasicRawRules._spell_level(self, caster)  # noqa: SLF001
 
 
-# --raw: each ruleset's rules as written. OD&D is only as written.
-RAW_RULES = {BasicRules: BasicRawRules, ExpertRules: ExpertRawRules, GreyhawkRules: GreyhawkRawRules, OddRules: OddRules}
+class AdvancedRawRules(ExpertRawRules):
+    """OSE Advanced Fantasy treasure and magic items, rules as written in Advanced Fantasy Referee's Tome v1-3.
+
+    The Referee's Tome has the Advanced Treasures v1-1 items merged into the classic tables, so unlike Basic and
+    Expert there is no tweaked ruleset. Uses the Expert (character level 4+) column of the magic item type table;
+    Advanced has no level 1-3 column. Treasure types, gems, jewelry, armor, potions, rings, scrolls and sentient
+    swords are as ExpertRawRules, the Referee's Tome has identical tables. Where the book is ambiguous the choice
+    is commented "Judgement".
+    """
+    name = 'Advanced'
+    # Judgement: book says "chosen randomly (e.g. red, white)", the ten non-multichromatic dragons are equally likely.
+    _random_dragon = [
+        (1, 'Black'), (2, 'Blue'), (3, 'Brass'), (4, 'Bronze'), (5, 'Copper'),
+        (6, 'Gold'), (7, 'Green'), (8, 'Red'), (9, 'Silver'), (10, 'White'),
+        ]
+    # d20.
+    _random_feather_token = [(4, 'Anchor'), (7, 'Bird'), (10, 'Fan'), (13, 'Swan boat'), (18, 'Tree'), (20, 'Whip')]
+    # d20.
+    _random_figurine = [
+        (3, 'Ebony fly'),
+        (6, 'Pair of golden lions'),
+        (8, 'Trio of ivory goats (travelling, travail and terror)'),
+        (11, 'Marble elephant'),
+        (13, 'Obsidian steed'),
+        (17, 'Onyx dog'),
+        (20, 'Serpentine owl'),
+        ]
+    # d%. Each blast summons the number of berserkers, of the Hit Dice, once per week.
+    _random_valhalla = [
+        (40, 'Silver: 2d4+2 berserkers of 2HD, any class'),
+        (75, 'Brass: 2d4+1 berserkers of 3HD, clerics, fighters, thieves'),
+        (90, 'Bronze: 2d4 berserkers of 4HD, clerics, fighters'),
+        (100, 'Iron: 1d4+1 berserkers of 5HD, fighters'),
+        ]
+    # d20.
+    _random_necklace = [
+        (4, '1 × 5d6, 2 × 3d6'),
+        (8, '1 × 6d6, 2 × 4d6, 2 × 2d6'),
+        (12, '1 × 7d6, 2 × 5d6, 4 × 3d6'),
+        (16, '1 × 8d6, 2 × 6d6, 2 × 4d6, 4 × 2d6'),
+        (18, '1 × 9d6, 2 × 8d6, 2 × 5d6, 2 × 3d6'),
+        (19, '1 × 10d6, 2 × 8d6, 2 × 6d6, 4 × 4d6'),
+        (20, '1 × 11d6, 2 × 9d6, 2 × 7d6, 2 × 5d6, 2 × 3d6'),
+        ]
+    # d20, maximum spell level.
+    _random_pearl = [(5, '1st'), (10, '2nd'), (14, '3rd'), (17, '4th'), (19, '5th'), (20, '6th')]
+    # d10.
+    _random_periapt = [
+        (4, '10% vs poison with no save, +1 to poison saves'),
+        (7, '20% vs poison with no save, +2 to poison saves'),
+        (9, '30% vs poison with no save, +3 to poison saves'),
+        (10, '40% vs poison with no save, +4 to poison saves'),
+        ]
+    # d20, 15+ is burned out.
+    _ioun_stone = [
+        (1, 'Pale blue rhomboid: +1 STR (max 18)'),
+        (2, 'Scarlet and blue sphere: +1 INT (max 18)'),
+        (3, 'Incandescent blue sphere: +1 WIS (max 18)'),
+        (4, 'Deep red sphere: +1 DEX (max 18)'),
+        (5, 'Pink rhomboid: +1 CON (max 18)'),
+        (6, 'Pink and green sphere: +1 CHA (max 18)'),
+        (7, 'Pale green prism: +1 experience level'),
+        (8, 'Clear spindle: sustains without food or water'),
+        (9, 'Iridescent spindle: sustains without air'),
+        (10, 'Pearly white spindle: heals 1hp per turn'),
+        (11, 'Pale lavender ellipsoid: absorbs spells of 3rd level or lower (1d3 × 10 levels)'),
+        (12, 'Lavender and green ellipsoid: absorbs spells of 5th level or lower (2d3 × 10 levels)'),
+        (13, 'Vibrant purple prism: stores 2d4 levels of spells'),
+        (14, 'Dusty rose prism: +1 to AC and saves'),
+        (20, 'Dull grey ellipsoid: burned out'),
+        ]
+    # Miscellaneous items: roll 1d4 for Table I-IV, then d%. The d4 is rolled as d100 (25 each) like Greyhawk's tables.
+    misc_i = [
+        (2, "Alchemist's Beaker"),
+        (3, 'Amulet of Protection Against Possession'),
+        (6, 'Amulet of Protection Against Scrying'),
+        (8, 'Apparatus of the Crab'),
+        (11, 'Arrow of Location'),
+        (12, 'Bag of Devouring'),
+        (17, 'Bag of Holding'),
+        (18, 'Bag of Transformation'),
+        (19, 'Book of Foul Corruption'),
+        (20, 'Book of Infinite Spells'),
+        (21, 'Book of Sublime Holiness'),
+        (22, 'Boots of Dancing'),
+        (27, 'Boots of Levitation'),
+        (31, 'Boots of Speed'),
+        (35, 'Boots of Travelling and Leaping'),
+        (50, 'Bracers of Armour'),
+        (52, 'Bracers of Defencelessness'),
+        (59, 'Brooch of Shielding'),
+        (64, 'Broom of Flying'),
+        (70, 'Candle of Invocation'),
+        (72, 'Chime of Opening [4-80 soundings]'),
+        (73, 'Chime of Ravening'),
+        (85, 'Cloak of Defence'),
+        (95, 'Cloak of Flight'),
+        (97, 'Cloak of Poison'),
+        (100, 'Cloak of the Manta Ray'),
+        ]
+    misc_ii = [
+        (5, 'Crystal Ball'),
+        (7, 'Crystal Ball with Clairaudience'),
+        (8, 'Crystal Ball with ESP'),
+        (9, 'Crystal Hypnosis Ball'),
+        (11, 'Cube of Force'),
+        (13, 'Cube of Frost Resistance'),
+        (16, 'Decanter of Endless Water'),
+        (20, 'Deck of Many Things'),
+        (24, 'Displacer Cloak'),
+        (26, 'Drums of Panic'),
+        (27, 'Drums of Thunder'),
+        (33, 'Dust of Appearance'),
+        (39, 'Dust of Disappearance'),
+        (40, 'Dust of Sneezing and Choking'),
+        (41, 'Efreeti Bottle'),
+        (43, 'Elemental Summoning Device: Air'),
+        (45, 'Elemental Summoning Device: Earth'),
+        (47, 'Elemental Summoning Device: Fire'),
+        (49, 'Elemental Summoning Device: Water'),
+        (59, 'Elven Cloak and Boots'),
+        (60, 'Eyes of Charming'),
+        (62, 'Eyes of Minuscule Sight'),
+        (63, 'Eyes of Petrification'),
+        (65, 'Eyes of the Eagle'),
+        (80, 'Feather Token (<feather_token>)'),
+        (95, 'Figurine of Wondrous Power (<figurine>)'),
+        (97, 'Flying Carpet'),
+        (98, 'Folding Boat'),
+        (100, 'Gauntlets of Ogre Power'),
+        ]
+    misc_iii = [
+        (1, 'Gem of Brightness [50 charges]'),
+        (2, 'Gem of Monster Attraction'),
+        (3, 'Gem of Pristine Faceting [10-100 charges]'),
+        (4, 'Gem of Seeing'),
+        (5, 'Girdle of Giant Strength'),
+        (7, 'Gloves of Dexterity'),
+        (10, 'Gloves of Swimming and Climbing'),
+        (12, 'Helm of Alignment Changing'),
+        (17, 'Helm of Reading Languages and Magic'),
+        (19, 'Helm of Telepathy'),
+        (20, 'Helm of Teleportation'),
+        (21, 'Horn of Blasting'),
+        (22, 'Horn of Cave-Ins'),
+        (24, 'Horn of Frothing'),
+        (28, 'Horn of the Tritons'),
+        (35, 'Horn of Valhalla (<valhalla>)'),
+        (37, 'Horseshoes of a Zephyr'),
+        (40, 'Horseshoes of Speed'),
+        (45, 'Incense of Meditation (2-8 blocks)'),
+        (46, 'Incense of Obsession (2-8 blocks)'),
+        (48, 'Instant Fortress'),
+        (49, 'Ioun Stones (<ioun>)'),
+        (51, 'Iron Flask'),
+        (53, 'Jug of Endless Liquids'),
+        (54, 'Libram of Arcane Power'),
+        (56, 'Loadstone'),
+        (58, 'Luckstone'),
+        (59, 'Lyre of Building'),
+        (61, 'Marvellous Pigments'),
+        (64, "Medallion of ESP 30'"),
+        (66, "Medallion of ESP 90'"),
+        (68, 'Medallion of Thought Projection'),
+        (69, 'Mirror of Life Trapping'),
+        (70, 'Mirror of Mental Prowess'),
+        (71, 'Mirror of Opposition'),
+        (74, 'Necklace of Adaptation'),
+        (78, 'Necklace of Fireballs (<necklace>)'),
+        (80, 'Necklace of Strangulation'),
+        (84, 'Net of Aquatic Snaring'),
+        (87, 'Net of Snaring'),
+        (90, 'Oil of Insubstantiality'),
+        (93, 'Oil of Slipperiness'),
+        (95, 'Pearl of Power (maximum <pearl> level)'),
+        (97, 'Pearl of Wisdom'),
+        (100, 'Periapt of Foul Rotting'),
+        ]
+    misc_iv = [
+        (2, 'Periapt of Health'),
+        (9, 'Periapt of Proof Against Poison (<periapt>)'),
+        (13, 'Periapt of Wound Closure'),
+        (15, 'Phylactery of Betrayal'),
+        (21, 'Phylactery of Faithfulness'),
+        (25, 'Phylactery of Longevity'),
+        (33, 'Pipes of the Sewers'),
+        (34, 'Portable Hole'),
+        (36, 'Purse of Plentiful Coin'),
+        (44, 'Restorative Ointment'),
+        (51, 'Robe of Blending'),
+        (52, 'Robe of Eyes'),
+        (53, 'Robe of Powerlessness'),
+        (54, 'Robe of Scintillating Colours'),
+        (55, 'Robe of the Archmagi'),
+        (63, 'Robe of Useful Items'),
+        (69, 'Rope of Climbing'),
+        (73, 'Rope of Entanglement'),
+        (75, 'Rope of Strangulation'),
+        (76, 'Rug of Suffocation'),
+        (77, 'Saw of Felling'),
+        (79, 'Scarab of Chaos [9-16 charges]'),
+        (80, 'Scarab of Death'),
+        (86, 'Scarab of Protection'),
+        (89, 'Scarab of Rage [19-24 charges]'),
+        (90, 'Spade of Mighty Digging'),
+        (91, 'Sphere of Annihilation'),
+        (94, 'Sweet Water'),
+        (95, 'Talisman of the Sphere'),
+        (97, 'Vacuous Grimoire'),
+        (100, 'Well of Many Worlds'),
+        ]
+    misc = [(25, misc_i), (50, misc_ii), (75, misc_iii), (100, misc_iv)]
+    sword = [
+        (3, 'Short Sword +2, Quickness'),
+        (6, 'Sword -1, Berserker (Cursed)'),
+        (9, 'Sword -1, Cursed'),
+        (12, 'Sword -2, Cursed'),
+        (28, 'Sword +1'),
+        (31, 'Sword +1, +2 vs Lycanthropes'),
+        (34, 'Sword +1, +2 vs Spell Users'),
+        (37, 'Sword +1, +3 vs Dragons'),
+        (40, 'Sword +1, +3 vs Enchanted Creatures'),
+        (43, 'Sword +1, +3 vs Regenerating Creatures'),
+        (46, 'Sword +1, +3 vs Reptiles'),
+        (49, 'Sword +1, +3 vs Shape Changers'),
+        (52, 'Sword +1, +3 vs Undead'),
+        (55, 'Sword +1, Dragon Slayer (<dragon> Dragons)'),
+        (56, 'Sword +1, Energy Drain (5-8 levels)'),
+        (59, 'Sword +1, Flaming'),
+        (61, 'Sword +1, Frost Brand'),
+        (64, 'Sword +1, Giant Slayer'),
+        (69, 'Sword +1, Light'),
+        (71, 'Sword +1, Locate Objects'),
+        (72, 'Sword +1, Luck Blade (1-4 wishes)'),
+        (73, 'Sword +1, Sharpness'),
+        (78, 'Sword +1, Sun Blade'),
+        (79, 'Sword +1, Wishes (1-4)'),
+        (80, 'Sword +1, Wounding'),
+        (85, 'Sword +2'),
+        (87, 'Sword +2, Charm Person'),
+        (88, 'Sword +2, Dancing'),
+        (89, 'Sword +2, Nine Lives Stealer'),
+        (94, 'Sword +2, Venger'),
+        (95, 'Sword +2, Vorpal'),
+        (98, 'Sword +3'),
+        (99, 'Sword +3, Defender'),
+        (100, 'Sword +3, Holy Avenger'),
+        ]
+    # d6, for swords not of a specific type.
+    _sword_type = [(2, 'Short Sword'), (5, 'Sword'), (6, 'Two-handed Sword')]
+    wsr = [
+        (2, 'Immovable Rod'),
+        (5, 'Rod of Absorption'),
+        (11, 'Rod of Cancellation'),
+        (12, 'Rod of Captivation'),
+        (14, 'Rod of Lordly Might'),
+        (15, 'Rod of Parrying'),
+        (16, 'Rod of Resurrection'),
+        (17, 'Rod of Striking'),
+        (18, 'Staff of Commanding'),
+        (20, 'Staff of Dispelling'),
+        (26, 'Staff of Healing'),
+        (27, 'Staff of Power'),
+        (30, 'Staff of Snakes'),
+        (33, 'Staff of Striking'),
+        (36, 'Staff of Swarming Insects'),
+        (38, 'Staff of the Healer'),
+        (40, 'Staff of Withering'),
+        (41, 'Staff of Wizardry'),
+        (44, 'Staff of the Woodlands'),
+        (47, 'Wand of Cold'),
+        (51, 'Wand of Enemy Detection'),
+        (54, 'Wand of Fear'),
+        (57, 'Wand of Fire Balls'),
+        (61, 'Wand of Illusion'),
+        (64, 'Wand of Lightning Bolts'),
+        (69, 'Wand of Magic Detection'),
+        (74, 'Wand of Magic Missiles'),
+        (79, 'Wand of Metal Detection'),
+        (84, 'Wand of Negation'),
+        (87, 'Wand of Paralysation'),
+        (90, 'Wand of Polymorph'),
+        (94, 'Wand of Radiance'),
+        (97, 'Wand of Secret Door Detection'),
+        (98, 'Wand of Summoning'),
+        (100, 'Wand of Trap Detection'),
+        ]
+    weapon = [
+        (1, 'Arrow +1, Slaying'),
+        (10, 'Arrows +1 (2-12 arrows)'),
+        (12, 'Arrows +1 (3-30 arrows)'),
+        (15, 'Arrows +2 (1-6 arrows)'),
+        (19, 'Axe +1'),
+        (21, 'Axe +2'),
+        (24, 'Bow +1'),
+        (25, 'Crossbow +1, Distance'),
+        (26, 'Crossbow +1, Speed'),
+        (27, 'Crossbow +2, Accuracy'),
+        (29, 'Crossbow Bolts +1 (2-12 bolts)'),
+        (31, 'Crossbow Bolts +1 (3-30 bolts)'),
+        (36, 'Crossbow Bolts +2 (1-6 bolts)'),
+        (39, 'Dagger +1'),
+        (40, 'Dagger +1, Buckle'),
+        (41, 'Dagger +1, Throwing'),
+        (42, 'Dagger +1, Venomous'),
+        (45, 'Dagger +2, +3 vs Orcs, Goblins, and Kobolds'),
+        (46, 'Dagger +2, Biter'),
+        (50, 'Javelin of Lightning (2-5 javelins)'),
+        (54, 'Javelin of Seeking (2-8 javelins)'),
+        (58, 'Mace +1'),
+        (59, 'Mace +1, Disrupting'),
+        (62, 'Mace +2'),
+        (63, 'Mace +3'),
+        (68, 'Sling +1'),
+        (69, 'Sling Bullet +1, Impact (1-4 bullets)'),
+        (71, 'Spear -1, Backbiter (Cursed)'),
+        (75, 'Spear +1'),
+        (77, 'Spear +2'),
+        (78, 'Spear +3'),
+        (80, 'Staff +1, Growing'),
+        (82, 'Trident -2, Yearning (Cursed)'),
+        (87, 'Trident +1, Fish Command (17-20 charges)'),
+        (89, 'Trident +1, Submission'),
+        (93, 'Trident +2, Warning'),
+        (96, 'War Hammer +1'),
+        (98, 'War Hammer +2'),
+        (99, 'War Hammer +3, Dwarven Thrower'),
+        (100, 'War Hammer +3, Thunderbolts'),
+        ]
+
+    def _random_ioun(self):
+        """1d10 stones, a duplicate of a type in the cache is burned out."""
+        stones = []
+        for _ in range(d10()):
+            stone = table(self._ioun_stone)
+            stones.append(table(self._ioun_stone, 20) if stone in stones else stone)
+        counts = collections.Counter(stones)
+        return f'{len(stones)} stones; ' + '; '.join(f'{count} × {stone}' if count > 1 else stone for stone, count in counts.items())
+
+    def charges(self, item):
+        """Immovable Rod and Rod of Parrying use no charges, Rod of Absorption has 50, otherwise as Expert."""
+        if 'Immovable' in item or 'Parrying' in item:
+            return ''
+        if 'Absorption' in item:
+            return ' [50 charges]'
+        return super().charges(item)
+
+    def sword_extras(self, sword):
+        """Unless the sword is a specific type, roll its type; sentience is as Expert."""
+        if sword.startswith('Sword'):
+            sword = f'{table(self._sword_type)}{sword.removeprefix("Sword")}'
+        return super().sword_extras(sword)
+
+
+# --raw: each ruleset's rules as written. OD&D and Advanced are only as written.
+RAW_RULES = {BasicRules: BasicRawRules, ExpertRules: ExpertRawRules, AdvancedRawRules: AdvancedRawRules, GreyhawkRules: GreyhawkRawRules, OddRules: OddRules}
 
 
 class AliasedGroup(click.Group):
@@ -2057,23 +2410,24 @@ class AliasedGroup(click.Group):
 
 
 @click.group(cls=AliasedGroup)
-@click.option('-b', '--basic', default=False, is_flag=True, help='Use B/X level 1-3 tables, tweaked.')
-@click.option('-x', '--expert', default=False, is_flag=True, help='Use B/X tables, tweaked (default).')
+@click.option('-b', '--basic', default=False, is_flag=True, help='Use OSE level 1-3 tables, tweaked.')
+@click.option('-x', '--expert', default=False, is_flag=True, help='Use OSE Expert tables, tweaked (default).')
+@click.option('-a', '--advanced-OSE', 'advanced', default=False, is_flag=True, help='Use OSE Advanced Fantasy tables, always as written.')
 @click.option('-g', '--greyhawk', default=False, is_flag=True, help='Use OD&D + Greyhawk tables, tweaked.')
 @click.option('-o', '--odd', default=False, is_flag=True, help='Use OD&D tables, always as written.')
 @click.option('-r', '--raw', default=False, is_flag=True, help='Use rules as written without tweaks.')
 @click.option('-d', '--roll', default=None, type=int, help='Use this d100 roll.')
 @click.pass_context
-def cli(ctx, basic, expert, greyhawk, odd, raw, roll):
-    """Roll up treasure hoards and items. B/X Expert by default.
+def cli(ctx, basic, expert, advanced, greyhawk, odd, raw, roll):
+    """Roll up treasure hoards and items. OSE Expert by default.
 
-    Rulesets are tweaked unless -r/--raw: -rb, -rx, -rg are rules as written.
+    Rulesets are tweaked unless -r/--raw: -rb, -rx, -rg are rules as written. -a and -o are always as written.
     """
     chosen = [rules_class for flag, rules_class in (
-        (basic, BasicRules), (expert, ExpertRules), (greyhawk, GreyhawkRules), (odd, OddRules),
+        (basic, BasicRules), (expert, ExpertRules), (advanced, AdvancedRawRules), (greyhawk, GreyhawkRules), (odd, OddRules),
         ) if flag]
     if len(chosen) > 1:
-        raise click.UsageError('Choose only one of -b, -x, -g, -o.')
+        raise click.UsageError('Choose only one of -b, -x, -a, -g, -o.')
     rules_class = chosen[0] if chosen else ExpertRules
     if raw:
         rules_class = RAW_RULES[rules_class]
