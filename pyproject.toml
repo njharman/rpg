@@ -113,9 +113,6 @@ exclude = [
 "menagerie/sw_menagerie.py" = [
   "ERA001", # commented-out tables / code
 ]
-"methodI.py" = [
-  "ERA001", # commented-out tables / code
-]
 "namegen.py" = [
   "ERA001", # commented-out tables / code
 ]

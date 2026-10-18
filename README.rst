@@ -42,10 +42,9 @@ Dungeons & Dragons
     K'jorian Deathguard NPC generator (D&D 3.5). Used in my `Dirt Campaign <https://friendorfoe.com/rpg/campaigns/dirt/>`_.
 ``dmg_dungeon_generator.py``
     Random dungeon generator from AD&D DMG Appendix A.
-``methodI.py``
-    AD&D character ability score generation DMG Method I.
-``methodIV.py``
-    AD&D character ability score generation DMG Method IV.
+``dmg_ability_rolls.py``
+    AD&D DMG character ability score generation: Methods I-IV, NPC general and
+    special and the optional Secondary Skills table.
 ``recruiting.py``
     What hirelings are available from my Wilderlands campaign.
 ``stock_dungeon.py``
