@@ -55,7 +55,8 @@ Dungeons & Dragons
 ``tombgenerator.py``
     Tomb content generator from Dragon #9 "Tombs & Crypts".
 ``treasure.py``
-    Random treasure generator for OD&D, OD&D + Greyhawk, OSE (Basic, Expert, and Advanced options).
+    Random treasure generator for OD&D, OD&D + Greyhawk, OSE (Basic, Expert,
+    and Advanced options) and AD&D 1e.
 ``grimoire/``
     Combined spell listings and PDF built from Labyrinth Lord AEC.
 ``menagerie/``
