@@ -13,3 +13,13 @@ sdist
 .coverage
 .pytest_cache
 .tox
+
+# Packaging / tool caches
+dist/
+*.egg-info/
+*.py[cod]
+.coverage.*
+htmlcov/
+.ruff_cache/
+*.swp
+*~

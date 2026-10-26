@@ -1,0 +1,6 @@
+rules:
+  unpinned-uses:
+    config:
+      policies:
+        # Tag pins; dependabot (github-actions ecosystem) bumps them monthly.
+        "*": ref-pin

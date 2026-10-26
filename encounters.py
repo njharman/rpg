@@ -3747,7 +3747,7 @@ Laughing as they prick their perfect faces with thorns/ quills
 Transplanting the sapling of a rebellious teenage dryad
 Laying out ginger-bread party members on a rock to firm and cool
 Transporting an ornate urn of cremains
-Lecturing a racoon on the importance of handwashing
+Lecturing a raccoon on the importance of handwashing
 Treating an infected gadfly bite on the flank of a pegasus
 Listening intently to leaf-rustling to predict the weather
 Uncharacteristically drunk on potent-pixie gin
@@ -3992,7 +3992,7 @@ Lanky and emaciated due to lack of food
 Bowing to blushing caryatid columns
 Lashing their barbed tails to-and-fro like a cat
 Breathtakingly beautiful - crystalline specimens in the form of angels
-Laughing at a medium loosing a sleep spell
+Laughing at a medium losing a sleep spell
 Capturing a kobold with a weighted net
 Leaping upon a lizard man and tearing him limb from limb
 Chasing a fleeing philosopher, tripping on her robes
@@ -6452,7 +6452,7 @@ Overindulging, attached to a bog giant's ankle
 Burrowing into moist leaf litter to stay damp
 Plumping up on the blood of a swamp-bound sea serpent
 Camouflaging itself among muddy mangrove roots
-Probing the mud and muck, tasting racoon tracks
+Probing the mud and muck, tasting raccoon tracks
 Carrying parasites that cause bog boils in its saliva
 Pulling itself out of an old muskrat burrow
 Clinging to the leg of a cleric
@@ -6724,7 +6724,7 @@ Transporting tribute to a stronger tribe
 Intently watching a shaman cast bones
 Trussing a gnome with a swamp apple in his mouth
 Laying out strips of fish to dry
-Tying several dead racoons/opossums on a line for transport
+Tying several dead raccoons/opossums on a line for transport
 Lazily patting distended bellies
 Unblinkingly watching ingenious fishing line floats
 Leaping contest
