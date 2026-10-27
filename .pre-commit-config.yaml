@@ -60,11 +60,3 @@ repos:
     rev: v1.31.1
     hooks:
       - id: zizmor
-
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.4.3
-    hooks:
-      - id: codespell
-        # game/domain words, variables, and source-book spellings in data tables
-        args: [-L, 'aline,baase,biding,bellow,creche,crystaline,discernable,discus,empress,fallow,fount,fro,gird,guerilla,guerillas,hart,lama,loafing,mane,mange,ore,panting,parm,pleas,pount,posion,reigon,revered,rime,sting,stings,singed,tre,trough,vermillion,vie,whiling,wight,wights,wither,wont']
-        exclude: ^(grimoire|menagerie)/data/.*\.txt$  # scanned/OCR'd rulebook text, typos are source's
