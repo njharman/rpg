@@ -59,7 +59,9 @@ Dungeons & Dragons
 ``grimoire/``
     Combined spell listings and PDF built from Labyrinth Lord AEC.
 ``menagerie/``
-    Monsters from Swords & Wizardry and Tome of Horrors.
+    Monsters from Swords & Wizardry and Tome of Horrors. ``build-pdfs`` makes
+    the PDFs; ``build-webapp`` makes the browser version (page in ``web/``,
+    which also needs untracked ``web/vendor/`` libs) in ``build/web/``.
 
 
 HackMaster

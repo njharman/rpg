@@ -1,25 +1,19 @@
-.DS_Store
-
-# Package artifacts
+# Dev artifacts
 __pycache__
-build
-sdist
+build/
+dist/
+*.egg-info/
+*.py[cod]
+htmlcov/
+.ruff_cache/
+.coverage.*
 .installed.cfg
-
-# uv
-.venv
-
-# Unit test / coverage reports
 .coverage
 .pytest_cache
 .tox
 
-# Packaging / tool caches
-dist/
-*.egg-info/
-*.py[cod]
-.coverage.*
-htmlcov/
-.ruff_cache/
-*.swp
-*~
+# symlinks
+.venv
+
+# Menagerie web app third-party libs (see menagerie/build-webapp)
+menagerie/web/vendor/

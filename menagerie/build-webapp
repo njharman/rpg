@@ -1,0 +1,33 @@
+#!/bin/bash
+# Build the Menagerie web app into build/web/.  See sw_menagerie.py.
+# Usage: ./build-webapp [source ...]   (names under data/, default: all)
+#   copies web/ (hand-written page, web/vendor libs) and generates js/data.js.
+set -euo pipefail
+cd "$(dirname "$0")"
+
+OUT=build/web
+VENDOR="angular.min.js jquery-1.8.2.min.js jquery.mobile-1.2.0.min.js jquery.mobile-1.2.0.min.css images/ajax-loader.gif images/icons-18-black.png images/icons-18-white.png images/icons-36-black.png images/icons-36-white.png"
+
+NAMES=("$@")
+[ ${#NAMES[@]} -gt 0 ] || NAMES=(swc tohc mon mc bm dw vv ll)
+SOURCES=()
+for name in "${NAMES[@]}"; do SOURCES+=("data/$name.txt"); done
+
+# web/vendor is not in git: AngularJS 1.0.2, jQuery 1.8.2, jQuery Mobile 1.2.0
+# (code.jquery.com/mobile/1.2.0/), with its images/ directory.
+missing=0
+for f in $VENDOR; do
+    [ -f "web/vendor/$f" ] || { echo "missing web/vendor/$f" >&2; missing=1; }
+done
+[ $missing -eq 0 ] || exit 1
+
+rm -rf "$OUT"
+mkdir -p "$OUT"
+rsync -a web/ "$OUT/"
+mkdir -p "$OUT/js"
+
+# The project venv (../.venv, see pyproject.toml) if present, else whatever python is on PATH.
+PY="$(cd .. && pwd)/.venv/bin/python"
+[ -x "$PY" ] || PY=python
+"$PY" -B ./sw_menagerie.py --minify "${SOURCES[@]}" > "$OUT/js/data.js.tmp"
+mv "$OUT/js/data.js.tmp" "$OUT/js/data.js"

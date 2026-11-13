@@ -21,6 +21,12 @@ Building PDFs:
  * menagerie.yaml: Letter, 10pt, no headers/footers, blue links, built-in PDF
    fonts (Times/Helvetica/Courier) so nothing needs to be installed.
 
+Building the web app:
+ ./build-webapp [source ...] copies web/ to build/web/ and writes build/web/js/data.js
+ (--minify output, MOBS = [...]).  Sources are names under data/, default all.
+ web/vendor/ is not in git: AngularJS 1.0.2, jQuery 1.8.2 and jQuery Mobile 1.2.0
+ (js, css and images/ from code.jquery.com/mobile/1.2.0/); the script lists any missing.
+
 Tome of Horrors Complete is a trademark of Frog God Games.
 Swords & Wizardry, S&W, and Mythmere Games are trademarks of Matthew J. Finch.
 This software and author are not affiliated with Matthew J. Finch, Mythmere Games™, Frog God Games, Necromancer Games.
