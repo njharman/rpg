@@ -17,3 +17,6 @@ htmlcov/
 
 # Menagerie web app third-party libs (see menagerie/build-webapp)
 menagerie/web/vendor/
+
+# local state
+todo.txt
