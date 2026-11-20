@@ -21,11 +21,9 @@ Building PDFs:
  * menagerie.yaml: Letter, 10pt, no headers/footers, blue links, built-in PDF
    fonts (Times/Helvetica/Courier) so nothing needs to be installed.
 
-Building the web app:
- ./build-webapp [source ...] copies web/ to build/web/ and writes build/web/js/data.js
- (--minify output, MOBS = [...]).  Sources are names under data/, default all.
- web/vendor/ is not in git: AngularJS 1.0.2, jQuery 1.8.2 and jQuery Mobile 1.2.0
- (js, css and images/ from code.jquery.com/mobile/1.2.0/); the script lists any missing.
+Exporting data for the rpgpad web app (../rpgpad):
+ `just export` runs this with --minify and writes ../rpgpad/data/monsters.json
+ (a JSON list of monsters).  Sources are names under data/, default all.
 
 Tome of Horrors Complete is a trademark of Frog God Games.
 Swords & Wizardry, S&W, and Mythmere Games are trademarks of Matthew J. Finch.
@@ -760,9 +758,9 @@ if __name__ == '__main__':
         names = ', '.join(Path(s).name for s in config.sources)
         print(f'Found {len(menagerie)} entries in {names}', file=sys.stderr)
         if config.json:
-            print('MOBS =', json.dumps([m.as_dict() for m in menagerie], sort_keys=True, indent=2))
+            print(json.dumps([m.as_dict() for m in menagerie], sort_keys=True, indent=2))
         elif config.minify:
-            print('MOBS =', json.dumps([m.as_dict() for m in menagerie], sort_keys=True, separators=(',', ':')))
+            print(json.dumps([m.as_dict() for m in menagerie], sort_keys=True, separators=(',', ':')))
         elif config.python:
             entries = ',\n    '.join(f'"{m.name.lower()}": {m.as_dict(skip=("body", "source", "s15"))}' for m in menagerie)
             print(f'MOBS = {{\n    {entries}\n    }}')

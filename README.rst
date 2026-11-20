@@ -60,8 +60,8 @@ Dungeons & Dragons
     Combined spell listings and PDF built from Labyrinth Lord AEC.
 ``menagerie/``
     Monsters from Swords & Wizardry and Tome of Horrors. ``build-pdfs`` makes
-    the PDFs; ``build-webapp`` makes the browser version (page in ``web/``,
-    which also needs untracked ``web/vendor/`` libs) in ``build/web/``.
+    the PDFs; ``just export`` writes the monsters as JSON for the web app in
+    the sibling ``rpgpad`` repo.
 
 
 HackMaster
